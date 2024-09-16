@@ -1,16 +1,14 @@
-Instance: PatientSummary2FHIR
+Instance: patientSummary2FHIR
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://hl7.eu/fhir/eps/ConceptMap/patientSummary2FHIR-eu-ps"
-* version = "1.0.0"
+* url = "http://hl7.eu/fhir/eps/ConceptMap/patientSummary2FHIR"
 * name = "PatientSummary2FHIR"
 * title = "eHN Patient Summary to this guide Map"
 * status = #draft
+* experimental = false
 * description = """eHN Patient Summary to this guide Map"""
-* sourceUri = "http://hl7.eu/fhir/eps/StructureDefinition/PatientSummary"
-* targetUri = "http://hl7.eu/fhir/eps/StructureDefinition/Bundle-eu-ps"
 * group[+].source = "http://hl7.eu/fhir/eps/StructureDefinition/PatientSummary"
-* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/Composition-eu-eps"
+* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/Composition-ps-xpandh"
 * group[=].element[+].code = #PatientSummary.header					
 * group[=].element[=].display = "A.1 Report header data elements"
 * group[=].element[=].target.code = #Composition					
@@ -24,7 +22,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "If it represents the last update of this FHIR resource"
 * group[+].source = "http://hl7.eu/fhir/eps/StructureDefinition/PatientSummary"
-* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/Condition-eu-eps"
+* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/Condition-ps-xpandh"
 * group[=].element[+].code = #PatientSummary.header.insuranceInfo					
 * group[=].element[=].display = "A.1.3 Insurance information"
 * group[=].element[=].target.code = #Composition.subject					

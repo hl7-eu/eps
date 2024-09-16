@@ -6,8 +6,9 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * . ^short = "Patient Summary composition"
 * . ^definition = "Patient Summary composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
-* extension[composition-clinicaldocument-versionNumber]
 
+* extension contains $composition.version-r5  named version 0..1
+* extension[version] ^short = "Business version"
 
 * identifier ^short = "PS business identifier"
 * status ^short = "PS status"

@@ -5,6 +5,7 @@ Alias: $immunization-administeredProduct-r5 = http://hl7.org/fhir/5.0/StructureD
 Alias: $immunization-basedOn-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Immunization.basedOn
 Alias: $condition-participant-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Condition.participant
 Alias: $medicationStatement-dosage-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationStatement.dosage
+Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
 
 
 // Actor Canonical

@@ -19,8 +19,8 @@
 <artifact id="StructureDefinition/AllergyIntolerance-eu-eps" key="StructureDefinition-AllergyIntolerance-eu-eps" name="Allergy Intolerance (EU PS)"/>
 <artifact id="StructureDefinition/Bundle-eu-eps" key="StructureDefinition-Bundle-eu-eps" name="Bundle (EU PS)"/>
 <artifact id="StructureDefinition/Composition-eu-eps" key="StructureDefinition-Composition-eu-eps" name="Composition (EU PS)"/>
-<artifact id="ConceptMap/PatientSummary2FHIR" key="ConceptMap-PatientSummary2FHIR" name="eHN Patient Summary to this guide Map"/>
-<artifact id="ConceptMap/PatientSummarySubject2Fhir" key="ConceptMap-PatientSummarySubject2Fhir" name="eHN Subject to this guide Map"/>
+<artifact id="ConceptMap/patientSummary2FHIR" key="ConceptMap-patientSummary2FHIR" name="eHN Patient Summary to this guide Map"/>
+<artifact id="ConceptMap/subjectPs2FHIR" key="ConceptMap-subjectPs2FHIR" name="eHN Subject to this guide Map"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>

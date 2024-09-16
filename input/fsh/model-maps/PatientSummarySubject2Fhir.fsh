@@ -1,16 +1,14 @@
-Instance: PatientSummarySubject2Fhir
+Instance: subjectPs2FHIR
 InstanceOf: ConceptMap
 Usage: #definition
-* url = "http://hl7.eu/fhir/eps/ConceptMap/subject2FHIR-eu-ps"
-* version = "1.0.0"
+* url = "http://hl7.eu/fhir/eps/ConceptMap/subjectPs2FHIR"
 * name = "PatientSummarySubject2Fhir"
 * title = "eHN Subject to this guide Map"
 * status = #draft
+* experimental = false
 * description = """eHN Subject Model to this guide Map"""
-* sourceUri = "http://hl7.eu/fhir/eps/StructureDefinition/Subject"
-* targetUri = "http://hl7.eu/fhir/eps/StructureDefinition/Bundle-eu-eps"
 * group[+].source = "http://hl7.eu/fhir/eps/StructureDefinition/Subject"
-* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/Condition-eu-eps"
+* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/Condition-ps-xpandh"
 * group[=].element[+].code = #Subject.identification.familyName					
 * group[=].element[=].display = "A.1.1.2 Family name/surname"
 * group[=].element[=].target.code = #Patient.name.family					
@@ -196,7 +194,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
 * group[+].source = "http://hl7.eu/fhir/eps/StructureDefinition/Subject"
-* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/Patient-eu-eps"
+* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/Patient-ps-xpandh"
 * group[=].element[+].code = #Subject.identification					
 * group[=].element[=].display = "A.1.1 Identification of the patient/subject"
 * group[=].element[=].target.code = #Patient					
