@@ -1,0 +1,16 @@
+Logical: VaccinationPsEhn
+Id: Vaccination
+Title: "A.2.2.1 - Vaccination/ prophylaxis information"
+Description: """Vaccination/ prophylaxis information. Sections A2.2.2.1 of the eHN guideline."""
+* targetDisease 0..* CodeableConcept "A.2.2.1.1 Disease or agent targeted" """Disease or agent that the vaccination provides protection against - Preferred system(s):  ICD-10*, SNOMED CT GPS"""
+* vaccine 0..* CodeableConcept "A.2.2.1.2 Vaccine/prophylaxis" """Generic description of the vaccine/prophylaxis or its component(s) - Preferred system(s): SNOMED CT GPS ATC* (IDMP, when available)"""
+* productName 0..* string "A.2.2.1.3 Vaccine medicinal product name" """Brand name of the vaccine medicinal product.z"""
+* productId 0..* CodeableConcept "A.2.2.1.3.1 Identifier of the vaccine medicinal product" """Identifier for the vaccine medicinal product. It could be MPID according to ISO 11615, EMA PMS ID and/or a national identifier. EMA PMS"""
+* marketingAuthorisationHolder 0..* CodeableConcept "A.2.2.1.4 Marketing Autorisation Holder" """Marketing Authorisation Holder EMA's Organisations System data (SPOR)"""
+* numberInSeries 0..* BackboneElement "A.2.2.1.5 Number in a series of vaccinations/doses" """Vaccination in the vaccination course"""
+* batchNumber 0..* string "A.2.2.1.6 Batch/lot number" """A distinctive combination of numbers and/or letters which specifically identifies a batch"""
+* dateOfVaccination 0..* dateTime "A.2.2.1.7 Date of vaccination" """The date when the vaccination was administered - Preferred system(s): ISO 8601"""
+* administeringCentre 0..* Organization "A.2.2.1.8 Administering centre" """Name/code of administering centre or a health authority responsible for the vaccination event"""
+* healthProfessionalId 0..* identifier "A.2.2.1.9 Health Professional identification" """Name or health professional code responsible for administering the vaccine or prophylaxis"""
+* countryOfVaccination 0..* CodeableConcept "A.2.2.1.10 Country of vaccination" """The country in which the individual has been vaccinated - Preferred system(s): ISO 3166"""
+* dateOfNextVaccination 0..* dateTime "A.2.2.1.11 Next vaccination date" """The date when the vaccination is planned to be given/repeated (e.g. next dose) - Preferred system(s): ISO 8601"""

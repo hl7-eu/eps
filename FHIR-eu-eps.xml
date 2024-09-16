@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/eps">
+<version code="current" url=""/>
+<artifactPageExtension value="-definitions"/>
+<artifactPageExtension value="-examples"/>
+<artifactPageExtension value="-mappings"/>
+<artifact id="StructureDefinition/PatientSummary" key="StructureDefinition-PatientSummary" name="A - Patient Summary"/>
+<artifact id="StructureDefinition/Allergy" key="StructureDefinition-Allergy" name="A.2.1.1 - Allergy"/>
+<artifact id="StructureDefinition/Vaccination" key="StructureDefinition-Vaccination" name="A.2.2.1 - Vaccination/ prophylaxis information"/>
+<artifact id="StructureDefinition/ClosedProblem" key="StructureDefinition-ClosedProblem" name="A.2.2.2 - Resolved, closed or inactive problems"/>
+<artifact id="StructureDefinition/Problem" key="StructureDefinition-Problem" name="A.2.3.1 Current problems"/>
+<artifact id="StructureDefinition/MedicalDevice" key="StructureDefinition-MedicalDevice" name="A.2.3.2 - Medical devices and implants"/>
+<artifact id="StructureDefinition/FunctionalStatus" key="StructureDefinition-FunctionalStatus" name="A.2.3.3 - Functional Status"/>
+<artifact id="StructureDefinition/ProcedurePs" key="StructureDefinition-ProcedurePs" name="A.2.3.3 - Procedures"/>
+<artifact id="StructureDefinition/Medicine" key="StructureDefinition-Medicine" name="A.2.4.1 Current and relevant past medicines"/>
+<artifact id="StructureDefinition/Pregnancy" key="StructureDefinition-Pregnancy" name="A.2.6 Pregnancy history"/>
+<artifact id="StructureDefinition/Result" key="StructureDefinition-Result" name="A.2.8 - Results"/>
+<artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A1.1, A1.2 - Subject of care"/>
+<artifact id="StructureDefinition/AllergyIntolerance-eu-eps" key="StructureDefinition-AllergyIntolerance-eu-eps" name="Allergy Intolerance (EU PS)"/>
+<artifact id="StructureDefinition/Bundle-eu-eps" key="StructureDefinition-Bundle-eu-eps" name="Bundle (EU PS)"/>
+<artifact id="StructureDefinition/Composition-eu-eps" key="StructureDefinition-Composition-eu-eps" name="Composition (EU PS)"/>
+<artifact id="ConceptMap/PatientSummary2FHIR" key="ConceptMap-PatientSummary2FHIR" name="eHN Patient Summary to this guide Map"/>
+<artifact id="ConceptMap/PatientSummarySubject2Fhir" key="ConceptMap-PatientSummarySubject2Fhir" name="eHN Subject to this guide Map"/>
+<page key="NA" name="(NA)"/>
+<page key="many" name="(many)"/>
+<page key="artifacts" name="Artifacts Summary"/>
+<page key="contributors" name="Authors and contributors"/>
+<page key="downloads" name="Downloads"/>
+<page key="index" name="Home"/>
+<page key="knownIusses" name="Known Issues"/>
+<page key="obligations" name="Obligations"/>
+<page key="toc" name="Table of Contents"/>
+<page key="logicalModel" name="eHN guideline data set"/>
+</specification>
