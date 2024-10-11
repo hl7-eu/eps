@@ -14,7 +14,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Bundle.timestamp					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "if is the date when this instance has been generated"
+* group[=].element[=].target.comment = "If it is the date when this instance has been generated"
 * group[+].source = "http://hl7.eu/fhir/eps/StructureDefinition/PatientSummary"
 * group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/composition-eu-eps"
 * group[=].element[+].code = #PatientSummary.header					
@@ -26,15 +26,10 @@ Usage: #definition
 * group[=].element[=].display = "A.1.1 A1.2 Patient/subject"
 * group[=].element[=].target.code = #Composition.subject					
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PatientSummary.header.insuranceInfo					
 * group[=].element[=].display = "A.1.3 Insurance information"
 * group[=].element[=].target.code = #Composition.subject					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[+].code = #PatientSummary.header.insuranceInfo.insuranceNumber					
-* group[=].element[=].display = "A.1.3.1  Insurance number"
-* group[=].element[=].target.code = #Composition.subject.identifier					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #PatientSummary.header.documentData					
@@ -76,73 +71,45 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.author					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "author can be of type Organziation, Pracitctioner or PractictionerRole"
+* group[=].element[=].target.comment = "author can be of type Organzation, Pracittioner or PractictionerRole"
 * group[=].element[+].code = #PatientSummary.header.participant.legalAuth					
 * group[=].element[=].display = "A.1.5.2 Legal authenticator"
 * group[=].element[=].target.code = #Composition.attester					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[=].target.comment = "attester.mode = 'legal'"
-* group[=].element[+].code = #PatientSummary.header.additionalInfo					
-* group[=].element[=].display = "A.1.6 Additional information / Knowledge resources"
-* group[=].element[=].target.code = #nan
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #unmatched					
-* group[=].element[=].target.comment = "Covered by other resources"
-* group[=].element[+].code = #PatientSummary.header.additionalInfo.reference					
-* group[=].element[=].display = "A.1.6.1 External reference"
-* group[=].element[=].target.code = #nan
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #unmatched					
-* group[=].element[=].target.comment = "Covered by other resources"
-* group[=].element[+].code = #PatientSummary.header.additionalInfo.relatedWith					
-* group[=].element[=].display = "A.1.6.2 Related with"
-* group[=].element[=].target.code = #nan
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #unmatched					
-* group[=].element[=].target.comment = "Covered by other resources"
 * group[=].element[+].code = #PatientSummary.body					
 * group[=].element[=].display = "A.2 Patient summary body data elements"
 * group[=].element[=].target.code = #Composition.section					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Common textual descirption"
 * group[=].element[+].code = #PatientSummary.body.alerts					
 * group[=].element[=].display = "A.2.1 Alerts"
 * group[=].element[=].target.code = #Composition.section					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "entry level description"
+* group[=].element[=].target.comment = "Alerts data are recorded in two distict sections: alerts and allergies and intolerance"
 * group[=].element[+].code = #PatientSummary.body.alerts.allergy					
 * group[=].element[=].display = "A.2.1.1 Allergy"
 * group[=].element[=].target.code = #Composition.section:sectionAllergies					
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "if textual description"
+* group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PatientSummary.body.alerts.alert					
 * group[=].element[=].display = "A.2.1.2 Medical alert information (other alerts not included in allergies)"
 * group[=].element[=].target.code = #Composition.section:sectionAlert					
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "if textual description"
+* group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PatientSummary.body.alerts.alert.description					
 * group[=].element[=].display = "A.2.1.2.1 Healthcare alert description"
 * group[=].element[=].target.code = #Composition.section:sectionAlert.text					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "OBSERVATION PROFILE TO BE SPECIFIED"
-* group[=].element[+].code = #PatientSummary.body.alerts.alert.description					
-* group[=].element[=].display = "A.2.1.2.1 Healthcare alert description"
-* group[=].element[=].target.code = #Composition.section:sectionAlert.entry.code.text					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "to be reviewed"
 * group[=].element[+].code = #PatientSummary.body.medicalHistory					
 * group[=].element[=].display = "A.2.2 Medical history"
 * group[=].element[=].target.code = #Composition.section					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "extension[supporintInfo].resolve().ofType(DocumentReference)"
+* group[=].element[=].target.comment = "Mapped into several sections"
 * group[=].element[+].code = #PatientSummary.body.medicalHistory.vaccination					
 * group[=].element[=].display = "A.2.2.1 Vaccination/ prophylaxis information"
 * group[=].element[=].target.code = #Composition.section:sectionImmunizations					
@@ -159,11 +126,13 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "Mapped into several sections"
 * group[=].element[+].code = #PatientSummary.body.medicalHistory.anamnesis.details					
 * group[=].element[=].display = "A.2.2.3.1 Medical history"
-* group[=].element[=].target.code = #Composition.section:section:sectionPatientHx					
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "To be checked: the current Patient Hisotry in ISO 27269 seems to have a different purpose"
 * group[=].element[+].code = #PatientSummary.body.medicalProblems					
 * group[=].element[=].display = "A.2.3 Medical problems"
 * group[=].element[=].target.code = #Composition.section					
@@ -171,7 +140,7 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #PatientSummary.body.medicalProblems.problems					
 * group[=].element[=].display = "A.2.3.1 Current problems"
-* group[=].element[=].target.code = #Composition.section:section:sectionProblems					
+* group[=].element[=].target.code = #Composition.section:sectionProblems					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PatientSummary.body.medicalProblems.medicalDevices					
@@ -209,11 +178,13 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section:sectionSocialHistory.entry					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "Composition.section:sectionSocialHistory.entry.ofType(Observation)"
 * group[=].element[+].code = #PatientSummary.body.socialHistory.referenceRange					
 * group[=].element[=].display = "A.2.5.2 Reference date range"
 * group[=].element[=].target.code = #Composition.section:sectionSocialHistory.entry.effective[x]					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "Composition.section:sectionSocialHistory.entry.ofType(Observation)"
 * group[=].element[+].code = #PatientSummary.body.pregnancyHistory					
 * group[=].element[=].display = "A.2.6 Pregnancy history"
 * group[=].element[=].target.code = #Composition.section:sectionPregnancyHx					
@@ -224,6 +195,7 @@ Usage: #definition
 * group[=].element[=].target.code = #Composition.section					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "Mapped into several sections"
 * group[=].element[+].code = #PatientSummary.body.patientData.travelHistory					
 * group[=].element[=].display = "A.2.7.1 Travel history"
 * group[=].element[=].target.code = #Composition.section:sectionTravelHx					
@@ -237,16 +209,6 @@ Usage: #definition
 * group[=].element[+].code = #PatientSummary.body.patientData.travelHistory.period					
 * group[=].element[=].display = "A.2.7.1.2 Period"
 * group[=].element[=].target.code = #Composition.section:sectionTravelHx.text					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[+].code = #PatientSummary.body.patientData.travelHistory.country					
-* group[=].element[=].display = "A.2.7.1.1 Country"
-* group[=].element[=].target.code = #Composition.section:sectionTravelHx.entry.valueCodeableConcept					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[+].code = #PatientSummary.body.patientData.travelHistory.period					
-* group[=].element[=].display = "A.2.7.1.2 Period"
-* group[=].element[=].target.code = #Composition.section:sectionTravelHx.entry.effectivePeriod					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #PatientSummary.body.patientData.advanceDirective					
@@ -285,9 +247,54 @@ Usage: #definition
 * group[=].element[=].display = "A.1.6.1 External reference"
 * group[=].element[=].target.code = #Condition.extension:supporintInfo					
 * group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PatientSummary.header.additionalInfo.relatedWith					
 * group[=].element[=].display = "A.1.6.2 Related with"
 * group[=].element[=].target.code = #Condition					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "The 'relationship' is given by the inclusion of the references in the associated resource, n this case the Condition"
+* group[+].source = "http://hl7.eu/fhir/eps/StructureDefinition/PatientSummary"
+* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/flag-eu-eps"
+* group[=].element[+].code = #PatientSummary.body.alerts.alert.description					
+* group[=].element[=].display = "A.2.1.2.1 Healthcare alert description"
+* group[=].element[=].target.code = #Flag.text					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "Composition.section:sectionAlert.entry.otType(Flag)"
+* group[=].element[+].code = #PatientSummary.body.alerts.alert.description					
+* group[=].element[=].display = "A.2.1.2.1 Healthcare alert description"
+* group[=].element[=].target.code = #Flag.code.text					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "Composition.section:sectionAlert.entry.otType(Flag)"
+* group[+].source = "http://hl7.eu/fhir/eps/StructureDefinition/PatientSummary"
+* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/observation-travel-eu-eps"
+* group[=].element[+].code = #PatientSummary.body.patientData.travelHistory.country					
+* group[=].element[=].display = "A.2.7.1.1 Country"
+* group[=].element[=].target.code = #Observation.valueCodeableConcept					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "Composition.section:sectionTravelHx.entry.resolve().ofType(Observation)
+Profile to be defined			"
+* group[=].element[+].code = #PatientSummary.body.patientData.travelHistory.period					
+* group[=].element[=].display = "A.2.7.1.2 Period"
+* group[=].element[=].target.code = #Observation.effectivePeriod					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "Composition.section:sectionTravelHx.entry.resolve().ofType(Observation)
+Profile to be defined			"
+* group[+].source = "http://hl7.eu/fhir/eps/StructureDefinition/PatientSummary"
+* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/patient-eu-eps"
+* group[=].element[+].code = #PatientSummary.header.subject					
+* group[=].element[=].display = "A.1.1 A1.2 Patient/subject"
+* group[=].element[=].target.code = #Composition.subject					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "Composition.subject.resolve().ofType(Patient)	"
+* group[=].element[+].code = #PatientSummary.header.insuranceInfo.insuranceNumber					
+* group[=].element[=].display = "A.1.3.1  Insurance number"
+* group[=].element[=].target.code = #Patient.identifier					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "Composition.subject.resolve().ofType(Patient).identifier				"

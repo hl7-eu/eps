@@ -17,7 +17,7 @@ Description: """This profile constrains the AllergyIntolerance resource for the 
 * verificationStatus ^short = "Certainty"
 * criticality ^short = "Criticality"
 
-/* * patient only Reference(PatientEpsEu) */
+* patient only Reference(PatientEpsEu)
 
 
 // * onset[x] only dateTime // is this needed ?

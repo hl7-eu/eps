@@ -20,4 +20,13 @@ class "composition-eu-eps" <<Profile>> [[StructureDefinition-composition-eu-eps.
 class "condition-eu-eps" <<Profile>> [[StructureDefinition-condition-eu-eps.html]]
 "PatientSummary" --> "condition-eu-eps"
 "composition-eu-eps" -[hidden]-> "condition-eu-eps"
+class "flag-eu-eps" <<Profile>> [[StructureDefinition-flag-eu-eps.html]]
+"PatientSummary" --> "flag-eu-eps"
+"condition-eu-eps" -[hidden]-> "flag-eu-eps"
+class "observation-travel-eu-eps" <<Profile>> [[StructureDefinition-observation-travel-eu-eps.html]]
+"PatientSummary" --> "observation-travel-eu-eps"
+"flag-eu-eps" -[hidden]-> "observation-travel-eu-eps"
+class "patient-eu-eps" <<Profile>> [[StructureDefinition-patient-eu-eps.html]]
+"PatientSummary" --> "patient-eu-eps"
+"observation-travel-eu-eps" -[hidden]-> "patient-eu-eps"
 @enduml

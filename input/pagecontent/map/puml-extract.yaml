@@ -1,7 +1,0 @@
-Subject: Subject-map.html
-PatientSummary: PatientSummary-map.html
-
-  Subject-map.html:
-    title: Subject Relationships
-  PatientSummary-map.html:
-    title: PatientSummary Relationships

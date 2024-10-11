@@ -12,7 +12,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[composition].resource 1..
 * entry[composition].resource only CompositionEpsEu
 * entry[patient].resource 1..
-* entry[patient].resource only $Patient-uv-ips  //EpsEu
+* entry[patient].resource only PatientEpsEu  //EpsEu
 * entry[allergyintolerance].resource 1..
 * entry[allergyintolerance].resource only $AllergyIntolerance-uv-ips  //EpsEu
 * entry[condition].resource 1..
@@ -41,13 +41,10 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[medicationstatement].resource 1..
 * entry[medicationstatement].resource only $MedicationStatement-uv-ips  //EpsEu
 
-
-/* Add when we will have a commmon profile
 * entry[practitioner].resource 1..
 * entry[practitioner].resource only PractitionerEuEps  //EpsEu
 * entry[practitionerrole].resource 1..
-* entry[practitionerrole].resource only PractitionerRoleEuEs  //EpsEu 
-*/
+* entry[practitionerrole].resource only PractitionerRoleEuEps  //EpsEu 
 
 /*  COMMENTED TO BY-PASS A BUILD ERROR TO BE ANALYZED  */
 * entry[procedure].resource 1..

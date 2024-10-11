@@ -23,7 +23,10 @@
 <artifact id="StructureDefinition/condition-statusReason" key="StructureDefinition-condition-statusReason" name="Condition Status Reason"/>
 <artifact id="StructureDefinition/Flag-eu-eps" key="StructureDefinition-Flag-eu-eps" name="Flag (EU PS)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
+<artifact id="StructureDefinition/organization-eu-eps" key="StructureDefinition-organization-eu-eps" name="Organization (EU PS)"/>
 <artifact id="StructureDefinition/patient-eu-eps" key="StructureDefinition-patient-eu-eps" name="Patient (EU PS)"/>
+<artifact id="StructureDefinition/practitioner-eu-eps" key="StructureDefinition-practitioner-eu-eps" name="Practitioner (EU PS)"/>
+<artifact id="StructureDefinition/practitionerRole-eu-eps" key="StructureDefinition-practitionerRole-eu-eps" name="PractitionerRole: (EU PS)"/>
 <artifact id="ValueSet/eHDSISeverity" key="ValueSet-eHDSISeverity" name="Severity"/>
 <artifact id="StructureDefinition/supportingInformation" key="StructureDefinition-supportingInformation" name="Supporting Information"/>
 <artifact id="ConceptMap/patientSummary2FHIR" key="ConceptMap-patientSummary2FHIR" name="eHN Patient Summary to this guide Map"/>

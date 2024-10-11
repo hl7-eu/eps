@@ -17,7 +17,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * type ^short = "Kind of composition (\"Patient Summary\")"
 * type ^definition = "Specifies that this composition refer to a Patient Summary"
 // * type = http://loinc.org#34105-7  
-// * subject only Reference(PatientEpsEu)
+* subject only Reference(PatientEpsEu)
 * subject 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the PS the subject is always the patient."
 // * encounter only Reference ( EncounterEpsEu )
@@ -31,7 +31,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * ^short = "Sliced per type of author"
   * ^definition = "Sliced per type of author"
 * author contains practictionerRole 0..*
-// * author[practictionerRole] only Reference ( PractitionerRoleEpsEu )
+* author[practictionerRole] only Reference ( PractitionerRoleEuEps )
 
 * title ^short = "Patient Summary"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Patient Summary\" or any equivalent translation"
@@ -71,16 +71,18 @@ The field \"alerts\" was originally defined to include all the important and obj
   * insert SectionEntrySliceComRules(Alerts, Alerts)
   // entry slices
 
-  /* * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagEpsEu) */
+  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagEpsEu)
 
-  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , Flag)
+// only Flag ?
 
-  * insert SectionEntrySliceDefRules (detectedIssue, 0.. ,  Detected Issue,
+/*  
+ * insert SectionEntrySliceDefRules (detectedIssue, 0.. ,  Detected Issue,
     Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction\, Ineffective treatment frequency\, Procedure-condition conflict\, etc. ,
     DetectedIssue)
   * insert SectionEntrySliceDefRules (riskAssessment, 0.. , Risk Assessment,
     An assessment of the likely outcomes for a patient or other subject as well as the likelihood of each outcome. ,
-    RiskAssessment)
+    RiskAssessment) 
+    */
 
 /* * section[sectionProblems].entry[problem] only Reference (ConditionEpsEu) */
 
