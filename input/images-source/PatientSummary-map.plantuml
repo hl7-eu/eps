@@ -1,0 +1,23 @@
+@startuml
+skinparam class {
+    BackgroundColor<<LogicalModel>> #FFCC00
+    BackgroundColor<<Profile>> #CCCCFF
+}
+skinparam linetype ortho
+legend right
+  | <#FFCC00> | Logical Model |
+  | <#CCCCFF> | Profile |
+endlegend
+class "PatientSummary" <<LogicalModel>> [[StructureDefinition-PatientSummary.html]]
+note right #PaleTurquoise [[ConceptMap-patientSummary2FHIR.html]]
+Concept Map
+endnote
+class "bundle-eu-eps" <<Profile>> [[StructureDefinition-bundle-eu-eps.html]]
+"PatientSummary" --> "bundle-eu-eps"
+class "composition-eu-eps" <<Profile>> [[StructureDefinition-composition-eu-eps.html]]
+"PatientSummary" --> "composition-eu-eps"
+"bundle-eu-eps" -[hidden]-> "composition-eu-eps"
+class "condition-eu-eps" <<Profile>> [[StructureDefinition-condition-eu-eps.html]]
+"PatientSummary" --> "condition-eu-eps"
+"composition-eu-eps" -[hidden]-> "condition-eu-eps"
+@enduml

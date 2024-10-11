@@ -6,7 +6,8 @@ Alias: $immunization-basedOn-r5 = http://hl7.org/fhir/5.0/StructureDefinition/ex
 Alias: $condition-participant-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Condition.participant
 Alias: $medicationStatement-dosage-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationStatement.dosage
 Alias: $composition.version-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Composition.version
-
+Alias: $flag-detail = http://hl7.org/fhir/StructureDefinition/flag-detail
+Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
 
 // Actor Canonical
 
@@ -17,7 +18,8 @@ Alias: $consumer = http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab
 // --- EU Lab Profiles
 Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab
 Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab
-
+Alias: $Address-eu = http://hl7.eu/fhir/laboratory/StructureDefinition/Address-eu
+Alias: $HumanName-eu = http://hl7.eu/fhir/laboratory/StructureDefinition/HumanName-eu
 // --- Code Systems
 Alias: $obligation-cs = http://hl7.org/fhir/CodeSystem/obligation
 Alias: $ajcc = http://cancerstaging.org

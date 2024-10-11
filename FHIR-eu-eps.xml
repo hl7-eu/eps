@@ -16,9 +16,16 @@
 <artifact id="StructureDefinition/Pregnancy" key="StructureDefinition-Pregnancy" name="A.2.6 Pregnancy history"/>
 <artifact id="StructureDefinition/Result" key="StructureDefinition-Result" name="A.2.8 - Results"/>
 <artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A1.1, A1.2 - Subject of care"/>
-<artifact id="StructureDefinition/AllergyIntolerance-eu-eps" key="StructureDefinition-AllergyIntolerance-eu-eps" name="Allergy Intolerance (EU PS)"/>
-<artifact id="StructureDefinition/Bundle-eu-eps" key="StructureDefinition-Bundle-eu-eps" name="Bundle (EU PS)"/>
-<artifact id="StructureDefinition/Composition-eu-eps" key="StructureDefinition-Composition-eu-eps" name="Composition (EU PS)"/>
+<artifact id="StructureDefinition/allergyIntolerance-eu-eps" key="StructureDefinition-allergyIntolerance-eu-eps" name="Allergy Intolerance (EU PS)"/>
+<artifact id="StructureDefinition/bundle-eu-eps" key="StructureDefinition-bundle-eu-eps" name="Bundle (EU PS)"/>
+<artifact id="StructureDefinition/composition-eu-eps" key="StructureDefinition-composition-eu-eps" name="Composition (EU PS)"/>
+<artifact id="StructureDefinition/Condition-eu-eps" key="StructureDefinition-Condition-eu-eps" name="Condition (EU PS)"/>
+<artifact id="StructureDefinition/condition-statusReason" key="StructureDefinition-condition-statusReason" name="Condition Status Reason"/>
+<artifact id="StructureDefinition/Flag-eu-eps" key="StructureDefinition-Flag-eu-eps" name="Flag (EU PS)"/>
+<artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
+<artifact id="StructureDefinition/patient-eu-eps" key="StructureDefinition-patient-eu-eps" name="Patient (EU PS)"/>
+<artifact id="ValueSet/eHDSISeverity" key="ValueSet-eHDSISeverity" name="Severity"/>
+<artifact id="StructureDefinition/supportingInformation" key="StructureDefinition-supportingInformation" name="Supporting Information"/>
 <artifact id="ConceptMap/patientSummary2FHIR" key="ConceptMap-patientSummary2FHIR" name="eHN Patient Summary to this guide Map"/>
 <artifact id="ConceptMap/subjectPs2FHIR" key="ConceptMap-subjectPs2FHIR" name="eHN Subject to this guide Map"/>
 <page key="NA" name="(NA)"/>
@@ -29,6 +36,8 @@
 <page key="index" name="Home"/>
 <page key="knownIusses" name="Known Issues"/>
 <page key="obligations" name="Obligations"/>
+<page key="PatientSummary-map" name="PatientSummary Relationships"/>
+<page key="Subject-map" name="Subject Relationships"/>
 <page key="toc" name="Table of Contents"/>
 <page key="logicalModel" name="eHN guideline data set"/>
 </specification>

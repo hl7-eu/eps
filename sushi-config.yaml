@@ -24,10 +24,11 @@ copyright: >-
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  # hl7.fhir.uv.ips: current
-  hl7.fhir.uv.ips: 1.1.0
+  hl7.fhir.uv.ips: current
+  # hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.eu.extensions: 0.1.0
+  hl7.fhir.eu.extensions: 0.1.x
+  hl7.fhir.eu.laboratory: 0.1.x
 
 #   hl7.fhir.us.mcode:
 #     id: mcode
@@ -59,6 +60,14 @@ pages:
     title: Obligations
   knownIusses.md:
     title: Known Issues
+# == MODEL MAPS
+  PatientSummary-map.html:
+    title: PatientSummary Relationships
+  Subject-map.html:
+    title: Subject Relationships
+# == MODEL MAPS
+
+
  # overview.md:
  #   title: Profiles overview
 
@@ -79,6 +88,25 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
 #    - http://hl7.eu/fhir/StructureDefinition/information-recipient
 #    - http://hl7.eu/fhir/StructureDefinition/composition-basedOn-order-or-requisition
 #    - http://example.org/lab-codes
+
+  special-url:
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIAbsentOrUnknownAllergy
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIAbsentOrUnknownDevice
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIAbsentOrUnknownMedication
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIReactionAllergy
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIActiveIngredient
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIAbsentOrUnknownAllergy
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIAbsentOrUnknownProblem
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIIllnessandDisorder
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIRareDisease
+    - http://terminology.ehdsi.eu/ValueSet/eHDSISeverity
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIVaccine
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIDoseForm
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIMedicalDevice
+    - http://terminology.ehdsi.eu/ValueSet/eHDSISubstance
+    - http://terminology.ehdsi.eu/ValueSet/eHDSIBloodGroup
+    - http://terminology.ehdsi.eu/ValueSet/eHDSISocialHistory
 
 
 # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
@@ -131,6 +159,9 @@ menu:
   Functional Specifications:
     eHN Guideline dataset: logicalModel.html
     Obligations: obligations.html
+  Model Maps:
+    PatientSummary: PatientSummary-map.html
+    Subject: Subject-map.html
   Artifacts: artifacts.html
   About:
     Downloads: downloads.html

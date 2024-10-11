@@ -1,0 +1,17 @@
+@startuml
+skinparam class {
+    BackgroundColor<<LogicalModel>> #FFCC00
+    BackgroundColor<<Profile>> #CCCCFF
+}
+skinparam linetype ortho
+legend right
+  | <#FFCC00> | Logical Model |
+  | <#CCCCFF> | Profile |
+endlegend
+class "Subject" <<LogicalModel>> [[StructureDefinition-Subject.html]]
+note right #PaleTurquoise [[ConceptMap-subjectPs2FHIR.html]]
+Concept Map
+endnote
+class "patient-eu-eps" <<Profile>> [[StructureDefinition-patient-eu-eps.html]]
+"Subject" --> "patient-eu-eps"
+@enduml

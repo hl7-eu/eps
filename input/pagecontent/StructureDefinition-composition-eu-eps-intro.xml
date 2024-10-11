@@ -1,0 +1,9 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+
+	<blockquote class="dragon">
+		<p>The LOINC codes used for the <b>alert</b> and the <b>patient history</b> sections are temporarly used as placeholders.</p>
+		<p>These codes will be substituted with more appropriate  concepts as soon as these codes will be officially assigned.</p>
+	</blockquote>
+</div>

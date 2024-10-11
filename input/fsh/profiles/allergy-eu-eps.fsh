@@ -1,11 +1,14 @@
 Profile: AllergyIntoleranceEpsEu
 Parent: $AllergyIntolerance-uv-ips
-Id: AllergyIntolerance-eu-eps
+Id: allergyIntolerance-eu-eps
 Title:    "Allergy Intolerance (EU PS)"
 Description: """This profile constrains the AllergyIntolerance resource for the purpose of the European patient summary."""
 * ^experimental = false
 * ^purpose = "This profile constrains the AllergyIntolerance resource for the purpose of the European patient summary."
-* extension[abatement-datetime] ^short = "End date"
+
+* insert SetFmmandStatusRule (1, draft)
+
+* extension[abatement].valueDateTime ^short = "End date"
 * clinicalStatus ^short = "Current allergy or Intolerance status"
 * type ^short = "Type of propensity"
 

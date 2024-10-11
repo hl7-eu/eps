@@ -8,7 +8,19 @@ Usage: #definition
 * experimental = false
 * description = """eHN Subject Model to this guide Map"""
 * group[+].source = "http://hl7.eu/fhir/eps/StructureDefinition/Subject"
-* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/Condition-ps-xpandh"
+* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/patient-eu-eps"
+* group[=].element[+].code = #Subject.identification					
+* group[=].element[=].display = "A.1.1 Identification of the patient/subject"
+* group[=].element[=].target.code = #Patient					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
+* group[=].element[=].target.comment = "Assuming that the address is the 'offcial' address. This is how it is currently mapped in the eHDSI CDA Igs"
+* group[=].element[+].code = #Subject.identification.identifier					
+* group[=].element[=].display = "A.1.1.1 National healthcare patient ID"
+* group[=].element[=].target.code = #Patient.identifier					
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #equivalent					
+* group[=].element[=].target.comment = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"
 * group[=].element[+].code = #Subject.identification.familyName					
 * group[=].element[=].display = "A.1.1.2 Family name/surname"
 * group[=].element[=].target.code = #Patient.name.family					
@@ -193,17 +205,3 @@ Usage: #definition
 * group[=].element[=].target.code = #nan
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[+].source = "http://hl7.eu/fhir/eps/StructureDefinition/Subject"
-* group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/Patient-ps-xpandh"
-* group[=].element[+].code = #Subject.identification					
-* group[=].element[=].display = "A.1.1 Identification of the patient/subject"
-* group[=].element[=].target.code = #Patient					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Assuming that the address is the 'offcial' address. This is how it is currently mapped in the eHDSI CDA Igs"
-* group[=].element[+].code = #Subject.identification.identifier					
-* group[=].element[=].display = "A.1.1.1 National healthcare patient ID"
-* group[=].element[=].target.code = #Patient.identifier					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #equivalent					
-* group[=].element[=].target.comment = "http://hl7.org/fhir/StructureDefinition/iso21090-ADXP-streetName"

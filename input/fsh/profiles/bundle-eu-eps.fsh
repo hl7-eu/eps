@@ -1,12 +1,13 @@
 Profile: BundleEpsEu
 Parent: $Bundle-uv-ips
-Id: Bundle-eu-eps
+Id: bundle-eu-eps
 Title: "Bundle (EU PS)"
 Description: "Clinical document used to represent a Patient Summary for the scope of the XpanDH project."
-* ^publisher = "XpanDH Project"
-* ^copyright = "XpanDH Project"
+
 * . ^short = "Patient Summary bundle"
 * . ^definition = "Patient Summary bundle."
+
+* insert SetFmmandStatusRule (1, draft)
 
 * entry[composition].resource 1..
 * entry[composition].resource only CompositionEpsEu
@@ -15,7 +16,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[allergyintolerance].resource 1..
 * entry[allergyintolerance].resource only $AllergyIntolerance-uv-ips  //EpsEu
 * entry[condition].resource 1..
-* entry[condition].resource only $Condition-uv-ips  //EpsEu
+* entry[condition].resource only ConditionEpsEu  //EpsEu
 * entry[device].resource 1..
 * entry[device].resource only Device
 * entry[deviceusestatement].resource 1..
@@ -41,10 +42,12 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[medicationstatement].resource only $MedicationStatement-uv-ips  //EpsEu
 
 
+/* Add when we will have a commmon profile
 * entry[practitioner].resource 1..
-* entry[practitioner].resource only $Practitioner-uv-ips  //EpsEu
+* entry[practitioner].resource only PractitionerEuEps  //EpsEu
 * entry[practitionerrole].resource 1..
-* entry[practitionerrole].resource only $PractitionerRole-uv-ips  //EpsEu
+* entry[practitionerrole].resource only PractitionerRoleEuEs  //EpsEu 
+*/
 
 /*  COMMENTED TO BY-PASS A BUILD ERROR TO BE ANALYZED  */
 * entry[procedure].resource 1..
@@ -75,11 +78,12 @@ In this case a generic social history observation is used
 * entry[observation-social-history] ^short = "Social History Observation"
 * entry[observation-social-history] ^definition = "Slice including a generic social history Observation"
 * entry[observation-social-history].resource only ObservationSocialHistoryEpsEu
- */
+ 
 
 * entry[observation-results].resource 1..
 * entry[observation-results].resource only $Observation-results-uv-ips // ObservationResultsEpsEu
 
+*/
 
 /*
 * entry[specimen].resource 1..

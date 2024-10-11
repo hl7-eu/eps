@@ -1,3 +1,7 @@
+RuleSet: ImposeProfile ( profile, index )
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile][{index}].valueCanonical = {profile}
+
+
 RuleSet: ExtensionContext(path)
 // copied by mCode
 * ^context[+].type = #element

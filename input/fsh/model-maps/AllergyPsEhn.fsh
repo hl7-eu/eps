@@ -1,7 +1,7 @@
 Logical: AllergyPsEhn
 Id: Allergy
 Title: "A.2.1.1 - Allergy"
-Description: """A.2.1.1 - Allergy"""
+Description: """Allergy. Section A.2.1.1"""
 * description 0..* BackboneElement "A.2.1.1.1 Allergy description" """A.2.1.1.1 Allergy description - Textual description of the allergy or intolerance"""
 * type 0..* string "A.2.1.1.2 Type of propensity" """A.2.1.1.2 Type of propensity - This element describes whether this condition refers to an allergy, non-allergy intolerance, or unknown class of intolerance (not known to be allergy or intolerance)"""
 * manifestation 0..* CodeableConcept "A.2.1.1.3 Allergy manifestation" """A.2.1.1.3 Allergy manifestation- Description of the clinical manifestation of the allergic reaction. Example: anaphylactic shock, angioedema (the clinical manifestation also gives"""
