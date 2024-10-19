@@ -72,7 +72,7 @@ Usage: #definition
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[=].target.comment = "author can be of type Organzation, Pracittioner or PractictionerRole"
-* group[=].element[+].code = #PatientSummary.header.participant.legalAuth					
+* group[=].element[+].code = #PatientSummary.header.participant.legalAuthenticator				
 * group[=].element[=].display = "A.1.5.2 Legal authenticator"
 * group[=].element[=].target.code = #Composition.attester					
 * group[=].element[=].target.display = ""
@@ -123,16 +123,15 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PatientSummary.body.medicalHistory.anamnesis					
 * group[=].element[=].display = "A.2.2.3 Medical history"
-* group[=].element[=].target.code = #Composition.section					
-* group[=].element[=].target.display = ""
-* group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Mapped into several sections"
-* group[=].element[+].code = #PatientSummary.body.medicalHistory.anamnesis.details					
-* group[=].element[=].display = "A.2.2.3.1 Medical history"
 * group[=].element[=].target.code = #Composition.section:sectionPatientHx					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "To be checked: the current Patient Hisotry in ISO 27269 seems to have a different purpose"
+* group[=].element[=].target.comment = "to be checked be sure is not mapped in the IPS Patient Story"
+* group[=].element[+].code = #PatientSummary.body.medicalHistory.anamnesis.details					
+* group[=].element[=].display = "A.2.2.3.1 Medical history"
+* group[=].element[=].target.code = #Composition.section:sectionPatientHx.text				
+* group[=].element[=].target.display = ""
+* group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #PatientSummary.body.medicalProblems					
 * group[=].element[=].display = "A.2.3 Medical problems"
 * group[=].element[=].target.code = #Composition.section					
