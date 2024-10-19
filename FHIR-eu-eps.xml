@@ -19,9 +19,9 @@
 <artifact id="StructureDefinition/allergyIntolerance-eu-eps" key="StructureDefinition-allergyIntolerance-eu-eps" name="Allergy Intolerance (EU PS)"/>
 <artifact id="StructureDefinition/bundle-eu-eps" key="StructureDefinition-bundle-eu-eps" name="Bundle (EU PS)"/>
 <artifact id="StructureDefinition/composition-eu-eps" key="StructureDefinition-composition-eu-eps" name="Composition (EU PS)"/>
-<artifact id="StructureDefinition/Condition-eu-eps" key="StructureDefinition-Condition-eu-eps" name="Condition (EU PS)"/>
+<artifact id="StructureDefinition/condition-eu-eps" key="StructureDefinition-condition-eu-eps" name="Condition (EU PS)"/>
 <artifact id="StructureDefinition/condition-statusReason" key="StructureDefinition-condition-statusReason" name="Condition Status Reason"/>
-<artifact id="StructureDefinition/Flag-eu-eps" key="StructureDefinition-Flag-eu-eps" name="Flag (EU PS)"/>
+<artifact id="StructureDefinition/flag-eu-eps" key="StructureDefinition-flag-eu-eps" name="Flag (EU PS)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
 <artifact id="StructureDefinition/organization-eu-eps" key="StructureDefinition-organization-eu-eps" name="Organization (EU PS)"/>
 <artifact id="StructureDefinition/patient-eu-eps" key="StructureDefinition-patient-eu-eps" name="Patient (EU PS)"/>

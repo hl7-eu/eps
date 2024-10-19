@@ -145,7 +145,7 @@ For the eHDSI Patient Summary this is a mandatory section and shall be used to r
 This section is used in eHDSI only for the purpose of providing the Expected Date of Delivery, when applicable, not the full history of pregnancies."""
   * title ^short = "Pregnancy Section title"
   * entry[pregnancyStatus] ^short = "Pregnancy status"
-  * entry[pregnancyOutcomeSummary] ^short = "Pregnancy outcome summary"
+  * entry[pregnancyOutcome] ^short = "Pregnancy outcome"
   
 * section[sectionAdvanceDirectives]
   * ^short = "eHDSI Advance Directives Section"
