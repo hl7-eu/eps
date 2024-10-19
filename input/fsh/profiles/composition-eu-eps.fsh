@@ -91,7 +91,7 @@ The field \"alerts\" was originally defined to include all the important and obj
   * ^short = "eHDSI Active Problems"
   * ^definition = """The active problem section contains a narrative description of the conditions currently being monitored for the patient. It includes entries for patient conditions as described in the Entry.
 This section can also be used to hold the Medical Alert information (other alerts not included in allergies). Alerts, of all types are to be considered for the next iteration of the specifications."""
-* section[sectionProceduresHx] 1..1
+* section[sectionProceduresHx] 0..1
   * ^short = "eHDSI List of Surgeries"
   * ^definition = """The list of surgeries section includes entries for procedures and references to procedure reports when known as described in the Entry. In epSOS this section was used to describe the Surgical Procedures prior past six months (optional) and to record the Major Surgical Procedures past 6 months (required). This choice of considering a time based distinction was due by the subjectivity of \‘relevancy\’ for automatically assembled PS. 
 As the date can be seen from the procedure, the two have the same expression. It is up to the implementers of the system to display it in a different way."""
@@ -104,7 +104,7 @@ As the date can be seen from the procedure, the two have the same expression. It
 
 /*   * entry[immunization] only Reference (ImmunizationEpsEu) */
 
-* section[sectionMedicalDevices] 1..1
+* section[sectionMedicalDevices] 0..1
   * ^short = "eHDSI Medical Devices"
   * ^definition = """The medical devices section contains narrative text describing the patient history of medical device use.
 For the eHDSI Patient Summary this is a mandatory section and shall be used to record the Medical Devices and Implants. Each device shall be described using the specifed entry."""
