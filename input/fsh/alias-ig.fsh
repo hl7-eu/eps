@@ -1,6 +1,8 @@
 //============== ALIAS ===============
 //---- Extensions
 
+Alias: $flag-priority = http://hl7.org/fhir/StructureDefinition/flag-priority
+Alias: $allergyintolerance-abatement = http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement
 Alias: $immunization-administeredProduct-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Immunization.administeredProduct
 Alias: $immunization-basedOn-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Immunization.basedOn
 Alias: $condition-participant-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-Condition.participant

@@ -29,6 +29,8 @@ dependencies:
   hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.eu.extensions: 0.1.x
   hl7.fhir.eu.laboratory: 0.1.x
+  hl7.fhir.eu.base.r4: current
+
 
 #   hl7.fhir.us.mcode:
 #     id: mcode
