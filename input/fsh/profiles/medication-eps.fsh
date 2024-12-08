@@ -18,31 +18,31 @@ Description: "This profile constrains the Medication resource for the purpose of
   * strength ^short = "Amount of substance in product (presentation or concentration strength)"
   * strength ^definition = """Definitional resources should be used for specifying the different types of strengths: presentation; concentration."""
   * strength  // item.ingredient.strengthInfo (does not map exactly)
-    * extension contains MedicationStrengthSubstance named strengthSubstance 0..1 
+    * extension contains $ihe-ext-medication-strengthsubstance named strengthSubstance 0..1 
     * extension[strengthSubstance] ^short = "Substance for which the strength is provided (this could be different from the precise active ingredient)."
-    * extension contains MedicationStrengthType named strengthType 0..1
+    * extension contains $ihe-ext-medication-strengthtype named strengthType 0..1
     * extension[strengthType] ^short = "Type of the given strength (concentration strength, presentation strength, or other)"
 //* form from $eHDSIDoseForm (example)
 //  * ^short = "Dose form. For a branded product, this would most likely be authorised dose form, but it could also be administrable dose form. For package items, it could be item's individual dose form." // doseForm
 
 
 // Common R4 R5
-* extension contains MedicationProductName named productName 0..1 // productName
+* extension contains $ihe-ext-medication-productname named productName 0..1 // productName
 * extension[productName] ^short = "Name of the medicinal product. Names of different types (full name, short name, etc) and in different languages can be provided if relevant." 
 
-* extension contains MedicationClassification named classification 0..* // classification
+* extension contains $ihe-ext-medication-classification named classification 0..* // classification
 * extension[classification] ^short = "Classifications of the product, e.g ATC, narcotic/psychotropic, orphan drug, etc"
 
-* extension contains MedicationSizeOfItem named sizeOfItem 0..1 // item.containedQuantity
+* extension contains $ihe-ext-medication-sizeofitem named sizeOfItem 0..1 // item.containedQuantity
 * extension[sizeOfItem] ^short = "Size of one item (for example, in a pack of 5 vials, this would represent the size of 1 vial)"
 
-* extension contains MedicationDevice named device 0..* // device
+* extension contains $ihe-ext-medication-device named device 0..* // device
 * extension[device] ^short = "Device, typically an administration device, included in the product."
 
-* extension contains MedicationCharacteristic named characteristic 0..* // characteristic
+* extension contains $ihe-ext-medication-characteristic named characteristic 0..* // characteristic
 * extension[characteristic] ^short = "Specifies other descriptive properties of the medication."
 
-* extension contains MedicationUnitOfPresentation named unitOfPresentation 0..1 // item.unitOfPresentation
+* extension contains $ihe-ext-medication-unitofpresentation named unitOfPresentation 0..1 // item.unitOfPresentation
 * extension[unitOfPresentation] ^short = "Unit of presentation of the product (e.g. tablet, vial, ampoule, etc)"
 
 
