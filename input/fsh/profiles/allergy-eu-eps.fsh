@@ -1,4 +1,4 @@
-Profile: AllergyIntoleranceEpsEu
+Profile: AllergyIntoleranceEuEps
 Parent: $AllergyIntolerance-uv-ips
 Id: allergyIntolerance-eu-eps
 Title:    "Allergy Intolerance (EU PS)"
@@ -17,7 +17,7 @@ Description: """This profile constrains the AllergyIntolerance resource for the 
 * verificationStatus ^short = "Certainty"
 * criticality ^short = "Criticality"
 
-* patient only Reference(PatientEpsEu)
+* patient only Reference(PatientEuEps)
 
 
 // * onset[x] only dateTime // is this needed ?

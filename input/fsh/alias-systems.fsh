@@ -5,7 +5,6 @@ Alias: $absent-unknown-uv-ips = http://hl7.org/fhir/uv/ips/CodeSystem/absent-unk
 Alias: $ajcc = http://cancerstaging.org
 Alias: $atc = http://www.whocc.no/atc
 Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
-Alias: $data-absent-reason = http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $data-absent-reason-cs =  http://terminology.hl7.org/CodeSystem/data-absent-reason
 Alias: $diagnosis-role = http://terminology.hl7.org/CodeSystem/diagnosis-role
 Alias: $dicomOntology = http://dicom.nema.org/resources/ontology/DCM
@@ -16,12 +15,14 @@ Alias: $icd03 = http://terminology.hl7.org/CodeSystem/icd-o-3
 Alias: $icd10 = http://hl7.org/fhir/sid/icd-10
 Alias: $loinc =  http://loinc.org
 Alias: $medicalDevice-cs = urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.6 // ===> to be checked <====
+Alias: $medication-statement-status-reason = http://terminology.hl7.org/CodeSystem/medication-statement-status-reason
 Alias: $niaid = http://niaid.nih.gov
 Alias: $nibsc = http://nibsc.org
 Alias: $obligation-cs = http://hl7.org/fhir/CodeSystem/obligation
 Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation-category
 Alias: $orpha = https://www.orpha.net // Used urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.5 for the MyHealth@EU lab guide to be checked <====
 Alias: $pei = http://pei.de
+Alias: $procedure-outcome = http://terminology.hl7.org/CodeSystem/procedure-outcome
 Alias: $referencerange-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $sct = http://snomed.info/sct
 Alias: $sex-parameter-for-clinical-use = http://terminology.hl7.org/CodeSystem/sex-parameter-for-clinical-use

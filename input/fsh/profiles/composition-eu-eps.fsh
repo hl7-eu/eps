@@ -1,4 +1,4 @@
-Profile: CompositionEpsEu
+Profile: CompositionEuEps
 Parent: $Composition-uv-ips
 Id: composition-eu-eps
 Title: "Composition (EU PS)"
@@ -17,10 +17,10 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * type ^short = "Kind of composition (\"Patient Summary\")"
 * type ^definition = "Specifies that this composition refer to a Patient Summary"
 // * type = http://loinc.org#34105-7  
-* subject only Reference(PatientEpsEu)
+* subject only Reference(PatientEuEps)
 * subject 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the PS the subject is always the patient."
-// * encounter only Reference ( EncounterEpsEu )
+// * encounter only Reference ( EncounterEuEps )
 * date ^short = "PS date"
 * author ^short = "Who and/or what authored the Patient Summary"
 * author ^definition = "Identifies who is responsible for the information in the Patient Summary, not necessarily who typed it in."
@@ -48,17 +48,18 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * section ^definition = "The root of the sections that make up the Patient Summary composition." */
 
 * section[sectionMedications]
-  * ^short = "eHDSI Medication Summary"
+  * ^short = "Medication Summary"
   * ^definition = """The medication summary section contains a description of the patient's medications as part of the patient summary"""
 
-  /* * entry[medicationStatement] only Reference (MedicationStatementEpsEu) */
+  * entry only Reference (MedicationStatementEuEps or MedicationRequestEuEps or MedicationAdministration or MedicationDispense) 
+  * entry[medicationStatement] only Reference (MedicationStatementEuEps) 
   
 * section[sectionAllergies]
-  * ^short = "eHDSI Allergies and Other Adverse Reactions"
+  * ^short = "Allergies and Other Adverse Reactions"
   * ^definition = """The adverse and other adverse reactions section contains a narrative description of the substance intolerances and the associated adverse reactions suffered by the patient. It includes entries for intolerances and adverse reactions as described in the entry.
 
 The field \"alerts\" was originally defined to include all the important and objective medical information that should be highlighted (such as allergies, thrombosis risk, immune deficit …etc). When defining the content only allergies and intolerance to drugs appear to be the common understanding and the easiest to be transferred. A lot of surveys are being made in different countries (not only in Europe) to make a more evidence-based definition of what should represented and should not by the concept “alerts”, hence not enough information could be provided to take a further decision. As eHDSI\’s intention is not to duplicate information, this shall not be repeated. Alerts are difficult to represent since they are contextual. Alerts may be represented as severe or life-threatening allergies or other adverse reactions. Another area are certain selected procedures and implanted devices. The section Allergies and Other Adverse Reactions contains the medical alerts as well, based on the severity, and their representation becomes a Country B choice."""
-  * entry[allergyOrIntolerance] only Reference (AllergyIntoleranceEpsEu)
+  * entry[allergyOrIntolerance] only Reference (AllergyIntoleranceEuEps)
 
 * section contains sectionAlert ..1
 * section[sectionAlert]
@@ -71,7 +72,7 @@ The field \"alerts\" was originally defined to include all the important and obj
   * insert SectionEntrySliceComRules(Alerts, Alerts)
   // entry slices
 
-  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagEpsEu)
+  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagEuEps)
 
 // only Flag ?
 
@@ -84,63 +85,63 @@ The field \"alerts\" was originally defined to include all the important and obj
     RiskAssessment) 
     */
 
-/* * section[sectionProblems].entry[problem] only Reference (ConditionEpsEu) */
+/* * section[sectionProblems].entry[problem] only Reference (ConditionEuEps) */
 
 * section[sectionProblems].entry[problem]
 
-  * ^short = "eHDSI Active Problems"
+  * ^short = "Active Problems"
   * ^definition = """The active problem section contains a narrative description of the conditions currently being monitored for the patient. It includes entries for patient conditions as described in the Entry.
 This section can also be used to hold the Medical Alert information (other alerts not included in allergies). Alerts, of all types are to be considered for the next iteration of the specifications."""
 * section[sectionProceduresHx] 0..1
-  * ^short = "eHDSI List of Surgeries"
+  * ^short = "List of Surgeries"
   * ^definition = """The list of surgeries section includes entries for procedures and references to procedure reports when known as described in the Entry. In epSOS this section was used to describe the Surgical Procedures prior past six months (optional) and to record the Major Surgical Procedures past 6 months (required). This choice of considering a time based distinction was due by the subjectivity of \‘relevancy\’ for automatically assembled PS. 
 As the date can be seen from the procedure, the two have the same expression. It is up to the implementers of the system to display it in a different way."""
 
-/*   * entry[procedure] only Reference (ProcedureEpsEu) */
+/*   * entry[procedure] only Reference (ProcedureEuEps) */
 
 * section[sectionImmunizations]
-  * ^short = "eHDSI Immunizations"
+  * ^short = "Immunizations"
   * ^definition = """The immunizations section contains a narrative description of the immunizations administered to the patient in the past. It includes entries for medication administration as described in related profiles."""
 
-/*   * entry[immunization] only Reference (ImmunizationEpsEu) */
+/*   * entry[immunization] only Reference (ImmunizationEuEps) */
 
 * section[sectionMedicalDevices] 0..1
-  * ^short = "eHDSI Medical Devices"
+  * ^short = "Medical Devices"
   * ^definition = """The medical devices section contains narrative text describing the patient history of medical device use.
 For the eHDSI Patient Summary this is a mandatory section and shall be used to record the Medical Devices and Implants. Each device shall be described using the specifed entry."""
   
-  /* * entry[deviceStatement] only Reference (DeviceUseStatementEpsEu) */
+  * entry[deviceStatement] only Reference (DeviceUseStatementEuEps)
 
 * section[sectionResults]
-  * ^short = "eHDSI Coded Results"
+  * ^short = "Coded Results"
   * ^definition = """In eHDSI this section is used only for the purpose of providing the results for the blood group."""
   // consider to add specialized profiles for results 
 
-  /* * entry[results-observation] only Reference (ObservationBloodGroupEpsEu or ObservationResultsEpsEu) */
+  /* * entry[results-observation] only Reference (ObservationBloodGroupEuEps or ObservationResultsEuEps) */
 
 * section[sectionVitalSigns].entry[vitalSign] only Reference ($Observation-bp)
-  * ^short = "eHDSI Vital Signs"
+  * ^short = "Vital Signs"
   * ^definition = """The vital signs section contains coded measurement results of a patient\’s vital signs."""
-* section[sectionPastIllnessHx].entry[pastProblem] // only Reference (ConditionEpsEu)
-  * ^short = "eHDSI History Of Past Illness"
+* section[sectionPastIllnessHx].entry[pastProblem] // only Reference (ConditionEuEps)
+  * ^short = "History Of Past Illness"
   * ^definition = """The History of Past Illness section contains a narrative description of the conditions the patient suffered in the past. It includes entries for problems as described in the Entry."""
 * section[sectionFunctionalStatus]
-  * ^short = "eHDSI Functional Status"
+  * ^short = "Functional Status"
   * ^definition = """The functional status section contains a narrative description of capability of the patient to perform acts of daily living."""
 * section[sectionPlanOfCare]
-  * ^short = "eHDSI Health Maintenance Care Plan"
+  * ^short = "Health Maintenance Care Plan"
   * ^definition = """The health maintenance care plan section contains a description of the expectations for wellness care including proposals, goals, and order requests for monitoring, tracking, or improving the lifetime condition of the patient with goals of educating the patient on how to reduce the modifiable risks of the patient\’s genetic, behavioral, and environmental pre-conditions and otherwise optimizing lifetime outcomes."""
 * section[sectionSocialHistory]
-  * ^short = "eHDSI Social History"
+  * ^short = "Social History"
   * ^definition = """The social history section contains a narrative description of the person\’s beliefs, home life, community life, work life, hobbies, and risky habits. It includes Social History Observations."""
   // * insert SectionEntrySlicePerProfileRules (SLicing , eHDSI Social History Observation)
   
   /* 
-  * insert SectionEntrySliceDefRules (eHDSISocialHistory, 0.., eHDSI Social History Observation, eHDSI Social History Observation, ObservationSocialHistoryEpsEu)
+  * insert SectionEntrySliceDefRules (eHDSISocialHistory, 0.., eHDSI Social History Observation, eHDSI Social History Observation, ObservationSocialHistoryEuEps)
    */
 
 * section[sectionPregnancyHx]
-  * ^short = "eHDSI Pregnancy History"
+  * ^short = "Pregnancy History"
   * ^definition = """The pregnancy history section contains coded entries describing the patient history of pregnancies.
 This section is used in eHDSI only for the purpose of providing the Expected Date of Delivery, when applicable, not the full history of pregnancies."""
   * title ^short = "Pregnancy Section title"
@@ -148,13 +149,13 @@ This section is used in eHDSI only for the purpose of providing the Expected Dat
   * entry[pregnancyOutcome] ^short = "Pregnancy outcome"
   
 * section[sectionAdvanceDirectives]
-  * ^short = "eHDSI Advance Directives Section"
+  * ^short = "Advance Directives Section"
   * ^definition = """The advance directive section contains a narrative description of patient's advance directive. The optional author and informant elements are used when necessary to convey the provenance and authoring of the section content in case it is different from what is announced in the CDA header.
 Entries for references to consent and advance directive documents when known will be specified by future versions of this template."""
 
 
 * section[sectionAdvanceDirectives]
-  * ^short = "eHDSI Advance Directives Section"
+  * ^short = "Advance Directives Section"
   * ^definition = """The advance directive section contains a narrative description of patient's advance directive. The optional author and informant elements are used when necessary to convey the provenance and authoring of the section content in case it is different from what is announced in the CDA header.
 Entries for references to consent and advance directive documents when known will be specified by future versions of this template."""
 

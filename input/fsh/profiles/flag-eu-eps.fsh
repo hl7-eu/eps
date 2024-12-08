@@ -1,5 +1,5 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-Profile:  FlagEpsEu
+Profile:  FlagEuEps
 Parent:   Flag
 Id:       flag-eu-eps
 Title:    "Flag (EU PS)"
@@ -14,4 +14,4 @@ Description: "This profile constrains the Flag resource to represent alerts or w
 * extension[flagPriorityExt]
 * status ^short = "Alert status"
 * code ^short = "Coded or textual message to display to user."
-* subject only Reference(PatientEpsEu)
+* subject only Reference(PatientEuEps)

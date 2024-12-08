@@ -1,4 +1,4 @@
-Profile: ConditionEpsEu
+Profile: ConditionEuEps
 Parent: $Condition-uv-ips
 Id: condition-eu-eps
 Title:    "Condition (EU PS)"
@@ -30,6 +30,6 @@ Description: """This profile constrains the Condition resource for the purpose o
 * code ^short = "TBD: update the VS binding" // from EHDSIProblemCode (preferred)
 * participant.actor
 * severity from EHDSISeverity
-* subject only Reference(PatientEpsEu)
+* subject only Reference(PatientEuEps)
 * onset[x] only dateTime // is this rule needed ?
 * abatement[x] only dateTime // is this rule needed ?

@@ -1,4 +1,4 @@
-Profile: PatientEpsEu
+Profile: PatientEuEps
 Parent: Patient
 Id: patient-eu-eps
 Title:    "Patient (EU PS)"

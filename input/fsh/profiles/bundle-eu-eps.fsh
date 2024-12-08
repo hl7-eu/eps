@@ -1,4 +1,4 @@
-Profile: BundleEpsEu
+Profile: BundleEuEps
 Parent: $Bundle-uv-ips
 Id: bundle-eu-eps
 Title: "Bundle (EU PS)"
@@ -10,45 +10,45 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * insert SetFmmandStatusRule (1, draft)
 
 * entry[composition].resource 1..
-* entry[composition].resource only CompositionEpsEu
+* entry[composition].resource only CompositionEuEps
 * entry[patient].resource 1..
-* entry[patient].resource only PatientEpsEu  //EpsEu
+* entry[patient].resource only PatientEuEps  //EuEps
 * entry[allergyintolerance].resource 1..
-* entry[allergyintolerance].resource only $AllergyIntolerance-uv-ips  //EpsEu
+* entry[allergyintolerance].resource only $AllergyIntolerance-uv-ips  //EuEps
 * entry[condition].resource 1..
-* entry[condition].resource only ConditionEpsEu  //EpsEu
+* entry[condition].resource only ConditionEuEps  //EuEps
 * entry[device].resource 1..
-* entry[device].resource only Device
+* entry[device].resource only DeviceEuEps
 * entry[deviceusestatement].resource 1..
-* entry[deviceusestatement].resource only $DeviceUseStatement-uv-ips  //EpsEu
+* entry[deviceusestatement].resource only DeviceUseStatementEuEps
 
 /* * entry[diagnosticreport].resource 1..
-* entry[diagnosticreport].resource only $DiagnosticReport-uv-ips  //EpsEu
+* entry[diagnosticreport].resource only $DiagnosticReport-uv-ips  //EuEps
 * entry[imagingstudy].resource 1..
-* entry[imagingstudy].resource only $ImagingStudy-uv-ips  //EpsEu */
+* entry[imagingstudy].resource only $ImagingStudy-uv-ips  //EuEps */
 
 * entry[immunization].resource 1..
-* entry[immunization].resource only $Immunization-uv-ips  //EpsEu
+* entry[immunization].resource only $Immunization-uv-ips  //EuEps
 
 /* * entry[media].resource 1..
 * entry[media].resource only $Media-observation-uv-ips */
 * entry[medication].resource 1..
-* entry[medication].resource only $Medication-uv-ips  //EpsEu
+* entry[medication].resource only MedicationEuEps  //EuEps
 
-/* * entry[medicationrequest].resource 1..
-* entry[medicationrequest].resource only $MedicationRequest-uv-ips */
+* entry[medicationrequest].resource 1..
+* entry[medicationrequest].resource only MedicationRequestEuEps
 
 * entry[medicationstatement].resource 1..
-* entry[medicationstatement].resource only $MedicationStatement-uv-ips  //EpsEu
+* entry[medicationstatement].resource only MedicationStatementEuEps
 
 * entry[practitioner].resource 1..
-* entry[practitioner].resource only PractitionerEuEps  //EpsEu
+* entry[practitioner].resource only PractitionerEuEps  //EuEps
 * entry[practitionerrole].resource 1..
-* entry[practitionerrole].resource only PractitionerRoleEuEps  //EpsEu 
+* entry[practitionerrole].resource only PractitionerRoleEuEps  //EuEps 
 
 /*  COMMENTED TO BY-PASS A BUILD ERROR TO BE ANALYZED  */
 * entry[procedure].resource 1..
-* entry[procedure].resource only $Procedure-uv-ips  //EpsEu
+* entry[procedure].resource only $Procedure-uv-ips  //EuEps
 
 /*
 * entry[organization].resource 1..
@@ -74,11 +74,11 @@ In this case a generic social history observation is used
 * entry[observation-social-history] 0..
 * entry[observation-social-history] ^short = "Social History Observation"
 * entry[observation-social-history] ^definition = "Slice including a generic social history Observation"
-* entry[observation-social-history].resource only ObservationSocialHistoryEpsEu
+* entry[observation-social-history].resource only ObservationSocialHistoryEuEps
  
 
 * entry[observation-results].resource 1..
-* entry[observation-results].resource only $Observation-results-uv-ips // ObservationResultsEpsEu
+* entry[observation-results].resource only $Observation-results-uv-ips // ObservationResultsEuEps
 
 */
 

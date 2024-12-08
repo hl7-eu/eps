@@ -21,8 +21,23 @@
 <artifact id="StructureDefinition/composition-eu-eps" key="StructureDefinition-composition-eu-eps" name="Composition (EU PS)"/>
 <artifact id="StructureDefinition/condition-eu-eps" key="StructureDefinition-condition-eu-eps" name="Condition (EU PS)"/>
 <artifact id="StructureDefinition/condition-statusReason" key="StructureDefinition-condition-statusReason" name="Condition Status Reason"/>
+<artifact id="StructureDefinition/device-eu-eps" key="StructureDefinition-device-eu-eps" name="Device (EPS)"/>
+<artifact id="StructureDefinition/deviceUseStatement-eu-eps" key="StructureDefinition-deviceUseStatement-eu-eps" name="DeviceUseStatement (EPS)"/>
 <artifact id="StructureDefinition/flag-eu-eps" key="StructureDefinition-flag-eu-eps" name="Flag (EU PS)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
+<artifact id="ValueSet/medical-devices-eu-hdr" key="ValueSet-medical-devices-eu-hdr" name="Medical Devices (SNOMED CT) - Xpandh"/>
+<artifact id="ValueSet/medical-devices-snomed-absent-unknown-eu-hdr" key="ValueSet-medical-devices-snomed-absent-unknown-eu-hdr" name="Medical Devices - SNOMED CT + Absent/Unknown - IPS"/>
+<artifact id="StructureDefinition/Medication-eu-eps" key="StructureDefinition-Medication-eu-eps" name="Medication (EPS)"/>
+<artifact id="StructureDefinition/ihe-ext-medication-characteristic" key="StructureDefinition-ihe-ext-medication-characteristic" name="Medication - Characteristic"/>
+<artifact id="StructureDefinition/ihe-ext-medication-classification" key="StructureDefinition-ihe-ext-medication-classification" name="Medication - Classification"/>
+<artifact id="StructureDefinition/ihe-ext-medication-device" key="StructureDefinition-ihe-ext-medication-device" name="Medication - Device"/>
+<artifact id="StructureDefinition/ihe-ext-medication-productname" key="StructureDefinition-ihe-ext-medication-productname" name="Medication - Product Name"/>
+<artifact id="StructureDefinition/ihe-ext-medication-sizeofitem" key="StructureDefinition-ihe-ext-medication-sizeofitem" name="Medication - Size of Item"/>
+<artifact id="StructureDefinition/ihe-ext-medication-strengthsubstance" key="StructureDefinition-ihe-ext-medication-strengthsubstance" name="Medication - Strength substance"/>
+<artifact id="StructureDefinition/ihe-ext-medication-strengthtype" key="StructureDefinition-ihe-ext-medication-strengthtype" name="Medication - Strength type"/>
+<artifact id="StructureDefinition/ihe-ext-medication-unitofpresentation" key="StructureDefinition-ihe-ext-medication-unitofpresentation" name="Medication - Unit of presentation"/>
+<artifact id="StructureDefinition/MedicationStatement-eu-eps" key="StructureDefinition-MedicationStatement-eu-eps" name="Medication Statement (EU PS)"/>
+<artifact id="StructureDefinition/medicationRequest-eu-eps" key="StructureDefinition-medicationRequest-eu-eps" name="MedicationRequest (EPS)"/>
 <artifact id="StructureDefinition/organization-eu-eps" key="StructureDefinition-organization-eu-eps" name="Organization (EU PS)"/>
 <artifact id="StructureDefinition/patient-eu-eps" key="StructureDefinition-patient-eu-eps" name="Patient (EU PS)"/>
 <artifact id="StructureDefinition/practitioner-eu-eps" key="StructureDefinition-practitioner-eu-eps" name="Practitioner (EU PS)"/>
