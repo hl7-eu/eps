@@ -9,8 +9,10 @@ Alias: $consumer = http://hl7.eu/fhir/laboratory/actor-consumer-eu-lab
 // --- EU Lab Profiles
 Alias: $Composition-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Composition-eu-lab
 Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patient-eu-lab
-Alias: $Address-eu = http://hl7.eu/fhir/laboratory/StructureDefinition/Address-eu
-Alias: $HumanName-eu = http://hl7.eu/fhir/laboratory/StructureDefinition/HumanName-eu
+
+// -- EU BASE
+Alias: $Address-eu = http://hl7.eu/fhir/base/StructureDefinition/Address-eu
+Alias: $HumanName-eu = http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu
 
 // --- Profiles
 Alias: $Composition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips
@@ -43,7 +45,7 @@ Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
 Alias: $Observation-bp = http://hl7.org/fhir/StructureDefinition/bp
 
 Alias: $CodeableConcept-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-Alias: $ext-data-absent-reason = http://hl7.org/fhir/StructureDefinition/data-absent-reason
+
 
 Alias: $Range-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips
 Alias: $Ratio-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Ratio-uv-ips
