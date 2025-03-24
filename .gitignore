@@ -1,3 +1,9 @@
+#####################
+## Authors can have their own .gitignore.local to ignore additional content. 
+## Those additional files, as well as each author's own .gitignore.local won't be committed
+## Authors can safely use it to define your own local ignore rules.
+.gitignore.local
+
 # Temporary folders #
 #####################
 temp
