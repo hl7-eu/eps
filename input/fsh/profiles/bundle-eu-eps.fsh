@@ -42,9 +42,9 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[medicationstatement].resource only MedicationStatementEuEps
 
 * entry[practitioner].resource 1..
-* entry[practitioner].resource only PractitionerEuEps  //EuEps
+* entry[practitioner].resource only PractitionerEuCore  //EuEps
 * entry[practitionerrole].resource 1..
-* entry[practitionerrole].resource only PractitionerRoleEuEps  //EuEps 
+* entry[practitionerrole].resource only $practitionerRole-eu-core  //EuEps 
 
 /*  COMMENTED TO BY-PASS A BUILD ERROR TO BE ANALYZED  */
 * entry[procedure].resource 1..

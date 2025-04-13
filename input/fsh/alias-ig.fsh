@@ -13,6 +13,14 @@ Alias: $Patient-eu-lab = http://hl7.eu/fhir/laboratory/StructureDefinition/Patie
 // -- EU BASE
 Alias: $Address-eu = http://hl7.eu/fhir/base/StructureDefinition/Address-eu
 Alias: $HumanName-eu = http://hl7.eu/fhir/base/StructureDefinition/HumanName-eu
+Alias: $patient-eu-core = http://hl7.eu/fhir/base/StructureDefinition/patient-eu-core
+Alias: $patient-eu = http://hl7.eu/fhir/base/StructureDefinition/patient-eu
+Alias: $practitioner-eu-core = http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu-core
+Alias: $practitioner-eu = http://hl7.eu/fhir/base/StructureDefinition/practitioner-eu
+Alias: $practitionerRole-eu = http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu
+Alias: $practitionerRole-eu-core = http://hl7.eu/fhir/base/StructureDefinition/practitionerRole-eu-core
+Alias: $organization-eu = http://hl7.eu/fhir/base/StructureDefinition/organization-eu
+Alias: $organization-eu-core = http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core
 
 // --- Profiles
 Alias: $Composition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips

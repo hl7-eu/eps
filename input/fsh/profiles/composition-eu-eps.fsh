@@ -31,7 +31,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * ^short = "Sliced per type of author"
   * ^definition = "Sliced per type of author"
 * author contains practictionerRole 0..*
-* author[practictionerRole] only Reference ( PractitionerRoleEuEps )
+* author[practictionerRole] only Reference ( $practitionerRole-eu-core )
 
 * title ^short = "Patient Summary"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Patient Summary\" or any equivalent translation"
@@ -97,13 +97,13 @@ This section can also be used to hold the Medical Alert information (other alert
   * ^definition = """The list of surgeries section includes entries for procedures and references to procedure reports when known as described in the Entry. In epSOS this section was used to describe the Surgical Procedures prior past six months (optional) and to record the Major Surgical Procedures past 6 months (required). This choice of considering a time based distinction was due by the subjectivity of \‘relevancy\’ for automatically assembled PS. 
 As the date can be seen from the procedure, the two have the same expression. It is up to the implementers of the system to display it in a different way."""
 
-/*   * entry[procedure] only Reference (ProcedureEuEps) */
+  * entry[procedure] only Reference (ProcedureEuEps)
 
 * section[sectionImmunizations]
   * ^short = "Immunizations"
   * ^definition = """The immunizations section contains a narrative description of the immunizations administered to the patient in the past. It includes entries for medication administration as described in related profiles."""
 
-/*   * entry[immunization] only Reference (ImmunizationEuEps) */
+  * entry[immunization] only Reference (ImmunizationEuEps)
 
 * section[sectionMedicalDevices] 0..1
   * ^short = "Medical Devices"

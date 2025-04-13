@@ -30,6 +30,7 @@ Alias: $ucum =  http://unitsofmeasure.org
 Alias: $v2-0074 = http://terminology.hl7.org/CodeSystem/v2-0074
 Alias: $v2-0131 = http://terminology.hl7.org/CodeSystem/v2-0131
 Alias: $v2-0203 = http://terminology.hl7.org/CodeSystem/v2-0203
+Alias: $v2-0443 = http://terminology.hl7.org/CodeSystem/v2-0443
 Alias: $v3-ActCode = http://terminology.hl7.org/CodeSystem/v3-ActCode
 Alias: $v3-ActPriority = http://terminology.hl7.org/CodeSystem/v3-ActPriority
 Alias: $v3-AdministrativeGender =  http://terminology.hl7.org/CodeSystem/v3-AdministrativeGender
@@ -41,5 +42,6 @@ Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
 // --- SID
 Alias: $oid = urn:ietf:rfc:1155
 Alias: $uri = urn:ietf:rfc:3986
+Alias: $mime = urn:ietf:bcp:13
 
 //=========================
