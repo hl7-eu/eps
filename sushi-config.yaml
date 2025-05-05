@@ -1,4 +1,4 @@
-# id: hl7.fhir.eu.eu-laboratory
+## id: hl7.fhir.eu.eu-laboratory
 id: hl7.fhir.eu.eps
 canonical: http://hl7.eu/fhir/eps
 name:  Hl7EuPatientSummaryIg
