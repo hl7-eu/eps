@@ -52,7 +52,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * ^definition = """The medication summary section contains a description of the patient's medications as part of the patient summary"""
 
   * entry only Reference (MedicationStatementEuEps or MedicationRequestEuEps or MedicationAdministration or MedicationDispense) 
-  * entry[medicationStatement] only Reference (MedicationStatementEuEps) 
+  * entry[medicationStatementOrRequest] only Reference (MedicationStatementEuEps or MedicationRequestEuEps) 
   
 * section[sectionAllergies]
   * ^short = "Allergies and Other Adverse Reactions"
