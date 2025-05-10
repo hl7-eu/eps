@@ -25,7 +25,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * author ^short = "Who and/or what authored the Patient Summary"
 * author ^definition = "Identifies who is responsible for the information in the Patient Summary, not necessarily who typed it in."
   * ^slicing.discriminator[0].type = #type
-  * ^slicing.discriminator[0].path = "valueReference.resolve()"
+  * ^slicing.discriminator[0].path = "reference.resolve()"
   * ^slicing.ordered = false
   * ^slicing.rules = #open
   * ^short = "Sliced per type of author"
