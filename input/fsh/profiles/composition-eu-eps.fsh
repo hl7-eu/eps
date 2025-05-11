@@ -25,13 +25,16 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * author ^short = "Who and/or what authored the Patient Summary"
 * author ^definition = "Identifies who is responsible for the information in the Patient Summary, not necessarily who typed it in."
   * ^slicing.discriminator[0].type = #type
-  * ^slicing.discriminator[0].path = "valueReference.resolve()"
+  * ^slicing.discriminator[0].path = "resolve()"
   * ^slicing.ordered = false
   * ^slicing.rules = #open
   * ^short = "Sliced per type of author"
   * ^definition = "Sliced per type of author"
-* author contains practictionerRole 0..*
+* author contains
+    practictionerRole 0..* and
+    device 0..*
 * author[practictionerRole] only Reference ( $practitionerRole-eu-core )
+* author[device] only Reference ( Device )
 
 * title ^short = "Patient Summary"
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Patient Summary\" or any equivalent translation"
