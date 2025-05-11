@@ -18,7 +18,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[condition].resource 1..
 * entry[condition].resource only ConditionEuEps  //EuEps
 * entry[device].resource 1..
-* entry[device].resource only DeviceEuEps
+* entry[device].resource only Device
 * entry[deviceusestatement].resource 1..
 * entry[deviceusestatement].resource only DeviceUseStatementEuEps
 
