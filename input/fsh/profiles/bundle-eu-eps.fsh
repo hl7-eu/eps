@@ -17,8 +17,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[allergyintolerance].resource only $AllergyIntolerance-uv-ips  //EuEps
 * entry[condition].resource 1..
 * entry[condition].resource only ConditionEuEps  //EuEps
-* entry[device].resource 1..
-* entry[device].resource only Device
+
 * entry[deviceusestatement].resource 1..
 * entry[deviceusestatement].resource only DeviceUseStatementEuEps
 
@@ -44,7 +43,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[practitioner].resource 1..
 * entry[practitioner].resource only PractitionerEuCore  //EuEps
 * entry[practitionerrole].resource 1..
-* entry[practitionerrole].resource only $practitionerRole-eu-core  //EuEps 
+* entry[practitionerrole].resource only $practitionerRole-eu-core  //EuEps
 
 /*  COMMENTED TO BY-PASS A BUILD ERROR TO BE ANALYZED  */
 * entry[procedure].resource 1..
@@ -60,7 +59,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[observation-pregnancy-status].resource 1..
 * entry[observation-pregnancy-status].resource only $Observation-pregnancy-status-uv-ips */
 
-/* 
+/*
 In this case a generic social history observation is used
 
 * entry[observation-alcohol-use].resource 1..
@@ -70,12 +69,12 @@ In this case a generic social history observation is used
  */
 
 
-/* * entry contains observation-social-history 0.. 
+/* * entry contains observation-social-history 0..
 * entry[observation-social-history] 0..
 * entry[observation-social-history] ^short = "Social History Observation"
 * entry[observation-social-history] ^definition = "Slice including a generic social history Observation"
 * entry[observation-social-history].resource only ObservationSocialHistoryEuEps
- 
+
 
 * entry[observation-results].resource 1..
 * entry[observation-results].resource only $Observation-results-uv-ips // ObservationResultsEuEps
