@@ -1,0 +1,2676 @@
+{
+  "resourceType": "Bundle",
+  "id": "Instance-Bundle-7de01d96-ea1a-4c4d-a810-95b6f7d95682",
+  "meta": {
+    "profile": [
+      "http://hl7.eu/fhir/eps/StructureDefinition/bundle-eu-eps"
+    ]
+  },
+  "identifier": {
+    "assigner": {
+      "display": "HL7 Europe"
+    },
+    "system": "urn:oid:2.16.840.1.113883.2.51.999",
+    "value": "249f62de-78d3-414e-9bf2-de2e91811bd4"
+  },
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:c18277f5-c2b3-4824-baa9-76d54e7756e1",
+      "resource": {
+        "resourceType": "Composition",
+        "id": "c18277f5-c2b3-4824-baa9-76d54e7756e1",
+        "meta": {
+          "profile": [
+            "http://hl7.eu/fhir/eps/StructureDefinition/composition-eu-eps"
+          ]
+        },
+        "identifier": {
+          "assigner": {
+            "display": "HL7 Europe"
+          },
+          "system": "urn:oid:2.16.840.1.113883.2.51.999",
+          "value": "0cf41be0-05a9-45f5-943e-59931ce4129c"
+        },
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "60591-5",
+              "display": "European Patient Summary"
+            }
+          ],
+          "text": "European Patient Summary"
+        },
+        "author": [
+          {
+            "reference": "urn:uuid:515bf0e5-ff64-4c44-8ef2-7ee16f8188ae"
+          }
+        ],
+        "section": [
+          {
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hl7__ips\"><tr><td>Alzheimer's disease</td><td>2021-04-16</td><td>active</td></tr><tr><td>Chronic sinusitis</td><td>2010-06-18</td><td>active</td></tr><tr><td>Gout</td><td>2009-12-24</td><td>active</td></tr><tr><td>Loss of teeth</td><td>2009-02-27</td><td>active</td></tr><tr><td>Hyperlipidemia</td><td>2007-01-05</td><td>active</td></tr><tr><td>Bleeding from anus</td><td>2001-03-15</td><td>active</td></tr><tr><td>Ischemic heart disease</td><td>1998-11-20</td><td>active</td></tr><tr><td>Dependent drug abuse</td><td>1994-05-24</td><td>active</td></tr><tr><td>Impacted molars</td><td>1990-05-10</td><td>active</td></tr><tr><td>Chronic intractable migraine without aura</td><td>1990-03-20</td><td>active</td></tr><tr><td>Anemia</td><td>1978-01-06</td><td>active</td></tr><tr><td>Gingival disease</td><td>2024-12-13</td><td>inactive</td></tr><tr><td>Gingivitis</td><td>2024-11-29</td><td>inactive</td></tr><tr><td>Gingivitis</td><td>2024-05-03</td><td>inactive</td></tr><tr><td>Gingivitis</td><td>2024-01-05</td><td>inactive</td></tr><tr><td>Gingivitis</td><td>2023-06-23</td><td>inactive</td></tr><tr><td>Gingival disease</td><td>2022-03-26</td><td>inactive</td></tr><tr><td>Gingivitis</td><td>2021-09-24</td><td>inactive</td></tr><tr><td>Gingivitis</td><td>2019-04-05</td><td>inactive</td></tr><tr><td>Gingivitis</td><td>2018-03-30</td><td>inactive</td></tr><tr><td>Laceration - injury</td><td>2016-12-11</td><td>inactive</td></tr><tr><td>Facial laceration</td><td>2016-12-11</td><td>inactive</td></tr><tr><td>Overdose</td><td>2015-09-26</td><td>inactive</td></tr></table></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:b5de1e53-13ce-4ca9-881e-7f2a1ded57ce"
+              },
+              {
+                "reference": "urn:uuid:9f2f42ff-9f99-4098-9a9d-b00ea5876a62"
+              },
+              {
+                "reference": "urn:uuid:91b0a827-41da-43fe-ab7b-28f14166232f"
+              },
+              {
+                "reference": "urn:uuid:2c80b1b8-2210-43d5-9f3c-1e4d77f9372d"
+              },
+              {
+                "reference": "urn:uuid:d018b20d-5193-4e18-97fd-582848fa9e3d"
+              },
+              {
+                "reference": "urn:uuid:aee06da5-1edb-451e-a28a-1aa90cc68206"
+              },
+              {
+                "reference": "urn:uuid:25cdb430-a2d6-435e-bdff-e27e1f8c3caa"
+              },
+              {
+                "reference": "urn:uuid:bc3f03f1-6e44-4570-8c91-67e3e33ab975"
+              },
+              {
+                "reference": "urn:uuid:4ebfca2c-ef39-402d-91d7-d927a89783a6"
+              },
+              {
+                "reference": "urn:uuid:b2a560d2-5fdd-4994-8225-5b0fc07f4500"
+              },
+              {
+                "reference": "urn:uuid:57cf73a1-cbfa-4cf2-8685-88184a504963"
+              },
+              {
+                "reference": "urn:uuid:4280b6c0-fe6c-423d-aaff-19a7cd983eb5"
+              },
+              {
+                "reference": "urn:uuid:4a0b0fc2-76d2-426e-b460-ee55fbc8d02c"
+              },
+              {
+                "reference": "urn:uuid:44bb10b9-5ffd-4d56-83b5-5e3c08887939"
+              },
+              {
+                "reference": "urn:uuid:b739a720-6e10-4334-95cf-1971e9c49590"
+              },
+              {
+                "reference": "urn:uuid:466e2a5c-dd98-454a-9df9-892df3a6e847"
+              },
+              {
+                "reference": "urn:uuid:83807d8f-9519-4894-ac1d-30346fd65144"
+              },
+              {
+                "reference": "urn:uuid:a0d96ffe-dd10-468f-8237-87a7256a7d38"
+              },
+              {
+                "reference": "urn:uuid:10da3c82-4339-4fa1-b6d3-5e86cf285031"
+              },
+              {
+                "reference": "urn:uuid:2355561e-5678-491f-9dd6-0feeb4da3e21"
+              },
+              {
+                "reference": "urn:uuid:b67e43c4-0674-40fa-a798-a57e73c5de5d"
+              },
+              {
+                "reference": "urn:uuid:373e3e1b-e91e-42ee-be6d-242e01f554db"
+              },
+              {
+                "reference": "urn:uuid:945018d5-5e7f-40c8-ba72-e0ea7284904d"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "11450-4",
+                  "display": "Problem list - Reported"
+                }
+              ]
+            },
+            "title": "Problem list"
+          },
+          {
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hl7__ips\"><tr><td>Simvastatin 10 mg oral tablet</td><td>2025-01-21</td><td>Oral tablet</td><td>1 tablet (10 mg) by mouth once daily\"</td><td>Reason: Hyperlipidemia (disorder)</td></tr><tr><td>Galantamine (as galantamine hydrobromide) 4 mg oral tablet</td><td>2021-04-16</td><td>Oral tablet</td><td>1 tablet (4 mg) once daily\"</td><td>Reason: Alzheimer's disease (disorder)</td></tr><tr><td>Clopidogrel (as clopidogrel bisulfate) 75 mg oral tablet</td><td>1998-11-27</td><td>Oral tablet</td><td>1 tablet (75 mg) once daily\"</td><td></td></tr><tr><td>Simvastatin 20 mg oral tablet</td><td>1998-11-27</td><td>Oral tablet</td><td>1 tablet (20 mg) by mouth once daily\"</td><td></td></tr><tr><td>Nitroglycerin 400 microgram/actuation sublingual spray</td><td>1998-11-27</td><td>Sublingual spray</td><td>400 micrograms per spray, may repeat every 5 minutes as needed for chest pain, up to 3 sprays in 15 minutes\"</td><td></td></tr><tr><td>Metoprolol tartrate (as metoprolol succinate) 100 mg prolonged-release oral tablet</td><td>1998-11-27</td><td>Prolonged-release oral tablet</td><td>1 tablet (100 mg) once daily\"</td><td></td></tr></table></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:ee7e36f3-69c7-4813-968b-430c469beea4"
+              },
+              {
+                "reference": "urn:uuid:f404a9d0-a8c1-4c69-a417-ad1ca2c9b72d"
+              },
+              {
+                "reference": "urn:uuid:21ab1233-7ca6-447f-942d-1d7f162d378e"
+              },
+              {
+                "reference": "urn:uuid:9ba5c90b-567d-4c96-ac77-7e9696ff7fee"
+              },
+              {
+                "reference": "urn:uuid:27d91057-7847-434f-b115-d4326215b9de"
+              },
+              {
+                "reference": "urn:uuid:c9d970a2-8736-4099-b1e0-dd52fa75a1fa"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "10160-0",
+                  "display": "History of Medication use Narrative"
+                }
+              ]
+            },
+            "title": "Medication list"
+          },
+          {
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hl7__ips\"><tr><td>No known allergies or intolerances</td></tr></table></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:b0e5e450-59f4-481c-9455-999e041d3fcf"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "48765-2",
+                  "display": "Allergies and adverse reactions Document"
+                }
+              ]
+            },
+            "title": "Allergies and Intolerances"
+          },
+          {
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hl7__ips\"><tr><td>Patient referral for dental care</td><td>2021-09-24</td><td>Gingivitis (disorder)</td></tr><tr><td>Depression screening</td><td>2021-09-24</td><td>-</td></tr><tr><td>Medication reconciliation</td><td>2021-09-24</td><td>-</td></tr><tr><td>Assessment of health and social care needs</td><td>2021-09-24</td><td>-</td></tr><tr><td>Assessment of anxiety</td><td>2021-09-24</td><td>-</td></tr><tr><td>Assessment using Morse Fall Scale</td><td>2021-09-24</td><td>-</td></tr><tr><td>Patient discharge</td><td>2018-11-09</td><td>-</td></tr><tr><td>Hospice care</td><td>2018-11-08</td><td>-</td></tr><tr><td>Notifications</td><td>2018-10-26</td><td>-</td></tr><tr><td>Certification procedure</td><td>2018-10-26</td><td>-</td></tr><tr><td>Initial patient assessment</td><td>2018-10-26</td><td>-</td></tr><tr><td>Development of individualized plan of care</td><td>2018-10-26</td><td>-</td></tr><tr><td>Suture open wound</td><td>2016-12-11</td><td>Facial laceration (disorder)</td></tr></table></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:b4202659-0efd-4d67-a9a0-ffa342974dea"
+              },
+              {
+                "reference": "urn:uuid:41b21562-bdbe-4f49-814c-8febddd7e454"
+              },
+              {
+                "reference": "urn:uuid:1acd65ff-0edf-44a9-bdda-5de5bd285ece"
+              },
+              {
+                "reference": "urn:uuid:1f3556fb-c10f-48f2-b385-8896d23958b2"
+              },
+              {
+                "reference": "urn:uuid:6ae16319-ab8c-4129-ba76-ed10665be3a7"
+              },
+              {
+                "reference": "urn:uuid:ea92cf75-a12b-4807-bbf5-65d4bbe141eb"
+              },
+              {
+                "reference": "urn:uuid:90d0614c-351b-45d3-a419-f248b0b1cb41"
+              },
+              {
+                "reference": "urn:uuid:609fe397-3d49-4f5c-94ba-d06cc9ba3648"
+              },
+              {
+                "reference": "urn:uuid:329bfa6e-a28c-4d4a-ac6a-d63706f47ea8"
+              },
+              {
+                "reference": "urn:uuid:e9572543-678a-4bf0-80fe-50d91f01f3cf"
+              },
+              {
+                "reference": "urn:uuid:48b9c268-bd35-4e0f-83ff-de29cae53414"
+              },
+              {
+                "reference": "urn:uuid:3c1a5f28-d650-4200-8191-0ba13928f015"
+              },
+              {
+                "reference": "urn:uuid:c8042307-72f5-4218-8ea4-d5e87630e317"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "47519-4",
+                  "display": "History of Procedures Document"
+                }
+              ]
+            },
+            "title": "Procedure History list"
+          },
+          {
+            "text": {
+              "status": "generated",
+              "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><table class=\"hl7__ips\"><tr><td>Clostridium tetani toxoid antigen adsorbed only vaccine product</td><td>2024-11-29</td></tr><tr><td>Influenza virus antigen only vaccine product</td><td>2024-05-03</td></tr><tr><td>SARS-CoV-2 mRNA vaccine</td><td>2021-02-19</td></tr></table></div>"
+            },
+            "entry": [
+              {
+                "reference": "urn:uuid:90f8c5e8-ed56-4576-86a4-89be59f29807"
+              },
+              {
+                "reference": "urn:uuid:d995bf42-8251-4ab4-b71e-defd5ea53474"
+              },
+              {
+                "reference": "urn:uuid:3b3f67b8-176f-45f1-a826-d35debb958a5"
+              }
+            ],
+            "code": {
+              "coding": [
+                {
+                  "system": "http://loinc.org",
+                  "code": "11369-6",
+                  "display": "History of Immunization Narrative"
+                }
+              ]
+            },
+            "title": "Immunizations list"
+          }
+        ],
+        "title": "European Patient Summary",
+        "status": "final",
+        "subject": {
+          "reference": "urn:uuid:84456409-8b2a-46b1-9ee1-60f42c6a1c13"
+        },
+        "date": "2025-05-30T20:53:43Z",
+        "confidentiality": "N"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+      "resource": {
+        "resourceType": "Patient",
+        "id": "84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+        "meta": {
+          "profile": [
+            "http://hl7.eu/fhir/eps/StructureDefinition/patient-eu-eps"
+          ]
+        },
+        "identifier": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "NI",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                }
+              ]
+            },
+            "system": "http://ec.europa.eu/identifier/eci",
+            "value": "8212-076428-5"
+          },
+          {
+            "type": {
+              "coding": [
+                {
+                  "code": "MR",
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203"
+                }
+              ]
+            },
+            "system": "http://local.setting.eu/identifier",
+            "value": "ecb49d9e-4eb1-4743-237d-d8020ecd4f86"
+          }
+        ],
+        "name": [
+          {
+            "given": [
+              "Ida"
+            ],
+            "family": "Brommer",
+            "text": "Ida Brommer"
+          }
+        ],
+        "address": [
+          {
+            "line": [
+              "Jacob van Ruysdaelstraat 100"
+            ],
+            "use": "home",
+            "type": "physical",
+            "city": "Waalwijk",
+            "postalCode": "5143 GM",
+            "country": "Netherlands"
+          }
+        ],
+        "telecom": [
+          {
+            "system": "phone",
+            "value": "+31 06-39307468"
+          }
+        ],
+        "gender": "female",
+        "birthDate": "1944-04-22"
+      }
+    },
+    null,
+    {
+      "fullUrl": "urn:uuid:b5de1e53-13ce-4ca9-881e-7f2a1ded57ce",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "b5de1e53-13ce-4ca9-881e-7f2a1ded57ce",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "26929004",
+              "system": "http://snomed.info/sct",
+              "display": "Alzheimer's disease (disorder)"
+            }
+          ],
+          "text": "Alzheimer's disease"
+        },
+        "onsetDateTime": "2021-04-16",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9f2f42ff-9f99-4098-9a9d-b00ea5876a62",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "9f2f42ff-9f99-4098-9a9d-b00ea5876a62",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "40055000",
+              "system": "http://snomed.info/sct",
+              "display": "Chronic sinusitis (disorder)"
+            }
+          ],
+          "text": "Chronic sinusitis"
+        },
+        "onsetDateTime": "2010-06-18",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:91b0a827-41da-43fe-ab7b-28f14166232f",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "91b0a827-41da-43fe-ab7b-28f14166232f",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "90560007",
+              "system": "http://snomed.info/sct",
+              "display": "Inflammatory disorder due to increased blood urate level (disorder)"
+            }
+          ],
+          "text": "Gout"
+        },
+        "onsetDateTime": "2009-12-24",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2c80b1b8-2210-43d5-9f3c-1e4d77f9372d",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "2c80b1b8-2210-43d5-9f3c-1e4d77f9372d",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "37320007",
+              "system": "http://snomed.info/sct",
+              "display": "Loss of teeth (disorder)"
+            }
+          ],
+          "text": "Loss of teeth"
+        },
+        "onsetDateTime": "2009-02-27",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d018b20d-5193-4e18-97fd-582848fa9e3d",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "d018b20d-5193-4e18-97fd-582848fa9e3d",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "55822004",
+              "system": "http://snomed.info/sct",
+              "display": "Hyperlipidemia (disorder)"
+            }
+          ],
+          "text": "Hyperlipidemia"
+        },
+        "onsetDateTime": "2007-01-05",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:aee06da5-1edb-451e-a28a-1aa90cc68206",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "aee06da5-1edb-451e-a28a-1aa90cc68206",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "6072007",
+              "system": "http://snomed.info/sct",
+              "display": "Bleeding from anus (disorder)"
+            }
+          ],
+          "text": "Bleeding from anus"
+        },
+        "onsetDateTime": "2001-03-15",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:25cdb430-a2d6-435e-bdff-e27e1f8c3caa",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "25cdb430-a2d6-435e-bdff-e27e1f8c3caa",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "414545008",
+              "system": "http://snomed.info/sct",
+              "display": "Ischemic heart disease (disorder)"
+            }
+          ],
+          "text": "Ischemic heart disease"
+        },
+        "onsetDateTime": "1998-11-20",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:bc3f03f1-6e44-4570-8c91-67e3e33ab975",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "bc3f03f1-6e44-4570-8c91-67e3e33ab975",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "6525002",
+              "system": "http://snomed.info/sct",
+              "display": "Dependent drug abuse (disorder)"
+            }
+          ],
+          "text": "Dependent drug abuse"
+        },
+        "onsetDateTime": "1994-05-24",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4ebfca2c-ef39-402d-91d7-d927a89783a6",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "4ebfca2c-ef39-402d-91d7-d927a89783a6",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "196416002",
+              "system": "http://snomed.info/sct",
+              "display": "Impacted molars (disorder)"
+            }
+          ],
+          "text": "Impacted molars"
+        },
+        "onsetDateTime": "1990-05-10",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b2a560d2-5fdd-4994-8225-5b0fc07f4500",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "b2a560d2-5fdd-4994-8225-5b0fc07f4500",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "124171000119105",
+              "system": "http://snomed.info/sct",
+              "display": "Chronic intractable migraine without aura (disorder)"
+            }
+          ],
+          "text": "Chronic intractable migraine without aura"
+        },
+        "onsetDateTime": "1990-03-20",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:57cf73a1-cbfa-4cf2-8685-88184a504963",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "57cf73a1-cbfa-4cf2-8685-88184a504963",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "271737000",
+              "system": "http://snomed.info/sct",
+              "display": "Anemia (disorder)"
+            }
+          ],
+          "text": "Anemia"
+        },
+        "onsetDateTime": "1978-01-06",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "active",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4280b6c0-fe6c-423d-aaff-19a7cd983eb5",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "4280b6c0-fe6c-423d-aaff-19a7cd983eb5",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "18718003",
+              "system": "http://snomed.info/sct",
+              "display": "Gingival disease (disorder)"
+            }
+          ],
+          "text": "Gingival disease"
+        },
+        "onsetDateTime": "2024-12-13",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:4a0b0fc2-76d2-426e-b460-ee55fbc8d02c",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "4a0b0fc2-76d2-426e-b460-ee55fbc8d02c",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "66383009",
+              "system": "http://snomed.info/sct",
+              "display": "Gingivitis (disorder)"
+            }
+          ],
+          "text": "Gingivitis"
+        },
+        "onsetDateTime": "2024-11-29",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:44bb10b9-5ffd-4d56-83b5-5e3c08887939",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "44bb10b9-5ffd-4d56-83b5-5e3c08887939",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "66383009",
+              "system": "http://snomed.info/sct",
+              "display": "Gingivitis (disorder)"
+            }
+          ],
+          "text": "Gingivitis"
+        },
+        "onsetDateTime": "2024-05-03",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b739a720-6e10-4334-95cf-1971e9c49590",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "b739a720-6e10-4334-95cf-1971e9c49590",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "66383009",
+              "system": "http://snomed.info/sct",
+              "display": "Gingivitis (disorder)"
+            }
+          ],
+          "text": "Gingivitis"
+        },
+        "onsetDateTime": "2024-01-05",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:466e2a5c-dd98-454a-9df9-892df3a6e847",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "466e2a5c-dd98-454a-9df9-892df3a6e847",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "66383009",
+              "system": "http://snomed.info/sct",
+              "display": "Gingivitis (disorder)"
+            }
+          ],
+          "text": "Gingivitis"
+        },
+        "onsetDateTime": "2023-06-23",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:83807d8f-9519-4894-ac1d-30346fd65144",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "83807d8f-9519-4894-ac1d-30346fd65144",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "18718003",
+              "system": "http://snomed.info/sct",
+              "display": "Gingival disease (disorder)"
+            }
+          ],
+          "text": "Gingival disease"
+        },
+        "onsetDateTime": "2022-03-26",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:a0d96ffe-dd10-468f-8237-87a7256a7d38",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "a0d96ffe-dd10-468f-8237-87a7256a7d38",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "66383009",
+              "system": "http://snomed.info/sct",
+              "display": "Gingivitis (disorder)"
+            }
+          ],
+          "text": "Gingivitis"
+        },
+        "onsetDateTime": "2021-09-24",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:10da3c82-4339-4fa1-b6d3-5e86cf285031",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "10da3c82-4339-4fa1-b6d3-5e86cf285031",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "66383009",
+              "system": "http://snomed.info/sct",
+              "display": "Gingivitis (disorder)"
+            }
+          ],
+          "text": "Gingivitis"
+        },
+        "onsetDateTime": "2019-04-05",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:2355561e-5678-491f-9dd6-0feeb4da3e21",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "2355561e-5678-491f-9dd6-0feeb4da3e21",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "66383009",
+              "system": "http://snomed.info/sct",
+              "display": "Gingivitis (disorder)"
+            }
+          ],
+          "text": "Gingivitis"
+        },
+        "onsetDateTime": "2018-03-30",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b67e43c4-0674-40fa-a798-a57e73c5de5d",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "b67e43c4-0674-40fa-a798-a57e73c5de5d",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "312608009",
+              "system": "http://snomed.info/sct",
+              "display": "Laceration - injury (disorder)"
+            }
+          ],
+          "text": "Laceration - injury"
+        },
+        "onsetDateTime": "2016-12-11",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:373e3e1b-e91e-42ee-be6d-242e01f554db",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "373e3e1b-e91e-42ee-be6d-242e01f554db",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "370247008",
+              "system": "http://snomed.info/sct",
+              "display": "Facial laceration (disorder)"
+            }
+          ],
+          "text": "Facial laceration"
+        },
+        "onsetDateTime": "2016-12-11",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:945018d5-5e7f-40c8-ba72-e0ea7284904d",
+      "resource": {
+        "resourceType": "Condition",
+        "id": "945018d5-5e7f-40c8-ba72-e0ea7284904d",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
+          ]
+        },
+        "category": [
+          {
+            "coding": [
+              {
+                "code": "problem-list-item",
+                "system": "http://terminology.hl7.org/CodeSystem/condition-category",
+                "display": "Problem List Item"
+              }
+            ]
+          }
+        ],
+        "code": {
+          "coding": [
+            {
+              "code": "1149222004",
+              "system": "http://snomed.info/sct",
+              "display": "Overdose (disorder)"
+            }
+          ],
+          "text": "Overdose"
+        },
+        "onsetDateTime": "2015-09-26",
+        "clinicalStatus": {
+          "coding": [
+            {
+              "code": "inactive",
+              "system": "http://terminology.hl7.org/CodeSystem/condition-clinical"
+            }
+          ]
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "asserter": {
+          "reference": "1c9b6565-8af5-401f-9c43-b89346b00850",
+          "display": "EHBO"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9b34ef35-35c5-4135-b300-529bc57cfe40",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "9b34ef35-35c5-4135-b300-529bc57cfe40",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "314231",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "display": "simvastatin 10 MG Oral Tablet"
+            },
+            {
+              "code": "319996000",
+              "system": "http://snomed.info/sct",
+              "display": "Product containing precisely simvastatin 10 milligram/1 each conventional release oral tablet (clinical drug)"
+            }
+          ],
+          "text": "Simvastatin 10 mg oral tablet"
+        },
+        "form": {
+          "coding": [
+            {
+              "code": "421026006",
+              "system": "http://snomed.info/sct",
+              "display": "Oral tablet"
+            }
+          ]
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "387584000",
+                  "system": "http://snomed.info/sct",
+                  "display": "Simvastatin"
+                }
+              ]
+            },
+            "isActive": true
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ee7e36f3-69c7-4813-968b-430c469beea4",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "ee7e36f3-69c7-4813-968b-430c469beea4",
+        "effectivePeriod": {
+          "start": "2025-01-21"
+        },
+        "dosage": [
+          {
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "unit": "{tbl}",
+                  "code": "{tbl}"
+                }
+              }
+            ],
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "text": "1 tablet (10 mg) by mouth once daily",
+            "asNeededBoolean": false
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "55822004",
+                "system": "http://snomed.info/sct",
+                "display": "Hyperlipidemia (disorder)"
+              }
+            ]
+          }
+        ],
+        "status": "active",
+        "medicationReference": {
+          "reference": "Medication/9b34ef35-35c5-4135-b300-529bc57cfe40",
+          "display": "Simvastatin 10 mg oral tablet"
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:93674ac6-643d-4862-89ee-d5e81924d695",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "93674ac6-643d-4862-89ee-d5e81924d695",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "310436",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "display": "galantamine 4 MG Oral Tablet"
+            },
+            {
+              "code": "323381002",
+              "system": "http://snomed.info/sct",
+              "display": "Product containing precisely galantamine (as galantamine hydrobromide) 4 milligram/1 each conventional release oral tablet (clinical drug)"
+            }
+          ],
+          "text": "Galantamine (as galantamine hydrobromide) 4 mg oral tablet"
+        },
+        "form": {
+          "coding": [
+            {
+              "code": "421026006",
+              "system": "http://snomed.info/sct",
+              "display": "Oral tablet"
+            }
+          ]
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "129482002",
+                  "system": "http://snomed.info/sct",
+                  "display": "Galantamine hydrobromide"
+                }
+              ]
+            },
+            "isActive": true
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f404a9d0-a8c1-4c69-a417-ad1ca2c9b72d",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "f404a9d0-a8c1-4c69-a417-ad1ca2c9b72d",
+        "effectivePeriod": {
+          "start": "2021-04-16"
+        },
+        "dosage": [
+          {
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "unit": "{tbl}",
+                  "code": "{tbl}"
+                }
+              }
+            ],
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "text": "1 tablet (4 mg) once daily",
+            "asNeededBoolean": false
+          }
+        ],
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "26929004",
+                "system": "http://snomed.info/sct",
+                "display": "Alzheimer's disease (disorder)"
+              }
+            ]
+          }
+        ],
+        "status": "active",
+        "medicationReference": {
+          "reference": "Medication/93674ac6-643d-4862-89ee-d5e81924d695",
+          "display": "Galantamine (as galantamine hydrobromide) 4 mg oral tablet"
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c765eaea-a10e-456a-9966-0761825d3dce",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "c765eaea-a10e-456a-9966-0761825d3dce",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "309362",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "display": "clopidogrel 75 MG Oral Tablet"
+            },
+            {
+              "code": "783586007",
+              "system": "http://snomed.info/sct",
+              "display": "Product containing precisely clopidogrel (as clopidogrel bisulfate) 75 milligram/1 each conventional release oral tablet (clinical drug)"
+            }
+          ],
+          "text": "Clopidogrel (as clopidogrel bisulfate) 75 mg oral tablet"
+        },
+        "form": {
+          "coding": [
+            {
+              "code": "421026006",
+              "system": "http://snomed.info/sct",
+              "display": "Oral tablet"
+            }
+          ]
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "412354008",
+                  "system": "http://snomed.info/sct",
+                  "display": "Clopidogrel bisulfate"
+                }
+              ]
+            },
+            "isActive": true
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:21ab1233-7ca6-447f-942d-1d7f162d378e",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "21ab1233-7ca6-447f-942d-1d7f162d378e",
+        "effectivePeriod": {
+          "start": "1998-11-27"
+        },
+        "dosage": [
+          {
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "unit": "{tbl}",
+                  "code": "{tbl}"
+                }
+              }
+            ],
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "text": "1 tablet (75 mg) once daily",
+            "asNeededBoolean": false
+          }
+        ],
+        "status": "active",
+        "medicationReference": {
+          "reference": "Medication/c765eaea-a10e-456a-9966-0761825d3dce",
+          "display": "Clopidogrel (as clopidogrel bisulfate) 75 mg oral tablet"
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ef425722-4132-4ed3-82d2-a8d2b31def6c",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "ef425722-4132-4ed3-82d2-a8d2b31def6c",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "312961",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "display": "simvastatin 20 MG Oral Tablet"
+            },
+            {
+              "code": "319997009",
+              "system": "http://snomed.info/sct",
+              "display": "Product containing precisely simvastatin 20 milligram/1 each conventional release oral tablet (clinical drug)"
+            }
+          ],
+          "text": "Simvastatin 20 mg oral tablet"
+        },
+        "form": {
+          "coding": [
+            {
+              "code": "421026006",
+              "system": "http://snomed.info/sct",
+              "display": "Oral tablet"
+            }
+          ]
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "387584000",
+                  "system": "http://snomed.info/sct",
+                  "display": "Simvastatin"
+                }
+              ]
+            },
+            "isActive": true
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:9ba5c90b-567d-4c96-ac77-7e9696ff7fee",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "9ba5c90b-567d-4c96-ac77-7e9696ff7fee",
+        "effectivePeriod": {
+          "start": "1998-11-27"
+        },
+        "dosage": [
+          {
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "unit": "{tbl}",
+                  "code": "{tbl}"
+                }
+              }
+            ],
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "text": "1 tablet (20 mg) by mouth once daily",
+            "asNeededBoolean": false
+          }
+        ],
+        "status": "active",
+        "medicationReference": {
+          "reference": "Medication/ef425722-4132-4ed3-82d2-a8d2b31def6c",
+          "display": "Simvastatin 20 mg oral tablet"
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:f3114796-b9e7-42c4-84d7-11329a20bfa3",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "f3114796-b9e7-42c4-84d7-11329a20bfa3",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "705129",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "display": "nitroglycerin 0.4 MG/ACTUAT Mucosal Spray"
+            },
+            {
+              "code": "425176000",
+              "system": "http://snomed.info/sct",
+              "display": "Product containing precisely glyceryl trinitrate 400 microgram/1 actuation conventional release sublingual spray (clinical drug)"
+            }
+          ],
+          "text": "Nitroglycerin 400 microgram/actuation sublingual spray"
+        },
+        "form": {
+          "coding": [
+            {
+              "code": "385074009",
+              "system": "http://snomed.info/sct",
+              "display": "Sublingual spray"
+            }
+          ]
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "387404004",
+                  "system": "http://snomed.info/sct",
+                  "display": "Glyceryl trinitrate"
+                }
+              ]
+            },
+            "isActive": true
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:27d91057-7847-434f-b115-d4326215b9de",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "27d91057-7847-434f-b115-d4326215b9de",
+        "effectivePeriod": {
+          "start": "1998-11-27"
+        },
+        "dosage": [
+          {
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 400,
+                  "unit": "microgram",
+                  "code": "ug"
+                }
+              }
+            ],
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 5,
+                "periodUnit": "min"
+              }
+            },
+            "text": "400 micrograms per spray, may repeat every 5 minutes as needed for chest pain, up to 3 sprays in 15 minutes",
+            "asNeededBoolean": true
+          }
+        ],
+        "status": "active",
+        "medicationReference": {
+          "reference": "Medication/f3114796-b9e7-42c4-84d7-11329a20bfa3",
+          "display": "Nitroglycerin 400 microgram/actuation sublingual spray"
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:35caf936-024f-4e72-bcf0-70ee57a5035b",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "35caf936-024f-4e72-bcf0-70ee57a5035b",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "866412",
+              "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+              "display": "24 HR metoprolol succinate 100 MG Extended Release Oral Tablet"
+            },
+            {
+              "code": "879980009",
+              "system": "http://snomed.info/sct",
+              "display": "Product containing precisely metoprolol tartrate (as metoprolol succinate) 100 milligram/1 each prolonged-release oral tablet (clinical drug)"
+            }
+          ],
+          "text": "Metoprolol tartrate (as metoprolol succinate) 100 mg prolonged-release oral tablet"
+        },
+        "form": {
+          "coding": [
+            {
+              "code": "385060002",
+              "system": "http://snomed.info/sct",
+              "display": "Prolonged-release oral tablet"
+            }
+          ]
+        },
+        "ingredient": [
+          {
+            "itemCodeableConcept": {
+              "coding": [
+                {
+                  "code": "412432007",
+                  "system": "http://snomed.info/sct",
+                  "display": "Metoprolol succinate"
+                }
+              ]
+            },
+            "isActive": true
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c9d970a2-8736-4099-b1e0-dd52fa75a1fa",
+      "resource": {
+        "resourceType": "MedicationStatement",
+        "id": "c9d970a2-8736-4099-b1e0-dd52fa75a1fa",
+        "effectivePeriod": {
+          "start": "1998-11-27"
+        },
+        "dosage": [
+          {
+            "doseAndRate": [
+              {
+                "doseQuantity": {
+                  "value": 1,
+                  "unit": "{tbl}",
+                  "code": "{tbl}"
+                }
+              }
+            ],
+            "timing": {
+              "repeat": {
+                "frequency": 1,
+                "period": 1,
+                "periodUnit": "d"
+              }
+            },
+            "text": "1 tablet (100 mg) once daily",
+            "asNeededBoolean": false
+          }
+        ],
+        "status": "active",
+        "medicationReference": {
+          "reference": "Medication/35caf936-024f-4e72-bcf0-70ee57a5035b",
+          "display": "Metoprolol tartrate (as metoprolol succinate) 100 mg prolonged-release oral tablet"
+        },
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b0e5e450-59f4-481c-9455-999e041d3fcf",
+      "resource": {
+        "resourceType": "AllergyIntolerance",
+        "id": "b0e5e450-59f4-481c-9455-999e041d3fcf",
+        "meta": {
+          "profile": [
+            "http://hl7.eu/fhir/eps/StructureDefinition/allergyIntolerance-eu-eps"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "716186003",
+              "system": "http://snomed.info/sct",
+              "display": "No known allergy (situation)"
+            }
+          ]
+        },
+        "patient": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "_onsetDateTime": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/data-absent-reason",
+              "valueCode": "unknown"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:b4202659-0efd-4d67-a9a0-ffa342974dea",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "b4202659-0efd-4d67-a9a0-ffa342974dea",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "103697008",
+              "system": "http://snomed.info/sct",
+              "display": "Patient referral for dental care (procedure)"
+            }
+          ],
+          "text": "Patient referral for dental care"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "66383009",
+                "system": "http://snomed.info/sct",
+                "display": "Gingivitis (disorder)"
+              }
+            ]
+          }
+        ],
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2021-09-24"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:41b21562-bdbe-4f49-814c-8febddd7e454",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "41b21562-bdbe-4f49-814c-8febddd7e454",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "171207006",
+              "system": "http://snomed.info/sct",
+              "display": "Depression screening (procedure)"
+            }
+          ],
+          "text": "Depression screening"
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2021-09-24"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1acd65ff-0edf-44a9-bdda-5de5bd285ece",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "1acd65ff-0edf-44a9-bdda-5de5bd285ece",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "430193006",
+              "system": "http://snomed.info/sct",
+              "display": "Medication reconciliation (procedure)"
+            }
+          ],
+          "text": "Medication reconciliation"
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2021-09-24"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:1f3556fb-c10f-48f2-b385-8896d23958b2",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "1f3556fb-c10f-48f2-b385-8896d23958b2",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "710824005",
+              "system": "http://snomed.info/sct",
+              "display": "Assessment of health and social care needs (procedure)"
+            }
+          ],
+          "text": "Assessment of health and social care needs"
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2021-09-24"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:6ae16319-ab8c-4129-ba76-ed10665be3a7",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "6ae16319-ab8c-4129-ba76-ed10665be3a7",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "710841007",
+              "system": "http://snomed.info/sct",
+              "display": "Assessment of anxiety (procedure)"
+            }
+          ],
+          "text": "Assessment of anxiety"
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2021-09-24"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:ea92cf75-a12b-4807-bbf5-65d4bbe141eb",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "ea92cf75-a12b-4807-bbf5-65d4bbe141eb",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "762993000",
+              "system": "http://snomed.info/sct",
+              "display": "Assessment using Morse Fall Scale (procedure)"
+            }
+          ],
+          "text": "Assessment using Morse Fall Scale"
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2021-09-24"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:90d0614c-351b-45d3-a419-f248b0b1cb41",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "90d0614c-351b-45d3-a419-f248b0b1cb41",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "58000006",
+              "system": "http://snomed.info/sct",
+              "display": "Patient discharge (procedure)"
+            }
+          ],
+          "text": "Patient discharge"
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2018-11-09"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:609fe397-3d49-4f5c-94ba-d06cc9ba3648",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "609fe397-3d49-4f5c-94ba-d06cc9ba3648",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "385763009",
+              "system": "http://snomed.info/sct",
+              "display": "Hospice care (regime/therapy)"
+            }
+          ],
+          "text": "Hospice care"
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2018-11-08"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:329bfa6e-a28c-4d4a-ac6a-d63706f47ea8",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "329bfa6e-a28c-4d4a-ac6a-d63706f47ea8",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "185087000",
+              "system": "http://snomed.info/sct",
+              "display": "Notifications (procedure)"
+            }
+          ],
+          "text": "Notifications"
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2018-10-26"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:e9572543-678a-4bf0-80fe-50d91f01f3cf",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "e9572543-678a-4bf0-80fe-50d91f01f3cf",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "310417005",
+              "system": "http://snomed.info/sct",
+              "display": "Certification procedure (procedure)"
+            }
+          ],
+          "text": "Certification procedure"
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2018-10-26"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:48b9c268-bd35-4e0f-83ff-de29cae53414",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "48b9c268-bd35-4e0f-83ff-de29cae53414",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "315639002",
+              "system": "http://snomed.info/sct",
+              "display": "Initial patient assessment (procedure)"
+            }
+          ],
+          "text": "Initial patient assessment"
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2018-10-26"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3c1a5f28-d650-4200-8191-0ba13928f015",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "3c1a5f28-d650-4200-8191-0ba13928f015",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "370789001",
+              "system": "http://snomed.info/sct",
+              "display": "Development of individualized plan of care (procedure)"
+            }
+          ],
+          "text": "Development of individualized plan of care"
+        },
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2018-10-26"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:c8042307-72f5-4218-8ea4-d5e87630e317",
+      "resource": {
+        "resourceType": "Procedure",
+        "id": "c8042307-72f5-4218-8ea4-d5e87630e317",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"
+          ]
+        },
+        "code": {
+          "coding": [
+            {
+              "code": "288086009",
+              "system": "http://snomed.info/sct",
+              "display": "Suture open wound (procedure)"
+            }
+          ],
+          "text": "Suture open wound"
+        },
+        "reasonCode": [
+          {
+            "coding": [
+              {
+                "code": "370247008",
+                "system": "http://snomed.info/sct",
+                "display": "Facial laceration (disorder)"
+              }
+            ]
+          }
+        ],
+        "status": "completed",
+        "subject": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "performedDateTime": "2016-12-11"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:90f8c5e8-ed56-4576-86a4-89be59f29807",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "90f8c5e8-ed56-4576-86a4-89be59f29807",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
+          ]
+        },
+        "vaccineCode": {
+          "coding": [
+            {
+              "code": "777725002",
+              "system": "http://snomed.info/sct",
+              "display": "Vaccine product containing only Clostridium tetani toxoid antigen adsorbed"
+            },
+            {
+              "code": "J07AM51",
+              "system": "http://www.whocc.no/atc",
+              "display": "Diphtheria-tetanus vaccines, adult type"
+            },
+            {
+              "code": "113",
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "display": "Td (adult)  5 Lf tetanus toxoid  preservative free  adsorbed"
+            }
+          ],
+          "text": "Clostridium tetani toxoid antigen adsorbed only vaccine product"
+        },
+        "site": {
+          "coding": [
+            {
+              "code": "73776007",
+              "system": "http://snomed.info/sct",
+              "display": "Structure of muscle of upper arm"
+            }
+          ],
+          "text": "Structure of muscle of upper arm"
+        },
+        "route": {
+          "coding": [
+            {
+              "code": "78421000",
+              "system": "http://snomed.info/sct",
+              "display": "Intramuscular route"
+            }
+          ],
+          "text": "Intramuscular route"
+        },
+        "status": "completed",
+        "patient": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "occurrenceDateTime": "2024-11-29",
+        "lotNumber": "PC-WUFtFjXLm",
+        "expirationDate": "2025-10-28"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:d995bf42-8251-4ab4-b71e-defd5ea53474",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "d995bf42-8251-4ab4-b71e-defd5ea53474",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
+          ]
+        },
+        "vaccineCode": {
+          "coding": [
+            {
+              "code": "1181000221105",
+              "system": "http://snomed.info/sct",
+              "display": "Vaccine product containing Influenza virus antigen"
+            },
+            {
+              "code": "J07BB02",
+              "system": "http://www.whocc.no/atc",
+              "display": "Influenza, inactivated, split virus"
+            },
+            {
+              "code": "140",
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "display": "Influenza  seasonal  injectable  preservative free"
+            }
+          ],
+          "text": "Influenza virus antigen only vaccine product"
+        },
+        "site": {
+          "coding": [
+            {
+              "code": "73776007",
+              "system": "http://snomed.info/sct",
+              "display": "Structure of muscle of upper arm"
+            }
+          ],
+          "text": "Structure of muscle of upper arm"
+        },
+        "route": {
+          "coding": [
+            {
+              "code": "78421000",
+              "system": "http://snomed.info/sct",
+              "display": "Intramuscular route"
+            }
+          ],
+          "text": "Intramuscular route"
+        },
+        "status": "completed",
+        "patient": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "occurrenceDateTime": "2024-05-03",
+        "lotNumber": "HJ-Jl5Yul1f",
+        "expirationDate": "2024-06-25"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:3b3f67b8-176f-45f1-a826-d35debb958a5",
+      "resource": {
+        "resourceType": "Immunization",
+        "id": "3b3f67b8-176f-45f1-a826-d35debb958a5",
+        "meta": {
+          "profile": [
+            "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"
+          ]
+        },
+        "vaccineCode": {
+          "coding": [
+            {
+              "code": "1119349007",
+              "system": "http://snomed.info/sct",
+              "display": "Vaccine product containing SARS-CoV-2 mRNA"
+            },
+            {
+              "code": "J07BX03",
+              "system": "http://www.whocc.no/atc",
+              "display": "COVID-19 mRNA vaccines"
+            },
+            {
+              "code": "207",
+              "system": "http://hl7.org/fhir/sid/cvx",
+              "display": "COVID-19  mRNA  LNP-S  PF  100 mcg/0.5mL dose or 50 mcg/0.25mL dose"
+            }
+          ],
+          "text": "SARS-CoV-2 mRNA vaccine"
+        },
+        "site": {
+          "coding": [
+            {
+              "code": "73776007",
+              "system": "http://snomed.info/sct",
+              "display": "Structure of muscle of upper arm"
+            }
+          ],
+          "text": "Structure of muscle of upper arm"
+        },
+        "route": {
+          "coding": [
+            {
+              "code": "78421000",
+              "system": "http://snomed.info/sct",
+              "display": "Intramuscular route"
+            }
+          ],
+          "text": "Intramuscular route"
+        },
+        "status": "completed",
+        "patient": {
+          "reference": "Patient/84456409-8b2a-46b1-9ee1-60f42c6a1c13",
+          "display": "Ida Brommer"
+        },
+        "occurrenceDateTime": "2021-02-19",
+        "lotNumber": "TQ-GchMWD",
+        "expirationDate": "2021-03-30"
+      }
+    }
+  ],
+  "type": "document",
+  "timestamp": "2025-05-30T20:53:43Z"
+}
