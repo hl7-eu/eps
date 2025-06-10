@@ -23,6 +23,7 @@
 <artifact id="StructureDefinition/condition-statusReason" key="StructureDefinition-condition-statusReason" name="Condition Status Reason"/>
 <artifact id="StructureDefinition/device-eu-eps" key="StructureDefinition-device-eu-eps" name="Device (EPS)"/>
 <artifact id="StructureDefinition/deviceUseStatement-eu-eps" key="StructureDefinition-deviceUseStatement-eu-eps" name="DeviceUseStatement (EPS)"/>
+<artifact id="Bundle/EPSExampleBundle01NoProblemsMedicationAllergies" key="Bundle-EPSExampleBundle01NoProblemsMedicationAllergies" name="EPSBundle-Beispiel 1"/>
 <artifact id="StructureDefinition/flag-eu-eps" key="StructureDefinition-flag-eu-eps" name="Flag (EU PS)"/>
 <artifact id="StructureDefinition/immunization-eu-eps" key="StructureDefinition-immunization-eu-eps" name="Immunization (EU PS)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>

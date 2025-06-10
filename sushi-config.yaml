@@ -29,9 +29,9 @@ dependencies:
   hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.eu.extensions.r4: 0.1.1-ballot
   hl7.fhir.eu.laboratory: 0.1.1
-  hl7.fhir.eu.hdr: current # to be removed
+  hl7.fhir.eu.hdr: current
   hl7.fhir.eu.base: current
-  ihe.pharm.mpd.r4: 0.1.0 # local cache
+  ihe.pharm.mpd.r4: 1.0.0-comment-2
 
 
 #   hl7.fhir.us.mcode:
