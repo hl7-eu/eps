@@ -1,7 +1,7 @@
 Profile: AllergyIntoleranceEuEps
 Parent: $AllergyIntolerance-uv-ips
 Id: allergyIntolerance-eu-eps
-Title:    "Allergy Intolerance (EU PS)"
+Title:    "Allergy Intolerance (EPS)"
 Description: """This profile constrains the AllergyIntolerance resource for the purpose of the European patient summary."""
 * ^experimental = false
 * ^purpose = "This profile constrains the AllergyIntolerance resource for the purpose of the European patient summary."

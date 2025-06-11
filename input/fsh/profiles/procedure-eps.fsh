@@ -1,11 +1,11 @@
 Profile: ProcedureEuEps
-Parent: Procedure
+Parent: $Procedure-uv-ips
 // Parent: ProcedureUvIps
-Id: procedure-eu-hdr
-Title:    "Procedure (EU PS)"
+Id: procedure-eu-eps
+Title:    "Procedure (EPS)"
 Description: "This profile represents the constraints applied to the Procedure resource by this guide."
 
-* insert ImposeProfile ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)
+// * insert ImposeProfile ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)
 
 * extension contains $procedure-targetBodyStructure named bodySite 0..1
 * extension[bodySite].valueReference only Reference(BodyStructureEuLab)
@@ -16,11 +16,11 @@ Description: "This profile represents the constraints applied to the Procedure r
 * code 1.. 
   * ^binding.description = "Codes describing the type of  Procedure"
   * ^definition = "Identification of the procedure or recording of \"absence of relevant procedures\" or of \"procedures unknown\"."
-* code from ProceduresSnomedAbsentUnknownHdrVS (preferred)
+// * code from ProceduresSnomedAbsentUnknownHdrVS (preferred)
 * code ^binding.extension[0].extension[0].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate
 * code ^binding.extension[=].extension[+].url = "valueSet"
-* code ^binding.extension[=].extension[=].valueCanonical = "http://hl7.eu/fhir/ig/xpandh/hdr/ValueSet/procedure-snomed-eu-hdr"
+* code ^binding.extension[=].extension[=].valueCanonical = $eHDSIProcedure
 * code ^binding.extension[=].extension[+].url = "documentation"
 * code ^binding.extension[=].extension[=].valueMarkdown = "Codes for procedures in SNOMED CT Xpandh valueset"
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
@@ -38,7 +38,7 @@ Description: "This profile represents the constraints applied to the Procedure r
 * performed[x].extension contains $data-absent-reason named data-absent-reason 0..1
 * performed[x].extension[data-absent-reason] ^short = "performed[x] absence reason"
 * performed[x].extension[data-absent-reason] ^definition = "Provides a reason why the performed is missing."
-* performer.actor only Reference(PractitionerRoleEuCore or PractitionerEuCore or Device or PatientEuCore or RelatedPerson or  OrganizationEuCore)
+* performer.actor only Reference(PractitionerRoleEuCore or PractitionerEuCore or $Device-observer-uv-ips or PatientEuEps or RelatedPerson or  OrganizationEuCore)
 * performer.onBehalfOf only Reference(OrganizationEuCore)
 * reasonCode ^short = "Why the procedure was performed (code)"
 * reasonReference ^short = "Why the procedure was performed (details)"
@@ -46,7 +46,7 @@ Description: "This profile represents the constraints applied to the Procedure r
 * complication ^short = "Complications that occurred during the procedure (code)"
 * complicationDetail ^short = "Complications that occurred during the procedure (details)"
 * focalDevice ^short = "Device implanted, removed or otherwise manipulated"
-* focalDevice.manipulated only Reference ( DeviceEuEps)
+* focalDevice.manipulated only Reference ( DeviceEuEps )
 * bodySite only CodeableConceptIPS
 * bodySite from SNOMEDCTBodyStructures (preferred)
 * bodySite

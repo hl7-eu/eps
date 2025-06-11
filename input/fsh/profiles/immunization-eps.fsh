@@ -2,7 +2,7 @@
 Profile:  ImmunizationEuEps
 Parent:   Immunization
 Id:       immunization-eu-eps
-Title:    "Immunization (EU PS)"
+Title:    "Immunization (EPS)"
 Description: """This profile constrains the Immunization resource for the purpose of the European patient summary."""
 
 //-------------------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ Description: """This profile constrains the Immunization resource for the purpos
 Profile:  ImmunizationRecommendationEuEps
 Parent:   ImmunizationRecommendation
 Id:       immunizationRecommendation-eu-eps
-Title:    "ImmunizationRecommendation (EU PS)"
+Title:    "ImmunizationRecommendation (EPS)"
 Description: """This profile defines how to represent Immunization Recommandations for the purpose of the European patient summary."""
 //-------------------------------------------------------------------------------------------
 

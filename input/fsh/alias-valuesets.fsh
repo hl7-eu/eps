@@ -49,7 +49,6 @@ Alias: $eHDSIRareDisease = http://terminology.ehdsi.eu/ValueSet/eHDSIRareDisease
 Alias: $eHDSIReactionAllergy = http://terminology.ehdsi.eu/ValueSet/eHDSIReactionAllergy
 Alias: $eHDSISubstance = http://terminology.ehdsi.eu/ValueSet/eHDSISubstance
 Alias: $eHDSIAllergenNoDrug = http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug
-Alias: $eHDSIActiveIngredient = http://terminology.ehdsi.eu/ValueSet/eHDSIActiveIngredient
-
+Alias: $eHDSIProcedure = http://terminology.ehdsi.eu/ValueSet/eHDSIProcedure
 
 //=========================

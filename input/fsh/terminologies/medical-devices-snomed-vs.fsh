@@ -1,7 +1,7 @@
 // --------------------------------------------------
 ValueSet: MedicalDevicesSnomedCtHdrVS
 Id: medical-devices-eu-hdr
-Title: "Medical Devices (SNOMED CT) - Xpandh"
+Title: "Medical Devices (SNOMED CT)"
 Description: "This value set includes codes from SNOMED Clinical Terms®: all descendants of 49062001 \\|Device (physical object)\\|."
 * insert SetFmmAndStatusRule (1, draft)
 * insert SNOMEDCopyrightForVS

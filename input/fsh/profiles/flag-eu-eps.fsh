@@ -2,7 +2,7 @@
 Profile:  FlagEuEps
 Parent:   Flag
 Id:       flag-eu-eps
-Title:    "Flag (EU PS)"
+Title:    "Flag (EPS)"
 Description: "This profile constrains the Flag resource to represent alerts or warnings in FHIR for the purpose of this project."
 //-------------------------------------------------------------------------------------------
 

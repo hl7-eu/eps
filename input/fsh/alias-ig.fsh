@@ -23,6 +23,8 @@ Alias: $organization-eu = http://hl7.eu/fhir/base/StructureDefinition/organizati
 Alias: $organization-eu-core = http://hl7.eu/fhir/base/StructureDefinition/organization-eu-core
 
 // --- Profiles
+
+Alias: $Device-observer-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Device-observer-uv-ips
 Alias: $Composition-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips
 Alias: $Patient-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips
 Alias: $AllergyIntolerance-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips

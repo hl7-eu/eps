@@ -1,7 +1,7 @@
 Profile: CompositionEuEps
 Parent: $Composition-uv-ips
 Id: composition-eu-eps
-Title: "Composition (EU PS)"
+Title: "Composition (EPS)"
 Description: "Clinical document used to represent a Patient Summary for the scope of this project."
 * . ^short = "Patient Summary composition"
 * . ^definition = "Patient Summary composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
@@ -44,7 +44,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * ^short = "Medication Summary"
   * ^definition = """The medication summary section contains a description of the patient's medications as part of the patient summary"""
 
-  * entry only Reference (MedicationStatementEuEps or MedicationRequestEuEps or MedicationAdministration or MedicationDispense) 
+  * entry only Reference (MedicationStatementEuEps or MedicationRequestEuEps or MedicationAdministrationEuEps or MedicationDispenseEuEps) 
   * entry[medicationStatementOrRequest] only Reference (MedicationStatementEuEps or MedicationRequestEuEps) 
   
 * section[sectionAllergies]

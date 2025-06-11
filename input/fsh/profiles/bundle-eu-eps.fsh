@@ -1,8 +1,8 @@
 Profile: BundleEuEps
 Parent: $Bundle-uv-ips
 Id: bundle-eu-eps
-Title: "Bundle (EU PS)"
-Description: "Clinical document used to represent a Patient Summary for the scope of the XpanDH project."
+Title: "Bundle (EPS)"
+Description: "Clinical document used to represent a Patient Summary for the scope of this project."
 
 * . ^short = "Patient Summary bundle"
 * . ^definition = "Patient Summary bundle."

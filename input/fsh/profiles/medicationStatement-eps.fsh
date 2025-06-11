@@ -1,15 +1,14 @@
 Profile: MedicationStatementEuEps
 Parent: $MedicationStatement-uv-ips
 Id: MedicationStatement-eu-eps
-Title:    "Medication Statement (EU PS)"
+Title:    "Medication Statement (EPS)"
 Description: """This profile constrains the MedicationStatement resource for the purpose of the European patient summary."""
 * ^experimental = false
 * ^purpose = "This profile constrains the MedicationStatement resource for the purpose of the European patient summary."
 /* * extension contains $medicationStatement-dosage-r5 named dosage 0..*
 * extension[dosage].extension[route].valueCodeableConcept from EHDSIRouteofAdministration (preferred)
  */
-* medicationReference 1..
-* medicationReference only Reference ( MedicationEuEps )
+* medication[x] only $CodeableConcept-uv-ips or Reference(MedicationEuEps)
 * category ^short = "Type of medication statement."
 * subject only Reference (PatientEuEps)
 
@@ -20,5 +19,3 @@ Description: """This profile constrains the MedicationStatement resource for the
 * dosage ^short =  	"How medication is/was taken or should be taken"
 * dosage.route ^short = "Route of administration"
 // * dosage.route from EHDSIRouteofAdministration (preferred)
-
-// to be further developped

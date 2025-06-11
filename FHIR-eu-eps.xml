@@ -16,25 +16,27 @@
 <artifact id="StructureDefinition/Pregnancy" key="StructureDefinition-Pregnancy" name="A.2.6 Pregnancy history"/>
 <artifact id="StructureDefinition/Result" key="StructureDefinition-Result" name="A.2.8 - Results"/>
 <artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A1.1, A1.2 - Subject of care"/>
-<artifact id="StructureDefinition/allergyIntolerance-eu-eps" key="StructureDefinition-allergyIntolerance-eu-eps" name="Allergy Intolerance (EU PS)"/>
-<artifact id="StructureDefinition/bundle-eu-eps" key="StructureDefinition-bundle-eu-eps" name="Bundle (EU PS)"/>
-<artifact id="StructureDefinition/composition-eu-eps" key="StructureDefinition-composition-eu-eps" name="Composition (EU PS)"/>
-<artifact id="StructureDefinition/condition-eu-eps" key="StructureDefinition-condition-eu-eps" name="Condition (EU PS)"/>
+<artifact id="StructureDefinition/allergyIntolerance-eu-eps" key="StructureDefinition-allergyIntolerance-eu-eps" name="Allergy Intolerance (EPS)"/>
+<artifact id="StructureDefinition/bundle-eu-eps" key="StructureDefinition-bundle-eu-eps" name="Bundle (EPS)"/>
+<artifact id="StructureDefinition/composition-eu-eps" key="StructureDefinition-composition-eu-eps" name="Composition (EPS)"/>
+<artifact id="StructureDefinition/condition-eu-eps" key="StructureDefinition-condition-eu-eps" name="Condition (EPS)"/>
 <artifact id="StructureDefinition/condition-statusReason" key="StructureDefinition-condition-statusReason" name="Condition Status Reason"/>
 <artifact id="StructureDefinition/device-eu-eps" key="StructureDefinition-device-eu-eps" name="Device (EPS)"/>
 <artifact id="StructureDefinition/deviceUseStatement-eu-eps" key="StructureDefinition-deviceUseStatement-eu-eps" name="DeviceUseStatement (EPS)"/>
 <artifact id="Bundle/EPSExampleBundle01NoProblemsMedicationAllergies" key="Bundle-EPSExampleBundle01NoProblemsMedicationAllergies" name="EPSBundle-Beispiel 1"/>
-<artifact id="StructureDefinition/flag-eu-eps" key="StructureDefinition-flag-eu-eps" name="Flag (EU PS)"/>
-<artifact id="StructureDefinition/immunization-eu-eps" key="StructureDefinition-immunization-eu-eps" name="Immunization (EU PS)"/>
+<artifact id="StructureDefinition/flag-eu-eps" key="StructureDefinition-flag-eu-eps" name="Flag (EPS)"/>
+<artifact id="StructureDefinition/immunization-eu-eps" key="StructureDefinition-immunization-eu-eps" name="Immunization (EPS)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
-<artifact id="StructureDefinition/immunizationRecommendation-eu-eps" key="StructureDefinition-immunizationRecommendation-eu-eps" name="ImmunizationRecommendation (EU PS)"/>
-<artifact id="ValueSet/medical-devices-eu-hdr" key="ValueSet-medical-devices-eu-hdr" name="Medical Devices (SNOMED CT) - Xpandh"/>
+<artifact id="StructureDefinition/immunizationRecommendation-eu-eps" key="StructureDefinition-immunizationRecommendation-eu-eps" name="ImmunizationRecommendation (EPS)"/>
+<artifact id="ValueSet/medical-devices-eu-hdr" key="ValueSet-medical-devices-eu-hdr" name="Medical Devices (SNOMED CT)"/>
 <artifact id="ValueSet/medical-devices-snomed-absent-unknown-eu-hdr" key="ValueSet-medical-devices-snomed-absent-unknown-eu-hdr" name="Medical Devices - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="StructureDefinition/Medication-eu-eps" key="StructureDefinition-Medication-eu-eps" name="Medication (EPS)"/>
-<artifact id="StructureDefinition/MedicationStatement-eu-eps" key="StructureDefinition-MedicationStatement-eu-eps" name="Medication Statement (EU PS)"/>
+<artifact id="StructureDefinition/MedicationStatement-eu-eps" key="StructureDefinition-MedicationStatement-eu-eps" name="Medication Statement (EPS)"/>
+<artifact id="StructureDefinition/medicationAdministration-eu-eps" key="StructureDefinition-medicationAdministration-eu-eps" name="MedicationAdministration (EPS)"/>
+<artifact id="StructureDefinition/medicationDispense-eu-eps" key="StructureDefinition-medicationDispense-eu-eps" name="MedicationDispense (EPS)"/>
 <artifact id="StructureDefinition/medicationRequest-eu-eps" key="StructureDefinition-medicationRequest-eu-eps" name="MedicationRequest (EPS)"/>
-<artifact id="StructureDefinition/patient-eu-eps" key="StructureDefinition-patient-eu-eps" name="Patient (EU PS)"/>
-<artifact id="StructureDefinition/procedure-eu-hdr" key="StructureDefinition-procedure-eu-hdr" name="Procedure (EU PS)"/>
+<artifact id="StructureDefinition/patient-eu-eps" key="StructureDefinition-patient-eu-eps" name="Patient (EPS)"/>
+<artifact id="StructureDefinition/procedure-eu-eps" key="StructureDefinition-procedure-eu-eps" name="Procedure (EPS)"/>
 <artifact id="ValueSet/eHDSISeverity" key="ValueSet-eHDSISeverity" name="Severity"/>
 <artifact id="StructureDefinition/supportingInformation" key="StructureDefinition-supportingInformation" name="Supporting Information"/>
 <artifact id="ConceptMap/vaccination2FHIR-eu-eps" key="ConceptMap-vaccination2FHIR-eu-eps" name="eHN Alerts Model to this guide Map"/>
