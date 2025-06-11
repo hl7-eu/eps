@@ -7,7 +7,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * . ^short = "Patient Summary bundle"
 * . ^definition = "Patient Summary bundle."
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 
 * entry[composition].resource 1..
 * entry[composition].resource only CompositionEuEps

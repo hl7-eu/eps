@@ -6,7 +6,7 @@ Title:    "Flag (EU PS)"
 Description: "This profile constrains the Flag resource to represent alerts or warnings in FHIR for the purpose of this project."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 
 * extension contains $flag-detail named flagDetailExt 0..*
 * extension contains $flag-priority named flagPriorityExt 0..1

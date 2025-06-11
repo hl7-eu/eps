@@ -61,22 +61,18 @@ Description: """This profile constrains the Immunization resource for the purpos
 * lotNumber ^short = "Batch/lot number"
 
 * performer 
-  * ^slicing.discriminator[0].type = #profile
-  * ^slicing.discriminator[0].path = "$this.actor.resolve()"
+ /*  * ^slicing.discriminator[0].type = #profile
+  * ^slicing.discriminator[0].path = "$this.actor.resolve()" */
   * ^slicing.discriminator[0].type = #value
   * ^slicing.discriminator[0].path = "$this.function"
   * ^slicing.ordered = false
   * ^slicing.rules = #open
 
-* performer contains administeringCentre 0..*
-* performer[administeringCentre] ^short = "Administering centre"
-* performer[administeringCentre].function = $v2-0443#AP	// "Administering Provider" code to be checked
-* performer[administeringCentre].actor only Reference( OrganizationEuCore )
+* performer contains administeringCentreOrHp 0..*
+* performer[administeringCentreOrHp] ^short = "Administering centre"
+* performer[administeringCentreOrHp].function = $v2-0443#AP	// "Administering Provider" code to be checked
+* performer[administeringCentreOrHp].actor only Reference( OrganizationEuCore or PractitionerRoleEuCore or PractitionerEuCore )
 
-* performer contains administeringHp 0..*
-* performer[administeringHp] ^short = "Administering Health Professional"
-* performer[administeringHp].function = $v2-0443#AP	// "Administering Provider" code to be checked
-* performer[administeringHp].actor only Reference( PractitionerRoleEuCore or PractitionerEuCore )
 
 // * protocolApplied.targetDisease 
 // * protocolApplied.targetDisease 

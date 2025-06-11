@@ -265,7 +265,15 @@ menu:
 # is specified by id or name, SUSHI will replace it with the correct
 # URL when generating the IG JSON.
 #
-#  groups:
+groups:
+
+    eHNHospitalDishargeReport:
+      name:  European Patient Summary
+      description: HEuropean Patient Summary entry profiles.
+      resources:
+        - StructureDefinition/bundle-eu-eps
+        - StructureDefinition/composition-eu-eps
+
 #    eHNGuidelines:
 #      name:  eHN Laboratory Guidelines (Informative)
 #      description: Logical models representing the eHN Laboratory Guidelines. This is informative material.

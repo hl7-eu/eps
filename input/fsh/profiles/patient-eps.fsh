@@ -5,7 +5,7 @@ Title:    "Patient (EU PS)"
 Description: """This profile defines how to represent a human Patient in HL7 FHIR for the purpose of this guide.
 When the ips-pat-1 invariant is satisfied \(Patient.name.given, Patient.name.family or Patient.name.text SHALL be present\) then this profile complies with the IPS patient profile."""
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 * insert ImposeProfile($Patient-uv-ips, 0)
 
 /* * name ^short = "Patient Name" */

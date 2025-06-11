@@ -6,7 +6,7 @@ Title:    "MedicationRequest (EPS)"
 Description: "This profile constrains the MedicationRequest resource for the purpose of this guide, adapted from the MPD work."
 //-------------------------------------------------------------------------------------------
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 
 * insert ImposeProfile ($MedicationRequest-uv-ips , 0)
 

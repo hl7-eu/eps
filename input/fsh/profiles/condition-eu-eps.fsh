@@ -6,7 +6,7 @@ Description: """This profile constrains the Condition resource for the purpose o
 * ^experimental = false
 * ^purpose = "This profile constrains the Condition resource for the purpose of the European patient summary."
 
-* insert SetFmmandStatusRule (1, draft)
+* insert SetFmmAndStatusRule (1, draft)
 
 * extension contains SupportingInformation named supportingInfo 0..*
 * extension[supportingInfo] ^short = "Reference to additional information as Guidelines"
