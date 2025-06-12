@@ -1,6 +1,6 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 Profile:  FlagEuEps
-Parent:   Flag
+Parent:   $Flag-alert-uv-ips
 Id:       flag-eu-eps
 Title:    "Flag (EPS)"
 Description: "This profile constrains the Flag resource to represent alerts or warnings in FHIR for the purpose of this project."

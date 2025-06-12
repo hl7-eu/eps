@@ -22,7 +22,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the PS the subject is always the patient."
 // * encounter only Reference ( EncounterEuEps )
 * date ^short = "PS date"
-* author only Reference ($practitioner-eu-core or $practitionerRole-eu-core or Device or $organization-eu-core or Patient or RelatedPerson)
+* author only Reference ($practitioner-eu-core or $practitionerRole-eu-core or Device or $organization-eu-core or PatientEuCore or RelatedPerson)
   * ^short = "Who and/or what authored the Patient Summary"
   * ^definition = "Identifies who is responsible for the information in the Patient Summary, not necessarily who typed it in."
 
@@ -30,7 +30,10 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Patient Summary\" or any equivalent translation"
 * attester.mode ^short = "The type of attestation"
 * attester.time ^short = "When the composition was attested"
-* attester.party ^short = "Who attested the composition"
+* attester.party only Reference (PractitionerEuCore or PractitionerRoleEuCore or OrganizationEuCore or PatientEuEps or RelatedPerson)
+* custodian only Reference (OrganizationEuCore)
+  * ^short = "Custodian of the Patient Summary"
+  * ^definition = "Identifies the organization that is responsible for ongoing maintenance of the Patient Summary, and ensures that it remains available for access by other parties."
 
 /* * section 1..
 * section ^slicing.discriminator[0].type = #pattern
@@ -67,24 +70,15 @@ The field \"alerts\" was originally defined to include all the important and obj
 
   * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagEuEps)
 
-// only Flag ?
 
-/*  
- * insert SectionEntrySliceDefRules (detectedIssue, 0.. ,  Detected Issue,
-    Indicates an actual or potential clinical issue with or between one or more active or proposed clinical actions for a patient; e.g. Drug-drug interaction\, Ineffective treatment frequency\, Procedure-condition conflict\, etc. ,
-    DetectedIssue)
-  * insert SectionEntrySliceDefRules (riskAssessment, 0.. , Risk Assessment,
-    An assessment of the likely outcomes for a patient or other subject as well as the likelihood of each outcome. ,
-    RiskAssessment) 
-    */
-
-/* * section[sectionProblems].entry[problem] only Reference (ConditionEuEps) */
-
-* section[sectionProblems].entry[problem]
+* section[sectionProblems]
 
   * ^short = "Active Problems"
   * ^definition = """The active problem section contains a narrative description of the conditions currently being monitored for the patient. It includes entries for patient conditions as described in the Entry.
 This section can also be used to hold the Medical Alert information (other alerts not included in allergies). Alerts, of all types are to be considered for the next iteration of the specifications."""
+  * entry[problem] only Reference (ConditionEuEps)
+
+
 * section[sectionProceduresHx] 0..1
   * ^short = "List of Surgeries"
   * ^definition = """The list of surgeries section includes entries for procedures and references to procedure reports when known as described in the Entry. In epSOS this section was used to describe the Surgical Procedures prior past six months (optional) and to record the Major Surgical Procedures past 6 months (required). This choice of considering a time based distinction was due by the subjectivity of \‘relevancy\’ for automatically assembled PS. 
@@ -107,18 +101,18 @@ For the eHDSI Patient Summary this is a mandatory section and shall be used to r
 
 * section[sectionResults]
   * ^short = "Coded Results"
-  * ^definition = """In eHDSI this section is used only for the purpose of providing the results for the blood group."""
+  // * ^definition = """In eHDSI this section is used only for the purpose of providing the results for the blood group."""
   // consider to add specialized profiles for results 
 
   /* * entry[results-observation] only Reference (ObservationBloodGroupEuEps or ObservationResultsEuEps) */
 
-* section[sectionVitalSigns].entry[vitalSign] only Reference ($Observation-bp)
+* section[sectionVitalSigns].entry[vitalSign] 
   * ^short = "Vital Signs"
   * ^definition = """The vital signs section contains coded measurement results of a patient\’s vital signs."""
-* section[sectionPastIllnessHx].entry[pastProblem] // only Reference (ConditionEuEps)
+* section[sectionPastIllnessHx].entry[pastProblem] only Reference (ConditionEuEps)
   * ^short = "History Of Past Illness"
   * ^definition = """The History of Past Illness section contains a narrative description of the conditions the patient suffered in the past. It includes entries for problems as described in the Entry."""
-* section[sectionFunctionalStatus]
+* section[sectionFunctionalStatus].entry[disability] only Reference (ConditionEuEps)
   * ^short = "Functional Status"
   * ^definition = """The functional status section contains a narrative description of capability of the patient to perform acts of daily living."""
 * section[sectionPlanOfCare]
@@ -141,20 +135,25 @@ This section is used in eHDSI only for the purpose of providing the Expected Dat
   * entry[pregnancyStatus] ^short = "Pregnancy status"
   * entry[pregnancyOutcome] ^short = "Pregnancy outcome"
   
+// -------------------------------------
 * section[sectionAdvanceDirectives]
-  * ^short = "Advance Directives Section"
-  * ^definition = """The advance directive section contains a narrative description of patient's advance directive. The optional author and informant elements are used when necessary to convey the provenance and authoring of the section content in case it is different from what is announced in the CDA header.
-Entries for references to consent and advance directive documents when known will be specified by future versions of this template."""
+  * insert SectionComRules (
+    Advance Directives Section,
+    The advance directives section contains a narrative description of patient's advance directive.,
+    $loinc#42348-3 )  // 	Advance directives
+  * entry only Reference(ConsentEuEps or DocumentReference) 
 
 
-* section[sectionAdvanceDirectives]
-  * ^short = "Advance Directives Section"
-  * ^definition = """The advance directive section contains a narrative description of patient's advance directive. The optional author and informant elements are used when necessary to convey the provenance and authoring of the section content in case it is different from what is announced in the CDA header.
-Entries for references to consent and advance directive documents when known will be specified by future versions of this template."""
 
 * section contains sectionTravelHx ..1
 * section[sectionTravelHx]
-  * insert SectionComRules ( Travel History Section, This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,  http://loinc.org#10182-4 )
+  * insert SectionComRules ( 
+        Travel History Section, 
+        This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
+        $loinc#10182-4 ) // History of Travel Narrative
+  * entry 0..*
+  * entry only Reference(ObservationTravelEuHdr)
+  * section ..0
 
 * section contains sectionPatientHx ..1
 * section[sectionPatientHx]

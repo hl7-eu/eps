@@ -12,11 +12,11 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[composition].resource 1..
 * entry[composition].resource only CompositionEuEps
 * entry[patient].resource 1..
-* entry[patient].resource only PatientEuEps  //EuEps
+* entry[patient].resource only PatientEuEps  
 * entry[allergyintolerance].resource 1..
-* entry[allergyintolerance].resource only $AllergyIntolerance-uv-ips  //EuEps
+* entry[allergyintolerance].resource only AllergyIntoleranceEuEps
 * entry[condition].resource 1..
-* entry[condition].resource only ConditionEuEps  //EuEps
+* entry[condition].resource only ConditionEuEps
 * entry[device].resource 1..
 * entry[device].resource only Device
 * entry[deviceusestatement].resource 1..
@@ -28,7 +28,10 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[imagingstudy].resource only $ImagingStudy-uv-ips  //EuEps */
 
 * entry[immunization].resource 1..
-* entry[immunization].resource only $Immunization-uv-ips  //EuEps
+* entry[immunization].resource only ImmunizationEuEps
+
+* entry[flag].resource 1..
+* entry[flag].resource only FlagEuEps
 
 /* * entry[media].resource 1..
 * entry[media].resource only $Media-observation-uv-ips */
@@ -44,11 +47,10 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[practitioner].resource 1..
 * entry[practitioner].resource only PractitionerEuCore  //EuEps
 * entry[practitionerrole].resource 1..
-* entry[practitionerrole].resource only $practitionerRole-eu-core  //EuEps 
+* entry[practitionerrole].resource only PractitionerRoleEuCore  //EuEps 
 
-/*  COMMENTED TO BY-PASS A BUILD ERROR TO BE ANALYZED  */
 * entry[procedure].resource 1..
-* entry[procedure].resource only $Procedure-uv-ips  //EuEps
+* entry[procedure].resource only ProcedureEuEps
 
 /*
 * entry[organization].resource 1..

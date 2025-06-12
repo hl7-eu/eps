@@ -50,5 +50,5 @@ Alias: $eHDSIReactionAllergy = http://terminology.ehdsi.eu/ValueSet/eHDSIReactio
 Alias: $eHDSISubstance = http://terminology.ehdsi.eu/ValueSet/eHDSISubstance
 Alias: $eHDSIAllergenNoDrug = http://terminology.ehdsi.eu/ValueSet/eHDSIAllergenNoDrug
 Alias: $eHDSIProcedure = http://terminology.ehdsi.eu/ValueSet/eHDSIProcedure
-
+Alias: $eHDSIMedicalDevice = http://terminology.ehdsi.eu/ValueSet/eHDSIMedicalDevice
 //=========================

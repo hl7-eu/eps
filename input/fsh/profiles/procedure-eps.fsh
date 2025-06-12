@@ -22,7 +22,7 @@ Description: "This profile represents the constraints applied to the Procedure r
 * code ^binding.extension[=].extension[+].url = "valueSet"
 * code ^binding.extension[=].extension[=].valueCanonical = $eHDSIProcedure
 * code ^binding.extension[=].extension[+].url = "documentation"
-* code ^binding.extension[=].extension[=].valueMarkdown = "Codes for procedures in SNOMED CT Xpandh valueset"
+* code ^binding.extension[=].extension[=].valueMarkdown = "Codes for procedures used in Myhealth@EU"
 * code ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"
 * code ^binding.extension[+].extension[0].url = "purpose"
 * code ^binding.extension[=].extension[=].valueCode = #candidate

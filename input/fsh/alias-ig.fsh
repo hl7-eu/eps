@@ -50,6 +50,7 @@ Alias: $Observation-tobaccouse-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefi
 Alias: $Observation-results-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-uv-ips
 //Alias: $Specimen-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips
 Alias: $Bundle-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips
+Alias: $Flag-alert-uv-ips = http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips
 Alias: $vitalsigns = http://hl7.org/fhir/StructureDefinition/vitalsigns
 
 Alias: $Observation-bp = http://hl7.org/fhir/StructureDefinition/bp
