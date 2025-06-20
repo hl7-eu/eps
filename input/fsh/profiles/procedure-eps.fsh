@@ -7,8 +7,8 @@ Description: "This profile represents the constraints applied to the Procedure r
 
 // * insert ImposeProfile ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)
 
-* extension contains $procedure-targetBodyStructure named bodySite 0..1
-* extension[bodySite].valueReference only Reference(BodyStructureEuLab)
+/* * extension contains $procedure-targetBodyStructure named bodySite 0..1
+* extension[bodySite].valueReference only Reference(BodyStructureEuLab) */
 
 * text 1..1  // textual representation of the procedure should be provided according to the EHN data set
 * status
@@ -41,7 +41,7 @@ Description: "This profile represents the constraints applied to the Procedure r
 * performer.actor only Reference(PractitionerRoleEuCore or PractitionerEuCore or $Device-observer-uv-ips or PatientEuEps or RelatedPerson or  OrganizationEuCore)
 * performer.onBehalfOf only Reference(OrganizationEuCore)
 * reasonCode ^short = "Why the procedure was performed (code)"
-* reasonReference ^short = "Why the procedure was performed (details)"
+* reasonReference only Reference (ConditionEuEps or Observation or ProcedureEuEps or DiagnosticReport or DocumentReference)
 * outcome ^short = "Outcome of the procedure"
 * complication ^short = "Complications that occurred during the procedure (code)"
 * complicationDetail ^short = "Complications that occurred during the procedure (details)"
