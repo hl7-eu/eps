@@ -46,7 +46,6 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * section[sectionMedications]
   * ^short = "Medication Summary"
   * ^definition = """The medication summary section contains a description of the patient's medications as part of the patient summary"""
-
   * entry only Reference (MedicationStatementEuEps or MedicationRequestEuEps or MedicationAdministrationEuEps or MedicationDispenseEuEps) 
   * entry[medicationStatementOrRequest] only Reference (MedicationStatementEuEps or MedicationRequestEuEps) 
   
@@ -61,63 +60,61 @@ The field \"alerts\" was originally defined to include all the important and obj
 * section[sectionAlert]
   * insert SectionComRules ( 
       Alerts Section, 
-      Information used to warn or call to a state of preparedness. Information flagged or intended to raise awareness of a potential danger to from the subject of the IPS or to from another individual or awareness of a potential obstacle to care. , 
-      http://loinc.org#104605-1 )   
-
+      Information used to warn or call to a state of preparedness. Information flagged or intended to raise awareness of a potential danger to from the subject of the IPS or to from another individual or awareness of a potential obstacle to care., 
+      http://loinc.org#104605-1)
   * entry 0..
   * insert SectionEntrySliceComRules(Alerts, Alerts)
   // entry slices
-
   * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagEuEps)
 
-
 * section[sectionProblems]
-
   * ^short = "Active Problems"
   * ^definition = """The active problem section contains a narrative description of the conditions currently being monitored for the patient. It includes entries for patient conditions as described in the Entry.
 This section can also be used to hold the Medical Alert information (other alerts not included in allergies). Alerts, of all types are to be considered for the next iteration of the specifications."""
   * entry[problem] only Reference (ConditionEuEps)
 
-
 * section[sectionProceduresHx] 0..1
   * ^short = "List of Surgeries"
   * ^definition = """The list of surgeries section includes entries for procedures and references to procedure reports when known as described in the Entry. In epSOS this section was used to describe the Surgical Procedures prior past six months (optional) and to record the Major Surgical Procedures past 6 months (required). This choice of considering a time based distinction was due by the subjectivity of \‘relevancy\’ for automatically assembled PS. 
 As the date can be seen from the procedure, the two have the same expression. It is up to the implementers of the system to display it in a different way."""
-
   * entry[procedure] only Reference (ProcedureEuEps)
 
 * section[sectionImmunizations]
   * ^short = "Immunizations"
   * ^definition = """The immunizations section contains a narrative description of the immunizations administered to the patient in the past. It includes entries for medication administration as described in related profiles."""
-
   * entry[immunization] only Reference (ImmunizationEuEps)
 
 * section[sectionMedicalDevices] 0..1
   * ^short = "Medical Devices"
   * ^definition = """The medical devices section contains narrative text describing the patient history of medical device use.
 For the eHDSI Patient Summary this is a mandatory section and shall be used to record the Medical Devices and Implants. Each device shall be described using the specifed entry."""
-  
   * entry[deviceStatement] only Reference (DeviceUseStatementEuEps)
 
 * section[sectionResults]
   * ^short = "Coded Results"
   // * ^definition = """In eHDSI this section is used only for the purpose of providing the results for the blood group."""
-  // consider to add specialized profiles for results 
-
+  // consider to add specialized profiles for results
   /* * entry[results-observation] only Reference (ObservationBloodGroupEuEps or ObservationResultsEuEps) */
 
-* section[sectionVitalSigns].entry[vitalSign] 
+* section[sectionVitalSigns]
   * ^short = "Vital Signs"
   * ^definition = """The vital signs section contains coded measurement results of a patient\’s vital signs."""
-* section[sectionPastIllnessHx].entry[pastProblem] only Reference (ConditionEuEps)
+  * entry[vitalSign]
+
+* section[sectionPastProblems]
   * ^short = "History Of Past Illness"
   * ^definition = """The History of Past Illness section contains a narrative description of the conditions the patient suffered in the past. It includes entries for problems as described in the Entry."""
-* section[sectionFunctionalStatus].entry[disability] only Reference (ConditionEuEps)
+  * entry[pastProblem] only Reference (ConditionEuEps)
+
+* section[sectionFunctionalStatus]
   * ^short = "Functional Status"
   * ^definition = """The functional status section contains a narrative description of capability of the patient to perform acts of daily living."""
+  * entry[disability] only Reference (ConditionEuEps)
+
 * section[sectionPlanOfCare]
   * ^short = "Health Maintenance Care Plan"
   * ^definition = """The health maintenance care plan section contains a description of the expectations for wellness care including proposals, goals, and order requests for monitoring, tracking, or improving the lifetime condition of the patient with goals of educating the patient on how to reduce the modifiable risks of the patient\’s genetic, behavioral, and environmental pre-conditions and otherwise optimizing lifetime outcomes."""
+
 * section[sectionSocialHistory]
   * ^short = "Social History"
   * ^definition = """The social history section contains a narrative description of the person\’s beliefs, home life, community life, work life, hobbies, and risky habits. It includes Social History Observations."""
@@ -142,8 +139,6 @@ This section is used in eHDSI only for the purpose of providing the Expected Dat
     The advance directives section contains a narrative description of patient's advance directive.,
     $loinc#42348-3 )  // 	Advance directives
   * entry only Reference(ConsentEuEps or DocumentReference) 
-
-
 
 * section contains sectionTravelHx ..1
 * section[sectionTravelHx]
