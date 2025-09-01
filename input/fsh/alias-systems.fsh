@@ -58,9 +58,9 @@ Alias: $v3-ObservationInterpretation = http://terminology.hl7.org/CodeSystem/v3-
 Alias: $v3-ParticipationType = http://terminology.hl7.org/CodeSystem/v3-ParticipationType
 Alias: $v3-RoleClass = http://terminology.hl7.org/CodeSystem/v3-RoleClass
 Alias: $v3-RoleCode = http://terminology.hl7.org/CodeSystem/v3-RoleCode
+Alias: $list-empty-reason = http://terminology.hl7.org/CodeSystem/list-empty-reason
+Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $v3-TimingEvent = http://terminology.hl7.org/CodeSystem/v3-TimingEvent
-
-
 
 // --- SID
 Alias: $oid = urn:ietf:rfc:1155
