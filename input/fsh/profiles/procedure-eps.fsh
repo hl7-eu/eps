@@ -35,9 +35,6 @@ Description: "This profile represents the constraints applied to the Procedure r
 * subject only Reference(PatientEuEps)
 * subject.reference 1..
 * performed[x] 1..1
-* performed[x].extension contains $data-absent-reason named data-absent-reason 0..1
-* performed[x].extension[data-absent-reason] ^short = "performed[x] absence reason"
-* performed[x].extension[data-absent-reason] ^definition = "Provides a reason why the performed is missing."
 * performer.actor only Reference(PractitionerRoleEuCore or PractitionerEuCore or $Device-observer-uv-ips or PatientEuEps or RelatedPerson or  OrganizationEuCore)
 * performer.onBehalfOf only Reference(OrganizationEuCore)
 * reasonCode ^short = "Why the procedure was performed (code)"

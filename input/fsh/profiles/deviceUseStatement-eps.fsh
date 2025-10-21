@@ -11,8 +11,6 @@ Description: "This profile represents the constraints applied to the DeviceUseSt
 * subject ^definition = "The patient using the device."
 * subject.reference 1.. 
 * timing[x] 1..1 
-* timing[x].extension contains $data-absent-reason named data-absent-reason 0..1 
-* timing[x].extension[data-absent-reason] ^definition = "Provides a reason why the timing is missing."
 * reasonCode ^short = "Why is used (code)"
 * reasonReference ^short = "Why is used (details)"
 * device only Reference(DeviceEuEps)
