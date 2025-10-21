@@ -1,3 +1,31 @@
+
+<!-- Horizontal banner -->
+
+<div style="
+  /* reserve space for the ToC on the right */
+  margin: 0 340px 1.25rem 0;   /* top right bottom left; adjust 340px to your ToC width */
+  border: 2px solid #003366;
+  border-radius: 8px;
+  padding: 1em;
+  background-color: #f9f9ff;
+  box-sizing: border-box;
+
+  /* optional: pull the banner up a bit to align with the ToC’s top */
+  /* margin-top: -0.75rem;  uncomment/tweak if you want tighter vertical alignment */
+">
+  <div style="margin-bottom: 1em;">
+    <img src="xtehr-logo.png" alt="XTEHR Logo" style="max-width: 100%; height: 40px;" />
+  </div>
+  <div style="text-align: left;">
+    <strong>Acknowledgment</strong><br/>
+    The development of this Implementation Guide version has been supported by the 
+    <strong>Xt-EHR Joint Action</strong>.  
+    Xt-EHR provided expertise, alignment with European health policy priorities, 
+    and validation of specifications to enable consistency with EHDS requirements.
+  </div>
+</div>
+
+
 <div xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<blockquote class="stu-note">		
