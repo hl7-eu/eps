@@ -35,8 +35,6 @@
 <artifact id="StructureDefinition/immunization-eu-eps" key="StructureDefinition-immunization-eu-eps" name="Immunization (EPS)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
 <artifact id="StructureDefinition/immunizationRecommendation-eu-eps" key="StructureDefinition-immunizationRecommendation-eu-eps" name="ImmunizationRecommendation (EPS)"/>
-<artifact id="ValueSet/medical-devices-eu-hdr" key="ValueSet-medical-devices-eu-hdr" name="Medical Devices (SNOMED CT)"/>
-<artifact id="ValueSet/medical-devices-snomed-absent-unknown-eu-hdr" key="ValueSet-medical-devices-snomed-absent-unknown-eu-hdr" name="Medical Devices - SNOMED CT + Absent/Unknown - IPS"/>
 <artifact id="StructureDefinition/Medication-eu-eps" key="StructureDefinition-Medication-eu-eps" name="Medication (EPS)"/>
 <artifact id="StructureDefinition/MedicationStatement-eu-eps" key="StructureDefinition-MedicationStatement-eu-eps" name="Medication Statement (EPS)"/>
 <artifact id="StructureDefinition/medicationAdministration-eu-eps" key="StructureDefinition-medicationAdministration-eu-eps" name="MedicationAdministration (EPS)"/>

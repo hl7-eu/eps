@@ -12,9 +12,9 @@ Alias: $results-laboratory-observations-uv-ips = http://hl7.org/fhir/uv/ips/Valu
 Alias: $results-radiology-observations-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-observations-uv-ips
 Alias: $v3-ClassNullFlavor = http://terminology.hl7.org/ValueSet/v3-ClassNullFlavor
 Alias: $allergy-intolerance-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/allergy-intolerance-uv-ips
-Alias: $allergy-reaction-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips
+Alias: $vs-allergy-reaction-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips
 Alias: $v3-ActClassExposure = http://terminology.hl7.org/ValueSet/v3-ActClassExposure
-Alias: $procedures-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips
+Alias: $vs-procedures-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips
 Alias: $vs-medical-devices-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-uv-ips
 
 // ---- MyHealth#EU MVC

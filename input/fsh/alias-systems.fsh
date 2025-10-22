@@ -39,7 +39,6 @@ Alias: $observation-category = http://terminology.hl7.org/CodeSystem/observation
 Alias: $orpha = https://www.orpha.net // Used urn:oid:1.3.6.1.4.1.12559.11.10.1.3.1.44.5 for the MyHealth@EU lab guide to be checked <====
 Alias: $pei = http://pei.de
 Alias: $procedure-outcome = http://terminology.hl7.org/CodeSystem/procedure-outcome
-Alias: $procedures-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips
 Alias: $referencerange-meaning = http://terminology.hl7.org/CodeSystem/referencerange-meaning
 Alias: $rxnorm = http://www.nlm.nih.gov/research/umls/rxnorm
 Alias: $sct = http://snomed.info/sct

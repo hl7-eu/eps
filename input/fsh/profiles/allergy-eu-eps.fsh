@@ -58,7 +58,7 @@ Description: """This profile constrains the AllergyIntolerance resource for the 
 
 /* * reaction.manifestation from EHDSIReactionAllergy (preferred) */
 
-* reaction.manifestation from $allergy-reaction-uv-ips (preferred)
+* reaction.manifestation from $vs-allergy-reaction-uv-ips (preferred)
 
 * reaction.manifestation ^binding.extension[+].extension[+].url = "purpose"
 * reaction.manifestation ^binding.extension[=].extension[=].valueCode = #candidate
