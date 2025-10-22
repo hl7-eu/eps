@@ -15,7 +15,7 @@ Alias: $allergy-intolerance-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/allergy
 Alias: $allergy-reaction-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips
 Alias: $v3-ActClassExposure = http://terminology.hl7.org/ValueSet/v3-ActClassExposure
 Alias: $procedures-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips
-
+Alias: $vs-medical-devices-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-uv-ips
 
 // ---- MyHealth#EU MVC
 

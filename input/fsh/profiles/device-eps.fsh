@@ -11,7 +11,7 @@ Description: "This profile represents the constraints applied to the Device reso
 
 * identifier ^short = "Device Identifier"
 * udiCarrier ^short = "Unique Device Identifier (UDI)"
-* type from MedicalDevicesSnomedAbsentUnknownHdrVS (preferred)
+* type from $vs-medical-devices-uv-ips (preferred)
 * type ^short = "Type of device.\r\nPreferably valued by using SNOMED CT.\r\nThe absence of information, or of devices relevant for purpose of this IPS, shall be explicitly stated by using the codes included in the absent-or-unknown-devices-uv-ips value set."
 * type ^binding.extension[0].extension[0].url = "purpose"
 * type ^binding.extension[=].extension[=].valueCode = #candidate
