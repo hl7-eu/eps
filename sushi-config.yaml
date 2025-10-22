@@ -29,8 +29,8 @@ dependencies:
   hl7.fhir.extensions.r5: 4.0.1
   hl7.fhir.eu.extensions.r4: 0.1.1-ballot
   hl7.fhir.eu.laboratory: 0.1.1
-  hl7.fhir.eu.hdr: current
-  hl7.fhir.eu.base: current
+  hl7.fhir.eu.hdr: 0.1.0-ballot
+  hl7.fhir.eu.base: 0.1.0-ballot
   ihe.pharm.mpd.r4: 1.0.0-comment-2
 
 
