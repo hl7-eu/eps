@@ -1,0 +1,40 @@
+
+### 📘 ISO 27269 → EU Patient Summary — *Alerts*
+
+| ISO 27269 Element                          | Conformance | Relationship    | EU Patient Summary (Logical Model)  | Note                                                                                                 |
+| ------------------------------------------ | ----------- | --------------- | ----------------------------------- | ---------------------------------------------------------------------------------------------------- |
+| **Alerts content status**                  | C           | Equivalent      | section.emptyReason | Same purpose; EU PS model follows the IPS FHIR representation (emptyReason). |
+| **Alert**                                  | M           | Equivalent      | Alert                           | Core entry element; represents a patient alert or flag.                                              |
+| Alert type                                 | RK          | Equivalent      | code                                | Both identify the coded nature or category of the alert (e.g., disease, safety, procedure-related).  |
+| Alert identifier                           | RK          | Equivalent      | header.identifier                   | Same function — business or system identifier of the alert record.                                   |
+| Alert description                          | R           | Equivalent      | text                                | Free-text description of the alert; EHDS adds examples and narrative guidance.                       |
+| Alert level                                | RK          | Equivalent      | priority                            | Same semantics — indicates severity or importance; EHDS uses coded values instead of numeric levels. |
+| Disease-related diagnosis                  | O          | Equivalent      | code                                | Represented as part of the coded alert; can point to a diagnosis concept (e.g. SNOMED CT).           |
+| Disease name                               | O           | Equivalent      | text or code                               | May appear within the narrative; not a structured field in EHDS.                                     |
+| Onset date                                 | RK          | Equivalent      | period.start                        | Equivalent meaning — start of the alert’s active period.                                             |
+| Assertion degree                           | RK          | Not represented | —                                   | No direct element , doesn't seem to be realized by the FHIR IPS                  |
+| Confirmation method                        | RK          | Not represented | —                                   | Not represented in EHDSAlert, doesn't seem to be realized by the FHIR IPS
+| Specialist contact                         | O           | Not represented |           |           |
+| Reference to specialist advice / guideline | O           | Not represented | —                                   | No direct field;     |
+
+
+---
+
+### 📘 EU Patient Summary (EHDS Model) → ISO 27269 Alerts
+
+| EU Patient Summary (Logical Model)            | Relationship    | ISO 27269 Element                           | Note                                                                                                     |
+| --------------------------------------------- | --------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **EHDSAlert**                                 | Equivalent      | Alert M                                     | Core concept aligned — both define a clinical alert or flag associated with a patient.                   |
+| **header**                                    | Partial         | —                                           | Administrative header (subject, authoring, status, etc.) not part of ISO 27269 clinical section content. |
+| header.subject                                | Not represented | —                                           | Patient identification handled elsewhere in ISO 27269 Document Header.                                   |
+| header.identifier                             | Equivalent      | Alert identifier                            | Same meaning — unique identifier for the alert entry.                                                    |
+| header.authorship / author[x] / datetime      | Not represented |  Specialist contact                          | Authorship metadata; ISO 27269 section does not define this.                                             |
+| header.lastUpdate                             | Not represented | —                                           | Technical metadata; ISO does not define this.                                                            |
+| header.status / statusReason                  | Not represented |   |             |
+| header.language                               | Not represented | —                                           | Resource-level metadata; not part of ISO section.                                                        |
+| **text**                                      | Equivalent      | Alert description | Free-text narrative; may include disease or alert explanation.                                           |
+| **priority**                                  | Equivalent      | Alert level                                 | Both indicate the alert’s severity or urgency; EHDS uses coded priority values.                          |
+| **status**                                    |  Not represented |  | Corresponds to the state of the alert (active, inactive, etc.).                                          |
+| **code**                                      | **TBC**      | Alert type / Disease-related diagnosis      | Represents the coded alert type, diagnosis, or category (e.g., SNOMED CT).                               |
+| **period.start**                              | Equivalent      | Onset date                                  | Same clinical meaning — when the alert became relevant.                                                  |
+| **period.end**                                | Not represented | —                                           | ISO does not define an end date; alerts are typically active/inactive only.                              |

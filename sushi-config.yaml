@@ -27,10 +27,10 @@ dependencies:
   hl7.fhir.uv.ips: 2.0.0
   # hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.extensions.r5: 4.0.1
-  hl7.fhir.eu.extensions.r4: 0.1.1-ballot
+  hl7.fhir.eu.extensions.r4: 0.1.1
   hl7.fhir.eu.laboratory: 0.1.1
   hl7.fhir.eu.hdr: 0.1.0-ballot
-  hl7.fhir.eu.base: current
+  hl7.fhir.eu.base: 0.1.0
   ihe.pharm.mpd.r4: 1.0.0-comment-2
 
 
@@ -62,13 +62,22 @@ pages:
     title: Authors and contributors
   obligations.md:
     title: Obligations
-  knownIusses.md:
+  knownIssues.md:
     title: Known Issues
 # == MODEL MAPS
-  PatientSummary-map.html:
-    title: PatientSummary Relationships
-  Subject-map.html:
-    title: Subject Relationships
+#  PatientSummary-map.html:
+#    title: PatientSummary Relationships
+#  Subject-map.html:
+#    title: Subject Relationships
+# == MODEL MAPS
+
+# == IPS COMPARISON
+  ips-eps-section-comparison.html:
+    title: IPS to EPS Section Comparison
+  ips-eps-allergy.html:
+    title: IPS to EPS Allergy Comparison
+  ips-eps-alert.html:
+    title: IPS to EPS Alert Comparison
 # == MODEL MAPS
 
 
@@ -164,13 +173,14 @@ menu:
     eHN Guideline dataset: logicalModel.html
     Obligations: obligations.html
   Model Maps:
-    PatientSummary: PatientSummary-map.html
-    Subject: Subject-map.html
+    IPS to EPS Section Comparison: ips-eps-section-comparison.html
+    IPS to EPS Alert Comparison: ips-eps-alert.html
+    IPS to EPS Allergy Comparison: ips-eps-allergy.html
   Artifacts: artifacts.html
   About:
     Downloads: downloads.html
     Authors and contributors: contributors.html
-    Known Issues: knownIusses.html
+    Known Issues: knownIssues.html
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
@@ -267,7 +277,7 @@ menu:
 #
 groups:
 
-    eHNHospitalDishargeReport:
+    eHNPatientSummary:
       name:  European Patient Summary
       description: HEuropean Patient Summary entry profiles.
       resources:

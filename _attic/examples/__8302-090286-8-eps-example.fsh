@@ -598,7 +598,7 @@ Usage: #inline
 
 
 Instance: Instance-AllergyIntolerance-a2d9a237-fc0e-4926-a601-0540f29b739a
-InstanceOf: AllergyIntoleranceEuEps
+InstanceOf: AllergyIntoleranceEuCore
 Usage: #inline
 * id = "a2d9a237-fc0e-4926-a601-0540f29b739a"
 * code.coding[0] = $sct#716186003 "No known allergy (situation)"

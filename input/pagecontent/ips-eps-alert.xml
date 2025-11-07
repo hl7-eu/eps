@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <title>ISO 27269 ↔ EU Patient Summary – Alerts Mapping</title>
+  <link rel="stylesheet" href="iso_eu_ps.css" />
+
+</head>
+
+
+<body>
+  <h3>📘 ISO 27269 → EU Patient Summary — Alerts</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="ISO 27269 to EU PS – Alerts">
+    <thead>
+      <tr>
+        <th class="cap iso">ISO 27269 (IPS)</th>
+        <th class="cap iso">Conformance</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap eu" colspan="2">EU Patient Summary</th>
+      </tr>
+      <tr>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Conf.</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr eu">Element</th>
+        <th class="hdr eu">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-iso"><strong>Alerts content status</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-eu note">Same purpose; EU PS model follows the IPS FHIR representation (emptyReason).</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Alert</strong></td>
+        <td class="cell-iso">M</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Alert</strong></td>
+        <td class="cell-eu note">Core entry element; represents a patient alert or flag.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso">Alert type</td>
+        <td class="cell-iso">RK</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">code</td>
+        <td class="cell-eu note">Both identify the coded nature or category of the alert (e.g., disease, safety, procedure-related).</td>
+      </tr>
+      <tr>
+        <td class="cell-iso">Alert identifier</td>
+        <td class="cell-iso">RK</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">header.identifier</td>
+        <td class="cell-eu note">Same function — business or system identifier of the alert record.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso">Alert description</td>
+        <td class="cell-iso">R</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">text</td>
+        <td class="cell-eu note">Free-text description of the alert; EHDS adds examples and narrative guidance.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso">Alert level</td>
+        <td class="cell-iso">RK</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">priority</td>
+        <td class="cell-eu note">Same semantics — indicates severity or importance; EHDS uses coded values instead of numeric levels.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso">Disease-related diagnosis</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">code</td>
+        <td class="cell-eu note">Represented as part of the coded alert; can point to a diagnosis concept (e.g. SNOMED CT).</td>
+      </tr>
+      <tr>
+        <td class="cell-iso">Disease name</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">text or code</td>
+        <td class="cell-eu note">May appear within the narrative; not a structured field in EHDS.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso">Onset date</td>
+        <td class="cell-iso">RK</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">period.start</td>
+        <td class="cell-eu note">Equivalent meaning — start of the alert’s active period.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso">Assertion degree</td>
+        <td class="cell-iso">RK</td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-eu dash">—</td>
+        <td class="cell-eu note">No direct element , doesn't seem to be realized by the FHIR IPS</td>
+      </tr>
+      <tr>
+        <td class="cell-iso">Confirmation method</td>
+        <td class="cell-iso">RK</td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-eu dash">—</td>
+        <td class="cell-eu note">Not represented in EHDSAlert, doesn't seem to be realized by the FHIR IPS</td>
+      </tr>
+      <tr>
+        <td class="cell-iso">Specialist contact</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-eu dash"></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso">Reference to specialist advice / guideline</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-eu dash">—</td>
+        <td class="cell-eu note">No direct field;</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+  <h3>📗 EU Patient Summary (EHDS Model) → ISO 27269 Alerts</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="EU PS to ISO 27269 – Alerts">
+    <thead>
+      <tr>
+        <th class="cap eu">EU Patient Summary</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap iso" colspan="2">ISO 27269 (IPS)</th>
+      </tr>
+      <tr>
+        <th class="hdr eu">Element</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-eu"><strong>EHDSAlert</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Alert</strong></td>
+        <td class="cell-iso note">Core concept aligned — both define a clinical alert or flag associated with a patient.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>header</strong></td>
+        <td class="cell-mid">Partial</td>
+        <td class="cell-iso dash">—</td>
+        <td class="cell-iso note">Administrative header (subject, authoring, status, etc.) not part of ISO 27269 clinical section content.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu">header.subject</td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-iso dash">—</td>
+        <td class="cell-iso note">Patient identification handled elsewhere in ISO 27269 Document Header.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu">header.identifier</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso">Alert identifier</td>
+        <td class="cell-iso note">Same meaning — unique identifier for the alert entry.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu">header.authorship / author[x] / datetime</td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-iso">Specialist contact</td>
+        <td class="cell-iso note">Authorship metadata; ISO 27269 section does not define this.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu">header.lastUpdate</td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-iso dash">—</td>
+        <td class="cell-iso note">Technical metadata; ISO does not define this.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu">header.status / statusReason</td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-iso dash"></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu">header.language</td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-iso dash">—</td>
+        <td class="cell-iso note">Resource-level metadata; not part of ISO section.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>text</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Alert description</strong></td>
+        <td class="cell-iso note">Free-text narrative; may include disease or alert explanation.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>priority</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Alert level</strong></td>
+        <td class="cell-iso note">Both indicate the alert’s severity or urgency; EHDS uses coded priority values.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>status</strong></td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-iso dash"></td>
+        <td class="cell-iso note">Corresponds to the state of the alert (active, inactive, etc.).</td>
+      </tr>
+      <tr class="highlight">
+        <td class="cell-eu"><strong>code</strong></td>
+        <td class="cell-mid"><strong>TBC</strong></td>
+        <td class="cell-iso"><strong>Alert type / Disease-related diagnosis</strong></td>
+        <td class="cell-iso note">Represents the coded alert type, diagnosis, or category (e.g., SNOMED CT).</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>period.start</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Onset date</strong></td>
+        <td class="cell-iso note">Same clinical meaning — when the alert became relevant.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>period.end</strong></td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-iso dash">—</td>
+        <td class="cell-iso note">ISO does not define an end date; alerts are typically active/inactive only.</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+</body>
+</html>

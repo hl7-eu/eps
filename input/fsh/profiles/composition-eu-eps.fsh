@@ -54,7 +54,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * ^definition = """The adverse and other adverse reactions section contains a narrative description of the substance intolerances and the associated adverse reactions suffered by the patient. It includes entries for intolerances and adverse reactions as described in the entry.
 
 The field \"alerts\" was originally defined to include all the important and objective medical information that should be highlighted (such as allergies, thrombosis risk, immune deficit …etc). When defining the content only allergies and intolerance to drugs appear to be the common understanding and the easiest to be transferred. A lot of surveys are being made in different countries (not only in Europe) to make a more evidence-based definition of what should represented and should not by the concept “alerts”, hence not enough information could be provided to take a further decision. As eHDSI\’s intention is not to duplicate information, this shall not be repeated. Alerts are difficult to represent since they are contextual. Alerts may be represented as severe or life-threatening allergies or other adverse reactions. Another area are certain selected procedures and implanted devices. The section Allergies and Other Adverse Reactions contains the medical alerts as well, based on the severity, and their representation becomes a Country B choice."""
-  * entry[allergyOrIntolerance] only Reference (AllergyIntoleranceEuEps)
+  * entry[allergyOrIntolerance] only Reference (AllergyIntoleranceEuCore)
 
 * section contains sectionAlert ..1
 * section[sectionAlert]
@@ -65,7 +65,7 @@ The field \"alerts\" was originally defined to include all the important and obj
   * entry 0..
   * insert SectionEntrySliceComRules(Alerts, Alerts)
   // entry slices
-  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagEuEps)
+  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagEuCore)
 
 * section[sectionProblems]
   * ^short = "Active Problems"

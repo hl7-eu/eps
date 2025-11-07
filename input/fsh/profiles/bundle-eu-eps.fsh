@@ -14,7 +14,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[patient].resource 1..
 * entry[patient].resource only PatientEuEps  
 * entry[allergyintolerance].resource 1..
-* entry[allergyintolerance].resource only AllergyIntoleranceEuEps
+* entry[allergyintolerance].resource only AllergyIntoleranceEuCore
 * entry[condition].resource 1..
 * entry[condition].resource only ConditionEuEps
 * entry[device].resource 1..
@@ -31,7 +31,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[immunization].resource only ImmunizationEuEps
 
 * entry[flag].resource 1..
-* entry[flag].resource only FlagEuEps
+* entry[flag].resource only FlagEuCore
 
 /* * entry[media].resource 1..
 * entry[media].resource only $Media-observation-uv-ips */

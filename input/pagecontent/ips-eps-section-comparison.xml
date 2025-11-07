@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <title>ISO 27269 ↔ EU Patient Summary – Section Mapping (Model-based Colors)</title>
+  <link rel="stylesheet" href="iso_eu_ps.css" />
+
+</head>
+
+<body>
+  <h3>📘 ISO 27269 → EU Patient Summary</h3><a>  </a>
+    <p>  </p>
+  <table class="tbl" role="table" aria-label="ISO to EU PS Mapping (model colors)">
+    <thead>
+      <tr>
+        <th class="cap iso">ISO 27269 (IPS)</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap eu" colspan="2">EU Patient Summary</th>
+      </tr>
+      <tr>
+        <th class="hdr iso">Element</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr eu">Element</th>
+        <th class="hdr eu">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-iso"><strong>Advance Directives</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Advance Directives</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Alerts</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Alerts</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Allergies and Intolerances</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Allergies and Intolerances</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Functional Status</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Functional Status</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>History of Past Problems</strong></td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-eu dash">---</td>
+        <td class="cell-eu note">Optional section in IPS, not in EU PS. If a problem is under concern it is a Problem
+          and goes in the problem section. In the eHN guidelines in A.2.2.2 Resolved, closed or inactive problems.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>History of Pregnancy</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Pregnancy History</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>History of Procedures</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Procedures</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Immunizations</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Vaccination/prophylaxis</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Medical Devices</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Medical devices and implants</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Medication Summary</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Medication Summary</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Patient Story</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Patient Story</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Plan of Care</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Care plans</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Problems</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Problems</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Results</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Results</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Social History</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Social History</strong></td>
+        <td class="cell-eu note"></td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Vital Signs</strong></td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-eu dash">---</td>
+        <td class="cell-eu note">Optional section in IPS</td>
+      </tr>
+    </tbody>
+  </table>
+    <p>  </p>
+    
+  <h3>📗 EU Patient Summary → ISO 27269</h3><a>  </a>
+    <p>  </p>
+  <table class="tbl" role="table" aria-label="EU PS to ISO Mapping (model colors)">
+    <thead>
+      <tr>
+        <th class="cap eu">EU Patient Summary</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap iso" colspan="2">ISO 27269 (IPS)</th>
+      </tr>
+      <tr>
+        <th class="hdr eu">Element</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-eu"><strong>Advance Directives</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Advance Directives</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Alerts</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Alerts</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Allergies and Intolerances</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Allergies and Intolerances</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Functional Status</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Functional Status</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Procedures</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>History of Procedures</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Vaccination/prophylaxis</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Immunizations</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Medical devices and implants</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Medical Devices</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Medication Summary</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Medication Summary</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Patient Story</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Patient Story</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Care plans</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Plan of Care</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Pregnancy History</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>History of Pregnancy</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Problems</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Problems</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Results</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Results</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Social History</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Social History</strong></td>
+        <td class="cell-iso note"></td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Travel History</strong></td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-iso dash">---</td>
+        <td class="cell-iso note">Optional in the EU PS</td>
+      </tr>
+    </tbody>
+  </table>
+<p></p>
+
+
+  <h4>📗 EU Patient Summary (eHN Guidelines)</h4><a>  </a>
+
+  <p>Gaps with the eHN guidelines: missing A.2.2.2 Resolved, closed or inactive problems and A.2.2.3 Medical history
+    (anamnesis)</p>
+
+</body>
+
+</html>

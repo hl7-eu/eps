@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+    <head>
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+        <title>ISO 27269 ↔ EU Patient Summary – Allergies and Intolerances Mapping</title>
+        <link rel="stylesheet" href="iso_eu_ps.css" />
+    </head>
+
+    <body>
+        <h3>📘 ISO 27269 → EU Patient Summary — Allergies and Intolerances</h3><a>  </a><p>  </p>
+        <table class="tbl" role="table" aria-label="ISO 27269 to EU PS – Allergies and Intolerances">
+            <thead>
+                <tr>
+                    <th class="cap iso">ISO 27269 (IPS)</th>
+                    <th class="cap iso">Conformance</th>
+                    <th class="cap mid">Relationship</th>
+                    <th class="cap eu" colspan="2">EU Patient Summary</th>
+                </tr>
+                <tr>
+                    <th class="hdr iso">Element</th>
+                    <th class="hdr iso">Conf.</th>
+                    <th class="hdr mid">Relation</th>
+                    <th class="hdr eu">Element</th>
+                    <th class="hdr eu">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="cell-iso">
+                        <strong>Allergies/Intolerances content status</strong>
+                    </td>
+                    <td class="cell-iso">C</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">
+                        <strong>section.emptyReason</strong>
+                    </td>
+                    <td class="cell-eu note">Same purpose; the eu ps model is closer to the way FHIR IPS implements this</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">
+                        <strong>Allergies and Intolerances</strong>
+                    </td>
+                    <td class="cell-iso">C</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">
+                        <strong>allergyIntolerance (list)</strong>
+                    </td>
+                    <td class="cell-eu note">Represents the list of allergy/intolerance entries.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Allergy/Intolerance</td>
+                    <td class="cell-iso">M</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">allergyIntolerance</td>
+                    <td class="cell-eu note">Core entry element; identical concept.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Allergy/Intolerance description</td>
+                    <td class="cell-iso">R</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">description</td>
+                    <td class="cell-eu note">Free text description; same use.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Clinical status</td>
+                    <td class="cell-iso">R</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">status</td>
+                    <td class="cell-eu note">Same meaning; coded element.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Onset date</td>
+                    <td class="cell-iso">RK</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">onsetDate</td>
+                    <td class="cell-eu note">Same element; optional with known qualifier.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">End date</td>
+                    <td class="cell-iso">C</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">endDate</td>
+                    <td class="cell-eu note">Same semantics; optional/conditional in both.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Criticality</td>
+                    <td class="cell-iso">O</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">criticality</td>
+                    <td class="cell-eu note">Optional coded element; identical use.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Certainty</td>
+                    <td class="cell-iso">O</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">certainty</td>
+                    <td class="cell-eu note">Present in both;</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Type of propensity</td>
+                    <td class="cell-iso">RK</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">typeOfPropensity</td>
+                    <td class="cell-eu note">Same; differentiates allergy vs intolerance.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Diagnosis</td>
+                    <td class="cell-iso">O</td>
+                    <td class="cell-mid dash">Not represented</td>
+                    <td class="cell-eu dash">-----</td>
+                    <td class="cell-eu note">Optional in ISO</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Reaction</td>
+                    <td class="cell-iso">RK</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">reaction</td>
+                    <td class="cell-eu note">Both have a reaction backbone.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Manifestation of the reaction</td>
+                    <td class="cell-iso">RK</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">reaction.manifestation</td>
+                    <td class="cell-eu note">Mandatory when reaction present; same concept.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Severity</td>
+                    <td class="cell-iso">RK</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">reaction.severity</td>
+                    <td class="cell-eu note">Same coded severity concept.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Agent</td>
+                    <td class="cell-iso">R</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">agentOrAllergen</td>
+                    <td class="cell-eu note">Same backbone for causative substance.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Agent code</td>
+                    <td class="cell-iso">R</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-eu">agentOrAllergen</td>
+                    <td class="cell-eu note">Same; identifies the substance.</td>
+                </tr>
+                <tr>
+                    <td class="cell-iso">Category</td>
+                    <td class="cell-iso">O</td>
+                    <td class="cell-mid dash">Not represented</td>
+                    <td class="cell-eu dash">—</td>
+                    <td class="cell-eu note">Optional in ISO; could be inferred from the code if needed.</td>
+                </tr>
+            </tbody>
+        </table><p>  </p>
+
+        <h3>📗 EU Patient Summary (EHDS Model) → ISO 27269 Allergies and Intolerances</h3><a>  </a><p>  </p>
+        <a></a>
+        <table class="tbl" role="table" aria-label="EU PS to ISO 27269 – Allergies and Intolerances">
+            <thead>
+                <tr>
+                    <th class="cap eu">EU Patient Summary</th>
+                    <th class="cap mid">Relationship</th>
+                    <th class="cap iso" colspan="2">ISO 27269 (IPS)</th>
+                </tr>
+                <tr>
+                    <th class="hdr eu">Element</th>
+                    <th class="hdr mid">Relation</th>
+                    <th class="hdr iso">Element</th>
+                    <th class="hdr iso">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="cell-eu">
+                        <strong>EHDSAllergyIntolerance</strong>
+                    </td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-iso">
+                        <strong>Allergies and Intolerances</strong>
+                    </td>
+                    <td class="cell-iso note"></td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">
+                        <strong>header</strong>
+                    </td>
+                    <td class="cell-mid">Partial</td>
+                    <td class="cell-iso dash">—</td>
+                    <td class="cell-iso note">Administrative header (subject, authoring, status, etc.) not part of ISO 27269 clinical section content.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">header.subject</td>
+                    <td class="cell-mid dash">Not represented</td>
+                    <td class="cell-iso dash">—</td>
+                    <td class="cell-iso note">Patient identification handled elsewhere in ISO 27269 Document Header.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">header.identifier</td>
+                    <td class="cell-mid dash">Not represented</td>
+                    <td class="cell-iso dash">—</td>
+                    <td class="cell-iso note"></td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">header.authorship / author[x] / datetime</td>
+                    <td class="cell-mid dash">Not represented</td>
+                    <td class="cell-iso dash">—</td>
+                    <td class="cell-iso note">Authorship metadata; ISO 27269 section does not define this.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">header.lastUpdate</td>
+                    <td class="cell-mid dash">Not represented</td>
+                    <td class="cell-iso dash">—</td>
+                    <td class="cell-iso note">Technical metadata.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">header.status / statusReason / language</td>
+                    <td class="cell-mid dash">Not represented</td>
+                    <td class="cell-iso dash">—</td>
+                    <td class="cell-iso note">Resource-level attributes not defined in ISO section.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">
+                        <strong>agentOrAllergen</strong>
+                    </td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-iso">
+                        <strong>Agent / Agent code</strong>
+                    </td>
+                    <td class="cell-iso note">Same concept; identifies the allergen or causative substance.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">
+                        <strong>typeOfPropensity</strong>
+                    </td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-iso">
+                        <strong>Type of propensity</strong>
+                    </td>
+                    <td class="cell-iso note">Same concept; distinguishes allergy vs intolerance.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">
+                        <strong>description</strong>
+                    </td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-iso">
+                        <strong>Allergy/Intolerance description</strong>
+                    </td>
+                    <td class="cell-iso note">Free-text narrative description; same use.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">
+                        <strong>criticality</strong>
+                    </td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-iso">
+                        <strong>Criticality</strong>
+                    </td>
+                    <td class="cell-iso note">Identical meaning and bindings.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">
+                        <strong>certainty</strong>
+                    </td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-iso">
+                        <strong>Certainty</strong>
+                    </td>
+                    <td class="cell-iso note">Same semantics (verification status); both optional.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">
+                        <strong>status</strong>
+                    </td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-iso">
+                        <strong>Clinical status</strong>
+                    </td>
+                    <td class="cell-iso note">Same clinical meaning (active, resolved, etc.).</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">
+                        <strong>onsetDate</strong>
+                    </td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-iso">
+                        <strong>Onset date</strong>
+                    </td>
+                    <td class="cell-iso note">Same element meaning.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">
+                        <strong>endDate</strong>
+                    </td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-iso">
+                        <strong>End date</strong>
+                    </td>
+                    <td class="cell-iso note">Same element meaning (optional/conditional).</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">
+                        <strong>reaction</strong>
+                    </td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-iso">
+                        <strong>Reaction</strong>
+                    </td>
+                    <td class="cell-iso note">Both models contain reaction backbone.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">reaction.manifestation</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-iso">Manifestation of the reaction</td>
+                    <td class="cell-iso note">Same clinical concept; coded manifestations.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">reaction.date</td>
+                    <td class="cell-mid dash">Not represented</td>
+                    <td class="cell-iso dash">—</td>
+                    <td class="cell-iso note">ISO 27269 does not define a separate date field; but it is implemented in the FHIR IPS.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">reaction.severity</td>
+                    <td class="cell-mid">Equivalent</td>
+                    <td class="cell-iso">Severity</td>
+                    <td class="cell-iso note">Same coded severity concept.</td>
+                </tr>
+                <tr>
+                    <td class="cell-eu">reaction.onsetDate</td>
+                    <td class="cell-mid dash">Not represented</td>
+                    <td class="cell-iso dash">—</td>
+                    <td class="cell-iso note">ISO 27269 does not define a separate date field; but it is implemented in the FHIR IPS.</td>
+                </tr>
+            </tbody>
+        </table><p>  </p>
+
+    </body>
+</html>

@@ -1,0 +1,50 @@
+
+### 📘 ISO 27269 → EU Patient Summary — *Allergies and Intolerances*
+
+| ISO 27269 Element                         | Conformance | Relationship    | EU Patient Summary (Logical Model)   | Note                                                                         |
+| ----------------------------------------- | ----------- | --------------- | ------------------------------------ | ---------------------------------------------------------------------------- |
+| **Allergies/Intolerances content status** | C           | Equivalent      | section.emptyReason | Same purpose; EU PS model follows the IPS FHIR representation (emptyReason). |
+| **Allergies and Intolerances**            | C           | Equivalent      | allergyIntolerance (list)            | Represents the list of allergy/intolerance entries.                          |
+|   Allergy/Intolerance                     | M           | Equivalent      | allergyIntolerance                   | Core entry element; identical concept.                                       |
+|     Allergy/Intolerance description       | R           | Equivalent      | description                          | Free text description; same use.                                             |
+|     Clinical status                       | R           | Equivalent      | status                               | Same meaning; coded element.                                                 |
+|     Onset date                            | RK          | Equivalent      | onsetDate                            | Same element; optional with known qualifier.                                 |
+|     End date                              | C           | Equivalent      | endDate                              | Same semantics; optional/conditional in both.                                |
+|     Criticality                           | O           | Equivalent      | criticality                          | Optional coded element; identical use.                                       |
+|     Certainty                             | O           | Equivalent      | certainty                            | Present in both;   |
+|     Type of propensity                    | RK          | Equivalent      | typeOfPropensity                     | Same; differentiates allergy vs intolerance.                                 |
+|     Diagnosis                             | O           | Not represented |  -----                            |  Optional in ISO   |
+|     Reaction                              | RK          | Equivalent      | reaction                             | Both have a reaction backbone.                                               |
+|       Manifestation of the reaction       | RK          | Equivalent      | reaction.manifestation               | Mandatory when reaction present; same concept.                               |
+|       Severity                            | RK          | Equivalent      | reaction.severity                    | Same coded severity concept.                                                 |
+|     Agent                                 | R           | Equivalent      | agentOrAllergen                      | Same backbone for causative substance.                                       |
+|       Agent code                          | R           | Equivalent      | agentOrAllergen                      | Same element; identifies the substance.                                      |
+|       Category                            | O           | Not represented | —                                    | Optional in ISO; could be inferred from the code if needed.                  |
+
+---
+
+### 📘 EU Patient Summary (EHDS Model) → ISO 27269 Allergies and Intolerances
+
+| EU Patient Summary (Logical Model)           | Relationship    | ISO 27269 Element                    | Note                                                                                                     |
+| -------------------------------------------- | --------------- | ------------------------------------ | -------------------------------------------------------------------------------------------------------- |
+| **EHDSAllergyIntolerance**                   | Equivalent      | Allergies and Intolerances |                                             |
+|   **header**                                 | Partial | —                                    | Administrative header (subject, authoring, status, etc.) not part of ISO 27269 clinical section content. |
+|     header.subject                           | Not represented | —                                    | Patient identification handled elsewhere in ISO 27269 Document Header.                                   |
+|     header.identifier                        | Not represented | —                                    |                                               |
+|     header.authorship / author[x] / datetime | Not represented | —                                    | Authorship metadata; ISO 27269 section does not define this.                                             |
+|     header.lastUpdate                        | Not represented | —                                    | Technical metadata.                                                                                      |
+|     header.status / statusReason / language  | Not represented | —                                    | Resource-level attributes not defined in ISO section.                                                    |
+| **agentOrAllergen**                          | Equivalent      | Agent / Agent code                   | Same concept; identifies the allergen or causative substance.                                            |
+| **typeOfPropensity**                         | Equivalent      | Type of propensity                   | Same concept; distinguishes allergy vs intolerance.                                                      |
+| **description**                              | Equivalent      | Allergy/Intolerance description      | Free-text narrative description; same use.                                                               |
+| **criticality**                              | Equivalent      | Criticality                          | Identical meaning and bindings.                                                                          |
+| **certainty**                                | Equivalent      | Certainty                            | Same semantics (verification status); both optional.                                                     |
+| **status**                                   | Equivalent      | Clinical status                      | Same clinical meaning (active, resolved, etc.).                                                          |
+| **onsetDate**                                | Equivalent      | Onset date                           | Same element meaning.                                                                                    |
+| **endDate**                                  | Equivalent      | End date                             | Same element meaning (optional/conditional).                                                             |
+| **reaction**                                 | Equivalent      | Reaction                             | Both models contain reaction backbone.                                                                   |
+|   **reaction.manifestation**                 | Equivalent      | Manifestation of the reaction        | Same clinical concept; coded manifestations.                                                             |
+|   **reaction.date**                          | Not represented | —                                    | ISO 27269 does not define a separate reaction date field.                                                |
+|   **reaction.severity**                      | Equivalent      | Severity                             | Same coded severity concept.                                                                             |
+|   **reaction.onsetDate**                     | Not represented | —                                    | ISO 27269 does not include a distinct reaction-level onset field.                                        |
+

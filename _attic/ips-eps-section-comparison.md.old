@@ -1,0 +1,49 @@
+
+### 📘 ISO 27269 → EU Patient Summary
+
+| ISO 27269 Section         | Relationship    | EU Patient Summary Section | Notes                                            |
+|----------------------------|-----------------|-----------------------------|--------------------------------------------------|
+| Advance Directives         | Equivalent      | Advance Directives         |   |
+| Alerts                     | Equivalent      | Alerts                     |   |
+| Allergies and Intolerances | Equivalent      | Allergies and Intolerances |   |
+| Functional Status          | Equivalent      | Functional Status          |   |
+| History of Past Problems   | Not represented | ---   | Optional section in IPS, not in EU PS. If a problem is under concern it is a Problem and goes in the problem section.  In the eHN guidelines in A.2.2.2 Resolved, closed or inactive problems. |         |
+| History of Pregnancy       | Equivalent      | Pregnancy History          |   |
+| History of Procedures      | Equivalent      | Procedures      |   |
+| Immunizations              | Equivalent      | Vaccination/prophylaxis    |   |
+| Medical Devices            | Equivalent      | Medical devices and implants           |   |
+| Medication Summary         | Equivalent      | Medication Summary         |   |
+| Patient Story              | Equivalent      | Patient Story              |   |
+| Plan of Care               | Equivalent      | Care plans               |   |
+| Problems                   | Equivalent      | Problems                   |   |
+| Results                    | Equivalent      | Results                    |   |
+| Social History             | Equivalent      | Social History             |   |
+| Vital Signs                | Not represented | ---   | Optional section in IPS |
+
+---
+
+### 📗 EU Patient Summary → ISO 27269
+
+| EU Patient Summary Section | Relationship    | ISO 27269 Section         | Notes                                            |
+|-----------------------------|-----------------|----------------------------|--------------------------------------------------|
+| Advance Directives          | Equivalent      | Advance Directives         | |
+| Alerts                      | Equivalent      | Alerts                     | Required here, optional in the eHN |
+| Allergies and Intolerances  | Equivalent      | Allergies and Intolerances | |
+| Functional Status           | Equivalent      | Functional Status          | |
+| Procedures                  | Equivalent      | History of Procedures      | |
+| Vaccination/prophylaxis      | Equivalent      | Immunizations    | |
+| Medical devices and implants | Equivalent    | Medical Devices  | |
+| Medication Summary          | Equivalent      | Medication Summary         | |
+| Patient Story               | Equivalent      | Patient Story              |  |
+| Care plans                  | Equivalent      | Care plans               |  |
+| Pregnancy History           | Equivalent      | Pregnancy history       |   |
+| Problems                    | Equivalent      | Problems                   |   |
+| Results                     | Equivalent      | Results                    |   |
+| Social History              | Equivalent      | Social History             |   |
+| Travel History              | Not represented | ---            |  Optional in the EU PS |
+
+
+#### EU Patient Summary (eHN Guidelines)
+
+|-----------------------------|
+| **Gaps with the eHN guidelines: missing A.2.2.2 Resolved, closed or inactive problems and A.2.2.3 Medical history (anamnesis)** |

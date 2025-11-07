@@ -4,33 +4,14 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="StructureDefinition/PatientSummary" key="StructureDefinition-PatientSummary" name="A - Patient Summary"/>
-<artifact id="StructureDefinition/Allergy" key="StructureDefinition-Allergy" name="A.2.1.1 - Allergy"/>
-<artifact id="StructureDefinition/Vaccination" key="StructureDefinition-Vaccination" name="A.2.2.1 - Vaccination/ prophylaxis information"/>
-<artifact id="StructureDefinition/ClosedProblem" key="StructureDefinition-ClosedProblem" name="A.2.2.2 - Resolved, closed or inactive problems"/>
-<artifact id="StructureDefinition/Problem" key="StructureDefinition-Problem" name="A.2.3.1 Current problems"/>
-<artifact id="StructureDefinition/MedicalDevice" key="StructureDefinition-MedicalDevice" name="A.2.3.2 - Medical devices and implants"/>
-<artifact id="StructureDefinition/FunctionalStatus" key="StructureDefinition-FunctionalStatus" name="A.2.3.3 - Functional Status"/>
-<artifact id="StructureDefinition/ProcedurePs" key="StructureDefinition-ProcedurePs" name="A.2.3.3 - Procedures"/>
-<artifact id="StructureDefinition/Medicine" key="StructureDefinition-Medicine" name="A.2.4.1 Current and relevant past medicines"/>
-<artifact id="StructureDefinition/Pregnancy" key="StructureDefinition-Pregnancy" name="A.2.6 Pregnancy history"/>
-<artifact id="StructureDefinition/Result" key="StructureDefinition-Result" name="A.2.8 - Results"/>
-<artifact id="StructureDefinition/Subject" key="StructureDefinition-Subject" name="A1.1, A1.2 - Subject of care"/>
 <artifact id="StructureDefinition/allergyIntolerance-eu-eps" key="StructureDefinition-allergyIntolerance-eu-eps" name="Allergy Intolerance (EPS)"/>
 <artifact id="StructureDefinition/bundle-eu-eps" key="StructureDefinition-bundle-eu-eps" name="Bundle (EPS)"/>
-<artifact id="Bundle/Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3" key="Bundle-Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3" name="Complete HL7 Europe Patient Summary EPS Bundle"/>
-<artifact id="Bundle/Instance-Bundle-77013a3f-bd32-4284-a08f-77750c8705bf" key="Bundle-Instance-Bundle-77013a3f-bd32-4284-a08f-77750c8705bf" name="Complete HL7 Europe Patient Summary EPS Bundle"/>
-<artifact id="Bundle/Instance-Bundle-ee907eee-c157-4c57-8de3-b13d6487a703" key="Bundle-Instance-Bundle-ee907eee-c157-4c57-8de3-b13d6487a703" name="Complete HL7 Europe Patient Summary EPS Bundle"/>
-<artifact id="Bundle/Instance-Bundle-fc1c3ac6-c97e-4fa5-96f7-a3a443b45be3" key="Bundle-Instance-Bundle-fc1c3ac6-c97e-4fa5-96f7-a3a443b45be3" name="Complete HL7 Europe Patient Summary EPS Bundle"/>
-<artifact id="Bundle/Instance-Bundle-fd6de626-cd66-4b9b-9d0a-43efe3bad092" key="Bundle-Instance-Bundle-fd6de626-cd66-4b9b-9d0a-43efe3bad092" name="Complete HL7 Europe Patient Summary EPS Bundle"/>
-<artifact id="Bundle/Instance-Bundle-fd87b2bb-d948-4d45-b334-8053ef6dceb0" key="Bundle-Instance-Bundle-fd87b2bb-d948-4d45-b334-8053ef6dceb0" name="Complete HL7 Europe Patient Summary EPS Bundle"/>
 <artifact id="StructureDefinition/composition-eu-eps" key="StructureDefinition-composition-eu-eps" name="Composition (EPS)"/>
 <artifact id="StructureDefinition/condition-eu-eps" key="StructureDefinition-condition-eu-eps" name="Condition (EPS)"/>
 <artifact id="StructureDefinition/condition-statusReason" key="StructureDefinition-condition-statusReason" name="Condition Status Reason"/>
 <artifact id="StructureDefinition/consent-eu-eps" key="StructureDefinition-consent-eu-eps" name="Consent (Advance Directives EPS)"/>
 <artifact id="StructureDefinition/device-eu-eps" key="StructureDefinition-device-eu-eps" name="Device (EPS)"/>
 <artifact id="StructureDefinition/deviceUseStatement-eu-eps" key="StructureDefinition-deviceUseStatement-eu-eps" name="DeviceUseStatement (EPS)"/>
-<artifact id="Bundle/EPSExampleBundle01NoProblemsMedicationAllergies" key="Bundle-EPSExampleBundle01NoProblemsMedicationAllergies" name="EPSBundle-Beispiel 1"/>
 <artifact id="StructureDefinition/flag-eu-eps" key="StructureDefinition-flag-eu-eps" name="Flag (EPS)"/>
 <artifact id="StructureDefinition/immunization-eu-eps" key="StructureDefinition-immunization-eu-eps" name="Immunization (EPS)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
@@ -45,19 +26,17 @@
 <artifact id="StructureDefinition/procedure-eu-eps" key="StructureDefinition-procedure-eu-eps" name="Procedure (EPS)"/>
 <artifact id="ValueSet/eHDSISeverity" key="ValueSet-eHDSISeverity" name="Severity"/>
 <artifact id="StructureDefinition/supportingInformation" key="StructureDefinition-supportingInformation" name="Supporting Information"/>
-<artifact id="ConceptMap/vaccination2FHIR-eu-eps" key="ConceptMap-vaccination2FHIR-eu-eps" name="eHN Alerts Model to this guide Map"/>
-<artifact id="ConceptMap/patientSummary2FHIR" key="ConceptMap-patientSummary2FHIR" name="eHN Patient Summary to this guide Map"/>
-<artifact id="ConceptMap/subjectPs2FHIR" key="ConceptMap-subjectPs2FHIR" name="eHN Subject to this guide Map"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="contributors" name="Authors and contributors"/>
 <page key="downloads" name="Downloads"/>
 <page key="index" name="Home"/>
-<page key="knownIusses" name="Known Issues"/>
+<page key="ips-eps-alert" name="IPS to EPS Alert Comparison"/>
+<page key="ips-eps-allergy" name="IPS to EPS Allergy Comparison"/>
+<page key="ips-eps-section-comparison" name="IPS to EPS Section Comparison"/>
+<page key="knownIssues" name="Known Issues"/>
 <page key="obligations" name="Obligations"/>
-<page key="PatientSummary-map" name="PatientSummary Relationships"/>
-<page key="Subject-map" name="Subject Relationships"/>
 <page key="toc" name="Table of Contents"/>
 <page key="logicalModel" name="eHN guideline data set"/>
 </specification>

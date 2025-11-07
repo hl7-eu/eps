@@ -1295,7 +1295,7 @@ Usage: #inline
 
 
 Instance: Instance-AllergyIntolerance-a989307f-3cf2-427a-9ea0-553fcb561480
-InstanceOf: AllergyIntoleranceEuEps
+InstanceOf: AllergyIntoleranceEuCore
 Usage: #inline
 * id = "a989307f-3cf2-427a-9ea0-553fcb561480"
 * verificationStatus = $allergyintolerance-verification#confirmed
@@ -1316,7 +1316,7 @@ Usage: #inline
 
 
 Instance: Instance-AllergyIntolerance-09a571d6-2e8c-4409-9dc0-947877066ba8
-InstanceOf: AllergyIntoleranceEuEps
+InstanceOf: AllergyIntoleranceEuCore
 Usage: #inline
 * id = "09a571d6-2e8c-4409-9dc0-947877066ba8"
 * verificationStatus = $allergyintolerance-verification#confirmed
