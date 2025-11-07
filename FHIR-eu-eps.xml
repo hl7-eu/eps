@@ -4,7 +4,6 @@
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
-<artifact id="StructureDefinition/allergyIntolerance-eu-eps" key="StructureDefinition-allergyIntolerance-eu-eps" name="Allergy Intolerance (EPS)"/>
 <artifact id="StructureDefinition/bundle-eu-eps" key="StructureDefinition-bundle-eu-eps" name="Bundle (EPS)"/>
 <artifact id="StructureDefinition/composition-eu-eps" key="StructureDefinition-composition-eu-eps" name="Composition (EPS)"/>
 <artifact id="StructureDefinition/condition-eu-eps" key="StructureDefinition-condition-eu-eps" name="Condition (EPS)"/>
@@ -12,7 +11,6 @@
 <artifact id="StructureDefinition/consent-eu-eps" key="StructureDefinition-consent-eu-eps" name="Consent (Advance Directives EPS)"/>
 <artifact id="StructureDefinition/device-eu-eps" key="StructureDefinition-device-eu-eps" name="Device (EPS)"/>
 <artifact id="StructureDefinition/deviceUseStatement-eu-eps" key="StructureDefinition-deviceUseStatement-eu-eps" name="DeviceUseStatement (EPS)"/>
-<artifact id="StructureDefinition/flag-eu-eps" key="StructureDefinition-flag-eu-eps" name="Flag (EPS)"/>
 <artifact id="StructureDefinition/immunization-eu-eps" key="StructureDefinition-immunization-eu-eps" name="Immunization (EPS)"/>
 <artifact id="StructureDefinition/immunization-administeredProduct" key="StructureDefinition-immunization-administeredProduct" name="Immunization AdministeredProduct"/>
 <artifact id="StructureDefinition/immunizationRecommendation-eu-eps" key="StructureDefinition-immunizationRecommendation-eu-eps" name="ImmunizationRecommendation (EPS)"/>

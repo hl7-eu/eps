@@ -32,6 +32,7 @@ RuleSet: SectionComRules (short, def, code)
 * code = {code}
 * text 1..
 * text only Narrative
+* obeys ips-comp-1
 // * emptyReason ..0
 // * emptyReason ^mustSupport = false
 
