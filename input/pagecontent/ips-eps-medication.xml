@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <title>ISO 27269 — EU Patient Summary — Medications Mapping</title>
+  <link rel="stylesheet" href="iso-eu-ps.css" />
+</head>
+
+<body>
+  <h3>ISO 27269 → EU Patient Summary — Medications</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="ISO 27269 to EU PS — Medications">
+    <thead>
+      <tr>
+        <th class="cap iso">ISO 27269 (IPS)</th>
+        <th class="cap iso">Conformance</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap eu" colspan="2">EU Patient Summary</th>
+      </tr>
+      <tr>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Conf.</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr eu">Element</th>
+        <th class="hdr eu">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-iso"><strong>Medication Summary content status</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-eu note">Same purpose; EU PS follows the IPS FHIR representation with <code>emptyReason</code>.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Medication Summary</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>medications (list)</strong></td>
+        <td class="cell-eu note">Represents the list of medication statements.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Medication/Statement</strong></td>
+        <td class="cell-iso">M</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>MedicationStatement</strong></td>
+        <td class="cell-eu note">Core entry element; identical concept for patient medications.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Medication code or reference</td>
+        <td class="cell-iso">R</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">medication[x]</td>
+        <td class="cell-eu note">CodeableConcept or reference to Medication resource.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Status</td>
+        <td class="cell-iso">R</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">status</td>
+        <td class="cell-eu note">Active, completed, etc.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Effective period/date</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">effective[x]</td>
+        <td class="cell-eu note">When the medication was/is taken.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Reason</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">reasonCode / reasonReference</td>
+        <td class="cell-eu note">Why the medication is/was taken.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Dosage instructions</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">dosage</td>
+        <td class="cell-eu note">Human-readable dosing and structured fields.</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+  <h3>EU Patient Summary (EHDS Model) → ISO 27269 — Medications</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="EU PS to ISO 27269 — Medications">
+    <thead>
+      <tr>
+        <th class="cap eu">EU Patient Summary</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap iso" colspan="2">ISO 27269 (IPS)</th>
+      </tr>
+      <tr>
+        <th class="hdr eu">Element</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Medication Summary content status</strong></td>
+        <td class="cell-iso note">Indicates why no medications are present.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>MedicationStatement</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Medication/Statement</strong></td>
+        <td class="cell-iso note">Core entry alignment.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>medication[x]</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Medication code or reference</strong></td>
+        <td class="cell-iso note">Code or Medication reference.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>status</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Status</strong></td>
+        <td class="cell-iso note">Medication status.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>effective[x]</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Effective period/date</strong></td>
+        <td class="cell-iso note">When taken.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>reasonCode / reasonReference</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Reason</strong></td>
+        <td class="cell-iso note">Clinical justification.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>dosage</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Dosage instructions</strong></td>
+        <td class="cell-iso note">Dosage details.</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+</body>
+</html>
+

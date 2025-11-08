@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <title>ISO 27269 — EU Patient Summary — Results Mapping</title>
+  <link rel="stylesheet" href="iso-eu-ps.css" />
+</head>
+
+<body>
+  <h3>ISO 27269 → EU Patient Summary — Results</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="ISO 27269 to EU PS — Results">
+    <thead>
+      <tr>
+        <th class="cap iso">ISO 27269 (IPS)</th>
+        <th class="cap iso">Conformance</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap eu" colspan="2">EU Patient Summary</th>
+      </tr>
+      <tr>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Conf.</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr eu">Element</th>
+        <th class="hdr eu">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-iso"><strong>Results content status</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-eu note">Same purpose; EU PS follows the IPS FHIR representation with <code>emptyReason</code>.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Results</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>results (list)</strong></td>
+        <td class="cell-eu note">Represents a list of diagnostic reports and observations.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Result</strong></td>
+        <td class="cell-iso">M</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>DiagnosticReport</strong></td>
+        <td class="cell-eu note">Core entry element for grouped results.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Report code/category</td>
+        <td class="cell-iso">R</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">code / category</td>
+        <td class="cell-eu note">Type/category of the report.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Effective date/time</td>
+        <td class="cell-iso">R</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">effective[x]</td>
+        <td class="cell-eu note">When the measurements were taken.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Issued date</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">issued</td>
+        <td class="cell-eu note">Report publication time.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Performer</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">performer</td>
+        <td class="cell-eu note">Who issued the report.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Conclusion</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">conclusion / conclusionCode</td>
+        <td class="cell-eu note">Narrative and/or coded conclusion.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Presented form</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">presentedForm</td>
+        <td class="cell-eu note">Attached report document (PDF, etc.).</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Result entries</td>
+        <td class="cell-iso">R</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">result (Observation)</td>
+        <td class="cell-eu note">References to result observations.</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+  <h3>EU Patient Summary (EHDS Model) → ISO 27269 — Results</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="EU PS to ISO 27269 — Results">
+    <thead>
+      <tr>
+        <th class="cap eu">EU Patient Summary</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap iso" colspan="2">ISO 27269 (IPS)</th>
+      </tr>
+      <tr>
+        <th class="hdr eu">Element</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Results content status</strong></td>
+        <td class="cell-iso note">Indicates why no results are present.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>DiagnosticReport</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Result</strong></td>
+        <td class="cell-iso note">Core entry alignment.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>code / category</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Report code/category</strong></td>
+        <td class="cell-iso note">Report type/category.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>effective[x]</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Effective date/time</strong></td>
+        <td class="cell-iso note">When measured.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>issued</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Issued date</strong></td>
+        <td class="cell-iso note">Publication time.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>performer</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Performer</strong></td>
+        <td class="cell-iso note">Issuing lab/organization.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>conclusion / conclusionCode</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Conclusion</strong></td>
+        <td class="cell-iso note">Narrative/coded conclusion.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>presentedForm</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Presented form</strong></td>
+        <td class="cell-iso note">Attached report.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>result (Observation)</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Result entries</strong></td>
+        <td class="cell-iso note">Observation references.</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+</body>
+</html>
+

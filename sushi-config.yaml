@@ -82,6 +82,16 @@ pages:
     title: IPS to EPS Procedure Comparison
   ips-eps-immunization.html:
     title: IPS to EPS Immunization Comparison
+  ips-eps-problem.html:
+    title: IPS to EPS Problem Comparison
+  ips-eps-medication.html:
+    title: IPS to EPS Medication Comparison
+  ips-eps-results.html:
+    title: IPS to EPS Results Comparison
+  ips-eps-procedure.html:
+    title: IPS to EPS Procedure Comparison
+  ips-eps-immunization.html:
+    title: IPS to EPS Immunization Comparison
 # == MODEL MAPS
 
 
@@ -180,6 +190,11 @@ menu:
     IPS to EPS Section Comparison: ips-eps-section-comparison.html
     IPS to EPS Alert Comparison: ips-eps-alert.html
     IPS to EPS Allergy Comparison: ips-eps-allergy.html
+    IPS to EPS Procedure Comparison: ips-eps-procedure.html
+    IPS to EPS Immunization Comparison: ips-eps-immunization.html
+    IPS to EPS Problem Comparison: ips-eps-problem.html
+    IPS to EPS Medication Comparison: ips-eps-medication.html
+    IPS to EPS Results Comparison: ips-eps-results.html
     IPS to EPS Procedure Comparison: ips-eps-procedure.html
     IPS to EPS Immunization Comparison: ips-eps-immunization.html
   Artifacts: artifacts.html
