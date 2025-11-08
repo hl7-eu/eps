@@ -4,7 +4,7 @@
     <head>
         <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
         <title>ISO 27269 ↔ EU Patient Summary – Allergies and Intolerances Mapping</title>
-        <link rel="stylesheet" href="iso_eu_ps.css" />
+        <!-- <link rel="stylesheet" href="iso-eu-ps.css" /> -->
     </head>
 
     <body>
@@ -49,105 +49,105 @@
                     <td class="cell-eu note">Represents the list of allergy/intolerance entries.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Allergy/Intolerance</td>
+                    <td class="cell-iso lvl-1">Allergy/Intolerance</td>
                     <td class="cell-iso">M</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">allergyIntolerance</td>
                     <td class="cell-eu note">Core entry element; identical concept.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Allergy/Intolerance description</td>
+                    <td class="cell-iso lvl-2">Allergy/Intolerance description</td>
                     <td class="cell-iso">R</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">description</td>
                     <td class="cell-eu note">Free text description; same use.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Clinical status</td>
+                    <td class="cell-iso lvl-2">Clinical status</td>
                     <td class="cell-iso">R</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">status</td>
                     <td class="cell-eu note">Same meaning; coded element.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Onset date</td>
+                    <td class="cell-iso lvl-2">Onset date</td>
                     <td class="cell-iso">RK</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">onsetDate</td>
                     <td class="cell-eu note">Same element; optional with known qualifier.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">End date</td>
+                    <td class="cell-iso lvl-2">End date</td>
                     <td class="cell-iso">C</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">endDate</td>
                     <td class="cell-eu note">Same semantics; optional/conditional in both.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Criticality</td>
+                    <td class="cell-iso lvl-2">Criticality</td>
                     <td class="cell-iso">O</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">criticality</td>
                     <td class="cell-eu note">Optional coded element; identical use.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Certainty</td>
+                    <td class="cell-iso lvl-2">Certainty</td>
                     <td class="cell-iso">O</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">certainty</td>
                     <td class="cell-eu note">Present in both;</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Type of propensity</td>
+                    <td class="cell-iso lvl-2">Type of propensity</td>
                     <td class="cell-iso">RK</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">typeOfPropensity</td>
                     <td class="cell-eu note">Same; differentiates allergy vs intolerance.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Diagnosis</td>
+                    <td class="cell-iso lvl-2">Diagnosis</td>
                     <td class="cell-iso">O</td>
                     <td class="cell-mid dash">Not represented</td>
                     <td class="cell-eu dash">-----</td>
                     <td class="cell-eu note">Optional in ISO</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Reaction</td>
+                    <td class="cell-iso lvl-2">Reaction</td>
                     <td class="cell-iso">RK</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">reaction</td>
                     <td class="cell-eu note">Both have a reaction backbone.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Manifestation of the reaction</td>
+                    <td class="cell-iso lvl-3">Manifestation of the reaction</td>
                     <td class="cell-iso">RK</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">reaction.manifestation</td>
                     <td class="cell-eu note">Mandatory when reaction present; same concept.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Severity</td>
+                    <td class="cell-iso lvl-3">Severity</td>
                     <td class="cell-iso">RK</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">reaction.severity</td>
                     <td class="cell-eu note">Same coded severity concept.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Agent</td>
+                    <td class="cell-iso lvl-2">Agent</td>
                     <td class="cell-iso">R</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">agentOrAllergen</td>
                     <td class="cell-eu note">Same backbone for causative substance.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Agent code</td>
+                    <td class="cell-iso lvl-3">Agent code</td>
                     <td class="cell-iso">R</td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-eu">agentOrAllergen</td>
                     <td class="cell-eu note">Same; identifies the substance.</td>
                 </tr>
                 <tr>
-                    <td class="cell-iso">Category</td>
+                    <td class="cell-iso lvl-3">Category</td>
                     <td class="cell-iso">O</td>
                     <td class="cell-mid dash">Not represented</td>
                     <td class="cell-eu dash">—</td>

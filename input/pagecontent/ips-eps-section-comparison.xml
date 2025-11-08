@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
   <title>ISO 27269 ↔ EU Patient Summary – Section Mapping (Model-based Colors)</title>
-  <link rel="stylesheet" href="iso_eu_ps.css" />
+  <!-- <link rel="stylesheet" href="iso-eu-ps.css" /> -->
 
 </head>
 
@@ -54,7 +54,7 @@
         <td class="cell-iso"><strong>History of Past Problems</strong></td>
         <td class="cell-mid dash">Not represented</td>
         <td class="cell-eu dash">---</td>
-        <td class="cell-eu note">Optional section in IPS, not in EU PS. If a problem is under concern it is a Problem
+        <td class="cell-eu note hl">Optional section in IPS, not in EU PS. If a problem is under concern it is a Problem
           and goes in the problem section. In the eHN guidelines in A.2.2.2 Resolved, closed or inactive problems.</td>
       </tr>
       <tr>
@@ -107,7 +107,7 @@
       </tr>
       <tr>
         <td class="cell-iso"><strong>Results</strong></td>
-        <td class="cell-mid">Equivalent</td>
+        <td class="cell-mid">Source Is Narrower Than Target</td>
         <td class="cell-eu"><strong>Results</strong></td>
         <td class="cell-eu note"></td>
       </tr>
@@ -117,11 +117,11 @@
         <td class="cell-eu"><strong>Social History</strong></td>
         <td class="cell-eu note"></td>
       </tr>
-      <tr>
+      <tr >
         <td class="cell-iso"><strong>Vital Signs</strong></td>
-        <td class="cell-mid dash">Not represented</td>
-        <td class="cell-eu dash">---</td>
-        <td class="cell-eu note">Optional section in IPS</td>
+        <td class="cell-mid">Source Is Narrower Than Target</td>
+        <td class="cell-eu"><strong>Results</strong> </td>
+        <td class="cell-eu note hl">Optional section in IPS; conceptually included as one of the results. Clarify if a separate representation is needed.</td>
       </tr>
     </tbody>
   </table>
@@ -218,9 +218,9 @@
       </tr>
       <tr>
         <td class="cell-eu"><strong>Results</strong></td>
-        <td class="cell-mid">Equivalent</td>
+        <td class="cell-mid">Source Is Broader Than Target</td>
         <td class="cell-iso"><strong>Results</strong></td>
-        <td class="cell-iso note"></td>
+        <td class="cell-iso note">It includes also data that for the IPS are included in distinct section. Note: the current EU PS implementation distinguish between Vital Signs and Diagnostic Results as is done in the IPS.</td>
       </tr>
       <tr>
         <td class="cell-eu"><strong>Social History</strong></td>

@@ -32,6 +32,8 @@
 <page key="index" name="Home"/>
 <page key="ips-eps-alert" name="IPS to EPS Alert Comparison"/>
 <page key="ips-eps-allergy" name="IPS to EPS Allergy Comparison"/>
+<page key="ips-eps-immunization" name="IPS to EPS Immunization Comparison"/>
+<page key="ips-eps-procedure" name="IPS to EPS Procedure Comparison"/>
 <page key="ips-eps-section-comparison" name="IPS to EPS Section Comparison"/>
 <page key="knownIssues" name="Known Issues"/>
 <page key="obligations" name="Obligations"/>

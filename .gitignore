@@ -28,3 +28,5 @@ Thumbs.db
 # backup files #
 ################
 *.bak
+/_iso_27269
+/__sources

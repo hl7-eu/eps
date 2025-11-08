@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <title>ISO 27269 — EU Patient Summary — Immunizations Mapping</title>
+  <!-- <link rel="stylesheet" href="iso-eu-ps.css" /> -->
+</head>
+
+<body>
+  <h3>ISO 27269 → EU Patient Summary — Immunizations</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="ISO 27269 to EU PS — Immunizations">
+    <thead>
+      <tr>
+        <th class="cap iso">ISO 27269 (IPS)</th>
+        <th class="cap iso">Conformance</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap eu" colspan="2">EU Patient Summary</th>
+      </tr>
+      <tr>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Conf.</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr eu">Element</th>
+        <th class="hdr eu">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-iso"><strong>Immunizations content status</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-eu note">Same purpose; EU PS follows the IPS FHIR representation with <code>emptyReason</code>.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Immunizations</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>immunization (list)</strong></td>
+        <td class="cell-eu note">Represents the list of immunization entries.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Immunization</strong></td>
+        <td class="cell-iso">M</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Immunization</strong></td>
+        <td class="cell-eu note">Core entry element; identical concept.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Vaccine/prophylaxis</td>
+        <td class="cell-iso">R</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">vaccineCode</td>
+        <td class="cell-eu note">Coded vaccine/prophylaxis; IPS value sets are referenced in EPS profile.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Occurrence date/time</td>
+        <td class="cell-iso">R</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">occurrence[x]</td>
+        <td class="cell-eu note">Date/time when vaccine was administered.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Dose number</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">protocolApplied.doseNumber[x]</td>
+        <td class="cell-eu note">Dose in series, when known.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Series doses</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">protocolApplied.seriesDoses[x]</td>
+        <td class="cell-eu note">Planned number of doses in series.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Target disease</td>
+        <td class="cell-iso">RK</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">protocolApplied.targetDisease</td>
+        <td class="cell-eu note">Disease the vaccination provides protection against.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Route of administration</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">route</td>
+        <td class="cell-eu note">Administration route (e.g., IM, SC).</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Anatomical site</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">site</td>
+        <td class="cell-eu note">Body site of administration.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Lot/batch number</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">lotNumber</td>
+        <td class="cell-eu note">Vaccine batch identifier.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Manufacturer</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">manufacturer</td>
+        <td class="cell-eu note">Manufacturer/MAH of the vaccine product.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Administering center</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">performer[administeringCentreOrHp].actor</td>
+        <td class="cell-eu note">Organization or practitioner who administered the vaccine.</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+  <h3>EU Patient Summary (EHDS Model) → ISO 27269 — Immunizations</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="EU PS to ISO 27269 — Immunizations">
+    <thead>
+      <tr>
+        <th class="cap eu">EU Patient Summary</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap iso" colspan="2">ISO 27269 (IPS)</th>
+      </tr>
+      <tr>
+        <th class="hdr eu">Element</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Immunizations content status</strong></td>
+        <td class="cell-iso note">Indicates why no immunizations are present.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Immunization</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Immunization</strong></td>
+        <td class="cell-iso note">Core entry concept is aligned.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>vaccineCode</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Vaccine/prophylaxis</strong></td>
+        <td class="cell-iso note">Coded vaccine.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>occurrence[x]</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Occurrence date/time</strong></td>
+        <td class="cell-iso note">When the vaccine was given.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>protocolApplied.doseNumber[x]</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Dose number</strong></td>
+        <td class="cell-iso note">Dose within series.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>protocolApplied.seriesDoses[x]</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Series doses</strong></td>
+        <td class="cell-iso note">Planned series size.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>protocolApplied.targetDisease</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Target disease</strong></td>
+        <td class="cell-iso note">Target condition.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>route</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Route of administration</strong></td>
+        <td class="cell-iso note">Administration route.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>site</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Anatomical site</strong></td>
+        <td class="cell-iso note">Body site.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>lotNumber</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Lot/batch number</strong></td>
+        <td class="cell-iso note">Batch identifier.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>manufacturer</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Manufacturer</strong></td>
+        <td class="cell-iso note">Vaccine manufacturer/MAH.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>performer[administeringCentreOrHp].actor</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Administering center</strong></td>
+        <td class="cell-iso note">Organization/practitioner who administered.</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+</body>
+</html>
+

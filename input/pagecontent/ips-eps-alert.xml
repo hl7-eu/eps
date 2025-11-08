@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
   <title>ISO 27269 ↔ EU Patient Summary – Alerts Mapping</title>
-  <link rel="stylesheet" href="iso_eu_ps.css" />
+  <!-- <link rel="stylesheet" href="iso-eu-ps.css" /> -->
 
 </head>
 
@@ -29,13 +29,6 @@
     </thead>
     <tbody>
       <tr>
-        <td class="cell-iso"><strong>Alerts content status</strong></td>
-        <td class="cell-iso">C</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu"><strong>section.emptyReason</strong></td>
-        <td class="cell-eu note">Same purpose; EU PS model follows the IPS FHIR representation (emptyReason).</td>
-      </tr>
-      <tr>
         <td class="cell-iso"><strong>Alert</strong></td>
         <td class="cell-iso">M</td>
         <td class="cell-mid">Equivalent</td>
@@ -43,81 +36,81 @@
         <td class="cell-eu note">Core entry element; represents a patient alert or flag.</td>
       </tr>
       <tr>
-        <td class="cell-iso">Alert type</td>
+        <td class="cell-iso lvl-1">Alert type</td>
         <td class="cell-iso">RK</td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-eu">code</td>
         <td class="cell-eu note">Both identify the coded nature or category of the alert (e.g., disease, safety, procedure-related).</td>
       </tr>
       <tr>
-        <td class="cell-iso">Alert identifier</td>
+        <td class="cell-iso lvl-1">Alert identifier</td>
         <td class="cell-iso">RK</td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-eu">header.identifier</td>
         <td class="cell-eu note">Same function — business or system identifier of the alert record.</td>
       </tr>
       <tr>
-        <td class="cell-iso">Alert description</td>
+        <td class="cell-iso lvl-1">Alert description</td>
         <td class="cell-iso">R</td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-eu">text</td>
         <td class="cell-eu note">Free-text description of the alert; EHDS adds examples and narrative guidance.</td>
       </tr>
       <tr>
-        <td class="cell-iso">Alert level</td>
+        <td class="cell-iso lvl-1">Alert level</td>
         <td class="cell-iso">RK</td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-eu">priority</td>
-        <td class="cell-eu note">Same semantics — indicates severity or importance; EHDS uses coded values instead of numeric levels.</td>
+        <td class="cell-eu note">Same semantics — indicates severity or importance; <strong>EHDS uses coded values instead of numeric levels.</strong></td>
       </tr>
       <tr>
-        <td class="cell-iso">Disease-related diagnosis</td>
+        <td class="cell-iso lvl-1">Disease-related diagnosis</td>
         <td class="cell-iso">O</td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-eu">code</td>
         <td class="cell-eu note">Represented as part of the coded alert; can point to a diagnosis concept (e.g. SNOMED CT).</td>
       </tr>
       <tr>
-        <td class="cell-iso">Disease name</td>
+        <td class="cell-iso lvl-2">Disease name</td>
         <td class="cell-iso">O</td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-eu">text or code</td>
         <td class="cell-eu note">May appear within the narrative; not a structured field in EHDS.</td>
       </tr>
       <tr>
-        <td class="cell-iso">Onset date</td>
+        <td class="cell-iso lvl-2">Onset date</td>
         <td class="cell-iso">RK</td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-eu">period.start</td>
         <td class="cell-eu note">Equivalent meaning — start of the alert’s active period.</td>
       </tr>
       <tr>
-        <td class="cell-iso">Assertion degree</td>
+        <td class="cell-iso lvl-2">Assertion degree</td>
         <td class="cell-iso">RK</td>
         <td class="cell-mid dash">Not represented</td>
         <td class="cell-eu dash">—</td>
-        <td class="cell-eu note">No direct element , doesn't seem to be realized by the FHIR IPS</td>
+        <td class="cell-eu note hl">Not represented in EHDSAlert, doesn't seem to be realized by the FHIR IPS</td>
       </tr>
       <tr>
-        <td class="cell-iso">Confirmation method</td>
+        <td class="cell-iso lvl-3">Confirmation method</td>
         <td class="cell-iso">RK</td>
         <td class="cell-mid dash">Not represented</td>
         <td class="cell-eu dash">—</td>
-        <td class="cell-eu note">Not represented in EHDSAlert, doesn't seem to be realized by the FHIR IPS</td>
+        <td class="cell-eu note hl">Not represented in EHDSAlert, doesn't seem to be realized by the FHIR IPS</td>
       </tr>
       <tr>
-        <td class="cell-iso">Specialist contact</td>
+        <td class="cell-iso lvl-1">Specialist contact</td>
         <td class="cell-iso">O</td>
         <td class="cell-mid dash">Not represented</td>
-        <td class="cell-eu dash"></td>
+        <td class="cell-eu dash">—</td>
         <td class="cell-eu note"></td>
       </tr>
       <tr>
-        <td class="cell-iso">Reference to specialist advice / guideline</td>
+        <td class="cell-iso lvl-1">Reference to specialist advice / guideline</td>
         <td class="cell-iso">O</td>
         <td class="cell-mid dash">Not represented</td>
         <td class="cell-eu dash">—</td>
-        <td class="cell-eu note">No direct field;</td>
+        <td class="cell-eu note"></td>
       </tr>
     </tbody>
   </table><p>  </p>
@@ -162,25 +155,25 @@
         <td class="cell-iso">Alert identifier</td>
         <td class="cell-iso note">Same meaning — unique identifier for the alert entry.</td>
       </tr>
-      <tr>
+      <tr class="highlight">
         <td class="cell-eu">header.authorship / author[x] / datetime</td>
         <td class="cell-mid dash">Not represented</td>
-        <td class="cell-iso">Specialist contact</td>
-        <td class="cell-iso note">Authorship metadata; ISO 27269 section does not define this.</td>
+        <td class="cell-iso dash">—</td>
+        <td class="cell-iso note">Authorship metadata only related to the document; ISO 27269 section does not define this.</td>
       </tr>
-      <tr>
+      <tr class="highlight">
         <td class="cell-eu">header.lastUpdate</td>
         <td class="cell-mid dash">Not represented</td>
         <td class="cell-iso dash">—</td>
         <td class="cell-iso note">Technical metadata; ISO does not define this.</td>
       </tr>
-      <tr>
+      <tr class="highlight">
         <td class="cell-eu">header.status / statusReason</td>
         <td class="cell-mid dash">Not represented</td>
         <td class="cell-iso dash"></td>
         <td class="cell-iso note"></td>
       </tr>
-      <tr>
+      <tr class="highlight">
         <td class="cell-eu">header.language</td>
         <td class="cell-mid dash">Not represented</td>
         <td class="cell-iso dash">—</td>
@@ -224,6 +217,5 @@
       </tr>
     </tbody>
   </table><p>  </p>
-
 </body>
 </html>

@@ -78,6 +78,10 @@ pages:
     title: IPS to EPS Allergy Comparison
   ips-eps-alert.html:
     title: IPS to EPS Alert Comparison
+  ips-eps-procedure.html:
+    title: IPS to EPS Procedure Comparison
+  ips-eps-immunization.html:
+    title: IPS to EPS Immunization Comparison
 # == MODEL MAPS
 
 
@@ -176,6 +180,8 @@ menu:
     IPS to EPS Section Comparison: ips-eps-section-comparison.html
     IPS to EPS Alert Comparison: ips-eps-alert.html
     IPS to EPS Allergy Comparison: ips-eps-allergy.html
+    IPS to EPS Procedure Comparison: ips-eps-procedure.html
+    IPS to EPS Immunization Comparison: ips-eps-immunization.html
   Artifacts: artifacts.html
   About:
     Downloads: downloads.html
