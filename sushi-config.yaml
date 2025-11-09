@@ -64,6 +64,8 @@ pages:
     title: Obligations
   knownIssues.md:
     title: Known Issues
+  mappings.md:
+    title: ISO ↔ EU PS Mapping Overview
 # == MODEL MAPS
 #  PatientSummary-map.html:
 #    title: PatientSummary Relationships
@@ -200,6 +202,7 @@ menu:
     eHN Guideline dataset: logicalModel.html
     Obligations: obligations.html
   Model Maps:
+    Mapping Overview: mappings.html
     IPS to EPS Section Comparison: ips-eps-section-comparison.html
     IPS to EPS Alert Comparison: ips-eps-alert.html
     IPS to EPS Allergy Comparison: ips-eps-allergy.html

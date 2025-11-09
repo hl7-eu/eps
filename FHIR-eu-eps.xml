@@ -46,6 +46,7 @@
 <page key="ips-eps-section-comparison" name="IPS to EPS Section Comparison"/>
 <page key="ips-eps-social-history" name="IPS to EPS Social History Comparison"/>
 <page key="ips-eps-vital-signs" name="IPS to EPS Vital Signs Comparison"/>
+<page key="mappings" name="ISO ↔ EU PS Mapping Overview"/>
 <page key="knownIssues" name="Known Issues"/>
 <page key="obligations" name="Obligations"/>
 <page key="toc" name="Table of Contents"/>
