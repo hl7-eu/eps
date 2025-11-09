@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <title>ISO 27269 — EU Patient Summary — History of Pregnancy Mapping</title>
+  <link rel="stylesheet" href="iso-eu-ps.css" />
+</head>
+
+<body>
+  <h3>ISO 27269 → EU Patient Summary — History of Pregnancy</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="ISO 27269 to EU PS — History of Pregnancy">
+    <thead>
+      <tr>
+        <th class="cap iso">ISO 27269 (IPS)</th>
+        <th class="cap iso">Conformance</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap eu" colspan="2">EU Patient Summary</th>
+      </tr>
+      <tr>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Conf.</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr eu">Element</th>
+        <th class="hdr eu">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-iso"><strong>History of Pregnancy content status</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-eu note">Same purpose; EU PS follows the IPS FHIR representation with <code>emptyReason</code>.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Pregnancy History</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>pregnancyHistory (list)</strong></td>
+        <td class="cell-eu note">List of pregnancy-related observations and outcomes.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Pregnancy-related observation</strong></td>
+        <td class="cell-iso">M</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Observation</strong></td>
+        <td class="cell-eu note">Observation-based representation of obstetric history.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Gravida / Para</td>
+        <td class="cell-iso">RK</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">component[]</td>
+        <td class="cell-eu note">G/P counts as components or separate observations.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Last menstrual period / EDD</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">value[x] / component[]</td>
+        <td class="cell-eu note">Dates where applicable.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Outcome</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">valueCodeableConcept / component[]</td>
+        <td class="cell-eu note">Outcome of pregnancy or delivery.</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+  <h3>EU Patient Summary (EHDS Model) → ISO 27269 — History of Pregnancy</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="EU PS to ISO 27269 — History of Pregnancy">
+    <thead>
+      <tr>
+        <th class="cap eu">EU Patient Summary</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap iso" colspan="2">ISO 27269 (IPS)</th>
+      </tr>
+      <tr>
+        <th class="hdr eu">Element</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>History of Pregnancy content status</strong></td>
+        <td class="cell-iso note">Indicates why no pregnancy history is present.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Observation</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Pregnancy-related observation</strong></td>
+        <td class="cell-iso note">Obstetric history observations.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>component[] (G/P)</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Gravida / Para</strong></td>
+        <td class="cell-iso note">Counts.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>value[x] / component[]</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>LMP / EDD</strong></td>
+        <td class="cell-iso note">Dates.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>valueCodeableConcept</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Outcome</strong></td>
+        <td class="cell-iso note">Outcome code.</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+</body>
+</html>
+

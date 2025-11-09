@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <title>ISO 27269 — EU Patient Summary — Care Plan Mapping</title>
+  <link rel="stylesheet" href="iso-eu-ps.css" />
+</head>
+
+<body>
+  <h3>ISO 27269 → EU Patient Summary — Care Plan</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="ISO 27269 to EU PS — Care Plan">
+    <thead>
+      <tr>
+        <th class="cap iso">ISO 27269 (IPS)</th>
+        <th class="cap iso">Conformance</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap eu" colspan="2">EU Patient Summary</th>
+      </tr>
+      <tr>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Conf.</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr eu">Element</th>
+        <th class="hdr eu">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-iso"><strong>Care Plan content status</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-eu note">Same purpose; EU PS follows the IPS FHIR representation with <code>emptyReason</code>.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Care plans</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>carePlans (list)</strong></td>
+        <td class="cell-eu note">Represents the list of patient care plans.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Care Plan</strong></td>
+        <td class="cell-iso">M</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>CarePlan</strong></td>
+        <td class="cell-eu note">Core entry element; identical concept.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Category / intent</td>
+        <td class="cell-iso">R</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">category / intent</td>
+        <td class="cell-eu note">Kind of plan and its intent.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Period</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">period</td>
+        <td class="cell-eu note">Time span covered by the plan.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Description</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">description</td>
+        <td class="cell-eu note">Narrative description.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Activity</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">activity</td>
+        <td class="cell-eu note">Planned actions.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Goal</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">goal</td>
+        <td class="cell-eu note">Associated goals.</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+  <h3>EU Patient Summary (EHDS Model) → ISO 27269 — Care Plan</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="EU PS to ISO 27269 — Care Plan">
+    <thead>
+      <tr>
+        <th class="cap eu">EU Patient Summary</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap iso" colspan="2">ISO 27269 (IPS)</th>
+      </tr>
+      <tr>
+        <th class="hdr eu">Element</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Care Plan content status</strong></td>
+        <td class="cell-iso note">Indicates why no care plans are present.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>CarePlan</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Care Plan</strong></td>
+        <td class="cell-iso note">Core entry alignment.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>category / intent</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Category / intent</strong></td>
+        <td class="cell-iso note">Kind and intent.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>period</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Period</strong></td>
+        <td class="cell-iso note">Time span.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>description</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Description</strong></td>
+        <td class="cell-iso note">Narrative.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>activity</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Activity</strong></td>
+        <td class="cell-iso note">Planned actions.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>goal</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Goal</strong></td>
+        <td class="cell-iso note">Associated goals.</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+</body>
+</html>
+

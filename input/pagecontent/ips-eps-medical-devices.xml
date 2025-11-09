@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+  <title>ISO 27269 — EU Patient Summary — Medical Devices and Implants Mapping</title>
+  <link rel="stylesheet" href="iso-eu-ps.css" />
+</head>
+
+<body>
+  <h3>ISO 27269 → EU Patient Summary — Medical Devices and Implants</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="ISO 27269 to EU PS — Medical Devices and Implants">
+    <thead>
+      <tr>
+        <th class="cap iso">ISO 27269 (IPS)</th>
+        <th class="cap iso">Conformance</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap eu" colspan="2">EU Patient Summary</th>
+      </tr>
+      <tr>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Conf.</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr eu">Element</th>
+        <th class="hdr eu">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-iso"><strong>Medical Devices content status</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-eu note">Same purpose; EU PS follows the IPS FHIR representation with <code>emptyReason</code>.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Medical devices and implants</strong></td>
+        <td class="cell-iso">C</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>devices (list)</strong></td>
+        <td class="cell-eu note">Represents devices relevant to the patient story (primarily implants).</td>
+      </tr>
+      <tr>
+        <td class="cell-iso"><strong>Device</strong></td>
+        <td class="cell-iso">M</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu"><strong>Device</strong></td>
+        <td class="cell-eu note">Core entry element for the implantable or other relevant device.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Identifier / UDI</td>
+        <td class="cell-iso">RK</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">udiCarrier / identifier</td>
+        <td class="cell-eu note">Unique device identification or business identifiers.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Type</td>
+        <td class="cell-iso">R</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">type</td>
+        <td class="cell-eu note">Device type (coded).</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Status</td>
+        <td class="cell-iso">RK</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">status</td>
+        <td class="cell-eu note">Active/inactive/entered-in-error etc.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Manufactured/lot</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">lotNumber / manufacturer</td>
+        <td class="cell-eu note">Lot/batch and manufacturer.</td>
+      </tr>
+      <tr>
+        <td class="cell-iso lvl-1">Implantation / explantation</td>
+        <td class="cell-iso">O</td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-eu">note / extension</td>
+        <td class="cell-eu note">Dates/notes where recorded (implementation-specific).</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+  <h3>EU Patient Summary (EHDS Model) → ISO 27269 — Medical Devices and Implants</h3><a>  </a><p>  </p>
+  <table class="tbl" role="table" aria-label="EU PS to ISO 27269 — Medical Devices and Implants">
+    <thead>
+      <tr>
+        <th class="cap eu">EU Patient Summary</th>
+        <th class="cap mid">Relationship</th>
+        <th class="cap iso" colspan="2">ISO 27269 (IPS)</th>
+      </tr>
+      <tr>
+        <th class="hdr eu">Element</th>
+        <th class="hdr mid">Relation</th>
+        <th class="hdr iso">Element</th>
+        <th class="hdr iso">Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="cell-eu"><strong>section.emptyReason</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Medical Devices content status</strong></td>
+        <td class="cell-iso note">Indicates why no devices are present.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>Device</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Device</strong></td>
+        <td class="cell-iso note">Core entry alignment.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>udiCarrier / identifier</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Identifier / UDI</strong></td>
+        <td class="cell-iso note">Identifiers.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>type</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Type</strong></td>
+        <td class="cell-iso note">Device type.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>status</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Status</strong></td>
+        <td class="cell-iso note">Lifecycle status.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu lvl-1"><strong>lotNumber / manufacturer</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Manufactured/lot</strong></td>
+        <td class="cell-iso note">Manufacturing details.</td>
+      </tr>
+    </tbody>
+  </table><p>  </p>
+
+</body>
+</html>
+

@@ -88,10 +88,23 @@ pages:
     title: IPS to EPS Medication Comparison
   ips-eps-results.html:
     title: IPS to EPS Results Comparison
-  ips-eps-procedure.html:
-    title: IPS to EPS Procedure Comparison
-  ips-eps-immunization.html:
-    title: IPS to EPS Immunization Comparison
+  ips-eps-functional-status.html:
+    title: IPS to EPS Functional Status Comparison
+  ips-eps-pregnancy.html:
+    title: IPS to EPS History of Pregnancy Comparison
+  ips-eps-medical-devices.html:
+    title: IPS to EPS Medical Devices Comparison
+  ips-eps-care-plan.html:
+    title: IPS to EPS Care Plan Comparison
+  ips-eps-social-history.html:
+    title: IPS to EPS Social History Comparison
+  ips-eps-vital-signs.html:
+    title: IPS to EPS Vital Signs Comparison
+  ips-eps-patient-story.html:
+    title: IPS to EPS Patient Story Comparison
+  ips-eps-advance-directives.html:
+    title: IPS to EPS Advance Directives Comparison
+
 # == MODEL MAPS
 
 
@@ -195,8 +208,14 @@ menu:
     IPS to EPS Problem Comparison: ips-eps-problem.html
     IPS to EPS Medication Comparison: ips-eps-medication.html
     IPS to EPS Results Comparison: ips-eps-results.html
-    IPS to EPS Procedure Comparison: ips-eps-procedure.html
-    IPS to EPS Immunization Comparison: ips-eps-immunization.html
+    IPS to EPS Functional Status Comparison: ips-eps-functional-status.html
+    IPS to EPS History of Pregnancy Comparison: ips-eps-pregnancy.html
+    IPS to EPS Medical Devices Comparison: ips-eps-medical-devices.html
+    IPS to EPS Care Plan Comparison: ips-eps-care-plan.html
+    IPS to EPS Social History Comparison: ips-eps-social-history.html
+    IPS to EPS Vital Signs Comparison: ips-eps-vital-signs.html
+    IPS to EPS Patient Story Comparison: ips-eps-patient-story.html
+    IPS to EPS Advance Directives Comparison: ips-eps-advance-directives.html
   Artifacts: artifacts.html
   About:
     Downloads: downloads.html
