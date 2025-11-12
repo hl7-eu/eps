@@ -37,64 +37,64 @@
         <td class="cell-iso"><strong>Problems</strong></td>
         <td class="cell-iso">C</td>
         <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu"><strong>problems (list)</strong></td>
+        <td class="cell-eu"><strong>EHDSCondition (list)</strong></td>
         <td class="cell-eu note">Represents the list of problem/condition entries.</td>
       </tr>
       <tr>
         <td class="cell-iso"><strong>Problem</strong></td>
         <td class="cell-iso">M</td>
         <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu"><strong>Condition</strong></td>
+        <td class="cell-eu"><strong>EHDSCondition</strong></td>
         <td class="cell-eu note">Core entry element; identical clinical concept.</td>
       </tr>
       <tr>
-        <td class="cell-iso lvl-1">Problem code</td>
-        <td class="cell-iso">R</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">code</td>
-        <td class="cell-eu note">Coded diagnosis/problem.</td>
+        <td class="cell-iso lvl-1">Problem type</td>
+        <td class="cell-iso">RK</td>
+        <td class="cell-mid">source-is-narrower-than-target</td>
+        <td class="cell-eu">category</td>
+        <td class="cell-eu note"></td>
       </tr>
       <tr>
         <td class="cell-iso lvl-1">Problem description</td>
-        <td class="cell-iso">O</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">text</td>
-        <td class="cell-eu note">Narrative description of the problem.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Clinical status</td>
         <td class="cell-iso">R</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">clinicalStatus</td>
-        <td class="cell-eu note">Active/resolved, etc.</td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-eu dash">-----</td>
+        <td class="cell-eu note">No dedicated free-text description in EHDSCondition; but realized in the EU Core Condition profile.</td>
       </tr>
+        <tr>
+          <td class="cell-iso lvl-1">Diagnosis</td>
+          <td class="cell-iso">RK</td>
+          <td class="cell-mid dash">equivalent</td>
+          <td class="cell-eu dash">problem</td>
+          <td class="cell-eu note">Covered by Problem type (problem).</td>
+        </tr>
+        <tr>
+          <td class="cell-iso lvl-1">Severity</td>
+          <td class="cell-iso">O</td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-eu">severity</td>
+          <td class="cell-eu note">Severity of the problem.</td>
+        </tr>
       <tr>
         <td class="cell-iso lvl-1">Onset date</td>
         <td class="cell-iso">RK</td>
         <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">onset[x]</td>
+        <td class="cell-eu">onsetDate</td>
         <td class="cell-eu note">When the problem started.</td>
       </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Abatement date</td>
+        <tr>
+          <td class="cell-iso lvl-1">Problem status</td>
+          <td class="cell-iso">O</td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-eu">problemStatus</td>
+          <td class="cell-eu note">Active/resolved, etc.</td>
+        </tr>
+            <tr>
+        <td class="cell-iso lvl-1">Specialist contact</td>
         <td class="cell-iso">O</td>
         <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">abatement[x]</td>
-        <td class="cell-eu note">When the problem resolved.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Severity</td>
-        <td class="cell-iso">O</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">severity</td>
-        <td class="cell-eu note">Severity of the problem.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Body site</td>
-        <td class="cell-iso">O</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">bodySite</td>
-        <td class="cell-eu note">Anatomical location.</td>
+        <td class="cell-eu">specialistContact</td>
+        <td class="cell-eu note">Health Professional related to the problem as preferred contact.</td>
       </tr>
     </tbody>
   </table><p>  </p>
@@ -116,62 +116,160 @@
     </thead>
     <tbody>
       <tr>
-        <td class="cell-eu"><strong>section.emptyReason</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Problems content status</strong></td>
-        <td class="cell-iso note">Indicates why no problems are present.</td>
-      </tr>
-      <tr>
-        <td class="cell-eu"><strong>Condition</strong></td>
+        <td class="cell-eu"><strong>EHDSCondition</strong></td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-iso"><strong>Problem</strong></td>
         <td class="cell-iso note">Core entry alignment.</td>
       </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>header</strong>
+          </td>
+          <td class="cell-mid">Partial</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Administrative header (subject, authoring, status, etc.) not part of ISO 27269 clinical section content.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">header.subject</td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Patient identification handled elsewhere in ISO 27269 Document Header.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">header.identifier</td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note"></td>
+        </tr>
+        <tr class="highlight">
+          <td class="cell-eu">header.authorship / author[x] / datetime</td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Authorship metadata; ISO 27269 section does not define this.</td>
+        </tr>
+        <tr class="highlight">
+          <td class="cell-eu">header.lastUpdate</td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Technical metadata.</td>
+        </tr>
+        <tr class="highlight">
+          <td class="cell-eu">header.status / statusReason</td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note"></td>
+        </tr>
+        <tr>
+          <td class="cell-eu">header.language</td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Resource-level attributes not defined in ISO section.</td>
+        </tr>
       <tr>
-        <td class="cell-eu lvl-1"><strong>code</strong></td>
+        <td class="cell-eu"><strong>problem</strong></td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-iso"><strong>Problem code</strong></td>
         <td class="cell-iso note">Coded problem.</td>
       </tr>
+
       <tr>
-        <td class="cell-eu lvl-1"><strong>text</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Problem description</strong></td>
-        <td class="cell-iso note">Narrative.</td>
-      </tr>
-      <tr>
-        <td class="cell-eu lvl-1"><strong>clinicalStatus</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Clinical status</strong></td>
-        <td class="cell-iso note">Active/resolved, etc.</td>
-      </tr>
-      <tr>
-        <td class="cell-eu lvl-1"><strong>onset[x]</strong></td>
+        <td class="cell-eu"><strong>onsetDate</strong></td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-iso"><strong>Onset date</strong></td>
         <td class="cell-iso note">Start of the problem.</td>
       </tr>
       <tr>
-        <td class="cell-eu lvl-1"><strong>abatement[x]</strong></td>
+        <td class="cell-eu"><strong>endDate</strong></td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-iso"><strong>Abatement date</strong></td>
         <td class="cell-iso note">Resolution time.</td>
       </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>category</strong>
+          </td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-iso">
+            <strong>Clinical status</strong>
+          </td>
+          <td class="cell-iso note">Active/resolved, etc.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>problemStatus</strong>
+          </td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-iso">
+            <strong>Clinical status</strong>
+          </td>
+          <td class="cell-iso note">Active/resolved, etc.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>resolutionCircumstances</strong>
+          </td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Reason for resolution not modeled in ISO Problems.</td>
+        </tr>
       <tr>
-        <td class="cell-eu lvl-1"><strong>severity</strong></td>
+        <td class="cell-eu"><strong>severity</strong></td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-iso"><strong>Severity</strong></td>
         <td class="cell-iso note">Severity coding.</td>
       </tr>
       <tr>
-        <td class="cell-eu lvl-1"><strong>bodySite</strong></td>
+        <td class="cell-eu"><strong>anatomicLocation</strong></td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-iso"><strong>Body site</strong></td>
         <td class="cell-iso note">Anatomical focus.</td>
+      </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>stage</strong>
+          </td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Staging/grading not captured in ISO Problems.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>diagnosisAssertionStatus</strong>
+          </td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Verification/assertion status not present in ISO Problems.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>asserter</strong>
+          </td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Asserter not listed in ISO Problems.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>assertedDate</strong>
+          </td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Diagnosis assertion date not present in ISO Problems.</td>
+        </tr>
+      <tr>
+        <td class="cell-eu"><strong>specialistContact</strong></td>
+        <td class="cell-mid">Equivalent</td>
+        <td class="cell-iso"><strong>Specialist contact</strong></td>
+        <td class="cell-iso note">Health Professional related to the problem.</td>
+      </tr>
+      <tr>
+        <td class="cell-eu"><strong>externalResource</strong></td>
+        <td class="cell-mid dash">Not represented</td>
+        <td class="cell-iso dash">—</td>
+        <td class="cell-iso note">External links not present in ISO Problems.</td>
       </tr>
     </tbody>
   </table><p>  </p>
 
 </body>
 </html>
-

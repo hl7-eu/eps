@@ -7,22 +7,22 @@ Legend (conformance): M = Mandatory, R = Required, RK = Required if known, O = O
 
 ### Section Overview
 
-- 🧭 [IPS to EPS Section Comparison](ips-eps-section-comparison.html)
+- 🧭 [IPS to EPS Section Comparison](ips-eps-section-comparison.html) - 🟡 Ready for first review
 
 ### Domain Mappings
 
-- ⚠️ [Alerts](ips-eps-alert.html)
-- 🤧 [Allergies and Intolerances](ips-eps-allergy.html)
-- 🛠️ [History of Procedures](ips-eps-procedure.html)
-- 💉 [Immunizations](ips-eps-immunization.html)
-- 🩺 [Problems](ips-eps-problem.html)
-- 💊 [Medications](ips-eps-medication.html)
-- 🧪 [Results](ips-eps-results.html)
-- 🧍 [Functional Status](ips-eps-functional-status.html)
-- 🤰 [History of Pregnancy](ips-eps-pregnancy.html)
-- 🦾 [Medical Devices and Implants](ips-eps-medical-devices.html)
-- 🗺️ [Care Plan](ips-eps-care-plan.html)
-- 🧑‍🤝‍🧑 [Social History](ips-eps-social-history.html)
-- ❤️ [Vital Signs](ips-eps-vital-signs.html)
-- 📖 [Patient Story](ips-eps-patient-story.html)
-- 📝 [Advance Directives](ips-eps-advance-directives.html)
+- ⚠️ [Alerts](ips-eps-alert.html) - 🟡 Ready for first review
+- 🤧 [Allergies and Intolerances](ips-eps-allergy.html) - 🟡 Ready for first review
+- 🛠️ [History of Procedures](ips-eps-procedure.html) -❌ Do not use
+- 💉 [Immunizations](ips-eps-immunization.html) -  🟡 Ready for first review
+- 🩺 [Problems](ips-eps-problem.html) - 🟡 Ready for first review
+- 💊 [Medications](ips-eps-medication.html) -❌ Do not use
+- 🧪 [Results](ips-eps-results.html) -❌ Do not use
+- 🧍 [Functional Status](ips-eps-functional-status.html) -❌ Do not use
+- 🤰 [History of Pregnancy](ips-eps-pregnancy.html) -❌ Do not use
+- 🦾 [Medical Devices and Implants](ips-eps-medical-devices.html) -❌ Do not use
+- 🗺️ [Care Plan](ips-eps-care-plan.html) -❌ Do not use
+- 🧑‍🤝‍🧑 [Social History](ips-eps-social-history.html) -❌ Do not use
+- ❤️ [Vital Signs](ips-eps-vital-signs.html) -❌ Do not use
+- 📖 [Patient Story](ips-eps-patient-story.html) -❌ Do not use
+- 📝 [Advance Directives](ips-eps-advance-directives.html) -❌ Do not use
