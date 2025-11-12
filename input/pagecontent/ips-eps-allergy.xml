@@ -8,7 +8,10 @@
     </head>
 
     <body>
-        <h3>📘 ISO 27269 → EU Patient Summary — Allergies and Intolerances</h3><a>  </a><p>  </p>
+        <h3>📘 ISO 27269 → EU Patient Summary — Allergies and Intolerances</h3>
+        <a>  </a>
+        <div><p>  </p></div>
+
         <table class="tbl" role="table" aria-label="ISO 27269 to EU PS – Allergies and Intolerances">
             <thead>
                 <tr>
@@ -156,7 +159,8 @@
             </tbody>
         </table><p>  </p>
 
-        <h3>📗 EU Patient Summary (EHDS Model) → ISO 27269 Allergies and Intolerances</h3><a>  </a><p>  </p>
+        <h3>📗 EU Patient Summary (EHDS Model) → ISO 27269 Allergies and Intolerances</h3>
+        <a>  </a><p>  </p>
         
         <table class="tbl" role="table" aria-label="EU PS to ISO 27269 – Allergies and Intolerances">
             <thead>
@@ -203,7 +207,7 @@
                     <td class="cell-iso dash">—</td>
                     <td class="cell-iso note"></td>
                 </tr>
-                <tr>
+                <tr class="hl">
                     <td class="cell-eu">header.authorship / author[x] / datetime</td>
                     <td class="cell-mid dash">Not represented</td>
                     <td class="cell-iso dash">—</td>
@@ -215,8 +219,14 @@
                     <td class="cell-iso dash">—</td>
                     <td class="cell-iso note">Technical metadata.</td>
                 </tr>
+                <tr class="hl">
+                    <td class="cell-eu">header.status / statusReason</td>
+                    <td class="cell-mid dash">Not represented</td>
+                    <td class="cell-iso dash">—</td>
+                    <td class="cell-iso note"></td>
+                </tr>
                 <tr>
-                    <td class="cell-eu">header.status / statusReason / language</td>
+                    <td class="cell-eu">header.language</td>
                     <td class="cell-mid dash">Not represented</td>
                     <td class="cell-iso dash">—</td>
                     <td class="cell-iso note">Resource-level attributes not defined in ISO section.</td>
@@ -227,7 +237,7 @@
                     </td>
                     <td class="cell-mid">Equivalent</td>
                     <td class="cell-iso">
-                        <strong>Agent / Agent code</strong>
+                        <strong>Agent code</strong>
                     </td>
                     <td class="cell-iso note">Same concept; identifies the allergen or causative substance.</td>
                 </tr>
@@ -317,11 +327,11 @@
                     <td class="cell-iso">Manifestation of the reaction</td>
                     <td class="cell-iso note">Same clinical concept; coded manifestations.</td>
                 </tr>
-                <tr>
+                <tr class="hl">
                     <td class="cell-eu">reaction.date</td>
                     <td class="cell-mid dash">Not represented</td>
                     <td class="cell-iso dash">—</td>
-                    <td class="cell-iso note">ISO 27269 does not define a separate date field; but it is implemented in the FHIR IPS.</td>
+                    <td class="cell-iso note">ISO 27269 does not define a separate date field; some concerns with the FHIR EU core representation</td>
                 </tr>
                 <tr>
                     <td class="cell-eu">reaction.severity</td>
@@ -329,11 +339,11 @@
                     <td class="cell-iso">Severity</td>
                     <td class="cell-iso note">Same coded severity concept.</td>
                 </tr>
-                <tr>
+                <tr class="hl">
                     <td class="cell-eu">reaction.onsetDate</td>
                     <td class="cell-mid dash">Not represented</td>
                     <td class="cell-iso dash">—</td>
-                    <td class="cell-iso note">ISO 27269 does not define a separate date field; but it is implemented in the FHIR IPS.</td>
+                    <td class="cell-iso note">ISO 27269 does not define a separate date field; some concerns with the FHIR EU core representation</td>
                 </tr>
             </tbody>
         </table><p>  </p>

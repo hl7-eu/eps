@@ -35,12 +35,12 @@
         <td class="cell-eu"><strong>Alert</strong></td>
         <td class="cell-eu note">Core entry element; represents a patient alert or flag.</td>
       </tr>
-      <tr>
+      <tr class="hl">
         <td class="cell-iso lvl-1">Alert type</td>
         <td class="cell-iso">RK</td>
-        <td class="cell-mid">Equivalent</td>
+        <td class="cell-mid">Not represented</td>
         <td class="cell-eu">code</td>
-        <td class="cell-eu note">Both identify the coded nature or category of the alert (e.g., disease, safety, procedure-related).</td>
+        <td class="cell-eu note">the type is represented by a category element that seems to be missing.</td>
       </tr>
       <tr>
         <td class="cell-iso lvl-1">Alert identifier</td>
@@ -61,12 +61,12 @@
         <td class="cell-iso">RK</td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-eu">priority</td>
-        <td class="cell-eu note">Same semantics — indicates severity or importance; <strong>EHDS uses coded values instead of numeric levels.</strong></td>
+        <td class="cell-eu note hl">Same semantics — indicates severity or importance; <strong>EHDS uses coded values instead of numeric levels.</strong></td>
       </tr>
       <tr>
         <td class="cell-iso lvl-1">Disease-related diagnosis</td>
         <td class="cell-iso">O</td>
-        <td class="cell-mid">Equivalent</td>
+        <td class="cell-mid">source-broader-than-target</td>
         <td class="cell-eu">code</td>
         <td class="cell-eu note">Represented as part of the coded alert; can point to a diagnosis concept (e.g. SNOMED CT).</td>
       </tr>
@@ -74,7 +74,7 @@
         <td class="cell-iso lvl-2">Disease name</td>
         <td class="cell-iso">O</td>
         <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">text or code</td>
+        <td class="cell-eu">code.text</td>
         <td class="cell-eu note">May appear within the narrative; not a structured field in EHDS.</td>
       </tr>
       <tr>
@@ -103,14 +103,14 @@
         <td class="cell-iso">O</td>
         <td class="cell-mid dash">Not represented</td>
         <td class="cell-eu dash">—</td>
-        <td class="cell-eu note"></td>
+        <td class="cell-eu note hl"></td>
       </tr>
       <tr>
         <td class="cell-iso lvl-1">Reference to specialist advice / guideline</td>
         <td class="cell-iso">O</td>
         <td class="cell-mid dash">Not represented</td>
         <td class="cell-eu dash">—</td>
-        <td class="cell-eu note"></td>
+        <td class="cell-eu note hl"></td>
       </tr>
     </tbody>
   </table><p>  </p>
@@ -199,9 +199,9 @@
       </tr>
       <tr class="highlight">
         <td class="cell-eu"><strong>code</strong></td>
-        <td class="cell-mid"><strong>TBC</strong></td>
-        <td class="cell-iso"><strong>Alert type / Disease-related diagnosis</strong></td>
-        <td class="cell-iso note">Represents the coded alert type, diagnosis, or category (e.g., SNOMED CT).</td>
+        <td class="cell-mid"><strong>source-broader-than-target</strong></td>
+        <td class="cell-iso"><strong>Disease-related diagnosis</strong></td>
+        <td class="cell-iso note">Represents the coded alert type, diagnosis, or category (e.g., SNOMED CT). The alert code is not necessarly limited to diagnosis.</td>
       </tr>
       <tr>
         <td class="cell-eu"><strong>period.start</strong></td>
