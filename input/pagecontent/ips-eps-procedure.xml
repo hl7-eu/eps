@@ -1,203 +1,254 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
-<head>
-  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-  <title>ISO 27269 — EU Patient Summary — History of Procedures Mapping</title>
-  <!-- <link rel="stylesheet" href="iso-eu-ps.css" /> -->
-</head>
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>ISO 27269 — EU Patient Summary — History of Procedures Mapping</title>
+    <!-- <link rel="stylesheet" href="iso-eu-ps.css" /> -->
+  </head>
 
-<body>
-  <h3>ISO 27269 → EU Patient Summary — History of Procedures</h3><a>  </a><p>  </p>
-  <table class="tbl" role="table" aria-label="ISO 27269 to EU PS — History of Procedures">
-    <thead>
-      <tr>
-        <th class="cap iso">ISO 27269 (IPS)</th>
-        <th class="cap iso">Conformance</th>
-        <th class="cap mid">Relationship</th>
-        <th class="cap eu" colspan="2">EU Patient Summary</th>
-      </tr>
-      <tr>
-        <th class="hdr iso">Element</th>
-        <th class="hdr iso">Conf.</th>
-        <th class="hdr mid">Relation</th>
-        <th class="hdr eu">Element</th>
-        <th class="hdr eu">Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="cell-iso"><strong>History of Procedures content status</strong></td>
-        <td class="cell-iso">C</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu"><strong>section.emptyReason</strong></td>
-        <td class="cell-eu note">Same purpose; EU PS follows the IPS FHIR representation with <code>emptyReason</code>.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso"><strong>History of Procedures</strong></td>
-        <td class="cell-iso">C</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu"><strong>procedures (list)</strong></td>
-        <td class="cell-eu note">Represents the list of procedure entries.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso"><strong>Procedure</strong></td>
-        <td class="cell-iso">M</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu"><strong>Procedure</strong></td>
-        <td class="cell-eu note">Core entry element; identical concept.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Procedure code</td>
-        <td class="cell-iso">R</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">code</td>
-        <td class="cell-eu note">Identification of the procedure; EU PS uses SNOMED CT or relevant code systems.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Procedure description</td>
-        <td class="cell-iso">O</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">text</td>
-        <td class="cell-eu note">Narrative representation of the procedure.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Performed date/time or period</td>
-        <td class="cell-iso">R</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">performed[x]</td>
-        <td class="cell-eu note">Date/period when the procedure occurred.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Performer</td>
-        <td class="cell-iso">O</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">performer.actor / onBehalfOf</td>
-        <td class="cell-eu note">Performer practitioner/role or organization.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Reason</td>
-        <td class="cell-iso">O</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">reasonCode / reasonReference</td>
-        <td class="cell-eu note">Why the procedure was performed.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Outcome</td>
-        <td class="cell-iso">O</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">outcome</td>
-        <td class="cell-eu note">Outcome of the procedure.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Complication</td>
-        <td class="cell-iso">O</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">complication / complicationDetail</td>
-        <td class="cell-eu note">Complications during/after the procedure.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Body site</td>
-        <td class="cell-iso">O</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">bodySite</td>
-        <td class="cell-eu note">Anatomical location of the procedure.</td>
-      </tr>
-      <tr>
-        <td class="cell-iso lvl-1">Device manipulated</td>
-        <td class="cell-iso">O</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">focalDevice.manipulated</td>
-        <td class="cell-eu note">Implanted/removed/manipulated device reference.</td>
-      </tr>
-    </tbody>
-  </table><p>  </p>
+  <body>
+    <h3>ISO 27269 → EU Patient Summary — History of Procedures</h3>
+    <a>    </a>
+    <p>    </p>
+    <table class="tbl" role="table" aria-label="ISO 27269 to EU PS — History of Procedures">
+      <thead>
+        <tr>
+          <th class="cap iso">ISO 27269 (IPS)</th>
+          <th class="cap iso">Conformance</th>
+          <th class="cap mid">Relationship</th>
+          <th class="cap eu" colspan="2">EU Patient Summary</th>
+        </tr>
+        <tr>
+          <th class="hdr iso">Element</th>
+          <th class="hdr iso">Conf.</th>
+          <th class="hdr mid">Relation</th>
+          <th class="hdr eu">Element</th>
+          <th class="hdr eu">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cell-iso">
+            <strong>Procedures content status</strong>
+          </td>
+          <td class="cell-iso">C</td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-eu">
+            <strong>section.emptyReason</strong>
+          </td>
+          <td class="cell-eu note">Same purpose; EU PS follows the IPS FHIR representation with <code>emptyReason</code>.
+          </td>
+        </tr>
+        <tr>
+          <td class="cell-iso">
+            <strong>Procedures</strong>
+          </td>
+          <td class="cell-iso">C</td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-eu">
+            <strong>EHDSProcedure (list)</strong>
+          </td>
+          <td class="cell-eu note">Represents the list of procedure entries.</td>
+        </tr>
+        <tr>
+          <td class="cell-iso">
+            <strong>Procedure</strong>
+          </td>
+          <td class="cell-iso">M</td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-eu">
+            <strong>EHDSProcedure</strong>
+          </td>
+          <td class="cell-eu note">Core entry element; identical concept.</td>
+        </tr>
+        <tr>
+          <td class="cell-iso lvl-1">Procedure code</td>
+          <td class="cell-iso">R</td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-eu">code</td>
+          <td class="cell-eu note">Identification of the procedure; EU PS uses SNOMED CT or relevant code systems.</td>
+        </tr>
+        <tr>
+          <td class="cell-iso lvl-1">Procedure description</td>
+          <td class="cell-iso">RK</td>
+          <td class="cell-mid hl">TBD</td>
+          <td class="cell-eu">note</td>
+          <td class="cell-eu note hl">The model includes only the notes as additional info. Available in the EU core FHIR Procedure</td>
+        </tr>
+        <tr>
+          <td class="cell-iso lvl-1">Body site</td>
+          <td class="cell-iso">O</td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-eu">bodySite</td>
+          <td class="cell-eu note">Anatomical location of the procedure.</td>
+        </tr>
+        <tr>
+          <td class="cell-iso lvl-1">Procedure date</td>
+          <td class="cell-iso">R</td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-eu">date[x]</td>
+          <td class="cell-eu note">Optional in the model</td>
+        </tr>
+      </tbody>
+    </table>
+    <p></p>
 
-  <h3>EU Patient Summary (EHDS Model) → ISO 27269 — History of Procedures</h3><a>  </a><p>  </p>
-  <table class="tbl" role="table" aria-label="EU PS to ISO 27269 — History of Procedures">
-    <thead>
-      <tr>
-        <th class="cap eu">EU Patient Summary</th>
-        <th class="cap mid">Relationship</th>
-        <th class="cap iso" colspan="2">ISO 27269 (IPS)</th>
-      </tr>
-      <tr>
-        <th class="hdr eu">Element</th>
-        <th class="hdr mid">Relation</th>
-        <th class="hdr iso">Element</th>
-        <th class="hdr iso">Notes</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td class="cell-eu"><strong>section.emptyReason</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>History of Procedures content status</strong></td>
-        <td class="cell-iso note">Same function; indicates why no procedures are present.</td>
-      </tr>
-      <tr>
-        <td class="cell-eu"><strong>Procedure</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Procedure</strong></td>
-        <td class="cell-iso note">Core entry concept is aligned.</td>
-      </tr>
-      <tr>
-        <td class="cell-eu lvl-1"><strong>code</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Procedure code</strong></td>
-        <td class="cell-iso note">Coded procedure type.</td>
-      </tr>
-      <tr>
-        <td class="cell-eu lvl-1"><strong>text</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Procedure description</strong></td>
-        <td class="cell-iso note">Narrative description.</td>
-      </tr>
-      <tr>
-        <td class="cell-eu lvl-1"><strong>performed[x]</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Performed date/time or period</strong></td>
-        <td class="cell-iso note">Timing of the procedure.</td>
-      </tr>
-      <tr>
-        <td class="cell-eu lvl-1"><strong>performer.actor / onBehalfOf</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Performer</strong></td>
-        <td class="cell-iso note">Actor/organization performing the procedure.</td>
-      </tr>
-      <tr>
-        <td class="cell-eu lvl-1"><strong>reasonCode / reasonReference</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Reason</strong></td>
-        <td class="cell-iso note">Clinical justification.</td>
-      </tr>
-      <tr>
-        <td class="cell-eu lvl-1"><strong>outcome</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Outcome</strong></td>
-        <td class="cell-iso note">Outcome of the procedure.</td>
-      </tr>
-      <tr>
-        <td class="cell-eu lvl-1"><strong>complication / complicationDetail</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Complication</strong></td>
-        <td class="cell-iso note">Complications (coded/details).</td>
-      </tr>
-      <tr>
-        <td class="cell-eu lvl-1"><strong>bodySite</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Body site</strong></td>
-        <td class="cell-iso note">Anatomical focus.</td>
-      </tr>
-      <tr>
-        <td class="cell-eu lvl-1"><strong>focalDevice.manipulated</strong></td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-iso"><strong>Device manipulated</strong></td>
-        <td class="cell-iso note">Implanted/removed device reference.</td>
-      </tr>
-    </tbody>
-  </table><p>  </p>
+    <h3>EU Patient Summary (EHDS Model) → ISO 27269 — History of Procedures</h3>
+    <a>    </a>
+    <p>    </p>
+    <table class="tbl" role="table" aria-label="EU PS to ISO 27269 — History of Procedures">
+      <thead>
+        <tr>
+          <th class="cap eu">EU Patient Summary</th>
+          <th class="cap mid">Relationship</th>
+          <th class="cap iso" colspan="2">ISO 27269 (IPS)</th>
+        </tr>
+        <tr>
+          <th class="hdr eu">Element</th>
+          <th class="hdr mid">Relation</th>
+          <th class="hdr iso">Element</th>
+          <th class="hdr iso">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="cell-eu">
+            <strong>EHDSProcedure</strong>
+          </td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-iso">
+            <strong>Procedure</strong>
+          </td>
+          <td class="cell-iso note">Core entry concept is aligned.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>header</strong>
+          </td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Administrative header (subject, authorship, status, etc.) not part of ISO 27269 clinical section content.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">header.subject</td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Patient identification handled elsewhere in ISO Document Header.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">header.identifier</td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note"></td>
+        </tr>
+        <tr class="highlight">
+          <td class="cell-eu">header.authorship / author[x] / datetime</td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Authorship metadata; ISO 27269 section does not define this.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">header.lastUpdate</td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Technical metadata.</td>
+        </tr>
 
-</body>
+        <tr>
+          <td class="cell-eu">
+            <strong>code</strong>
+          </td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-iso">
+            <strong>Procedure code</strong>
+          </td>
+          <td class="cell-iso note">Coded procedure type.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>date[x]</strong>
+          </td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-iso">
+            <strong>Procedure date</strong>
+          </td>
+          <td class="cell-iso note"></td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>performer</strong>
+          </td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Present in the EU FHIR Core</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>bodySite</strong>
+          </td>
+          <td class="cell-mid">Equivalent</td>
+          <td class="cell-iso">
+            <strong>Body site</strong>
+          </td>
+          <td class="cell-iso note">Anatomical focus.</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>reason[x]</strong>
+          </td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Present in the EU FHIR Core</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>outcome</strong>
+          </td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Present in the EU FHIR Core</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>complication</strong>
+          </td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Present in the EU FHIR Core</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>deviceUsed</strong>
+          </td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Present in the EU FHIR Core</td>
+        </tr>
+        <tr>
+          <td class="cell-eu">
+            <strong>focalDevice</strong>
+          </td>
+          <td class="cell-mid dash">Not represented</td>
+          <td class="cell-iso dash">—</td>
+          <td class="cell-iso note">Present in the EU FHIR Core</td>
+        </tr>
+        <tr class="highlight">
+          <td class="cell-eu">
+            <strong>note</strong>
+          </td>
+          <td class="cell-mid">source-is-narrower-than-target</td>
+          <td class="cell-iso">
+            <strong>description</strong>
+          </td>
+          <td class="cell-iso note">description is not limited to Additional information.</td>
+        </tr>
+
+
+      </tbody>
+    </table>
+    <p></p>
+
+  </body>
 </html>
 

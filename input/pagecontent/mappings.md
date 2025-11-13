@@ -13,13 +13,13 @@ Legend (conformance): M = Mandatory, R = Required, RK = Required if known, O = O
 
 - ⚠️ [Alerts](ips-eps-alert.html) - 🟡 Ready for first review
 - 🤧 [Allergies and Intolerances](ips-eps-allergy.html) - 🟡 Ready for first review
-- 🛠️ [History of Procedures](ips-eps-procedure.html) -❌ Do not use
-- 💉 [Immunizations](ips-eps-immunization.html) -  🟡 Ready for first review
 - 🩺 [Problems](ips-eps-problem.html) - 🟡 Ready for first review
+- 🛠️ [Procedures](ips-eps-procedure.html) -🟡 Ready for first review
+- 💉 [Immunizations](ips-eps-immunization.html) -  🟡 Ready for first review
 - 💊 [Medications](ips-eps-medication.html) -❌ Do not use
 - 🧪 [Results](ips-eps-results.html) -❌ Do not use
 - 🧍 [Functional Status](ips-eps-functional-status.html) -❌ Do not use
-- 🤰 [History of Pregnancy](ips-eps-pregnancy.html) -❌ Do not use
+- 🤰 [Pregnancy](ips-eps-pregnancy.html) -❌ Do not use
 - 🦾 [Medical Devices and Implants](ips-eps-medical-devices.html) -❌ Do not use
 - 🗺️ [Care Plan](ips-eps-care-plan.html) -❌ Do not use
 - 🧑‍🤝‍🧑 [Social History](ips-eps-social-history.html) -❌ Do not use
