@@ -14,8 +14,6 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 // Verify if all the IPS rules are reported in the profile
 //================================
 
-
-
 * entry ^slicing.discriminator[0].type = #type
 * entry ^slicing.discriminator[=].path = "resource"
 * entry ^slicing.discriminator[+].type = #profile
@@ -81,7 +79,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[imagingstudy].resource only $ImagingStudy-uv-ips  //EuEps */
 
 * entry[immunization].resource 1..
-* entry[immunization].resource only ImmunizationEuEps
+* entry[immunization].resource only ImmunizationEuCore // check if this works...
 
 * entry[flag].resource 1..
 * entry[flag].resource only FlagEuCore
@@ -89,7 +87,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 /* * entry[media].resource 1..
 * entry[media].resource only $Media-observation-uv-ips */
 * entry[medication].resource 1..
-* entry[medication].resource only MedicationEuEps  //EuEps
+* entry[medication].resource only MedicationEuEps
 
 * entry[medicationrequest].resource 1..
 * entry[medicationrequest].resource only MedicationRequestEuEps

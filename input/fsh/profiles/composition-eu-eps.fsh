@@ -161,7 +161,9 @@ This section can also be used to hold the Medical Alert information (other alert
  
   * insert SectionEntrySliceComRules(Patient's immunization status and pertinent history., It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known.)
 
-  * insert SectionEntrySliceDefRules (immunization, 0.. , SHORT Immunization , DESCR Immunizartion , ImmunizationEuEps)
+  * insert SectionEntrySliceDefRules (immunization, 0.. , SHORT Immunization , DESCR Immunizartion , ImmunizationEuCore) 
+  
+  // ImmunizationEuEps)
 
 /*   * ^short = "Immunizations"
   * ^definition = """The immunizations section contains a narrative description of the immunizations administered to the patient in the past. It includes entries for medication administration as described in related profiles.""" 
