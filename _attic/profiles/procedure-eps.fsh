@@ -1,11 +1,11 @@
 Profile: ProcedureEuEps
-Parent: $Procedure-uv-ips
+Parent: ProcedureEuCore
 // Parent: ProcedureUvIps
 Id: procedure-eu-eps
 Title:    "Procedure (EPS)"
 Description: "This profile represents the constraints applied to the Procedure resource by this guide."
 
-// * insert ImposeProfile ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)
+* insert ImposeProfile ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)
 
 /* * extension contains $procedure-targetBodyStructure named bodySite 0..1
 * extension[bodySite].valueReference only Reference(BodyStructureEuLab) */

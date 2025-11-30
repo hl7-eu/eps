@@ -152,7 +152,7 @@ This section can also be used to hold the Medical Alert information (other alert
 
   * insert SectionEntrySliceComRules(Patient past procedures pertinent to the scope of this document., DESC Procedures)
   // entry slices
-  * insert SectionEntrySliceDefRules (procedure, 0.. , Clinical problems or conditions currently being monitored for the patient. , It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available\, or that no relevant problems are known. , ProcedureEuEps)
+  * insert SectionEntrySliceDefRules (procedure, 0.. , Clinical problems or conditions currently being monitored for the patient. , It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available\, or that no relevant problems are known. , ProcedureEuCore)
 
 
 * section[sectionImmunizations]

@@ -101,7 +101,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[practitionerrole].resource only PractitionerRoleEuCore  //EuEps 
 
 * entry[procedure].resource 1..
-* entry[procedure].resource only ProcedureEuEps
+* entry[procedure].resource only ProcedureEuCore
 
 /*
 * entry[organization].resource 1..

@@ -38,49 +38,49 @@
         <td class="cell-iso">C</td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-eu"><strong>medications (list)</strong></td>
-        <td class="cell-eu note">Represents the list of medication statements.</td>
+        <td class="cell-eu note">Represents the list of medication statements. In the Patient Summary model is the list of <code>medicationTreatment</code> in the <code>medicationSummary</code> section</td>
       </tr>
       <tr>
         <td class="cell-iso"><strong>Medication/Statement</strong></td>
         <td class="cell-iso">M</td>
         <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu"><strong>MedicationStatement</strong></td>
-        <td class="cell-eu note">Core entry element; identical concept for patient medications.</td>
+        <td class="cell-eu"><strong>medicationTreatment</strong></td>
+        <td class="cell-eu note">It is represented by the EHDSMedicationStatement model.</td>
       </tr>
       <tr>
-        <td class="cell-iso lvl-1">Medication code or reference</td>
+        <td class="cell-iso lvl-1 hl">Medication code or reference</td>
         <td class="cell-iso">R</td>
-        <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">medication[x]</td>
-        <td class="cell-eu note">CodeableConcept or reference to Medication resource.</td>
+        <td class="cell-mid">source-is-broader-than-target</td>
+        <td class="cell-eu">medication</td>
+        <td class="cell-eu note">The model makes explicit only the reference to the EHDSMedicationStatement.</td>
       </tr>
       <tr>
         <td class="cell-iso lvl-1">Status</td>
         <td class="cell-iso">R</td>
         <td class="cell-mid">Equivalent</td>
         <td class="cell-eu">status</td>
-        <td class="cell-eu note">Active, completed, etc.</td>
+        <td class="cell-eu note">EHDSMedicationStatement model</td>
       </tr>
       <tr>
         <td class="cell-iso lvl-1">Effective period/date</td>
         <td class="cell-iso">O</td>
         <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">effective[x]</td>
-        <td class="cell-eu note">When the medication was/is taken.</td>
+        <td class="cell-eu">periodOfUse</td>
+        <td class="cell-eu note">Period when patient took, is taking or is expected to take the medication</td>
       </tr>
       <tr>
         <td class="cell-iso lvl-1">Reason</td>
         <td class="cell-iso">O</td>
         <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">reasonCode / reasonReference</td>
-        <td class="cell-eu note">Why the medication is/was taken.</td>
+        <td class="cell-eu">medicationReason / medicationReasonText</td>
+        <td class="cell-eu note">Reason for the use of the medication</td>
       </tr>
       <tr>
         <td class="cell-iso lvl-1">Dosage instructions</td>
         <td class="cell-iso">O</td>
         <td class="cell-mid">Equivalent</td>
-        <td class="cell-eu">dosage</td>
-        <td class="cell-eu note">Human-readable dosing and structured fields.</td>
+        <td class="cell-eu">dosageInstructions</td>
+        <td class="cell-eu note">Details of how medication is/was taken or should be taken</td>
       </tr>
     </tbody>
   </table><p>  </p>
