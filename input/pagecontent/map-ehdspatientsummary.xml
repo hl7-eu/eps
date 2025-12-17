@@ -1,0 +1,815 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>EHDSPatientSummary → Composition (EPS)</title>
+  </head>
+  <body>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Ongoing alignment:</strong>
+              The Xt-EHR logical models are under active revision and continuous refinement.
+              Updates from Xt-EHR will be progressively incorporated into this Implementation
+              Guide to maintain alignment with the evolving EHDS specifications.
+        </div>
+      </div>
+    </div>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Yellow row/cells:</strong>
+              In this ballot publication, some row/cells of the mapping table have been left in yellow to indicate areas requiring further review or refinement; including feedback from the Xt-EHR joint action (see note above). These highlights will be addressed in subsequent updates to ensure accuracy and completeness of the mappings.
+        </div>
+      </div>
+    </div>
+    <h3>EHDSPatientSummary → Composition (EPS)</h3>
+    <a> </a>
+    <p></p>
+    <p>
+      This page explains how conceptual elements from the EHDSPatientSummary logical model are expressed
+      in the corresponding FHIR CompositionEuEps profile used by this Implementation Guide.
+    </p>
+    <p></p>
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSPatientSummary.html" target="_blank">
+            EHDSPatientSummary
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-composition-eu-eps.html">
+            CompositionEuEps
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p></p>
+    <div class="table-wrap">
+      <table summary="EHDSPatientSummary →  Composition (EPS)">
+        <caption>EHDSPatientSummary →  Composition (EPS)</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">EHDSPatientSummary (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">Composition (EPS)</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- HEADER BLOCK -->
+          <tr>
+            <td>header</td>
+            <td>Document header elements.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>.</td>
+            <td>Composition-level metadata.</td>
+            <td>CompositionEuEps constrains cardinalities and section slices for Patient Summary.</td>
+          </tr>
+          <tr>
+            <td>header.subject</td>
+            <td>Patient/subject information.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>subject</td>
+            <td>Who or what the composition is about.</td>
+            <td>Reference to PatientEuEps.</td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>Unique identifier of the document.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>identifier</td>
+            <td>Version-independent identifier for the Patient Summary.</td>
+            <td>Multiple identifiers allowed through profiling; Composition R4 is 0..1.</td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>Unique identifier of the document.</td>
+            <td>equivalent</td>
+            <td>Bundle</td>
+            <td>identifier</td>
+            <td>Persistent identifier for the Patient Summary document bundle.</td>
+            <td>Represents a specific rendition/version of the document.</td>
+          </tr>
+          <tr>
+            <td>header.authorship</td>
+            <td>Resource authoring details.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>author</td>
+            <td>Authors of the Patient Summary.</td>
+            <td>Composition.date captures the authoring timestamp.</td>
+          </tr>
+          <tr>
+            <td>header.authorship.author[x]</td>
+            <td>Author(s) by whom the resource was/were authored.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>author</td>
+            <td>Logical authors list.</td>
+            <td>Reference to Practitioner / PractitionerRole / Organization / Device per profile.</td>
+          </tr>
+          <tr>
+            <td>header.authorship.datetime</td>
+            <td>Date and time of authoring/issuing.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>date</td>
+            <td>Composition creation time.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.lastUpdate</td>
+            <td>Date and time of the last update to the resource.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>meta.lastUpdated</td>
+            <td>System-level modification time.</td>
+            <td class="highlight-yellow">Only applicable when representing the system update instant (YYYY-MM-DDThh:mm:ss.sss+zz:zz).</td>
+          </tr>
+          <tr>
+            <td>header.status</td>
+            <td>Status of the resource or document.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>status</td>
+            <td>The workflow/clinical status of this composition.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.statusReason[x]</td>
+            <td>Reason for the current status of the resource.</td>
+            <td>no-map</td>
+            <td>Composition</td>
+            <td></td>
+            <td></td>
+            <td>No native element.</td>
+          </tr>
+          <tr>
+            <td>header.language</td>
+            <td>Language of the resource (IETF BCP-47).</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>language</td>
+            <td>Language of the narrative.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.documentType</td>
+            <td>Type of document at hand (e.g., LOINC 60591-5 Patient summary document).</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>type</td>
+            <td>Kind of composition.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.documentTitle</td>
+            <td>Human readable document title.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>title</td>
+            <td>Official human-readable label.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.period</td>
+            <td>Time of service that is being documented.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>event.period</td>
+            <td>Period covered by the composition content.</td>
+            <td>Map to the primary Composition.event entry.</td>
+          </tr>
+          <tr>
+            <td>header.version</td>
+            <td>Business version of the document.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>extension:version</td>
+            <td>Document business version.</td>
+            <td>Use composition.version (R5) or the pre-adopted extension for R4.</td>
+          </tr>
+          <tr>
+            <td>header.attestation</td>
+            <td>Document attestation details.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>attester</td>
+            <td>Participants responsible for attesting the composition.</td>
+            <td>Use attester.mode to distinguish assertions.</td>
+          </tr>
+          <tr>
+            <td>header.attestation.attester</td>
+            <td>Attester who validated the document.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.party</td>
+            <td>Who attested the composition.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.attestation.datetime</td>
+            <td>Date and time of the approval of the document by Attester.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.time</td>
+            <td>When the composition was attested.</td>
+            <td>Set attester.mode as appropriate (e.g., professional).</td>
+          </tr>
+          <tr>
+            <td>header.legalAuthentication</td>
+            <td>Document legal authentication details.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>attester</td>
+            <td>Legal authenticator.</td>
+            <td>Use attester.mode = "legal".</td>
+          </tr>
+          <tr>
+            <td>header.legalAuthentication.legalAuthenticator</td>
+            <td>The person taking responsibility for the medical content of the document.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>attester.party</td>
+            <td>Legal authenticator party.</td>
+            <td>Use attester.mode = "legal".</td>
+          </tr>
+          <tr>
+            <td>header.legalAuthentication.datetime</td>
+            <td>Date and time when the document was authorised.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>attester.time</td>
+            <td>When the composition was attested.</td>
+            <td>Use attester.mode = "legal".</td>
+          </tr>
+          <tr>
+            <td>header.eventType</td>
+            <td>Categorisation of the event covered by the document.</td>
+            <td>related-to</td>
+            <td>Composition</td>
+            <td>event.code</td>
+            <td>Codes describing the event(s) related to the composition.</td>
+            <td class="highlight-yellow">Clarify whether codes reflect event tags or document classification.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.serviceSpecialty</td>
+            <td>Additional details about where the content was created (e.g. clinical specialty).</td>
+            <td>source-is-narrower-than-target</td>
+            <td>Composition</td>
+            <td>category</td>
+            <td>Categorizes the composition.</td>
+            <td>Service Speciality is out of scope for a Patient Summary. Give feedback to Xt-EHR.</td>
+          </tr>
+          <tr>
+            <td>header.custodian</td>
+            <td>Organisation that is in charge of maintaining the document/report.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>custodian</td>
+            <td>Organization responsible for maintenance.</td>
+            <td>Reference to Organization.</td>
+          </tr>
+          <tr>
+            <td>header.confidentiality</td>
+            <td>Level of confidentiality of the document.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>confidentiality</td>
+            <td>As defined by confidentiality codes.</td>
+            <td>Implicit value is normal.</td>
+          </tr>
+          <tr>
+            <td>presentedForm</td>
+            <td>A narrative easy-to-read representation of the full data set (e.g. PDF).</td>
+            <td>related-to</td>
+            <td>DocumentReference</td>
+            <td>content.attachment</td>
+            <td>Embedded or referenced rendition of the Patient Summary.</td>
+            <td>Include a DocumentReference in the bundle linked from Composition via event/relatesTo if provided.</td>
+          </tr>
+          <!-- SECTION: ALERTS -->
+          <tr>
+          <td>alerts</td>
+          <td>Section: Alerts.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionAlerts</td>
+            <td>Alert section</td>
+            <td>Use LOINC 104605-1 </td>
+          </tr>
+          <tr>
+            <td>alerts.narrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Alerts section.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>alerts.emptyReason</td>
+            <td>Reason for absence of data.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.emptyReason</td>
+            <td>Why no alerts are present.</td>
+            <td></td>
+          </tr>
+          <tr>
+          <td>alerts.medicalAlert</td>
+          <td>Description of medical alerts.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionAlert.entry:flag</td>
+          <td>Alert entries.</td>
+          <td>Reference to <code>FlagEuCore.</code></td>
+          </tr>
+          <!-- SECTION: ALLERGIES -->
+          <tr>
+          <td>allergiesAndIntolerances</td>
+          <td>Section: Allergies and intolerances.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionAllergies</td>
+          <td>Allergy and intolerance section.</td>
+          <td>Mandatory slice in CompositionEuEps.</td>
+          </tr>
+          <tr>
+            <td>allergiesAndIntolerances.narrative</td>
+            <td>Text summary of the content in section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Allergies section.</td>
+            <td></td>
+          </tr>
+          <tr>
+          <td>allergiesAndIntolerances.allergyIntolerance</td>
+          <td>List of structured allergies and intolerances.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionAllergies.entry:allergyOrIntolerance</td>
+          <td>Allergy intolerance entries.</td>
+          <td>Reference to AllergyIntoleranceEuCore.</td>
+          </tr>
+          <tr>
+            <td>allergiesAndIntolerances.emptyReason</td>
+            <td>Use if no Allergies are listed.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.emptyReason</td>
+            <td>Reason for missing allergy data.</td>
+            <td></td>
+          </tr>
+          <!-- SECTION: PROBLEMS -->
+          <tr>
+          <td>problems</td>
+          <td>Medical problems.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionProblems</td>
+          <td>Active problems section.</td>
+          <td>Use LOINC 11450-4</td>
+          </tr>
+          <tr>
+            <td>problems.narrative</td>
+            <td>Text summary of the content in the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Problems section.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>problems.emptyReason</td>
+            <td>Reason for absence of data.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.emptyReason</td>
+            <td>Why no problems are listed.</td>
+            <td></td>
+          </tr>
+          <tr>
+          <td>problems.problems</td>
+          <td>Health conditions affecting the patient.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionProblems.entry:problem</td>
+          <td>Problem entries.</td>
+          <td>Reference to ConditionEuEps.</td>
+          </tr>
+          <!-- SECTION: MEDICATION SUMMARY -->
+          <tr>
+          <td>medicationSummary</td>
+          <td>Section: Medication Summary.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionMedications</td>
+          <td>Medication summary section.</td>
+          <td>Use LOINC 10160-0</td>
+          </tr>
+          <tr>
+            <td>medicationSummary.narrative</td>
+            <td>Text summary of the content in the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Medication section.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>medicationSummary.emptyReason</td>
+            <td>Use if no medicines are listed.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.emptyReason</td>
+            <td>Reason for missing medication data.</td>
+            <td></td>
+          </tr>
+          <tr>
+          <td>medicationSummary.medicationTreatment</td>
+          <td>Medication treatment/prescription relevant for this patient summary.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionMedications.entry:medicationStatementOrRequest</td>
+          <td>Medication entries.</td>
+          <td>Reference to MedicationStatementEuEps (or MedicationRequest/Administration/Dispense per profile).</td>
+          </tr>
+          <!-- SECTION: MEDICAL DEVICES -->
+          <tr>
+          <td>medicalDevicesAndImplants</td>
+          <td>Section: Medical devices and implants.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionMedicalDevices</td>
+          <td>Medical devices section.</td>
+          <td>Use LOINC 46264-8</td>
+          </tr>
+          <tr>
+            <td>medicalDevicesAndImplants.narrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for devices and implants.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>medicalDevicesAndImplants.emptyReason</td>
+            <td>Reason for absence of data.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.emptyReason</td>
+            <td>Why no devices are listed.</td>
+            <td></td>
+          </tr>
+          <tr>
+          <td>medicalDevicesAndImplants.medicalDevice</td>
+          <td>Implanted and external medical devices.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionMedicalDevices.entry:deviceStatement</td>
+          <td>Device use entries.</td>
+          <td>Reference to DeviceUseStatementEuEps.</td>
+          </tr>
+          <!-- SECTION: PROCEDURES -->
+          <tr>
+          <td>procedures</td>
+          <td>Section: Procedures.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionProceduresHx</td>
+          <td>Procedures section.</td>
+          <td>Use LOINC 47519-4</td>
+          </tr>
+          <tr>
+            <td>procedures.narrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Procedures section.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>procedures.emptyReason</td>
+            <td>Reason for absence of data.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.emptyReason</td>
+            <td>Why no procedures are listed.</td>
+            <td></td>
+          </tr>
+          <tr>
+          <td>procedures.procedure</td>
+          <td>List of procedures.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionProceduresHx.entry:procedure</td>
+          <td>Procedure entries.</td>
+          <td>Reference to ProcedureEuCore.</td>
+          </tr>
+          <!-- SECTION: VACCINATION -->
+          <tr>
+          <td>vaccination</td>
+          <td>Section: Vaccination/prophylaxis.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionImmunizations</td>
+          <td>Immunizations section.</td>
+          <td>Use LOINC 11369-6</td>
+          </tr>
+          <tr>
+            <td>vaccination.narrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Immunizations section.</td>
+            <td></td>
+          </tr>
+          <tr>
+          <td>vaccination.vaccination</td>
+          <td>Immunisations given to the patient and their status.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionImmunizations.entry:immunization</td>
+          <td>Immunization entries.</td>
+          <td>Reference to ImmunizationEuCore.</td>
+          </tr>
+          <!-- SECTION: FUNCTIONAL STATUS -->
+          <tr>
+          <td>functionalStatus</td>
+          <td>Section: Functional status.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionFunctionalStatus</td>
+          <td>Functional status section.</td>
+          <td>Use LOINC 47420-5</td>
+          </tr>
+          <tr>
+            <td>functionalStatus.narrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Functional Status section.</td>
+            <td></td>
+          </tr>
+          <tr>
+          <td>functionalStatus.functionalStatusAssessment</td>
+          <td>Functional status assessments.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionFunctionalStatus.entry:functionalStatus</td>
+          <td>Functional status entries.</td>
+          <td>Reference to Observation/Condition representing functional status (per profile guidance).</td>
+          </tr>
+          <!-- SECTION: SOCIAL HISTORY -->
+          <tr>
+          <td>socialHistory</td>
+          <td>Section: Social history.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionSocialHistory</td>
+          <td>Social history section.</td>
+          <td>Uses slice defined in CompositionEuEps.</td>
+          </tr>
+          <tr>
+            <td>socialHistory.narrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Social History section.</td>
+            <td></td>
+          </tr>
+          <tr>
+          <td class="highlight-yellow">socialHistory.socialHistoryObservation</td>
+          <td>Social history observations related to health.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionSocialHistory.entry</td>
+          <td>Social history entries.</td>
+          <td>check the target profiles to be used.</td>
+          </tr>
+          <!-- SECTION: PREGNANCY HISTORY -->
+          <tr>
+          <td>pregnancyHistory</td>
+          <td>Section: Pregnancy history.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionPregnancyHx</td>
+          <td>Pregnancy history section.</td>
+          <td>Use LOINC 10162-6</td>
+          </tr>
+          <tr>
+            <td>pregnancyHistory.generatedNarrative</td>
+            <td>Generated text summary of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Pregnancy section.</td>
+            <td></td>
+          </tr>
+          <tr>
+          <td>pregnancyHistory.currentPregnancyStatus</td>
+          <td>Current pregnancy status.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionPregnancyHx.entry:pregnancyStatus</td>
+          <td>Pregnancy status entry.</td>
+          <td>Reference to ObservationPregnancyStatusUvIps.</td>
+          </tr>
+          <tr class="highlight-yellow">
+          <td>pregnancyHistory.previousPregnanciesStatus</td>
+          <td>Overall status of previous pregnancies.</td>
+          <td>related-to</td>
+          <td>Composition</td>
+          <td>section:sectionPregnancyHx.entry:pregnancyOutcome</td>
+          <td>Summary of prior pregnancies.</td>
+          <td>Check target profiles. Use ObservationPregnancyOutcomeUvIps or equivalent summary observation.</td>
+          </tr>
+          <tr class="highlight-yellow">
+          <td>pregnancyHistory.previousPregnancies</td>
+          <td>History of previous pregnancies.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionPregnancyHx.entry:pregnancyOutcome</td>
+          <td>Pregnancy outcome entries.</td>
+          <td>Check target profiles. Reference to ObservationPregnancyOutcomeUvIps.</td>
+          </tr>
+          <!-- SECTION: TRAVEL HISTORY -->
+          <tr class="highlight-yellow">
+          <td>travelHistory</td>
+          <td>Relevant information about the patient's recent travel history.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionTravelHx</td>
+          <td>Travel history section.</td>
+          <td>Uses LOINC 10182-4. MISSING to be added</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>travelHistory.narrative</td>
+            <td>Text summary of the content in the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Travel History section. MISSING to be added</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+          <td>travelHistory.travelHistory</td>
+          <td>Travel history for one country.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionTravelHx.entry</td>
+          <td>Travel history entries.</td>
+          <td>Reference to ObservationTravelEuHdr. MISSING to be added</td>
+          </tr>
+          <!-- SECTION: PATIENT STORY -->
+          <tr>
+          <td>patientStory</td>
+          <td>What the patient believes to be important for the attending clinician to know.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionPatientHx</td>
+          <td>Patient story section.</td>
+          <td class="highlight-yellow">Uses slice defined in CompositionEuEps. check if the propoer loinc code is used and the patient history section is added.</td>
+          </tr>
+          <tr>
+            <td>patientStory.narrative</td>
+            <td>Text summary of the content in the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Patient Story section.</td>
+            <td></td>
+          </tr>
+          <!-- SECTION: ADVANCE DIRECTIVES -->
+          <tr>
+          <td>advanceDirectives</td>
+          <td>Section: Advance Directives.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionAdvanceDirectives</td>
+          <td>Advance directives section.</td>
+          <td>Use LOINC 42348-3</td>
+          </tr>
+          <tr>
+            <td>advanceDirectives.narrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Advance Directives section.</td>
+            <td></td>
+          </tr>
+          <tr>
+          <td>advanceDirectives.advanceDirective</td>
+          <td>Provision for healthcare decisions.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionAdvanceDirectives.entry</td>
+          <td>Advance directive entries.</td>
+          <td>Reference to ConsentEuEps or DocumentReference.</td>
+          </tr>
+          <!-- SECTION: RESULTS -->
+          <tr class="highlight-yellow">
+          <td>results</td>
+          <td>Section: Observation results.</td>
+          <td>source-is-broader-than-target</td>
+          <td>Composition</td>
+          <td>section:sectionResults</td>
+          <td>Results section.</td>
+          <td>Slice defined for coded results. CHECK IF THIS MAPS TO BOTH DIANGOSTIC RESULTS AND VITAL SIGNS. Section to be refined</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>results</td>
+            <td>Section: Observation results.</td>
+            <td>source-is-broader-than-target</td>
+            <td>Composition</td>
+            <td>section:sectionVitalSigns</td>
+            <td>Vital Signs section.</td>
+            <td>Slice defined for coded results. CHECK IF THIS MAPS TO BOTH DIANGOSTIC RESULTS AND VITAL SIGNS. Section to be refined</td>
+          </tr>
+          <tr>
+            <td>results.narrative</td>
+            <td>Narrative content of the section.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Results section.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+          <td>results.resultObservation[x]</td>
+          <td>Observation results pertaining to the subject of care.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionResults.entry</td>
+          <td>Result observation entries.</td>
+          <td>Reference to Observation. Target profiles to be defined.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>results.resultObservation[x]</td>
+            <td>Observation results pertaining to the subject of care.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section:sectionVitalSigns.entry</td>
+            <td>Result observation entries.</td>
+            <td>Reference to Observation. Target profiles to be defined.</td>
+          </tr>
+          <!-- SECTION: CARE PLAN -->
+          <tr>
+          <td>carePlan</td>
+          <td>Section: Care plans.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionPlanOfCare</td>
+          <td>Care plan section.</td>
+          <td>Slice for plan of care in CompositionEuEps.</td>
+          </tr>
+          <tr>
+            <td>carePlan.narrative</td>
+            <td>Narrative containing the plan including proposals, goals, and order requests.</td>
+            <td>equivalent</td>
+            <td>Composition</td>
+            <td>section.text</td>
+            <td>Narrative for Care Plan section.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+          <td>carePlan.carePlanEntry</td>
+          <td>Describes the intention of how care will be delivered.</td>
+          <td>equivalent</td>
+          <td>Composition</td>
+          <td>section:sectionPlanOfCare.entry</td>
+          <td>Care plan entries.</td>
+          <td>taget profile to be defined</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:2rem;color:#555;">
+      Return to overview: <a href="modelmap.html">EHDS Logical Models →  FHIR Profiles</a>
+    </p>
+  </body>
+</div>

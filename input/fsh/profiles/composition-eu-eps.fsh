@@ -78,6 +78,7 @@ Please review and complete the implementation of the IPS constraints, including 
     sectionPlanOfCare 0..1  and
     sectionSocialHistory 0..1  and
     sectionVitalSigns 0..1 
+   // MISSING TO BE ADDED and sectionTravelHx 0..1
 
 /* * section 1..
 * section ^slicing.discriminator[0].type = #pattern

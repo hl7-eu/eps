@@ -5,7 +5,7 @@ name:  Hl7EuPatientSummaryIg
 title: HL7 Europe Patient Summary
 description: This guide describes how the Patient Summary can be represented in the European REALM.
 status: draft # draft | active | retired | unknown
-version: 0.0.1-ci #
+version: 1.0.0-ci-build #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: ci-build # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -54,8 +54,6 @@ dependencies:
 pages:
   index.md:
     title: Home
-  downloads.md:
-    title: Downloads
   logicalModel.md:
     title: eHN guideline data set
   contributors.md:
@@ -66,12 +64,26 @@ pages:
     title: Known Issues
   mappings.md:
     title: ISO ↔ EU PS Mapping Overview
+  missing-data.md:
+    title: Handling Missing Data
+  copyright.md:
+    title: Copyright
+  crossversionanalysis.md:
+    title: Cross-version Analysis
+  downloads.md:
+    title: Downloads
+  dependencies.md:
+    title: Dependencies
+  introduction.md:
+    title: Introduction
 # == MODEL MAPS
 #  PatientSummary-map.html:
 #    title: PatientSummary Relationships
 #  Subject-map.html:
 #    title: Subject Relationships
 # == MODEL MAPS
+  map-ehdspatientsummary.xml:
+    title: EHDSPatientSummary to Composition (EPS)
 
 # == IPS COMPARISON
   ips-eps-section-comparison.html:
@@ -165,6 +177,7 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
   apply-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
+  ips-comparison: 2.0.0 
   # excludexml: false
   # excludejson: false
   # excludettl: true
@@ -197,33 +210,40 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Home: index.html
-  Table of Contents: toc.html
-  Functional Specifications:
-    eHN Guideline dataset: logicalModel.html
+  Introduction: 
+    Patient Summary: introduction.html
+    Handling Missing Data: missing-data.html
+  Functional:
+    Logical Models: logicalmodel.html
     Obligations: obligations.html
   Model Maps:
-    Mapping Overview: mappings.html
-    IPS to EPS Section Comparison: ips-eps-section-comparison.html
-    IPS to EPS Alert Comparison: ips-eps-alert.html
-    IPS to EPS Allergy Comparison: ips-eps-allergy.html
-    IPS to EPS Procedure Comparison: ips-eps-procedure.html
-    IPS to EPS Immunization Comparison: ips-eps-immunization.html
-    IPS to EPS Problem Comparison: ips-eps-problem.html
-    IPS to EPS Medication Comparison: ips-eps-medication.html
-    IPS to EPS Results Comparison: ips-eps-results.html
-    IPS to EPS Functional Status Comparison: ips-eps-functional-status.html
-    IPS to EPS History of Pregnancy Comparison: ips-eps-pregnancy.html
-    IPS to EPS Medical Devices Comparison: ips-eps-medical-devices.html
-    IPS to EPS Care Plan Comparison: ips-eps-care-plan.html
-    IPS to EPS Social History Comparison: ips-eps-social-history.html
-    IPS to EPS Vital Signs Comparison: ips-eps-vital-signs.html
-    IPS to EPS Patient Story Comparison: ips-eps-patient-story.html
-    IPS to EPS Advance Directives Comparison: ips-eps-advance-directives.html
-  Artifacts: artifacts.html
+    Model Mapping: mappings.html
+    EHDSPatientSummary to Composition (EPS): map-ehdspatientsummary.html
+#    IPS to EPS Section Comparison: ips-eps-section-comparison.html
+#    IPS to EPS Alert Comparison: ips-eps-alert.html
+#    IPS to EPS Allergy Comparison: ips-eps-allergy.html
+#    IPS to EPS Procedure Comparison: ips-eps-procedure.html
+#    IPS to EPS Immunization Comparison: ips-eps-immunization.html
+#    IPS to EPS Problem Comparison: ips-eps-problem.html
+#    IPS to EPS Medication Comparison: ips-eps-medication.html
+#    IPS to EPS Results Comparison: ips-eps-results.html
+#    IPS to EPS Functional Status Comparison: ips-eps-functional-status.html
+#    IPS to EPS History of Pregnancy Comparison: ips-eps-pregnancy.html
+#    IPS to EPS Medical Devices Comparison: ips-eps-medical-devices.html
+#    IPS to EPS Care Plan Comparison: ips-eps-care-plan.html
+#    IPS to EPS Social History Comparison: ips-eps-social-history.html
+#    IPS to EPS Vital Signs Comparison: ips-eps-vital-signs.html
+#    IPS to EPS Patient Story Comparison: ips-eps-patient-story.html
+#    IPS to EPS Advance Directives Comparison: ips-eps-advance-directives.html
   About:
-    Downloads: downloads.html
-    Authors and contributors: contributors.html
-    Known Issues: knownIssues.html
+    Authors and Contributors: authors.html
+    Known/Open Issues: knownissues.html
+    Download: downloads.html
+    Dependencies: dependencies.html
+    Change Log: changes.html
+    Copyright: copyright.html
+    Cross-version Analysis: crossversionanalysis.html
+  Artifacts: artifacts.html
 
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
@@ -322,7 +342,7 @@ groups:
 
     eHNPatientSummary:
       name:  European Patient Summary
-      description: HEuropean Patient Summary entry profiles.
+      description: European Patient Summary entry profiles.
       resources:
         - StructureDefinition/bundle-eu-eps
         - StructureDefinition/composition-eu-eps
