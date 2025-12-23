@@ -497,7 +497,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-c51f0322-04a3-467a-821d-de1b71ec3674
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -523,7 +523,7 @@ Simvastatin 10 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-be605cbd-5464-44e5-8505-112b63e4476e
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "be605cbd-5464-44e5-8505-112b63e4476e"
 * status = #active
@@ -553,7 +553,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-1e68ffb2-93da-438e-8868-fcbd1ab0f907
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -579,7 +579,7 @@ Clopidogrel (as clopidogrel bisulfate) 75 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-8cbe1169-5931-46d3-9ae0-c0d5cc70e095
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "8cbe1169-5931-46d3-9ae0-c0d5cc70e095"
 * status = #active
@@ -608,7 +608,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-bf02ce7e-905e-43de-a3ec-8e37fdfbe915
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -634,7 +634,7 @@ Simvastatin 20 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-a8c8ce9a-675b-42a6-95b4-3e0eb851bf60
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "a8c8ce9a-675b-42a6-95b4-3e0eb851bf60"
 * status = #active
@@ -663,7 +663,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-44179f85-6c65-45ef-9c5d-7d45d76b1805
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -689,7 +689,7 @@ Nitroglycerin 400 microgram/actuation sublingual spray, Sublingual spray
 
 
 Instance: Instance-MedicationStatement-51d9bda8-ab36-4532-87f5-778eed9500c9
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "51d9bda8-ab36-4532-87f5-778eed9500c9"
 * status = #active
@@ -718,7 +718,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-487123d0-ec4d-4663-b659-51a066e8bb8e
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -744,7 +744,7 @@ Metoprolol tartrate (as metoprolol succinate) 100 mg prolonged-release oral tabl
 
 
 Instance: Instance-MedicationStatement-f88d1363-b624-45cb-a182-71c4e415c5d2
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "f88d1363-b624-45cb-a182-71c4e415c5d2"
 * status = #active

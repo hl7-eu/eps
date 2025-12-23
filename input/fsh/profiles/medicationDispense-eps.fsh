@@ -8,9 +8,9 @@ Description: "This profile constrains the MedicationDispense resource for the pu
 
 * insert SetFmmAndStatusRule (1, draft)
 
-* medication[x] only CodeableConcept or Reference(MedicationEuEps)
+* medication[x] only CodeableConcept or Reference(MedicationEuCore)
 
-// * medicationReference only Reference(MedicationEuEps)
+// * medicationReference only Reference(MedicationEuCore)
 
 
 * identifier 

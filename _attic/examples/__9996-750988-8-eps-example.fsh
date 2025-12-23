@@ -530,7 +530,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-771ba0b6-60e8-4120-ba55-a138d987c0da
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -556,7 +556,7 @@ Carvedilol 25 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-cd5561ce-b4bd-47c9-a53f-472dd5fc07e1
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "cd5561ce-b4bd-47c9-a53f-472dd5fc07e1"
 * status = #active
@@ -586,7 +586,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-022993c0-c196-4c0d-b62d-abcdbb263f40
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -612,7 +612,7 @@ Furosemide 40 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-cdbdb72e-3be0-445d-b27f-11d23bf8a3a6
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "cdbdb72e-3be0-445d-b27f-11d23bf8a3a6"
 * status = #active
@@ -642,7 +642,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-2864cab3-4e35-410c-bc26-25aabad27c9d
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -668,7 +668,7 @@ Clopidogrel (as clopidogrel bisulfate) 75 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-59fbe9ea-dd07-4d15-820e-79ff5d055d31
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "59fbe9ea-dd07-4d15-820e-79ff5d055d31"
 * status = #active
@@ -697,7 +697,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-96bfa0a9-b2f9-408b-af91-7192f81a9997
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -723,7 +723,7 @@ Simvastatin 20 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-34176867-0a19-46e6-ace1-dafeedd393f4
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "34176867-0a19-46e6-ace1-dafeedd393f4"
 * status = #active
@@ -752,7 +752,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-f25c9d95-2a9b-443a-aa35-635326c95a61
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -778,7 +778,7 @@ Nitroglycerin 400 microgram/actuation sublingual spray, Sublingual spray
 
 
 Instance: Instance-MedicationStatement-3065ed7b-d691-4d04-88d5-5d2b1ae6ef42
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "3065ed7b-d691-4d04-88d5-5d2b1ae6ef42"
 * status = #active
@@ -807,7 +807,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-ad830e0f-a543-4319-801d-8ab9b1be9ce7
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -833,7 +833,7 @@ Metoprolol tartrate (as metoprolol succinate) 100 mg prolonged-release oral tabl
 
 
 Instance: Instance-MedicationStatement-8f062e47-7b01-47f0-a7c2-77623059a053
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "8f062e47-7b01-47f0-a7c2-77623059a053"
 * status = #active
@@ -862,7 +862,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-65239341-09ca-4215-86f3-585641b24cae
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -888,7 +888,7 @@ Carvedilol 12.5 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-31aee52f-84e3-4551-9db7-27a43cdd9de8
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "31aee52f-84e3-4551-9db7-27a43cdd9de8"
 * status = #active
@@ -917,7 +917,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-2c154575-af0d-4c39-8c22-973125e693f6
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -937,7 +937,7 @@ aspirin 81 MG Oral Tablet,
 
 
 Instance: Instance-MedicationStatement-f2cb9e25-0a08-4561-a922-794a7e6a5b14
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "f2cb9e25-0a08-4561-a922-794a7e6a5b14"
 * status = #active
@@ -965,7 +965,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-b826254f-7062-45af-8d37-a5c7d7fa2c3f
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -991,7 +991,7 @@ Lisinopril 5 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-f019369c-cc21-4c21-96a8-96d80ea3b63c
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "f019369c-cc21-4c21-96a8-96d80ea3b63c"
 * status = #active
@@ -1020,7 +1020,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-92ea3b4b-f5d1-49cc-9cbd-6929507f1b1c
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -1040,7 +1040,7 @@ pravastatin sodium 80 MG Oral Tablet,
 
 
 Instance: Instance-MedicationStatement-d776bef9-3a1c-4e7a-9b94-bf18b3a47f7c
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "d776bef9-3a1c-4e7a-9b94-bf18b3a47f7c"
 * status = #active

@@ -15,14 +15,6 @@
         </div>
       </div>
     </div>
-    <div class="model-map-block">
-      <div class="callout-wrapper">
-        <div class="callout-box">
-          <strong>Yellow row/cells:</strong>
-              In this ballot publication, some row/cells of the mapping table have been left in yellow to indicate areas requiring further review or refinement; including feedback from the Xt-EHR joint action (see note above). These highlights will be addressed in subsequent updates to ensure accuracy and completeness of the mappings.
-        </div>
-      </div>
-    </div>
     <h3>EHDSPatientSummary → Composition (EPS)</h3>
     <a> </a>
     <p></p>
@@ -319,7 +311,7 @@
             <td>Narrative content of the section.</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section.text</td>
+            <td>section:sectionAlerts.text</td>
             <td>Narrative for Alerts section.</td>
             <td></td>
           </tr>
@@ -328,7 +320,7 @@
             <td>Reason for absence of data.</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section.emptyReason</td>
+            <td>section:sectionAlerts.emptyReason</td>
             <td>Why no alerts are present.</td>
             <td></td>
           </tr>
@@ -356,7 +348,7 @@
             <td>Text summary of the content in section.</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section.text</td>
+            <td>section:sectionAllergies.text</td>
             <td>Narrative for Allergies section.</td>
             <td></td>
           </tr>
@@ -374,7 +366,7 @@
             <td>Use if no Allergies are listed.</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section.emptyReason</td>
+            <td>section:sectionAllergies.emptyReason</td>
             <td>Reason for missing allergy data.</td>
             <td></td>
           </tr>
@@ -393,7 +385,7 @@
             <td>Text summary of the content in the section.</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section.text</td>
+            <td>section:sectionProblems.text</td>
             <td>Narrative for Problems section.</td>
             <td></td>
           </tr>
@@ -402,7 +394,7 @@
             <td>Reason for absence of data.</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section.emptyReason</td>
+            <td>section:sectionProblems.emptyReason</td>
             <td>Why no problems are listed.</td>
             <td></td>
           </tr>
@@ -413,7 +405,7 @@
           <td>Composition</td>
           <td>section:sectionProblems.entry:problem</td>
           <td>Problem entries.</td>
-          <td>Reference to ConditionEuEps.</td>
+          <td>Reference to ConditionEuCore.</td>
           </tr>
           <!-- SECTION: MEDICATION SUMMARY -->
           <tr>
@@ -430,7 +422,7 @@
             <td>Text summary of the content in the section.</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section.text</td>
+            <td>section:sectionMedications.text</td>
             <td>Narrative for Medication section.</td>
             <td></td>
           </tr>
@@ -439,7 +431,7 @@
             <td>Use if no medicines are listed.</td>
             <td>equivalent</td>
             <td>Composition</td>
-            <td>section.emptyReason</td>
+            <td>section:sectionMedications.emptyReason</td>
             <td>Reason for missing medication data.</td>
             <td></td>
           </tr>
@@ -450,7 +442,7 @@
           <td>Composition</td>
           <td>section:sectionMedications.entry:medicationStatementOrRequest</td>
           <td>Medication entries.</td>
-          <td>Reference to MedicationStatementEuEps (or MedicationRequest/Administration/Dispense per profile).</td>
+          <td>Reference to MedicationStatementEuCore (or MedicationRequest/Administration/Dispense per profile).</td>
           </tr>
           <!-- SECTION: MEDICAL DEVICES -->
           <tr>

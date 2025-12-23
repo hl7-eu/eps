@@ -530,7 +530,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-07c0de63-2b56-4b2f-9179-c06a418e7681
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -556,7 +556,7 @@ Albuterol (as albuterol sulfate) 5 mg/mL solution for inhalation, Solution for i
 
 
 Instance: Instance-MedicationStatement-0eb2eecb-10d9-4bf7-bc95-4c59fa2b426e
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "0eb2eecb-10d9-4bf7-bc95-4c59fa2b426e"
 * status = #active
@@ -586,7 +586,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-2d64508c-8d3f-474d-b749-f63fbdd9afc2
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -606,7 +606,7 @@ Usage: #inline
 
 
 Instance: Instance-MedicationStatement-a6a70dbd-88e1-4b28-9281-8a2814e8e399
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "a6a70dbd-88e1-4b28-9281-8a2814e8e399"
 * status = #active
@@ -635,7 +635,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-5e2921f0-6da0-410d-8a7c-4f239f176c27
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -655,7 +655,7 @@ Naproxen sodium 220 MG Oral Tablet,
 
 
 Instance: Instance-MedicationStatement-a486e764-a4bc-4a0b-94bc-236d3b87ad0c
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "a486e764-a4bc-4a0b-94bc-236d3b87ad0c"
 * status = #active

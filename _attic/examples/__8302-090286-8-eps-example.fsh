@@ -437,7 +437,7 @@ Usage: #inline
 </div>
 """
 Instance: Instance-MedicationStatement-4596fdfa-0615-4a2e-ab15-7c3ddd5030e9
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "4596fdfa-0615-4a2e-ab15-7c3ddd5030e9"
 * status = #active

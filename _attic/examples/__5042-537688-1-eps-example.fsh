@@ -615,7 +615,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-ccd55d45-87b7-43e7-bad3-29771293c8cc
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -641,7 +641,7 @@ Simvastatin 10 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "635c4921-5fcb-4ce7-b6ef-d866b680ad01"
 * status = #active
@@ -671,7 +671,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-e6929ae1-7ef5-414a-a0a3-d7866af0cce7
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -697,7 +697,7 @@ Albuterol (as albuterol sulfate) 5 mg/mL solution for inhalation, Solution for i
 
 
 Instance: Instance-MedicationStatement-e334a872-4b98-4c8a-b4e7-81fa2658e6dd
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "e334a872-4b98-4c8a-b4e7-81fa2658e6dd"
 * status = #active
@@ -727,7 +727,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-0467eb4f-79e6-4ed5-b076-f7ea83050b81
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -753,7 +753,7 @@ Acetaminophen 300 mg and hydrocodone bitartrate 5 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-cd91412c-76d7-42ac-9525-9bdcb44f98fa
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "cd91412c-76d7-42ac-9525-9bdcb44f98fa"
 * status = #active
@@ -782,7 +782,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-6391cd91-896f-4730-abca-6f24edf18229
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -802,7 +802,7 @@ Usage: #inline
 
 
 Instance: Instance-MedicationStatement-51529516-879e-4bc6-9600-f11baf6e0533
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "51529516-879e-4bc6-9600-f11baf6e0533"
 * status = #active
@@ -831,7 +831,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-a27b547a-e5c0-451f-bda8-10d2341e09d5
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -857,7 +857,7 @@ Clopidogrel (as clopidogrel bisulfate) 75 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-0de4eda6-7dba-435d-be08-c796176be6e8
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "0de4eda6-7dba-435d-be08-c796176be6e8"
 * status = #active
@@ -886,7 +886,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-b8a35f26-2d5d-4d04-bcb7-c314d6a29c2d
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -912,7 +912,7 @@ Simvastatin 20 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-a70ed340-1085-4c58-932d-1385b0abe7fa
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "a70ed340-1085-4c58-932d-1385b0abe7fa"
 * status = #active
@@ -941,7 +941,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-e87b3b43-9d7f-4b8a-9a61-c9c51886fa9c
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -967,7 +967,7 @@ Nitroglycerin 400 microgram/actuation sublingual spray, Sublingual spray
 
 
 Instance: Instance-MedicationStatement-6f621aa0-ab90-4cdb-8e01-a67cda36ea99
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "6f621aa0-ab90-4cdb-8e01-a67cda36ea99"
 * status = #active
@@ -996,7 +996,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-3008cc5e-e349-44c1-bac1-0b4618174bda
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -1022,7 +1022,7 @@ Metoprolol tartrate (as metoprolol succinate) 100 mg prolonged-release oral tabl
 
 
 Instance: Instance-MedicationStatement-dfac9869-6045-4b08-89d6-84888ba4a56b
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "dfac9869-6045-4b08-89d6-84888ba4a56b"
 * status = #active
@@ -1051,7 +1051,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-6629cc00-0c19-482a-b793-05a17ce1fb9d
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -1071,7 +1071,7 @@ doxycycline hyclate 100 MG,
 
 
 Instance: Instance-MedicationStatement-48c64631-f2b6-4cdf-81c1-4de1ca18e591
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "48c64631-f2b6-4cdf-81c1-4de1ca18e591"
 * status = #active
@@ -1100,7 +1100,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-c30f7139-87a0-4e6d-aabe-f45f226aa766
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -1126,7 +1126,7 @@ Astemizole 10 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-5f0eebe8-0919-4861-b552-1e7e0d591ef4
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "5f0eebe8-0919-4861-b552-1e7e0d591ef4"
 * status = #active
@@ -1155,7 +1155,7 @@ Usage: #inline
 
 
 Instance: Instance-Medication-08c33e59-a884-45cc-8d4c-f28165dd09ce
-InstanceOf: MedicationEuEps
+InstanceOf: MedicationEuCore
 Title: "Medication"
 Description: "Medication"
 Usage: #inline
@@ -1181,7 +1181,7 @@ Hydrocortisone 10 mg/g and urea 100 mg/g cutaneous cream, Cutaneous cream
 
 
 Instance: Instance-MedicationStatement-8cfdeca0-dc07-4f55-a987-bd8548fbbe34
-InstanceOf: MedicationStatementEuEps
+InstanceOf: MedicationStatementEuCore
 Usage: #inline
 * id = "8cfdeca0-dc07-4f55-a987-bd8548fbbe34"
 * status = #active

@@ -60,6 +60,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     specimen 0..* 
 
 
+* entry.resource 1..
 * entry[composition].resource 1..
 * entry[composition].resource only CompositionEuEps
 * entry[patient].resource 1..
@@ -67,7 +68,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[allergyintolerance].resource 1..
 * entry[allergyintolerance].resource only AllergyIntoleranceEuCore
 * entry[condition].resource 1..
-* entry[condition].resource only ConditionEuEps
+* entry[condition].resource only ConditionEuCore
 * entry[device].resource 1..
 * entry[device].resource only DeviceEuEps
 * entry[deviceusestatement].resource 1..
@@ -87,13 +88,13 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 /* * entry[media].resource 1..
 * entry[media].resource only $Media-observation-uv-ips */
 * entry[medication].resource 1..
-* entry[medication].resource only MedicationEuEps
+* entry[medication].resource only MedicationEuCore
 
 * entry[medicationrequest].resource 1..
 * entry[medicationrequest].resource only MedicationRequestEuEps
 
 * entry[medicationstatement].resource 1..
-* entry[medicationstatement].resource only MedicationStatementEuEps
+* entry[medicationstatement].resource only MedicationStatementEuCore
 
 * entry[practitioner].resource 1..
 * entry[practitioner].resource only PractitionerEuCore  //EuEps

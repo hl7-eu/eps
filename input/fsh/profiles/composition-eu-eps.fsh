@@ -88,31 +88,58 @@ Please review and complete the implementation of the IPS constraints, including 
 * section ^short = "Sections composing the Patient Summary"
 * section ^definition = "The root of the sections that make up the Patient Summary composition." */
 
-* section[sectionMedications]
+* section[sectionProblems]
   * insert SectionComRules ( 
-      Medication Summary, 
-      The medication summary section contains a description of the patient's medications as part of the patient summary, 
-      http://loinc.org#10160-0)
-  * entry only Reference (MedicationStatementEuEps or MedicationRequestEuEps or MedicationAdministrationEuEps or MedicationDispenseEuEps) 
-  * insert SectionEntrySliceComRules(medicationStatementOrRequest, medicationStatementOrRequest)
-  // entry slices
-  * insert SectionEntrySliceDefRules (medicationStatementOrRequest, 0.. , medicationStatementOrRequest , medicationStatementOrRequest , MedicationStatementEuEps or MedicationRequestEuEps)
+      EPS Problems Section, 
+      The EPS problem section lists and describes clinical problems or conditions currently being monitored for the patient., 
+      http://loinc.org#11450-4)
   
+  * entry only Reference(Condition or DocumentReference)
+  /* 
+  * ^short = "Active Problems"
+  * ^definition = """The active problem section contains a narrative description of the conditions currently being monitored for the patient. It includes entries for patient conditions as described in the Entry.
+This section can also be used to hold the Medical Alert information (other alerts not included in allergies). Alerts, of all types are to be considered for the next iteration of the specifications.""" */
+  * insert SectionEntrySliceComRules(Clinical problems or conditions currently being monitored for the patient., It lists and describes clinical problems or conditions currently being monitored for the patient. This entry shall be used to document that no information about problems is available\, or that no relevant problems are known.)
+  // entry slices
+  * insert SectionEntrySliceDefRules (problem, 0.. , Clinical problems or conditions currently being monitored for the patient. , It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available\, or that no relevant problems are known. , ConditionEuCore)
+
+  * entry[problem] only Reference (ConditionEuCore)
+
 * section[sectionAllergies]
   * insert SectionComRules ( 
-      Allergies and Other Adverse Reactions, 
-      Allergy section description, 
+     	IPS Allergies and Intolerances Section, 
+      This section documents the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
       http://loinc.org#48765-2)
+
   * entry only Reference(AllergyIntolerance or DocumentReference)  
   * insert SectionEntrySliceComRules(allergyOrIntolerance, allergyOrIntolerance)
   // entry slices
-  * insert SectionEntrySliceDefRules (allergyOrIntolerance, 0.. , Relevant allergies or intolerances for that patient. , Description, AllergyIntoleranceEuCore)
-
-/*   * ^short = "Allergies and Other Adverse Reactions"
-  * ^definition = """The adverse and other adverse reactions section contains a narrative description of the substance intolerances and the associated adverse reactions suffered by the patient. It includes entries for intolerances and adverse reactions as described in the entry.
-
-The field \"alerts\" was originally defined to include all the important and objective medical information that should be highlighted (such as allergies, thrombosis risk, immune deficit …etc). When defining the content only allergies and intolerance to drugs appear to be the common understanding and the easiest to be transferred. A lot of surveys are being made in different countries (not only in Europe) to make a more evidence-based definition of what should represented and should not by the concept “alerts”, hence not enough information could be provided to take a further decision. As eHDSI\’s intention is not to duplicate information, this shall not be repeated. Alerts are difficult to represent since they are contextual. Alerts may be represented as severe or life-threatening allergies or other adverse reactions. Another area are certain selected procedures and implanted devices. The section Allergies and Other Adverse Reactions contains the medical alerts as well, based on the severity, and their representation becomes a Country B choice.""" */
+  * insert SectionEntrySliceDefRules (allergyOrIntolerance, 0.. , 
+  Relevant allergies or intolerances for that patient.,
+  It lists the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
+  AllergyIntoleranceEuCore)
   * entry[allergyOrIntolerance] only Reference (AllergyIntoleranceEuCore)
+
+* section[sectionMedications]
+  * insert SectionComRules ( 
+      EPS Medication Summary Section, 
+      The medication summary section contains a description of the patient's medications relevant for the scope of the patient summary. The actual content could depend on the jurisdiction\, it could report:
+        * the currently active medications;
+        * the current and past medications considered relevant by the authoring GP;
+        * the patient prescriptions or dispensations automatically extracted by a regional or a national EHR.
+      In those cases medications are documented in the Patient Summary as medication statements or medication requests. This section requires either an entry indicating the subject is known not to be on any relevant medication; either an entry indicating that no information is available about medications; or entries summarizing the subject's relevant medications., 
+      http://loinc.org#10160-0)
+
+  * entry only Reference (MedicationStatementEuCore or MedicationRequestEuEps or MedicationAdministrationEuEps or MedicationDispenseEuEps) 
+  * insert SectionEntrySliceComRules(medicationStatementOrRequest, medicationStatementOrRequest)
+  // entry slices
+  * insert SectionEntrySliceDefRules (medicationStatementOrRequest, 0.. ,
+  Medications relevant for the scope of the patient summary ,
+  This list the medications relevant for the scope of the patient summary or it is used to indicate that the subject is known not to be on any relevant medication; either that no information is available about medications. ,
+  MedicationStatementEuCore) // TO BE CHEKED IS OK ONNLY MEDICATIONSTATEMENTs ?
+  
+
+
 
 * section contains sectionAlert ..1
 * section[sectionAlert]
@@ -125,22 +152,6 @@ The field \"alerts\" was originally defined to include all the important and obj
   // entry slices
   * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagEuCore)
 
-* section[sectionProblems]
-  * insert SectionComRules ( 
-      Active Problems, 
-      Active Problems Section description, 
-      http://loinc.org#11450-4)
-  
-  * entry only Reference(Condition or DocumentReference)
-  /* 
-  * ^short = "Active Problems"
-  * ^definition = """The active problem section contains a narrative description of the conditions currently being monitored for the patient. It includes entries for patient conditions as described in the Entry.
-This section can also be used to hold the Medical Alert information (other alerts not included in allergies). Alerts, of all types are to be considered for the next iteration of the specifications.""" */
-  * insert SectionEntrySliceComRules(Active Problems, DESC Problems)
-  // entry slices
-  * insert SectionEntrySliceDefRules (problem, 0.. , Clinical problems or conditions currently being monitored for the patient. , It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available\, or that no relevant problems are known. , ConditionEuEps)
-
-  * entry[problem] only Reference (ConditionEuEps)
 
 
 * section[sectionProceduresHx]
@@ -196,21 +207,22 @@ For the eHDSI Patient Summary this is a mandatory section and shall be used to r
   * ^definition = """The vital signs section contains coded measurement results of a patient\’s vital signs."""
   * entry[vitalSign] */
 
+/*
 * section[sectionPastProblems]
   * insert SectionComRules (Past Problems, The past problems section contains a narrative description of the patient's past problems. It includes entries for problems as described in related profiles, http://loinc.org#8716-3)
   * insert SectionEntrySliceComRules(Past Problems short,Past Problems Description)
-  * insert SectionEntrySliceDefRules (pastProblem, 0.. , SHORT pastProblem , DESCR pastProblem , ConditionEuEps)
-/*   * ^short = "History Of Past Illness"
+  * insert SectionEntrySliceDefRules (pastProblem, 0.. , SHORT pastProblem , DESCR pastProblem , ConditionEuCore)
+   * ^short = "History Of Past Illness"
   * ^definition = """The History of Past Illness section contains a narrative description of the conditions the patient suffered in the past. It includes entries for problems as described in the Entry."""
-  * entry[pastProblem] only Reference (ConditionEuEps) */
+  * entry[pastProblem] only Reference (ConditionEuCore) */
 
 * section[sectionFunctionalStatus]
   * insert SectionComRules (Functional Status, The functional status section contains a narrative description of the patient's functional status. It includes entries for functional status  as described in related profiles, http://loinc.org#47420-5)
   * insert SectionEntrySliceComRules(Functional Status short,Functional Status Description)
-  * insert SectionEntrySliceDefRules (functionalStatus, 0.. , SHORT functionalStatus , DESCR functionalStatus , ConditionEuEps)
+  * insert SectionEntrySliceDefRules (functionalStatus, 0.. , SHORT functionalStatus , DESCR functionalStatus , ConditionEuCore)
 /*   * ^short = "Functional Status"
   * ^definition = """The functional status section contains a narrative description of capability of the patient to perform acts of daily living."""
-  * entry[disability] only Reference (ConditionEuEps) */
+  * entry[disability] only Reference (ConditionEuCore) */
 
 * section[sectionPlanOfCare]
   * ^short = "Health Maintenance Care Plan"
