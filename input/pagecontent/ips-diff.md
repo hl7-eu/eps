@@ -9,7 +9,6 @@ No main differences.
 
 No main differences.
 
-
 ### MedicationStatement
 
 | Element | IPS | EPS | Notes |
@@ -24,3 +23,15 @@ No main differences.
 |---------|---------|---------|---------|
 | code | 1..1 | 0..1  | --- |
 
+### Immunization
+
+| Element | IPS | EPS | Notes |
+|---------|---------|---------|---------|
+| patient.reference | 1..1 | 0..1  | --- |
+
+### ProcedureEuCore
+
+| Element | IPS | EPS | Notes |
+|---------|---------|---------|---------|
+| subject.reference | 1..1 | 0..1  | --- |
+| performer.actor | Patient (IPS) or RelatedPerson or Device - Performer or Observer (IPS) or Practitioner (IPS) or PractitionerRole (IPS) or Organization (IPS)| PractitionerRole (EU core) or Practitioner (EU core) or Device or Patient (EU core) or RelatedPerson or Organization (EU core) | ProcedureEuCore allow for any kind of device...|

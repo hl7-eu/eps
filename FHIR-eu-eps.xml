@@ -29,6 +29,7 @@
 <page key="map-ehdspatientsummary" name="EHDSPatientSummary to Composition (EPS)"/>
 <page key="missing-data" name="Handling Missing Data"/>
 <page key="index" name="Home"/>
+<page key="ips-diff" name="IPS - EU Core Differences"/>
 <page key="ips-eps-advance-directives" name="IPS to EPS Advance Directives Comparison"/>
 <page key="ips-eps-alert" name="IPS to EPS Alert Comparison"/>
 <page key="ips-eps-allergy" name="IPS to EPS Allergy Comparison"/>

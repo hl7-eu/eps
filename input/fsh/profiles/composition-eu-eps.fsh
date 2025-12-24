@@ -80,13 +80,7 @@ Please review and complete the implementation of the IPS constraints, including 
     sectionVitalSigns 0..1 
    // MISSING TO BE ADDED and sectionTravelHx 0..1
 
-/* * section 1..
-* section ^slicing.discriminator[0].type = #pattern
-* section ^slicing.discriminator[0].path = "code"
-* section ^slicing.ordered = false
-* section ^slicing.rules = #open
-* section ^short = "Sections composing the Patient Summary"
-* section ^definition = "The root of the sections that make up the Patient Summary composition." */
+// ==  EPS Problem Section ==
 
 * section[sectionProblems]
   * insert SectionComRules ( 
@@ -95,19 +89,17 @@ Please review and complete the implementation of the IPS constraints, including 
       http://loinc.org#11450-4)
   
   * entry only Reference(Condition or DocumentReference)
-  /* 
-  * ^short = "Active Problems"
-  * ^definition = """The active problem section contains a narrative description of the conditions currently being monitored for the patient. It includes entries for patient conditions as described in the Entry.
-This section can also be used to hold the Medical Alert information (other alerts not included in allergies). Alerts, of all types are to be considered for the next iteration of the specifications.""" */
   * insert SectionEntrySliceComRules(Clinical problems or conditions currently being monitored for the patient., It lists and describes clinical problems or conditions currently being monitored for the patient. This entry shall be used to document that no information about problems is available\, or that no relevant problems are known.)
   // entry slices
   * insert SectionEntrySliceDefRules (problem, 0.. , Clinical problems or conditions currently being monitored for the patient. , It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available\, or that no relevant problems are known. , ConditionEuCore)
 
   * entry[problem] only Reference (ConditionEuCore)
 
+// == EPS Allergies and Intolerances Section  ==
+
 * section[sectionAllergies]
   * insert SectionComRules ( 
-     	IPS Allergies and Intolerances Section, 
+     	EPS Allergies and Intolerances Section, 
       This section documents the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
       http://loinc.org#48765-2)
 
@@ -119,6 +111,9 @@ This section can also be used to hold the Medical Alert information (other alert
   It lists the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
   AllergyIntoleranceEuCore)
   * entry[allergyOrIntolerance] only Reference (AllergyIntoleranceEuCore)
+
+
+// === EPS Medication Summary Section ===
 
 * section[sectionMedications]
   * insert SectionComRules ( 
@@ -139,7 +134,63 @@ This section can also be used to hold the Medical Alert information (other alert
   MedicationStatementEuCore) // TO BE CHEKED IS OK ONNLY MEDICATIONSTATEMENTs ?
   
 
+// === EPS Immunizations Section ===
 
+* section[sectionImmunizations]
+
+  * insert SectionComRules (EPS Immunizations Section, 
+  The Immunizations Section defines a patient's current immunization status and pertinent immunization history. The primary use case for the Immunization Section is to enable communication of a patient's immunization status. The section includes the current immunization status\, and may contain the entire immunization history that is relevant to the period of time being summarized.,
+  http://loinc.org#11369-6)
+
+  * entry only Reference(Immunization or DocumentReference)
+ 
+  * insert SectionEntrySliceComRules(Patient's immunization status and pertinent history., It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known.)
+
+  * insert SectionEntrySliceDefRules (immunization,  0.. , 
+  Patient's immunization status and pertinent history.,
+  It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. , ImmunizationEuCore) 
+  
+  // * entry[immunization] only Reference (ImmunizationEuEps)
+
+
+ 
+// === EPS History of Procedures Section ===
+
+* section[sectionProceduresHx]
+  * insert SectionComRules ( 
+      EPS History of Procedures Section, 
+      The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n
+      1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n
+      2. Therapeutic procedure: e.g. dialysis;\r\n
+      3. Surgical procedure: e.g. appendectomy\r\n,
+      http://loinc.org#47519-4)
+  
+  * entry only Reference(Procedure or DocumentReference)
+
+  * insert SectionEntrySliceComRules(Slice on procedure, Slice on procedure)
+  // entry slices
+  * insert SectionEntrySliceDefRules (procedure, 0.. ,
+     Patient past procedures pertinent to the scope of this document. ,  	
+     It lists the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n
+      1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n
+      2. Therapeutic procedure: e.g. dialysis;\r\n
+      3. Surgical procedure: e.g. appendectomy\r\n,
+      ProcedureEuCore)
+
+///=== 
+
+* section[sectionMedicalDevices] 
+  * insert SectionComRules (Medical Devices, The medical devices section contains a narrative description of the medical devices used by the patient in the past. It includes entries for device use as described in related profiles, http://loinc.org#46264-8)
+
+  * insert SectionEntrySliceComRules(Med Device short,Med devices Description)
+
+  * insert SectionEntrySliceDefRules (deviceStatement, 0.. , SHORT deviceStatement , DESCR deviceStatement , DeviceUseStatementEuEps)
+
+/*   * ^short = "Medical Devices"
+  * ^definition = """The medical devices section contains narrative text describing the patient history of medical device use.
+For the eHDSI Patient Summary this is a mandatory section and shall be used to record the Medical Devices and Implants. Each device shall be described using the specifed entry.""" 
+  * entry[deviceStatement] only Reference (DeviceUseStatementEuEps) */
+ 
 
 * section contains sectionAlert ..1
 * section[sectionAlert]
@@ -154,44 +205,7 @@ This section can also be used to hold the Medical Alert information (other alert
 
 
 
-* section[sectionProceduresHx]
-  * insert SectionComRules ( 
-      History of Procedures, 
-      DESC Procedures, 
-      http://loinc.org#47519-4)
-  
-  * entry only Reference(Procedure or DocumentReference)
 
-  * insert SectionEntrySliceComRules(Patient past procedures pertinent to the scope of this document., DESC Procedures)
-  // entry slices
-  * insert SectionEntrySliceDefRules (procedure, 0.. , Clinical problems or conditions currently being monitored for the patient. , It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available\, or that no relevant problems are known. , ProcedureEuCore)
-
-
-* section[sectionImmunizations]
-
-  * insert SectionComRules (Immunizations, The immunizations section contains a narrative description of the immunizations administered to the patient in the past. It includes entries for medication administration as described in related profiles, http://loinc.org#11369-6)
- 
-  * insert SectionEntrySliceComRules(Patient's immunization status and pertinent history., It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known.)
-
-  * insert SectionEntrySliceDefRules (immunization, 0.. , SHORT Immunization , DESCR Immunizartion , ImmunizationEuCore) 
-  
-  // ImmunizationEuEps)
-
-/*   * ^short = "Immunizations"
-  * ^definition = """The immunizations section contains a narrative description of the immunizations administered to the patient in the past. It includes entries for medication administration as described in related profiles.""" 
-  * entry[immunization] only Reference (ImmunizationEuEps)*/
-
-* section[sectionMedicalDevices] 
-  * insert SectionComRules (Medical Devices, The medical devices section contains a narrative description of the medical devices used by the patient in the past. It includes entries for device use as described in related profiles, http://loinc.org#46264-8)
-
-  * insert SectionEntrySliceComRules(Med Device short,Med devices Description)
-
-  * insert SectionEntrySliceDefRules (deviceStatement, 0.. , SHORT deviceStatement , DESCR deviceStatement , DeviceUseStatementEuEps)
-
-/*   * ^short = "Medical Devices"
-  * ^definition = """The medical devices section contains narrative text describing the patient history of medical device use.
-For the eHDSI Patient Summary this is a mandatory section and shall be used to record the Medical Devices and Implants. Each device shall be described using the specifed entry.""" 
-  * entry[deviceStatement] only Reference (DeviceUseStatementEuEps) */
 
 * section[sectionResults]
   * ^short = "Coded Results"
