@@ -177,31 +177,36 @@ Please review and complete the implementation of the IPS constraints, including 
       3. Surgical procedure: e.g. appendectomy\r\n,
       ProcedureEuCore)
 
-///=== 
+///=== EPS Medical Devices Section
 
 * section[sectionMedicalDevices] 
-  * insert SectionComRules (Medical Devices, The medical devices section contains a narrative description of the medical devices used by the patient in the past. It includes entries for device use as described in related profiles, http://loinc.org#46264-8)
+  * insert SectionComRules (EPS Medical Devices Section, 
+  The medical devices section contains narrative text and coded entries describing the patient history of medical device use.,
+  http://loinc.org#46264-8)
 
-  * insert SectionEntrySliceComRules(Med Device short,Med devices Description)
+  * insert SectionEntrySliceComRules(EPS Medical Device entry, EPS Medical Devices entry slice)
 
-  * insert SectionEntrySliceDefRules (deviceStatement, 0.. , SHORT deviceStatement , DESCR deviceStatement , DeviceUseStatementEuEps)
+  * insert SectionEntrySliceDefRules (deviceStatement, 0.. , 
+  Patient history of medical device use, 
+  It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available\, or that no relevant medical device use is known. , 
+  DeviceUseStatementEuEps)
 
-/*   * ^short = "Medical Devices"
-  * ^definition = """The medical devices section contains narrative text describing the patient history of medical device use.
-For the eHDSI Patient Summary this is a mandatory section and shall be used to record the Medical Devices and Implants. Each device shall be described using the specifed entry.""" 
-  * entry[deviceStatement] only Reference (DeviceUseStatementEuEps) */
  
+///=== EPS Alerts Section
 
 * section contains sectionAlert ..1
 * section[sectionAlert]
   * insert SectionComRules ( 
-      Alerts Section, 
-      Information used to warn or call to a state of preparedness. Information flagged or intended to raise awareness of a potential danger to from the subject of the IPS or to from another individual or awareness of a potential obstacle to care., 
+      EPS Alerts Section, 
+      The alerts section flags potential concerns and/or dangers to/from the patient and may also include obstacles to care., 
       http://loinc.org#104605-1)
   * entry 0..
-  * insert SectionEntrySliceComRules(Alerts, Alerts)
+  * insert SectionEntrySliceComRules(EPS Alerts entry, EPS Alerts entry slice)
   // entry slices
-  * insert SectionEntrySliceDefRules (flag, 0.. , Flags , Flags , FlagEuCore)
+  * insert SectionEntrySliceDefRules (flag, 0.. , 
+  Alert information , 
+  Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
+  FlagEuCore)
 
 
 
