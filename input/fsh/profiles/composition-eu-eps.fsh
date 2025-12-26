@@ -70,7 +70,7 @@ Please review and complete the implementation of the IPS constraints, including 
     sectionProceduresHx 0..1  and
     sectionMedicalDevices 0..1  and
     sectionAdvanceDirectives 0..1  and
-    sectionAlerts 0..1  and
+    sectionAlert 0..1  and
     sectionFunctionalStatus 0..1  and
     sectionPastProblems 0..1  and
     sectionPregnancyHx 0..1  and
@@ -184,6 +184,8 @@ Please review and complete the implementation of the IPS constraints, including 
   The medical devices section contains narrative text and coded entries describing the patient history of medical device use.,
   http://loinc.org#46264-8)
 
+  * entry only Reference(DeviceUseStatement or DocumentReference)
+
   * insert SectionEntrySliceComRules(EPS Medical Device entry, EPS Medical Devices entry slice)
 
   * insert SectionEntrySliceDefRules (deviceStatement, 0.. , 
@@ -194,13 +196,14 @@ Please review and complete the implementation of the IPS constraints, including 
  
 ///=== EPS Alerts Section
 
-* section contains sectionAlert ..1
+
 * section[sectionAlert]
   * insert SectionComRules ( 
       EPS Alerts Section, 
       The alerts section flags potential concerns and/or dangers to/from the patient and may also include obstacles to care., 
       http://loinc.org#104605-1)
-  * entry 0..
+
+  * entry only Reference(Flag or DocumentReference)
   * insert SectionEntrySliceComRules(EPS Alerts entry, EPS Alerts entry slice)
   // entry slices
   * insert SectionEntrySliceDefRules (flag, 0.. , 
@@ -208,15 +211,29 @@ Please review and complete the implementation of the IPS constraints, including 
   Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
   FlagEuCore)
 
+// EPS Results Section,   to be completed
 
+* section[sectionResults]  
+  * insert SectionComRules ( 
+      EPS Results Section, 
+      his section assembles relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results\, others may be anatomic pathology results\, others\, radiology results\, and others\, clinical results., 
+      http://loinc.org#30954-2)
+  * entry only Reference(Observation or DiagnosticReport or DocumentReference)
+  * insert SectionEntrySliceComRules(EPS Results entry, EPS Results entry slice)
+  * insert SectionEntrySliceDefRules (results-observation-laboratory-pathology, 0.. , 
+      Laboratory and pathology results, 
+       Laboratory or pathology in vitro diagnostic test or panel/study. In case of a panel or multiple-observation study\, the results of the panel or study appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.,
+       $Observation-results-laboratory-pathology-uv-ips) // TO BE changed with proper profile
+  * insert SectionEntrySliceDefRules (results-observation-radiology, 0.. , 
+      Radiology results, 
+       This observation may represent the conclusions of a diagnostic procedure such a Chest RX\, or it may group the set of results produced by that single or multi-modality procedure.,
+       $Observation-results-radiology-uv-ips) // TO BE changed with proper profile
+  * insert SectionEntrySliceDefRules (results-diagnosticReport, 0.. , 
+      EPS DiagnosticReport, 
+       DiagnosticReport resource to represent diagnostic test and procedure reports in a patient summary,
+       DiagnosticReportEuCore) // Check differences
 
-
-
-* section[sectionResults]
-  * ^short = "Coded Results"
-  // * ^definition = """In eHDSI this section is used only for the purpose of providing the results for the blood group."""
-  // consider to add specialized profiles for results
-  /* * entry[results-observation] only Reference (ObservationBloodGroupEuEps or ObservationResultsEuEps) */
+// -------------------------------------
 
 * section[sectionVitalSigns]
   * insert SectionComRules (Vital Signs, The vital signs section contains a narrative description of the patient's vital signs. It includes entries for vital sign measurements as described in related profiles, http://loinc.org#8716-3)
@@ -226,7 +243,7 @@ Please review and complete the implementation of the IPS constraints, including 
   * ^definition = """The vital signs section contains coded measurement results of a patient\’s vital signs."""
   * entry[vitalSign] */
 
-/*
+/* ==> not in the EHDS logical model
 * section[sectionPastProblems]
   * insert SectionComRules (Past Problems, The past problems section contains a narrative description of the patient's past problems. It includes entries for problems as described in related profiles, http://loinc.org#8716-3)
   * insert SectionEntrySliceComRules(Past Problems short,Past Problems Description)

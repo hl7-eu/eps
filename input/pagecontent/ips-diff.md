@@ -44,3 +44,11 @@ No main differences.
 |subject| Reference(Patient or Location or Group or Organization or Practitioner or PlanDefinition or Medication or Procedure) |Reference(Patient (EU core))|EPS is conformant, is this restriction needed ?|
 | subject.reference | 1..1 | 0..1  | --- |
 
+### DiagnosticReportEuCore
+
+| Element | IPS | EPS | Notes |
+|---------|---------|---------|---------|
+| basedOn |	Reference(CarePlan or ImmunizationRecommendation or MedicationRequest or NutritionOrder or ServiceRequest)|Reference(ServiceRequest)|PS is conformant, is this restriction needed ?|
+|subject| Reference(Patient (IPS) or Group) |Reference(Patient (EU core) or Patient: Animal (EU core) or Group or Location or Device)| |
+| subject.reference | 1..1 | 0..1  | --- |
+| effective[x] | 1..1 | 0..1|  |
