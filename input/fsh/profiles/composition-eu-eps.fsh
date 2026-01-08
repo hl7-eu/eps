@@ -214,12 +214,12 @@ Please review and complete the implementation of the IPS constraints, including 
   Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
   FlagEuCore)
 
-// EPS Results Section,   to be completed
+// EPS Results Section, to be completed
 
 * section[sectionResults]  
   * insert SectionComRules ( 
       EPS Results Section, 
-      his section assembles relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results\, others may be anatomic pathology results\, others\, radiology results\, and others\, clinical results., 
+      This section assembles relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results\, others may be anatomic pathology results\, others\, radiology results\, and others\, clinical results., 
       http://loinc.org#30954-2)
   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
   * insert SectionEntrySliceComRules(EPS Results entry, EPS Results entry slice)
@@ -245,11 +245,12 @@ Please review and complete the implementation of the IPS constraints, including 
     http://loinc.org#8716-3)
   
   * entry only Reference(Observation or DocumentReference)
-  * insert SectionEntrySliceComRules(Vital Signs short,Vital Signs Description)
+  * insert SectionEntrySliceComRules(Vital Signs, 
+      Notable vital signs or physical findings as: blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included)
   * insert SectionEntrySliceDefRules (vitalSign, 0.. , 
-    Notable vital signs or physical findings. ,
-    Notable vital signs or physical findings as: blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included,
-    $vitalsigns)
+      Notable vital signs or physical findings. ,
+      Notable vital signs or physical findings as: blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included,
+      $vitalsigns)
 
 // ---------------- EPS Functional Status ---------------------
 
@@ -272,11 +273,35 @@ Please review and complete the implementation of the IPS constraints, including 
       ClinicalImpression)
 
 
-// -------------------------------------
+// -------------- EPS Plan of Care Section -----------------------
+
 
 * section[sectionPlanOfCare]
-  * ^short = "Health Maintenance Care Plan"
-  * ^definition = """The health maintenance care plan section contains a description of the expectations for wellness care including proposals, goals, and order requests for monitoring, tracking, or improving the lifetime condition of the patient with goals of educating the patient on how to reduce the modifiable risks of the patient\’s genetic, behavioral, and environmental pre-conditions and otherwise optimizing lifetime outcomes."""
+  * insert SectionComRules (EPS Plan of Care Section,  	
+    The plan of care section contains a narrative description of the expectations for care including proposals\, goals\, and order requests for monitoring\, tracking\, or improving the condition of the patient.,
+  http://loinc.org#18776-5)
+
+  * entry only Reference(CarePlan or ImmunizationRecommendation or DocumentReference)
+
+  * insert SectionEntrySliceComRules(Optional entry used to represent structured care plans,  	
+      Dynamic\, personalized plan including identified needed healthcare activity\, health objectives and healthcare goals\, relating to one or more specified health issues in a healthcare process [Source EN ISO 13940])
+  
+  * insert SectionEntrySliceDefRules (carePlan, 0.. , 
+      Optional slice used to represent care plans,  	
+      Dynamic\, personalized plan including identified needed healthcare activity\, health objectives and healthcare goals\, relating to one or more specified health issues in a healthcare process [Source EN ISO 13940],
+      CarePlan)
+
+  * insert SectionEntrySliceDefRules (immunizationRecommendation, 0.. , 
+      Optional slice used to represent immunization recommendations,  	
+      A patient's point-in-time set of recommendations (i.e. forecasting\) according to a published schedule with optional supporting justification.,
+      ImmunizationRecommendation)
+
+
+
+
+
+// -------------------------------------
+
 
 * section[sectionSocialHistory]
   * ^short = "Social History"

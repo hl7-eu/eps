@@ -54,8 +54,8 @@ dependencies:
 pages:
   index.md:
     title: Home
-  logicalModel.md:
-    title: eHN guideline data set
+  logicalmodels.md:
+    title: Logical Models
   contributors.md:
     title: Authors and contributors
   obligations.md:
@@ -84,6 +84,8 @@ pages:
 #  Subject-map.html:
 #    title: Subject Relationships
 # == MODEL MAPS
+  modelmap.html:
+    title: Model Map
   map-ehdspatientsummary.xml:
     title: EHDSPatientSummary to Composition (EPS)
 
@@ -218,11 +220,12 @@ menu:
     Patient Summary: introduction.html
     Handling Missing Data: missing-data.html
   Functional:
-    Logical Models: logicalModel.html
+    Logical Models: logicalmodels.html
     Obligations: obligations.html
   Implementation:
-    Model Mapping: mappings.html
+    Mapping to Profiles: modelmap.html
     EHDSPatientSummary to Composition (EPS): map-ehdspatientsummary.html
+    ISO IPS <-> Xt-EHR Model Mapping: mappings.html
 #    IPS to EPS Section Comparison: ips-eps-section-comparison.html
 #    IPS to EPS Alert Comparison: ips-eps-alert.html
 #    IPS to EPS Allergy Comparison: ips-eps-allergy.html

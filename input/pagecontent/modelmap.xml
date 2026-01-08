@@ -32,9 +32,37 @@
       <li>a link to the detailed element-by-element mapping</li>
     </ul>
    <h4>
-        <span class="group-emoji">🧩</span> Foundational Models
+        <span class="group-emoji">📋</span> Patient Summary
     </h4><a>   </a>
     <p> </p>
+    <div class="table-wrapper">
+        <table class="model-index">
+            <thead>
+                <tr>
+                    <th>EHDS Logical Model</th>
+                    <th>FHIR Profile / Type in this IG</th>
+                    <th>Mapping Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSPatientSummary.html" target="_blank">EHDSPatientSummary</a>
+                    </td>
+                    <td>
+                        <a href="StructureDefinition-bundle-eu-eps.html">
+                            <code>BundleEuEps</code>
+                        </a>, <a href="StructureDefinition-composition-eu-eps.html">
+        <code>CompositionEuEps</code>
+    </a>
+                    </td>
+                    <td>
+                        <a class="pill" href="map-ehdspatientsummary.html">EHDSPatientSummary Mapping</a>
+                    </td>
+                </tr>      
+            </tbody>
+        </table>
+    </div>
     <div class="table-wrapper">
         <table class="model-index">
             <thead>
