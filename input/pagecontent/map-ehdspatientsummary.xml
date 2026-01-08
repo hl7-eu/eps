@@ -15,12 +15,12 @@
         </div>
       </div>
     </div>
-    <h3>EHDSPatientSummary → Composition (EPS)</h3>
+    <h3>EHDSPatientSummary → Composition, Bundle (EPS)</h3>
     <a> </a>
     <p></p>
     <p>
       This page explains how conceptual elements from the EHDSPatientSummary logical model are expressed
-      in the corresponding FHIR CompositionEuEps profile used by this Implementation Guide.
+      in the corresponding FHIR CompositionEuEps and BundleEuEps profiles used by this Implementation Guide.
     </p>
     <p></p>
     <div class="table-wrap">
@@ -38,17 +38,23 @@
             CompositionEuEps
           </a>
         </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-bundle-eu-eps.html">
+            BundleEuEps
+          </a>
+        </li>
       </ul>
     </div>
     <p></p>
     <div class="table-wrap">
-      <table summary="EHDSPatientSummary →  Composition (EPS)">
-        <caption>EHDSPatientSummary →  Composition (EPS)</caption>
+      <table summary="EHDSPatientSummary →  Composition, Bundle (EPS)">
+        <caption>EHDSPatientSummary →  Composition, Bundle (EPS)</caption>
         <thead>
           <tr>
             <th colspan="2" class="src-head">EHDSPatientSummary (Logical Model)</th>
             <th class="relhead">Relationship</th>
-            <th colspan="4" class="tgt-head">Composition (EPS)</th>
+            <th colspan="4" class="tgt-head">Composition, Bundle (EPS)</th>
           </tr>
           <tr>
             <th class="src-sub">Element</th>
