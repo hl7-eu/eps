@@ -58,7 +58,10 @@ Please review and complete the implementation of the IPS constraints, including 
 * section.extension[section-note] ^definition = "Additional notes that apply to the section (but not to specific resource)."
 * section.title 1..1
 * section.code 1..1
+* section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * section.text 1..
+* section.text only Narrative
+* section obeys ips-comp-1
 
 * section.section ..0
 * section contains
@@ -231,34 +234,45 @@ Please review and complete the implementation of the IPS constraints, including 
   * insert SectionEntrySliceDefRules (results-diagnosticReport, 0.. , 
       EPS DiagnosticReport, 
        DiagnosticReport resource to represent diagnostic test and procedure reports in a patient summary,
-       DiagnosticReportEuCore) // Check differences
+       DiagnosticReportEuCore)
 
-// -------------------------------------
+// -------------  EPS Vital Signs Section ------------------------
 
 * section[sectionVitalSigns]
-  * insert SectionComRules (Vital Signs, The vital signs section contains a narrative description of the patient's vital signs. It includes entries for vital sign measurements as described in related profiles, http://loinc.org#8716-3)
+  * insert SectionComRules (
+    EPS Vital Signs Section,
+    The Vital signs section includes blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included,
+    http://loinc.org#8716-3)
+  
+  * entry only Reference(Observation or DocumentReference)
   * insert SectionEntrySliceComRules(Vital Signs short,Vital Signs Description)
-  * insert SectionEntrySliceDefRules (vitalSign, 0.. , SHORT vitalSign , DESCR vitalSign , $vitalsigns)
-/*   * ^short = "Vital Signs"
-  * ^definition = """The vital signs section contains coded measurement results of a patient\’s vital signs."""
-  * entry[vitalSign] */
+  * insert SectionEntrySliceDefRules (vitalSign, 0.. , 
+    Notable vital signs or physical findings. ,
+    Notable vital signs or physical findings as: blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included,
+    $vitalsigns)
 
-/* ==> not in the EHDS logical model
-* section[sectionPastProblems]
-  * insert SectionComRules (Past Problems, The past problems section contains a narrative description of the patient's past problems. It includes entries for problems as described in related profiles, http://loinc.org#8716-3)
-  * insert SectionEntrySliceComRules(Past Problems short,Past Problems Description)
-  * insert SectionEntrySliceDefRules (pastProblem, 0.. , SHORT pastProblem , DESCR pastProblem , ConditionEuCore)
-   * ^short = "History Of Past Illness"
-  * ^definition = """The History of Past Illness section contains a narrative description of the conditions the patient suffered in the past. It includes entries for problems as described in the Entry."""
-  * entry[pastProblem] only Reference (ConditionEuCore) */
+// ---------------- EPS Functional Status ---------------------
 
 * section[sectionFunctionalStatus]
-  * insert SectionComRules (Functional Status, The functional status section contains a narrative description of the patient's functional status. It includes entries for functional status  as described in related profiles, http://loinc.org#47420-5)
-  * insert SectionEntrySliceComRules(Functional Status short,Functional Status Description)
-  * insert SectionEntrySliceDefRules (functionalStatus, 0.. , SHORT functionalStatus , DESCR functionalStatus , ConditionEuCore)
-/*   * ^short = "Functional Status"
-  * ^definition = """The functional status section contains a narrative description of capability of the patient to perform acts of daily living."""
-  * entry[disability] only Reference (ConditionEuCore) */
+  * insert SectionComRules (EPS Functional Status, 
+  The functional status section shall contain a narrative description of capability of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments. Profiles to express disabilities and functional assessments will be specified by future versions of this guide.,
+  http://loinc.org#47420-5)
+
+  * entry only Reference(Condition or ClinicalImpression or DocumentReference)
+
+  * insert SectionEntrySliceComRules(Optional entry used to represent disabilities and functional assessments,  	
+      It describes capabilities of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments. Profiles to express disabilities and functional assessments will be specified by future versions of this guide.)
+  * insert SectionEntrySliceDefRules (disability, 0.. , 
+      Optional slice used to represent disabilities,  	
+      It describes capabilities of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments. Profiles to express disabilities and functional assessments will be specified by future versions of this guide.,
+      ConditionEuCore)
+  * insert SectionEntrySliceDefRules (functionalAssessment, 0.. , 
+      Optional slice used to represent functional assessments,  	
+      It describes capabilities of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments. Profiles to express disabilities and functional assessments will be specified by future versions of this guide.,
+      ClinicalImpression)
+
+
+// -------------------------------------
 
 * section[sectionPlanOfCare]
   * ^short = "Health Maintenance Care Plan"

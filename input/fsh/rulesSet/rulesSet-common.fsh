@@ -20,19 +20,17 @@ RuleSet: SetFmmAndStatusRuleInstance ( fmm, status )
 
 RuleSet: SectionComRules (short, def, code)
 
-// * insert (Health Concern Section, test, http://loinc.org#75310-3)
-
 * ^extension[0].url = "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name"
 * ^extension[0].valueString = "Section"
 * ^short = "{short}"
 * ^definition = "{def}"
-* title 1..
-* code 1..
-* code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * code = {code}
-* text 1..
-* text only Narrative
-* obeys ips-comp-1
+// * title 1..
+// * code 1..
+// * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
+// * text 1..
+// * text only Narrative
+// * obeys ips-comp-1
 // * emptyReason ..0
 // * emptyReason ^mustSupport = false
 

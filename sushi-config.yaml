@@ -76,6 +76,8 @@ pages:
     title: Dependencies
   introduction.md:
     title: Introduction
+  authors.md:
+    title: Authors and Contributors
 # == MODEL MAPS
 #  PatientSummary-map.html:
 #    title: PatientSummary Relationships
@@ -216,9 +218,9 @@ menu:
     Patient Summary: introduction.html
     Handling Missing Data: missing-data.html
   Functional:
-    Logical Models: logicalmodel.html
+    Logical Models: logicalModel.html
     Obligations: obligations.html
-  Model Maps:
+  Implementation:
     Model Mapping: mappings.html
     EHDSPatientSummary to Composition (EPS): map-ehdspatientsummary.html
 #    IPS to EPS Section Comparison: ips-eps-section-comparison.html
@@ -242,12 +244,15 @@ menu:
     Known/Open Issues: knownissues.html
     Download: downloads.html
     Dependencies: dependencies.html
-    Change Log: changes.html
+    #  Change Log: changes.html <== NOT FOR THIS VERSION
     Copyright: copyright.html
     Cross-version Analysis: crossversionanalysis.html
   Artifacts: artifacts.html
   # only for the development phase
-  IPS Diff: ips-diff.html
+  IPS:
+    IPS: https://hl7.org/fhir/uv/ips/
+    IPS Diff: ips-diff.html
+
 
 
 
