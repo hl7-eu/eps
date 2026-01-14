@@ -1,8 +1,20 @@
+/*============== INVARIANTS ===============
+Invariant: eps-bundle-1
+Description: "Subject"
+* severity = #error
+* expression = "(entry.reference.exists() or emptyReason.exists())"
+* xpath = "(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)"
+=== */
+
 Profile: BundleEuEps
 Parent: Bundle
 Id: bundle-eu-eps
 Title: "Bundle (EPS)"
 Description: "Clinical document used to represent a Patient Summary for the scope of this project."
+
+//==================================
+// THIS PROFILE HAS TO BE COMPLETED 
+//==================================
 
 * . ^short = "Patient Summary bundle"
 * . ^definition = "Patient Summary bundle."

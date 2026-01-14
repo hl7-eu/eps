@@ -94,9 +94,10 @@ Please review and complete the implementation of the IPS constraints, including 
   * entry only Reference(Condition or DocumentReference)
   * insert SectionEntrySliceComRules(Clinical problems or conditions currently being monitored for the patient., It lists and describes clinical problems or conditions currently being monitored for the patient. This entry shall be used to document that no information about problems is available\, or that no relevant problems are known.)
   // entry slices
-  * insert SectionEntrySliceDefRules (problem, 0.. , Clinical problems or conditions currently being monitored for the patient. , It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available\, or that no relevant problems are known. , ConditionEuCore)
-
-  * entry[problem] only Reference (ConditionEuCore)
+  * insert SectionEntrySliceDefRules (problem, 0.. ,
+      Clinical problems or conditions currently being monitored for the patient. ,
+      It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available\, or that no relevant problems are known. ,
+      ConditionEuCore)
 
 // == EPS Allergies and Intolerances Section  ==
 
@@ -113,7 +114,7 @@ Please review and complete the implementation of the IPS constraints, including 
   Relevant allergies or intolerances for that patient.,
   It lists the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
   AllergyIntoleranceEuCore)
-  * entry[allergyOrIntolerance] only Reference (AllergyIntoleranceEuCore)
+ 
 
 
 // === EPS Medication Summary Section ===
@@ -128,13 +129,13 @@ Please review and complete the implementation of the IPS constraints, including 
       In those cases medications are documented in the Patient Summary as medication statements or medication requests. This section requires either an entry indicating the subject is known not to be on any relevant medication; either an entry indicating that no information is available about medications; or entries summarizing the subject's relevant medications., 
       http://loinc.org#10160-0)
 
-  * entry only Reference (MedicationStatementEuCore or MedicationRequestEuEps or MedicationAdministrationEuEps or MedicationDispenseEuEps) 
+  * entry only Reference  (MedicationStatement or MedicationRequest or MedicationAdministration or MedicationDispense or DocumentReference) 
   * insert SectionEntrySliceComRules(medicationStatementOrRequest, medicationStatementOrRequest)
   // entry slices
   * insert SectionEntrySliceDefRules (medicationStatementOrRequest, 0.. ,
   Medications relevant for the scope of the patient summary ,
   This list the medications relevant for the scope of the patient summary or it is used to indicate that the subject is known not to be on any relevant medication; either that no information is available about medications. ,
-  MedicationStatementEuCore) // TO BE CHEKED IS OK ONNLY MEDICATIONSTATEMENTs ?
+  MedicationStatementEuCore)
   
 
 // === EPS Immunizations Section ===
@@ -150,11 +151,11 @@ Please review and complete the implementation of the IPS constraints, including 
   * insert SectionEntrySliceComRules(Patient's immunization status and pertinent history., It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known.)
 
   * insert SectionEntrySliceDefRules (immunization,  0.. , 
-  Patient's immunization status and pertinent history.,
-  It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. , ImmunizationEuCore) 
+    Patient's immunization status and pertinent history.,
+    It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. , 
+    ImmunizationEuCore) 
   
-  // * entry[immunization] only Reference (ImmunizationEuEps)
-
+  
 
  
 // === EPS History of Procedures Section ===
@@ -192,9 +193,9 @@ Please review and complete the implementation of the IPS constraints, including 
   * insert SectionEntrySliceComRules(EPS Medical Device entry, EPS Medical Devices entry slice)
 
   * insert SectionEntrySliceDefRules (deviceStatement, 0.. , 
-  Patient history of medical device use, 
-  It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available\, or that no relevant medical device use is known. , 
-  DeviceUseStatementEuEps)
+    Patient history of medical device use, 
+    It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available\, or that no relevant medical device use is known. , 
+    DeviceUseStatementEuEps)
 
  
 ///=== EPS Alerts Section
@@ -339,7 +340,7 @@ This section is used in eHDSI only for the purpose of providing the Expected Dat
         This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
         $loinc#10182-4 ) // History of Travel Narrative
   * entry 0..*
-  * entry only Reference(ObservationTravelEuHdr)
+  * entry only Reference(ObservationTravelEuEps)
   * section ..0
 
 * section contains sectionPatientHx ..1

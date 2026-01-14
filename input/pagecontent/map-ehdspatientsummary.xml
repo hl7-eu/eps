@@ -680,7 +680,7 @@
           <td>Composition</td>
           <td>section:sectionTravelHx.entry</td>
           <td>Travel history entries.</td>
-          <td>Reference to ObservationTravelEuHdr. MISSING to be added</td>
+          <td>Reference to ObservationTravelEuEps. MISSING to be added</td>
           </tr>
           <!-- SECTION: PATIENT STORY -->
           <tr>

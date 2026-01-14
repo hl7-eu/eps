@@ -16,9 +16,9 @@ Description: "This profile constrains the MedicationRequest resource for the pur
 * extension[effectiveDosePeriod] ^definition = "Period over which the medication should be taken. Where there are multiple dosageInstruction lines (for example, tapering doses), this is the earliest date and the latest end date of the dosageInstructions."
 
 
-* medication[x] only CodeableConcept or Reference(MedicationEuHdr)
+* medication[x] only CodeableConcept or Reference(MedicationEuCore)
 
-// * medicationReference only Reference(MedicationEuHdr)
+// * medicationReference only Reference(MedicationEuCore)
 
 * reasonCode ^short = "Reason or indication for this prescription"
 * reasonReference ^short = "Condition or observation that supports this prescription"

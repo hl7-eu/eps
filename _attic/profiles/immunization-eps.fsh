@@ -19,15 +19,15 @@ Description: """This profile constrains the Immunization resource for the purpos
 // check preadoption of R5 element
 * extension contains ImmunizationAdministeredProduct named administeredProduct 0..1
 * extension[administeredProduct].extension[concept]
-* extension[administeredProduct].extension[reference].valueReference only Reference ( MedicationEuHdr )
+* extension[administeredProduct].extension[reference].valueReference only Reference ( MedicationEuCore )
 
 
 /* FIX THE ISSUE WITH CODEABLE REFERENCE
 * extension contains $immunization-administeredProduct-r5 named administeredProduct 0..1
 * extension[administeredProduct].extension[concept]
 * extension[administeredProduct].extension[reference]  */
-// .valueReference only Reference ( MedicationEuHdr )
-// * extension[administeredProduct].valueReference only Reference ( MedicationEuHdr )
+// .valueReference only Reference ( MedicationEuCore )
+// * extension[administeredProduct].valueReference only Reference ( MedicationEuCore )
 
 /* * vaccineCode.coding ^slicing.discriminator[0].type = #pattern
 * vaccineCode.coding ^slicing.discriminator[0].path = "$this"
