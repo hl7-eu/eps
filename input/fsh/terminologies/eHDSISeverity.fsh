@@ -12,7 +12,7 @@ Description: """The Value Set is used for all Problems and Allergies in the Pati
 * $sct#442452003  "Life threatening severity"					
 * $sct#255604002  "Mild"					
 * $sct#371923003  "Mild to moderate"					
-* $sct#6736007  "Moderate"					
+* $sct#6736007  "Midgrade"					
 * $sct#371924009  "Moderate to severe"					
 * $sct#24484000  "Severe"					
 //---END					
