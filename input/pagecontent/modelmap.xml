@@ -69,6 +69,16 @@
     <h4>
         <span class="group-emoji">🧱</span> Mapping described in the HL7 Europe Base and Core FHIR IG
     </h4><a>   </a>
+    
+    <div class="callout-wrapper">
+        <div class="callout-box">
+            <p>
+            <strong>Note:</strong>
+            The entries in the table below correspond to existing mapping pages specified for the EU Core profile.</p>
+            <p>In some cases (e.g. XXX) EPS specialized profiles are used to take in account some additional IPS constraints. This doesn't modify the described mapping</p>
+        </div>
+    </div>
+    
     <div class="table-wrapper">
         <table class="model-index">
             <thead>

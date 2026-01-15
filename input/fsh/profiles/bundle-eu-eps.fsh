@@ -86,19 +86,17 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[deviceusestatement].resource 1..
 * entry[deviceusestatement].resource only DeviceUseStatementEuEps
 
-/* * entry[diagnosticreport].resource 1..
-* entry[diagnosticreport].resource only $DiagnosticReport-uv-ips  //EuEps
+* entry[diagnosticreport].resource 1..
+* entry[diagnosticreport].resource only DiagnosticReportEuCore  // to be checked
 * entry[imagingstudy].resource 1..
-* entry[imagingstudy].resource only $ImagingStudy-uv-ips  //EuEps */
-
+* entry[imagingstudy].resource only $ImagingStudy-uv-ips  //EuEps
+    
 * entry[immunization].resource 1..
 * entry[immunization].resource only ImmunizationEuCore // check if this works...
 
 * entry[flag].resource 1..
 * entry[flag].resource only FlagEuCore
 
-/* * entry[media].resource 1..
-* entry[media].resource only $Media-observation-uv-ips */
 * entry[medication].resource 1..
 * entry[medication].resource only MedicationEuCore
 
@@ -109,32 +107,30 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[medicationstatement].resource only MedicationStatementEuCore
 
 * entry[practitioner].resource 1..
-* entry[practitioner].resource only PractitionerEuCore  //EuEps
+* entry[practitioner].resource only PractitionerEuCore
 * entry[practitionerrole].resource 1..
-* entry[practitionerrole].resource only PractitionerRoleEuCore  //EuEps 
+* entry[practitionerrole].resource only PractitionerRoleEuCore
 
 * entry[procedure].resource 1..
 * entry[procedure].resource only ProcedureEuCore
 
-/*
 * entry[organization].resource 1..
-* entry[organization].resource only $Organization-uv-ips
+* entry[organization].resource only OrganizationEuCore
 * entry[observation-pregnancy-edd].resource 1..
-* entry[observation-pregnancy-edd].resource only $Observation-pregnancy-edd-uv-ips
+* entry[observation-pregnancy-edd].resource only $Observation-pregnancy-edd-uv-ips //EuEps   ?
 * entry[observation-pregnancy-outcome].resource 1..
-* entry[observation-pregnancy-outcome].resource only $Observation-pregnancy-outcome-uv-ips
+* entry[observation-pregnancy-outcome].resource only $Observation-pregnancy-outcome-uv-ips //EuEps   ?
 * entry[observation-pregnancy-status].resource 1..
-* entry[observation-pregnancy-status].resource only $Observation-pregnancy-status-uv-ips */
+* entry[observation-pregnancy-status].resource only $Observation-pregnancy-status-uv-ips //EuEps   ?
 
-/* 
-In this case a generic social history observation is used
 
 * entry[observation-alcohol-use].resource 1..
-* entry[observation-alcohol-use].resource only $Observation-alcoholuse-uv-ips
+* entry[observation-alcohol-use].resource only $Observation-alcoholuse-uv-ips //EuEps   ?
 * entry[observation-tobacco-use].resource 1..
-* entry[observation-tobacco-use].resource only $Observation-tobaccouse-uv-ips
- */
+* entry[observation-tobacco-use].resource only $Observation-tobaccouse-uv-ips //EuEps   ?
 
+* entry[observation-vital-signs].resource 1..
+* entry[observation-vital-signs].resource only $vitalsigns
 
 /* * entry contains observation-social-history 0.. 
 * entry[observation-social-history] 0..
@@ -148,6 +144,6 @@ In this case a generic social history observation is used
 
 */
 
-/*
+
 * entry[specimen].resource 1..
- * entry[specimen].resource only $Specimen-uv-ips */
+* entry[specimen].resource only $Specimen-uv-ips

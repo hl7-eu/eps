@@ -75,7 +75,7 @@
             <td>Composition</td>
             <td>.</td>
             <td>Composition-level metadata.</td>
-            <td>CompositionEuEps constrains cardinalities and section slices for Patient Summary.</td>
+            <td class="highlight-yellow">CompositionEuEps constrains cardinalities and section slices for Patient Summary. THE PATIENT HISTORY SECTION IS NOT DEFINED IN XT-EHR MODEL BUT PRESENT IN THE GUIDELINES.</td>
           </tr>
           <tr>
             <td>header.subject</td>
@@ -131,7 +131,7 @@
             <td>Composition creation time.</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
             <td>header.lastUpdate</td>
             <td>Date and time of the last update to the resource.</td>
             <td>equivalent</td>
@@ -173,8 +173,8 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>type</td>
-            <td>Kind of composition.</td>
-            <td></td>
+            <td>Type of document.</td>
+            <td>Fixed LOINC 60591-5</td>
           </tr>
           <tr>
             <td>header.documentTitle</td>
@@ -257,7 +257,7 @@
             <td>When the composition was attested.</td>
             <td>Use attester.mode = "legal".</td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
             <td>header.eventType</td>
             <td>Categorisation of the event covered by the document.</td>
             <td>related-to</td>
@@ -293,12 +293,12 @@
             <td>As defined by confidentiality codes.</td>
             <td>Implicit value is normal.</td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
             <td>presentedForm</td>
             <td>A narrative easy-to-read representation of the full data set (e.g. PDF).</td>
             <td>related-to</td>
-            <td>DocumentReference</td>
-            <td>content.attachment</td>
+            <td class="highlight-yellow">DocumentReference</td>
+            <td class="highlight-yellow">content.attachment</td>
             <td>Embedded or referenced rendition of the Patient Summary.</td>
             <td>Include a DocumentReference in the bundle linked from Composition via event/relatesTo if provided.</td>
           </tr>
@@ -448,7 +448,7 @@
           <td>Composition</td>
           <td>section:sectionMedications.entry:medicationStatementOrRequest</td>
           <td>Medication entries.</td>
-          <td>Reference to MedicationStatementEuCore (or MedicationRequest/Administration/Dispense per profile).</td>
+          <td>Reference to MedicationStatementEuCore.</td>
           </tr>
           <!-- SECTION: MEDICAL DEVICES -->
           <tr>
@@ -578,7 +578,7 @@
           <td>Composition</td>
           <td>section:sectionFunctionalStatus.entry:functionalStatus</td>
           <td>Functional status entries.</td>
-          <td>Reference to Observation/Condition representing functional status (per profile guidance).</td>
+          <td></td>
           </tr>
           <!-- SECTION: SOCIAL HISTORY -->
           <tr>
@@ -588,7 +588,7 @@
           <td>Composition</td>
           <td>section:sectionSocialHistory</td>
           <td>Social history section.</td>
-          <td>Uses slice defined in CompositionEuEps.</td>
+          <td></td>
           </tr>
           <tr>
             <td>socialHistory.narrative</td>
@@ -599,8 +599,8 @@
             <td>Narrative for Social History section.</td>
             <td></td>
           </tr>
-          <tr>
-          <td class="highlight-yellow">socialHistory.socialHistoryObservation</td>
+          <tr class="highlight-yellow">
+          <td>socialHistory.socialHistoryObservation</td>
           <td>Social history observations related to health.</td>
           <td>equivalent</td>
           <td>Composition</td>
@@ -627,14 +627,14 @@
             <td>Narrative for Pregnancy section.</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
           <td>pregnancyHistory.currentPregnancyStatus</td>
           <td>Current pregnancy status.</td>
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionPregnancyHx.entry:pregnancyStatus</td>
           <td>Pregnancy status entry.</td>
-          <td>Reference to ObservationPregnancyStatusUvIps.</td>
+          <td>check the target profiles to be used.</td>
           </tr>
           <tr class="highlight-yellow">
           <td>pregnancyHistory.previousPregnanciesStatus</td>
@@ -643,7 +643,7 @@
           <td>Composition</td>
           <td>section:sectionPregnancyHx.entry:pregnancyOutcome</td>
           <td>Summary of prior pregnancies.</td>
-          <td>Check target profiles. Use ObservationPregnancyOutcomeUvIps or equivalent summary observation.</td>
+          <td>Check target profiles.</td>
           </tr>
           <tr class="highlight-yellow">
           <td>pregnancyHistory.previousPregnancies</td>
@@ -652,25 +652,25 @@
           <td>Composition</td>
           <td>section:sectionPregnancyHx.entry:pregnancyOutcome</td>
           <td>Pregnancy outcome entries.</td>
-          <td>Check target profiles. Reference to ObservationPregnancyOutcomeUvIps.</td>
+          <td>Check target profiles.</td>
           </tr>
           <!-- SECTION: TRAVEL HISTORY -->
-          <tr class="highlight-yellow">
+          <tr>
           <td>travelHistory</td>
           <td>Relevant information about the patient's recent travel history.</td>
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionTravelHx</td>
           <td>Travel history section.</td>
-          <td>Uses LOINC 10182-4. MISSING to be added</td>
+          <td>Uses LOINC 10182-4.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>travelHistory.narrative</td>
             <td>Text summary of the content in the section.</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section.text</td>
-            <td>Narrative for Travel History section. MISSING to be added</td>
+            <td>Narrative for Travel History section.</td>
             <td></td>
           </tr>
           <tr class="highlight-yellow">
@@ -690,7 +690,7 @@
           <td>Composition</td>
           <td>section:sectionPatientHx</td>
           <td>Patient story section.</td>
-          <td class="highlight-yellow">Uses slice defined in CompositionEuEps. check if the propoer loinc code is used and the patient history section is added.</td>
+          <td class="highlight-yellow">check if the propoer loinc code is used and the patient history section is added.</td>
           </tr>
           <tr>
             <td>patientStory.narrative</td>

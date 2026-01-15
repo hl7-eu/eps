@@ -80,8 +80,9 @@ Please review and complete the implementation of the IPS constraints, including 
     sectionPatientStory 0..1  and
     sectionPlanOfCare 0..1  and
     sectionSocialHistory 0..1  and
-    sectionVitalSigns 0..1 
-   // MISSING TO BE ADDED and sectionTravelHx 0..1
+    sectionVitalSigns 0..1 and
+    sectionTravelHx 0..1 and
+    sectionPatientHx 0..1
 
 // ==  EPS Problem Section ==
 
@@ -298,42 +299,65 @@ Please review and complete the implementation of the IPS constraints, including 
       ImmunizationRecommendation)
 
 
-
-
-
-// -------------------------------------
+// ---------------- EPS Social History Section ---------------------
 
 
 * section[sectionSocialHistory]
-  * ^short = "Social History"
-  * ^definition = """The social history section contains a narrative description of the person\’s beliefs, home life, community life, work life, hobbies, and risky habits. It includes Social History Observations."""
-  // * insert SectionEntrySlicePerProfileRules (SLicing , eHDSI Social History Observation)
+  * insert SectionComRules (EPS Social History Section,  	
+    The social history section contains a description of the person’s Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\),
+    http://loinc.org#29762-2)
+
+  * entry only Reference(Observation or DocumentReference)
+
+
+  * insert SectionEntrySliceComRules(
+    Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\) ,  	
+    Description of the person’s Health related \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\)
+    )
   
-  /* 
-  * insert SectionEntrySliceDefRules (eHDSISocialHistory, 0.., eHDSI Social History Observation, eHDSI Social History Observation, ObservationSocialHistoryEuEps)
-   */
+  * insert SectionEntrySliceDefRules (smokingTobaccoUse, 0.. , 
+      Smoke habits,  	
+      A description of the person’s smoke habits,
+      $Observation-tobaccouse-uv-ips)
+  * insert SectionEntrySliceDefRules (alcoholUse, 0.. , 
+      Alcohol consumption,  	
+      A description of the person’s alcohol consumption habits,
+      $Observation-alcoholuse-uv-ips)
+
+// ----------------- EPS History of Pregnancy Section --------------------
 
 * section[sectionPregnancyHx]
-  * insert SectionComRules (Pregnancy History, The pregnancy history section contains a narrative description of the patient's pregnancy history. It includes entries for pregnancy history as described in related profiles, http://loinc.org#10162-6)
-  * insert SectionEntrySliceComRules(Pregnancy History short,Pregnancy History Description)
-  * insert SectionEntrySliceDefRules (pregnancyStatus, 0.. , Pregnancy status , DESCR Pregnancy status , ObservationPregnancyStatusUvIps)
-  * insert SectionEntrySliceDefRules (pregnancyOutcome, 0.. , Pregnancy outcome , DESCR Pregnancy outcome , ObservationPregnancyOutcomeUvIps)
-/*   * ^short = "Pregnancy History"
-  * ^definition = """The pregnancy history section contains coded entries describing the patient history of pregnancies.
-This section is used in eHDSI only for the purpose of providing the Expected Date of Delivery, when applicable, not the full history of pregnancies."""
-  * title ^short = "Pregnancy Section title"
-  * entry[pregnancyStatus] ^short = "Pregnancy status"
-  * entry[pregnancyOutcome] ^short = "Pregnancy outcome" */
+  * insert SectionComRules (EPS History of Pregnancy Section, 
+    The history of pregnancy section shall contain information about whether the patient is currently pregnant or not. It may contain addition summarizing information about the outcome of earlier pregnancies,
+    http://loinc.org#10162-6)
+  * insert SectionEntrySliceComRules(Current pregnancy status and\, optionally\, information about the outcome of earlier pregnancies,
+     It contains information about whether the patient is currently pregnant or not. It may contain addition summarizing information about the outcome of earlier pregnancies.)
+  * insert SectionEntrySliceDefRules (pregnancyStatus, 0.. ,
+    Current pregnancy status , Current pregnancy status ,
+    ObservationPregnancyStatusUvIps)
+  * insert SectionEntrySliceDefRules (pregnancyOutcome, 0.. , Information about the outcome of earlier pregnancies ,
+    information about the outcome of earlier pregnancies,
+    ObservationPregnancyOutcomeUvIps)
+
   
-// -------------------------------------
+// ----------------- EPS Advance Directives Section --------------------
+
 * section[sectionAdvanceDirectives]
   * insert SectionComRules (
-    Advance Directives Section,
+    EPS Advance Directives Section,
     The advance directives section contains a narrative description of patient's advance directive.,
     $loinc#42348-3 )  // 	Advance directives
-  * entry only Reference(ConsentEuEps or DocumentReference) 
+  * entry only Reference( Consent or DocumentReference)
+  * insert SectionEntrySliceComRules(Advance directives, Advance directives)
+  * insert SectionEntrySliceDefRules (advanceDirectivesConsent, 0.. ,
+     Narrative description of the patient's advance directive.,
+     Contains a narrative description or a Consent entry with information about the patient's advance directive. ,     
+     ConsentEuEps)
 
-* section contains sectionTravelHx ..1
+  
+
+
+
 * section[sectionTravelHx]
   * insert SectionComRules ( 
         Travel History Section, 
@@ -341,9 +365,8 @@ This section is used in eHDSI only for the purpose of providing the Expected Dat
         $loinc#10182-4 ) // History of Travel Narrative
   * entry 0..*
   * entry only Reference(ObservationTravelEuEps)
-  * section ..0
 
-* section contains sectionPatientHx ..1
+
 * section[sectionPatientHx]
   * insert SectionComRules ( 
     Patient History Section,
