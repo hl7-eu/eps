@@ -75,7 +75,7 @@ Please review and complete the implementation of the IPS constraints, including 
     sectionAdvanceDirectives 0..1  and
     sectionAlert 0..1  and
     sectionFunctionalStatus 0..1  and
-    sectionPastProblems 0..1  and
+    // sectionPastProblems 0..1  and
     sectionPregnancyHx 0..1  and
     sectionPatientStory 0..1  and
     sectionPlanOfCare 0..1  and
@@ -354,8 +354,15 @@ Please review and complete the implementation of the IPS constraints, including 
      Contains a narrative description or a Consent entry with information about the patient's advance directive. ,     
      ConsentEuEps)
 
- 
+// ----------------- EPS Patient Story Section --------------------
 
+* section[sectionPatientStory]
+  * insert SectionComRules ( 
+    EPS Patient Story Section,
+    The section contains narrative text along with optional resources that express what matters to a patient. This may include needs\, strengths\, values\, concerns and preferences to others providing support and care. The patient’s story\, provided here\, may be told by the patient or by a proxy.,
+    http://loinc.org#81338-6 )
+  * entry ^short = "Patient Story resources."
+  * entry ^definition = "Contains resources to support the Patient Story. Instances of DocumentReference or any other suitable resource type may be used."
 
 
 * section[sectionTravelHx]
@@ -364,6 +371,7 @@ Please review and complete the implementation of the IPS constraints, including 
         This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
         $loinc#10182-4 ) // History of Travel Narrative
   * entry 0..*
+  // use slices ...
   * entry only Reference(ObservationTravelEuEps)
 
 
