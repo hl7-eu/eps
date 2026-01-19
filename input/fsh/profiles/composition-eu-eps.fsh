@@ -364,20 +364,27 @@ Please review and complete the implementation of the IPS constraints, including 
   * entry ^short = "Patient Story resources."
   * entry ^definition = "Contains resources to support the Patient Story. Instances of DocumentReference or any other suitable resource type may be used."
 
-
+// ---- EPS Travel History Section ---- 
 * section[sectionTravelHx]
   * insert SectionComRules ( 
-        Travel History Section, 
+        EPS Travel History Section, 
         This Section describes the travel history relevant for the Patient Summary\, e.g.recent travel in a region of high prevalence of a specific infectious disease like Malaria,
         $loinc#10182-4 ) // History of Travel Narrative
-  * entry 0..*
-  // use slices ...
-  * entry only Reference(ObservationTravelEuEps)
+ 
+  * entry only Reference(Observation or DocumentReference)
+  * insert SectionEntrySliceComRules(Travel history observation,
+      Relevant information about the patient's recent travel history\, for one visit)
+  * insert SectionEntrySliceDefRules (travelObservation,
+    0.. ,
+    Travel history observation, 
+    Relevant information about the patient's recent travel history\, for one visit,
+    ObservationTravelEuEps)
 
-
+// ---- EPS Travel History Section ---- 
+// This is a purely narrative section
 * section[sectionPatientHx]
   * insert SectionComRules ( 
-    Patient History Section,
+    EPS Patient History Section,
     This section may provide both synthetic anamnesis \,e.g. description of phases of the pathology as a chronological summary of clustered clinical information\, and anecdotal evidence that clinicians can collect from the patient\, and can read in a narrative form.,
     http://loinc.org#11329-0 )
 
