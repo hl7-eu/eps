@@ -69,8 +69,104 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="highlight-yellow">
-            <td colspan="7">Mapping pending.</td>
+          <tr>
+            <td>header.identifier</td>
+            <td>Identifier for the care plan.</td>
+            <td>equivalent</td>
+            <td>CarePlan</td>
+            <td>identifier</td>
+            <td>Business identifiers for the care plan.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.subject</td>
+            <td>The patient whose intended care is described in the plan.</td>
+            <td>equivalent</td>
+            <td>CarePlan</td>
+            <td>subject</td>
+            <td>Who the plan is for.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.authorship.author[x]</td>
+            <td>The responsible party (custodian) for the care plan.</td>
+            <td>equivalent</td>
+            <td>CarePlan</td>
+            <td>author</td>
+            <td>Who authored the plan.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.status</td>
+            <td>Indicates whether the plan is currently being acted upon, represents future intentions, or is now a historical record.</td>
+            <td>equivalent</td>
+            <td>CarePlan</td>
+            <td>status</td>
+            <td>Workflow status of the plan.</td>
+            <td>Preferred binding: HL7 Request status.</td>
+          </tr>
+          <tr>
+            <td>title</td>
+            <td>Human-friendly name for the care plan.</td>
+            <td>equivalent</td>
+            <td>CarePlan</td>
+            <td>title</td>
+            <td>Human-readable name.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>description</td>
+            <td>A description of the scope and nature of the plan.</td>
+            <td>equivalent</td>
+            <td>CarePlan</td>
+            <td>description</td>
+            <td>Summary of the plan.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>period</td>
+            <td>Indicates when the plan did (or is intended to) come into effect and end.</td>
+            <td>equivalent</td>
+            <td>CarePlan</td>
+            <td>period</td>
+            <td>Time period the plan is in effect.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>addresses[x]</td>
+            <td>Conditions/problems/concerns/diagnoses/etc whose management and/or mitigation are handled by this plan.</td>
+            <td>source-is-broader-than-target</td>
+            <td>CarePlan</td>
+            <td>addresses</td>
+            <td>Conditions addressed by the plan.</td>
+            <td>CarePlan.addresses is Reference(Condition); CodeableConcept may need a referenced Condition.</td>
+          </tr>
+          <tr>
+            <td>activity[x]</td>
+            <td>The details of the proposed activity represented in a specific resource.</td>
+            <td>related-to</td>
+            <td>CarePlan</td>
+            <td>activity.detail.code</td>
+            <td>Planned activity as a CodeableConcept.</td>
+            <td>Use when EHDS activity is CodeableConcept.</td>
+          </tr>
+          <tr>
+            <td>activity[x]</td>
+            <td>The details of the proposed activity represented in a specific resource.</td>
+            <td>related-to</td>
+            <td>CarePlan</td>
+            <td>activity.reference</td>
+            <td>Reference to the detailed activity resource.</td>
+            <td>Use when EHDS activity is a Reference.</td>
+          </tr>
+          <tr>
+            <td>goal</td>
+            <td>Describes the intended objective(s) of carrying out the care plan.</td>
+            <td>source-is-broader-than-target</td>
+            <td>CarePlan</td>
+            <td>goal</td>
+            <td>Desired objectives for the plan.</td>
+            <td>CarePlan.goal is Reference(Goal); CodeableConcept may need a Goal resource.</td>
           </tr>
         </tbody>
       </table>

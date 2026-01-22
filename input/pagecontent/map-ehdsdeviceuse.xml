@@ -69,8 +69,159 @@
           </tr>
         </thead>
         <tbody>
+          <!-- HEADER BLOCK (common dataset header) -->
+          <tr>
+            <td>header</td>
+            <td>Common header for all patient-related data.</td>
+            <td>related-to</td>
+            <td>DeviceUseStatement</td>
+            <td>.</td>
+            <td>General metadata.</td>
+            <td>Dataset-level; not usually carried in DeviceUseStatement as-is.</td>
+          </tr>
+          <tr>
+            <td>header.subject</td>
+            <td>Patient/subject this device use is about.</td>
+            <td>equivalent</td>
+            <td>DeviceUseStatement</td>
+            <td>subject</td>
+            <td>Reference to the patient or subject of device use.</td>
+            <td>Reference to Patient (or other subject).</td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>Business identifier for the object.</td>
+            <td>equivalent</td>
+            <td>DeviceUseStatement</td>
+            <td>identifier</td>
+            <td>Business identifier for this device use statement.</td>
+            <td>Copy over all identifiers if multiple.</td>
+          </tr>
+          <tr>
+            <td>header.authorship</td>
+            <td>Resource authoring details.</td>
+            <td>related-to</td>
+            <td>DeviceUseStatement</td>
+            <td>source</td>
+            <td>Reporter of the device use.</td>
+            <td class="highlight-yellow">Can reference Device, Organization, Patient, Practitioner, or PractitionerRole. 1.. in the model 0.. in the profile</td>
+          </tr>
+          <tr>
+            <td>header.authorship.author[x]</td>
+            <td>Who created/issued the statement.</td>
+            <td>equivalent</td>
+            <td>DeviceUseStatement</td>
+            <td>source</td>
+            <td>Who reported the device use.</td>
+            <td class="highlight-yellow">Can reference Device, Organization, Patient, Practitioner, or PractitionerRole. 1.. in the model 0.. in the profile</td>
+          </tr>
+          <tr>
+            <td>header.authorship.datetime</td>
+            <td>Date/time the resource was issued.</td>
+            <td>equivalent</td>
+            <td>DeviceUseStatement</td>
+            <td>recordedOn</td>
+            <td>When the device use statement was recorded.</td>
+            <td class="highlight-yellow">1.. in the model 0.. in the profile</td>
+          </tr>
+          <tr>
+            <td>header.lastUpdate</td>
+            <td>Last technical correction/update.</td>
+            <td>related-to</td>
+            <td>DeviceUseStatement</td>
+            <td>meta.lastUpdated</td>
+            <td>When the resource version last changed.</td>
+            <td class="highlight-yellow">The map applies only in case it represents when the resource was last updated. It is an instant (i.e. YYYY-MM-DDThh:mm:ss.sss+zz:zz).</td>
+          </tr>
           <tr class="highlight-yellow">
-            <td colspan="7">Mapping pending.</td>
+            <td>header.statusReason[x]</td>
+            <td>Reason for current dataset status.</td>
+            <td>no map</td>
+            <td>DeviceUseStatement</td>
+            <td></td>
+            <td></td>
+            <td>Suggested to be removed see <a href="https://github.com/Xt-EHR/xt-ehr-common/issues/363">Review and Align Use of header.status and header.statusReason[x]</a></td>
+          </tr>
+          <tr>
+            <td>header.language</td>
+            <td>Language of the resource (IETF tag).</td>
+            <td>equivalent</td>
+            <td>DeviceUseStatement</td>
+            <td>language</td>
+            <td>Language used in the statement.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.status</td>
+            <td>Current status of the device usage.</td>
+            <td>equivalent</td>
+            <td>DeviceUseStatement</td>
+            <td>status</td>
+            <td>Status of the device use statement.</td>
+            <td>Preferred binding: HL7 device-statement-status.</td>
+          </tr>
+          <tr>
+            <td>startDate</td>
+            <td>Date when the device was implantable to the patient or the external device was first in use.</td>
+            <td>related-to</td>
+            <td>DeviceUseStatement</td>
+            <td>timingPeriod.start</td>
+            <td>Start of the period of device use.</td>
+            <td>Use a timing period to capture start/end.</td>
+          </tr>
+          <tr>
+            <td>endDate</td>
+            <td>Date when the device was explanted from the patient or the external device was no longer in use.</td>
+            <td>related-to</td>
+            <td>DeviceUseStatement</td>
+            <td>timingPeriod.end</td>
+            <td>End of the period of device use.</td>
+            <td>Use a timing period to capture start/end.</td>
+          </tr>
+          <tr>
+            <td>device[x]</td>
+            <td>The details of the device used.</td>
+            <td>source-is-broader-than-target</td>
+            <td>DeviceUseStatement</td>
+            <td>device</td>
+            <td>Device being used.</td>
+            <td>FHIR uses Reference(Device); CodeableConcept may require a Device instance.</td>
+          </tr>
+          <tr>
+            <td>bodySite</td>
+            <td>Anatomical location of the device. May include laterality.</td>
+            <td>related-to</td>
+            <td>DeviceUseStatement</td>
+            <td>bodySite</td>
+            <td>Body site where the device is used.</td>
+            <td>EHDSBodyStructure may need to be summarized as CodeableConcept.</td>
+          </tr>
+          <tr>
+            <td>reason[x]</td>
+            <td>Reason or justification for the use of the device.</td>
+            <td>source-is-broader-than-target</td>
+            <td>DeviceUseStatement</td>
+            <td>reasonCode</td>
+            <td>Reason code for the device use.</td>
+            <td>FHIR uses CodeableConcept; references may need to be represented as codes or extensions.</td>
+          </tr>
+          <tr>
+            <td>source[x]</td>
+            <td>Who reported the device was being used by the patient.</td>
+            <td>equivalent</td>
+            <td>DeviceUseStatement</td>
+            <td>source</td>
+            <td>Reporter of the device use.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>note</td>
+            <td>Note about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class.</td>
+            <td>equivalent</td>
+            <td>DeviceUseStatement</td>
+            <td>note</td>
+            <td>Additional notes about the device use.</td>
+            <td></td>
           </tr>
         </tbody>
       </table>

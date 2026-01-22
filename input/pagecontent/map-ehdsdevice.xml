@@ -69,8 +69,113 @@
           </tr>
         </thead>
         <tbody>
-          <tr class="highlight-yellow">
-            <td colspan="7">Mapping pending.</td>
+          <tr>
+            <td>identifier</td>
+            <td>Normalised identifier of the device instance, such as UDI according to REGULATION (EU) 2017/745. Multiple identifiers can be used.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>identifier</td>
+            <td>Business identifiers for the device.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>identifier</td>
+            <td>Normalised identifier of the device instance, such as UDI according to REGULATION (EU) 2017/745. Multiple identifiers can be used.</td>
+            <td>related-to</td>
+            <td>Device</td>
+            <td>udiCarrier</td>
+            <td>UDI carrier information for the device.</td>
+            <td>Use when the identifier represents UDI.</td>
+          </tr>
+          <tr>
+            <td>manufacturer</td>
+            <td>Name of device manufacturer.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>manufacturer</td>
+            <td>Device manufacturer.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>manufactureDate</td>
+            <td>The date and time when the device was manufactured.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>manufactureDate</td>
+            <td>Manufacture date.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>expiryDate</td>
+            <td>The date and time beyond which this device is no longer valid or should not be used (if applicable).</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>expirationDate</td>
+            <td>Expiration date.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>lotNumber</td>
+            <td>Lot number of manufacture.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>lotNumber</td>
+            <td>Lot number.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>serialNumber</td>
+            <td>Serial number assigned by the manufacturer.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>serialNumber</td>
+            <td>Serial number.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>name</td>
+            <td>The name and name type of the device as known to the manufacturer and/or patient.</td>
+            <td>related-to</td>
+            <td>Device</td>
+            <td>deviceName.name</td>
+            <td>Device name.</td>
+            <td>Set deviceName.type when known (e.g., user-friendly or model-name).</td>
+          </tr>
+          <tr>
+            <td>modelNumber</td>
+            <td>The manufacturer's model number for the device.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>modelNumber</td>
+            <td>Model number.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>version</td>
+            <td>The actual design of the device or software version running on the device.</td>
+            <td>related-to</td>
+            <td>Device</td>
+            <td>version.value</td>
+            <td>Device version.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td>Device type.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>type</td>
+            <td>Type of device.</td>
+            <td>Preferred binding: SNOMED CT, EMDN.</td>
+          </tr>
+          <tr>
+            <td>note</td>
+            <td>Device notes and comments.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>note</td>
+            <td>Notes about the device.</td>
+            <td></td>
           </tr>
         </tbody>
       </table>
