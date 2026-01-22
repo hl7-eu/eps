@@ -2,7 +2,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>EHDSCurrentPregnancy -> Observation</title>
+    <title>EHDSCurrentPregnancy -> Pregnancy Observations</title>
   </head>
   <body>
     <div class="model-map-block">
@@ -23,12 +23,12 @@
         </div>
       </div>
     </div>
-    <h3>EHDSCurrentPregnancy -> Observation</h3>
+    <h3>EHDSCurrentPregnancy -> Pregnancy Observations</h3>
     <a> </a>
     <p></p>
     <p>
   This page explains how conceptual elements from the EHDS logical model are expressed
-  in the corresponding FHIR Observation profile or type used by this Implementation Guide.
+  in the corresponding FHIR pregnancy Observation profiles used by this Implementation Guide.
     </p>
     <p></p>
     <div class="table-wrap">
@@ -42,21 +42,33 @@
         </li>
         <li>
           <strong>Target FHIR profile:</strong>
-          <a href="https://hl7.org/fhir/observation.html">
-        Observation
+          <a href="StructureDefinition-observation-pregnancy-status-eu-ips.html">
+        ObservationPregnancyStatusEuIps
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-observation-pregnancy-edd-eu-eps.html">
+        ObservationPregnancyEddEuEps
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-observation-pregnancy-gestationalAge-eu-eps.html">
+        ObservationPregnancyGestationalAgeEuEps
           </a>
         </li>
       </ul>
     </div>
     <p></p>
     <div class="table-wrap">
-      <table summary="EHDSCurrentPregnancy -> Observation">
-        <caption>EHDSCurrentPregnancy -> Observation</caption>
+      <table summary="EHDSCurrentPregnancy -> Pregnancy Observations">
+        <caption>EHDSCurrentPregnancy -> Pregnancy Observations</caption>
         <thead>
           <tr>
             <th colspan="2" class="src-head">EHDSCurrentPregnancy (Logical Model)</th>
             <th class="relhead">Relationship</th>
-            <th colspan="4" class="tgt-head">Observation</th>
+            <th colspan="4" class="tgt-head">Pregnancy Observations</th>
           </tr>
           <tr>
             <th class="src-sub">Element</th>
@@ -69,8 +81,141 @@
           </tr>
         </thead>
         <tbody>
+          <!-- HEADER BLOCK (common dataset header) -->
+          <tr>
+            <td>header</td>
+            <td>Common header for all patient-related data.</td>
+            <td>related-to</td>
+            <td>Observation</td>
+            <td>.</td>
+            <td>General metadata.</td>
+            <td>Dataset-level; not usually carried in Observation as-is.</td>
+          </tr>
+          <tr>
+            <td>header.subject</td>
+            <td>Patient/subject this pregnancy data is about.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>subject</td>
+            <td>Reference to the patient or subject of the observation.</td>
+            <td>Reference to Patient (or other subject).</td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>Business identifier for the object.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>identifier</td>
+            <td>Business identifier for this observation.</td>
+            <td>Copy over all identifiers if multiple.</td>
+          </tr>
           <tr class="highlight-yellow">
-            <td colspan="7">Mapping pending.</td>
+            <td>header.authorship</td>
+            <td>Resource authoring details.</td>
+            <td>no-map</td>
+            <td>Observation</td>
+            <td>.</td>
+            <td>Observation lacks a dedicated recorder. Only when the observation result was issued can be represented.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.authorship.author[x]</td>
+            <td>Author(s) who issued the resource.</td>
+            <td>no-map</td>
+            <td>Observation</td>
+            <td></td>
+            <td>Observation lacks a dedicated recorder.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.authorship.datetime</td>
+            <td>Date and time of authoring/issuing.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>issued</td>
+            <td>When the observation result was issued.</td>
+            <td>1.. in the model 0.. in the profile.</td>
+          </tr>
+          <tr>
+            <td>header.lastUpdate</td>
+            <td>Last technical correction/update.</td>
+            <td>source-is-broader-than-target</td>
+            <td>Observation</td>
+            <td>meta.lastUpdated</td>
+            <td>When the resource version last changed.</td>
+            <td>Use only when the timestamp reflects resource update (instant).</td>
+          </tr>
+          <tr>
+            <td>header.status</td>
+            <td>Status of the resource.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>status</td>
+            <td>Registered | preliminary | final | amended | ...</td>
+            <td>EHDS uses CodeableConcept; Observation.status is a required code. Align to HL7 ObservationStatus.</td>
+          </tr>
+          <tr>
+            <td>header.statusReason[x]</td>
+            <td>Reason for the current status.</td>
+            <td>no-map</td>
+            <td>Observation</td>
+            <td>-</td>
+            <td></td>
+            <td>No core element; use an extension if the status rationale is required.</td>
+          </tr>
+          <tr>
+            <td>header.language</td>
+            <td>Language of the resource (IETF tag).</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>language</td>
+            <td>Language used in the observation.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>narrative</td>
+            <td>Narrative description describing the status of the current pregnancy.</td>
+            <td>related-to</td>
+            <td>ObservationPregnancyStatusEuIps</td>
+            <td>text.div</td>
+            <td>Narrative for the observation.</td>
+            <td>Use narrative when provided.</td>
+          </tr>
+          <tr>
+            <td>currentPregnancyStatus</td>
+            <td>Current state of the pregnancy at the date the observation was made.</td>
+            <td>equivalent</td>
+            <td>ObservationPregnancyStatusEuIps</td>
+            <td>valueCodeableConcept</td>
+            <td>Pregnancy status value.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>dateOfStatus</td>
+            <td>Effective date of the current pregnancy status.</td>
+            <td>equivalent</td>
+            <td>ObservationPregnancyStatusEuIps</td>
+            <td>effectiveDateTime</td>
+            <td>Date/time of the status assessment.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>expectedDateOfDelivery</td>
+            <td>Date in which the woman is due to give birth.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>valueDateTime</td>
+            <td>Expected delivery date.</td>
+            <td>Represented as a separate EDD observation (linked via hasMember).</td>
+          </tr>
+          <tr>
+            <td>gestationalAge</td>
+            <td>Gestational age - duration of the pregnancy on the day of observation.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>valueQuantity</td>
+            <td>Gestational age value.</td>
+            <td>Represented as a separate gestational age observation (linked via hasMember).</td>
           </tr>
         </tbody>
       </table>

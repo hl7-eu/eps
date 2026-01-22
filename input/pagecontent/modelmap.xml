@@ -318,7 +318,9 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSCurrentPregnancy.html" target="_blank">EHDSCurrentPregnancy</a>
                     </td>
                     <td>
-                        <a href="https://hl7.org/fhir/observation.html"><code>Observation</code></a>
+                        <a href="StructureDefinition-observation-pregnancy-status-eu-ips.html"><code>ObservationPregnancyStatusEuIps</code></a>,
+                        <a href="StructureDefinition-observation-pregnancy-edd-eu-eps.html"><code>ObservationPregnancyEddEuEps</code></a>,
+                        <a href="StructureDefinition-observation-pregnancy-gestationalAge-eu-eps.html"><code>ObservationPregnancyGestationalAgeEuEps</code></a>
                     </td>
                     <td>
                         <a class="pill" href="map-ehdscurrentpregnancy.html">EHDSCurrentPregnancy Mapping</a>
@@ -329,7 +331,7 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSPregnancyHistory.html" target="_blank">EHDSPregnancyHistory</a>
                     </td>
                     <td>
-                        <a href="https://hl7.org/fhir/observation.html"><code>Observation</code></a>
+                        <a href="StructureDefinition-observation-pregnancy-outcome-eu-eps.html"><code>ObservationPregnancyOutcomeEuEps</code></a>
                     </td>
                     <td>
                         <a class="pill" href="map-ehdspregnancyhistory.html">EHDSPregnancyHistory Mapping</a>
