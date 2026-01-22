@@ -220,8 +220,8 @@
                         <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSMedicationStatement.html" target="_blank">EHDSMedicationStatement</a>
                     </td>
                     <td>
-                        <a href="StructureDefinition-medicationStatement-eu-core.html">
-                            <code>MedicationStatementEuCore</code>
+                        <a href="StructureDefinition-medicationStatement-eu-eps.html">
+                            <code>MedicationStatementEuEps</code>
                         </a>
                     </td>
                     <td>

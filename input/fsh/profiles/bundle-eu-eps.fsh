@@ -1,10 +1,71 @@
-/*============== INVARIANTS ===============
-Invariant: eps-bundle-1
-Description: "Subject"
-* severity = #error
-* expression = "(entry.reference.exists() or emptyReason.exists())"
-* xpath = "(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)"
-=== */
+//============== INVARIANTS ===============
+
+
+Invariant: eps-bundle-resource-code
+Description: "For the IPS some resources require a code element. If the Bundle contains such resources (e.g. Medication), they SHALL have code populated."
+Severity: #error
+Expression: "entry.where(
+  resource.is(Medication)
+).empty() or
+entry.where(
+  resource.is(Medication) 
+).all(resource.code.exists())
+"
+
+Invariant: eps-bundle-patient-ref
+Description: "If the Bundle contains patient-based resources (AllergyIntolerance, Immunization, ImmunizationRecommendation), each SHALL have patient.reference populated."
+Severity: #error
+Expression: "entry.where(
+  resource.is(AllergyIntolerance) or
+  resource.is(Immunization) or
+  resource.is(ImmunizationRecommendation)
+).empty() or
+entry.where(
+  resource.is(AllergyIntolerance) or
+  resource.is(Immunization) or
+  resource.is(ImmunizationRecommendation)
+).all(resource.patient.reference.exists())
+"
+
+Invariant: eps-bundle-subject-ref
+Description: "If the Bundle contains subject-based clinical resources, each SHALL have subject.reference populated."
+Severity: #error
+Expression: "
+entry.where(
+  resource.is(Composition) or
+  resource.is(CarePlan) or
+  resource.is(ClinicalImpression) or
+  resource.is(Condition) or
+  resource.is(Consent) or
+  resource.is(DeviceUseStatement) or
+  resource.is(DiagnosticReport) or
+  resource.is(DocumentReference) or
+  resource.is(Flag) or
+  resource.is(ImagingStudy) or
+  resource.is(MedicationRequest) or
+  resource.is(MedicationStatement) or
+  resource.is(Procedure) or
+  resource.is(Observation)
+).empty() or
+entry.where(
+  resource.is(Composition) or
+  resource.is(CarePlan) or
+  resource.is(ClinicalImpression) or
+  resource.is(Condition) or
+  resource.is(Consent) or
+  resource.is(DeviceUseStatement) or
+  resource.is(DiagnosticReport) or
+  resource.is(DocumentReference) or
+  resource.is(Flag) or
+  resource.is(ImagingStudy) or
+  resource.is(MedicationRequest) or
+  resource.is(MedicationStatement) or
+  resource.is(Procedure) or
+  resource.is(Observation)
+).all(resource.subject.reference.exists())
+"
+
+
 
 Profile: BundleEuEps
 Parent: Bundle
@@ -21,6 +82,9 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 * insert SetFmmAndStatusRule (1, draft)
 * insert ImposeProfile($Bundle-uv-ips, 0)
+
+* obeys eps-bundle-patient-ref
+* obeys eps-bundle-subject-ref
 
 //================================
 // Verify if all the IPS rules are reported in the profile
@@ -104,7 +168,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[medicationrequest].resource only MedicationRequestEuEps
 
 * entry[medicationstatement].resource 1..
-* entry[medicationstatement].resource only MedicationStatementEuCore
+* entry[medicationstatement].resource only MedicationStatementEuEps
 
 * entry[practitioner].resource 1..
 * entry[practitioner].resource only PractitionerEuCore
@@ -112,7 +176,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[practitionerrole].resource only PractitionerRoleEuCore
 
 * entry[procedure].resource 1..
-* entry[procedure].resource only ProcedureEuCore
+* entry[procedure].resource only ProcedureEuEps
 
 * entry[organization].resource 1..
 * entry[organization].resource only OrganizationEuCore

@@ -448,7 +448,7 @@
           <td>Composition</td>
           <td>section:sectionMedications.entry:medicationStatementOrRequest</td>
           <td>Medication entries.</td>
-          <td>Reference to MedicationStatementEuCore.</td>
+          <td>Reference to MedicationStatementEuEps.</td>
           </tr>
           <!-- SECTION: MEDICAL DEVICES -->
           <tr>

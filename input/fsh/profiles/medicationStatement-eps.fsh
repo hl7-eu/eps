@@ -1,4 +1,4 @@
-Profile: MedicationStatementEuCore
+Profile: MedicationStatementEuEps
 Parent: MedicationStatementEuCore
 Id: MedicationStatement-eu-eps
 Title:    "Medication Statement (EPS)"
@@ -11,7 +11,7 @@ Description: """This profile constrains the MedicationStatement resource for the
 
 * medication[x] 1.. 
 * medication[x] only $CodeableConcept-uv-ips or Reference(MedicationEuCore)
-* subject only Reference (PatientEuEps)
+* subject only Reference (PatientEuCore)
   * reference 1..
 *  effective[x] 1..
 

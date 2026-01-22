@@ -136,7 +136,7 @@ Please review and complete the implementation of the IPS constraints, including 
   * insert SectionEntrySliceDefRules (medicationStatementOrRequest, 0.. ,
   Medications relevant for the scope of the patient summary ,
   This list the medications relevant for the scope of the patient summary or it is used to indicate that the subject is known not to be on any relevant medication; either that no information is available about medications. ,
-  MedicationStatementEuCore)
+  MedicationStatementEuEps)
   
 
 // === EPS Immunizations Section ===
@@ -157,8 +157,6 @@ Please review and complete the implementation of the IPS constraints, including 
     ImmunizationEuCore) 
   
   
-
- 
 // === EPS History of Procedures Section ===
 
 * section[sectionProceduresHx]
@@ -180,7 +178,7 @@ Please review and complete the implementation of the IPS constraints, including 
       1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n
       2. Therapeutic procedure: e.g. dialysis;\r\n
       3. Surgical procedure: e.g. appendectomy\r\n,
-      ProcedureEuCore)
+      ProcedureEuEps)
 
 ///=== EPS Medical Devices Section
 
