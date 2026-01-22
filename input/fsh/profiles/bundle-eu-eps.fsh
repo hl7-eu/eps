@@ -85,6 +85,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 * obeys eps-bundle-patient-ref
 * obeys eps-bundle-subject-ref
+* obeys eps-bundle-resource-code
 
 //================================
 // Verify if all the IPS rules are reported in the profile

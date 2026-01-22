@@ -88,6 +88,28 @@ pages:
     title: Model Map
   map-ehdspatientsummary.xml:
     title: EHDSPatientSummary to Composition (EPS)
+  map-ehdsattachment.xml:
+    title: EHDSAttachment Mapping
+  map-ehdsdevice.xml:
+    title: EHDSDevice Mapping
+  map-ehdsdeviceuse.xml:
+    title: EHDSDeviceUse Mapping
+  map-ehdsfunctionalstatus.xml:
+    title: EHDSFunctionalStatus Mapping
+  map-ehdssocialhistory.xml:
+    title: EHDSSocialHistory Mapping
+  map-ehdscurrentpregnancy.xml:
+    title: EHDSCurrentPregnancy Mapping
+  map-ehdspregnancyhistory.xml:
+    title: EHDSPregnancyHistory Mapping
+  map-ehdstravelhistory.xml:
+    title: EHDSTravelHistory Mapping
+  map-ehdsadvancedirective.xml:
+    title: EHDSAdvanceDirective Mapping
+  map-ehdscareplan.xml:
+    title: EHDSCarePlan Mapping
+  map-ehdslaboratoryobservation.xml:
+    title: EHDSLaboratoryObservation Mapping
 
 # == IPS COMPARISON
   ips-eps-section-comparison.html:

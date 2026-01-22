@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>EHDSDeviceUse -> DeviceUseStatementEuEps</title>
+  </head>
+  <body>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Ongoing alignment:</strong>
+              The Xt-EHR logical models are under active revision and continuous refinement.
+              Updates from Xt-EHR will be progressively incorporated into this Implementation
+              Guide to maintain alignment with the evolving EHDS specifications.
+        </div>
+      </div>
+    </div>
+    <div class="model-map-block">
+      <div class="callout-wrapper">
+        <div class="callout-box">
+          <strong>Yellow row/cells:</strong>
+              In this ballot publication, some row/cells of the mapping table have been left in yellow to indicate areas requiring further review or refinement; including feedback from the Xt-EHR joint action (see note above). These highlights will be addressed in subsequent updates to ensure accuracy and completeness of the mappings.
+        </div>
+      </div>
+    </div>
+    <h3>EHDSDeviceUse -> DeviceUseStatementEuEps</h3>
+    <a> </a>
+    <p></p>
+    <p>
+  This page explains how conceptual elements from the EHDS logical model are expressed
+  in the corresponding FHIR DeviceUseStatementEuEps profile or type used by this Implementation Guide.
+    </p>
+    <p></p>
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSDeviceUse.html" target="_blank">
+        EHDSDeviceUse
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-deviceUseStatement-eu-eps.html">
+        DeviceUseStatementEuEps
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p></p>
+    <div class="table-wrap">
+      <table summary="EHDSDeviceUse -> DeviceUseStatementEuEps">
+        <caption>EHDSDeviceUse -> DeviceUseStatementEuEps</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">EHDSDeviceUse (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">DeviceUseStatementEuEps</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="highlight-yellow">
+            <td colspan="7">Mapping pending.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:2rem;color:#555;">
+      Return to overview: <a href="modelmap.html">EHDS Logical Models -> FHIR Profiles</a>
+    </p>
+  </body>
+</div>

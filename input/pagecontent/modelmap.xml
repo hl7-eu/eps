@@ -71,11 +71,12 @@
     </h4><a>   </a>
     
     <div class="callout-wrapper">
+        <p> </p>
         <div class="callout-box">
             <p>
             <strong>Note:</strong>
             The entries in the table below correspond to existing mapping pages specified for the EU Core profile.</p>
-            <p>In some cases (e.g. XXX) EPS specialized profiles are used to take in account some additional IPS constraints. This doesn't modify the described mapping</p>
+            <p>In some cases (e.g. Procedure) EPS uses specialized profiles to take in account some additional IPS constraints. This however doesn't modify the described mapping.</p>
         </div>
     </div>
     
@@ -84,7 +85,7 @@
             <thead>
                 <tr>
                     <th>EHDS Logical Model</th>
-                    <th>FHIR Profile / Type in this IG</th>
+                    <th>FHIR Profile / Type in EU Base and Core IG</th>
                     <th>Mapping Details</th>
                 </tr>
             </thead>
@@ -239,6 +240,7 @@
     <a>  </a>
     
     <div class="callout-wrapper">
+        <p> </p>
         <div class="callout-box">
             <strong>Warning:</strong>
           The entries in the table below do not necessarily correspond to an
@@ -264,7 +266,7 @@
                         <a href="https://hl7.org/fhir/datatypes.html#Attachment"><code>Attachment</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="ips-eps-advance-directives.html">EHDSAttachment Mapping</a>
+                        <a class="pill" href="map-ehdsattachment.html">EHDSAttachment Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -275,7 +277,7 @@
                         <a href="StructureDefinition-device-eu-eps.html"><code>DeviceEuEps</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="ips-eps-medical-devices.html">EHDSDevice Mapping</a>
+                        <a class="pill" href="map-ehdsdevice.html">EHDSDevice Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -286,7 +288,7 @@
                         <a href="StructureDefinition-deviceUseStatement-eu-eps.html"><code>DeviceUseStatementEuEps</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="ips-eps-medical-devices.html">EHDSDeviceUse Mapping</a>
+                        <a class="pill" href="map-ehdsdeviceuse.html">EHDSDeviceUse Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -297,7 +299,7 @@
                         <a href="https://hl7.org/fhir/observation.html"><code>Observation</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="ips-eps-functional-status.html">EHDSFunctionalStatus Mapping</a>
+                        <a class="pill" href="map-ehdsfunctionalstatus.html">EHDSFunctionalStatus Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -308,7 +310,7 @@
                         <a href="https://hl7.org/fhir/observation.html"><code>Observation</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="ips-eps-social-history.html">EHDSSocialHistory Mapping</a>
+                        <a class="pill" href="map-ehdssocialhistory.html">EHDSSocialHistory Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -319,7 +321,7 @@
                         <a href="https://hl7.org/fhir/observation.html"><code>Observation</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="ips-eps-pregnancy.html">EHDSCurrentPregnancy Mapping</a>
+                        <a class="pill" href="map-ehdscurrentpregnancy.html">EHDSCurrentPregnancy Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -330,7 +332,7 @@
                         <a href="https://hl7.org/fhir/observation.html"><code>Observation</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="ips-eps-pregnancy.html">EHDSPregnancyHistory Mapping</a>
+                        <a class="pill" href="map-ehdspregnancyhistory.html">EHDSPregnancyHistory Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -341,7 +343,7 @@
                         <a href="StructureDefinition-observation-travel-eu-eps.html"><code>ObservationTravelEuEps</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="ips-eps-section-comparison.html">EHDSTravelHistory Mapping</a>
+                        <a class="pill" href="map-ehdstravelhistory.html">EHDSTravelHistory Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -352,7 +354,7 @@
                         <a href="StructureDefinition-consent-eu-eps.html"><code>ConsentEuEps</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="ips-eps-advance-directives.html">EHDSAdvanceDirective Mapping</a>
+                        <a class="pill" href="map-ehdsadvancedirective.html">EHDSAdvanceDirective Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -363,7 +365,7 @@
                         <a href="https://hl7.org/fhir/careplan.html"><code>CarePlan</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="ips-eps-care-plan.html">EHDSCarePlan Mapping</a>
+                        <a class="pill" href="map-ehdscareplan.html">EHDSCarePlan Mapping</a>
                     </td>
                 </tr>
                 <tr>
@@ -374,7 +376,7 @@
                         <a href="https://hl7.org/fhir/observation.html"><code>Observation</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="ips-eps-results.html">EHDSLaboratoryObservation Mapping</a>
+                        <a class="pill" href="map-ehdslaboratoryobservation.html">EHDSLaboratoryObservation Mapping</a>
                     </td>
                 </tr>
 
