@@ -11,7 +11,7 @@ Description: "This profile constrains the Observation resource to represent the 
 * code only CodeableConceptIPS
 * code = $loinc#82810-3
 * subject 1.. 
-* subject only Reference(PatientEuCore)
+* subject only Reference(PatientEuEps)
 * subject.reference 1.. 
 * effective[x] 1..1 
 * effective[x] only dateTime

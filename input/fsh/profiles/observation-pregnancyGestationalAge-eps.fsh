@@ -10,7 +10,7 @@ Description: "This profile constrains the Observation resource to represent gest
 * code only CodeableConceptIPS
 * code from GestationalAgeLoincVs (required)
 * subject 1..
-* subject only Reference(PatientEuCore)
+* subject only Reference(PatientEuEps)
 * subject.reference 1..
 * effective[x] 1..1
 * effective[x] only dateTime

@@ -32,7 +32,7 @@ Please review and complete the implementation of the IPS constraints, including 
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the PS the subject is always the patient."
 // * encounter only Reference ( EncounterEuEps )
 * date ^short = "PS date"
-* author only Reference ($practitioner-eu-core or $practitionerRole-eu-core or Device or $organization-eu-core or PatientEuCore or RelatedPerson)
+* author only Reference ($practitioner-eu-core or $practitionerRole-eu-core or Device or $organization-eu-core or PatientEuEps or RelatedPerson)
   * ^short = "Who and/or what authored the Patient Summary"
   * ^definition = "Identifies who is responsible for the information in the Patient Summary, not necessarily who typed it in."
 

@@ -11,7 +11,7 @@ Description: """This profile constrains the MedicationStatement resource for the
 
 * medication[x] 1.. 
 * medication[x] only $CodeableConcept-uv-ips or Reference(MedicationEuCore)
-* subject only Reference (PatientEuCore)
+* subject only Reference (PatientEuEps)
   * reference 1..
 *  effective[x] 1..
 

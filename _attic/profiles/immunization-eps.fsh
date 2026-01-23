@@ -98,7 +98,7 @@ Description: """This profile defines how to represent Immunization Recommandatio
 //-------------------------------------------------------------------------------------------
 
 * date ^short = "When recomendation was created"
-* patient only Reference (PatientEuCore)
+* patient only Reference (PatientEuEps)
 * recommendation
   * vaccineCode from http://hl7.org/fhir/uv/ips/ValueSet/vaccines-uv-ips (preferred)
   * vaccineCode ^binding.extension[+].extension[0].url = "purpose"
