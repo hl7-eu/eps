@@ -22,7 +22,7 @@ Description: "This profile constrains the MedicationDispense resource for the pu
 * receiver // MS // receiver
 * performer.actor 1..1
 
-* authorizingPrescription only Reference(MedicationRequestEuEps)
+* authorizingPrescription only Reference(MedicationRequestEuCore)
 * quantity 1..1 // MS // dispensedQuantity 1
 * whenHandedOver 1..1 // MS // timeOfDispensation 1
 

@@ -166,7 +166,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[medication].resource only MedicationEuCore
 
 * entry[medicationrequest].resource 1..
-* entry[medicationrequest].resource only MedicationRequestEuEps
+* entry[medicationrequest].resource only MedicationRequestEuCore
 
 * entry[medicationstatement].resource 1..
 * entry[medicationstatement].resource only MedicationStatementEuEps
