@@ -571,14 +571,14 @@
             <td>Narrative for Functional Status section.</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
           <td>functionalStatus.functionalStatusAssessment</td>
           <td>Functional status assessments.</td>
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionFunctionalStatus.entry:functionalStatus</td>
           <td>Functional status entries.</td>
-          <td></td>
+          <td>The actual content maps better into an Observation profile, not allowed in this section</td>
           </tr>
           <!-- SECTION: SOCIAL HISTORY -->
           <tr>
@@ -673,14 +673,14 @@
             <td>Narrative for Travel History section.</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
           <td>travelHistory.travelHistory</td>
           <td>Travel history for one country.</td>
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionTravelHx.entry</td>
           <td>Travel history entries.</td>
-          <td>Reference to ObservationTravelEuEps. MISSING to be added</td>
+          <td>Reference to ObservationTravelEuEps.</td>
           </tr>
           <!-- SECTION: PATIENT STORY -->
           <tr>
@@ -730,23 +730,23 @@
           <td>Reference to ConsentEuEps or DocumentReference.</td>
           </tr>
           <!-- SECTION: RESULTS -->
-          <tr class="highlight-yellow">
+          <tr>
           <td>results</td>
           <td>Section: Observation results.</td>
           <td>source-is-broader-than-target</td>
           <td>Composition</td>
           <td>section:sectionResults</td>
           <td>Results section.</td>
-          <td>Slice defined for coded results. CHECK IF THIS MAPS TO BOTH DIANGOSTIC RESULTS AND VITAL SIGNS. Section to be refined</td>
+          <td>When the result is a diagnostic result.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>results</td>
             <td>Section: Observation results.</td>
             <td>source-is-broader-than-target</td>
             <td>Composition</td>
             <td>section:sectionVitalSigns</td>
             <td>Vital Signs section.</td>
-            <td>Slice defined for coded results. CHECK IF THIS MAPS TO BOTH DIANGOSTIC RESULTS AND VITAL SIGNS. Section to be refined</td>
+            <td>When the result is a vital sign</td>
           </tr>
           <tr>
             <td>results.narrative</td>
@@ -764,16 +764,16 @@
           <td>Composition</td>
           <td>section:sectionResults.entry</td>
           <td>Result observation entries.</td>
-          <td>Reference to Observation. Target profiles to be defined.</td>
+          <td>When the result is a diagnostic result. Target profiles to be selected/defined.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>results.resultObservation[x]</td>
             <td>Observation results pertaining to the subject of care.</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>section:sectionVitalSigns.entry</td>
             <td>Result observation entries.</td>
-            <td>Reference to Observation. Target profiles to be defined.</td>
+            <td>When the result is a vital sign, target profile is http://hl7.org/fhir/StructureDefinition/vitalsigns.</td>
           </tr>
           <!-- SECTION: CARE PLAN -->
           <tr>
@@ -794,14 +794,14 @@
             <td>Narrative for Care Plan section.</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
           <td>carePlan.carePlanEntry</td>
           <td>Describes the intention of how care will be delivered.</td>
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionPlanOfCare.entry</td>
           <td>Care plan entries.</td>
-          <td>taget profile to be defined</td>
+          <td></td>
           </tr>
         </tbody>
       </table>

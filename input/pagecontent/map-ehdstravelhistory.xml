@@ -69,8 +69,115 @@
           </tr>
         </thead>
         <tbody>
+          <!-- HEADER BLOCK (common dataset header) -->
+          <tr>
+            <td>header</td>
+            <td>Common header for all patient-related data.</td>
+            <td>related-to</td>
+            <td>Observation</td>
+            <td>.</td>
+            <td>General metadata.</td>
+            <td>Dataset-level; not usually carried in Observation as-is.</td>
+          </tr>
+          <tr>
+            <td>header.subject</td>
+            <td>Patient/subject this travel history is about.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>subject</td>
+            <td>Reference to the patient or subject of the observation.</td>
+            <td>Reference to PatientEuEps.</td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>Business identifier for the object.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>identifier</td>
+            <td>Business identifier for this observation.</td>
+            <td>Copy over all identifiers if multiple.</td>
+          </tr>
           <tr class="highlight-yellow">
-            <td colspan="7">Mapping pending.</td>
+            <td>header.authorship</td>
+            <td>Resource authoring details.</td>
+            <td>no-map</td>
+            <td>Observation</td>
+            <td>.</td>
+            <td>Observation lacks a dedicated recorder. Only when the observation result was issued can be represented.</td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.authorship.author[x]</td>
+            <td>Author(s) who issued the resource.</td>
+            <td>no-map</td>
+            <td>Observation</td>
+            <td></td>
+            <td>Observation lacks a dedicated recorder.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.authorship.datetime</td>
+            <td>Date and time of authoring/issuing.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>issued</td>
+            <td>When the observation result was issued.</td>
+            <td>1.. in the model 0.. in the profile.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.lastUpdate</td>
+            <td>Last technical correction/update.</td>
+            <td>source-is-broader-than-target</td>
+            <td>Observation</td>
+            <td>meta.lastUpdated</td>
+            <td>When the resource version last changed.</td>
+            <td>Use only when the timestamp reflects resource update (instant).</td>
+          </tr>
+          <tr>
+            <td>header.status</td>
+            <td>Status of the resource.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>status</td>
+            <td>Registered | preliminary | final | amended | ...</td>
+            <td>EHDS uses CodeableConcept; Observation.status is a required code. Align to HL7 ObservationStatus.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.statusReason[x]</td>
+            <td>Reason for the current status.</td>
+            <td>no-map</td>
+            <td>Observation</td>
+            <td>-</td>
+            <td></td>
+            <td>No core element; use an extension if the status rationale is required.</td>
+          </tr>
+          <tr>
+            <td>header.language</td>
+            <td>Language of the resource (IETF tag).</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>language</td>
+            <td>Language used in the observation.</td>
+            <td></td>
+          </tr>
+
+          <tr>
+            <td>country</td>
+            <td>Country visited.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>valueCodeableConcept</td>
+            <td>Country visited.</td>
+            <td>Preferred binding: ISO 3166-1-2.</td>
+          </tr>
+          <tr>
+            <td>period</td>
+            <td>Date of entry and departure.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>effectivePeriod</td>
+            <td>Period of visit.</td>
+            <td></td>
           </tr>
         </tbody>
       </table>
