@@ -5,7 +5,7 @@ Title: "Observation: country visited (EPS)"
 Description: "This profile sets minimum expectations for the Observation resource to record, search, and fetch travel history."
 * ^experimental = false
 
-* identifer ^short = "Business identifier"
+* identifier ^short = "Business identifier"
 * status ^short = "The status of the observation."
 * code = $loinc#94651-7 // "Country of travel [Location]"
 * effectivePeriod ^short = "Period of visit in a country"
