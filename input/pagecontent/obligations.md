@@ -24,7 +24,12 @@ The first is the actor creating the report (the authoring/producer system).
 The second actor is the system maintaining a copy of the report received, to store and make it available for consumers (repository/custodian).
 The last actor is the system using the report received or retrieved (consumer/reader).
 
-These align with the IPS actors as described in the IPS guidance: **Creator (IPS)**, **Consumer (IPS)**, and **Server (IPS)**. In IPS, obligations are always tied to an actor and accompany all `mustSupport` elements, specifying the structured expectations for that actor (e.g., what the Creator must populate and what the Consumer must process). Obligations can differ between Creator and Consumer, and IPS highlights that obligations should not conflict with regional laws and policies.
+These align with the IPS actors as described in the IPS guidance. The IPS actors are (definitions in the IPS guide):
+- **Creator (IPS)**: a system which produces/assembles/creates an IPS document. See [ActorDefinition-Creator](https://hl7.org/fhir/uv/ips/ActorDefinition-Creator.html).
+- **Consumer (IPS)**: a system that receives an IPS document and uses its content. See [ActorDefinition-Consumer](https://hl7.org/fhir/uv/ips/ActorDefinition-Consumer.html).
+- **Server (IPS)**: a FHIR server acting as an IPS Creator by providing conformant IPS documents in response to FHIR API requests. See [ActorDefinition-Server](https://hl7.org/fhir/uv/ips/ActorDefinition-Server.html).
+
+In IPS, obligations are always tied to an actor and accompany all `mustSupport` elements, specifying the structured expectations for that actor (e.g., what the Creator must populate and what the Consumer must process). Obligations can differ between Creator and Consumer, and IPS highlights that obligations should not conflict with regional laws and policies.
 
 
 ### Obligations List
