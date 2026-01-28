@@ -346,7 +346,7 @@
                         <a class="pill" href="map-ehdstravelhistory.html">EHDSTravelHistory Mapping</a>
                     </td>
                 </tr>
-                <tr class="highlight-yellow">
+                <tr>
                     <td>
                         <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSAdvanceDirective.html" target="_blank">EHDSAdvanceDirective</a>
                     </td>

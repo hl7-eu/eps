@@ -12,9 +12,11 @@ Description: """This profile constrains the Consent resource for the purpose rep
 * extension contains ConsentRelatedCondition named relatedCondition 0..*
 * extension[relatedCondition].valueReference ^short = "Related conditions"
 
+* status ^short = "The current state of this will."
 
+* performer ^short = "Who is agreeing to this policy and rules"
 * scope = $consentscope#adr 
-* dateTime ^short = "Living will date and time"
+* dateTime ^short = "When this Living will was created or indexed"
 * category ^short = "Living will type"
 * source[x] ^short = "Living will document"
 // ==> add value set
