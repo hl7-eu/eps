@@ -1,32 +1,26 @@
-Profile: ObservationPregnancyStatusEuEps
+Profile: ObservationPreviousPregnanciesStatusEuEps
 Parent: Observation
-Id: observation-pregnancy-status-eu-ips
-Title: "Observation Pregnancy - Status (EPS)"
-Description: "This profile constrains the Observation resource to represent the pregnancy status."
+Id: observation-previous-pregnancies-status-eu-eps
+Title: "Observation Previous Pregnancies Status (EPS)"
+Description: "This profile constrains the Observation resource to represent the overall status of previous pregnancies."
 
 * insert SetFmmAndStatusRule (1, draft)
-* insert ImposeProfile ( $Observation-pregnancy-status-uv-ips, 0 )
 
-* code 1..1 
+* code 1..1
 * code only CodeableConceptIPS
-* code = $loinc#82810-3
-* subject 1.. 
+* code.text = "Previous pregnancies status"
+// TODO: find a proper code for this observation.
+* subject 1..
 * subject only Reference(PatientEuEps)
-* subject.reference 1.. 
-* effective[x] 1..1 
+* subject.reference 1..
+* effective[x] 0..1
 * effective[x] only dateTime
 * valueCodeableConcept only CodeableConceptIPS
-* valueCodeableConcept 
 * valueCodeableConcept from PregnancyStatusUvIps (preferred)
 * bodySite ..0
 * specimen ..0
 * device ..0
 * referenceRange ..0
-* hasMember only Reference(ObservationPregnancyEddUvIps or ObservationPregnancyGestationalAgeEuEps)
-* hasMember 
-* hasMember ^short = "Expected delivery date or gestational age"
-* hasMember ^definition = "A reference to the expected delivery date or gestational age observation."
-* hasMember.reference 1.. 
 * component ..0
 
 // ================= IPS OBLIGATIONS =================
@@ -48,10 +42,3 @@ Description: "This profile constrains the Observation resource to represent the 
 * valueCodeableConcept insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
 * valueCodeableConcept insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
 * valueCodeableConcept insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
-
-* hasMember insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* hasMember insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* hasMember insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
-
-* hasMember.reference insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* hasMember.reference insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)

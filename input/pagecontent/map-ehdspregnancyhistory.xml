@@ -140,16 +140,16 @@
             <td>Observation</td>
             <td>status</td>
             <td>Registered | preliminary | final | amended | ...</td>
-            <td>EHDS uses CodeableConcept; Observation.status is a required code. Align to HL7 ObservationStatus.</td>
+            <td></td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
             <td>header.statusReason[x]</td>
             <td>Reason for the current status.</td>
             <td>no-map</td>
             <td>Observation</td>
             <td>-</td>
             <td></td>
-            <td>No core element; use an extension if the status rationale is required.</td>
+            <td>No core element</td>
           </tr>
           <tr>
             <td>header.language</td>
@@ -164,8 +164,8 @@
             <td>narrative</td>
             <td>Narrative description describing the outcome of any previous pregnancies.</td>
             <td>related-to</td>
-            <td>ObservationPregnancyOutcomeEuEps</td>
-            <td>text.div</td>
+            <td>Observation</td>
+            <td>text</td>
             <td>Narrative for the observation.</td>
             <td>Use narrative when provided.</td>
           </tr>
@@ -173,7 +173,7 @@
             <td>outcomeDate</td>
             <td>Date referred to the previous pregnancies outcome.</td>
             <td>equivalent</td>
-            <td>ObservationPregnancyOutcomeEuEps</td>
+            <td>Observation</td>
             <td>effectiveDateTime</td>
             <td>Date/time of the outcome.</td>
             <td></td>
@@ -182,7 +182,7 @@
             <td>outcome</td>
             <td>Outcome of the previous pregnancy.</td>
             <td>equivalent</td>
-            <td>ObservationPregnancyOutcomeEuEps</td>
+            <td>Observation</td>
             <td>code</td>
             <td>Outcome concept for the observation.</td>
             <td>Use a code from the pregnancy outcome value set.</td>
@@ -191,7 +191,7 @@
             <td>numberOfChildren</td>
             <td>Number of children/fetuses in this specific pregnancy.</td>
             <td>equivalent</td>
-            <td>ObservationPregnancyOutcomeEuEps</td>
+            <td>Observation</td>
             <td>valueQuantity</td>
             <td>Count of children/fetuses.</td>
             <td></td>

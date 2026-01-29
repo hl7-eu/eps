@@ -33,7 +33,7 @@ For the most recent and in-progress versions, please refer to the [**Xt-EHR EHDS
 
 ---
 
-#### Common Models directly referred by the Patient Summary
+#### Common Models used by the Patient Summary
 
 | **Model** | **Description** |
 | --- | --- |

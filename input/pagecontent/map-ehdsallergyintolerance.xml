@@ -179,7 +179,7 @@
             <td>source-is-broader-than-target</td>
             <td>AllergyIntolerance</td><td>note.text</td>
             <td>Additional narrative about the allergy/intolerance.</td>
-            <td class="highlight-yellow">The mapping applies if the text represents additional information collected about the allergy.FHIR doesn't have a single free-text "description" element; use <code>AllergyIntolerance.note</code> (0..*). Could also populate <code>text.div</code> if it refer to a textual description of the whole resource.</td>
+            <td class="highlight-yellow">The mapping applies if the text represents additional information collected about the allergy.FHIR doesn't have a single free-text "description" element; use <code>AllergyIntolerance.note</code> (0..*). Could also populate <code>text</code> if it refer to a textual description of the whole resource.</td>
           </tr>
           <!-- criticality -->
           <tr>

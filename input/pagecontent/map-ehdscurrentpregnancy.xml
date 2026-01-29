@@ -43,7 +43,7 @@
         <li>
           <strong>Target FHIR profile:</strong>
           <a href="StructureDefinition-observation-pregnancy-status-eu-ips.html">
-        ObservationPregnancyStatusEuIps
+        ObservationPregnancyStatusEuEps
           </a>
         </li>
         <li>
@@ -68,7 +68,16 @@
           <tr>
             <th colspan="2" class="src-head">EHDSCurrentPregnancy (Logical Model)</th>
             <th class="relhead">Relationship</th>
-            <th colspan="4" class="tgt-head">Pregnancy Observations</th>
+            <th colspan="4" class="tgt-head">
+              Pregnancy Observations
+              <div class="tgt-head-links">
+                <a href="StructureDefinition-observation-pregnancy-status-eu-ips.html">ObservationPregnancyStatusEuEps</a>
+                <span> | </span>
+                <a href="StructureDefinition-observation-pregnancy-edd-eu-eps.html">ObservationPregnancyEddEuEps</a>
+                <span> | </span>
+                <a href="StructureDefinition-observation-pregnancy-gestationalAge-eu-eps.html">ObservationPregnancyGestationalAgeEuEps</a>
+              </div>
+            </th>
           </tr>
           <tr>
             <th class="src-sub">Element</th>
@@ -152,9 +161,9 @@
             <td>Observation</td>
             <td>status</td>
             <td>Registered | preliminary | final | amended | ...</td>
-            <td>EHDS uses CodeableConcept; Observation.status is a required code. Align to HL7 ObservationStatus.</td>
+            <td></td>
           </tr>
-          <tr>
+          <tr class="highlight-yellow">
             <td>header.statusReason[x]</td>
             <td>Reason for the current status.</td>
             <td>no-map</td>
@@ -176,8 +185,8 @@
             <td>narrative</td>
             <td>Narrative description describing the status of the current pregnancy.</td>
             <td>related-to</td>
-            <td>ObservationPregnancyStatusEuIps</td>
-            <td>text.div</td>
+            <td>Observation</td>
+            <td>text</td>
             <td>Narrative for the observation.</td>
             <td>Use narrative when provided.</td>
           </tr>
@@ -185,7 +194,7 @@
             <td>currentPregnancyStatus</td>
             <td>Current state of the pregnancy at the date the observation was made.</td>
             <td>equivalent</td>
-            <td>ObservationPregnancyStatusEuIps</td>
+            <td>Observation</td>
             <td>valueCodeableConcept</td>
             <td>Pregnancy status value.</td>
             <td></td>
@@ -194,7 +203,7 @@
             <td>dateOfStatus</td>
             <td>Effective date of the current pregnancy status.</td>
             <td>equivalent</td>
-            <td>ObservationPregnancyStatusEuIps</td>
+            <td>Observation</td>
             <td>effectiveDateTime</td>
             <td>Date/time of the status assessment.</td>
             <td></td>

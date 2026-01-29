@@ -15,6 +15,7 @@
 <artifact id="StructureDefinition/observation-pregnancy-gestationalAge-eu-eps" key="StructureDefinition-observation-pregnancy-gestationalAge-eu-eps" name="Observation Pregnancy - Gestational Age (EPS)"/>
 <artifact id="StructureDefinition/observation-pregnancy-outcome-eu-eps" key="StructureDefinition-observation-pregnancy-outcome-eu-eps" name="Observation Pregnancy - Outcome (EPS)"/>
 <artifact id="StructureDefinition/observation-pregnancy-status-eu-ips" key="StructureDefinition-observation-pregnancy-status-eu-ips" name="Observation Pregnancy - Status (EPS)"/>
+<artifact id="StructureDefinition/observation-previous-pregnancies-status-eu-eps" key="StructureDefinition-observation-previous-pregnancies-status-eu-eps" name="Observation Previous Pregnancies Status (EPS)"/>
 <artifact id="StructureDefinition/observation-travel-eu-eps" key="StructureDefinition-observation-travel-eu-eps" name="Observation: country visited (EPS)"/>
 <artifact id="StructureDefinition/patient-eu-eps" key="StructureDefinition-patient-eu-eps" name="Patient (EPS)"/>
 <artifact id="StructureDefinition/procedure-eu-eps" key="StructureDefinition-procedure-eu-eps" name="Procedure (EPS)"/>

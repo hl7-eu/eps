@@ -627,32 +627,32 @@
             <td>Narrative for Pregnancy section.</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
           <td>pregnancyHistory.currentPregnancyStatus</td>
           <td>Current pregnancy status.</td>
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionPregnancyHx.entry:pregnancyStatus</td>
           <td>Pregnancy status entry.</td>
-          <td>check the target profiles to be used.</td>
+          <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
           <td>pregnancyHistory.previousPregnanciesStatus</td>
           <td>Overall status of previous pregnancies.</td>
           <td>related-to</td>
           <td>Composition</td>
-          <td>section:sectionPregnancyHx.entry:pregnancyOutcome</td>
+          <td>section:sectionPregnancyHx.entry:previousPregnanciesStatus</td>
           <td>Summary of prior pregnancies.</td>
           <td>Check target profiles.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
           <td>pregnancyHistory.previousPregnancies</td>
           <td>History of previous pregnancies.</td>
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionPregnancyHx.entry:pregnancyOutcome</td>
           <td>Pregnancy outcome entries.</td>
-          <td>Check target profiles.</td>
+          <td></td>
           </tr>
           <!-- SECTION: TRAVEL HISTORY -->
           <tr>

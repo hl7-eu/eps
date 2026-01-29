@@ -325,6 +325,9 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * insert SectionEntrySliceDefRules (pregnancyStatus, 0.. ,
     Current pregnancy status , Current pregnancy status ,
     ObservationPregnancyStatusUvIps)
+  * insert SectionEntrySliceDefRules (previousPregnanciesStatus, 0.. ,
+    Overall status of previous pregnancies , Overall status of previous pregnancies ,
+    ObservationPreviousPregnanciesStatusEuEps)
   * insert SectionEntrySliceDefRules (pregnancyOutcome, 0.. , Information about the outcome of earlier pregnancies ,
     information about the outcome of earlier pregnancies,
     ObservationPregnancyOutcomeUvIps)
