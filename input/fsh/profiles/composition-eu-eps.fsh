@@ -206,7 +206,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
   FlagEuCore)
 
-// EPS Results Section, to be completed
+// ==== EPS Results Section
 
 * section[sectionResults]  
   * insert SectionComRules ( 
@@ -215,18 +215,15 @@ Description: "Clinical document used to represent a Patient Summary for the scop
       http://loinc.org#30954-2)
   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
   * insert SectionEntrySliceComRules(EPS Results entry, EPS Results entry slice)
-  * insert SectionEntrySliceDefRules (results-observation-laboratory-pathology, 0.. , 
-      Laboratory and pathology results, 
-       Laboratory or pathology in vitro diagnostic test or panel/study. In case of a panel or multiple-observation study\, the results of the panel or study appear as sub-observations. In this case this top-level Observation acts as a grouper of all the observations belonging to the panel or study.,
-       $Observation-results-laboratory-pathology-uv-ips) // TO BE changed with proper profile
-  * insert SectionEntrySliceDefRules (results-observation-radiology, 0.. , 
-      Radiology results, 
-       This observation may represent the conclusions of a diagnostic procedure such a Chest RX\, or it may group the set of results produced by that single or multi-modality procedure.,
-       $Observation-results-radiology-uv-ips) // TO BE changed with proper profile
+  // Review the slice definiton
+  * insert SectionEntrySliceDefRules (results-medicalTestResult, 0.. , 
+      Medical test results, 
+       Results collected on the patient or produced on in-vitro biologic specimens., 
+       MedicalTestResultEuCore)
   * insert SectionEntrySliceDefRules (results-diagnosticReport, 0.. , 
       EPS DiagnosticReport, 
        DiagnosticReport resource to represent diagnostic test and procedure reports in a patient summary,
-       DiagnosticReportEuCore)
+       DiagnosticReportEuEps)
 
 // -------------  EPS Vital Signs Section ------------------------
 
@@ -515,13 +512,9 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * section[sectionResults] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
 * section[sectionResults] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
 
-* section[sectionResults].entry[results-observation-laboratory-pathology] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionResults].entry[results-observation-laboratory-pathology] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionResults].entry[results-observation-laboratory-pathology] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
-
-* section[sectionResults].entry[results-observation-radiology] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionResults].entry[results-observation-radiology] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionResults].entry[results-observation-radiology] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionResults].entry[results-medicalTestResult] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
+* section[sectionResults].entry[results-medicalTestResult] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
+* section[sectionResults].entry[results-medicalTestResult] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
 
 * section[sectionResults].entry[results-diagnosticReport] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
 * section[sectionResults].entry[results-diagnosticReport] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)

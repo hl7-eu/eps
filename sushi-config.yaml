@@ -266,7 +266,7 @@ menu:
 #    IPS to EPS Advance Directives Comparison: ips-eps-advance-directives.html
   About:
     Authors and Contributors: authors.html
-    Known/Open Issues: knownissues.html
+    Known/Open Issues: knownIssues.html
     Download: downloads.html
     Dependencies: dependencies.html
     #  Change Log: changes.html <== NOT FOR THIS VERSION
