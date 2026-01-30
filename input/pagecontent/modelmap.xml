@@ -239,13 +239,7 @@
     </h4>
     <a>  </a>
     
-    <div class="callout-wrapper">
-        <p> </p>
-        <div class="callout-box">
-            <strong>Warning:</strong>
-          The entries marked in yellow below are in progress or not specified yet: mapping pages could be empty or they may refer to non-existing profiles.</div>
-    </div>
-    
+   
     <div class="table-wrapper">
         <table class="model-index">
             <thead>
@@ -289,18 +283,19 @@
                         <a class="pill" href="map-ehdsdeviceuse.html">EHDSDeviceUse Mapping</a>
                     </td>
                 </tr>
-                <tr class="highlight-yellow">
+                <tr>
                     <td>
                         <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSFunctionalStatus.html" target="_blank">EHDSFunctionalStatus</a>
                     </td>
                     <td>
+                        <a href="https://hl7.eu/fhir/base/2.0.0-ballot/StructureDefinition-condition-eu-core.html"><code>ConditionEuCore</code></a>,
                         <a href="https://hl7.org/fhir/observation.html"><code>Observation</code></a>
                     </td>
                     <td>
                         <a class="pill" href="map-ehdsfunctionalstatus.html">EHDSFunctionalStatus Mapping</a>
                     </td>
                 </tr>
-                <tr class="highlight-yellow">
+                <tr>
                     <td>
                         <a href="https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSSocialHistory.html" target="_blank">EHDSSocialHistory</a>
                     </td>
@@ -308,7 +303,8 @@
                         <a href="https://hl7.org/fhir/observation.html"><code>Observation</code></a>
                     </td>
                     <td>
-                        <a class="pill" href="map-ehdssocialhistory.html">EHDSSocialHistory Mapping</a>
+                        <span class="pill disabled" aria-disabled="true">EHDSSocialHistory Mapping</span>
+                        <div class="note">Mapping not formalized yet, pending revision of the EHDSSocialHistory model.</div>
                     </td>
                 </tr>
                 <tr>

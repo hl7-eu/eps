@@ -9,6 +9,7 @@
 <artifact id="StructureDefinition/consent-eu-eps" key="StructureDefinition-consent-eu-eps" name="Consent (Advance Directives EPS)"/>
 <artifact id="StructureDefinition/device-eu-eps" key="StructureDefinition-device-eu-eps" name="Device (EPS)"/>
 <artifact id="StructureDefinition/deviceUseStatement-eu-eps" key="StructureDefinition-deviceUseStatement-eu-eps" name="DeviceUseStatement (EPS)"/>
+<artifact id="StructureDefinition/diagnosticReport-eu-eps" key="StructureDefinition-diagnosticReport-eu-eps" name="DiagnosticReport (EPS)"/>
 <artifact id="ValueSet/gestational-age-loinc" key="ValueSet-gestational-age-loinc" name="Gestational Age (LOINC)"/>
 <artifact id="StructureDefinition/MedicationStatement-eu-eps" key="StructureDefinition-MedicationStatement-eu-eps" name="Medication Statement (EPS)"/>
 <artifact id="StructureDefinition/observation-pregnancy-edd-eu-eps" key="StructureDefinition-observation-pregnancy-edd-eu-eps" name="Observation Pregnancy - Expected Delivery Date (EPS)"/>
