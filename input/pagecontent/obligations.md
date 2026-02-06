@@ -29,14 +29,13 @@ These align with the IPS actors as described in the IPS guidance. The IPS actors
 - **Consumer (IPS)**: a system that receives an IPS document and uses its content. See [ActorDefinition-Consumer](https://hl7.org/fhir/uv/ips/ActorDefinition-Consumer.html).
 - **Server (IPS)**: a FHIR server acting as an IPS Creator by providing conformant IPS documents in response to FHIR API requests. See [ActorDefinition-Server](https://hl7.org/fhir/uv/ips/ActorDefinition-Server.html).
 
-In IPS, obligations are always tied to an actor and accompany all `mustSupport` elements, specifying the structured expectations for that actor (e.g., what the Creator must populate and what the Consumer must process). Obligations can differ between Creator and Consumer, and IPS highlights that obligations should not conflict with regional laws and policies.
+
+### Usage of Obligations
 
 
-### Obligations List
+In IPS, obligations are always tied to an actor and accompany all `mustSupport` elements, specifying the structured expectations for that actor (e.g., what the Creator must populate and what the Consumer must process). 
+Obligations can differ between Creator and Consumer, and IPS highlights that obligations should not conflict with regional laws and policies. 
 
-*Obligation List*
+In the HL7 Europe approach, the `mustSupport` flag is not used; instead, Must Support is derived implicitly from the obligations defined for the relevant actors.
 
-References:
-- HL7 FHIR obligation extension and obligation code value set.
-- HL7 FHIR conformance documentation for `ActorDefinition`, `CapabilityStatement`, and `ImplementationGuide`.
-- IPS implementation guidance on actors and obligations: Creator (IPS), Consumer (IPS), Server (IPS).
+The current HL7 Europe choice is to keep structural rules and obligation rules separate; however, because this guide inherits from IPS, an exception has been made and a single profile combining obligations and structural rules has been defined, following the IPS approach.

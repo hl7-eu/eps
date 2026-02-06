@@ -291,7 +291,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 * section[sectionSocialHistory]
   * insert SectionComRules (EPS Social History Section,  	
-    The social history section contains a description of the person’s Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\),
+    The social history section contains a description of the personâ€™s Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\),
     http://loinc.org#29762-2)
 
   * entry only Reference(Observation or DocumentReference)
@@ -299,16 +299,16 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
   * insert SectionEntrySliceComRules(
     Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\) ,  	
-    Description of the person’s Health related \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\)
+    Description of the personâ€™s Health related \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\)
     )
   
   * insert SectionEntrySliceDefRules (smokingTobaccoUse, 0.. , 
       Smoke habits,  	
-      A description of the person’s smoke habits,
+      A description of the personâ€™s smoke habits,
       $Observation-tobaccouse-uv-ips)
   * insert SectionEntrySliceDefRules (alcoholUse, 0.. , 
       Alcohol consumption,  	
-      A description of the person’s alcohol consumption habits,
+      A description of the personâ€™s alcohol consumption habits,
       $Observation-alcoholuse-uv-ips)
 
 // ----------------- EPS History of Pregnancy Section --------------------
@@ -349,7 +349,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * section[sectionPatientStory]
   * insert SectionComRules ( 
     EPS Patient Story Section,
-    The section contains narrative text along with optional resources that express what matters to a patient. This may include needs\, strengths\, values\, concerns and preferences to others providing support and care. The patient’s story\, provided here\, may be told by the patient or by a proxy.,
+    The section contains narrative text along with optional resources that express what matters to a patient. This may include needs\, strengths\, values\, concerns and preferences to others providing support and care. The patientâ€™s story\, provided here\, may be told by the patient or by a proxy.,
     http://loinc.org#81338-6 )
   * entry ^short = "Patient Story resources."
   * entry ^definition = "Contains resources to support the Patient Story. Instances of DocumentReference or any other suitable resource type may be used."

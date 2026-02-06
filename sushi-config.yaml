@@ -376,12 +376,25 @@ menu:
 #
 groups:
 
-    eHNPatientSummary:
+    EuPatientSummary:
       name:  European Patient Summary
       description: European Patient Summary entry profiles.
       resources:
         - StructureDefinition/bundle-eu-eps
         - StructureDefinition/composition-eu-eps
+    EpsObligations:
+      name:  EPS Obligations
+      description: IPS-derived obligation-only profiles for EPS. Informative for this version of the guide.
+      resources:
+        - StructureDefinition/allergyintolerance-obl-eu-eps
+        - StructureDefinition/condition-obl-eu-eps
+        - StructureDefinition/flag-alert-obl-eu-eps
+        - StructureDefinition/immunization-obl-eu-eps
+        - StructureDefinition/medication-obl-eu-eps
+        - StructureDefinition/medicationrequest-obl-eu-eps
+        - StructureDefinition/organization-obl-eu-eps
+        - StructureDefinition/practitioner-obl-eu-eps
+        - StructureDefinition/practitionerrole-obl-eu-eps
 
 #    eHNGuidelines:
 #      name:  eHN Laboratory Guidelines (Informative)

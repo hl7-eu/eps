@@ -66,7 +66,6 @@ entry.where(
 "
 
 
-
 Profile: BundleEuEps
 Parent: Bundle
 Id: bundle-eu-eps
@@ -134,7 +133,12 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     observation-results-radiology 0..* and
     observation-vital-signs 0..* and
     organization 0..* and
-    specimen 0..* 
+    specimen 0..* and
+
+    //------------
+    observation-pregnancy-age 0..* and
+    observation-pregnancy-prev-status 0..*
+    //------------
 
 
 * entry.resource 1..
@@ -143,50 +147,57 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[patient].resource 1..
 * entry[patient].resource only PatientEuEps  
 * entry[allergyintolerance].resource 1..
-* entry[allergyintolerance].resource only AllergyIntoleranceEuCore
+* entry[allergyintolerance].resource only AllergyIntoleranceOblEuEps
 * entry[condition].resource 1..
-* entry[condition].resource only ConditionEuCore
+* entry[condition].resource only ConditionOblEuEps
 * entry[device].resource 1..
 * entry[device].resource only DeviceEuEps
 * entry[deviceusestatement].resource 1..
 * entry[deviceusestatement].resource only DeviceUseStatementEuEps
 
 * entry[diagnosticreport].resource 1..
-* entry[diagnosticreport].resource only DiagnosticReportEuCore  // to be checked
+* entry[diagnosticreport].resource only DiagnosticReportEuEps  // to be checked
 * entry[imagingstudy].resource 1..
 * entry[imagingstudy].resource only $ImagingStudy-uv-ips  //EuEps
     
 * entry[immunization].resource 1..
-* entry[immunization].resource only ImmunizationEuCore // check if this works...
+* entry[immunization].resource only ImmunizationOblEuEps // check if this works...
 
 * entry[flag].resource 1..
-* entry[flag].resource only FlagEuCore
+* entry[flag].resource only FlagAlertOblEuEps
 
 * entry[medication].resource 1..
-* entry[medication].resource only MedicationEuCore
+* entry[medication].resource only MedicationOblEuEps
 
 * entry[medicationrequest].resource 1..
-* entry[medicationrequest].resource only MedicationRequestEuCore
+* entry[medicationrequest].resource only MedicationRequestOblEuEps
 
 * entry[medicationstatement].resource 1..
 * entry[medicationstatement].resource only MedicationStatementEuEps
 
 * entry[practitioner].resource 1..
-* entry[practitioner].resource only PractitionerEuCore
+* entry[practitioner].resource only PractitionerOblEuEps
 * entry[practitionerrole].resource 1..
-* entry[practitionerrole].resource only PractitionerRoleEuCore
+* entry[practitionerrole].resource only PractitionerRoleOblEuEps
 
 * entry[procedure].resource 1..
 * entry[procedure].resource only ProcedureEuEps
 
 * entry[organization].resource 1..
-* entry[organization].resource only OrganizationEuCore
+* entry[organization].resource only OrganizationOblEuEps
 * entry[observation-pregnancy-edd].resource 1..
-* entry[observation-pregnancy-edd].resource only $Observation-pregnancy-edd-uv-ips //EuEps   ?
+* entry[observation-pregnancy-edd].resource only ObservationPregnancyEddEuEps
 * entry[observation-pregnancy-outcome].resource 1..
-* entry[observation-pregnancy-outcome].resource only $Observation-pregnancy-outcome-uv-ips //EuEps   ?
+* entry[observation-pregnancy-outcome].resource only ObservationPregnancyOutcomeEuEps
 * entry[observation-pregnancy-status].resource 1..
-* entry[observation-pregnancy-status].resource only $Observation-pregnancy-status-uv-ips //EuEps   ?
+* entry[observation-pregnancy-status].resource only ObservationPregnancyStatusEuEps 
+
+* entry[observation-pregnancy-age].resource 1..
+* entry[observation-pregnancy-age].resource only ObservationPregnancyGestationalAgeEuEps
+* entry[observation-pregnancy-prev-status].resource 1..
+* entry[observation-pregnancy-prev-status].resource only ObservationPreviousPregnanciesStatusEuEps 
+
+
 
 
 * entry[observation-alcohol-use].resource 1..
@@ -208,7 +219,6 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[observation-results].resource only $Observation-results-uv-ips // ObservationResultsEuEps
 
 */
-
 
 * entry[specimen].resource 1..
 * entry[specimen].resource only $Specimen-uv-ips
