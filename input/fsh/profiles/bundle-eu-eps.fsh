@@ -224,12 +224,10 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[specimen].resource only $Specimen-uv-ips
 
 // ================= IPS OBLIGATIONS =================
-* identifier insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* identifier insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
+* identifier insert ObligationIpsPopulateHandle
 
-* timestamp insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* timestamp insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
+* timestamp insert ObligationIpsPopulateHandle
 
-* entry[composition] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* entry[composition] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* entry[composition] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* entry[composition] insert ObligationIpsPopulateDisplay
+
+

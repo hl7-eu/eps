@@ -204,7 +204,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * insert SectionEntrySliceDefRules (flag, 0.. , 
   Alert information , 
   Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
-  FlagEuCore)
+  FlagPatientEuCore)
 
 // ==== EPS Results Section
 
@@ -383,181 +383,99 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 // ================= IPS OBLIGATIONS =================
 * meta.profile insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #MAY:able-to-populate)
 
-* text insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* text insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* text insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* text insert ObligationIpsPopulateIfKnownDisplay
 
-* identifier insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* identifier insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
+* identifier insert ObligationIpsPopulateIfKnownHandle
 
-* status insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* status insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* status insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* status insert ObligationIpsPopulateDisplay
 
-* type insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* type insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
+* type insert ObligationIpsPopulateHandle
 
-* subject insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* subject insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* subject insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* subject insert ObligationIpsPopulateDisplay
 
-* subject.reference insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* subject.reference insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
+* subject.reference insert ObligationIpsPopulateHandle
 
-* date insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* date insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* date insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* date insert ObligationIpsPopulateDisplay
 
-* author insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* author insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* author insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* author insert ObligationIpsPopulateDisplay
 
-* title insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* title insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* title insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* title insert ObligationIpsPopulateDisplay
 
-* attester insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* attester insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* attester insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* attester insert ObligationIpsPopulateIfKnownDisplay
 
-* attester.mode insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* attester.mode insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* attester.mode insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* attester.mode insert ObligationIpsPopulateDisplay
 
-* attester.time insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* attester.time insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* attester.time insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* attester.time insert ObligationIpsPopulateIfKnownDisplay
 
-* attester.party insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* attester.party insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* attester.party insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* attester.party insert ObligationIpsPopulateIfKnownDisplay
 
-* custodian insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* custodian insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* custodian insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* custodian insert ObligationIpsPopulateIfKnownDisplay
 
-* event insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* event insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* event insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* event insert ObligationIpsPopulateIfKnownDisplay
 
-* event.code insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* event.code insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* event.code insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* event.code insert ObligationIpsPopulateDisplay
 
-* event.period insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* event.period insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* event.period insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* event.period insert ObligationIpsPopulateIfKnownDisplay
 
-* section insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section insert ObligationIpsHandleDisplay
 
-* section.title insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* section.title insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section.title insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section.title insert ObligationIpsPopulateDisplay
 
 * section.code insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
 
-* section.text insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* section.text insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section.text insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section.text insert ObligationIpsPopulateDisplay
 
-* section[sectionProblems] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* section[sectionProblems] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionProblems] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionProblems] insert ObligationIpsPopulateDisplay
 
-* section[sectionProblems].entry[problem] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:able-to-populate)
-* section[sectionProblems].entry[problem] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionProblems].entry[problem] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionProblems].entry[problem] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionProblems].entry[problem] insert ObligationIpsAbleToPopulateAndPopulateIfKnownDisplay
 
-* section[sectionProblems].emptyReason insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* section[sectionProblems].emptyReason insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionProblems].emptyReason insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionProblems].emptyReason insert ObligationIpsPopulateIfKnownDisplay
 
-* section[sectionAllergies] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* section[sectionAllergies] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionAllergies] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionAllergies] insert ObligationIpsPopulateDisplay
 
-* section[sectionAllergies].entry[allergyOrIntolerance] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:able-to-populate)
-* section[sectionAllergies].entry[allergyOrIntolerance] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionAllergies].entry[allergyOrIntolerance] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionAllergies].entry[allergyOrIntolerance] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionAllergies].entry[allergyOrIntolerance] insert ObligationIpsAbleToPopulateAndPopulateIfKnownDisplay
 
-* section[sectionAllergies].emptyReason insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* section[sectionAllergies].emptyReason insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionAllergies].emptyReason insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionAllergies].emptyReason insert ObligationIpsPopulateIfKnownDisplay
 
-* section[sectionMedications] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate)
-* section[sectionMedications] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionMedications] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionMedications] insert ObligationIpsPopulateDisplay
 
-* section[sectionMedications].entry[medicationStatementOrRequest] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:able-to-populate)
-* section[sectionMedications].entry[medicationStatementOrRequest] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionMedications].entry[medicationStatementOrRequest] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionMedications].entry[medicationStatementOrRequest] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionMedications].entry[medicationStatementOrRequest] insert ObligationIpsAbleToPopulateAndPopulateIfKnownDisplay
 
-* section[sectionMedications].emptyReason insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* section[sectionMedications].emptyReason insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionMedications].emptyReason insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionMedications].emptyReason insert ObligationIpsPopulateIfKnownDisplay
 
-* section[sectionImmunizations] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionImmunizations] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionImmunizations] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionImmunizations] insert ObligationIpsShouldPopulateIfKnownDisplay
 
-* section[sectionImmunizations].entry[immunization] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionImmunizations].entry[immunization] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionImmunizations].entry[immunization] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionImmunizations].entry[immunization] insert ObligationIpsShouldPopulateIfKnownDisplay
 
-* section[sectionResults] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionResults] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionResults] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionResults] insert ObligationIpsShouldPopulateIfKnownDisplay
 
-* section[sectionResults].entry[results-medicalTestResult] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionResults].entry[results-medicalTestResult] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionResults].entry[results-medicalTestResult] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionResults].entry[results-medicalTestResult] insert ObligationIpsShouldPopulateIfKnownDisplay
 
-* section[sectionResults].entry[results-diagnosticReport] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionResults].entry[results-diagnosticReport] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionResults].entry[results-diagnosticReport] insert ObligationIpsHandleDisplay
 
-* section[sectionProceduresHx] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionProceduresHx] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionProceduresHx] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionProceduresHx] insert ObligationIpsShouldPopulateIfKnownDisplay
 
-* section[sectionProceduresHx].entry[procedure] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionProceduresHx].entry[procedure] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionProceduresHx].entry[procedure] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionProceduresHx].entry[procedure] insert ObligationIpsShouldPopulateIfKnownDisplay
 
-* section[sectionMedicalDevices] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionMedicalDevices] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionMedicalDevices] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionMedicalDevices] insert ObligationIpsShouldPopulateIfKnownDisplay
 
-* section[sectionMedicalDevices].entry[deviceStatement] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHOULD:populate-if-known)
-* section[sectionMedicalDevices].entry[deviceStatement] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionMedicalDevices].entry[deviceStatement] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionMedicalDevices].entry[deviceStatement] insert ObligationIpsShouldPopulateIfKnownDisplay
 
-* section[sectionAdvanceDirectives] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionAdvanceDirectives] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionAdvanceDirectives] insert ObligationIpsHandleDisplay
 
-* section[sectionAlert] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionAlert] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionAlert] insert ObligationIpsHandleDisplay
 
-* section[sectionFunctionalStatus] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionFunctionalStatus] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionFunctionalStatus] insert ObligationIpsHandleDisplay
 
-* section[sectionPregnancyHx] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionPregnancyHx] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionPregnancyHx] insert ObligationIpsHandleDisplay
 
-* section[sectionPatientStory] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionPatientStory] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionPatientStory] insert ObligationIpsHandleDisplay
 
-* section[sectionPlanOfCare] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionPlanOfCare] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionPlanOfCare] insert ObligationIpsHandleDisplay
 
-* section[sectionSocialHistory] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionSocialHistory] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionSocialHistory] insert ObligationIpsHandleDisplay
 
-* section[sectionVitalSigns] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* section[sectionVitalSigns] insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* section[sectionVitalSigns] insert ObligationIpsHandleDisplay
 
 //============== INVARIANTS ===============
 Invariant: ips-comp-1
@@ -565,3 +483,10 @@ Description: "Either section.entry or emptyReason are present"
 * severity = #error
 * expression = "(entry.reference.exists() or emptyReason.exists())"
 * xpath = "(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)"
+
+
+
+
+
+
+

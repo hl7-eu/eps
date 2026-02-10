@@ -30,6 +30,5 @@ Description: "This profile represents the constraints applied to the Device reso
 * note ^short = "Device Note"
 
 // ================= IPS OBLIGATIONS =================
-* type insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #SHALL:populate-if-known)
-* type insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHALL:handle)
-* type insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Consumer, #SHOULD:display)
+* type insert ObligationIpsPopulateIfKnownDisplay
+
