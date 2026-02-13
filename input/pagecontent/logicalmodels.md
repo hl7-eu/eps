@@ -45,12 +45,10 @@ For the most recent and in-progress versions, please refer to the [**Xt-EHR EHDS
 | [EHDSAllergyIntolerance](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSAllergyIntolerance.html) | EHDS refined base model for allergy or intolerance information |
 | [EHDSAlert](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSAlert.html) | EHDS refined base model for clinical alerts |
 | [EHDSCondition](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSCondition.html) | EHDS refined base model for a clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern |
-| [EHDSMedicationStatement](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSMedicationStatement.html) | Statement about a single medication as part of a medication summary |
+| [EHDSMedicationUse](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSMedicationUse.html) | Statement about a single medication as part of a medication summary |
 | [EHDSProcedure](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSProcedure.html) | EHDS refined base model for an action that is or was performed on or for a patient |
 | [EHDSImmunisation](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSImmunisation.html) | EHDS refined base model for immunisation |
 | [EHDSDeviceUse](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSDeviceUse.html) | EHDS refined base model for device use information |
-| [EHDSFunctionalStatus](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSFunctionalStatus.html) | EHDS refined base model for Functional status |
-| [EHDSSocialHistory](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSSocialHistory.html) | EHDS model for social history observations |
 | [EHDSCurrentPregnancy](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSCurrentPregnancy.html) | EHDS model for current pregnancy status |
 | [EHDSPregnancyHistory](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSPregnancyHistory.html) | EHDS model for Pregnancy history for one pregnancy |
 | [EHDSTravelHistory](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSTravelHistory.html) | EHDS model for Relevant information about the patient's recent travel history, for one visit |

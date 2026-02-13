@@ -28,7 +28,7 @@ dependencies:
   # hl7.fhir.uv.ips: 1.1.0
   hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2
   hl7.fhir.eu.extensions.r4: 1.2.0
-  hl7.fhir.eu.base: 2.0.0-ballot
+  hl7.fhir.eu.base: current
   # hl7.fhir.eu.hdr to be removed
   # hl7.fhir.eu.hdr: 0.1.0-ballot 
   ihe.pharm.mpd.r4: 1.0.0-comment-2
@@ -94,10 +94,6 @@ pages:
     title: EHDSDevice Mapping
   map-ehdsdeviceuse.xml:
     title: EHDSDeviceUse Mapping
-  map-ehdsfunctionalstatus.xml:
-    title: EHDSFunctionalStatus Mapping
-  map-ehdssocialhistory.xml:
-    title: EHDSSocialHistory Mapping
   map-ehdscurrentpregnancy.xml:
     title: EHDSCurrentPregnancy Mapping
   map-ehdspregnancyhistory.xml:

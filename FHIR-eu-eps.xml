@@ -44,11 +44,9 @@
 <page key="map-ehdscurrentpregnancy" name="EHDSCurrentPregnancy Mapping"/>
 <page key="map-ehdsdevice" name="EHDSDevice Mapping"/>
 <page key="map-ehdsdeviceuse" name="EHDSDeviceUse Mapping"/>
-<page key="map-ehdsfunctionalstatus" name="EHDSFunctionalStatus Mapping"/>
 <page key="map-ehdslaboratoryobservation" name="EHDSLaboratoryObservation Mapping"/>
 <page key="map-ehdspatientsummary" name="EHDSPatientSummary to Composition (EPS)"/>
 <page key="map-ehdspregnancyhistory" name="EHDSPregnancyHistory Mapping"/>
-<page key="map-ehdssocialhistory" name="EHDSSocialHistory Mapping"/>
 <page key="map-ehdstravelhistory" name="EHDSTravelHistory Mapping"/>
 <page key="missing-data" name="Handling Missing Data"/>
 <page key="index" name="Home"/>
