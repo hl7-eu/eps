@@ -9,8 +9,7 @@ Expression: "entry.where(
 ).empty() or
 entry.where(
   resource.is(Medication) 
-).all(resource.code.exists())
-"
+).all(resource.code.exists())"
 
 Invariant: eps-bundle-patient-ref
 Description: "If the Bundle contains patient-based resources (AllergyIntolerance, Immunization, ImmunizationRecommendation), each SHALL have patient.reference populated."
@@ -24,14 +23,12 @@ entry.where(
   resource.is(AllergyIntolerance) or
   resource.is(Immunization) or
   resource.is(ImmunizationRecommendation)
-).all(resource.patient.reference.exists())
-"
+).all(resource.patient.reference.exists())"
 
 Invariant: eps-bundle-subject-ref
 Description: "If the Bundle contains subject-based clinical resources, each SHALL have subject.reference populated."
 Severity: #error
-Expression: "
-entry.where(
+Expression: "entry.where(
   resource.is(Composition) or
   resource.is(CarePlan) or
   resource.is(ClinicalImpression) or
@@ -62,8 +59,7 @@ entry.where(
   resource.is(MedicationStatement) or
   resource.is(Procedure) or
   resource.is(Observation)
-).all(resource.subject.reference.exists())
-"
+).all(resource.subject.reference.exists())"
 
 
 Profile: BundleEuEps

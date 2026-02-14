@@ -68,14 +68,14 @@
         </thead>
         <tbody>
           <!-- HEADER BLOCK -->
-          <tr class="highlight-yellow">
-            <td>header (inherited from EHDSDocument)</td>
+          <tr>
+            <td>header</td>
             <td>Document header elements inherited through the base model.</td>
             <td>related-to</td>
             <td>Composition</td>
             <td>.</td>
             <td>Composition-level metadata.</td>
-            <td class="highlight-yellow">Not explicitly listed in EHDSPatientSummary 0.3.0 differential; inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.subject</td>
@@ -84,7 +84,7 @@
             <td>Composition</td>
             <td>subject</td>
             <td>Who or what the composition is about.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.identifier</td>
@@ -93,7 +93,7 @@
             <td>Composition</td>
             <td>identifier</td>
             <td>Version-independent identifier for the Patient Summary.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.identifier</td>
@@ -111,7 +111,7 @@
             <td>Composition</td>
             <td>author</td>
             <td>Who and/or what authored the composition.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.date</td>
@@ -120,7 +120,7 @@
             <td>Composition</td>
             <td>date</td>
             <td>Composition creation time.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.status</td>
@@ -129,7 +129,7 @@
             <td>Composition</td>
             <td>status</td>
             <td>The workflow/clinical status of this composition.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.language</td>
@@ -138,7 +138,7 @@
             <td>Composition</td>
             <td>language</td>
             <td>Language of the narrative.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.documentType</td>
@@ -147,7 +147,7 @@
             <td>Composition</td>
             <td>type</td>
             <td>Type of document.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.documentTitle</td>
@@ -156,7 +156,7 @@
             <td>Composition</td>
             <td>title</td>
             <td>Official human-readable label.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.period</td>
@@ -174,7 +174,7 @@
             <td>Composition</td>
             <td>extension:version</td>
             <td>Document business version.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.attestation</td>
@@ -183,7 +183,7 @@
             <td>Composition</td>
             <td>attester</td>
             <td>Participants responsible for attesting the composition.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.attestation.attester</td>
@@ -192,7 +192,7 @@
             <td>Composition</td>
             <td>attester.party</td>
             <td>Who attested the composition.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.attestation.datetime</td>
@@ -201,7 +201,7 @@
             <td>Composition</td>
             <td>attester.time</td>
             <td>When the composition was attested.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.legalAuthentication</td>
@@ -210,7 +210,7 @@
             <td>Composition</td>
             <td>attester</td>
             <td>Legal authenticator.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.legalAuthentication.legalAuthenticator</td>
@@ -219,7 +219,7 @@
             <td>Composition</td>
             <td>attester.party</td>
             <td>Legal authenticator party.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.legalAuthentication.datetime</td>
@@ -228,7 +228,7 @@
             <td>Composition</td>
             <td>attester.time</td>
             <td>When the composition was attested.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <tr class="highlight-yellow">
             <td>header.eventType</td>
@@ -237,7 +237,7 @@
             <td>Composition</td>
             <td>event.code</td>
             <td>Codes describing the event(s) related to the composition.</td>
-            <td class="highlight-yellow">Inherited from EHDSDocument.</td>
+            <td>Not clear if it is a type of event - PCPR for Patient Summary - or a classification of the document.</td>
           </tr>
           <tr class="highlight-yellow">
             <td>header.serviceSpecialty</td>
@@ -246,7 +246,7 @@
             <td>Composition</td>
             <td>category</td>
             <td>Categorizes the composition.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td>Do not apply to Patient Summary.</td>
           </tr>
           <tr>
             <td>header.custodian</td>
@@ -255,7 +255,7 @@
             <td>Composition</td>
             <td>custodian</td>
             <td>Organization responsible for maintenance.</td>
-            <td>Inherited from EHDSDocument.</td>
+            <td></td>
           </tr>
           <!-- SECTION: ALERTS -->
           <tr>
@@ -635,14 +635,14 @@
             <td>Narrative for Social History section.</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
           <td>socialHistory.observation</td>
           <td>Social history observations related to health.</td>
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionSocialHistory.entry</td>
           <td>Social history entries.</td>
-          <td>check the target profiles to be used.</td>
+          <td></td>
           </tr>
           <tr>
             <td>socialHistory.note</td>
@@ -820,14 +820,14 @@
             <td>Narrative for Results section.</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
           <td>observationResults.result</td>
           <td>Observation results pertaining to the subject of care.</td>
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionResults.entry</td>
           <td>Result observation entries.</td>
-          <td>When the result is a diagnostic result. Target profiles to be selected/defined.</td>
+          <td>When the result is a diagnostic result.</td>
           </tr>
           <tr>
             <td>observationResults.result</td>
@@ -855,7 +855,7 @@
           <td>Composition</td>
           <td>section:sectionPlanOfCare</td>
           <td>Care plan section.</td>
-          <td>Slice for plan of care in CompositionEuEps.</td>
+          <td></td>
           </tr>
           <tr>
             <td>carePlans.generatedNarrative</td>
