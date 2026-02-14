@@ -97,50 +97,41 @@
             <td>Business identifier for this device use statement.</td>
             <td>Copy over all identifiers if multiple.</td>
           </tr>
-          <tr>
-            <td>header.authorship</td>
-            <td>Resource authoring details.</td>
-            <td>related-to</td>
+          <tr class="highlight-yellow">
+            <td>header.author[x]</td>
+            <td>The author of the device usage statement.</td>
+            <td>no-map</td>
             <td>DeviceUseStatement</td>
-            <td>source</td>
-            <td>Reporter of the device use.</td>
-            <td class="highlight-yellow">Can reference Device, Organization, Patient, Practitioner, or PractitionerRole. 1.. in the model 0.. in the profile</td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
-            <td>header.authorship.author[x]</td>
-            <td>Who created/issued the statement.</td>
-            <td>equivalent</td>
-            <td>DeviceUseStatement</td>
-            <td>source</td>
-            <td>Who reported the device use.</td>
-            <td class="highlight-yellow">Can reference Device, Organization, Patient, Practitioner, or PractitionerRole. 1.. in the model 0.. in the profile</td>
-          </tr>
-          <tr>
-            <td>header.authorship.datetime</td>
-            <td>Date/time the resource was issued.</td>
+            <td>header.date</td>
+            <td>Date/time the resource was authored/issued.</td>
             <td>equivalent</td>
             <td>DeviceUseStatement</td>
             <td>recordedOn</td>
             <td>When the device use statement was recorded.</td>
-            <td class="highlight-yellow">1.. in the model 0.. in the profile</td>
+            <td></td>
           </tr>
           <tr>
-            <td>header.lastUpdate</td>
-            <td>Last technical correction/update.</td>
+            <td>header.status</td>
+            <td>Current status of the device usage.</td>
+            <td>equivalent</td>
+            <td>DeviceUseStatement</td>
+            <td>status</td>
+            <td>Status of the device use statement.</td>
+            <td>Preferred binding: HL7 Device Use Statement Status or HL7 Device Usage Status.</td>
+          </tr>
+          <tr>
+            <td>header.source</td>
+            <td>Source of information (e.g. patient, patient's proxy).</td>
             <td>related-to</td>
             <td>DeviceUseStatement</td>
-            <td>meta.lastUpdated</td>
-            <td>When the resource version last changed.</td>
-            <td class="highlight-yellow">The map applies only in case it represents when the resource was last updated. It is an instant (i.e. YYYY-MM-DDThh:mm:ss.sss+zz:zz).</td>
-          </tr>
-          <tr class="highlight-yellow">
-            <td>header.statusReason[x]</td>
-            <td>Reason for current dataset status.</td>
-            <td>no map</td>
-            <td>DeviceUseStatement</td>
-            <td></td>
-            <td></td>
-            <td>Suggested to be removed see <a href="https://github.com/Xt-EHR/xt-ehr-common/issues/363">Review and Align Use of header.status and header.statusReason[x]</a></td>
+            <td>source</td>
+            <td>Reporter or source context for the device use information.</td>
+            <td>When both header.author[x] and header.source are populated, additional profiling may be needed to preserve both semantics.</td>
           </tr>
           <tr>
             <td>header.language</td>
@@ -152,31 +143,13 @@
             <td></td>
           </tr>
           <tr>
-            <td>header.status</td>
-            <td>Current status of the device usage.</td>
+            <td>periodOfUse</td>
+            <td>The period of time during which the device was implanted in the patient or the external device was in use.</td>
             <td>equivalent</td>
             <td>DeviceUseStatement</td>
-            <td>status</td>
-            <td>Status of the device use statement.</td>
-            <td>Preferred binding: HL7 device-statement-status.</td>
-          </tr>
-          <tr>
-            <td>startDate</td>
-            <td>Date when the device was implantable to the patient or the external device was first in use.</td>
-            <td>related-to</td>
-            <td>DeviceUseStatement</td>
-            <td>timingPeriod.start</td>
-            <td>Start of the period of device use.</td>
-            <td>Use a timing period to capture start/end.</td>
-          </tr>
-          <tr>
-            <td>endDate</td>
-            <td>Date when the device was explanted from the patient or the external device was no longer in use.</td>
-            <td>related-to</td>
-            <td>DeviceUseStatement</td>
-            <td>timingPeriod.end</td>
-            <td>End of the period of device use.</td>
-            <td>Use a timing period to capture start/end.</td>
+            <td>timingPeriod</td>
+            <td>Period during which the device was used.</td>
+            <td></td>
           </tr>
           <tr>
             <td>device[x]</td>
@@ -204,15 +177,6 @@
             <td>reasonCode</td>
             <td>Reason code for the device use.</td>
             <td>FHIR uses CodeableConcept; references may need to be represented as codes or extensions.</td>
-          </tr>
-          <tr>
-            <td>source[x]</td>
-            <td>Who reported the device was being used by the patient.</td>
-            <td>equivalent</td>
-            <td>DeviceUseStatement</td>
-            <td>source</td>
-            <td>Reporter of the device use.</td>
-            <td></td>
           </tr>
           <tr>
             <td>note</td>
