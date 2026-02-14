@@ -70,22 +70,22 @@
         </thead>
         <tbody>
           <tr>
-            <td>identifier</td>
-            <td>Normalised identifier of the device instance, such as UDI according to REGULATION (EU) 2017/745. Multiple identifiers can be used.</td>
+            <td>instanceIdentifier</td>
+            <td>Identifier of the device instance.</td>
             <td>equivalent</td>
             <td>Device</td>
             <td>identifier</td>
             <td>Business identifiers for the device.</td>
-            <td></td>
+            <td>Repeat for multiple instance identifiers.</td>
           </tr>
           <tr>
-            <td>identifier</td>
-            <td>Normalised identifier of the device instance, such as UDI according to REGULATION (EU) 2017/745. Multiple identifiers can be used.</td>
-            <td>related-to</td>
+            <td>udiCarrier</td>
+            <td>Unique Device Identifier (UDI) value.</td>
+            <td>equivalent</td>
             <td>Device</td>
             <td>udiCarrier</td>
             <td>UDI carrier information for the device.</td>
-            <td>Use when the identifier represents UDI.</td>
+            <td>Repeat for multiple UDI carrier identifiers when present.</td>
           </tr>
           <tr>
             <td>manufacturer</td>
@@ -132,14 +132,32 @@
             <td>Serial number.</td>
             <td></td>
           </tr>
-          <tr>
+                    <tr>
             <td>name</td>
-            <td>The name and name type of the device as known to the manufacturer and/or patient.</td>
-            <td>related-to</td>
+            <td>The name of the device as known to e.g. the manufacturer and/or patient.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>deviceName</td>
+            <td>The name of the device as given by the manufacturer</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>name.value</td>
+            <td>The name of the device as known to e.g. the manufacturer and/or patient.</td>
+            <td>equivalent</td>
             <td>Device</td>
             <td>deviceName.name</td>
-            <td>Device name.</td>
-            <td>Set deviceName.type when known (e.g., user-friendly or model-name).</td>
+            <td>The device name value.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>name.type</td>
+            <td>The type of name, e.g. UDI Label name, user friendly name.</td>
+            <td>equivalent</td>
+            <td>Device</td>
+            <td>deviceName.type</td>
+            <td>The kind of device name.</td>
+            <td></td>
           </tr>
           <tr>
             <td>modelNumber</td>
@@ -157,7 +175,7 @@
             <td>Device</td>
             <td>version.value</td>
             <td>Device version.</td>
-            <td></td>
+            <td>Repeat for multiple versions.</td>
           </tr>
           <tr>
             <td>type</td>
@@ -166,7 +184,7 @@
             <td>Device</td>
             <td>type</td>
             <td>Type of device.</td>
-            <td>Preferred binding: SNOMED CT, EMDN.</td>
+            <td></td>
           </tr>
           <tr>
             <td>note</td>

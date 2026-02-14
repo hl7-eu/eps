@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+    <title>EHDSMedicationUse → MedicationStatement</title>
+  </head>
+  <body>
+    <h3>EHDSMedicationUse → MedicationStatement</h3>
+    <a> </a>
+    <p></p>
+    <p>
+      This page explains how conceptual elements from the EHDS logical model are expressed
+      in the corresponding FHIR MedicationStatement profile used by this Implementation Guide.
+    </p>
+    <p></p>
+    <div class="table-wrap">
+      <strong>Mapping Context</strong>
+      <ul>
+        <li>
+          <strong>Source logical model:</strong>
+          <a
+            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSMedicationUse.html"
+            target="_blank">
+            EHDSMedicationUse
+          </a>
+        </li>
+        <li>
+          <strong>Target FHIR profile:</strong>
+          <a href="StructureDefinition-medicationStatement-eu-eps.html">
+            MedicationStatementEuEps
+          </a>
+        </li>
+      </ul>
+    </div>
+    <p></p>
+    <div class="table-wrap">
+      <table summary="EHDSMedicationUse → MedicationStatement">
+        <caption>EHDSMedicationUse → MedicationStatement</caption>
+        <thead>
+          <tr>
+            <th colspan="2" class="src-head">EHDSMedicationUse (Logical Model)</th>
+            <th class="relhead">Relationship</th>
+            <th colspan="4" class="tgt-head">MedicationStatement</th>
+          </tr>
+          <tr>
+            <th class="src-sub">Element</th>
+            <th class="src-sub">Description</th>
+            <th class="relsub">Relation</th>
+            <th class="tgt-sub">Resource</th>
+            <th class="tgt-sub">Element</th>
+            <th class="tgt-sub">Description</th>
+            <th class="tgt-sub">Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- HEADER BLOCK (common dataset header) -->
+          <tr>
+            <td>header</td>
+            <td>Common header for all patient-related data.</td>
+            <td>related-to</td>
+            <td>MedicationStatement</td>
+            <td>.</td>
+            <td>General metadata.</td>
+            <td>Dataset-level; not usually carried in MedicationStatement as-is.</td>
+          </tr>
+          <tr>
+            <td>header.subject</td>
+            <td>Patient/subject of the statement.</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>subject</td>
+            <td>Who is/was taking the medication.</td>
+            <td>Reference to Patient.</td>
+          </tr>
+          <tr>
+            <td>header.identifier</td>
+            <td>Business identifier for the object.</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>identifier</td>
+            <td>Identifiers for this statement.</td>
+            <td>Copy over all identifiers if multiple.</td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.author[x]</td>
+            <td>Author(s) of the statement.</td>
+            <td>no-map</td>
+            <td>MedicationStatement</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr class="highlight-yellow">
+            <td>header.date</td>
+            <td>Date/time of authoring/issuing.</td>
+            <td>no-map</td>
+            <td>MedicationStatement</td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.status</td>
+            <td>Status of the resource/document.</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>status</td>
+            <td>Position in the medication use lifecycle.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.source</td>
+            <td>Source of the information (e.g. patient, proxy).</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>informationSource</td>
+            <td>Person or organization that provided the information about the taking of this medication.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>header.language</td>
+            <td>Language of the resource (IETF tag).</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>language</td>
+            <td>Language used in the resource.</td>
+            <td></td>
+          </tr>
+          <!-- MEDICATION STATEMENT ELEMENTS -->
+          <tr>
+            <td>treatmentStatus</td>
+            <td>The current status of the taking of medicine.</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>extension:adherence.code<span style="color:#2e7d32;font-weight:600;">〔R4〕</span>
+            </td>
+            <td>Type of adherence</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>treatmentStatus</td>
+            <td>The current status of the taking of medicine.</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>adherence.code<span style="color:#2e7d32;font-weight:600;">〔R5〕</span>
+            </td>
+            <td>Type of adherence</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>medication</td>
+            <td>Describes the medicinal product.</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>medication[x] <span style="color:#2e7d32;font-weight:600;">〔R4〕</span>
+            </td>
+            <td>Medication expressed as a reference.</td>
+            <td>In the model only the Reference to <code>Medication</code>. </td>
+          </tr>
+          <tr>
+            <td>medication</td>
+            <td>Describes the medicinal product.</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>medication<span style="color:#2e7d32;font-weight:600;">〔R5〕</span>
+            </td>
+            <td>Medication expressed as a reference.</td>
+            <td>In the model only the Reference to <code>Medication</code>. </td>
+          </tr>
+          <tr>
+            <td>reason[x]</td>
+            <td>Coded reason for use (diagnosis/procedure).</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>reasonCode <span style="color:#2e7d32;font-weight:600;">〔R4〕</span>
+            </td>
+            <td>Reason for why the medication is/was taken.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>reason[x]</td>
+            <td>Coded reason for use (diagnosis/procedure).</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>reason.concept<span style="color:#2e7d32;font-weight:600;">〔R5〕</span>
+            </td>
+            <td>Reason for why the medication is/was taken.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>dosageInstructions</td>
+            <td>Details of how medication is/was taken.</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>dosage</td>
+            <td>Dosage instructions.</td>
+            <td>Map each EHDSDosaging row to a <code>dosage</code> element.</td>
+          </tr>
+          <tr>
+            <td>periodOfUse</td>
+            <td>Period when the medication is/was used.</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>effectivePeriod</td>
+            <td>Time period the statement covers.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>derivedFrom[x]</td>
+            <td>Resource from which this medication use statement is derived.</td>
+            <td>equivalent</td>
+            <td>MedicationStatement</td>
+            <td>derivedFrom</td>
+            <td>Link to information used to derive the MedicationStatement</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>note</td>
+            <td>Additional information about medication use.</td>
+            <td>source-is-broader-than-target</td>
+            <td>MedicationStatement</td>
+            <td>note.text</td>
+            <td>Additional notes/comments.</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:2rem;color:#555;"> Return to overview: <a href="modelmap.html">EHDS Logical
+      Models → FHIR Profiles</a>
+    </p>
+  </body>
+</div>
