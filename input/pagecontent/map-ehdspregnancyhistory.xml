@@ -70,7 +70,7 @@
         </thead>
         <tbody>
           <!-- HEADER BLOCK (common dataset header) -->
-          <tr>
+              <tr>
             <td>header</td>
             <td>Common header for all patient-related data.</td>
             <td>related-to</td>
@@ -86,7 +86,7 @@
             <td>Observation</td>
             <td>subject</td>
             <td>Reference to the patient or subject of the observation.</td>
-            <td>Reference to Patient (or other subject).</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.identifier</td>
@@ -95,47 +95,29 @@
             <td>Observation</td>
             <td>identifier</td>
             <td>Business identifier for this observation.</td>
-            <td>Copy over all identifiers if multiple.</td>
-          </tr>
-          <tr class="highlight-yellow">
-            <td>header.authorship</td>
-            <td>Resource authoring details.</td>
-            <td>no-map</td>
-            <td>Observation</td>
-            <td>.</td>
-            <td>Observation lacks a dedicated recorder. Only when the observation result was issued can be represented.</td>
             <td></td>
           </tr>
           <tr class="highlight-yellow">
-            <td>header.authorship.author[x]</td>
-            <td>Author(s) who issued the resource.</td>
-            <td>no-map</td>
+            <td>header.author[x]</td>
+            <td>Author of this observation.</td>
+            <td>related-to</td>
             <td>Observation</td>
-            <td></td>
-            <td>Observation lacks a dedicated recorder.</td>
+            <td>performer</td>
+            <td>Who is responsible for the observation.</td>
             <td></td>
           </tr>
           <tr>
-            <td>header.authorship.datetime</td>
+            <td>header.date</td>
             <td>Date and time of authoring/issuing.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>issued</td>
             <td>When the observation result was issued.</td>
-            <td>1.. in the model 0.. in the profile.</td>
-          </tr>
-          <tr>
-            <td>header.lastUpdate</td>
-            <td>Last technical correction/update.</td>
-            <td>source-is-broader-than-target</td>
-            <td>Observation</td>
-            <td>meta.lastUpdated</td>
-            <td>When the resource version last changed.</td>
-            <td>Use only when the timestamp reflects resource update (instant).</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.status</td>
-            <td>Status of the resource.</td>
+            <td>Status of this observation.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>status</td>
@@ -143,13 +125,13 @@
             <td></td>
           </tr>
           <tr class="highlight-yellow">
-            <td>header.statusReason[x]</td>
-            <td>Reason for the current status.</td>
-            <td>no-map</td>
+            <td>header.source</td>
+            <td>Source of information (e.g. patient, patient's proxy).</td>
+            <td>related-to</td>
             <td>Observation</td>
-            <td>-</td>
-            <td></td>
-            <td>No core element</td>
+            <td>note</td>
+            <td>Additional context about information provenance.</td>
+            <td>Observation has no direct informationSource element. Here proposed to use note element to carry source information.</td>
           </tr>
           <tr>
             <td>header.language</td>
@@ -161,17 +143,8 @@
             <td></td>
           </tr>
           <tr>
-            <td>narrative</td>
-            <td>Narrative description describing the outcome of any previous pregnancies.</td>
-            <td>related-to</td>
-            <td>Observation</td>
-            <td>text</td>
-            <td>Narrative for the observation.</td>
-            <td>Use narrative when provided.</td>
-          </tr>
-          <tr>
-            <td>outcomeDate</td>
-            <td>Date referred to the previous pregnancies outcome.</td>
+            <td>endDate</td>
+            <td>The end date of the pregnancy.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>effectiveDateTime</td>
@@ -188,12 +161,21 @@
             <td>Use a code from the pregnancy outcome value set.</td>
           </tr>
           <tr>
-            <td>numberOfChildren</td>
+            <td>numberOfFetuses</td>
             <td>Number of children/fetuses in this specific pregnancy.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>valueQuantity</td>
             <td>Count of children/fetuses.</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>note</td>
+            <td>Free text notes by the health professional.</td>
+            <td>equivalent</td>
+            <td>Observation</td>
+            <td>note.text</td>
+            <td>Additional notes.</td>
             <td></td>
           </tr>
         </tbody>
