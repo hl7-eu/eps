@@ -9,6 +9,8 @@ Description: """This profile constrains the MedicationStatement resource for the
 * insert SetFmmAndStatusRule (1, draft)
 * insert ImposeProfile($MedicationStatement-uv-ips, 0)
 
+* extension[adherence].extension[code] ^short = "Type of adherence"
+
 * medication[x] 1.. 
 * medication[x] only $CodeableConcept-uv-ips or Reference(MedicationEuCore)
 * subject only Reference (PatientEuEps)

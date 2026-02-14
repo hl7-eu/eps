@@ -27,6 +27,7 @@ Alias: $iso21090-SC-coding = http://hl7.org/fhir/StructureDefinition/iso21090-SC
 Alias: $iso21090-uncertainty = http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty
 Alias: $iso21090-uncertaintyType = http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType
 Alias: $medicationStatement-dosage-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationStatement.dosage
+Alias: $medicationStatement-adherence-r5 = http://hl7.org/fhir/5.0/StructureDefinition/extension-MedicationStatement.adherence
 Alias: $note = http://hl7.org/fhir/StructureDefinition/note
 Alias: $obligation = http://hl7.org/fhir/StructureDefinition/obligation
 Alias: $observation-analysis-time = http://hl7.org/fhir/StructureDefinition/observation-analysis-date-time

@@ -132,7 +132,7 @@
             <td>The current status of the taking of medicine.</td>
             <td>equivalent</td>
             <td>MedicationStatement</td>
-            <td>extension:adherence.code<span style="color:#2e7d32;font-weight:600;">〔R4〕</span>
+            <td>extension:adherence-code<span style="color:#2e7d32;font-weight:600;">〔R4〕</span>
             </td>
             <td>Type of adherence</td>
             <td></td>
