@@ -97,26 +97,17 @@
             <td>Business identifier for this consent.</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
-            <td>header.authorship</td>
-            <td>Resource authoring details.</td>
-            <td>no-map</td>
+          <tr>
+            <td>header.author[x]</td>
+            <td>Author of the advance directive.</td>
+            <td>related-to</td>
             <td>Consent</td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr class="highlight-yellow">
-            <td>header.authorship.author[x]</td>
-            <td>Author(s) who issued the resource.</td>
-            <td>no-map</td>
-            <td>Consent</td>
-            <td></td>
-            <td></td>
+            <td>performer</td>
+            <td>Who is agreeing to this policy and rules.</td>
             <td></td>
           </tr>
           <tr>
-            <td>header.authorship.datetime</td>
+            <td>header.date</td>
             <td>Date and time of authoring/issuing.</td>
             <td>equivalent</td>
             <td>Consent</td>
@@ -124,18 +115,9 @@
             <td>When the living will was authored.</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
-            <td>header.lastUpdate</td>
-            <td>Last technical correction/update.</td>
-            <td>source-is-broader-than-target</td>
-            <td>Consent</td>
-            <td>meta.lastUpdated</td>
-            <td>When the resource version last changed.</td>
-            <td>Use only when the timestamp reflects resource update (instant).</td>
-          </tr>
           <tr>
             <td>header.status</td>
-            <td>Status of the resource.</td>
+            <td>Status of the resource or document.</td>
             <td>equivalent</td>
             <td>Consent</td>
             <td>status</td>
@@ -143,13 +125,13 @@
             <td>Align to ConsentState.</td>
           </tr>
           <tr class="highlight-yellow">
-            <td>header.statusReason[x]</td>
-            <td>Reason for the current status.</td>
+            <td>header.source</td>
+            <td>Source of information (e.g. patient, patient's proxy).</td>
             <td>no-map</td>
             <td>Consent</td>
-            <td>-</td>
             <td></td>
             <td></td>
+            <td>No direct core element in Consent for information source provenance.</td>
           </tr>
           <tr>
             <td>header.language</td>
@@ -164,52 +146,25 @@
             <td>category</td>
             <td>Categories of directives related to decisions prior and after death.</td>
             <td>equivalent</td>
-            <td>ConsentEuEps</td>
+            <td>Consent</td>
             <td>category</td>
             <td>Living will type.</td>
             <td>Preferred binding: SNOMED CT.</td>
           </tr>
           <tr>
-            <td>narrative</td>
+            <td>note</td>
             <td>Textual description of the directive.</td>
             <td>related-to</td>
             <td>Consent</td>
             <td>text</td>
             <td>Narrative for the consent.</td>
-            <td>Use extension:note for short comments if needed.</td>
-          </tr>
-          <tr>
-            <td>effectivePeriod</td>
-            <td>Time period during which the directive is effective.</td>
-            <td>related-to</td>
-            <td>Consent</td>
-            <td>provision.period</td>
-            <td>Period when the consent applies.</td>
             <td></td>
           </tr>
           <tr>
-            <td>authorisingEntity[x]</td>
-            <td>Person or organisation that authorizes the directive.</td>
-            <td>related-to</td>
-            <td>Consent</td>
-            <td>performer</td>
-            <td>Who is agreeing to this policy and rules</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>relatedConditions[x]</td>
-            <td>The problem or disorder to which the living will applies.</td>
-            <td>source-is-broader-than-target</td>
-            <td>ConsentEuEps</td>
-            <td>extension:relatedCondition.valueReference</td>
-            <td>Related conditions.</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>advanceDirectiveDocument</td>
-            <td>Scanned source document with the living will and the patient's signature.</td>
+            <td>attachment</td>
+            <td>Source document, such as a PDF, with the living will and the patient's signature.</td>
             <td>equivalent</td>
-            <td>ConsentEuEps</td>
+            <td>Consent</td>
             <td>sourceAttachment</td>
             <td>Living will document.</td>
             <td>May also be a DocumentReference in source[x].</td>

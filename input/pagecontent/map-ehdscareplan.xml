@@ -97,16 +97,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>header.authorship</td>
-            <td>Resource authoring details.</td>
-            <td>related-to</td>
-            <td>CarePlan</td>
-            <td>.</td>
-            <td>Authoring metadata.</td>
-            <td>CarePlan has author and created elements, see below.</td>
-          </tr>
-          <tr>
-            <td>header.authorship.author[x]</td>
+            <td>header.author[x]</td>
             <td>The responsible party (custodian) for the care plan.</td>
             <td>equivalent</td>
             <td>CarePlan</td>
@@ -115,22 +106,13 @@
             <td></td>
           </tr>
           <tr>
-            <td>header.authorship.datetime</td>
+            <td>header.date</td>
             <td>Date and time of authoring/issuing.</td>
             <td>equivalent</td>
             <td>CarePlan</td>
             <td>created</td>
             <td>When the plan was authored.</td>
             <td></td>
-          </tr>
-          <tr class="highlight-yellow">
-            <td>header.lastUpdate</td>
-            <td>Last technical correction/update.</td>
-            <td>source-is-broader-than-target</td>
-            <td>CarePlan</td>
-            <td>meta.lastUpdated</td>
-            <td>When the resource version last changed.</td>
-            <td>Use only when the timestamp reflects resource update (instant).</td>
           </tr>
           <tr>
             <td>header.status</td>
@@ -141,14 +123,14 @@
             <td>Workflow status of the plan.</td>
             <td>Preferred binding: HL7 Request status.</td>
           </tr>
-          <tr>
-            <td>header.statusReason[x]</td>
-            <td>Reason for the current status.</td>
+          <tr class="highlight-yellow">
+            <td>header.source</td>
+            <td>Source of information (e.g. patient, patient's proxy).</td>
             <td>no-map</td>
             <td>CarePlan</td>
-            <td>-</td>
             <td></td>
-            <td>No core element; use an extension if the status rationale is required.</td>
+            <td></td>
+            <td>No direct core element in CarePlan for information source provenance.</td>
           </tr>
           <tr>
             <td>header.language</td>

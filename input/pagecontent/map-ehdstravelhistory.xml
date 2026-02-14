@@ -98,58 +98,40 @@
             <td>Copy over all identifiers if multiple.</td>
           </tr>
           <tr class="highlight-yellow">
-            <td>header.authorship</td>
-            <td>Resource authoring details.</td>
-            <td>no-map</td>
+            <td>header.author[x]</td>
+            <td>Author(s) responsible for the provided information.</td>
+            <td>related-to</td>
             <td>Observation</td>
-            <td>.</td>
-            <td>Observation lacks a dedicated recorder. Only when the observation result was issued can be represented.</td>
-            <td></td>
-          </tr>
-          <tr class="highlight-yellow">
-            <td>header.authorship.author[x]</td>
-            <td>Author(s) who issued the resource.</td>
-            <td>no-map</td>
-            <td>Observation</td>
-            <td></td>
-            <td>Observation lacks a dedicated recorder.</td>
+            <td>performer</td>
+            <td>Who is responsible for the observation.</td>
             <td></td>
           </tr>
           <tr>
-            <td>header.authorship.datetime</td>
-            <td>Date and time of authoring/issuing.</td>
+            <td>header.date</td>
+            <td>Date and optionally time of authoring/issuing.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>issued</td>
             <td>When the observation result was issued.</td>
-            <td>1.. in the model 0.. in the profile.</td>
-          </tr>
-          <tr class="highlight-yellow">
-            <td>header.lastUpdate</td>
-            <td>Last technical correction/update.</td>
-            <td>source-is-broader-than-target</td>
-            <td>Observation</td>
-            <td>meta.lastUpdated</td>
-            <td>When the resource version last changed.</td>
-            <td>Use only when the timestamp reflects resource update (instant).</td>
+            <td></td>
           </tr>
           <tr>
             <td>header.status</td>
-            <td>Status of the resource.</td>
+            <td>Status of the resource or document.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>status</td>
             <td>Registered | preliminary | final | amended | ...</td>
             <td>EHDS uses CodeableConcept; Observation.status is a required code. Align to HL7 ObservationStatus.</td>
           </tr>
-          <tr class="highlight-yellow">
-            <td>header.statusReason[x]</td>
-            <td>Reason for the current status.</td>
-            <td>no-map</td>
+          <tr>
+            <td>header.source</td>
+            <td>Source of information (e.g. patient, patient's proxy).</td>
+            <td>related-to</td>
             <td>Observation</td>
-            <td>-</td>
-            <td></td>
-            <td>No core element; use an extension if the status rationale is required.</td>
+            <td>note</td>
+            <td>Additional context about information provenance.</td>
+            <td>Observation has no direct informationSource element.</td>
           </tr>
           <tr>
             <td>header.language</td>
