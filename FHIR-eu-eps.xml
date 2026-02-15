@@ -45,6 +45,7 @@
 <page key="map-ehdsdevice" name="EHDSDevice Mapping"/>
 <page key="map-ehdsdeviceuse" name="EHDSDeviceUse Mapping"/>
 <page key="map-ehdslaboratoryobservation" name="EHDSLaboratoryObservation Mapping"/>
+<page key="map-ehdsmedicationuse" name="EHDSMedicationUse Mapping"/>
 <page key="map-ehdspatientsummary" name="EHDSPatientSummary to Composition (EPS)"/>
 <page key="map-ehdspregnancyhistory" name="EHDSPregnancyHistory Mapping"/>
 <page key="map-ehdstravelhistory" name="EHDSTravelHistory Mapping"/>

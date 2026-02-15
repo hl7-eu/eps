@@ -21,6 +21,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 // * type = http://loinc.org#34105-7  
 * subject only Reference(PatientEuEps)
 * subject 1..1
+* subject.reference 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the PS the subject is always the patient."
 // * encounter only Reference ( EncounterEuEps )
 * date ^short = "PS date"
@@ -62,8 +63,8 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     sectionMedications 1..1  and
     sectionImmunizations 0..1  and
     sectionResults 0..1  and
-    sectionProceduresHx 0..1  and
-    sectionMedicalDevices 0..1  and
+    sectionProceduresHx 1..1  and // set to 1..1 to align with the EHDS model
+    sectionMedicalDevices 1..1  and // set to 1..1 to align with the EHDS model
     sectionAdvanceDirectives 0..1  and
     sectionAlert 0..1  and
     sectionFunctionalStatus 0..1  and

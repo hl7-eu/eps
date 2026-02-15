@@ -103,6 +103,8 @@ pages:
     title: EHDSCarePlan Mapping
   map-ehdslaboratoryobservation.xml:
     title: EHDSLaboratoryObservation Mapping
+  map-ehdsmedicationuse.xml:
+    title: EHDSMedicationUse Mapping
 
 # == IPS COMPARISON
   ips-eps-section-comparison.html:
