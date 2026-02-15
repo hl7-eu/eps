@@ -323,12 +323,15 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * insert SectionEntrySliceDefRules (pregnancyStatus, 0.. ,
     Current pregnancy status , Current pregnancy status ,
     ObservationPregnancyStatusUvIps)
-  * insert SectionEntrySliceDefRules (previousPregnanciesStatus, 0.. ,
+/*   * insert SectionEntrySliceDefRules (previousPregnanciesStatus, 0.. ,
     Overall status of previous pregnancies , Overall status of previous pregnancies ,
-    ObservationPreviousPregnanciesStatusEuEps)
+    ObservationPreviousPregnanciesStatusEuEps) */
   * insert SectionEntrySliceDefRules (pregnancyOutcome, 0.. , Information about the outcome of earlier pregnancies ,
-    information about the outcome of earlier pregnancies,
+    Information about the outcome of earlier pregnancies,
     ObservationPregnancyOutcomeUvIps)
+  * insert SectionEntrySliceDefRules (gestationalAge, 0.. , Information about the gestational age of the pregnancy ,
+    Information about the gestational age of the pregnancy,
+    ObservationGestationalAgeUvIps)
 
   
 // ----------------- EPS Advance Directives Section --------------------
