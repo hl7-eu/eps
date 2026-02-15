@@ -331,7 +331,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     ObservationPregnancyOutcomeUvIps)
   * insert SectionEntrySliceDefRules (gestationalAge, 0.. , Information about the gestational age of the pregnancy ,
     Information about the gestational age of the pregnancy,
-    ObservationGestationalAgeUvIps)
+    ObservationPregnancyGestationalAgeEuEps)
 
   
 // ----------------- EPS Advance Directives Section --------------------
