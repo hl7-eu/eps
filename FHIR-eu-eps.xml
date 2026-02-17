@@ -6,6 +6,8 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="StructureDefinition/allergyintolerance-obl-eu-eps" key="StructureDefinition-allergyintolerance-obl-eu-eps" name="AllergyIntolerance (EPS)"/>
 <artifact id="StructureDefinition/bundle-eu-eps" key="StructureDefinition-bundle-eu-eps" name="Bundle (EPS)"/>
+<artifact id="Bundle/EPSExampleBundle01NoProblemsMedicationAllergies" key="Bundle-EPSExampleBundle01NoProblemsMedicationAllergies" name="Bundle: Empty EPS (No problems, medications, allergies)"/>
+<artifact id="Bundle/Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3" key="Bundle-Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3" name="Complete HL7 Europe Patient Summary EPS Bundle"/>
 <artifact id="StructureDefinition/composition-eu-eps" key="StructureDefinition-composition-eu-eps" name="Composition (EPS)"/>
 <artifact id="StructureDefinition/condition-obl-eu-eps" key="StructureDefinition-condition-obl-eu-eps" name="Condition Obligations (EPS)"/>
 <artifact id="StructureDefinition/consent-eu-eps" key="StructureDefinition-consent-eu-eps" name="Consent (Advance Directives EPS)"/>

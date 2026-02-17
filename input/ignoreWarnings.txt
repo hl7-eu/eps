@@ -64,3 +64,6 @@ The modifier extension http://hl7.org/fhir/1.0/StructureDefinition/extension-Con
 # Warnings referred to an Obligation profile
 The extension http://hl7.org/fhir/tools/StructureDefinition/obligation|0.1.0 is deprecated
 The Implementation Guide contains no examples for this profile
+
+# Non matching slices for obligations
+This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)

@@ -102,18 +102,18 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     composition 1..1 and
     patient 1..1 and
     allergyintolerance 0..* and
-    careplan 0..* and
-    clinicalimpression 0..* and
+    // careplan 0..* and
+    // clinicalimpression 0..* and
     condition 0..* and
-    consent 0..* and
+    // consent 0..* and
     device 0..* and
     deviceusestatement 0..* and
     diagnosticreport 0..* and
-    documentreference 0..* and
+    // documentreference 0..* and
     flag 0..* and
     imagingstudy 0..* and
     immunization 0..* and
-    immunizationrecommendation 0..* and 
+    // immunizationrecommendation 0..* and 
     medication 0..* and
     medicationrequest 0..* and
     medicationstatement 0..* and
@@ -125,15 +125,15 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     observation-pregnancy-status 0..* and
     observation-alcohol-use 0..* and
     observation-tobacco-use 0..* and
-    observation-results-laboratory-pathology 0..* and
-    observation-results-radiology 0..* and
+    // observation-results-laboratory-pathology 0..* and
+    // observation-results-radiology 0..* and
     observation-vital-signs 0..* and
     organization 0..* and
     specimen 0..* and
 
     //------------
-    observation-pregnancy-age 0..* and
-    observation-pregnancy-prev-status 0..*
+    observation-pregnancy-age 0..* 
+    // and     observation-pregnancy-prev-status 0..*
     //------------
 
 
@@ -190,11 +190,6 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 * entry[observation-pregnancy-age].resource 1..
 * entry[observation-pregnancy-age].resource only ObservationPregnancyGestationalAgeEuEps
-* entry[observation-pregnancy-prev-status].resource 1..
-* entry[observation-pregnancy-prev-status].resource only ObservationPreviousPregnanciesStatusEuEps 
-
-
-
 
 * entry[observation-alcohol-use].resource 1..
 * entry[observation-alcohol-use].resource only $Observation-alcoholuse-uv-ips //EuEps   ?

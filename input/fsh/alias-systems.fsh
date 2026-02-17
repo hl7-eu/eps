@@ -9,6 +9,7 @@ Alias: $ajcc = http://cancerstaging.org
 Alias: $allergyintolerance-clinical = http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical
 Alias: $allergyintolerance-verification = http://terminology.hl7.org/CodeSystem/allergyintolerance-verification
 Alias: $atc = http://www.whocc.no/atc
+Alias: $care-plan-category = http://terminology.hl7.org/CodeSystem/care-plan-category
 Alias: $common-tags = http://terminology.hl7.org/CodeSystem/common-tags // FHIR Common Tags
 Alias: $condition-category = http://terminology.hl7.org/CodeSystem/condition-category
 Alias: $condition-clinical = http://terminology.hl7.org/CodeSystem/condition-clinical
@@ -66,6 +67,7 @@ Alias: $v3-TimingEvent = http://terminology.hl7.org/CodeSystem/v3-TimingEvent
 
 // --- SID
 Alias: $oid = urn:ietf:rfc:1155
+Alias: $uuid = urn:ietf:rfc:9562
 Alias: $uri = urn:ietf:rfc:3986
 Alias: $mime = urn:ietf:bcp:13
 

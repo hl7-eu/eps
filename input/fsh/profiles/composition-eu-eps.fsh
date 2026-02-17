@@ -104,7 +104,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * entry only Reference(AllergyIntolerance or DocumentReference)  
   * insert SectionEntrySliceComRules(allergyOrIntolerance, allergyOrIntolerance)
   // entry slices
-  * insert SectionEntrySliceDefRules (allergyOrIntolerance, 0.. , 
+  * insert SectionEntrySliceDefRules (allergyOrIntolerance, 0..* , 
   Relevant allergies or intolerances for that patient.,
   It lists the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
   AllergyIntoleranceEuCore)
@@ -126,7 +126,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * entry only Reference  (MedicationStatement or MedicationRequest or MedicationAdministration or MedicationDispense or DocumentReference) 
   * insert SectionEntrySliceComRules(medicationStatementOrRequest, medicationStatementOrRequest)
   // entry slices
-  * insert SectionEntrySliceDefRules (medicationStatementOrRequest, 0.. ,
+  * insert SectionEntrySliceDefRules (medicationStatementOrRequest, 0..* ,
   Medications relevant for the scope of the patient summary ,
   This list the medications relevant for the scope of the patient summary or it is used to indicate that the subject is known not to be on any relevant medication; either that no information is available about medications. ,
   MedicationStatementEuEps)
