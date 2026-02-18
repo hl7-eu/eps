@@ -268,21 +268,31 @@
           <tr>
             <td>result.uncertainty</td>
             <td>Measurement uncertainty type and interval.</td>
+            <td>related-to</td>
+            <td>Quantity</td>
+            <td>extension</td>
+            <td>-</td>
+            <td>See included elements for mapping details</td>
+          </tr>
+          <tr>
+            <td>result.uncertaint.value</td>
+            <td>Measurement uncertainty type and interval.</td>
             <td>equivalent</td>
             <td>Quantity</td>
-            <td>extension[uncertainty]</td>
+            <td>extension:uncertainty</td>
             <td>-</td>
             <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty extension for the
               Quantity data type.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>result.uncertainty.type</td>
             <td>Type of measurement uncertainty.</td>
-            <td>no-map</td>
+            <td>equivalent</td>
             <td>Observation</td>
+            <td>extension:uncertaintyType	</td>
             <td></td>
-            <td></td>
-            <td>No direct core element; represented via uncertainty extension semantics.</td>
+            <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType extension for the
+              Quantity data type.</td>
           </tr>
           <tr>
             <td>result.dataAbsentReason</td>
@@ -365,24 +375,34 @@
             <td>Component result value.</td>
             <td></td>
           </tr>
-          <tr>
+             <tr>
             <td>component.result.uncertainty</td>
+            <td>Measurement uncertainty type and interval.</td>
+            <td>related-to</td>
+            <td>Quantity</td>
+            <td>extension</td>
+            <td>-</td>
+            <td>See included elements for mapping details</td>
+          </tr>
+          <tr>
+            <td>component.result.uncertaint.value</td>
             <td>Measurement uncertainty type and interval.</td>
             <td>equivalent</td>
             <td>Quantity</td>
-            <td>extension[uncertainty]</td>
+            <td>extension:uncertainty</td>
             <td>-</td>
             <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty extension for the
               Quantity data type.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>component.result.uncertainty.type</td>
-            <td>Type of component uncertainty.</td>
-            <td>no-map</td>
+            <td>Type of measurement uncertainty.</td>
+            <td>equivalent</td>
             <td>Observation</td>
+            <td>extension:uncertaintyType	</td>
             <td></td>
-            <td></td>
-            <td>No direct core element; represented via uncertainty extension semantics.</td>
+            <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType extension for the
+              Quantity data type.</td>
           </tr>
           <tr>
             <td>component.result.dataAbsentReason</td>
@@ -400,7 +420,7 @@
             <td>Observation</td>
             <td>component.referenceRange</td>
             <td>Guidance for interpreting the component value.</td>
-            <td class="highlight-yellow">Note: referenceRange should be part of the result not of the component.</td>
+            <td></td>
           </tr>
           <tr>
             <td>component.interpretation</td>
@@ -450,13 +470,22 @@
             <td>Device Laboratory Test Kit</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>calibrator</td>
             <td>Calibrator used for the measurement.</td>
-            <td>no map</td>
+            <td>related-to</td>
             <td>Observation</td>
-            <td>extension:certifiedRefMaterialCodeable	</td>
+            <td>extension:certifiedRefMaterialCodeable</td>
             <td>Certified Reference Material: CodeableConcept</td>
+            <td></td>
+          </tr>
+           <tr>
+            <td>calibrator</td>
+            <td>Calibrator used for the measurement.</td>
+            <td>related-to</td>
+            <td>Observation</td>
+            <td>extension:certifiedRefMaterialIdentifier</td>
+            <td>Certified Reference Material: Identifier</td>
             <td></td>
           </tr>
           <tr class="highlight-yellow">
@@ -480,11 +509,11 @@
           <tr class="highlight-yellow">
             <td>pointOfCareTest</td>
             <td>Indicates if the observation is a point-of-care test.</td>
-            <td>no map</td>
-            <td>-</td>
-            <td>-</td>
-            <td>-</td>
-            <td>No direct element; consider category or an extension.</td>
+            <td>related-to</td>
+            <td>Observation</td>
+            <td>category</td>
+            <td>Observation Classification</td>
+            <td></td>
           </tr>
 
         </tbody>
