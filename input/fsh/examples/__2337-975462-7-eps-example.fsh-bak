@@ -4,7 +4,7 @@ Title: "Complete HL7 Europe Patient Summary EPS Bundle"
 Description: "FHIR Bundle example for HL7 Europe Patient Summary (EPS) Mihajel Stamač"
 Usage: #example
 * type = #document
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "1525c7f3-b174-49ba-a1a7-e5c6c12d23f1"
 * identifier.assigner.display = "HL7 Europe"
 * timestamp = "2025-08-31T17:43:49Z"
@@ -134,7 +134,7 @@ Instance: Instance-Composition-cbbdbec7-68b5-4a1c-bfcd-227f460be6f8
 InstanceOf: CompositionEuEps
 Usage: #inline
 * id = "cbbdbec7-68b5-4a1c-bfcd-227f460be6f8"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "665ddb0e-d5fd-4891-a962-6f5b33d01970"
 * identifier.assigner.display = "HL7 Europe"
 * title = "European Patient Summary"
@@ -294,7 +294,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-40c0de64-1f92-4b93-9664-653790168c2c
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "40c0de64-1f92-4b93-9664-653790168c2c"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -314,7 +314,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-51fbef3a-e6ba-4bad-9ef0-d49060728511
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "51fbef3a-e6ba-4bad-9ef0-d49060728511"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -334,7 +334,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-fcf3fb9a-0bf3-482c-89b2-39a9fb2b3dd5
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "fcf3fb9a-0bf3-482c-89b2-39a9fb2b3dd5"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -355,7 +355,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-3e720ba7-60eb-4554-9eef-2a09d8a8b721
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "3e720ba7-60eb-4554-9eef-2a09d8a8b721"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -376,7 +376,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-690f6afa-e4dd-486f-b430-a91a4f3b45fc
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "690f6afa-e4dd-486f-b430-a91a4f3b45fc"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -415,7 +415,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-d572088d-a59c-4e61-afb7-9cace9a4d079
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -442,7 +442,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-ea66ad41-d5f8-46d7-bd19-5e77c0b9985d
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -470,7 +470,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-742660c8-3f43-4908-aa66-17a17318cecd
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -498,7 +498,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-7ba2eab7-83bd-4b4e-9924-a9dcfb16ad9b
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -1380,10 +1380,10 @@ InstanceOf: PatientEuEps
 Usage: #inline
 * id = "68971a41-4b4d-45dc-9a30-945bd40c63aa"
 * identifier[+].type = $v2-0203#JHN
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+* identifier[=].system = "http://example.org/identifier-1"
 * identifier[=].value = "2337-975462-7"
 * identifier[+].type = $v2-0203#MR
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "http://example.org/identifier-2"
 * identifier[=].value = "cb6d832f-d2ba-e68e-65bd-71a84b30a8b1"
 * name[+].family = "Stamač"
 * name[=].given[+] = "Mihajel"
@@ -1422,7 +1422,7 @@ Instance: Instance-Organization-82dcce97-9de8-4878-9fc1-114fa5b88118
 InstanceOf: OrganizationEu
 Usage: #inline
 * id = "82dcce97-9de8-4878-9fc1-114fa5b88118"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "335c2c1c-452a-4e6b-b1f7-8453a8a3b44a"
 * identifier.assigner.display = "HL7 Europe"
 * name = "med-IN-Park"

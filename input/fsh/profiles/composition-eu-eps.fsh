@@ -88,7 +88,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * entry only Reference(Condition or DocumentReference)
   * insert SectionEntrySliceComRules(Clinical problems or conditions currently being monitored for the patient., It lists and describes clinical problems or conditions currently being monitored for the patient. This entry shall be used to document that no information about problems is available\, or that no relevant problems are known.)
   // entry slices
-  * insert SectionEntrySliceDefRules (problem, 0.. ,
+  * insert SectionEntrySliceDefRules (problem, 0..* ,
       Clinical problems or conditions currently being monitored for the patient. ,
       It lists and describes clinical problems or conditions currently being monitored for the patient.  This entry shall be used to document that no information about problems is available\, or that no relevant problems are known. ,
       ConditionEuCore)
@@ -144,7 +144,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
  
   * insert SectionEntrySliceComRules(Patient's immunization status and pertinent history., It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known.)
 
-  * insert SectionEntrySliceDefRules (immunization,  0.. , 
+  * insert SectionEntrySliceDefRules (immunization,  0..*, 
     Patient's immunization status and pertinent history.,
     It defines the patient's current immunization status and pertinent immunization history.\r\nThe primary use case for the Immunization Section is to enable communication of a patient's immunization status.\r\nIt may contain the entire immunization history that is relevant to the period of time being summarized. This entry shall be used to document that no information about immunizations is available\, or that no immunizations are known. , 
     ImmunizationEuCore) 
@@ -165,7 +165,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
   * insert SectionEntrySliceComRules(Slice on procedure, Slice on procedure)
   // entry slices
-  * insert SectionEntrySliceDefRules (procedure, 0.. ,
+  * insert SectionEntrySliceDefRules (procedure, 0..*,
      Patient past procedures pertinent to the scope of this document. ,  	
      It lists the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n
       1. Invasive Diagnostic procedure:e.g. Cardiac catheterization; (the results of these procedure are documented in the results section\)\r\n
@@ -184,7 +184,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
   * insert SectionEntrySliceComRules(EPS Medical Device entry, EPS Medical Devices entry slice)
 
-  * insert SectionEntrySliceDefRules (deviceStatement, 0.. , 
+  * insert SectionEntrySliceDefRules (deviceStatement, 0..*, 
     Patient history of medical device use, 
     It describes the patient history of medical device use. This entry shall be used to document that no information about medical device use is available\, or that no relevant medical device use is known. , 
     DeviceUseStatementEuEps)
@@ -202,7 +202,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * entry only Reference(Flag or DocumentReference)
   * insert SectionEntrySliceComRules(EPS Alerts entry, EPS Alerts entry slice)
   // entry slices
-  * insert SectionEntrySliceDefRules (flag, 0.. , 
+  * insert SectionEntrySliceDefRules (flag, 0..*, 
   Alert information , 
   Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
   FlagPatientEuCore)
@@ -217,11 +217,11 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * entry only Reference(Observation or DiagnosticReport or DocumentReference)
   * insert SectionEntrySliceComRules(EPS Results entry, EPS Results entry slice)
   // Review the slice definiton
-  * insert SectionEntrySliceDefRules (results-medicalTestResult, 0.. , 
+  * insert SectionEntrySliceDefRules (results-medicalTestResult, 0..*, 
       Medical test results, 
        Results collected on the patient or produced on in-vitro biologic specimens., 
        MedicalTestResultEuCore)
-  * insert SectionEntrySliceDefRules (results-diagnosticReport, 0.. , 
+  * insert SectionEntrySliceDefRules (results-diagnosticReport, 0..*, 
       EPS DiagnosticReport, 
        DiagnosticReport resource to represent diagnostic test and procedure reports in a patient summary,
        DiagnosticReportEuEps)
@@ -237,7 +237,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * entry only Reference(Observation or DocumentReference)
   * insert SectionEntrySliceComRules(Vital Signs, 
       Notable vital signs or physical findings as: blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included)
-  * insert SectionEntrySliceDefRules (vitalSign, 0.. , 
+  * insert SectionEntrySliceDefRules (vitalSign, 0..*, 
       Notable vital signs or physical findings. ,
       Notable vital signs or physical findings as: blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included,
       $vitalsigns)
@@ -253,11 +253,11 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
   * insert SectionEntrySliceComRules(Optional entry used to represent disabilities and functional assessments,  	
       It describes capabilities of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments. Profiles to express disabilities and functional assessments will be specified by future versions of this guide.)
-  * insert SectionEntrySliceDefRules (disability, 0.. , 
+  * insert SectionEntrySliceDefRules (disability, 0..*, 
       Optional slice used to represent disabilities,  	
       It describes capabilities of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments. Profiles to express disabilities and functional assessments will be specified by future versions of this guide.,
       ConditionEuCore)
-  * insert SectionEntrySliceDefRules (functionalAssessment, 0.. , 
+  * insert SectionEntrySliceDefRules (functionalAssessment, 0..*, 
       Optional slice used to represent functional assessments,  	
       It describes capabilities of the patient to perform acts of daily living\, including possible needs of the patient to be continuously assessed by third parties. The invalidity status may in fact influence decisions about how to administer treatments. Profiles to express disabilities and functional assessments will be specified by future versions of this guide.,
       ClinicalImpression)
@@ -276,12 +276,12 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * insert SectionEntrySliceComRules(Optional entry used to represent structured care plans,  	
       Dynamic\, personalized plan including identified needed healthcare activity\, health objectives and healthcare goals\, relating to one or more specified health issues in a healthcare process [Source EN ISO 13940])
   
-  * insert SectionEntrySliceDefRules (carePlan, 0.. , 
+  * insert SectionEntrySliceDefRules (carePlan, 0..*, 
       Optional slice used to represent care plans,  	
       Dynamic\, personalized plan including identified needed healthcare activity\, health objectives and healthcare goals\, relating to one or more specified health issues in a healthcare process [Source EN ISO 13940],
       CarePlan)
 
-  * insert SectionEntrySliceDefRules (immunizationRecommendation, 0.. , 
+  * insert SectionEntrySliceDefRules (immunizationRecommendation, 0..*, 
       Optional slice used to represent immunization recommendations,  	
       A patient's point-in-time set of recommendations (i.e. forecasting\) according to a published schedule with optional supporting justification.,
       ImmunizationRecommendation)
@@ -303,11 +303,11 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     Description of the personâ€™s Health related \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\)
     )
   
-  * insert SectionEntrySliceDefRules (smokingTobaccoUse, 0.. , 
+  * insert SectionEntrySliceDefRules (smokingTobaccoUse, 0..*, 
       Smoke habits,  	
       A description of the personâ€™s smoke habits,
       $Observation-tobaccouse-uv-ips)
-  * insert SectionEntrySliceDefRules (alcoholUse, 0.. , 
+  * insert SectionEntrySliceDefRules (alcoholUse, 0..*, 
       Alcohol consumption,  	
       A description of the personâ€™s alcohol consumption habits,
       $Observation-alcoholuse-uv-ips)
@@ -320,16 +320,16 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     http://loinc.org#10162-6)
   * insert SectionEntrySliceComRules(Current pregnancy status and\, optionally\, information about the outcome of earlier pregnancies,
      It contains information about whether the patient is currently pregnant or not. It may contain addition summarizing information about the outcome of earlier pregnancies.)
-  * insert SectionEntrySliceDefRules (pregnancyStatus, 0.. ,
+  * insert SectionEntrySliceDefRules (pregnancyStatus, 0..*,
     Current pregnancy status , Current pregnancy status ,
     ObservationPregnancyStatusUvIps)
-/*   * insert SectionEntrySliceDefRules (previousPregnanciesStatus, 0.. ,
+/*   * insert SectionEntrySliceDefRules (previousPregnanciesStatus, 0..*,
     Overall status of previous pregnancies , Overall status of previous pregnancies ,
     ObservationPreviousPregnanciesStatusEuEps) */
-  * insert SectionEntrySliceDefRules (pregnancyOutcome, 0.. , Information about the outcome of earlier pregnancies ,
+  * insert SectionEntrySliceDefRules (pregnancyOutcome, 0..*, Information about the outcome of earlier pregnancies ,
     Information about the outcome of earlier pregnancies,
     ObservationPregnancyOutcomeUvIps)
-  * insert SectionEntrySliceDefRules (gestationalAge, 0.. , Information about the gestational age of the pregnancy ,
+  * insert SectionEntrySliceDefRules (gestationalAge, 0..*, Information about the gestational age of the pregnancy ,
     Information about the gestational age of the pregnancy,
     ObservationPregnancyGestationalAgeEuEps)
 
@@ -343,7 +343,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     $loinc#42348-3 )  // 	Advance directives
   * entry only Reference( Consent or DocumentReference)
   * insert SectionEntrySliceComRules(Advance directives, Advance directives)
-  * insert SectionEntrySliceDefRules (advanceDirectivesConsent, 0.. ,
+  * insert SectionEntrySliceDefRules (advanceDirectivesConsent, 0..*,
      Narrative description of the patient's advance directive.,
      Contains a narrative description or a Consent entry with information about the patient's advance directive. ,     
      ConsentEuEps)
@@ -369,7 +369,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * insert SectionEntrySliceComRules(Travel history observation,
       Relevant information about the patient's recent travel history\, for one visit)
   * insert SectionEntrySliceDefRules (travelObservation,
-    0.. ,
+    0..*,
     Travel history observation, 
     Relevant information about the patient's recent travel history\, for one visit,
     ObservationTravelEuEps)

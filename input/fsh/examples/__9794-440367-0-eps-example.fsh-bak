@@ -4,7 +4,7 @@ Title: "Complete HL7 Europe Patient Summary EPS Bundle"
 Description: "FHIR Bundle example for HL7 Europe Patient Summary (EPS) Ludwig Wallin"
 Usage: #example
 * type = #document
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "2023b82f-e33e-4939-99f2-42a87006b934"
 * identifier.assigner.display = "HL7 Europe"
 * timestamp = "2025-08-31T17:49:50Z"
@@ -148,7 +148,7 @@ Instance: Instance-Composition-2caf279f-c9f9-43e3-999a-107b526d4494
 InstanceOf: CompositionEuEps
 Usage: #inline
 * id = "2caf279f-c9f9-43e3-999a-107b526d4494"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "f0d5f984-baae-4147-bfb0-1165f2c76ae5"
 * identifier.assigner.display = "HL7 Europe"
 * title = "European Patient Summary"
@@ -317,7 +317,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-e1504890-3ef4-4e1c-acf4-530df04379d2
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "e1504890-3ef4-4e1c-acf4-530df04379d2"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -337,7 +337,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-319ceb88-67a2-4e72-8763-f6bf2c75c4c3
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "319ceb88-67a2-4e72-8763-f6bf2c75c4c3"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -357,7 +357,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-aadc4c52-563d-499e-986a-1fa6aff4de71
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "aadc4c52-563d-499e-986a-1fa6aff4de71"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -377,7 +377,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-42b021b7-6ef8-46b2-889b-775784dbf532
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "42b021b7-6ef8-46b2-889b-775784dbf532"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -397,7 +397,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-d60663c9-51d4-4732-9b10-28625dd1f140
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "d60663c9-51d4-4732-9b10-28625dd1f140"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -418,7 +418,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-e8779d67-d033-47b4-b707-39c7135cc6f8
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "e8779d67-d033-47b4-b707-39c7135cc6f8"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -439,7 +439,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-e888cadb-3d5e-405f-8ad7-fa1f4c22dd03
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "e888cadb-3d5e-405f-8ad7-fa1f4c22dd03"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -460,7 +460,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-8c207d99-e4ee-4132-ab1d-9c8b3c4ec878
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "8c207d99-e4ee-4132-ab1d-9c8b3c4ec878"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -757,7 +757,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-00801b0c-dd23-4924-8a7e-ad43827123b3
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -784,7 +784,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-3269dd78-020e-430b-b02e-9be97c342e5d
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -812,7 +812,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-0a738cce-d3b1-4e03-849b-c539a75cd9f6
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -1650,10 +1650,10 @@ InstanceOf: PatientEuEps
 Usage: #inline
 * id = "538f125e-f171-4ec3-b018-8a23e0f06828"
 * identifier[+].type = $v2-0203#JHN
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+* identifier[=].system = "http://example.org/identifier-1"
 * identifier[=].value = "9794-440367-0"
 * identifier[+].type = $v2-0203#MR
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "http://example.org/identifier-2"
 * identifier[=].value = "b4bf618f-19a1-be0c-3ed7-7f5f22af4746"
 * name[+].family = "Wallin"
 * name[=].given[+] = "Ludwig"
@@ -1692,7 +1692,7 @@ Instance: Instance-Organization-16b98421-4542-49ce-a5e9-7c458447e0f1
 InstanceOf: OrganizationEu
 Usage: #inline
 * id = "16b98421-4542-49ce-a5e9-7c458447e0f1"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "fd6dc3a5-1da0-4c3e-afce-2be123ccc0c6"
 * identifier.assigner.display = "HL7 Europe"
 * name = "Gävle Sjukhus ingång 25"

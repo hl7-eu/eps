@@ -4,7 +4,7 @@ Title: "Complete HL7 Europe Patient Summary EPS Bundle"
 Description: "FHIR Bundle example for HL7 Europe Patient Summary (EPS) Ida Exel"
 Usage: #example
 * type = #document
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "012a90ca-a987-4631-b1f0-ae3c3b775c24"
 * identifier.assigner.display = "HL7 Europe"
 * timestamp = "2025-08-31T17:37:54Z"
@@ -186,7 +186,7 @@ Instance: Instance-Composition-b594d198-902a-432c-8d28-ea20170b601a
 InstanceOf: CompositionEuEps
 Usage: #inline
 * id = "b594d198-902a-432c-8d28-ea20170b601a"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "9cadb9ef-28e4-4928-81a7-a53759bb3d2a"
 * identifier.assigner.display = "HL7 Europe"
 * title = "European Patient Summary"
@@ -374,7 +374,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-3b688e89-4527-4567-b2da-dc7f9efc689f
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "3b688e89-4527-4567-b2da-dc7f9efc689f"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -394,7 +394,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-0181377c-529f-4c83-aa4a-54ad542836da
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "0181377c-529f-4c83-aa4a-54ad542836da"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -414,7 +414,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-7f0f7f8f-d3d3-4a84-a51b-2148049c294b
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "7f0f7f8f-d3d3-4a84-a51b-2148049c294b"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -434,7 +434,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-afd31bbf-774a-4782-b1a7-0303029ae2f7
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "afd31bbf-774a-4782-b1a7-0303029ae2f7"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -454,7 +454,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-51d26637-8aa4-4c80-b454-da9553f25806
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "51d26637-8aa4-4c80-b454-da9553f25806"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -474,7 +474,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-a96f03a7-72f3-4b31-9016-f0c1679bc9f9
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "a96f03a7-72f3-4b31-9016-f0c1679bc9f9"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -495,7 +495,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-8c83b79e-237b-4a0a-9106-711ea83b9b5c
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "8c83b79e-237b-4a0a-9106-711ea83b9b5c"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -1056,7 +1056,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-de5454a4-1a41-44a6-b0fc-5911b1174b84
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -1083,7 +1083,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-edbe2bd0-b7c5-4b4d-9105-b220def7ace4
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -1111,7 +1111,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-3d4d58ab-ab28-4e5e-bbc0-f83630db0bed
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -2088,10 +2088,10 @@ InstanceOf: PatientEuEps
 Usage: #inline
 * id = "0608e4bf-c598-48e0-ae7b-20e52fa2158f"
 * identifier[+].type = $v2-0203#JHN
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+* identifier[=].system = "http://example.org/identifier-1"
 * identifier[=].value = "9996-750988-8"
 * identifier[+].type = $v2-0203#MR
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "http://example.org/identifier-2"
 * identifier[=].value = "04bb1fe9-34e0-9cba-6b92-0f4d2c7d28d8"
 * name[+].family = "Exel"
 * name[=].given[+] = "Ida"
@@ -2130,7 +2130,7 @@ Instance: Instance-Organization-d75ea22c-7399-427b-a2a9-7b752811e481
 InstanceOf: OrganizationEu
 Usage: #inline
 * id = "d75ea22c-7399-427b-a2a9-7b752811e481"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "4c45c331-c5af-4168-b31f-29234da5541f"
 * identifier.assigner.display = "HL7 Europe"
 * name = "Medisch Centrum"

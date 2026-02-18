@@ -4,7 +4,7 @@ Title: "Complete HL7 Europe Patient Summary EPS Bundle"
 Description: "FHIR Bundle example for HL7 Europe Patient Summary (EPS) Petra Schwartz"
 Usage: #example
 * type = #document
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "350432b7-5d29-4949-89ea-f19efeb224ca"
 * identifier.assigner.display = "HL7 Europe"
 * timestamp = "2025-08-31T17:46:55Z"
@@ -18,121 +18,118 @@ Usage: #example
 * entry[practitioner][=].resource = Instance-Practitioner-398f1dee-39b2-4259-8293-7385d482d06e
 * entry[organization][+].fullUrl = "urn:uuid:ee1c1f62-cb27-4dc4-8d07-f9c58215f309"
 * entry[organization][=].resource = Instance-Organization-ee1c1f62-cb27-4dc4-8d07-f9c58215f309
-* entry[+].fullUrl = "urn:uuid:bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5"
-* entry[=].resource = Instance-Condition-bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5
-* entry[+].fullUrl = "urn:uuid:4b665d3a-ea82-4ea1-89e9-10cacc08c245"
-* entry[=].resource = Instance-Condition-4b665d3a-ea82-4ea1-89e9-10cacc08c245
-* entry[+].fullUrl = "urn:uuid:f57cf09c-57a2-46ce-a08a-c134a96f725d"
-* entry[=].resource = Instance-Condition-f57cf09c-57a2-46ce-a08a-c134a96f725d
-* entry[+].fullUrl = "urn:uuid:c98328ca-3e16-4dd2-b1af-c93d5416a9ae"
-* entry[=].resource = Instance-Condition-c98328ca-3e16-4dd2-b1af-c93d5416a9ae
-* entry[+].fullUrl = "urn:uuid:634b05b7-c23f-4622-bf15-8987e3dfc0ed"
-* entry[=].resource = Instance-Condition-634b05b7-c23f-4622-bf15-8987e3dfc0ed
-* entry[+].fullUrl = "urn:uuid:671c5ac6-0c08-487a-9204-caa8b626f38d"
-* entry[=].resource = Instance-Condition-671c5ac6-0c08-487a-9204-caa8b626f38d
-* entry[+].fullUrl = "urn:uuid:d6a8d5cf-29ed-4e55-a72e-215b67c133a3"
-* entry[=].resource = Instance-Condition-d6a8d5cf-29ed-4e55-a72e-215b67c133a3
-* entry[+].fullUrl = "urn:uuid:e0995b35-d9f0-4175-ad49-17244b016287"
-* entry[=].resource = Instance-Condition-e0995b35-d9f0-4175-ad49-17244b016287
-* entry[+].fullUrl = "urn:uuid:a21e85eb-d637-4714-a432-2f5f1f92c2cf"
-* entry[=].resource = Instance-Condition-a21e85eb-d637-4714-a432-2f5f1f92c2cf
-* entry[+].fullUrl = "urn:uuid:b867c9ea-760d-4cab-8404-f3b69e5f97f5"
-* entry[=].resource = Instance-Condition-b867c9ea-760d-4cab-8404-f3b69e5f97f5
-* entry[+].fullUrl = "urn:uuid:d01d6c92-6548-4205-854f-35d6968809e6"
-* entry[=].resource = Instance-Condition-d01d6c92-6548-4205-854f-35d6968809e6
-* entry[+].fullUrl = "urn:uuid:ccd55d45-87b7-43e7-bad3-29771293c8cc"
-* entry[=].resource = Instance-Medication-ccd55d45-87b7-43e7-bad3-29771293c8cc
-* entry[+].fullUrl = "urn:uuid:635c4921-5fcb-4ce7-b6ef-d866b680ad01"
-* entry[=].resource = Instance-MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01
-* entry[+].fullUrl = "urn:uuid:e6929ae1-7ef5-414a-a0a3-d7866af0cce7"
-* entry[=].resource = Instance-Medication-e6929ae1-7ef5-414a-a0a3-d7866af0cce7
-* entry[+].fullUrl = "urn:uuid:e334a872-4b98-4c8a-b4e7-81fa2658e6dd"
-* entry[=].resource = Instance-MedicationStatement-e334a872-4b98-4c8a-b4e7-81fa2658e6dd
-* entry[+].fullUrl = "urn:uuid:0467eb4f-79e6-4ed5-b076-f7ea83050b81"
-* entry[=].resource = Instance-Medication-0467eb4f-79e6-4ed5-b076-f7ea83050b81
-* entry[+].fullUrl = "urn:uuid:cd91412c-76d7-42ac-9525-9bdcb44f98fa"
-* entry[=].resource = Instance-MedicationStatement-cd91412c-76d7-42ac-9525-9bdcb44f98fa
-* entry[+].fullUrl = "urn:uuid:6391cd91-896f-4730-abca-6f24edf18229"
-* entry[=].resource = Instance-Medication-6391cd91-896f-4730-abca-6f24edf18229
-* entry[+].fullUrl = "urn:uuid:51529516-879e-4bc6-9600-f11baf6e0533"
-* entry[=].resource = Instance-MedicationStatement-51529516-879e-4bc6-9600-f11baf6e0533
-* entry[+].fullUrl = "urn:uuid:a27b547a-e5c0-451f-bda8-10d2341e09d5"
-* entry[=].resource = Instance-Medication-a27b547a-e5c0-451f-bda8-10d2341e09d5
-* entry[+].fullUrl = "urn:uuid:0de4eda6-7dba-435d-be08-c796176be6e8"
-* entry[=].resource = Instance-MedicationStatement-0de4eda6-7dba-435d-be08-c796176be6e8
-* entry[+].fullUrl = "urn:uuid:b8a35f26-2d5d-4d04-bcb7-c314d6a29c2d"
-* entry[=].resource = Instance-Medication-b8a35f26-2d5d-4d04-bcb7-c314d6a29c2d
-* entry[+].fullUrl = "urn:uuid:a70ed340-1085-4c58-932d-1385b0abe7fa"
-* entry[=].resource = Instance-MedicationStatement-a70ed340-1085-4c58-932d-1385b0abe7fa
-* entry[+].fullUrl = "urn:uuid:e87b3b43-9d7f-4b8a-9a61-c9c51886fa9c"
-* entry[=].resource = Instance-Medication-e87b3b43-9d7f-4b8a-9a61-c9c51886fa9c
-* entry[+].fullUrl = "urn:uuid:6f621aa0-ab90-4cdb-8e01-a67cda36ea99"
-* entry[=].resource = Instance-MedicationStatement-6f621aa0-ab90-4cdb-8e01-a67cda36ea99
-* entry[+].fullUrl = "urn:uuid:3008cc5e-e349-44c1-bac1-0b4618174bda"
-* entry[=].resource = Instance-Medication-3008cc5e-e349-44c1-bac1-0b4618174bda
-* entry[+].fullUrl = "urn:uuid:dfac9869-6045-4b08-89d6-84888ba4a56b"
-* entry[=].resource = Instance-MedicationStatement-dfac9869-6045-4b08-89d6-84888ba4a56b
-* entry[+].fullUrl = "urn:uuid:6629cc00-0c19-482a-b793-05a17ce1fb9d"
-* entry[=].resource = Instance-Medication-6629cc00-0c19-482a-b793-05a17ce1fb9d
-* entry[+].fullUrl = "urn:uuid:48c64631-f2b6-4cdf-81c1-4de1ca18e591"
-* entry[=].resource = Instance-MedicationStatement-48c64631-f2b6-4cdf-81c1-4de1ca18e591
-* entry[+].fullUrl = "urn:uuid:c30f7139-87a0-4e6d-aabe-f45f226aa766"
-* entry[=].resource = Instance-Medication-c30f7139-87a0-4e6d-aabe-f45f226aa766
-* entry[+].fullUrl = "urn:uuid:5f0eebe8-0919-4861-b552-1e7e0d591ef4"
-* entry[=].resource = Instance-MedicationStatement-5f0eebe8-0919-4861-b552-1e7e0d591ef4
-* entry[+].fullUrl = "urn:uuid:08c33e59-a884-45cc-8d4c-f28165dd09ce"
-* entry[=].resource = Instance-Medication-08c33e59-a884-45cc-8d4c-f28165dd09ce
-* entry[+].fullUrl = "urn:uuid:8cfdeca0-dc07-4f55-a987-bd8548fbbe34"
-* entry[=].resource = Instance-MedicationStatement-8cfdeca0-dc07-4f55-a987-bd8548fbbe34
-* entry[+].fullUrl = "urn:uuid:cfe36253-0c9c-49b6-8272-39d067952592"
-* entry[=].resource = Instance-Immunization-cfe36253-0c9c-49b6-8272-39d067952592
-* entry[+].fullUrl = "urn:uuid:6dfba8ba-2107-4e59-8b86-edcfda8bab98"
-* entry[=].resource = Instance-Immunization-6dfba8ba-2107-4e59-8b86-edcfda8bab98
-* entry[+].fullUrl = "urn:uuid:89ebeb22-4a66-42de-93c8-bd67c841514d"
-* entry[=].resource = Instance-Immunization-89ebeb22-4a66-42de-93c8-bd67c841514d
-* entry[+].fullUrl = "urn:uuid:a989307f-3cf2-427a-9ea0-553fcb561480"
-* entry[=].resource = Instance-AllergyIntolerance-a989307f-3cf2-427a-9ea0-553fcb561480
-* entry[+].fullUrl = "urn:uuid:09a571d6-2e8c-4409-9dc0-947877066ba8"
-* entry[=].resource = Instance-AllergyIntolerance-09a571d6-2e8c-4409-9dc0-947877066ba8
-* entry[+].fullUrl = "urn:uuid:646ea6ea-9efc-48da-86b8-a284557dad39"
-* entry[=].resource = Instance-CarePlan-646ea6ea-9efc-48da-86b8-a284557dad39
-* entry[+].fullUrl = "urn:uuid:8ee71405-460d-4615-8057-ae8f8fb84fdc"
-* entry[=].resource = Instance-CarePlan-8ee71405-460d-4615-8057-ae8f8fb84fdc
-* entry[+].fullUrl = "urn:uuid:720c2fce-976c-4f20-9838-dd8994e96e1a"
-* entry[=].resource = Instance-CarePlan-720c2fce-976c-4f20-9838-dd8994e96e1a
-* entry[+].fullUrl = "urn:uuid:43f9f1a9-21d1-4533-b8a1-06d23aa0c171"
-* entry[=].resource = Instance-CarePlan-43f9f1a9-21d1-4533-b8a1-06d23aa0c171
-* entry[+].fullUrl = "urn:uuid:ffbb53c5-78ee-4998-bee1-54218e814960"
-* entry[=].resource = Instance-ImmunRecommendation-ffbb53c5-78ee-4998-bee1-54218e814960
-* entry[+].fullUrl = "urn:uuid:c9be3179-d3d7-4d62-98e8-722a1037acb3"
-* entry[=].resource = Instance-Observation-c9be3179-d3d7-4d62-98e8-722a1037acb3
-* entry[+].fullUrl = "urn:uuid:47ac0bbe-89be-4c51-af57-1a62526498e0"
-* entry[=].resource = Instance-Observation-47ac0bbe-89be-4c51-af57-1a62526498e0
-* entry[+].fullUrl = "urn:uuid:c5d48672-464e-4165-8d63-1320c5f6d1bd"
-* entry[=].resource = Instance-Observation-c5d48672-464e-4165-8d63-1320c5f6d1bd
-* entry[+].fullUrl = "urn:uuid:d7471903-d75e-4537-a6ce-a79d517cf685"
-* entry[=].resource = Instance-Observation-d7471903-d75e-4537-a6ce-a79d517cf685
-* entry[+].fullUrl = "urn:uuid:c70a509b-60e4-4cb5-b8ce-dcbf43753cbc"
-* entry[=].resource = Instance-Observation-c70a509b-60e4-4cb5-b8ce-dcbf43753cbc
-* entry[+].fullUrl = "urn:uuid:02e1109c-cbf1-4586-83e5-4eabbefac521"
-* entry[=].resource = Instance-Observation-02e1109c-cbf1-4586-83e5-4eabbefac521
-
-* entry[+].fullUrl = "urn:uuid:d11fd424-e9f8-44bd-a2ec-03b2dd1e5a62"
-* entry[=].resource = Instance-Observation-d11fd424-e9f8-44bd-a2ec-03b2dd1e5a62
-* entry[+].fullUrl = "urn:uuid:9a4297dd-50ec-4632-b916-c6a364cfde84"
-* entry[=].resource = Instance-Observation-9a4297dd-50ec-4632-b916-c6a364cfde84
-* entry[+].fullUrl = "urn:uuid:78e73600-a5c2-48f8-a59b-7a09954332c3"
-* entry[=].resource = Instance-Observation-78e73600-a5c2-48f8-a59b-7a09954332c3
-* entry[+].fullUrl = "urn:uuid:e6b94ffc-e27e-4e18-8c7d-8a26e959276a"
-* entry[=].resource = Instance-Observation-e6b94ffc-e27e-4e18-8c7d-8a26e959276a
-* entry[+].fullUrl = "urn:uuid:0a321a2d-6abb-4b3d-b189-992fcc040e89"
-* entry[=].resource = Instance-Observation-0a321a2d-6abb-4b3d-b189-992fcc040e89
-* entry[+].fullUrl = "urn:uuid:bb3b3ba1-43cf-486f-b7db-0178fb9f0f0f"
-* entry[=].resource = Instance-Observation-bb3b3ba1-43cf-486f-b7db-0178fb9f0f0f
-* entry[+].fullUrl = "urn:uuid:13686462-9b29-41c7-8645-2bf6b9d61e1a"
-* entry[=].resource = Instance-Observation-13686462-9b29-41c7-8645-2bf6b9d61e1a
-* entry[+].fullUrl = "urn:uuid:a89003d1-35dd-4f0c-ab3b-aed081ae887e"
-* entry[=].resource = Instance-Observation-a89003d1-35dd-4f0c-ab3b-aed081ae887e
+* entry[condition][+].fullUrl = "urn:uuid:bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5"
+* entry[condition][=].resource = Instance-Condition-bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5
+* entry[condition][+].fullUrl = "urn:uuid:4b665d3a-ea82-4ea1-89e9-10cacc08c245"
+* entry[condition][=].resource = Instance-Condition-4b665d3a-ea82-4ea1-89e9-10cacc08c245
+* entry[condition][+].fullUrl = "urn:uuid:f57cf09c-57a2-46ce-a08a-c134a96f725d"
+* entry[condition][=].resource = Instance-Condition-f57cf09c-57a2-46ce-a08a-c134a96f725d
+* entry[condition][+].fullUrl = "urn:uuid:c98328ca-3e16-4dd2-b1af-c93d5416a9ae"
+* entry[condition][=].resource = Instance-Condition-c98328ca-3e16-4dd2-b1af-c93d5416a9ae
+* entry[condition][+].fullUrl = "urn:uuid:634b05b7-c23f-4622-bf15-8987e3dfc0ed"
+* entry[condition][=].resource = Instance-Condition-634b05b7-c23f-4622-bf15-8987e3dfc0ed
+* entry[condition][+].fullUrl = "urn:uuid:671c5ac6-0c08-487a-9204-caa8b626f38d"
+* entry[condition][=].resource = Instance-Condition-671c5ac6-0c08-487a-9204-caa8b626f38d
+* entry[condition][+].fullUrl = "urn:uuid:d6a8d5cf-29ed-4e55-a72e-215b67c133a3"
+* entry[condition][=].resource = Instance-Condition-d6a8d5cf-29ed-4e55-a72e-215b67c133a3
+* entry[condition][+].fullUrl = "urn:uuid:e0995b35-d9f0-4175-ad49-17244b016287"
+* entry[condition][=].resource = Instance-Condition-e0995b35-d9f0-4175-ad49-17244b016287
+* entry[condition][+].fullUrl = "urn:uuid:a21e85eb-d637-4714-a432-2f5f1f92c2cf"
+* entry[condition][=].resource = Instance-Condition-a21e85eb-d637-4714-a432-2f5f1f92c2cf
+* entry[condition][+].fullUrl = "urn:uuid:b867c9ea-760d-4cab-8404-f3b69e5f97f5"
+* entry[condition][=].resource = Instance-Condition-b867c9ea-760d-4cab-8404-f3b69e5f97f5
+* entry[condition][+].fullUrl = "urn:uuid:d01d6c92-6548-4205-854f-35d6968809e6"
+* entry[condition][=].resource = Instance-Condition-d01d6c92-6548-4205-854f-35d6968809e6
+* entry[medication][+].fullUrl = "urn:uuid:ccd55d45-87b7-43e7-bad3-29771293c8cc"
+* entry[medication][=].resource = Instance-Medication-ccd55d45-87b7-43e7-bad3-29771293c8cc
+* entry[medicationstatement][+].fullUrl = "urn:uuid:635c4921-5fcb-4ce7-b6ef-d866b680ad01"
+* entry[medicationstatement][=].resource = Instance-MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01
+* entry[medication][+].fullUrl = "urn:uuid:e6929ae1-7ef5-414a-a0a3-d7866af0cce7"
+* entry[medication][=].resource = Instance-Medication-e6929ae1-7ef5-414a-a0a3-d7866af0cce7
+* entry[medicationstatement][+].fullUrl = "urn:uuid:e334a872-4b98-4c8a-b4e7-81fa2658e6dd"
+* entry[medicationstatement][=].resource = Instance-MedicationStatement-e334a872-4b98-4c8a-b4e7-81fa2658e6dd
+* entry[medication][+].fullUrl = "urn:uuid:0467eb4f-79e6-4ed5-b076-f7ea83050b81"
+* entry[medication][=].resource = Instance-Medication-0467eb4f-79e6-4ed5-b076-f7ea83050b81
+* entry[medicationstatement][+].fullUrl = "urn:uuid:cd91412c-76d7-42ac-9525-9bdcb44f98fa"
+* entry[medicationstatement][=].resource = Instance-MedicationStatement-cd91412c-76d7-42ac-9525-9bdcb44f98fa
+* entry[medication][+].fullUrl = "urn:uuid:6391cd91-896f-4730-abca-6f24edf18229"
+* entry[medication][=].resource = Instance-Medication-6391cd91-896f-4730-abca-6f24edf18229
+* entry[medicationstatement][+].fullUrl = "urn:uuid:51529516-879e-4bc6-9600-f11baf6e0533"
+* entry[medicationstatement][=].resource = Instance-MedicationStatement-51529516-879e-4bc6-9600-f11baf6e0533
+* entry[medication][+].fullUrl = "urn:uuid:a27b547a-e5c0-451f-bda8-10d2341e09d5"
+* entry[medication][=].resource = Instance-Medication-a27b547a-e5c0-451f-bda8-10d2341e09d5
+* entry[medicationstatement][+].fullUrl = "urn:uuid:0de4eda6-7dba-435d-be08-c796176be6e8"
+* entry[medicationstatement][=].resource = Instance-MedicationStatement-0de4eda6-7dba-435d-be08-c796176be6e8
+* entry[medication][+].fullUrl = "urn:uuid:b8a35f26-2d5d-4d04-bcb7-c314d6a29c2d"
+* entry[medication][=].resource = Instance-Medication-b8a35f26-2d5d-4d04-bcb7-c314d6a29c2d
+* entry[medicationstatement][+].fullUrl = "urn:uuid:a70ed340-1085-4c58-932d-1385b0abe7fa"
+* entry[medicationstatement][=].resource = Instance-MedicationStatement-a70ed340-1085-4c58-932d-1385b0abe7fa
+* entry[medication][+].fullUrl = "urn:uuid:e87b3b43-9d7f-4b8a-9a61-c9c51886fa9c"
+* entry[medication][=].resource = Instance-Medication-e87b3b43-9d7f-4b8a-9a61-c9c51886fa9c
+* entry[medicationstatement][+].fullUrl = "urn:uuid:6f621aa0-ab90-4cdb-8e01-a67cda36ea99"
+* entry[medicationstatement][=].resource = Instance-MedicationStatement-6f621aa0-ab90-4cdb-8e01-a67cda36ea99
+* entry[medication][+].fullUrl = "urn:uuid:3008cc5e-e349-44c1-bac1-0b4618174bda"
+* entry[medication][=].resource = Instance-Medication-3008cc5e-e349-44c1-bac1-0b4618174bda
+* entry[medicationstatement][+].fullUrl = "urn:uuid:dfac9869-6045-4b08-89d6-84888ba4a56b"
+* entry[medicationstatement][=].resource = Instance-MedicationStatement-dfac9869-6045-4b08-89d6-84888ba4a56b
+* entry[medication][+].fullUrl = "urn:uuid:6629cc00-0c19-482a-b793-05a17ce1fb9d"
+* entry[medication][=].resource = Instance-Medication-6629cc00-0c19-482a-b793-05a17ce1fb9d
+* entry[medicationstatement][+].fullUrl = "urn:uuid:48c64631-f2b6-4cdf-81c1-4de1ca18e591"
+* entry[medicationstatement][=].resource = Instance-MedicationStatement-48c64631-f2b6-4cdf-81c1-4de1ca18e591
+* entry[medication][+].fullUrl = "urn:uuid:c30f7139-87a0-4e6d-aabe-f45f226aa766"
+* entry[medication][=].resource = Instance-Medication-c30f7139-87a0-4e6d-aabe-f45f226aa766
+* entry[medicationstatement][+].fullUrl = "urn:uuid:5f0eebe8-0919-4861-b552-1e7e0d591ef4"
+* entry[medicationstatement][=].resource = Instance-MedicationStatement-5f0eebe8-0919-4861-b552-1e7e0d591ef4
+* entry[medication][+].fullUrl = "urn:uuid:08c33e59-a884-45cc-8d4c-f28165dd09ce"
+* entry[medication][=].resource = Instance-Medication-08c33e59-a884-45cc-8d4c-f28165dd09ce
+* entry[medicationstatement][+].fullUrl = "urn:uuid:8cfdeca0-dc07-4f55-a987-bd8548fbbe34"
+* entry[medicationstatement][=].resource = Instance-MedicationStatement-8cfdeca0-dc07-4f55-a987-bd8548fbbe34
+* entry[immunization][+].fullUrl = "urn:uuid:cfe36253-0c9c-49b6-8272-39d067952592"
+* entry[immunization][=].resource = Instance-Immunization-cfe36253-0c9c-49b6-8272-39d067952592
+* entry[immunization][+].fullUrl = "urn:uuid:6dfba8ba-2107-4e59-8b86-edcfda8bab98"
+* entry[immunization][=].resource = Instance-Immunization-6dfba8ba-2107-4e59-8b86-edcfda8bab98
+* entry[immunization][+].fullUrl = "urn:uuid:89ebeb22-4a66-42de-93c8-bd67c841514d"
+* entry[immunization][=].resource = Instance-Immunization-89ebeb22-4a66-42de-93c8-bd67c841514d
+* entry[allergyintolerance][+].fullUrl = "urn:uuid:a989307f-3cf2-427a-9ea0-553fcb561480"
+* entry[allergyintolerance][=].resource = Instance-AllergyIntolerance-a989307f-3cf2-427a-9ea0-553fcb561480
+* entry[allergyintolerance][+].fullUrl = "urn:uuid:09a571d6-2e8c-4409-9dc0-947877066ba8"
+* entry[allergyintolerance][=].resource = Instance-AllergyIntolerance-09a571d6-2e8c-4409-9dc0-947877066ba8
+* entry[careplan][+].fullUrl = "urn:uuid:646ea6ea-9efc-48da-86b8-a284557dad39"
+* entry[careplan][=].resource = Instance-CarePlan-646ea6ea-9efc-48da-86b8-a284557dad39
+* entry[careplan][+].fullUrl = "urn:uuid:8ee71405-460d-4615-8057-ae8f8fb84fdc"
+* entry[careplan][=].resource = Instance-CarePlan-8ee71405-460d-4615-8057-ae8f8fb84fdc
+* entry[careplan][+].fullUrl = "urn:uuid:720c2fce-976c-4f20-9838-dd8994e96e1a"
+* entry[careplan][=].resource = Instance-CarePlan-720c2fce-976c-4f20-9838-dd8994e96e1a
+* entry[careplan][+].fullUrl = "urn:uuid:43f9f1a9-21d1-4533-b8a1-06d23aa0c171"
+* entry[careplan][=].resource = Instance-CarePlan-43f9f1a9-21d1-4533-b8a1-06d23aa0c171
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:c9be3179-d3d7-4d62-98e8-722a1037acb3"
+* entry[observation-vital-signs][=].resource = Instance-Observation-c9be3179-d3d7-4d62-98e8-722a1037acb3
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:47ac0bbe-89be-4c51-af57-1a62526498e0"
+* entry[observation-vital-signs][=].resource = Instance-Observation-47ac0bbe-89be-4c51-af57-1a62526498e0
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:c5d48672-464e-4165-8d63-1320c5f6d1bd"
+* entry[observation-vital-signs][=].resource = Instance-Observation-c5d48672-464e-4165-8d63-1320c5f6d1bd
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:d7471903-d75e-4537-a6ce-a79d517cf685"
+* entry[observation-vital-signs][=].resource = Instance-Observation-d7471903-d75e-4537-a6ce-a79d517cf685
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:c70a509b-60e4-4cb5-b8ce-dcbf43753cbc"
+* entry[observation-vital-signs][=].resource = Instance-Observation-c70a509b-60e4-4cb5-b8ce-dcbf43753cbc
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:02e1109c-cbf1-4586-83e5-4eabbefac521"
+* entry[observation-vital-signs][=].resource = Instance-Observation-02e1109c-cbf1-4586-83e5-4eabbefac521
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:d11fd424-e9f8-44bd-a2ec-03b2dd1e5a62"
+* entry[observation-vital-signs][=].resource = Instance-Observation-d11fd424-e9f8-44bd-a2ec-03b2dd1e5a62
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:9a4297dd-50ec-4632-b916-c6a364cfde84"
+* entry[observation-vital-signs][=].resource = Instance-Observation-9a4297dd-50ec-4632-b916-c6a364cfde84
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:78e73600-a5c2-48f8-a59b-7a09954332c3"
+* entry[observation-vital-signs][=].resource = Instance-Observation-78e73600-a5c2-48f8-a59b-7a09954332c3
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:e6b94ffc-e27e-4e18-8c7d-8a26e959276a"
+* entry[observation-vital-signs][=].resource = Instance-Observation-e6b94ffc-e27e-4e18-8c7d-8a26e959276a
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:0a321a2d-6abb-4b3d-b189-992fcc040e89"
+* entry[observation-vital-signs][=].resource = Instance-Observation-0a321a2d-6abb-4b3d-b189-992fcc040e89
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:bb3b3ba1-43cf-486f-b7db-0178fb9f0f0f"
+* entry[observation-vital-signs][=].resource = Instance-Observation-bb3b3ba1-43cf-486f-b7db-0178fb9f0f0f
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:13686462-9b29-41c7-8645-2bf6b9d61e1a"
+* entry[observation-vital-signs][=].resource = Instance-Observation-13686462-9b29-41c7-8645-2bf6b9d61e1a
+* entry[observation-vital-signs][+].fullUrl = "urn:uuid:a89003d1-35dd-4f0c-ab3b-aed081ae887e"
+* entry[observation-vital-signs][=].resource = Instance-Observation-a89003d1-35dd-4f0c-ab3b-aed081ae887e
 * entry[+].fullUrl = "urn:uuid:81628dd7-a8bf-43b5-bae5-001c46f1a8f8"
 * entry[=].resource = Instance-Observation-81628dd7-a8bf-43b5-bae5-001c46f1a8f8
 * entry[+].fullUrl = "urn:uuid:fee31706-be91-4a20-b64d-a1ef32854125"
@@ -171,21 +168,21 @@ Usage: #example
 * entry[=].resource = Instance-Observation-1e8a72c6-c4f4-4545-adcb-c5b542f86d7d
 * entry[+].fullUrl = "urn:uuid:a78303a0-a824-499d-a76a-76e131d9dcb7"
 * entry[=].resource = Instance-Observation-a78303a0-a824-499d-a76a-76e131d9dcb7
-* entry[+].fullUrl = "urn:uuid:90641744-8919-4b70-8ef7-d181b1fce3cb"
-* entry[=].resource = Instance-DeviceUse-90641744-8919-4b70-8ef7-d181b1fce3cb
-* entry[+].fullUrl = "urn:uuid:b3c78022-b120-40c2-84e0-afe0e2d07c18"
-* entry[=].resource = Instance-Device-b3c78022-b120-40c2-84e0-afe0e2d07c18
-* entry[+].fullUrl = "urn:uuid:4fe58eba-854d-48a6-add1-42846081f515"
-* entry[=].resource = Instance-DeviceUse-4fe58eba-854d-48a6-add1-42846081f515
-* entry[+].fullUrl = "urn:uuid:575520ac-c2ef-4f47-82bf-1b691f5e6466"
-* entry[=].resource = Instance-Device-575520ac-c2ef-4f47-82bf-1b691f5e6466
+* entry[deviceusestatement][+].fullUrl = "urn:uuid:90641744-8919-4b70-8ef7-d181b1fce3cb"
+* entry[deviceusestatement][=].resource = Instance-DeviceUse-90641744-8919-4b70-8ef7-d181b1fce3cb
+* entry[device][+].fullUrl = "urn:uuid:b3c78022-b120-40c2-84e0-afe0e2d07c18"
+* entry[device][=].resource = Instance-Device-b3c78022-b120-40c2-84e0-afe0e2d07c18
+* entry[deviceusestatement][+].fullUrl = "urn:uuid:4fe58eba-854d-48a6-add1-42846081f515"
+* entry[deviceusestatement][=].resource = Instance-DeviceUse-4fe58eba-854d-48a6-add1-42846081f515
+* entry[device][+].fullUrl = "urn:uuid:575520ac-c2ef-4f47-82bf-1b691f5e6466"
+* entry[device][=].resource = Instance-Device-575520ac-c2ef-4f47-82bf-1b691f5e6466
 
 
 Instance: Instance-Composition-76279633-d5a6-439b-9e88-5880c531e241
 InstanceOf: CompositionEuEps
 Usage: #inline
 * id = "76279633-d5a6-439b-9e88-5880c531e241"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "166615c7-0536-4d24-b5d7-8d659a29ce3e"
 * identifier.assigner.display = "HL7 Europe"
 * title = "European Patient Summary"
@@ -210,11 +207,11 @@ Usage: #inline
 </div>
 """
   * entry[problem][+] = Reference(urn:uuid:bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5)
-  * entry[+] = Reference(urn:uuid:4b665d3a-ea82-4ea1-89e9-10cacc08c245)
-  * entry[+] = Reference(urn:uuid:f57cf09c-57a2-46ce-a08a-c134a96f725d)
-  * entry[+] = Reference(urn:uuid:c98328ca-3e16-4dd2-b1af-c93d5416a9ae)
-  * entry[+] = Reference(urn:uuid:634b05b7-c23f-4622-bf15-8987e3dfc0ed)
-  * entry[+] = Reference(urn:uuid:671c5ac6-0c08-487a-9204-caa8b626f38d)
+  * entry[problem][+] = Reference(urn:uuid:4b665d3a-ea82-4ea1-89e9-10cacc08c245)
+  * entry[problem][+] = Reference(urn:uuid:f57cf09c-57a2-46ce-a08a-c134a96f725d)
+  * entry[problem][+] = Reference(urn:uuid:c98328ca-3e16-4dd2-b1af-c93d5416a9ae)
+  * entry[problem][+] = Reference(urn:uuid:634b05b7-c23f-4622-bf15-8987e3dfc0ed)
+  * entry[problem][+] = Reference(urn:uuid:671c5ac6-0c08-487a-9204-caa8b626f38d)
 * section[sectionMedications]
   * title = "Medication list"
   * code = $loinc#10160-0 "History of Medication use Narrative"
@@ -289,8 +286,7 @@ Usage: #inline
   * entry[carePlan][+] = Reference(urn:uuid:8ee71405-460d-4615-8057-ae8f8fb84fdc)
   * entry[carePlan][+] = Reference(urn:uuid:720c2fce-976c-4f20-9838-dd8994e96e1a)
   * entry[carePlan][+] = Reference(urn:uuid:43f9f1a9-21d1-4533-b8a1-06d23aa0c171)
-  // * entry[immunizationRecommendation][+] = Reference(urn:uuid:ffbb53c5-78ee-4998-bee1-54218e814960)
-//
+ 
 // section, slice sectionProceduresHx
 //
 * section[sectionProceduresHx]
@@ -316,19 +312,19 @@ Usage: #inline
 </div>
 """
   * entry[vitalSign][+] = Reference(urn:uuid:c9be3179-d3d7-4d62-98e8-722a1037acb3)
-  * entry[+] = Reference(urn:uuid:47ac0bbe-89be-4c51-af57-1a62526498e0)
-  * entry[+] = Reference(urn:uuid:c5d48672-464e-4165-8d63-1320c5f6d1bd)
-  * entry[+] = Reference(urn:uuid:d7471903-d75e-4537-a6ce-a79d517cf685)
-  * entry[+] = Reference(urn:uuid:c70a509b-60e4-4cb5-b8ce-dcbf43753cbc)
-  * entry[+] = Reference(urn:uuid:02e1109c-cbf1-4586-83e5-4eabbefac521)
-  * entry[+] = Reference(urn:uuid:d11fd424-e9f8-44bd-a2ec-03b2dd1e5a62)
-  * entry[+] = Reference(urn:uuid:9a4297dd-50ec-4632-b916-c6a364cfde84)
-  * entry[+] = Reference(urn:uuid:78e73600-a5c2-48f8-a59b-7a09954332c3)
-  * entry[+] = Reference(urn:uuid:e6b94ffc-e27e-4e18-8c7d-8a26e959276a)
-  * entry[+] = Reference(urn:uuid:0a321a2d-6abb-4b3d-b189-992fcc040e89)
-  * entry[+] = Reference(urn:uuid:bb3b3ba1-43cf-486f-b7db-0178fb9f0f0f)
-  * entry[+] = Reference(urn:uuid:13686462-9b29-41c7-8645-2bf6b9d61e1a)
-  * entry[+] = Reference(urn:uuid:a89003d1-35dd-4f0c-ab3b-aed081ae887e)
+  * entry[vitalSign][+] = Reference(urn:uuid:47ac0bbe-89be-4c51-af57-1a62526498e0)
+  * entry[vitalSign][+] = Reference(urn:uuid:c5d48672-464e-4165-8d63-1320c5f6d1bd)
+  * entry[vitalSign][+] = Reference(urn:uuid:d7471903-d75e-4537-a6ce-a79d517cf685)
+  * entry[vitalSign][+] = Reference(urn:uuid:c70a509b-60e4-4cb5-b8ce-dcbf43753cbc)
+  * entry[vitalSign][+] = Reference(urn:uuid:02e1109c-cbf1-4586-83e5-4eabbefac521)
+  * entry[vitalSign][+] = Reference(urn:uuid:d11fd424-e9f8-44bd-a2ec-03b2dd1e5a62)
+  * entry[vitalSign][+] = Reference(urn:uuid:9a4297dd-50ec-4632-b916-c6a364cfde84)
+  * entry[vitalSign][+] = Reference(urn:uuid:78e73600-a5c2-48f8-a59b-7a09954332c3)
+  * entry[vitalSign][+] = Reference(urn:uuid:e6b94ffc-e27e-4e18-8c7d-8a26e959276a)
+  * entry[vitalSign][+] = Reference(urn:uuid:0a321a2d-6abb-4b3d-b189-992fcc040e89)
+  * entry[vitalSign][+] = Reference(urn:uuid:bb3b3ba1-43cf-486f-b7db-0178fb9f0f0f)
+  * entry[vitalSign][+] = Reference(urn:uuid:13686462-9b29-41c7-8645-2bf6b9d61e1a)
+  * entry[vitalSign][+] = Reference(urn:uuid:a89003d1-35dd-4f0c-ab3b-aed081ae887e)
 //
 // section, slice sectionResults
 //
@@ -342,24 +338,24 @@ Usage: #inline
 </div>
 """
   * entry[results-medicalTestResult][+] = Reference(urn:uuid:81628dd7-a8bf-43b5-bae5-001c46f1a8f8)
-  * entry[+] = Reference(urn:uuid:fee31706-be91-4a20-b64d-a1ef32854125)
-  * entry[+] = Reference(urn:uuid:d6e99596-92d5-4e70-a8b5-4da00b26709a)
-  * entry[+] = Reference(urn:uuid:132273e6-ac2c-44ec-b416-a3a64bb6fc27)
-  * entry[+] = Reference(urn:uuid:3d3701ef-24c3-48f3-b1ec-6d101cf73af5)
-  * entry[+] = Reference(urn:uuid:d918fd0e-9ac5-44c5-81ec-01585d8db6cb)
-  * entry[+] = Reference(urn:uuid:886aef25-ecf8-4606-b5c5-880f00f9862f)
-  * entry[+] = Reference(urn:uuid:2bf0d074-d1f3-40eb-aa1a-1e83d1cde1a6)
-  * entry[+] = Reference(urn:uuid:a50c3d24-d302-41db-8bc6-4f77ffe37ba9)
-  * entry[+] = Reference(urn:uuid:4da22422-b9be-4eb8-839f-9829138660ae)
-  * entry[+] = Reference(urn:uuid:04c29e07-f621-4dbb-b7b8-8a4dc89ec44b)
-  * entry[+] = Reference(urn:uuid:ad120185-28f4-495b-b0fa-0e258e9e3ba7)
-  * entry[+] = Reference(urn:uuid:04cf6095-fbc1-41ee-aa84-881cf4753ab6)
-  * entry[+] = Reference(urn:uuid:bee93551-87cd-4484-8e92-609e8d1db8da)
-  * entry[+] = Reference(urn:uuid:072bc2ad-7ee7-4cce-9b4f-09a98df61971)
-  * entry[+] = Reference(urn:uuid:71c73db3-4d99-4594-b92e-cbb5cc09b517)
-  * entry[+] = Reference(urn:uuid:762d6f8f-ec3d-445c-8547-f26ce553eedf)
-  * entry[+] = Reference(urn:uuid:1e8a72c6-c4f4-4545-adcb-c5b542f86d7d)
-  * entry[+] = Reference(urn:uuid:a78303a0-a824-499d-a76a-76e131d9dcb7)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:fee31706-be91-4a20-b64d-a1ef32854125)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:d6e99596-92d5-4e70-a8b5-4da00b26709a)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:132273e6-ac2c-44ec-b416-a3a64bb6fc27)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:3d3701ef-24c3-48f3-b1ec-6d101cf73af5)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:d918fd0e-9ac5-44c5-81ec-01585d8db6cb)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:886aef25-ecf8-4606-b5c5-880f00f9862f)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:2bf0d074-d1f3-40eb-aa1a-1e83d1cde1a6)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:a50c3d24-d302-41db-8bc6-4f77ffe37ba9)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:4da22422-b9be-4eb8-839f-9829138660ae)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:04c29e07-f621-4dbb-b7b8-8a4dc89ec44b)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:ad120185-28f4-495b-b0fa-0e258e9e3ba7)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:04cf6095-fbc1-41ee-aa84-881cf4753ab6)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:bee93551-87cd-4484-8e92-609e8d1db8da)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:072bc2ad-7ee7-4cce-9b4f-09a98df61971)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:71c73db3-4d99-4594-b92e-cbb5cc09b517)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:762d6f8f-ec3d-445c-8547-f26ce553eedf)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:1e8a72c6-c4f4-4545-adcb-c5b542f86d7d)
+  * entry[results-medicalTestResult][+] = Reference(urn:uuid:a78303a0-a824-499d-a76a-76e131d9dcb7)
 //
 // section, slice sectionMedicalDevices
 //
@@ -378,7 +374,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -398,7 +394,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-4b665d3a-ea82-4ea1-89e9-10cacc08c245
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "4b665d3a-ea82-4ea1-89e9-10cacc08c245"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -418,7 +414,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-f57cf09c-57a2-46ce-a08a-c134a96f725d
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "f57cf09c-57a2-46ce-a08a-c134a96f725d"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -438,7 +434,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-c98328ca-3e16-4dd2-b1af-c93d5416a9ae
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "c98328ca-3e16-4dd2-b1af-c93d5416a9ae"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -458,7 +454,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-634b05b7-c23f-4622-bf15-8987e3dfc0ed
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "634b05b7-c23f-4622-bf15-8987e3dfc0ed"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -478,7 +474,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-671c5ac6-0c08-487a-9204-caa8b626f38d
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "671c5ac6-0c08-487a-9204-caa8b626f38d"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -498,7 +494,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-d6a8d5cf-29ed-4e55-a72e-215b67c133a3
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "d6a8d5cf-29ed-4e55-a72e-215b67c133a3"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -519,7 +515,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-e0995b35-d9f0-4175-ad49-17244b016287
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "e0995b35-d9f0-4175-ad49-17244b016287"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -540,7 +536,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-a21e85eb-d637-4714-a432-2f5f1f92c2cf
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "a21e85eb-d637-4714-a432-2f5f1f92c2cf"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -561,7 +557,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-b867c9ea-760d-4cab-8404-f3b69e5f97f5
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "b867c9ea-760d-4cab-8404-f3b69e5f97f5"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -582,7 +578,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-d01d6c92-6548-4205-854f-35d6968809e6
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "d01d6c92-6548-4205-854f-35d6968809e6"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -628,7 +624,7 @@ Simvastatin 10 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01
-InstanceOf: MedicationStatementEuCore
+InstanceOf: MedicationStatementEuEps
 Usage: #inline
 * id = "635c4921-5fcb-4ce7-b6ef-d866b680ad01"
 * status = #active
@@ -680,7 +676,7 @@ Albuterol (as albuterol sulfate) 5 mg/mL solution for inhalation, Solution for i
 
 
 Instance: Instance-MedicationStatement-e334a872-4b98-4c8a-b4e7-81fa2658e6dd
-InstanceOf: MedicationStatementEuCore
+InstanceOf: MedicationStatementEuEps
 Usage: #inline
 * id = "e334a872-4b98-4c8a-b4e7-81fa2658e6dd"
 * status = #active
@@ -736,7 +732,7 @@ Acetaminophen 300 mg and hydrocodone bitartrate 5 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-cd91412c-76d7-42ac-9525-9bdcb44f98fa
-InstanceOf: MedicationStatementEuCore
+InstanceOf: MedicationStatementEuEps
 Usage: #inline
 * id = "cd91412c-76d7-42ac-9525-9bdcb44f98fa"
 * status = #active
@@ -786,7 +782,7 @@ Usage: #inline
 
 
 Instance: Instance-MedicationStatement-51529516-879e-4bc6-9600-f11baf6e0533
-InstanceOf: MedicationStatementEuCore
+InstanceOf: MedicationStatementEuEps
 Usage: #inline
 * id = "51529516-879e-4bc6-9600-f11baf6e0533"
 * status = #active
@@ -841,7 +837,7 @@ Clopidogrel (as clopidogrel bisulfate) 75 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-0de4eda6-7dba-435d-be08-c796176be6e8
-InstanceOf: MedicationStatementEuCore
+InstanceOf: MedicationStatementEuEps
 Usage: #inline
 * id = "0de4eda6-7dba-435d-be08-c796176be6e8"
 * status = #active
@@ -896,7 +892,7 @@ Simvastatin 20 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-a70ed340-1085-4c58-932d-1385b0abe7fa
-InstanceOf: MedicationStatementEuCore
+InstanceOf: MedicationStatementEuEps
 Usage: #inline
 * id = "a70ed340-1085-4c58-932d-1385b0abe7fa"
 * status = #active
@@ -951,7 +947,7 @@ Nitroglycerin 400 microgram/actuation sublingual spray, Sublingual spray
 
 
 Instance: Instance-MedicationStatement-6f621aa0-ab90-4cdb-8e01-a67cda36ea99
-InstanceOf: MedicationStatementEuCore
+InstanceOf: MedicationStatementEuEps
 Usage: #inline
 * id = "6f621aa0-ab90-4cdb-8e01-a67cda36ea99"
 * status = #active
@@ -1006,7 +1002,7 @@ Metoprolol tartrate (as metoprolol succinate) 100 mg prolonged-release oral tabl
 
 
 Instance: Instance-MedicationStatement-dfac9869-6045-4b08-89d6-84888ba4a56b
-InstanceOf: MedicationStatementEuCore
+InstanceOf: MedicationStatementEuEps
 Usage: #inline
 * id = "dfac9869-6045-4b08-89d6-84888ba4a56b"
 * status = #active
@@ -1056,7 +1052,7 @@ doxycycline hyclate 100 MG,
 
 
 Instance: Instance-MedicationStatement-48c64631-f2b6-4cdf-81c1-4de1ca18e591
-InstanceOf: MedicationStatementEuCore
+InstanceOf: MedicationStatementEuEps
 Usage: #inline
 * id = "48c64631-f2b6-4cdf-81c1-4de1ca18e591"
 * status = #active
@@ -1111,7 +1107,7 @@ Astemizole 10 mg oral tablet, Oral tablet
 
 
 Instance: Instance-MedicationStatement-5f0eebe8-0919-4861-b552-1e7e0d591ef4
-InstanceOf: MedicationStatementEuCore
+InstanceOf: MedicationStatementEuEps
 Usage: #inline
 * id = "5f0eebe8-0919-4861-b552-1e7e0d591ef4"
 * status = #active
@@ -1166,7 +1162,7 @@ Hydrocortisone 10 mg/g and urea 100 mg/g cutaneous cream, Cutaneous cream
 
 
 Instance: Instance-MedicationStatement-8cfdeca0-dc07-4f55-a987-bd8548fbbe34
-InstanceOf: MedicationStatementEuCore
+InstanceOf: MedicationStatementEuEps
 Usage: #inline
 * id = "8cfdeca0-dc07-4f55-a987-bd8548fbbe34"
 * status = #active
@@ -1192,12 +1188,8 @@ Usage: #inline
 """
 
 
-
-
-
-
 Instance: Instance-Immunization-cfe36253-0c9c-49b6-8272-39d067952592
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -1224,7 +1216,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-6dfba8ba-2107-4e59-8b86-edcfda8bab98
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -1252,7 +1244,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-89ebeb22-4a66-42de-93c8-bd67c841514d
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -1409,30 +1401,6 @@ Usage: #inline
 <table class="hl7__ips"><tr><td>Self-care interventions</td><td><span class='nb'>1978-10-26</span></td><td>-</td></tr></table>
 </div>
 """
-
-
-
-Instance: Instance-ImmunRecommendation-ffbb53c5-78ee-4998-bee1-54218e814960
-InstanceOf: ImmunizationRecommendation
-Usage: #inline
-* id = "ffbb53c5-78ee-4998-bee1-54218e814960"
-* date = "2025-08-31"
-* patient = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
-* recommendation[0].vaccineCode = $sct#1181000221105 "Vaccine product containing only Influenza virus antigen (medicinal product)"
-* recommendation[0].targetDisease = $sct#6142004 "Influenza (disorder)"
-* recommendation[0].dateCriterion[0].code = $loinc#30980-7 "Date vaccine due"
-* recommendation[0].dateCriterion[0].value = "2025-10-01"
-* recommendation[0].series = "Annual seasonal influenza vaccination"
-* recommendation[0].forecastStatus = http://terminology.hl7.org/CodeSystem/immunization-recommendation-status#due "Due"
-* recommendation[0].supportingImmunization[0] = Reference(urn:uuid:cfe36253-0c9c-49b6-8272-39d067952592)
-* text.status = #generated
-* text.div = """
-<div xmlns="http://www.w3.org/1999/xhtml">
-<table class="hl7__ips"><tr><td>Vaccine product containing only Influenza virus antigen (medicinal product)</td><td><span class='nb'>2025-10-01</span></td><td>Annual seasonal influenza vaccination</td></tr></table>
-</div>
-"""
-
-
 
 Instance: Instance-Observation-c9be3179-d3d7-4d62-98e8-722a1037acb3
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
@@ -2186,10 +2154,10 @@ InstanceOf: PatientEuEps
 Usage: #inline
 * id = "f51071b2-6c06-4d31-85ed-26a6b964ef98"
 * identifier[+].type = $v2-0203#JHN
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+* identifier[=].system = "http://example.org/identifier-1"
 * identifier[=].value = "5042-537688-1"
 * identifier[+].type = $v2-0203#MR
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "http://example.org/identifier-2"
 * identifier[=].value = "a707536c-14f2-3606-4ed4-7fd9991fd18e"
 * name[+].family = "Schwartz"
 * name[=].given[+] = "Petra"
@@ -2228,7 +2196,7 @@ Instance: Instance-Organization-ee1c1f62-cb27-4dc4-8d07-f9c58215f309
 InstanceOf: OrganizationEu
 Usage: #inline
 * id = "ee1c1f62-cb27-4dc4-8d07-f9c58215f309"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "cd9d8d77-6da5-4eee-b973-cf8467686ffe"
 * identifier.assigner.display = "HL7 Europe"
 * name = "BfA-Klinik"

@@ -3,7 +3,7 @@ InstanceOf: Bundle
 Usage: #example
 * meta.profile = "http://hl7.eu/fhir/eps/StructureDefinition/bundle-eu-eps"
 * identifier.assigner.display = "HL7 Europe"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "231d9522-0ca3-4261-a354-95662e7f305a"
 * entry[0].fullUrl = "urn:uuid:72ab101d-47f7-4916-8cdb-0c0c41eae057"
 * entry[=].resource = 72ab101d-47f7-4916-8cdb-0c0c41eae057

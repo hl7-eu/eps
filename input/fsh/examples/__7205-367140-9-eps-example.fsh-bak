@@ -4,7 +4,7 @@ Title: "Complete HL7 Europe Patient Summary EPS Bundle"
 Description: "FHIR Bundle example for HL7 Europe Patient Summary (EPS) Eliane Muntinga"
 Usage: #example
 * type = #document
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "6d2748cc-961c-4c50-ad61-0df218c75665"
 * identifier.assigner.display = "HL7 Europe"
 * timestamp = "2025-08-31T17:41:07Z"
@@ -160,7 +160,7 @@ Instance: Instance-Composition-25a08d62-baab-4e5a-944e-302cb2208dd1
 InstanceOf: CompositionEuEps
 Usage: #inline
 * id = "25a08d62-baab-4e5a-944e-302cb2208dd1"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "2d7952c1-c20b-4fb6-b353-d022d9323751"
 * identifier.assigner.display = "HL7 Europe"
 * title = "European Patient Summary"
@@ -328,7 +328,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-4fc73c1f-652f-4ab5-8de0-bd666c2cd6a7
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "4fc73c1f-652f-4ab5-8de0-bd666c2cd6a7"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -348,7 +348,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-addde46c-bafc-4bbd-9e27-d695fea6e805
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "addde46c-bafc-4bbd-9e27-d695fea6e805"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -368,7 +368,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-928991c9-a40b-4609-82e6-386ffa1f82c6
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "928991c9-a40b-4609-82e6-386ffa1f82c6"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -388,7 +388,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-f01a0cf4-26ff-45c6-8ba4-46ca7aab86ff
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "f01a0cf4-26ff-45c6-8ba4-46ca7aab86ff"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -408,7 +408,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-6090defa-adbc-4887-8597-26a49c46d1d0
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "6090defa-adbc-4887-8597-26a49c46d1d0"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -429,7 +429,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-4e0fb62a-3030-417e-9cf0-da5b16414cbb
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "4e0fb62a-3030-417e-9cf0-da5b16414cbb"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -450,7 +450,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-4f2eec4c-5f92-48c8-a10d-4a0602d853ac
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "4f2eec4c-5f92-48c8-a10d-4a0602d853ac"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -471,7 +471,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-2e7d0d57-8bfb-44c4-acc5-fdf851eed433
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "2e7d0d57-8bfb-44c4-acc5-fdf851eed433"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -492,7 +492,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-ea70161b-d320-4dc0-996c-cc918ef7221a
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "ea70161b-d320-4dc0-996c-cc918ef7221a"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -668,7 +668,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-eeb0369e-28a3-4419-bf6e-956f47c285d6
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -695,7 +695,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-cc89abc3-5060-4cf3-aafc-c235ffaa8f59
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -723,7 +723,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-0072096b-cc78-4e87-8cc6-96ca8911033a
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -751,7 +751,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-487223c6-081b-43bb-8d52-8498fc0033f3
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -1696,10 +1696,10 @@ InstanceOf: PatientEuEps
 Usage: #inline
 * id = "4931a6af-ff8b-4c4b-9522-eaa267d0e576"
 * identifier[+].type = $v2-0203#JHN
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+* identifier[=].system = "http://example.org/identifier-1"
 * identifier[=].value = "7205-367140-9"
 * identifier[+].type = $v2-0203#MR
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "http://example.org/identifier-2"
 * identifier[=].value = "b6206957-775c-b98c-0315-9c82c558231a"
 * name[+].family = "Muntinga"
 * name[=].given[+] = "Eliane"
@@ -1738,7 +1738,7 @@ Instance: Instance-Organization-78377099-ec57-4f56-af1c-0aa20fa5deb2
 InstanceOf: OrganizationEu
 Usage: #inline
 * id = "78377099-ec57-4f56-af1c-0aa20fa5deb2"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "7720c3b9-14de-4f91-be49-659a23f327b5"
 * identifier.assigner.display = "HL7 Europe"
 * name = "Medisch Spectrum Twente"

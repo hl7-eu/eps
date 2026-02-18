@@ -5,7 +5,7 @@ Usage: #inline
 * meta.security[+] = $v3-ActReason#TRAIN
 * meta.profile = "http://hl7.eu/fhir/eps/StructureDefinition/composition-eu-eps"
 * identifier.assigner.display = "HL7 Europe"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "1947fb08-195b-4b3e-89b5-951ab7d7a5b9"
 * type = $loinc#60591-5 "Patient summary Document"
 * type.text = "Patient summary Document"

@@ -3,7 +3,7 @@ InstanceOf: Organization
 Usage: #inline
 * meta.profile = "http://hl7.eu/fhir/base/StructureDefinition/organization-eu"
 * identifier.assigner.display = "HL7 Europe"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "4761242b-9371-410e-ad3d-4ad7cf064e71"
 * address.line = "Paul-Hackhofer-Straße 9"
 * address.city = "Wolfsberg"

@@ -4,7 +4,7 @@ Title: "Complete HL7 Europe Patient Summary EPS Bundle"
 Description: "FHIR Bundle example for HL7 Europe Patient Summary (EPS) Filip Berg"
 Usage: #example
 * type = #document
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "7e8b8f30-7ecd-4149-8d3d-cfb4df34821b"
 * identifier.assigner.display = "HL7 Europe"
 * timestamp = "2025-08-31T17:52:42Z"
@@ -124,7 +124,7 @@ Instance: Instance-Composition-17144ffa-31df-4237-86a9-a1dbc180f248
 InstanceOf: CompositionEuEps
 Usage: #inline
 * id = "17144ffa-31df-4237-86a9-a1dbc180f248"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "e3879e4c-f067-4682-913d-128ea615a64b"
 * identifier.assigner.display = "HL7 Europe"
 * title = "European Patient Summary"
@@ -280,7 +280,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-3e0b1af0-e7fb-467c-8719-960de4af40d4
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "3e0b1af0-e7fb-467c-8719-960de4af40d4"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -300,7 +300,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-868f98f0-064c-492f-90f2-c210024d4d22
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "868f98f0-064c-492f-90f2-c210024d4d22"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -320,7 +320,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-7f9831a1-bf7d-44d1-88d2-c5b32a224084
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "7f9831a1-bf7d-44d1-88d2-c5b32a224084"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -340,7 +340,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-4e59217b-ac04-4419-a7b5-059a844f7050
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "4e59217b-ac04-4419-a7b5-059a844f7050"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -361,7 +361,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-cdcfaa92-02ea-4ed3-b3c1-582b699eade0
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "cdcfaa92-02ea-4ed3-b3c1-582b699eade0"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -382,7 +382,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-85aa32e6-92ce-46d5-b0ef-3c973515ca41
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "85aa32e6-92ce-46d5-b0ef-3c973515ca41"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -403,7 +403,7 @@ Usage: #inline
 
 
 Instance: Instance-Condition-903b7967-3d6c-4a59-bfba-14f2cdc10935
-InstanceOf: ConditionUvIps
+InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "903b7967-3d6c-4a59-bfba-14f2cdc10935"
 * category = $condition-category#problem-list-item "Problem List Item"
@@ -442,7 +442,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-19a362b1-dbbb-4fe5-bd84-822e58e8b263
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -469,7 +469,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-e6ecc6fc-d81f-4013-9d66-7eefa7f0cedd
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -497,7 +497,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-515215b4-d58c-49b0-b38a-3e9308ef88da
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -525,7 +525,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-150b7195-df6b-46b2-a668-e6ef31b5391e
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -553,7 +553,7 @@ Usage: #inline
 
 
 Instance: Instance-Immunization-3d331142-2efc-4dc2-abc0-b8e33c2c8ba4
-InstanceOf: ImmunizationUvIps
+InstanceOf: ImmunizationEuCore
 Title: "Immunization"
 Description: "Immunization"
 Usage: #inline
@@ -1289,10 +1289,10 @@ InstanceOf: PatientEuEps
 Usage: #inline
 * id = "416efeac-7ff6-439a-a898-ea493416a9bc"
 * identifier[+].type = $v2-0203#JHN
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+* identifier[=].system = "http://example.org/identifier-1"
 * identifier[=].value = "8302-090286-8"
 * identifier[+].type = $v2-0203#MR
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "http://example.org/identifier-2"
 * identifier[=].value = "b86f46da-d8ad-98f8-055d-bff1f1109e0b"
 * name[+].family = "Berg"
 * name[=].given[+] = "Filip"
@@ -1331,7 +1331,7 @@ Instance: Instance-Organization-96191506-879a-49e5-b62d-7e4a6103f003
 InstanceOf: OrganizationEu
 Usage: #inline
 * id = "96191506-879a-49e5-b62d-7e4a6103f003"
-* identifier.system = "urn:oid:2.16.840.1.113883.2.51.999"
+* identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "c5efcf95-c682-4b84-a0ce-b27067c22dbb"
 * identifier.assigner.display = "HL7 Europe"
 * name = "Akershus universitetssykehus (AHUS)"

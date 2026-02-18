@@ -5,10 +5,10 @@ Usage: #inline
 * meta.security[+] = $v3-ActReason#TRAIN
 * meta.profile = "http://hl7.eu/fhir/eps/StructureDefinition/patient-eu-eps"
 * identifier[0].type = $v2-0203#PT
-* identifier[=].system = "http://ec.europa.eu/identifier/eci"
+* identifier[=].system = "http://example.org/identifier-1"
 * identifier[=].value = "4625-445892-3"
 * identifier[+].type = $v2-0203#MR
-* identifier[=].system = "http://local.setting.eu/identifier"
+* identifier[=].system = "http://example.org/identifier-2"
 * identifier[=].value = "75a8a7f3-8f32-818f-2c14-42baf85ba9f9"
 * name.given = "Sebastian"
 * name.family = "Schmidl"

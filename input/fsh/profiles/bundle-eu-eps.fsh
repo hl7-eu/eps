@@ -102,7 +102,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     composition 1..1 and
     patient 1..1 and
     allergyintolerance 0..* and
-    // careplan 0..* and
+    careplan 0..* and
     // clinicalimpression 0..* and
     condition 0..* and
     // consent 0..* and
@@ -125,6 +125,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
     observation-pregnancy-status 0..* and
     observation-alcohol-use 0..* and
     observation-tobacco-use 0..* and
+    // observation-results 0..* and
     // observation-results-laboratory-pathology 0..* and
     // observation-results-radiology 0..* and
     observation-vital-signs 0..* and
@@ -205,11 +206,15 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * entry[observation-social-history] ^definition = "Slice including a generic social history Observation"
 * entry[observation-social-history].resource only ObservationSocialHistoryEuEps
  
-
-* entry[observation-results].resource 1..
-* entry[observation-results].resource only $Observation-results-uv-ips // ObservationResultsEuEps
-
 */
+
+/* * entry[observation-results].resource 1..
+* entry[observation-results].resource only MedicalTestResultEuCore // ObservationResultsEuEps
+ */
+* entry[careplan].resource 1..
+* entry[careplan].resource only CarePlan // ObservationResultsEuEps
+
+
 
 * entry[specimen].resource 1..
 * entry[specimen].resource only $Specimen-uv-ips
