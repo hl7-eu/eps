@@ -52,25 +52,9 @@
 <page key="map-ehdstravelhistory" name="EHDSTravelHistory Mapping"/>
 <page key="missing-data" name="Handling Missing Data"/>
 <page key="index" name="Home"/>
-<page key="ips-diff" name="IPS - EU Core Differences"/>
-<page key="ips-eps-advance-directives" name="IPS to EPS Advance Directives Comparison"/>
-<page key="ips-eps-alert" name="IPS to EPS Alert Comparison"/>
-<page key="ips-eps-allergy" name="IPS to EPS Allergy Comparison"/>
-<page key="ips-eps-care-plan" name="IPS to EPS Care Plan Comparison"/>
-<page key="ips-eps-functional-status" name="IPS to EPS Functional Status Comparison"/>
-<page key="ips-eps-pregnancy" name="IPS to EPS History of Pregnancy Comparison"/>
-<page key="ips-eps-immunization" name="IPS to EPS Immunization Comparison"/>
-<page key="ips-eps-medical-devices" name="IPS to EPS Medical Devices Comparison"/>
-<page key="ips-eps-medication" name="IPS to EPS Medication Comparison"/>
-<page key="ips-eps-patient-story" name="IPS to EPS Patient Story Comparison"/>
-<page key="ips-eps-problem" name="IPS to EPS Problem Comparison"/>
-<page key="ips-eps-procedure" name="IPS to EPS Procedure Comparison"/>
-<page key="ips-eps-results" name="IPS to EPS Results Comparison"/>
-<page key="ips-eps-section-comparison" name="IPS to EPS Section Comparison"/>
-<page key="ips-eps-social-history" name="IPS to EPS Social History Comparison"/>
-<page key="ips-eps-vital-signs" name="IPS to EPS Vital Signs Comparison"/>
 <page key="mappings" name="ISO ↔ EU PS Mapping Overview"/>
 <page key="introduction" name="Introduction"/>
+<page key="ips-eps-section-comparison" name="Ips Eps Section Comparison"/>
 <page key="knownIssues" name="Known Issues"/>
 <page key="logicalmodels" name="Logical Models"/>
 <page key="modelmap" name="Model Map"/>
