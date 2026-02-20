@@ -9,8 +9,8 @@
 
 				<p> The Functional Status model used by the (Xt-EHR) European Patient Summary
 					identifies, as part of that model, a set of assessment results that appear to be
-					more appropriately represented by an <strong>Observation</strong> rather than by
-					a <strong>ClinicalImpression</strong>. </p>
+					more appropriately represented by an <b>Observation</b> rather than by a <b>ClinicalImpression</b>.
+				</p>
 
 				<p>
 					However, Observation is not included among the allowed target resources for this

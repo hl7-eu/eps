@@ -54,7 +54,6 @@
 <page key="index" name="Home"/>
 <page key="mappings" name="ISO ↔ EU PS Mapping Overview"/>
 <page key="introduction" name="Introduction"/>
-<page key="ips-eps-section-comparison" name="Ips Eps Section Comparison"/>
 <page key="knownIssues" name="Known Issues"/>
 <page key="logicalmodels" name="Logical Models"/>
 <page key="modelmap" name="Model Map"/>
