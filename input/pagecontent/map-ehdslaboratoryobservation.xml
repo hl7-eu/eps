@@ -268,7 +268,7 @@
           <tr>
             <td>result.uncertainty</td>
             <td>Measurement uncertainty type and interval.</td>
-            <td>related-to</td>
+            <td>related-to</td>           
             <td>Quantity</td>
             <td>extension</td>
             <td>-</td>
@@ -280,7 +280,7 @@
             <td>equivalent</td>
             <td>Quantity</td>
             <td>extension:uncertainty</td>
-            <td>-</td>
+            <td>Uncertainty value</td>
             <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty extension for the
               Quantity data type.</td>
           </tr>
@@ -290,7 +290,7 @@
             <td>equivalent</td>
             <td>Observation</td>
             <td>extension:uncertaintyType	</td>
-            <td></td>
+            <td>Uncertainty type</td>
             <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType extension for the
               Quantity data type.</td>
           </tr>
@@ -299,7 +299,7 @@
             <td>Why the expected value is missing.</td>
             <td>equivalent</td>
             <td>Observation</td>
-            <td>result.dataAbsentReason</td>
+            <td>dataAbsentReason</td>
             <td>Reason for missing result.</td>
             <td></td>
           </tr>
@@ -310,7 +310,7 @@
             <td>Observation</td>
             <td>referenceRange</td>
             <td>Guidance for interpretation.</td>
-            <td class="highlight-yellow">Note: referenceRange should be part of the result not of the Observation.</td>
+            <td></td>
           </tr>
           <tr>
             <td>interpretation</td>
@@ -390,7 +390,7 @@
             <td>equivalent</td>
             <td>Quantity</td>
             <td>extension:uncertainty</td>
-            <td>-</td>
+            <td>Uncertainty value</td>
             <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertainty extension for the
               Quantity data type.</td>
           </tr>
@@ -400,7 +400,7 @@
             <td>equivalent</td>
             <td>Observation</td>
             <td>extension:uncertaintyType	</td>
-            <td></td>
+            <td>Uncertainty type</td>
             <td>http://hl7.org/fhir/StructureDefinition/iso21090-uncertaintyType extension for the
               Quantity data type.</td>
           </tr>
@@ -409,7 +409,7 @@
             <td>Why the component value is missing.</td>
             <td>equivalent</td>
             <td>Observation</td>
-            <td>component.result.dataAbsentReason</td>
+            <td>component.dataAbsentReason</td>
             <td>Reason for missing component result.</td>
             <td></td>
           </tr>
