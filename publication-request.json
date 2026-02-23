@@ -1,0 +1,15 @@
+{
+  "package-id" : "hl7.fhir.eu.eps",
+  "version" : "1.0.0-xtehr",
+  "path" : "http://hl7.eu/fhir/eps/1.0.0-xtehr",
+  "ci-build": "https://build.fhir.org/ig/hl7-eu/eps",
+  "first": true,
+  "desc" : "This publication is a qa preview version for the Xt-EHR projectathon.",
+  "descmd" : "This publication is qa preview version for the Xt-EHR projectathon",
+  "status" : "preview",
+  "category" : "Medication Management",
+  "introduction" : "This guide describes how the Patient Summary can be represented in the European REALM.",
+  "title" : "HL7 Europe European Patient Summary",
+  "mode": "working",
+  "sequence" : "STU"
+}
