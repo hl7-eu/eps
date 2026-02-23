@@ -30,7 +30,9 @@
       <div class="callout-wrapper">
         <div class="callout-box">
           <strong>This is a QA preview version:</strong>
-              No liability can be inferred from the use or misuse of this specification, or its consequences.
+              this Implementation Guide is published for <b>review and discussion purposes only.</b>
+			  <p>
+The content is subject to change and is provided <b>as-is</b>, without warranty of any kind and <b>without liability for its use</b>.</p>
         </div>
       </div>
     </div>
