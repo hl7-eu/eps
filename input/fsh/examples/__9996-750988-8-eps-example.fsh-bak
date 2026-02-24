@@ -1450,12 +1450,12 @@ Usage: #inline
 </div>
 """
 Instance: Instance-Observation-e9533bc2-76e2-4bc8-97fe-c2140d52befc
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "e9533bc2-76e2-4bc8-97fe-c2140d52befc"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#33762-6 "Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma"
 * code.text = "Natriuretic peptide.B prohormone N-Terminal [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1468,12 +1468,12 @@ Usage: #inline
 * referenceRange[+].high = 900 $ucum#pg/mL
 * interpretation = $v3-ObservationInterpretation#H "High"
 Instance: Instance-Observation-df78f587-3b9f-41ee-8104-064ede5e7fdc
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "df78f587-3b9f-41ee-8104-064ede5e7fdc"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#6690-2 "Leukocytes [#/volume] in Blood by Automated count"
 * code.text = "Leukocytes [#/volume] in Blood by Automated count"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1486,12 +1486,12 @@ Usage: #inline
 * referenceRange[+].high = 10.6 $ucum#10*3/uL
 * interpretation = $v3-ObservationInterpretation#H "High"
 Instance: Instance-Observation-e39e1e3d-0f08-4539-8340-03eb15ad15da
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "e39e1e3d-0f08-4539-8340-03eb15ad15da"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#789-8 "Erythrocytes [#/volume] in Blood by Automated count"
 * code.text = "Erythrocytes [#/volume] in Blood by Automated count"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1503,12 +1503,12 @@ Usage: #inline
 * referenceRange[+].low = 3.8 $ucum#10*6/uL
 * referenceRange[+].high = 5.7 $ucum#10*6/uL
 Instance: Instance-Observation-3364293d-b62d-4e54-8912-399ac0e6c9fe
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "3364293d-b62d-4e54-8912-399ac0e6c9fe"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#718-7 "Hemoglobin [Mass/volume] in Blood"
 * code.text = "Hemoglobin [Mass/volume] in Blood"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1520,12 +1520,12 @@ Usage: #inline
 * referenceRange[+].low = 12.1 $ucum#g/dL
 * referenceRange[+].high = 15.5 $ucum#g/dL
 Instance: Instance-Observation-17994608-6847-4988-8be0-951e82d8403b
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "17994608-6847-4988-8be0-951e82d8403b"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#4544-3 "Hematocrit [Volume Fraction] of Blood by Automated count"
 * code.text = "Hematocrit [Volume Fraction] of Blood by Automated count"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1537,12 +1537,12 @@ Usage: #inline
 * referenceRange[+].low = 36 $ucum#%
 * referenceRange[+].high = 48 $ucum#%
 Instance: Instance-Observation-a155652d-3bf2-472f-adc1-fca7139f30d1
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "a155652d-3bf2-472f-adc1-fca7139f30d1"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#787-2 "MCV [Entitic volume] by Automated count"
 * code.text = "MCV [Entitic volume] by Automated count"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1554,12 +1554,12 @@ Usage: #inline
 * referenceRange[+].low = 80 $ucum#fL
 * referenceRange[+].high = 105 $ucum#fL
 Instance: Instance-Observation-7e21e4b9-9f92-41e4-932f-cc7f0f11609a
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "7e21e4b9-9f92-41e4-932f-cc7f0f11609a"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#785-6 "MCH [Entitic mass] by Automated count"
 * code.text = "MCH [Entitic mass] by Automated count"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1572,12 +1572,12 @@ Usage: #inline
 * referenceRange[+].high = 33 $ucum#pg
 * interpretation = $v3-ObservationInterpretation#L "Low"
 Instance: Instance-Observation-948680dd-d2bf-4da4-b8a2-94f5e8455356
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "948680dd-d2bf-4da4-b8a2-94f5e8455356"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#786-4 "MCHC [Mass/volume] by Automated count"
 * code.text = "MCHC [Mass/volume] by Automated count"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1589,12 +1589,12 @@ Usage: #inline
 * referenceRange[+].low = 31 $ucum#g/dL
 * referenceRange[+].high = 35 $ucum#g/dL
 Instance: Instance-Observation-a245a5f4-ccf4-411e-9585-d877440de4e7
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "a245a5f4-ccf4-411e-9585-d877440de4e7"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#788-0 "Erythrocyte distribution width [Ratio] by Automated count"
 * code.text = "Erythrocyte distribution width [Ratio] by Automated count"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1606,12 +1606,12 @@ Usage: #inline
 * referenceRange[+].low = 11.5 $ucum#%
 * referenceRange[+].high = 15.5 $ucum#%
 Instance: Instance-Observation-d128486a-1492-4870-9be6-5768630a1eb9
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "d128486a-1492-4870-9be6-5768630a1eb9"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#777-3 "Platelets [#/volume] in Blood by Automated count"
 * code.text = "Platelets [#/volume] in Blood by Automated count"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1623,12 +1623,12 @@ Usage: #inline
 * referenceRange[+].low = 157 $ucum#10*3/uL
 * referenceRange[+].high = 415 $ucum#10*3/uL
 Instance: Instance-Observation-f96a0add-af9f-46a2-99e9-c0a13009d9ec
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "f96a0add-af9f-46a2-99e9-c0a13009d9ec"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2345-7 "Glucose [Mass/volume] in Serum or Plasma"
 * code.text = "Glucose [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1641,12 +1641,12 @@ Usage: #inline
 * referenceRange[+].high = 139 $ucum#mg/dL
 * interpretation = $v3-ObservationInterpretation#L "Low"
 Instance: Instance-Observation-86fceae0-c00d-4170-b556-8df9a521f388
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "86fceae0-c00d-4170-b556-8df9a521f388"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#3094-0 "Urea nitrogen [Mass/volume] in Serum or Plasma"
 * code.text = "Urea nitrogen [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1658,12 +1658,12 @@ Usage: #inline
 * referenceRange[+].low = 7 $ucum#mg/dL
 * referenceRange[+].high = 43 $ucum#mg/dL
 Instance: Instance-Observation-df9faa36-444b-4b2c-ae25-7cb2d5770355
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "df9faa36-444b-4b2c-ae25-7cb2d5770355"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2160-0 "Creatinine [Mass/volume] in Serum or Plasma"
 * code.text = "Creatinine [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1676,12 +1676,12 @@ Usage: #inline
 * referenceRange[+].high = 1.1 $ucum#mg/dL
 * interpretation = $v3-ObservationInterpretation#L "Low"
 Instance: Instance-Observation-68e4f4d5-4743-4e05-a4fb-f227d95b3b89
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "68e4f4d5-4743-4e05-a4fb-f227d95b3b89"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#17861-6 "Calcium [Mass/volume] in Serum or Plasma"
 * code.text = "Calcium [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1693,12 +1693,12 @@ Usage: #inline
 * referenceRange[+].low = 8.6 $ucum#mg/dL
 * referenceRange[+].high = 10.4 $ucum#mg/dL
 Instance: Instance-Observation-1afb033a-c3fd-4ca5-8cce-48ac85947b3e
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "1afb033a-c3fd-4ca5-8cce-48ac85947b3e"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2951-2 "Sodium [Moles/volume] in Serum or Plasma"
 * code.text = "Sodium [Moles/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1710,12 +1710,12 @@ Usage: #inline
 * referenceRange[+].low = 135 $ucum#mmol/L
 * referenceRange[+].high = 145 $ucum#mmol/L
 Instance: Instance-Observation-8bf83f28-6ce5-4874-b48f-cdd3ee174353
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "8bf83f28-6ce5-4874-b48f-cdd3ee174353"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2823-3 "Potassium [Moles/volume] in Serum or Plasma"
 * code.text = "Potassium [Moles/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1727,12 +1727,12 @@ Usage: #inline
 * referenceRange[+].low = 3.5 $ucum#mmol/L
 * referenceRange[+].high = 5.1 $ucum#mmol/L
 Instance: Instance-Observation-7bca456b-f0c4-4ba9-a46b-4c3559c3844d
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "7bca456b-f0c4-4ba9-a46b-4c3559c3844d"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2075-0 "Chloride [Moles/volume] in Serum or Plasma"
 * code.text = "Chloride [Moles/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1745,12 +1745,12 @@ Usage: #inline
 * referenceRange[+].high = 108 $ucum#mmol/L
 * interpretation = $v3-ObservationInterpretation#H "High"
 Instance: Instance-Observation-4b379c16-6c59-415f-9396-6f6ffd9477aa
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "4b379c16-6c59-415f-9396-6f6ffd9477aa"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2028-9 "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
 * code.text = "Carbon dioxide, total [Moles/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1763,12 +1763,12 @@ Usage: #inline
 * referenceRange[+].high = 29 $ucum#mmol/L
 * interpretation = $v3-ObservationInterpretation#L "Low"
 Instance: Instance-Observation-fc37b351-b501-46a8-a5b5-d274430b36eb
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "fc37b351-b501-46a8-a5b5-d274430b36eb"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2885-2 "Protein [Mass/volume] in Serum or Plasma"
 * code.text = "Protein [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1780,12 +1780,12 @@ Usage: #inline
 * referenceRange[+].low = 6 $ucum#g/dL
 * referenceRange[+].high = 8.3 $ucum#g/dL
 Instance: Instance-Observation-7dcb7577-3b3e-4a4b-aabd-2b300c8dd319
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "7dcb7577-3b3e-4a4b-aabd-2b300c8dd319"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#1751-7 "Albumin [Mass/volume] in Serum or Plasma"
 * code.text = "Albumin [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1797,12 +1797,12 @@ Usage: #inline
 * referenceRange[+].low = 3.5 $ucum#g/dL
 * referenceRange[+].high = 5.5 $ucum#g/dL
 Instance: Instance-Observation-6f126eb5-6246-41aa-b248-7f87eaf48e84
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "6f126eb5-6246-41aa-b248-7f87eaf48e84"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#1975-2 "Bilirubin.total [Mass/volume] in Serum or Plasma"
 * code.text = "Bilirubin.total [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1814,12 +1814,12 @@ Usage: #inline
 * referenceRange[+].low = 0.3 $ucum#mg/dL
 * referenceRange[+].high = 1.2 $ucum#mg/dL
 Instance: Instance-Observation-b70316e9-db94-4d2e-813d-d2856753200c
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "b70316e9-db94-4d2e-813d-d2856753200c"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#6768-6 "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
 * code.text = "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1831,12 +1831,12 @@ Usage: #inline
 * referenceRange[+].low = 32 $ucum#U/L
 * referenceRange[+].high = 150 $ucum#U/L
 Instance: Instance-Observation-f19dfb3d-1ccd-4418-8ccb-753830040267
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "f19dfb3d-1ccd-4418-8ccb-753830040267"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#1742-6 "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
 * code.text = "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1848,12 +1848,12 @@ Usage: #inline
 * referenceRange[+].low = 7 $ucum#U/L
 * referenceRange[+].high = 35 $ucum#U/L
 Instance: Instance-Observation-007cc089-b094-4486-a006-4e13fc16032f
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "007cc089-b094-4486-a006-4e13fc16032f"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#1920-8 "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
 * code.text = "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1865,12 +1865,12 @@ Usage: #inline
 * referenceRange[+].low = 10 $ucum#U/L
 * referenceRange[+].high = 40 $ucum#U/L
 Instance: Instance-Observation-3b43a539-a848-4bd0-93f4-e957215a70ee
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "3b43a539-a848-4bd0-93f4-e957215a70ee"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#19123-9 "Magnesium [Mass/volume] in Serum or Plasma"
 * code.text = "Magnesium [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1882,12 +1882,12 @@ Usage: #inline
 * referenceRange[+].low = 1.6 $ucum#mg/dL
 * referenceRange[+].high = 2.3 $ucum#mg/dL
 Instance: Instance-Observation-056360b8-9df5-460b-b766-856f995a9ada
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "056360b8-9df5-460b-b766-856f995a9ada"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2093-3 "Cholesterol [Mass/volume] in Serum or Plasma"
 * code.text = "Cholesterol [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1900,12 +1900,12 @@ Usage: #inline
 * referenceRange[+].high = 200 $ucum#mg/dL
 * interpretation = $v3-ObservationInterpretation#H "High"
 Instance: Instance-Observation-cd093baa-23bc-4333-8e05-2764e2d79abd
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "cd093baa-23bc-4333-8e05-2764e2d79abd"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2571-8 "Triglyceride [Mass/volume] in Serum or Plasma"
 * code.text = "Triglyceride [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1917,12 +1917,12 @@ Usage: #inline
 * referenceRange[+].low = 0 $ucum#mg/dL
 * referenceRange[+].high = 150 $ucum#mg/dL
 Instance: Instance-Observation-d1d4f181-5e97-48ec-8587-c5d3881f89f9
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "d1d4f181-5e97-48ec-8587-c5d3881f89f9"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#18262-6 "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay"
 * code.text = "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1935,12 +1935,12 @@ Usage: #inline
 * referenceRange[+].high = 130 $ucum#mg/dL
 * interpretation = $v3-ObservationInterpretation#H "High"
 Instance: Instance-Observation-cb28ad1a-2c56-4f1b-9748-95f16bf47072
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "cb28ad1a-2c56-4f1b-9748-95f16bf47072"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2085-9 "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
 * code.text = "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1952,12 +1952,12 @@ Usage: #inline
 * referenceRange[+].low = 40 $ucum#mg/dL
 * referenceRange[+].high = 100 $ucum#mg/dL
 Instance: Instance-Observation-a9275aeb-6d41-47e1-959a-d9c37da52d98
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "a9275aeb-6d41-47e1-959a-d9c37da52d98"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#4548-4 "Hemoglobin A1c/Hemoglobin.total in Blood"
 * code.text = "Hemoglobin A1c/Hemoglobin.total in Blood"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1969,12 +1969,12 @@ Usage: #inline
 * referenceRange[+].low = 4.3 $ucum#%
 * referenceRange[+].high = 6.4 $ucum#%
 Instance: Instance-Observation-ba6f4428-bc3d-4419-bdac-c864299363b8
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "ba6f4428-bc3d-4419-bdac-c864299363b8"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#89579-7 "Troponin I.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method"
 * code.text = "Troponin I.cardiac [Mass/volume] in Serum or Plasma by High sensitivity method"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -1986,12 +1986,12 @@ Usage: #inline
 * referenceRange[+].low = 0 $ucum#pg/mL
 * referenceRange[+].high = 19.9 $ucum#pg/mL
 Instance: Instance-Observation-05db95ab-5c0f-44df-bc6f-1ec1b1f9f24b
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "05db95ab-5c0f-44df-bc6f-1ec1b1f9f24b"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2276-4 "Ferritin [Mass/volume] in Serum or Plasma"
 * code.text = "Ferritin [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -2003,12 +2003,12 @@ Usage: #inline
 * referenceRange[+].low = 15 $ucum#ug/L
 * referenceRange[+].high = 150 $ucum#ug/L
 Instance: Instance-Observation-38ddafc6-d42f-4b9c-8f52-a30b5846e6b8
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "38ddafc6-d42f-4b9c-8f52-a30b5846e6b8"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2498-4 "Iron [Mass/volume] in Serum or Plasma"
 * code.text = "Iron [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -2020,12 +2020,12 @@ Usage: #inline
 * referenceRange[+].low = 50 $ucum#ug/dL
 * referenceRange[+].high = 170 $ucum#ug/dL
 Instance: Instance-Observation-dd6e75e9-293b-4182-bf5c-64f64eb489fe
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "dd6e75e9-293b-4182-bf5c-64f64eb489fe"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2500-7 "Iron binding capacity [Mass/volume] in Serum or Plasma"
 * code.text = "Iron binding capacity [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)
@@ -2037,12 +2037,12 @@ Usage: #inline
 * referenceRange[+].low = 250 $ucum#ug/dL
 * referenceRange[+].high = 450 $ucum#ug/dL
 Instance: Instance-Observation-99091ab2-6e21-4800-80d5-e0102b819540
-InstanceOf: ObservationResultsLaboratoryEu
+InstanceOf: MedicalTestResultEuCore
 Usage: #inline
 * id = "99091ab2-6e21-4800-80d5-e0102b819540"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2502-3 "Iron saturation [Mass Fraction] in Serum or Plasma"
 * code.text = "Iron saturation [Mass Fraction] in Serum or Plasma"
 * subject = Reference(urn:uuid:0608e4bf-c598-48e0-ae7b-20e52fa2158f)

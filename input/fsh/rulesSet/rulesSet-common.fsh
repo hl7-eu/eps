@@ -59,8 +59,8 @@ RuleSet: NoSubSectionsRules
 RuleSet: SectionElementsRules
 * code from LabStudyTypesEuVs (preferred)
 * text ^short = "Text summary of the section, for human interpretation."
-* entry only Reference (ObservationResultsLaboratoryEu )
-// * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)
+* entry only Reference (MedicalTestResultEuCore )
+// * entry only Reference (MedicalTestResultEuCore or DiagnosticReport)
 // * entry ^comment = "The DiagnosticReport referred in the entry SHALL NOT be that representing the whole Laboratory Report"
 * entry 1..
 * section ..0

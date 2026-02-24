@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/eps/1.0.0-xtehr" ciUrl="https://build.fhir.org/ig/hl7-eu/eps" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/eps">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/eps/xtehr" ciUrl="https://build.fhir.org/ig/hl7-eu/eps" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/eps">
 <version code="current" url="https://build.fhir.org/ig/hl7-eu/eps"/>
-<version code="1.0.0-xtehr" url="http://hl7.eu/fhir/eps/1.0.0-xtehr"/>
+<version code="1.0.0-alpha" url="http://hl7.eu/fhir/eps/xtehr"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
 <artifact id="StructureDefinition/allergyintolerance-obl-eu-eps" key="StructureDefinition-allergyintolerance-obl-eu-eps" name="AllergyIntolerance (EPS)"/>
 <artifact id="StructureDefinition/bundle-eu-eps" key="StructureDefinition-bundle-eu-eps" name="Bundle (EPS)"/>
+<artifact id="Bundle/Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3" key="Bundle-Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3" name="Bundle: Complete EPS"/>
 <artifact id="Bundle/EPSExampleBundle01NoProblemsMedicationAllergies" key="Bundle-EPSExampleBundle01NoProblemsMedicationAllergies" name="Bundle: Empty EPS (No problems, medications, allergies)"/>
-<artifact id="Bundle/Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3" key="Bundle-Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3" name="Complete HL7 Europe Patient Summary EPS Bundle"/>
 <artifact id="StructureDefinition/composition-eu-eps" key="StructureDefinition-composition-eu-eps" name="Composition (EPS)"/>
 <artifact id="StructureDefinition/condition-obl-eu-eps" key="StructureDefinition-condition-obl-eu-eps" name="Condition Obligations (EPS)"/>
 <artifact id="StructureDefinition/consent-eu-eps" key="StructureDefinition-consent-eu-eps" name="Consent (Advance Directives EPS)"/>
@@ -53,7 +53,6 @@
 <page key="map-ehdstravelhistory" name="EHDSTravelHistory Mapping"/>
 <page key="missing-data" name="Handling Missing Data"/>
 <page key="index" name="Home"/>
-<page key="mappings" name="ISO ↔ EU PS Mapping Overview"/>
 <page key="introduction" name="Introduction"/>
 <page key="knownIssues" name="Known Issues"/>
 <page key="logicalmodels" name="Logical Models"/>

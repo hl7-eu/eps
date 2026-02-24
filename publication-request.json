@@ -1,7 +1,7 @@
 {
   "package-id" : "hl7.fhir.eu.eps",
-  "version" : "1.0.0-xtehr",
-  "path" : "http://hl7.eu/fhir/eps/1.0.0-xtehr",
+  "version" : "1.0.0-alpha",
+  "path" : "http://hl7.eu/fhir/eps/xtehr",
   "ci-build": "https://build.fhir.org/ig/hl7-eu/eps",
   "first": true,
   "desc" : "This publication is a qa preview version for the Xt-EHR projectathon.",
