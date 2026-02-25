@@ -7,7 +7,7 @@
   "desc" : "This publication is a qa preview version for the Xt-EHR projectathon.",
   "descmd" : "This publication is qa preview version for the Xt-EHR projectathon",
   "status" : "preview",
-  "category" : "Medication Management",
+  "category" : "Patient Summary",
   "introduction" : "This guide describes how the Patient Summary can be represented in the European REALM.",
   "title" : "HL7 Europe European Patient Summary",
   "mode": "working",
