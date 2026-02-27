@@ -5,7 +5,7 @@ name:  Hl7EuPatientSummaryIg
 title: HL7 Europe Patient Summary
 description: This guide describes how the Patient Summary can be represented in the European REALM.
 status: draft # draft | active | retired | unknown
-version: 1.0.0-xtehr #
+version: 1.0.0-alpha #
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
 copyrightYear: 2024+
 releaseLabel: qa-preview # ci-build | draft | qa-preview | ballot | trial-use | release | update | normative+trial-use
@@ -27,8 +27,8 @@ dependencies:
   hl7.fhir.uv.ips: 2.0.0  
   hl7.fhir.uv.xver-r5.r4: 0.0.1-snapshot-2
   hl7.fhir.eu.extensions.r4: 1.2.0
-  # hl7.fhir.eu.base: 2.0.0-xtehr
-  hl7.fhir.eu.base: current
+  hl7.fhir.eu.base: 2.0.0-gamma
+  # hl7.fhir.eu.base: current
   ihe.pharm.mpd.r4: 1.0.0-comment-2
 
 
@@ -60,8 +60,8 @@ pages:
     title: Obligations
   knownIssues.md:
     title: Known Issues
-  mappings.md:
-    title: ISO ↔ EU PS Mapping Overview
+  # mappings.md:
+  #  title: ISO ↔ EU PS Mapping Overview
   missing-data.md:
     title: Handling Missing Data
   copyright.md:

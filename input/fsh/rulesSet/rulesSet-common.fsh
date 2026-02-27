@@ -59,8 +59,8 @@ RuleSet: NoSubSectionsRules
 RuleSet: SectionElementsRules
 * code from LabStudyTypesEuVs (preferred)
 * text ^short = "Text summary of the section, for human interpretation."
-* entry only Reference (ObservationResultsLaboratoryEu )
-// * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)
+* entry only Reference (MedicalTestResultEuCore )
+// * entry only Reference (MedicalTestResultEuCore or DiagnosticReport)
 // * entry ^comment = "The DiagnosticReport referred in the entry SHALL NOT be that representing the whole Laboratory Report"
 * entry 1..
 * section ..0
@@ -75,7 +75,7 @@ RuleSet: SNOMEDCopyrightForVS
 * ^experimental = false
 
 RuleSet: LOINCCopyrightForVS
-* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright Â© 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINCÂ® is a registered United States trademark of Regenstrief Institute, Inc"
+* ^copyright = "This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"
 * ^experimental = false
 
 RuleSet: NPUCopyrightForVS
