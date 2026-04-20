@@ -1295,7 +1295,7 @@ Usage: #inline
 * id = "3769b2c8-dc1c-4d81-aa13-f59ee5bdfa30"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2339-0 "Glucose [Mass/volume] in Blood"
 * code.text = "Glucose [Mass/volume] in Blood"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1312,7 +1312,7 @@ Usage: #inline
 * id = "634f31ad-e825-4787-92e0-7488c6be942b"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#6299-2 "Urea nitrogen [Mass/volume] in Blood"
 * code.text = "Urea nitrogen [Mass/volume] in Blood"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1329,7 +1329,7 @@ Usage: #inline
 * id = "43c75d44-ccfd-4a03-9f76-09ce1dbfda89"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#38483-4 "Creatinine [Mass/volume] in Blood"
 * code.text = "Creatinine [Mass/volume] in Blood"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1347,7 +1347,7 @@ Usage: #inline
 * id = "9f967d54-b75c-4d6d-8049-ebf9d8b0ae25"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#49765-1 "Calcium [Mass/volume] in Blood"
 * code.text = "Calcium [Mass/volume] in Blood"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1364,7 +1364,7 @@ Usage: #inline
 * id = "bf1d0965-be59-4e25-82f9-674ed172977e"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2947-0 "Sodium [Moles/volume] in Blood"
 * code.text = "Sodium [Moles/volume] in Blood"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1381,7 +1381,7 @@ Usage: #inline
 * id = "a3be6062-a3e4-43cc-98a4-9d5a97d2a6f4"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#6298-4 "Potassium [Moles/volume] in Blood"
 * code.text = "Potassium [Moles/volume] in Blood"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1398,7 +1398,7 @@ Usage: #inline
 * id = "96e4eb8b-71c8-4a3c-9e67-c099d52830fc"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2069-3 "Chloride [Moles/volume] in Blood"
 * code.text = "Chloride [Moles/volume] in Blood"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1415,7 +1415,7 @@ Usage: #inline
 * id = "d8bf06a3-994b-4af8-8fcc-acf64e4c2368"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#20565-8 "Carbon dioxide, total [Moles/volume] in Blood"
 * code.text = "Carbon dioxide, total [Moles/volume] in Blood"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1432,7 +1432,7 @@ Usage: #inline
 * id = "ea4d423d-f6ea-494c-8ffc-b23c139eaf26"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2885-2 "Protein [Mass/volume] in Serum or Plasma"
 * code.text = "Protein [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1449,7 +1449,7 @@ Usage: #inline
 * id = "1681586e-24f3-4480-9ac7-a44ef213c70c"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#1751-7 "Albumin [Mass/volume] in Serum or Plasma"
 * code.text = "Albumin [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1466,7 +1466,7 @@ Usage: #inline
 * id = "9a21e382-7d46-433c-a97c-863d9dceff24"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#10834-0 "Globulin [Mass/volume] in Serum by calculation"
 * code.text = "Globulin [Mass/volume] in Serum by calculation"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1483,7 +1483,7 @@ Usage: #inline
 * id = "80c86879-5230-4914-a279-6cc890a9d890"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#1975-2 "Bilirubin.total [Mass/volume] in Serum or Plasma"
 * code.text = "Bilirubin.total [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1501,7 +1501,7 @@ Usage: #inline
 * id = "7609b543-21d2-4b81-a9da-d85879ed9737"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#6768-6 "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
 * code.text = "Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1518,7 +1518,7 @@ Usage: #inline
 * id = "566124b7-205f-4e83-9d50-9c79f2dda171"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#1742-6 "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
 * code.text = "Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1535,7 +1535,7 @@ Usage: #inline
 * id = "7f4db609-0992-4b56-8ef1-69882aa95519"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#1920-8 "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
 * code.text = "Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1552,7 +1552,7 @@ Usage: #inline
 * id = "0d60eb4f-b407-4ec1-8d96-2744cb8fc1ec"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2093-3 "Cholesterol [Mass/volume] in Serum or Plasma"
 * code.text = "Cholesterol [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1569,7 +1569,7 @@ Usage: #inline
 * id = "8b46f7cc-99a9-4d7b-91c1-4c6167e2bdf9"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2571-8 "Triglyceride [Mass/volume] in Serum or Plasma"
 * code.text = "Triglyceride [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1586,7 +1586,7 @@ Usage: #inline
 * id = "b021b76c-a7ae-4977-81b8-4c7978657b13"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#18262-6 "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay"
 * code.text = "Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
@@ -1603,7 +1603,7 @@ Usage: #inline
 * id = "b4e2d930-9b21-4906-b770-a12dfdbc770c"
 * status = #final
 * performer[+].display = "The Central European Lab"
-* category[laboratory].coding = $observation-category#laboratory
+* category[+].coding = $observation-category#laboratory
 * code.coding[+] = $loinc#2085-9 "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
 * code.text = "Cholesterol in HDL [Mass/volume] in Serum or Plasma"
 * subject = Reference(urn:uuid:538f125e-f171-4ec3-b018-8a23e0f06828)
