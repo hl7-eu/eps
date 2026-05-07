@@ -2,7 +2,7 @@ Profile: ObservationPregnancyGestationalAgeEuEps
 Parent: Observation
 Id: observation-pregnancy-gestationalAge-eu-eps
 Title: "Observation Pregnancy - Gestational Age (EPS)"
-Description: "This profile constrains the Observation resource to represent gestational age."
+Description: "This profile constrains the Observation resource to represent gestational age in days."
 
 * insert SetFmmAndStatusRule (1, draft)
 
@@ -16,6 +16,9 @@ Description: "This profile constrains the Observation resource to represent gest
 * effective[x] only dateTime
 * valueQuantity only Quantity
 * valueQuantity
+  * unit = "days"
+  * system = $ucum
+  * code = #d
 * bodySite ..0
 * method ..0
 * specimen ..0
