@@ -1,7 +1,7 @@
 Instance: EPSExampleBundle01NoProblemsMedicationAllergies
 InstanceOf: BundleEuEps
 Title: "Bundle: Empty EPS (No problems, medications, allergies)"
-Description: "APS ohne Probleme, Medikamente oder Allergien (Minimalbeispiel)"
+Description: "Example of a minimal empty HL7 Europe Patient Summary (EPS) FHIR Bundle - No problems, medications, allergies [Maria Musterfrau]"
 Usage: #example
 * identifier.system = $uuid
 * identifier.value = "63fef90a-be11-4ddf-aece-d77da15c4f20"

@@ -1,7 +1,7 @@
 Instance: Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3
 InstanceOf: BundleEuEps
-Title: "Complete HL7 Europe Patient Summary EPS Bundle"
-Description: "FHIR Bundle example for HL7 Europe Patient Summary (EPS) Petra Schwartz"
+Title: "Bundle: Complete EPS"
+Description: "Example of a complete HL7 Europe Patient Summary (EPS) FHIR Bundle [Petra Schwartz]"
 Usage: #example
 * type = #document
 * identifier.system = "urn:ietf:rfc:9562"
@@ -180,7 +180,7 @@ Usage: #example
 
 Instance: Instance-Composition-76279633-d5a6-439b-9e88-5880c531e241
 InstanceOf: CompositionEuEps
-Usage: #inline
+Usage: #example
 * id = "76279633-d5a6-439b-9e88-5880c531e241"
 * identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "166615c7-0536-4d24-b5d7-8d659a29ce3e"
