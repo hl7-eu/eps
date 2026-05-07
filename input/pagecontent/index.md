@@ -26,18 +26,6 @@
 </div>
 
 
-<div class="model-map-block">
-      <div class="callout-wrapper">
-        <div class="callout-box">
-          <strong>This is a QA preview version:</strong>
-              this Implementation Guide is published for <b>review and discussion purposes only.</b>
-			  <p>
-The content is subject to change and is provided <b>as-is</b>, without warranty of any kind and <b>without liability for its use</b>.</p>
-        </div>
-      </div>
-    </div>
-
-
 ### Scope
 
 Specify a set of rules to be applied to HL7 FHIR to define how to represent a **Patient Summary** in the **European** Context, coherently with the European eHN Guidelines (see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).

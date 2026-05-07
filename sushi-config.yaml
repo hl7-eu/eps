@@ -24,9 +24,9 @@ copyright: >-
 # use cases, the value can be an object with keys for id, uri, and version.
 #
 dependencies:
-  hl7.fhir.uv.ips: 2.0.0  
+  hl7.fhir.uv.ips: 2.0.0
   hl7.fhir.eu.base: 2.0.0
-  hl7.fhir.uv.extensions.r4: 5.2.0
+  # hl7.fhir.uv.extensions.r4: 5.2.0
   hl7.fhir.uv.xver-r5.r4: 0.1.0
   hl7.fhir.eu.extensions.r4:
     uri: http://hl7.eu/fhir/extensions/ImplementationGuide/hl7.fhir.eu.extensions
