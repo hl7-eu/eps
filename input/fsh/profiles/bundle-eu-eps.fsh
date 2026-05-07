@@ -17,11 +17,13 @@ Severity: #error
 Expression: "entry.where(
   resource.is(AllergyIntolerance) or
   resource.is(Immunization) or
+  resource.is(Consent) or
   resource.is(ImmunizationRecommendation)
 ).empty() or
 entry.where(
   resource.is(AllergyIntolerance) or
   resource.is(Immunization) or
+  resource.is(Consent) or
   resource.is(ImmunizationRecommendation)
 ).all(resource.patient.reference.exists())"
 
@@ -33,7 +35,6 @@ Expression: "entry.where(
   resource.is(CarePlan) or
   resource.is(ClinicalImpression) or
   resource.is(Condition) or
-  resource.is(Consent) or
   resource.is(DeviceUseStatement) or
   resource.is(DiagnosticReport) or
   resource.is(DocumentReference) or
@@ -49,7 +50,6 @@ entry.where(
   resource.is(CarePlan) or
   resource.is(ClinicalImpression) or
   resource.is(Condition) or
-  resource.is(Consent) or
   resource.is(DeviceUseStatement) or
   resource.is(DiagnosticReport) or
   resource.is(DocumentReference) or
