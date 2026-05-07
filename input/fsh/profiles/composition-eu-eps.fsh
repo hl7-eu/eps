@@ -292,24 +292,24 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 
 * section[sectionSocialHistory]
   * insert SectionComRules (EPS Social History Section,  	
-    The social history section contains a description of the personâ€™s Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\),
+    The social history section contains a description of the persona's Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\),
     http://loinc.org#29762-2)
 
   * entry only Reference(Observation or DocumentReference)
 
 
-  * insert SectionEntrySliceComRules(
+  * insert SectionEntrySliceProfileComRules(
     Health related \"lifestyle factors\" or \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\) ,  	
-    Description of the personâ€™s Health related \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\)
+    Description of the persona's Health related \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\)
     )
   
   * insert SectionEntrySliceDefRules (smokingTobaccoUse, 0..*, 
       Smoke habits,  	
-      A description of the personâ€™s smoke habits,
+      A description of the persona's smoke habits,
       $Observation-tobaccouse-uv-ips)
   * insert SectionEntrySliceDefRules (alcoholUse, 0..*, 
       Alcohol consumption,  	
-      A description of the personâ€™s alcohol consumption habits,
+      A description of the persona's alcohol consumption habits,
       $Observation-alcoholuse-uv-ips)
 
 // ----------------- EPS History of Pregnancy Section --------------------
@@ -318,7 +318,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
   * insert SectionComRules (EPS History of Pregnancy Section, 
     The history of pregnancy section shall contain information about whether the patient is currently pregnant or not. It may contain addition summarizing information about the outcome of earlier pregnancies,
     http://loinc.org#10162-6)
-  * insert SectionEntrySliceComRules(Current pregnancy status and\, optionally\, information about the outcome of earlier pregnancies,
+  * insert SectionEntrySliceProfileComRules(Current pregnancy status and\, optionally\, information about the outcome of earlier pregnancies,
      It contains information about whether the patient is currently pregnant or not. It may contain addition summarizing information about the outcome of earlier pregnancies.)
   * insert SectionEntrySliceDefRules (pregnancyStatus, 0..*,
     Current pregnancy status , Current pregnancy status ,

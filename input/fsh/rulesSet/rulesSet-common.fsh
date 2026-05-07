@@ -42,6 +42,14 @@ RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^short = "{short}"
 * entry ^definition = "{def}"
 
+RuleSet: SectionEntrySliceProfileComRules (short, def)
+* entry ^slicing.discriminator[0].type = #profile
+* entry ^slicing.discriminator[0].path = "resolve()"
+* entry ^slicing.ordered = false
+* entry ^slicing.rules = #open
+* entry ^short = "{short}"
+* entry ^definition = "{def}"
+
 RuleSet: SectionEntrySliceDefRules (name, card, short, def, profiles)
 // SectionEntrySliceDefRules (flags, 0.., "Care Team", "Care Team", CareTeamEu)
 
