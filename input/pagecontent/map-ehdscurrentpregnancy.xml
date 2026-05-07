@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
@@ -64,9 +64,9 @@
         <caption>EHDSCurrentPregnancy -> Pregnancy Observations</caption>
         <thead>
           <tr>
-            <th colspan="2" class="src-head">EHDSCurrentPregnancy (Logical Model)</th>
+            <th colspan="1" class="src-head">EHDSCurrentPregnancy (Logical Model)</th>
             <th class="relhead">Relationship</th>
-            <th colspan="4" class="tgt-head">
+            <th colspan="3" class="tgt-head">
               Pregnancy Observations
               <div class="tgt-head-links">
                 <a href="StructureDefinition-observation-pregnancy-status-eu-ips.html">ObservationPregnancyStatusEuEps</a>
@@ -79,11 +79,9 @@
           </tr>
           <tr>
             <th class="src-sub">Element</th>
-            <th class="src-sub">Description</th>
             <th class="relsub">Relation</th>
             <th class="tgt-sub">Resource</th>
             <th class="tgt-sub">Element</th>
-            <th class="tgt-sub">Description</th>
             <th class="tgt-sub">Notes</th>
           </tr>
         </thead>
@@ -91,119 +89,93 @@
           <!-- HEADER BLOCK (common dataset header) -->
           <tr>
             <td>header</td>
-            <td>Common header for all patient-related data.</td>
             <td>related-to</td>
             <td>Observation</td>
             <td>.</td>
-            <td>General metadata.</td>
             <td>Dataset-level; not usually carried in Observation as-is.</td>
           </tr>
           <tr>
             <td>header.subject</td>
-            <td>Patient/subject this pregnancy data is about.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>subject</td>
-            <td>Reference to the patient or subject of the observation.</td>
             <td></td>
           </tr>
           <tr>
             <td>header.identifier</td>
-            <td>Business identifier for the object.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>identifier</td>
-            <td>Business identifier for this observation.</td>
             <td></td>
           </tr>
           <tr class="highlight-yellow">
             <td>header.author[x]</td>
-            <td>Author of this observation.</td>
             <td>related-to</td>
             <td>Observation</td>
             <td>performer</td>
-            <td>Who is responsible for the observation.</td>
             <td></td>
           </tr>
           <tr>
             <td>header.date</td>
-            <td>Date and time of authoring/issuing.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>issued</td>
-            <td>When the observation result was issued.</td>
             <td></td>
           </tr>
           <tr>
             <td>header.status</td>
-            <td>Status of this observation.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>status</td>
-            <td>Registered | preliminary | final | amended | ...</td>
             <td></td>
           </tr>
           <tr class="highlight-yellow">
             <td> header.source</td>
-            <td>Source of information (e.g. patient, patient's proxy).</td>
             <td>related-to</td>
             <td>Observation</td>
             <td>note</td>
-            <td>Additional context about information provenance.</td>
             <td>Observation has no direct informationSource element. Here proposed to use note element to carry source information.</td>
           </tr>
           <tr>
             <td>header.language</td>
-            <td>Language of the resource (IETF tag).</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>language</td>
-            <td>Language used in the observation.</td>
             <td></td>
           </tr>
           <tr>
             <td>currentPregnancyStatus</td>
-            <td>Current state of the pregnancy at the date the observation was made.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>valueCodeableConcept</td>
-            <td>Pregnancy status value.</td>
             <td></td>
           </tr>
           <tr>
             <td>dateOfStatus</td>
-            <td>Effective date of the current pregnancy status.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>effectiveDateTime</td>
-            <td>Date/time of the status assessment.</td>
             <td></td>
           </tr>
           <tr>
             <td>expectedDateOfDelivery</td>
-            <td>Date in which the woman is due to give birth.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>valueDateTime</td>
-            <td>Expected delivery date.</td>
             <td>Represented as a separate EDD observation (linked via hasMember).</td>
           </tr>
           <tr>
             <td>gestationalAge</td>
-            <td>Gestational age - duration of the pregnancy on the day of observation.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>valueQuantity</td>
-            <td>Gestational age value.</td>
             <td>Represented as a separate gestational age observation.</td>
           </tr>
           <tr>
             <td>note</td>
-            <td>Free text notes by the health professional regarding the current pregnancy.</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>note.text</td>
-            <td>Additional notes.</td>
             <td></td>
           </tr>
         </tbody>

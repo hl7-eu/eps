@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
@@ -52,17 +52,15 @@
         <caption>EHDSDeviceUse -> DeviceUseStatementEuEps</caption>
         <thead>
           <tr>
-            <th colspan="2" class="src-head">EHDSDeviceUse (Logical Model)</th>
+            <th colspan="1" class="src-head">EHDSDeviceUse (Logical Model)</th>
             <th class="relhead">Relationship</th>
-            <th colspan="4" class="tgt-head">DeviceUseStatementEuEps</th>
+            <th colspan="3" class="tgt-head">DeviceUseStatementEuEps</th>
           </tr>
           <tr>
             <th class="src-sub">Element</th>
-            <th class="src-sub">Description</th>
             <th class="relsub">Relation</th>
             <th class="tgt-sub">Resource</th>
             <th class="tgt-sub">Element</th>
-            <th class="tgt-sub">Description</th>
             <th class="tgt-sub">Notes</th>
           </tr>
         </thead>
@@ -70,119 +68,93 @@
           <!-- HEADER BLOCK (common dataset header) -->
           <tr>
             <td>header</td>
-            <td>Common header for all patient-related data.</td>
             <td>related-to</td>
             <td>DeviceUseStatement</td>
             <td>.</td>
-            <td>General metadata.</td>
             <td>Dataset-level; not usually carried in DeviceUseStatement as-is.</td>
           </tr>
           <tr>
             <td>header.subject</td>
-            <td>Patient/subject this device use is about.</td>
             <td>equivalent</td>
             <td>DeviceUseStatement</td>
             <td>subject</td>
-            <td>Reference to the patient or subject of device use.</td>
             <td>Reference to Patient (or other subject).</td>
           </tr>
           <tr>
             <td>header.identifier</td>
-            <td>Business identifier for the object.</td>
             <td>equivalent</td>
             <td>DeviceUseStatement</td>
             <td>identifier</td>
-            <td>Business identifier for this device use statement.</td>
             <td>Copy over all identifiers if multiple.</td>
           </tr>
           <tr class="highlight-yellow">
             <td>header.author[x]</td>
-            <td>The author of the device usage statement.</td>
             <td>no-map</td>
             <td>DeviceUseStatement</td>
-            <td></td>
             <td></td>
             <td></td>
           </tr>
           <tr>
             <td>header.date</td>
-            <td>Date/time the resource was authored/issued.</td>
             <td>equivalent</td>
             <td>DeviceUseStatement</td>
             <td>recordedOn</td>
-            <td>When the device use statement was recorded.</td>
             <td></td>
           </tr>
           <tr>
             <td>header.status</td>
-            <td>Current status of the device usage.</td>
             <td>equivalent</td>
             <td>DeviceUseStatement</td>
             <td>status</td>
-            <td>Status of the device use statement.</td>
             <td>Preferred binding: HL7 Device Use Statement Status or HL7 Device Usage Status.</td>
           </tr>
           <tr>
             <td>header.source</td>
-            <td>Source of information (e.g. patient, patient's proxy).</td>
             <td>related-to</td>
             <td>DeviceUseStatement</td>
             <td>source</td>
-            <td>Reporter or source context for the device use information.</td>
             <td>When both header.author[x] and header.source are populated, additional profiling may be needed to preserve both semantics.</td>
           </tr>
           <tr>
             <td>header.language</td>
-            <td>Language of the resource (IETF tag).</td>
             <td>equivalent</td>
             <td>DeviceUseStatement</td>
             <td>language</td>
-            <td>Language used in the statement.</td>
             <td></td>
           </tr>
           <tr>
             <td>periodOfUse</td>
-            <td>The period of time during which the device was implanted in the patient or the external device was in use.</td>
             <td>equivalent</td>
             <td>DeviceUseStatement</td>
             <td>timingPeriod</td>
-            <td>Period during which the device was used.</td>
             <td></td>
           </tr>
           <tr>
             <td>device[x]</td>
-            <td>The details of the device used.</td>
             <td>source-is-broader-than-target</td>
             <td>DeviceUseStatement</td>
             <td>device</td>
-            <td>Device being used.</td>
             <td>FHIR uses Reference(Device); CodeableConcept may require a Device instance.</td>
           </tr>
           <tr>
             <td>bodySite</td>
-            <td>Anatomical location of the device. May include laterality.</td>
             <td>related-to</td>
             <td>DeviceUseStatement</td>
             <td>bodySite</td>
-            <td>Body site where the device is used.</td>
             <td>EHDSBodyStructure may need to be summarized as CodeableConcept.</td>
           </tr>
           <tr>
             <td>reason[x]</td>
-            <td>Reason or justification for the use of the device.</td>
             <td>source-is-broader-than-target</td>
             <td>DeviceUseStatement</td>
             <td>reasonCode</td>
-            <td>Reason code for the device use.</td>
             <td>FHIR uses CodeableConcept; references may need to be represented as codes or extensions.</td>
           </tr>
           <tr>
             <td>note</td>
-            <td>Note about the device statement that were not represented at all or sufficiently in one of the attributes provided in a class.</td>
             <td>equivalent</td>
             <td>DeviceUseStatement</td>
             <td>note</td>
-            <td>Additional notes about the device use.</td>
             <td></td>
           </tr>
         </tbody>
