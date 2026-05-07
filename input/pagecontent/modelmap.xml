@@ -14,8 +14,9 @@
                 EHDS specifications. </div>
         </div>
     </div>
+    <a name="ehds-logical-models-to-fhir-profiles"> </a>
     <h3>EHDS Logical Models → FHIR Profiles</h3>
-    <a> </a>
+    
     <p>
         The Xt-EHR Joint Action defines EHDS logical data models for core clinical and
         administrative concepts. This Implementation Guide provides HL7 FHIR profiles
@@ -454,7 +455,7 @@
                             target="_blank">EHDSMedicationUse</a>
                     </td>
                     <td>
-                        <a href="StructureDefinition-medicationStatement-eu-eps.html">
+                        <a href="StructureDefinition-MedicationStatement-eu-eps.html">
                             <code>MedicationStatementEuEps</code>
                         </a>
                     </td>

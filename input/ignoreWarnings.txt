@@ -67,3 +67,7 @@ The Implementation Guide contains no examples for this profile
 
 # Non matching slices for obligations
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.2.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+
+# Codings not in the 'additional binding' value set
+Terminology_TX_NoValid_3_CC

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ciUrl="" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/eps">
-<version code="current" url=""/>
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/eps/xtehr" ciUrl="https://build.fhir.org/ig/hl7-eu/eps" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/eps">
+<version code="current" url="https://build.fhir.org/ig/hl7-eu/eps"/>
+<version code="1.0.0-alpha" url="http://hl7.eu/fhir/eps/xtehr"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
@@ -52,7 +53,6 @@
 <page key="map-ehdstravelhistory" name="EHDSTravelHistory Mapping"/>
 <page key="missing-data" name="Handling Missing Data"/>
 <page key="index" name="Home"/>
-<page key="mappings" name="ISO ↔ EU PS Mapping Overview"/>
 <page key="introduction" name="Introduction"/>
 <page key="knownIssues" name="Known Issues"/>
 <page key="logicalmodels" name="Logical Models"/>
