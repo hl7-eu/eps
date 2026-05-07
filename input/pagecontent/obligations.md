@@ -1,9 +1,11 @@
 
-<div xmlns="http://www.w3.org/1999/xhtml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<blockquote class="stu-note">
-		<b>Work in progress</b>
-		<p>This version of the guide adopts the IPS Obligations. A review will be done when the obligations on the Xt-EHR Logical MOdels will be delivered.</p>
-	</blockquote>
+<div class="model-map-block">
+      <div class="callout-wrapper">
+      <div class="callout-box">
+        <strong>IPS Obligation adoption:</strong>
+            This version of the guide adopts the IPS Obligations. A review will be done when the obligations on the Xt-EHR Logical MOdels will be delivered.
+      </div>
+      </div>
 </div>
 
 
