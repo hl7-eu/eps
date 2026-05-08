@@ -2,7 +2,7 @@ Profile: PractitionerOblEuEps
 Parent: PractitionerEuCore
 Id: practitioner-obl-eu-eps
 Title: "Practitioner - Obligations (EPS)"
-Description: "IPS obligations extracted from the Practitioner profile."
+Description: "This profiles set the IPS obligation on the EPS  Practitioner profile."
 
 // ================= IPS OBLIGATIONS =================
 * name insert ObligationIpsPopulateIfKnownDisplay

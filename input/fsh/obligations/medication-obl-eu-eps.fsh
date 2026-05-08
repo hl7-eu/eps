@@ -2,7 +2,7 @@ Profile: MedicationOblEuEps
 Parent: MedicationEuCore
 Id: medication-obl-eu-eps
 Title: "Medication - Obligations (EPS)"
-Description: "IPS obligations extracted from the Medication profile."
+Description: "This profiles set the IPS obligation on the EPS  Medication profile."
 
 // ================= IPS OBLIGATIONS =================
 * code insert ObligationIpsPopulateIfKnownDisplay

@@ -2,7 +2,7 @@ Profile: ImmunizationOblEuEps
 Parent: ImmunizationEuCore
 Id: immunization-obl-eu-eps
 Title: "Immunization - Obligations (EPS)"
-Description: "IPS obligations extracted from the Immunization profile."
+Description: "This profiles set the IPS obligation on the EPS  Immunization profile."
 
 // ================= IPS OBLIGATIONS =================
 * status insert ObligationIpsPopulateIfKnownDisplay

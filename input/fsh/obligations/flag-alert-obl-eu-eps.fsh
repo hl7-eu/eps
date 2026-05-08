@@ -2,7 +2,7 @@ Profile: FlagAlertOblEuEps
 Parent: FlagPatientEuCore
 Id: flag-alert-obl-eu-eps
 Title: "Flag :  Alert - Obligations (EPS)"
-Description: "IPS obligations extracted from the Flag - Alert profile."
+Description: "This profiles set the IPS obligation on the EPS  Flag - Alert profile."
 
 // ================= IPS OBLIGATIONS =================
 * extension[flag-priority] insert ObligationIpsPopulateIfKnownDisplay
