@@ -3,7 +3,7 @@
 ## Resource Profile: Observation Results - Radiology (IPS) 
 
  
-This profile represents the constraints applied to the Observation resource by the IPS project, which specifies a radiology observation for the international patient summary based on the FHIR standard R4. 
+This profile constrains the Observation resource by the IPS project, which specifies a radiology observation for the international patient summary based on the FHIR standard R4. 
 This observation may represent the conclusions of a diagnostic procedure such a Chest RX, or it may group the set of results produced by that single or multi-modality procedure. 
 In the latter case, the main observation (this one) carries the overall conclusion of the study and/or a global interpretation by the observer of the study as value of this observation; and may reference the atomic results of the study as "child observations". 
 It allows also providing details about the related study using the partOf element referring to an ImagingStudy resource. 
@@ -82,7 +82,7 @@ Other representations of profile: [CSV](../StructureDefinition-Observation-resul
       ]
     }
   ],
-  "description" : "This profile represents the constraints applied to the Observation resource by the IPS project, which specifies a radiology observation for the international patient summary based on the FHIR standard R4. \n\nThis observation may represent the conclusions of a diagnostic procedure such a Chest RX, or it may group the set of results produced by that single or multi-modality procedure. \n\nIn the latter case, the main observation (this one) carries the overall conclusion of the study and/or a global interpretation by the observer of the study as value of this observation; and may reference the atomic results of the study as \"child observations\".\n\nIt allows also providing details about the related study using the partOf element referring to an ImagingStudy resource.",
+  "description" : "This profile constrains the Observation resource by the IPS project, which specifies a radiology observation for the international patient summary based on the FHIR standard R4. \n\nThis observation may represent the conclusions of a diagnostic procedure such a Chest RX, or it may group the set of results produced by that single or multi-modality procedure. \n\nIn the latter case, the main observation (this one) carries the overall conclusion of the study and/or a global interpretation by the observer of the study as value of this observation; and may reference the atomic results of the study as \"child observations\".\n\nIt allows also providing details about the related study using the partOf element referring to an ImagingStudy resource.",
   "jurisdiction" : [
     {
       "coding" : [

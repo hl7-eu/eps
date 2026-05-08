@@ -840,7 +840,7 @@
           "reference" : "StructureDefinition/AllergyIntolerance-uv-ips"
         },
         "name" : "AllergyIntolerance (IPS)",
-        "description" : "This profile represents the constraints applied to the AllergyIntolerance resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an allergy or intolerance is represented in the patient summary as an instance of an AllergyIntolerance resource constrained by this profile.\n\nIt documents the relevant allergies or intolerances for a patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.",
+        "description" : "This profile constrains the AllergyIntolerance resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an allergy or intolerance is represented in the patient summary as an instance of an AllergyIntolerance resource constrained by this profile.\n\nIt documents the relevant allergies or intolerances for a patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy.",
         "exampleBoolean" : false
       },
       {
@@ -910,7 +910,7 @@
           "reference" : "StructureDefinition/Bundle-uv-ips"
         },
         "name" : "Bundle (IPS)",
-        "description" : "This profile represents the constraints applied to the Bundle resource by the International Patient Summary (IPS) FHIR Implementation Guide.",
+        "description" : "This profile constrains the Bundle resource by the International Patient Summary (IPS) FHIR Implementation Guide.",
         "exampleBoolean" : false
       },
       {
@@ -1050,7 +1050,7 @@
           "reference" : "StructureDefinition/Condition-uv-ips"
         },
         "name" : "Condition (IPS)",
-        "description" : "This profile represents the constraints applied to the Condition resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of a problem is represented in the patient summary as an instance of the Condition resource constrained by this profile.",
+        "description" : "This profile constrains the Condition resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of a problem is represented in the patient summary as an instance of the Condition resource constrained by this profile.",
         "exampleBoolean" : false
       },
       {
@@ -1120,7 +1120,7 @@
           "reference" : "StructureDefinition/Device-uv-ips"
         },
         "name" : "Device (IPS)",
-        "description" : "This profile represents the constraints applied to the Device resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A device used by or implanted on the patient is described in the patient summary as an instance of a Device resource constrained by this profile.",
+        "description" : "This profile constrains the Device resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A device used by or implanted on the patient is described in the patient summary as an instance of a Device resource constrained by this profile.",
         "exampleBoolean" : false
       },
       {
@@ -1162,7 +1162,7 @@
           "reference" : "StructureDefinition/Device-observer-uv-ips"
         },
         "name" : "Device - Performer or Observer (IPS)",
-        "description" : "This profile represents the constraints applied to the Device resource by the IPS project, which specifies an international patient summary based on the FHIR standard R4.\n\nThis profile describes a device that plays the role of observer or performer.",
+        "description" : "This profile constrains the Device resource by the IPS project, which specifies an international patient summary based on the FHIR standard R4.\n\nThis profile describes a device that plays the role of observer or performer.",
         "exampleBoolean" : false
       },
       {
@@ -1176,7 +1176,7 @@
           "reference" : "StructureDefinition/DeviceUseStatement-uv-ips"
         },
         "name" : "DeviceUseStatement (IPS)",
-        "description" : "This profile represents the constraints applied to the DeviceUseStatement resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A statement about a device used by or implanted on the patient is described in the patient summary as an instance of a DeviceUseStatement resource constrained by this profile.",
+        "description" : "This profile constrains the DeviceUseStatement resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A statement about a device used by or implanted on the patient is described in the patient summary as an instance of a DeviceUseStatement resource constrained by this profile.",
         "exampleBoolean" : false
       },
       {
@@ -1330,7 +1330,7 @@
           "reference" : "StructureDefinition/ImagingStudy-uv-ips"
         },
         "name" : "ImagingStudy (IPS)",
-        "description" : "This profile represents the constraints applied to the ImagingStudy resource by the IPS project, which specifies the information on a DICOM imaging study this imaging result is part of.",
+        "description" : "This profile constrains the ImagingStudy resource by the IPS project, which specifies the information on a DICOM imaging study this imaging result is part of.",
         "exampleBoolean" : false
       },
       {
@@ -1358,7 +1358,7 @@
           "reference" : "StructureDefinition/Immunization-uv-ips"
         },
         "name" : "Immunization (IPS)",
-        "description" : "This profile represents the constraints applied to the Immunization resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an immunization is represented in the patient summary as an instance of an Immunization resource constrained by this profile.\n\nIt describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party.",
+        "description" : "This profile constrains the Immunization resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an immunization is represented in the patient summary as an instance of an Immunization resource constrained by this profile.\n\nIt describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party.",
         "exampleBoolean" : false
       },
       {
@@ -1442,7 +1442,7 @@
           "reference" : "StructureDefinition/Medication-uv-ips"
         },
         "name" : "Medication (IPS)",
-        "description" : "This profile represents the constraints applied to the Medication resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A medication is described in the patient summary as an instance of a Medication resource constrained by this profile.",
+        "description" : "This profile constrains the Medication resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A medication is described in the patient summary as an instance of a Medication resource constrained by this profile.",
         "exampleBoolean" : false
       },
       {
@@ -1470,7 +1470,7 @@
           "reference" : "StructureDefinition/MedicationRequest-uv-ips"
         },
         "name" : "MedicationRequest (IPS)",
-        "description" : "This profile represents the constraints applied to the MedicationRequest resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication request is represented in the patient summary as an instance of a MedicationRequest resource constrained by this profile.",
+        "description" : "This profile constrains the MedicationRequest resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication request is represented in the patient summary as an instance of a MedicationRequest resource constrained by this profile.",
         "exampleBoolean" : false
       },
       {
@@ -1526,7 +1526,7 @@
           "reference" : "StructureDefinition/MedicationStatement-uv-ips"
         },
         "name" : "MedicationStatement (IPS)",
-        "description" : "This profile represents the constraints applied to the MedicationStatement resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication statement is represented in the patient summary as an instance of a MedicationStatement resource constrained by this profile.",
+        "description" : "This profile constrains the MedicationStatement resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication statement is represented in the patient summary as an instance of a MedicationStatement resource constrained by this profile.",
         "exampleBoolean" : false
       },
       {
@@ -1624,7 +1624,7 @@
           "reference" : "StructureDefinition/Observation-pregnancy-outcome-uv-ips"
         },
         "name" : "Observation Pregnancy - Outcome (IPS)",
-        "description" : "This profile constrains the Observation resource to represent the summarized history of pregnancy outcomes.",
+        "description" : "This profile constrains the Observation resource to represent the summarized history of pregnancy outcomes in the scope of the European Patient Summary.",
         "exampleBoolean" : false
       },
       {
@@ -1638,7 +1638,7 @@
           "reference" : "StructureDefinition/Observation-pregnancy-status-uv-ips"
         },
         "name" : "Observation Pregnancy - Status (IPS)",
-        "description" : "This profile constrains the Observation resource to represent the pregnancy status.",
+        "description" : "This profile constrains the Observation resource to represent the pregnancy status in the scope of the European Patient Summary.",
         "exampleBoolean" : false
       },
       {
@@ -1666,7 +1666,7 @@
           "reference" : "StructureDefinition/Observation-results-radiology-uv-ips"
         },
         "name" : "Observation Results - Radiology (IPS)",
-        "description" : "This profile represents the constraints applied to the Observation resource by the IPS project, which specifies a radiology observation for the international patient summary based on the FHIR standard R4. \n\nThis observation may represent the conclusions of a diagnostic procedure such a Chest RX, or it may group the set of results produced by that single or multi-modality procedure. \n\nIn the latter case, the main observation (this one) carries the overall conclusion of the study and/or a global interpretation by the observer of the study as value of this observation; and may reference the atomic results of the study as \"child observations\".\n\nIt allows also providing details about the related study using the partOf element referring to an ImagingStudy resource.",
+        "description" : "This profile constrains the Observation resource by the IPS project, which specifies a radiology observation for the international patient summary based on the FHIR standard R4. \n\nThis observation may represent the conclusions of a diagnostic procedure such a Chest RX, or it may group the set of results produced by that single or multi-modality procedure. \n\nIn the latter case, the main observation (this one) carries the overall conclusion of the study and/or a global interpretation by the observer of the study as value of this observation; and may reference the atomic results of the study as \"child observations\".\n\nIt allows also providing details about the related study using the partOf element referring to an ImagingStudy resource.",
         "exampleBoolean" : false
       },
       {
@@ -1932,7 +1932,7 @@
           "reference" : "StructureDefinition/Patient-uv-ips"
         },
         "name" : "Patient (IPS)",
-        "description" : "This profile represents the constraints applied to the Patient resource by the International Patient Summary (IPS) FHIR Implementation Guide and describes the minimum expectations for the Patient resource when used in the IPS composition or in one of the referred resources.",
+        "description" : "This profile constrains the Patient resource by the International Patient Summary (IPS) FHIR Implementation Guide and describes the minimum expectations for the Patient resource when used in the IPS composition or in one of the referred resources.",
         "exampleBoolean" : false
       },
       {
@@ -2142,7 +2142,7 @@
           "reference" : "StructureDefinition/Procedure-uv-ips"
         },
         "name" : "Procedure (IPS)",
-        "description" : "This profile represents the constraints applied to the Procedure resource by the IPS project, which specifies an entry of the History of Procedure for the international patient summary based on the FHIR standard R4.",
+        "description" : "This profile constrains the Procedure resource by the IPS project, which specifies an entry of the History of Procedure for the international patient summary based on the FHIR standard R4.",
         "exampleBoolean" : false
       },
       {

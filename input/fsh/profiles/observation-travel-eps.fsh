@@ -2,7 +2,7 @@ Profile: ObservationTravelEuEps
 Parent: Observation
 Id: observation-travel-eu-eps
 Title: "Observation: Country Visited (EPS)"
-Description: "This profile sets minimum expectations for the Observation resource to record, search, and fetch travel history."
+Description: "This profile constrains the Observation resource to record, search, and fetch travel history in the scope of the European Patient Summary."
 * ^experimental = false
 
 * identifier ^short = "Business identifier"

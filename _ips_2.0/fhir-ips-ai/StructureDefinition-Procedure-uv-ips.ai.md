@@ -3,7 +3,7 @@
 ## Resource Profile: Procedure (IPS) 
 
  
-This profile represents the constraints applied to the Procedure resource by the IPS project, which specifies an entry of the History of Procedure for the international patient summary based on the FHIR standard R4. 
+This profile constrains the Procedure resource by the IPS project, which specifies an entry of the History of Procedure for the international patient summary based on the FHIR standard R4. 
 
 **Usages:**
 
@@ -78,7 +78,7 @@ Other representations of profile: [CSV](../StructureDefinition-Procedure-uv-ips.
       ]
     }
   ],
-  "description" : "This profile represents the constraints applied to the Procedure resource by the IPS project, which specifies an entry of the History of Procedure for the international patient summary based on the FHIR standard R4.",
+  "description" : "This profile constrains the Procedure resource by the IPS project, which specifies an entry of the History of Procedure for the international patient summary based on the FHIR standard R4.",
   "jurisdiction" : [
     {
       "coding" : [

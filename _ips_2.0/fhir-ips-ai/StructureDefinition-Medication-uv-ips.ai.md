@@ -3,7 +3,7 @@
 ## Resource Profile: Medication (IPS) 
 
  
-This profile represents the constraints applied to the Medication resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A medication is described in the patient summary as an instance of a Medication resource constrained by this profile. 
+This profile constrains the Medication resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A medication is described in the patient summary as an instance of a Medication resource constrained by this profile. 
 
 **Usages:**
 
@@ -79,7 +79,7 @@ Other representations of profile: [CSV](../StructureDefinition-Medication-uv-ips
       ]
     }
   ],
-  "description" : "This profile represents the constraints applied to the Medication resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A medication is described in the patient summary as an instance of a Medication resource constrained by this profile.",
+  "description" : "This profile constrains the Medication resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A medication is described in the patient summary as an instance of a Medication resource constrained by this profile.",
   "jurisdiction" : [
     {
       "coding" : [

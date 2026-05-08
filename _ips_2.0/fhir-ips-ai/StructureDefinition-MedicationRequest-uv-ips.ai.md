@@ -3,7 +3,7 @@
 ## Resource Profile: MedicationRequest (IPS) 
 
  
-This profile represents the constraints applied to the MedicationRequest resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication request is represented in the patient summary as an instance of a MedicationRequest resource constrained by this profile. 
+This profile constrains the MedicationRequest resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication request is represented in the patient summary as an instance of a MedicationRequest resource constrained by this profile. 
 
 > **medicationCodeableConcept vs. medicationReference**In the previously balloted versions, medicationCodeableConcept was not allowed to represent medications. To better support implementations, both options (medicationCodeableConcept and medicationReference) are now allowed, recognizing that different jurisdictions may provide different guidance worldwide and that future FHIR releases introduce[CodeableReference](https://hl7.org/fhir/R5/references.html#CodeableReference)STU implementers are encouraged to provide their feedback about this design choice.
 
@@ -84,7 +84,7 @@ Other representations of profile: [CSV](../StructureDefinition-MedicationRequest
       ]
     }
   ],
-  "description" : "This profile represents the constraints applied to the MedicationRequest resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication request is represented in the patient summary as an instance of a MedicationRequest resource constrained by this profile.",
+  "description" : "This profile constrains the MedicationRequest resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication request is represented in the patient summary as an instance of a MedicationRequest resource constrained by this profile.",
   "jurisdiction" : [
     {
       "coding" : [

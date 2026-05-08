@@ -2,7 +2,7 @@ Profile: DeviceEuEps
 Parent: Device
 Id: device-eu-eps
 Title: "Device (EPS)"
-Description: """This profile represents the constraints applied to the Device resource in the scope of the European Patient Summary."""
+Description: """This profile constrains the Device resource in the scope of the European Patient Summary."""
 //* type 0..1 
 //* type only CodeableConceptIPS
 

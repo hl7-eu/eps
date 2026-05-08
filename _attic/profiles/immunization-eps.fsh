@@ -3,12 +3,12 @@ Profile:  ImmunizationEuEps
 Parent:   Immunization
 Id:       immunization-eu-eps
 Title:    "Immunization (EPS)"
-Description: """This profile constrains the Immunization resource for the purpose of the European patient summary."""
+Description: """This profile constrains the Immunization resource in the scope of the European Patient Summary."""
 
 //-------------------------------------------------------------------------------------------
 
 * ^experimental = false
-* ^purpose = "This profile constrains the Immunization resource for the purpose of the European patient summary."
+* ^purpose = "This profile constrains the Immunization resource in the scope of the European Patient Summary."
 
 * insert ImposeProfile($Immunization-uv-ips, 0)
 
@@ -94,7 +94,7 @@ Profile:  ImmunizationRecommendationEuEps
 Parent:   ImmunizationRecommendation
 Id:       immunizationRecommendation-eu-eps
 Title:    "ImmunizationRecommendation (EPS)"
-Description: """This profile defines how to represent Immunization Recommandations for the purpose of the European patient summary."""
+Description: """This profile defines how to represent Immunization Recommandations in the scope of the European Patient Summary."""
 //-------------------------------------------------------------------------------------------
 
 * date ^short = "When recomendation was created"

@@ -2,7 +2,7 @@ Profile: DiagnosticReportEuEps
 Parent: DiagnosticReportEuCore
 Id: diagnosticReport-eu-eps
 Title: "DiagnosticReport (EPS)"
-Description: "This profile represents the constraints applied to the DiagnosticReport resource by this guide."
+Description: "This profile constrains the DiagnosticReport resource in the scope of the European Patient Summary."
 
 * insert SetFmmAndStatusRule (1, draft)
 * insert ImposeProfile ( $DiagnosticReport-uv-ips, 0 )

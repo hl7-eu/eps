@@ -3,7 +3,7 @@
 ## Resource Profile: Device - Performer or Observer (IPS) 
 
  
-This profile represents the constraints applied to the Device resource by the IPS project, which specifies an international patient summary based on the FHIR standard R4. 
+This profile constrains the Device resource by the IPS project, which specifies an international patient summary based on the FHIR standard R4. 
 This profile describes a device that plays the role of observer or performer. 
 
 **Usages:**
@@ -77,7 +77,7 @@ Other representations of profile: [CSV](../StructureDefinition-Device-observer-u
       ]
     }
   ],
-  "description" : "This profile represents the constraints applied to the Device resource by the IPS project, which specifies an international patient summary based on the FHIR standard R4.\n\nThis profile describes a device that plays the role of observer or performer.",
+  "description" : "This profile constrains the Device resource by the IPS project, which specifies an international patient summary based on the FHIR standard R4.\n\nThis profile describes a device that plays the role of observer or performer.",
   "jurisdiction" : [
     {
       "coding" : [

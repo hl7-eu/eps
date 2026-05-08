@@ -2,7 +2,7 @@ Profile: ObservationPregnancyGestationalAgeEuEps
 Parent: Observation
 Id: observation-pregnancy-gestationalAge-eu-eps
 Title: "Observation : Pregnancy - Gestational Age (EPS)"
-Description: "This profile constrains the Observation resource to represent gestational age in days."
+Description: "This profile constrains the Observation resource to represent gestational age in days in the scope of the European Patient Summary."
 
 * insert SetFmmAndStatusRule (1, draft)
 

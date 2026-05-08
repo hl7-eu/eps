@@ -3,7 +3,7 @@
 ## Resource Profile: Observation Pregnancy - Status (IPS) 
 
  
-This profile constrains the Observation resource to represent the pregnancy status. 
+This profile constrains the Observation resource to represent the pregnancy status in the scope of the European Patient Summary. 
 
 **Usages:**
 
@@ -78,7 +78,7 @@ Other representations of profile: [CSV](../StructureDefinition-Observation-pregn
       ]
     }
   ],
-  "description" : "This profile constrains the Observation resource to represent the pregnancy status.",
+  "description" : "This profile constrains the Observation resource to represent the pregnancy status in the scope of the European Patient Summary.",
   "jurisdiction" : [
     {
       "coding" : [

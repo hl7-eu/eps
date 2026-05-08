@@ -3,7 +3,7 @@
 ## Resource Profile: Bundle (IPS) 
 
  
-This profile represents the constraints applied to the Bundle resource by the International Patient Summary (IPS) FHIR Implementation Guide. 
+This profile constrains the Bundle resource by the International Patient Summary (IPS) FHIR Implementation Guide. 
 
  While this Bundle profile lists many resources which may be included in an IPS document, specific requirements, expectations and obligations are described in the [IPS Composition](StructureDefinition-Composition-uv-ips.md) profile. Therefore, the only entry obligation shown below is on the IPS Composition, which must be the first entry as explained in the [FHIR Documents.](http://hl7.org/fhir/R4/documents.html) 
 
@@ -78,7 +78,7 @@ Other representations of profile: [CSV](../StructureDefinition-Bundle-uv-ips.csv
       ]
     }
   ],
-  "description" : "This profile represents the constraints applied to the Bundle resource by the International Patient Summary (IPS) FHIR Implementation Guide.",
+  "description" : "This profile constrains the Bundle resource by the International Patient Summary (IPS) FHIR Implementation Guide.",
   "jurisdiction" : [
     {
       "coding" : [

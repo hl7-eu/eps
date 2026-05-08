@@ -2,7 +2,7 @@ Profile: ConditionOblEuEps
 Parent: ConditionEuCore
 Id: condition-obl-eu-eps
 Title: "Condition - Obligations (EPS)"
-Description: "This profiles set the IPS obligation on the EPS  Condition profile."
+Description: "This profiles set the IPS obligations on the EU Core Condition profile."
 
 // ================= IPS OBLIGATIONS =================
 * clinicalStatus insert ObligationIpsPopulateIfKnownDisplay

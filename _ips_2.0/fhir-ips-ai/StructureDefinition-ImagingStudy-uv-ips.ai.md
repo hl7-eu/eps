@@ -3,7 +3,7 @@
 ## Resource Profile: ImagingStudy (IPS) 
 
  
-This profile represents the constraints applied to the ImagingStudy resource by the IPS project, which specifies the information on a DICOM imaging study this imaging result is part of. 
+This profile constrains the ImagingStudy resource by the IPS project, which specifies the information on a DICOM imaging study this imaging result is part of. 
 
 **Usages:**
 
@@ -78,7 +78,7 @@ Other representations of profile: [CSV](../StructureDefinition-ImagingStudy-uv-i
       ]
     }
   ],
-  "description" : "This profile represents the constraints applied to the ImagingStudy resource by the IPS project, which specifies the information on a DICOM imaging study this imaging result is part of.",
+  "description" : "This profile constrains the ImagingStudy resource by the IPS project, which specifies the information on a DICOM imaging study this imaging result is part of.",
   "jurisdiction" : [
     {
       "coding" : [

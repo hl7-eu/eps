@@ -3,7 +3,7 @@ Parent: DeviceUseStatement
 // Parent: DeviceUvIps
 Id: deviceUseStatement-eu-eps
 Title: "DeviceUseStatement (EPS)"
-Description: """This profile represents the constraints applied to the DeviceUseStatement resource in the scope of the European Patient Summary."""
+Description: """This profile constrains the DeviceUseStatement resource in the scope of the European Patient Summary."""
 
 * insert ImposeProfile ( $DeviceUseStatement-uv-ips, 0 )  // Check if this is appropriate (see  support)
 * identifier ^short = "Device usage identifier"

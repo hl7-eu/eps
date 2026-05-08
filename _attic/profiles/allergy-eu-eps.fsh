@@ -2,9 +2,9 @@ Profile: AllergyIntoleranceEuEps
 Parent: $AllergyIntolerance-uv-ips
 Id: allergyIntolerance-eu-eps
 Title:    "Allergy Intolerance (EPS)"
-Description: """This profile constrains the AllergyIntolerance resource for the purpose of the European patient summary."""
+Description: """This profile constrains the AllergyIntolerance resource in the scope of the European Patient Summary."""
 * ^experimental = false
-* ^purpose = "This profile constrains the AllergyIntolerance resource for the purpose of the European patient summary."
+* ^purpose = "This profile constrains the AllergyIntolerance resource in the scope of the European Patient Summary."
 
 * insert SetFmmAndStatusRule (1, draft)
 * insert ImposeProfile($AllergyIntolerance-uv-ips, 0)

@@ -3,7 +3,7 @@
 ## Resource Profile: Device (IPS) 
 
  
-This profile represents the constraints applied to the Device resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A device used by or implanted on the patient is described in the patient summary as an instance of a Device resource constrained by this profile. 
+This profile constrains the Device resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A device used by or implanted on the patient is described in the patient summary as an instance of a Device resource constrained by this profile. 
 
  This profile follows the [HL7 Cross Paradigm Implementation Guide: UDI Pattern](https://www.hl7.org/implement/standards/product_brief.cfm?product_id=487) guidelines for exchanging information about the use and implantation of medical devices in patients. While a unique device identifier (UDI) is not required in this profile, it consists of a unique numeric or alphanumeric code, which may be machine-readable. The UDI generally consists of a mandatory Device Identifier (DI) and a conditional Production identifier (PI) that identifies one or more of the five UDI-PI elements. The UDI and its components may be mapped using the guidance in [FHIR UDI Mapping](https://hl7.org/fhir/R4/device-mappings.html#udi) 
 
@@ -80,7 +80,7 @@ Other representations of profile: [CSV](../StructureDefinition-Device-uv-ips.csv
       ]
     }
   ],
-  "description" : "This profile represents the constraints applied to the Device resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A device used by or implanted on the patient is described in the patient summary as an instance of a Device resource constrained by this profile.",
+  "description" : "This profile constrains the Device resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A device used by or implanted on the patient is described in the patient summary as an instance of a Device resource constrained by this profile.",
   "jurisdiction" : [
     {
       "coding" : [

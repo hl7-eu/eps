@@ -2,7 +2,7 @@ Profile: ProcedureEuEps
 Parent: ProcedureEuCore
 Id: procedure-eu-eps
 Title:    "Procedure (EPS)"
-Description: "This profile represents the constraints applied to the Procedure resource by this guide."
+Description: "This profile constrains the Procedure resource in the scope of the European Patient Summary."
 
 * insert SetFmmAndStatusRule (1, draft)
 * insert ImposeProfile ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)

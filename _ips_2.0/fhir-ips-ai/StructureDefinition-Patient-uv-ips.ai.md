@@ -3,7 +3,7 @@
 ## Resource Profile: Patient (IPS) 
 
  
-This profile represents the constraints applied to the Patient resource by the International Patient Summary (IPS) FHIR Implementation Guide and describes the minimum expectations for the Patient resource when used in the IPS composition or in one of the referred resources. 
+This profile constrains the Patient resource by the International Patient Summary (IPS) FHIR Implementation Guide and describes the minimum expectations for the Patient resource when used in the IPS composition or in one of the referred resources. 
 
  This profile generally seeks to align with guidance from the [HL7 Cross Paradigm Implementation Guide: Gender Harmony - Sex and Gender Representation](https://hl7.org/xprod/ig/uv/gender-harmony/). While the extensions of [Individual Gender Identity](https://hl7.org/fhir/extensions/5.2.0/StructureDefinition-individual-genderIdentity.html) and [Individual Pronouns](https://hl7.org/fhir/extensions/5.2.0/StructureDefinition-individual-pronouns.html) are not flagged as MustSupport in IPS, we recommend implementers consult with that guide in regards to their use. In addition, [Name to Use](https://hl7.org/xprod/ig/uv/gender-harmony/model.html#name-to-use-ntu) may be represented by setting `Patient.name.use` to "usual". 
 
@@ -80,7 +80,7 @@ Other representations of profile: [CSV](../StructureDefinition-Patient-uv-ips.cs
       ]
     }
   ],
-  "description" : "This profile represents the constraints applied to the Patient resource by the International Patient Summary (IPS) FHIR Implementation Guide and describes the minimum expectations for the Patient resource when used in the IPS composition or in one of the referred resources.",
+  "description" : "This profile constrains the Patient resource by the International Patient Summary (IPS) FHIR Implementation Guide and describes the minimum expectations for the Patient resource when used in the IPS composition or in one of the referred resources.",
   "jurisdiction" : [
     {
       "coding" : [

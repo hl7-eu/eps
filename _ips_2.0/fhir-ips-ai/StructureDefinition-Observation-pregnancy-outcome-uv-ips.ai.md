@@ -3,7 +3,7 @@
 ## Resource Profile: Observation Pregnancy - Outcome (IPS) 
 
  
-This profile constrains the Observation resource to represent the summarized history of pregnancy outcomes. 
+This profile constrains the Observation resource to represent the summarized history of pregnancy outcomes in the scope of the European Patient Summary. 
 
 **Usages:**
 
@@ -78,7 +78,7 @@ Other representations of profile: [CSV](../StructureDefinition-Observation-pregn
       ]
     }
   ],
-  "description" : "This profile constrains the Observation resource to represent the summarized history of pregnancy outcomes.",
+  "description" : "This profile constrains the Observation resource to represent the summarized history of pregnancy outcomes in the scope of the European Patient Summary.",
   "jurisdiction" : [
     {
       "coding" : [

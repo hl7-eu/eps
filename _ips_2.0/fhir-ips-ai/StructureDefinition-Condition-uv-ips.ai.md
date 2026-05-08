@@ -3,7 +3,7 @@
 ## Resource Profile: Condition (IPS) 
 
  
-This profile represents the constraints applied to the Condition resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of a problem is represented in the patient summary as an instance of the Condition resource constrained by this profile. 
+This profile constrains the Condition resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of a problem is represented in the patient summary as an instance of the Condition resource constrained by this profile. 
 
 **Usages:**
 
@@ -78,7 +78,7 @@ Other representations of profile: [CSV](../StructureDefinition-Condition-uv-ips.
       ]
     }
   ],
-  "description" : "This profile represents the constraints applied to the Condition resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of a problem is represented in the patient summary as an instance of the Condition resource constrained by this profile.",
+  "description" : "This profile constrains the Condition resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of a problem is represented in the patient summary as an instance of the Condition resource constrained by this profile.",
   "jurisdiction" : [
     {
       "coding" : [
