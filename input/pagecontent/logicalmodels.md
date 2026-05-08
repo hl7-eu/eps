@@ -1,13 +1,12 @@
 ### EHDS Logical Data Models
 
-Logical data models (or information models) for the **European Health Data Space (EHDS)** are **currently being developed** by the [**Xt-EHR Joint Action**](https://www.xt-ehr.eu/). These models will form the **basis of the Joint Action's proposal** for the future EHDS Implementing Act.
+The [**Xt-EHR Joint Action**](https://www.xt-ehr.eu/) has developped a set of Logical data models (or information models)  - see [**Xt-EHR EHDS Logical Information Models**](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common) Implementation Guide - that have been used as **basis** for the future **European Health Data Space (EHDS)** Implementing Act.
 
-They represent **evolving, refined interpretations** of the data sets described in the [**eHealth Network (eHN) Guidelines**](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/eu-cooperation/ehealth-network_en#ehealth-network-guidelines), and are expected to be further updated during the Joint Action process.
+They represent **evolving, refined interpretations** of the data sets described in the [**eHealth Network (eHN) Guidelines**](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/eu-cooperation/ehealth-network_en#ehealth-network-guidelines), and are subject to further refinement.
 
 This Implementation Guide (IG) aims to **align with the emerging EHDS logical models** and to **provide HL7 FHIR profiles** that **realise the requirements identified in these models**.
 
 The EHDS logical models currently supported in this version of the guide are listed below.
-For the most recent and in-progress versions, please refer to the [**Xt-EHR EHDS Logical Information Models**](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common) Implementation Guide.
 
 
 <div class="model-map-block">
