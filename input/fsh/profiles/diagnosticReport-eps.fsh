@@ -25,6 +25,7 @@ Description: "This profile represents the constraints applied to the DiagnosticR
 
 * subject.reference insert ObligationIpsPopulateIfKnownHandle
 
+* effective[x] 1..
 * effective[x] insert ObligationIpsPopulateIfKnownDisplay
 
 * effectiveDateTime insert ObligationIpsAbleToPopulateDisplay
