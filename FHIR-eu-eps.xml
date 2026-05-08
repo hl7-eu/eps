@@ -22,7 +22,7 @@
 <artifact id="ValueSet/gestational-age-loinc" key="ValueSet-gestational-age-loinc" name="Gestational Age (LOINC)"/>
 <artifact id="StructureDefinition/immunization-obl-eu-eps" key="StructureDefinition-immunization-obl-eu-eps" name="Immunization - Obligations (EPS)"/>
 <artifact id="StructureDefinition/medication-obl-eu-eps" key="StructureDefinition-medication-obl-eu-eps" name="Medication - Obligations (EPS)"/>
-<artifact id="MedicationStatement/635c4921-5fcb-4ce7-b6ef-d866b680ad01" key="MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01" name="Medication Statement: Simvastatin 10 mg oral tablet"/>
+<artifact id="MedicationStatement/635c4921-5fcb-4ce7-b6ef-d866b680ad01" key="MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01" name="MedicationStatement: Simvastatin 10 mg oral tablet"/>
 <artifact id="StructureDefinition/medicationrequest-obl-eu-eps" key="StructureDefinition-medicationrequest-obl-eu-eps" name="MedicationRequest - Obligations (EPS)"/>
 <artifact id="StructureDefinition/MedicationStatement-eu-eps" key="StructureDefinition-MedicationStatement-eu-eps" name="MedicationStatement (EPS)"/>
 <artifact id="StructureDefinition/observation-pregnancy-edd-eu-eps" key="StructureDefinition-observation-pregnancy-edd-eu-eps" name="Observation: Pregnancy - Expected Delivery Date (EPS)"/>
@@ -37,7 +37,7 @@
 <artifact id="StructureDefinition/organization-obl-eu-eps" key="StructureDefinition-organization-obl-eu-eps" name="Organization - Obligations (EPS)"/>
 <artifact id="Parameters/exp-params" key="Parameters-exp-params" name="Parameters for Terminology expansion using Snomed-CT international edition"/>
 <artifact id="StructureDefinition/patient-eu-eps" key="StructureDefinition-patient-eu-eps" name="Patient (EPS)"/>
-<artifact id="Patient/f51071b2-6c06-4d31-85ed-26a6b964ef98" key="Patient-f51071b2-6c06-4d31-85ed-26a6b964ef98" name="Patient Example: Petra Schwartz"/>
+<artifact id="Patient/f51071b2-6c06-4d31-85ed-26a6b964ef98" key="Patient-f51071b2-6c06-4d31-85ed-26a6b964ef98" name="Patient: Petra Schwartz"/>
 <artifact id="StructureDefinition/practitioner-obl-eu-eps" key="StructureDefinition-practitioner-obl-eu-eps" name="Practitioner - Obligations (EPS)"/>
 <artifact id="StructureDefinition/practitionerrole-obl-eu-eps" key="StructureDefinition-practitionerrole-obl-eu-eps" name="PractitionerRole - Obligations (EPS)"/>
 <artifact id="StructureDefinition/procedure-eu-eps" key="StructureDefinition-procedure-eu-eps" name="Procedure (EPS)"/>

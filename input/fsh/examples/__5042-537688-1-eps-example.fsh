@@ -627,7 +627,7 @@ Simvastatin 10 mg oral tablet, Oral tablet
 
 Instance: Instance-MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01
 InstanceOf: MedicationStatementEuEps
-Title: "Medication Statement: Simvastatin 10 mg oral tablet"
+Title: "MedicationStatement: Simvastatin 10 mg oral tablet"
 Description: "Example medication statement for Simvastatin 10 mg oral tablet [Petra Schwartz]"
 Usage: #example
 * id = "635c4921-5fcb-4ce7-b6ef-d866b680ad01"
@@ -2159,7 +2159,7 @@ Usage: #inline
 
 Instance: Instance-Patient-f51071b2-6c06-4d31-85ed-26a6b964ef98
 InstanceOf: PatientEuEps
-Title: "Patient Example: Petra Schwartz"
+Title: "Patient: Petra Schwartz"
 Description: "Example patient for the HL7 Europe Patient Summary (EPS)."
 Usage: #example
 * id = "f51071b2-6c06-4d31-85ed-26a6b964ef98"
