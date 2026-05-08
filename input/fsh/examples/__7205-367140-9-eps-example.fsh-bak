@@ -372,7 +372,7 @@ InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "928991c9-a40b-4609-82e6-386ffa1f82c6"
 * category = $condition-category#problem-list-item "Problem List Item"
-* code.coding[0] = $sct#15777000 "Prediabetes (disorder)"
+* code.coding[0] = $sct#714628002 "Prediabetes (disorder)"
 * code.text = "Prediabetes"
 * onsetDateTime = "1991-02-13"
 * clinicalStatus = $condition-clinical#active
@@ -805,7 +805,7 @@ Usage: #inline
 * category.coding = $sct#734163000 "Care plan"
 * activity.detail.kind = #Appointment
 * activity.detail.status = #unknown
-* activity.detail.code.coding = $sct#412776001 "Chronic obstructive pulmonary disease clinical management plan (qualifier value)"
+* activity.detail.code.coding = $sct#736283006 "Chronic obstructive pulmonary disease clinical management plan"
 * activity.detail.description = "Chronic obstructive pulmonary disease clinical management plan"
 * period.start = "1995-12-27"
 * activity.detail.reasonCode = $sct#87433001 "Pulmonary emphysema (disorder)"
@@ -828,10 +828,10 @@ Usage: #inline
 * category.coding = $sct#734163000 "Care plan"
 * activity.detail.kind = #Appointment
 * activity.detail.status = #unknown
-* activity.detail.code.coding = $sct#698360004 "Diabetes self management plan (qualifier value)"
+* activity.detail.code.coding = $sct#735985000 "Diabetes self management plan (qualifier value)"
 * activity.detail.description = "Diabetes self management plan"
 * period.start = "1991-02-13"
-* activity.detail.reasonCode = $sct#15777000 "Prediabetes"
+* activity.detail.reasonCode = $sct#714628002 "Prediabetes"
 * text.status = #generated
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">

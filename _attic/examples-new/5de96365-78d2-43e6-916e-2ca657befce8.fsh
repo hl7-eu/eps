@@ -3,7 +3,7 @@ InstanceOf: Condition
 Usage: #inline
 * meta.profile = "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"
 * category = $condition-category#problem-list-item "Problem List Item"
-* code = $sct#15777000 "Prediabetes (disorder)"
+* code = $sct#714628002 "Prediabetes (disorder)"
 * code.text = "Prediabetes"
 * onsetDateTime = "1995-11-23"
 * subject = Reference(urn:uuid:8499029f-70ec-4919-88a9-938d8ad56397) "Sebastian Schmidl"

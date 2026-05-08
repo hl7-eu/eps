@@ -480,7 +480,7 @@ InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "671c5ac6-0c08-487a-9204-caa8b626f38d"
 * category = $condition-category#problem-list-item "Problem List Item"
-* code.coding[0] = $sct#15777000 "Prediabetes (disorder)"
+* code.coding[0] = $sct#714628002 "Prediabetes (disorder)"
 * code.text = "Prediabetes"
 * onsetDateTime = "1991-02-18"
 * clinicalStatus = $condition-clinical#active
@@ -1302,8 +1302,8 @@ Usage: #inline
 * id = "09a571d6-2e8c-4409-9dc0-947877066ba8"
 * verificationStatus = $allergyintolerance-verification#confirmed
 * type = #allergy
-* code.coding[0] = $sct#419199007 "Allergy to substance (finding)"
-* code.text = "Allergy to substance"
+* code.coding[0] = $sct#609328004 "Allergic disposition"
+* code.text = "Allergic disposition"
 * onsetDateTime = "1978-10-26"
 * clinicalStatus.coding = $allergyintolerance-clinical#active
 * category = #environment
@@ -1311,7 +1311,7 @@ Usage: #inline
 * text.status = #generated
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
-<table class="hl7__ips"><tr><td>Allergy to substance</td><td><span class='nb'>1978-10-26</span></td><td>active</td><td>environment</td><td></td></tr></table>
+<table class="hl7__ips"><tr><td>Allergic disposition</td><td><span class='nb'>1978-10-26</span></td><td>active</td><td>environment</td><td></td></tr></table>
 </div>
 """
 
@@ -1350,7 +1350,7 @@ Usage: #inline
 * category.coding = $sct#734163000 "Care plan"
 * activity.detail.kind = #Appointment
 * activity.detail.status = #unknown
-* activity.detail.code.coding = $sct#412776001 "Chronic obstructive pulmonary disease clinical management plan (qualifier value)"
+* activity.detail.code.coding = $sct#736283006 "Chronic obstructive pulmonary disease clinical management plan"
 * activity.detail.description = "Chronic obstructive pulmonary disease clinical management plan"
 * period.start = "2020-06-15"
 * activity.detail.reasonCode = $sct#185086009 "Chronic obstructive bronchitis (disorder)"
@@ -1373,10 +1373,10 @@ Usage: #inline
 * category.coding = $sct#734163000 "Care plan"
 * activity.detail.kind = #Appointment
 * activity.detail.status = #unknown
-* activity.detail.code.coding = $sct#698360004 "Diabetes self management plan (qualifier value)"
+* activity.detail.code.coding = $sct#735985000 "Diabetes self management plan (qualifier value)"
 * activity.detail.description = "Diabetes self management plan"
 * period.start = "1991-02-18"
-* activity.detail.reasonCode = $sct#15777000 "Prediabetes"
+* activity.detail.reasonCode = $sct#714628002 "Prediabetes"
 * text.status = #generated
 * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
