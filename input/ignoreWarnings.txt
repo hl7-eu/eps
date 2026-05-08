@@ -97,3 +97,12 @@ Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a b
 
 # Depracated Regex usage
 The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
+
+# Examples are not planned for obligation profiles
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/eps/StructureDefinition/allergyintolerance-obl-eu-eps'): The Implementation Guide contains no explicitly linked examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/eps/StructureDefinition/condition-obl-eu-eps'): The Implementation Guide contains no explicitly linked examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/eps/StructureDefinition/immunization-obl-eu-eps'): The Implementation Guide contains no explicitly linked examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/eps/StructureDefinition/medication-obl-eu-eps'): The Implementation Guide contains no explicitly linked examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/eps/StructureDefinition/organization-obl-eu-eps'): The Implementation Guide contains no explicitly linked examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/eps/StructureDefinition/practitioner-obl-eu-eps'): The Implementation Guide contains no explicitly linked examples for this profile
+INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/eps/StructureDefinition/practitionerrole-obl-eu-eps'): The Implementation Guide contains no explicitly linked examples for this profile
