@@ -1,6 +1,6 @@
 Instance: EPSExampleObservationPregnancyEdd
 InstanceOf: ObservationPregnancyEddEuEps
-Title: "Observation Example: Pregnancy Expected Delivery Date"
+Title: "Observation : Pregnancy Expected Delivery Date"
 Description: "Example observation for the pregnancy expected delivery date."
 Usage: #example
 * status = #final

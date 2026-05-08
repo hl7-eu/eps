@@ -1,7 +1,7 @@
 Profile: ObservationPregnancyEddEuEps
 Parent: Observation
 Id: observation-pregnancy-edd-eu-eps
-Title: "Observation : Pregnancy - Expected Delivery Date (EPS)"
+Title: "Observation: Pregnancy - Expected Delivery Date (EPS)"
 Description: "This profile constrains the Observation resource to represent the pregnancy expected delivery date (EDD)."
 
 * insert SetFmmAndStatusRule (1, draft)

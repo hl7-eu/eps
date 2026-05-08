@@ -1,6 +1,6 @@
 Instance: EPSExampleObservationPregnancyGestationalAge
 InstanceOf: ObservationPregnancyGestationalAgeEuEps
-Title: "Observation Example: Pregnancy Gestational Age"
+Title: "Observation : Pregnancy Gestational Age"
 Description: "Example observation for gestational age in days."
 Usage: #example
 * status = #final

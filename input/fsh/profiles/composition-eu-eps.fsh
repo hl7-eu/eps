@@ -2,7 +2,7 @@ Profile: CompositionEuEps
 Parent: CompositionEuCore
 Id: composition-eu-eps
 Title: "Composition (EPS)"
-Description: """This profile defines how the Composiiton resource is used to represent a European Patient Summary."""
+Description: """This profile defines how the Composition resource is used to represent a European Patient Summary."""
 * . ^short = "Patient Summary composition"
 * . ^definition = "Patient Summary composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 

@@ -1,6 +1,6 @@
 Instance: EPSExampleObservationPregnancyOutcome
 InstanceOf: ObservationPregnancyOutcomeEuEps
-Title: "Observation Example: Pregnancy Outcome"
+Title: "Observation : Pregnancy Outcome"
 Description: "Example observation for the summarized history of pregnancy outcomes."
 Usage: #example
 * status = #final

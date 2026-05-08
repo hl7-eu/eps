@@ -1,7 +1,7 @@
 Profile: ObservationPregnancyStatusEuEps
 Parent: Observation
 Id: observation-pregnancy-status-eu-ips
-Title: "Observation : Pregnancy - Status (EPS)"
+Title: "Observation: Pregnancy - Status (EPS)"
 Description: "This profile constrains the Observation resource to represent the pregnancy status in the scope of the European Patient Summary."
 
 * insert SetFmmAndStatusRule (1, draft)
