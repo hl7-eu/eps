@@ -74,16 +74,14 @@
         IG </h4>
     <a> </a>
 
-    <div class="callout-wrapper">
-        <p> </p>
-        <div class="callout-box">
-            <p>
-                <strong>Note:</strong> The entries in the table below correspond to existing mapping
-                pages specified for the EU Core profile.</p>
-            <p>In some cases (e.g. Procedure) EPS uses specialized profiles to take in account some
-                additional IPS constraints. This however doesn't modify the described mapping.</p>
-        </div>
+<div class="callout-wrapper">
+    <p></p>
+    <div class="callout-box">
+
+            <strong>Note:</strong> The entries in the table below refer to the existing mapping pages defined for the EU Core profiles.
+            In some cases (e.g. Procedure), the EPS uses specialized profiles to accommodate additional IPS-specific constraints. These specializations do not alter the mappings described below.
     </div>
+</div>
 
     <div class="table-wrapper">
         <table class="model-index">
