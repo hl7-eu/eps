@@ -377,7 +377,7 @@ Usage: #example
 
 Instance: Instance-Condition-bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5
 InstanceOf: ConditionEuCore
-Usage: #inline
+Usage: #example
 * id = "bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5"
 * category = $condition-category#problem-list-item "Problem List Item"
 * code.coding[0] = $sct#55822004 "Hyperlipidemia (disorder)"
@@ -480,7 +480,7 @@ InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "671c5ac6-0c08-487a-9204-caa8b626f38d"
 * category = $condition-category#problem-list-item "Problem List Item"
-* code.coding[0] = $sct#714628002 "Prediabetes (disorder)"
+* code.coding[0] = $sct#714628002 "Prediabetes"
 * code.text = "Prediabetes"
 * onsetDateTime = "1991-02-18"
 * clinicalStatus = $condition-clinical#active
@@ -1373,7 +1373,7 @@ Usage: #inline
 * category.coding = $sct#734163000 "Care plan"
 * activity.detail.kind = #Appointment
 * activity.detail.status = #unknown
-* activity.detail.code.coding = $sct#735985000 "Diabetes self management plan (qualifier value)"
+* activity.detail.code.coding = $sct#735985000 "Diabetes self management plan"
 * activity.detail.description = "Diabetes self management plan"
 * period.start = "1991-02-18"
 * activity.detail.reasonCode = $sct#714628002 "Prediabetes"

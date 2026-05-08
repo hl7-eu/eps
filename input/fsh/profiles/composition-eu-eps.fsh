@@ -1,5 +1,5 @@
 Profile: CompositionEuEps
-Parent: Composition
+Parent: CompositionEuCore
 Id: composition-eu-eps
 Title: "Composition (EPS)"
 Description: "Clinical document used to represent a Patient Summary for the scope of this project."
@@ -10,7 +10,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * insert ImposeProfile($Composition-uv-ips, 0)
 
 
-* extension contains $composition.version-r5  named version 0..1
+// * extension contains $composition.version-r5  named version 0..1
 * extension[version] ^short = "Business version"
 
 * identifier ^short = "PS business identifier"
@@ -46,7 +46,7 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * section ^slicing.rules = #open
 * section ^short = "Sections composing the IPS"
 * section ^definition = "The root of the sections that make up the IPS composition."
-* section.extension contains $note named section-note 0..*
+// * section.extension contains $note named section-note 0..*
 * section.extension[section-note] ^short = "Additional notes that apply to the section (but not to specific resource)."
 * section.extension[section-note] ^definition = "Additional notes that apply to the section (but not to specific resource)."
 * section.title 1..1

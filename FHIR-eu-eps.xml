@@ -21,6 +21,7 @@
 <artifact id="StructureDefinition/flag-alert-obl-eu-eps" key="StructureDefinition-flag-alert-obl-eu-eps" name="Flag - Alert Obligations (EPS)"/>
 <artifact id="ValueSet/gestational-age-loinc" key="ValueSet-gestational-age-loinc" name="Gestational Age (LOINC)"/>
 <artifact id="StructureDefinition/immunization-obl-eu-eps" key="StructureDefinition-immunization-obl-eu-eps" name="Immunization Obligations (EPS)"/>
+<artifact id="Condition/bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5" key="Condition-bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5" name="Instance-Condition-bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5"/>
 <artifact id="StructureDefinition/medication-obl-eu-eps" key="StructureDefinition-medication-obl-eu-eps" name="Medication Obligations (EPS)"/>
 <artifact id="StructureDefinition/MedicationStatement-eu-eps" key="StructureDefinition-MedicationStatement-eu-eps" name="Medication Statement (EPS)"/>
 <artifact id="MedicationStatement/635c4921-5fcb-4ce7-b6ef-d866b680ad01" key="MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01" name="Medication Statement: Simvastatin 10 mg oral tablet"/>
@@ -35,6 +36,7 @@
 <artifact id="StructureDefinition/observation-pregnancy-status-eu-ips" key="StructureDefinition-observation-pregnancy-status-eu-ips" name="Observation Pregnancy - Status (EPS)"/>
 <artifact id="StructureDefinition/observation-travel-eu-eps" key="StructureDefinition-observation-travel-eu-eps" name="Observation: country visited (EPS)"/>
 <artifact id="StructureDefinition/organization-obl-eu-eps" key="StructureDefinition-organization-obl-eu-eps" name="Organization Obligations (EPS)"/>
+<artifact id="Parameters/exp-params" key="Parameters-exp-params" name="Parameters for Terminology expansion using Snomed-CT international edition"/>
 <artifact id="StructureDefinition/patient-eu-eps" key="StructureDefinition-patient-eu-eps" name="Patient (EPS)"/>
 <artifact id="Patient/f51071b2-6c06-4d31-85ed-26a6b964ef98" key="Patient-f51071b2-6c06-4d31-85ed-26a6b964ef98" name="Patient Example: Petra Schwartz"/>
 <artifact id="StructureDefinition/practitioner-obl-eu-eps" key="StructureDefinition-practitioner-obl-eu-eps" name="Practitioner Obligations (EPS)"/>

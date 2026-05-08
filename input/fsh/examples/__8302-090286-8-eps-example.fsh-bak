@@ -607,7 +607,7 @@ Usage: #inline
 * category.coding = $sct#734163000 "Care plan"
 * activity.detail.kind = #Appointment
 * activity.detail.status = #unknown
-* activity.detail.code.coding = $sct#735985000 "Diabetes self management plan (qualifier value)"
+* activity.detail.code.coding = $sct#735985000 "Diabetes self management plan"
 * activity.detail.description = "Diabetes self management plan"
 * period.start = "2024-08-19"
 * activity.detail.reasonCode = $sct#44054006 "Diabetes mellitus type 2 (disorder)"

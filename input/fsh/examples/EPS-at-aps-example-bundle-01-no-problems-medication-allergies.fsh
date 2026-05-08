@@ -21,6 +21,8 @@ InstanceOf: CompositionEuEps
 Usage: #inline
 // * language = #de-AT
 * status = #preliminary
+* identifier.system = "urn:ietf:rfc:9562"
+* identifier.value = "f4d1c16a-3421-43b1-9c74-dac7fcb52ca4"
 * type = $loinc#60591-5 "Patient summary Document"
 * subject = Reference(urn:uuid:0fed5ebe-ca8f-4ad1-aba4-ddad45bd6cc8) "Maria Musterfrau"
 * date = "2024-02-08T14:01:30+00:00"

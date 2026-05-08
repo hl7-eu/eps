@@ -298,7 +298,7 @@ InstanceOf: ConditionEuCore
 Usage: #inline
 * id = "40c0de64-1f92-4b93-9664-653790168c2c"
 * category = $condition-category#problem-list-item "Problem List Item"
-* code.coding[0] = $sct#714628002 "Prediabetes (disorder)"
+* code.coding[0] = $sct#714628002 "Prediabetes"
 * code.text = "Prediabetes"
 * onsetDateTime = "2021-06-20"
 * clinicalStatus = $condition-clinical#active
@@ -552,7 +552,7 @@ Usage: #inline
 * category.coding = $sct#734163000 "Care plan"
 * activity.detail.kind = #Appointment
 * activity.detail.status = #unknown
-* activity.detail.code.coding = $sct#735985000 "Diabetes self management plan (qualifier value)"
+* activity.detail.code.coding = $sct#735985000 "Diabetes self management plan"
 * activity.detail.description = "Diabetes self management plan"
 * period.start = "2021-06-20"
 * activity.detail.reasonCode = $sct#714628002 "Prediabetes"
