@@ -6,9 +6,10 @@ This **FHIR Implementation Guide (IG)** defines the European Patient Summary usi
 
 ### Policy and Semantic Foundations
 
-This guide is based on and aligned with the [**eHealth Network (eHN) Guideline on the Patient Summary**](https://health.ec.europa.eu/publications/ehn-guideline-patient-summary_en), which define the scope, purpose, and semantic content of the European Patient Summary in the context of cross-border healthcare within the European Union.
+This guide is based on and aligned with the semantic model developed by the [Xt-EHR Joint Action](https://www.xt-ehr.eu), which refines and further specifies the principles and requirements established by the [eHealth Network (eHN) Guideline on the Patient Summary](https://health.ec.europa.eu/publications/ehn-guideline-patient-summary_en).
 
-Guideline that has been further refined by the [**Xt-EHR Joint Action**](https://www.xt-ehr.eu/), action contributing to the development of implementing acts under EHDS.
+The eHN Guideline defines the scope, purpose, and semantic content of the European Patient Summary in the context of cross-border healthcare within the European Union, while the Xt-EHR Joint Action contributes to its operational and semantic refinement in support of the implementation of the European Health Data Space (EHDS).
+
 
 ### European and International Standards Alignment
 
