@@ -1,5 +1,5 @@
 Profile: MedicationOblEuEps
-Parent: MedicationEuCore
+Parent: MedicationEuEps
 Id: medication-obl-eu-eps
 Title: "Medication Obligations (EPS)"
 Description: "IPS obligations extracted from the Medication profile."
