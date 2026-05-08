@@ -3,7 +3,7 @@
       <div class="callout-wrapper">
       <div class="callout-box">
         <strong>IPS Obligation adoption:</strong>
-            This version of the guide adopts the IPS Obligations. A review will be done when the obligations on the Xt-EHR Logical Models will be delivered.
+            This version of the guide adopts the IPS Obligations. A review will be done to maintain alignment with the EHDS Implementing Acts.
       </div>
       </div>
 </div>
