@@ -7,12 +7,15 @@
 <artifactPageExtension value="-mappings"/>
 <artifact id="StructureDefinition/allergyintolerance-obl-eu-eps" key="StructureDefinition-allergyintolerance-obl-eu-eps" name="AllergyIntolerance (EPS)"/>
 <artifact id="StructureDefinition/bundle-eu-eps" key="StructureDefinition-bundle-eu-eps" name="Bundle (EPS)"/>
+<artifact id="Bundle/Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3" key="Bundle-Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3" name="Bundle: Complete EPS"/>
 <artifact id="Bundle/EPSExampleBundle01NoProblemsMedicationAllergies" key="Bundle-EPSExampleBundle01NoProblemsMedicationAllergies" name="Bundle: Empty EPS (No problems, medications, allergies)"/>
-<artifact id="Bundle/Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3" key="Bundle-Instance-Bundle-1a24e60d-9b12-4109-a50a-07249a4f21c3" name="Complete HL7 Europe Patient Summary EPS Bundle"/>
 <artifact id="StructureDefinition/composition-eu-eps" key="StructureDefinition-composition-eu-eps" name="Composition (EPS)"/>
+<artifact id="Composition/76279633-d5a6-439b-9e88-5880c531e241" key="Composition-76279633-d5a6-439b-9e88-5880c531e241" name="Composition: Complete EPS"/>
 <artifact id="StructureDefinition/condition-obl-eu-eps" key="StructureDefinition-condition-obl-eu-eps" name="Condition Obligations (EPS)"/>
 <artifact id="StructureDefinition/consent-eu-eps" key="StructureDefinition-consent-eu-eps" name="Consent (Advance Directives EPS)"/>
 <artifact id="StructureDefinition/device-eu-eps" key="StructureDefinition-device-eu-eps" name="Device (EPS)"/>
+<artifact id="Device/575520ac-c2ef-4f47-82bf-1b691f5e6466" key="Device-575520ac-c2ef-4f47-82bf-1b691f5e6466" name="Device Example: Blood glucose meter"/>
+<artifact id="DeviceUseStatement/90641744-8919-4b70-8ef7-d181b1fce3cb" key="DeviceUseStatement-90641744-8919-4b70-8ef7-d181b1fce3cb" name="Device Use Statement Example: Home nebulizer"/>
 <artifact id="StructureDefinition/deviceUseStatement-eu-eps" key="StructureDefinition-deviceUseStatement-eu-eps" name="DeviceUseStatement (EPS)"/>
 <artifact id="StructureDefinition/diagnosticReport-eu-eps" key="StructureDefinition-diagnosticReport-eu-eps" name="DiagnosticReport (EPS)"/>
 <artifact id="StructureDefinition/flag-alert-obl-eu-eps" key="StructureDefinition-flag-alert-obl-eu-eps" name="Flag - Alert Obligations (EPS)"/>
@@ -20,7 +23,12 @@
 <artifact id="StructureDefinition/immunization-obl-eu-eps" key="StructureDefinition-immunization-obl-eu-eps" name="Immunization Obligations (EPS)"/>
 <artifact id="StructureDefinition/medication-obl-eu-eps" key="StructureDefinition-medication-obl-eu-eps" name="Medication Obligations (EPS)"/>
 <artifact id="StructureDefinition/MedicationStatement-eu-eps" key="StructureDefinition-MedicationStatement-eu-eps" name="Medication Statement (EPS)"/>
+<artifact id="MedicationStatement/635c4921-5fcb-4ce7-b6ef-d866b680ad01" key="MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01" name="Medication Statement: Simvastatin 10 mg oral tablet"/>
 <artifact id="StructureDefinition/medicationrequest-obl-eu-eps" key="StructureDefinition-medicationrequest-obl-eu-eps" name="MedicationRequest Obligations (EPS)"/>
+<artifact id="Observation/EPSExampleObservationPregnancyEdd" key="Observation-EPSExampleObservationPregnancyEdd" name="Observation Example: Pregnancy Expected Delivery Date"/>
+<artifact id="Observation/EPSExampleObservationPregnancyGestationalAge" key="Observation-EPSExampleObservationPregnancyGestationalAge" name="Observation Example: Pregnancy Gestational Age"/>
+<artifact id="Observation/EPSExampleObservationPregnancyOutcome" key="Observation-EPSExampleObservationPregnancyOutcome" name="Observation Example: Pregnancy Outcome"/>
+<artifact id="Observation/EPSExampleObservationPregnancyStatus" key="Observation-EPSExampleObservationPregnancyStatus" name="Observation Example: Pregnancy Status"/>
 <artifact id="StructureDefinition/observation-pregnancy-edd-eu-eps" key="StructureDefinition-observation-pregnancy-edd-eu-eps" name="Observation Pregnancy - Expected Delivery Date (EPS)"/>
 <artifact id="StructureDefinition/observation-pregnancy-gestationalAge-eu-eps" key="StructureDefinition-observation-pregnancy-gestationalAge-eu-eps" name="Observation Pregnancy - Gestational Age (EPS)"/>
 <artifact id="StructureDefinition/observation-pregnancy-outcome-eu-eps" key="StructureDefinition-observation-pregnancy-outcome-eu-eps" name="Observation Pregnancy - Outcome (EPS)"/>
@@ -28,6 +36,7 @@
 <artifact id="StructureDefinition/observation-travel-eu-eps" key="StructureDefinition-observation-travel-eu-eps" name="Observation: country visited (EPS)"/>
 <artifact id="StructureDefinition/organization-obl-eu-eps" key="StructureDefinition-organization-obl-eu-eps" name="Organization Obligations (EPS)"/>
 <artifact id="StructureDefinition/patient-eu-eps" key="StructureDefinition-patient-eu-eps" name="Patient (EPS)"/>
+<artifact id="Patient/f51071b2-6c06-4d31-85ed-26a6b964ef98" key="Patient-f51071b2-6c06-4d31-85ed-26a6b964ef98" name="Patient Example: Petra Schwartz"/>
 <artifact id="StructureDefinition/practitioner-obl-eu-eps" key="StructureDefinition-practitioner-obl-eu-eps" name="Practitioner Obligations (EPS)"/>
 <artifact id="StructureDefinition/practitionerrole-obl-eu-eps" key="StructureDefinition-practitionerrole-obl-eu-eps" name="PractitionerRole Obligations (EPS)"/>
 <artifact id="StructureDefinition/procedure-eu-eps" key="StructureDefinition-procedure-eu-eps" name="Procedure (EPS)"/>

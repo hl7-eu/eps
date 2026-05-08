@@ -86,3 +86,14 @@ MSG_DEPENDS_ON_DEPRECATED
 
 # Observation without performer
 All_observations_should_have_a_performer
+
+# effective.ofType(Period) discriminator in IPS is dateTime
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips|2.0.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# missing key in addiitonal binding
+Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())'
+
+
+# Depracated Regex usage
+The extension http://hl7.org/fhir/StructureDefinition/regex|5.2.0 is deprecated with the note: 'This was deprecated in favor of using a constraint on the element using FHIRPath, since constraints allow for the provision of a human readable message associated with the regex'
