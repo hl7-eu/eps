@@ -1,7 +1,7 @@
 Profile: ConditionOblEuEps
 Parent: ConditionEuCore
 Id: condition-obl-eu-eps
-Title: "Condition Obligations (EPS)"
+Title: "Condition - Obligations (EPS)"
 Description: "IPS obligations extracted from the Condition profile."
 
 // ================= IPS OBLIGATIONS =================

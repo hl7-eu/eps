@@ -1,7 +1,7 @@
 Profile: AllergyIntoleranceOblEuEps
 Parent: AllergyIntoleranceEuCore
 Id: allergyintolerance-obl-eu-eps
-Title: "AllergyIntolerance (EPS)"
+Title: "AllergyIntolerance - Obligations  (EPS)"
 Description: "This profiles set the IPS obligation on the EU core profile."
 
 // ================= IPS OBLIGATIONS =================

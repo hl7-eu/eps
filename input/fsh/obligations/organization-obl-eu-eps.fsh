@@ -1,7 +1,7 @@
 Profile: OrganizationOblEuEps
 Parent: OrganizationEuCore
 Id: organization-obl-eu-eps
-Title: "Organization Obligations (EPS)"
+Title: "Organization - Obligations (EPS)"
 Description: "IPS obligations extracted from the Organization profile."
 
 // ================= IPS OBLIGATIONS =================
