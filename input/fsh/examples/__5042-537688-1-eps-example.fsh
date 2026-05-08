@@ -377,7 +377,7 @@ Usage: #example
 
 Instance: Instance-Condition-bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5
 InstanceOf: ConditionEuCore
-Usage: #example
+Usage: #inline
 * id = "bc578ea8-f9ed-4cf2-a302-dfc36e4edbe5"
 * category = $condition-category#problem-list-item "Problem List Item"
 * code.coding[0] = $sct#55822004 "Hyperlipidemia (disorder)"

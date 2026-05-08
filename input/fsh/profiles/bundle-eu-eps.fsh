@@ -66,11 +66,7 @@ Profile: BundleEuEps
 Parent: Bundle
 Id: bundle-eu-eps
 Title: "Bundle (EPS)"
-Description: "Clinical document used to represent a Patient Summary for the scope of this project."
-
-//==================================
-// THIS PROFILE HAS TO BE COMPLETED 
-//==================================
+Description: """This profile defines how the Bundle resource is used to represent a European Patient Summary."""
 
 * . ^short = "Patient Summary bundle"
 * . ^definition = "Patient Summary bundle."

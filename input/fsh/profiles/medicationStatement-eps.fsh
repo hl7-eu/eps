@@ -1,7 +1,7 @@
 Profile: MedicationStatementEuEps
 Parent: MedicationStatementEuCore
 Id: MedicationStatement-eu-eps
-Title:    "Medication Statement (EPS)"
+Title:    "MedicationStatement (EPS)"
 Description: """This profile constrains the MedicationStatement resource for the purpose of the European patient summary."""
 * ^experimental = false
 * ^purpose = "This profile constrains the MedicationStatement resource for the purpose of the European patient summary."

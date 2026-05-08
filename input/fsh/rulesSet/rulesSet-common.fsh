@@ -36,7 +36,7 @@ RuleSet: SectionComRules (short, def, code)
 
 RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^slicing.discriminator[0].type = #type
-* entry ^slicing.discriminator[0].path = "resolve()"
+* entry ^slicing.discriminator[0].path = "$this.resolve()"
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 * entry ^short = "{short}"
@@ -44,7 +44,7 @@ RuleSet: SectionEntrySliceComRules (short, def)
 
 RuleSet: SectionEntrySliceProfileComRules (short, def)
 * entry ^slicing.discriminator[0].type = #profile
-* entry ^slicing.discriminator[0].path = "resolve()"
+* entry ^slicing.discriminator[0].path = "$this.resolve()"
 * entry ^slicing.ordered = false
 * entry ^slicing.rules = #open
 * entry ^short = "{short}"

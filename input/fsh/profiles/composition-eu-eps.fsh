@@ -2,7 +2,7 @@ Profile: CompositionEuEps
 Parent: CompositionEuCore
 Id: composition-eu-eps
 Title: "Composition (EPS)"
-Description: "Clinical document used to represent a Patient Summary for the scope of this project."
+Description: """This profile defines how the Composiiton resource is used to represent a European Patient Summary."""
 * . ^short = "Patient Summary composition"
 * . ^definition = "Patient Summary composition. \r\nA composition is a set of healthcare-related information that is assembled together into a single logical document that provides a single coherent statement of meaning, establishes its own context and that has clinical attestation with regard to who is making the statement. \r\nWhile a Composition defines the structure, it does not actually contain the content: rather the full content of a document is contained in a Bundle, of which the Composition is the first resource contained."
 
@@ -33,7 +33,8 @@ Description: "Clinical document used to represent a Patient Summary for the scop
 * title ^definition = "Official human-readable label for the composition.\r\n\r\nFor this document should be \"Patient Summary\" or any equivalent translation"
 * attester.mode ^short = "The type of attestation"
 * attester.time ^short = "When the composition was attested"
-* attester.party only Reference (PractitionerEuCore or PractitionerRoleEuCore or OrganizationEuCore or PatientEuEps or RelatedPerson)
+* attester.party only Reference(PatientEuEps or RelatedPerson or PractitionerEuCore or PractitionerRoleEuCore or OrganizationEuCore)
+
 * custodian only Reference (OrganizationEuCore)
   * ^short = "Custodian of the Patient Summary"
   * ^definition = "Identifies the organization that is responsible for ongoing maintenance of the Patient Summary, and ensures that it remains available for access by other parties."

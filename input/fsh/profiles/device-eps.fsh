@@ -2,7 +2,7 @@ Profile: DeviceEuEps
 Parent: Device
 Id: device-eu-eps
 Title: "Device (EPS)"
-Description: "This profile represents the constraints applied to the Device resource for the purpose of this guide. A device used by or implanted on the patient is described in the hospital discharge report as an instance of a Device resource constrained by this profile."
+Description: """This profile represents the constraints applied to the Device resource in the scope of the European Patient Summary."""
 //* type 0..1 
 //* type only CodeableConceptIPS
 

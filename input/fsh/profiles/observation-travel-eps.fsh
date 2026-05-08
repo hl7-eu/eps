@@ -1,7 +1,7 @@
 Profile: ObservationTravelEuEps
 Parent: Observation
 Id: observation-travel-eu-eps
-Title: "Observation: country visited (EPS)"
+Title: "Observation: Country Visited (EPS)"
 Description: "This profile sets minimum expectations for the Observation resource to record, search, and fetch travel history."
 * ^experimental = false
 

@@ -2,7 +2,7 @@ Profile: PatientEuEps
 Parent: PatientEuCore
 Id: patient-eu-eps
 Title:    "Patient (EPS)"
-Description: """This profile defines how to represent a human Patient in HL7 FHIR for the purpose of this guide."""
+Description: """This profile defines how to represent a human Patient in HL7 FHIR in the scope of the European Patient Summary."""
 
 * insert SetFmmAndStatusRule (1, draft)
 * insert ImposeProfile($Patient-uv-ips, 0)

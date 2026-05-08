@@ -1,7 +1,7 @@
 Profile: ObservationPregnancyOutcomeEuEps
 Parent: Observation
 Id: observation-pregnancy-outcome-eu-eps
-Title: "Observation Pregnancy - Outcome (EPS)"
+Title: "Observation : Pregnancy - Outcome (EPS)"
 Description: "This profile constrains the Observation resource to represent the summarized history of pregnancy outcomes."
 
 * insert SetFmmAndStatusRule (1, draft)

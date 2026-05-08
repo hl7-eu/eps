@@ -1,8 +1,8 @@
 Profile: ConsentEuEps
 Parent: Consent
 Id: consent-eu-eps
-Title:    "Consent (Advance Directives EPS)"
-Description: """This profile constrains the Consent resource for the purpose representing Advance Directives for the scope of this guide."""
+Title:    "Consent: Advance Directives (EPS)"
+Description: """This profile constrains the Consent resource for the purpose representing Advance Directives in the scope of the European Patient Summary."""
 
 * insert SetFmmAndStatusRule (1, draft)
 
