@@ -34,6 +34,8 @@ Description: """This profile defines how the Composition resource is used to rep
 * attester.mode ^short = "The type of attestation"
 * attester.time ^short = "When the composition was attested"
 * attester.party only Reference(PatientEuEps or RelatedPerson or PractitionerEuCore or PractitionerRoleEuCore or OrganizationEuCore)
+* attester[legalAuthenticator].party only Reference(PractitionerRoleEuCore or PractitionerEuCore)
+* attester[validator].party only Reference(PractitionerRoleEuCore or PractitionerEuCore)
 
 * custodian only Reference (OrganizationEuCore)
   * ^short = "Custodian of the Patient Summary"
