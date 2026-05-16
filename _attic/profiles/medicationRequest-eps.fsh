@@ -8,7 +8,7 @@ Description: "This profile constrains the MedicationRequest resource for the pur
 
 * insert SetFmmAndStatusRule (1, draft)
 
-* insert ImposeProfile ($MedicationRequest-uv-ips , 0)
+* insert CompliesWith ($MedicationRequest-uv-ips , 0)
 
 // MedicationRequest R4
 * extension contains $medicationRequest-effectiveDosePeriod-r5 named effectiveDosePeriod 0..1

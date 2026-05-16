@@ -105,3 +105,6 @@ RuleSet: ObligationActorAndCode(actor, code)
 RuleSet: ObligationElement(element)
 // Used for profile level obligations. Insert after obligation code and actor
 * ^extension[$obligation][=].extension[elementId].valueString = {element}
+
+RuleSet: CompliesWith(canonical, index)
+* ^extension[$compliesWithProfile][{index}].valueCanonical = Canonical({canonical})

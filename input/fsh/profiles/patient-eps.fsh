@@ -5,7 +5,7 @@ Title:    "Patient (EPS)"
 Description: """This profile defines how to represent a human Patient in HL7 FHIR in the scope of the European Patient Summary."""
 
 * insert SetFmmAndStatusRule (1, draft)
-* insert ImposeProfile($Patient-uv-ips, 0)
+* insert CompliesWith($Patient-uv-ips, 0)
 
 * name obeys ips-pat-1
 * generalPractitioner only Reference($organization-eu-core or $practitionerRole-eu-core or PractitionerEuCore) 

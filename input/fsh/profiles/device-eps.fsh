@@ -6,7 +6,7 @@ Description: """This profile constrains the Device resource in the scope of the 
 //* type 0..1 
 //* type only CodeableConceptIPS
 
-* insert ImposeProfile ( $Device-uv-ips, 0 )  // Check if this is appropriate (see  support)
+* insert CompliesWith ( $Device-uv-ips, 0 )  // Check if this is appropriate (see  support)
 
 * identifier ^short = "Device Identifier"
 * udiCarrier ^short = "Unique Device Identifier (UDI)"

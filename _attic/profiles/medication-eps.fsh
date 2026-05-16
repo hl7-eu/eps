@@ -7,6 +7,6 @@ Description: "This profile constrains the Medication resource for the purpose of
 //-------------------------------------------------------------------------------------------
 
 * insert SetFmmAndStatusRule (1, draft)
-* insert ImposeProfile ($Medication-uv-ips , 0)
+* insert CompliesWith ($Medication-uv-ips , 0)
 
 * code 1..

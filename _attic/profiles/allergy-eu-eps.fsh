@@ -7,7 +7,7 @@ Description: """This profile constrains the AllergyIntolerance resource in the s
 * ^purpose = "This profile constrains the AllergyIntolerance resource in the scope of the European Patient Summary."
 
 * insert SetFmmAndStatusRule (1, draft)
-* insert ImposeProfile($AllergyIntolerance-uv-ips, 0)
+* insert CompliesWith($AllergyIntolerance-uv-ips, 0)
 
 // * extension contains $allergyintolerance-abatement named abatement 0..1
 * extension[abatement].valueDateTime ^short = "End date"

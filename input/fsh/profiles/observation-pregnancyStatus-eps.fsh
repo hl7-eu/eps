@@ -5,7 +5,7 @@ Title: "Observation: Pregnancy - Status (EPS)"
 Description: "This profile constrains the Observation resource to represent the pregnancy status in the scope of the European Patient Summary."
 
 * insert SetFmmAndStatusRule (1, draft)
-* insert ImposeProfile ( $Observation-pregnancy-status-uv-ips, 0 )
+* insert CompliesWith ( $Observation-pregnancy-status-uv-ips, 0 )
 
 * code 1..1 
 * code only CodeableConceptIPS

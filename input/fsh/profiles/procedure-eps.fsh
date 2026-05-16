@@ -5,7 +5,7 @@ Title:    "Procedure (EPS)"
 Description: "This profile constrains the Procedure resource in the scope of the European Patient Summary."
 
 * insert SetFmmAndStatusRule (1, draft)
-* insert ImposeProfile ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)
+* insert CompliesWith ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)
 
 
 * status ^short = "The status of the procedure"

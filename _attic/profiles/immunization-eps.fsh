@@ -10,7 +10,7 @@ Description: """This profile constrains the Immunization resource in the scope o
 * ^experimental = false
 * ^purpose = "This profile constrains the Immunization resource in the scope of the European Patient Summary."
 
-* insert ImposeProfile($Immunization-uv-ips, 0)
+* insert CompliesWith($Immunization-uv-ips, 0)
 
 * extension contains $immunization-basedOn-r5 named basedOn 0..1
 * extension[basedOn].valueReference only Reference ( ImmunizationRecommendationEuEps )

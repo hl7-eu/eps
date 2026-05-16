@@ -5,7 +5,7 @@ Id: deviceUseStatement-eu-eps
 Title: "DeviceUseStatement (EPS)"
 Description: """This profile constrains the DeviceUseStatement resource in the scope of the European Patient Summary."""
 
-* insert ImposeProfile ( $DeviceUseStatement-uv-ips, 0 )  // Check if this is appropriate (see  support)
+* insert CompliesWith ( $DeviceUseStatement-uv-ips, 0 )  // Check if this is appropriate (see  support)
 * identifier ^short = "Device usage identifier"
 * text ^short = "Device usage description"
 * source only Reference( PatientEuEps or PractitionerEuCore or PractitionerRoleEuCore or RelatedPerson )

@@ -7,7 +7,7 @@ Description: """This profile constrains the MedicationStatement resource in the 
 * ^purpose = "This profile constrains the MedicationStatement resource in the scope of the European Patient Summary."
 
 * insert SetFmmAndStatusRule (1, draft)
-* insert ImposeProfile($MedicationStatement-uv-ips, 0)
+* insert CompliesWith($MedicationStatement-uv-ips, 0)
 
 * extension[adherence].extension[code] ^short = "Type of adherence"
 
