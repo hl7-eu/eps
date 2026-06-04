@@ -18,7 +18,7 @@ Description: """This profile defines how the Composition resource is used to rep
 * type only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * type ^short = "Kind of composition (\"Patient Summary\")"
 * type ^definition = "Specifies that this composition refer to a Patient Summary"
-// * type = http://loinc.org#34105-7  
+* type = $loinc#60591-5
 * subject only Reference(PatientEuEps)
 * subject 1..1
 * subject.reference 1..1

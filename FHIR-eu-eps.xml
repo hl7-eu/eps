@@ -22,18 +22,18 @@
 <artifact id="ValueSet/gestational-age-loinc" key="ValueSet-gestational-age-loinc" name="Gestational Age (LOINC)"/>
 <artifact id="StructureDefinition/immunization-obl-eu-eps" key="StructureDefinition-immunization-obl-eu-eps" name="Immunization - Obligations (EPS)"/>
 <artifact id="StructureDefinition/medication-obl-eu-eps" key="StructureDefinition-medication-obl-eu-eps" name="Medication - Obligations (EPS)"/>
-<artifact id="MedicationStatement/635c4921-5fcb-4ce7-b6ef-d866b680ad01" key="MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01" name="MedicationStatement: Simvastatin 10 mg oral tablet"/>
 <artifact id="StructureDefinition/medicationrequest-obl-eu-eps" key="StructureDefinition-medicationrequest-obl-eu-eps" name="MedicationRequest - Obligations (EPS)"/>
 <artifact id="StructureDefinition/MedicationStatement-eu-eps" key="StructureDefinition-MedicationStatement-eu-eps" name="MedicationStatement (EPS)"/>
-<artifact id="StructureDefinition/observation-pregnancy-edd-eu-eps" key="StructureDefinition-observation-pregnancy-edd-eu-eps" name="Observation: Pregnancy - Expected Delivery Date (EPS)"/>
-<artifact id="StructureDefinition/observation-pregnancy-gestationalAge-eu-eps" key="StructureDefinition-observation-pregnancy-gestationalAge-eu-eps" name="Observation: Pregnancy - Gestational Age (EPS)"/>
-<artifact id="StructureDefinition/observation-pregnancy-outcome-eu-eps" key="StructureDefinition-observation-pregnancy-outcome-eu-eps" name="Observation: Pregnancy - Outcome (EPS)"/>
-<artifact id="StructureDefinition/observation-pregnancy-status-eu-ips" key="StructureDefinition-observation-pregnancy-status-eu-ips" name="Observation: Pregnancy - Status (EPS)"/>
+<artifact id="MedicationStatement/635c4921-5fcb-4ce7-b6ef-d866b680ad01" key="MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01" name="MedicationStatement: Simvastatin 10 mg oral tablet"/>
 <artifact id="Observation/EPSExampleObservationPregnancyEdd" key="Observation-EPSExampleObservationPregnancyEdd" name="Observation : Pregnancy Expected Delivery Date"/>
 <artifact id="Observation/EPSExampleObservationPregnancyGestationalAge" key="Observation-EPSExampleObservationPregnancyGestationalAge" name="Observation : Pregnancy Gestational Age"/>
 <artifact id="Observation/EPSExampleObservationPregnancyOutcome" key="Observation-EPSExampleObservationPregnancyOutcome" name="Observation : Pregnancy Outcome"/>
 <artifact id="Observation/EPSExampleObservationPregnancyStatus" key="Observation-EPSExampleObservationPregnancyStatus" name="Observation : Pregnancy Status"/>
 <artifact id="StructureDefinition/observation-travel-eu-eps" key="StructureDefinition-observation-travel-eu-eps" name="Observation: Country Visited (EPS)"/>
+<artifact id="StructureDefinition/observation-pregnancy-edd-eu-eps" key="StructureDefinition-observation-pregnancy-edd-eu-eps" name="Observation: Pregnancy - Expected Delivery Date (EPS)"/>
+<artifact id="StructureDefinition/observation-pregnancy-gestationalAge-eu-eps" key="StructureDefinition-observation-pregnancy-gestationalAge-eu-eps" name="Observation: Pregnancy - Gestational Age (EPS)"/>
+<artifact id="StructureDefinition/observation-pregnancy-outcome-eu-eps" key="StructureDefinition-observation-pregnancy-outcome-eu-eps" name="Observation: Pregnancy - Outcome (EPS)"/>
+<artifact id="StructureDefinition/observation-pregnancy-status-eu-ips" key="StructureDefinition-observation-pregnancy-status-eu-ips" name="Observation: Pregnancy - Status (EPS)"/>
 <artifact id="StructureDefinition/organization-obl-eu-eps" key="StructureDefinition-organization-obl-eu-eps" name="Organization - Obligations (EPS)"/>
 <artifact id="Parameters/exp-params" key="Parameters-exp-params" name="Parameters for Terminology expansion using Snomed-CT international edition"/>
 <artifact id="StructureDefinition/patient-eu-eps" key="StructureDefinition-patient-eu-eps" name="Patient (EPS)"/>
