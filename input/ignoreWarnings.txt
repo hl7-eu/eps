@@ -31,7 +31,6 @@ This element does not match any known slice defined in the profile http://hl7.or
 # missing key in addiitonal binding
 Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())'
 
-
 # Examples are not planned for obligation profiles
 INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/eps/StructureDefinition/allergyintolerance-obl-eu-eps'): The Implementation Guide contains no explicitly linked examples for this profile
 INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/eps/StructureDefinition/condition-obl-eu-eps'): The Implementation Guide contains no explicitly linked examples for this profile
@@ -48,3 +47,6 @@ Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentscope
 
 # IG Publisher adds http://hl7.org/fhir/tools/StructureDefinition/snapshot-source extension. https://chat.fhir.org/#narrow/channel/179252-IG-creation/topic/Publisher.20crash.20on.20obligation/near/600099900
 This element does not match any known slice defined in the profile http://hl7.org/fhir/StructureDefinition/obligation|5.3.0 (this may not be a problem, but you should check that it's not intended to match a slice)
+
+# type is uri, warning is wrong
+If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found uri
