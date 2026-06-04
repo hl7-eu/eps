@@ -20,5 +20,3 @@ Description: """This profile constrains the Consent resource for the purpose rep
 * category ^short = "Living will type"
 * source[x] ^short = "Living will document"
 // ==> add value set
-
-
