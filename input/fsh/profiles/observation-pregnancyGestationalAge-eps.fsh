@@ -16,7 +16,6 @@ Description: "This profile constrains the Observation resource to represent gest
 * effective[x] only dateTime
 * valueQuantity only Quantity
 * valueQuantity
-  * unit = "days"
   * system = $ucum
   * code = #d
 * bodySite ..0

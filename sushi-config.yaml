@@ -75,6 +75,8 @@ pages:
     title: Downloads
   dependencies.md:
     title: Dependencies
+  expansion-params.md:
+    title: Expansion Parameters
   introduction.md:
     title: Introduction
   authors.md:
@@ -188,6 +190,8 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
     - http://terminology.ehdsi.eu/ValueSet/eHDSISubstance
     - http://terminology.ehdsi.eu/ValueSet/eHDSIBloodGroup
     - http://terminology.ehdsi.eu/ValueSet/eHDSISocialHistory
+  path-expansion-params: ../resources/Parameters-exp-params.json
+
 
 
 # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
@@ -250,6 +254,7 @@ menu:
     Known/Open Issues: knownIssues.html
     Download: downloads.html
     Dependencies: dependencies.html
+    Expansion parameters: expansion-params.html
     #  Change Log: changes.html <== NOT FOR THIS VERSION
     Copyright: copyright.html
     Cross-version Analysis: crossversionanalysis.html
