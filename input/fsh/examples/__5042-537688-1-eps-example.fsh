@@ -182,7 +182,7 @@ Instance: Instance-Composition-76279633-d5a6-439b-9e88-5880c531e241
 InstanceOf: CompositionEuEps
 Title: "Composition: Complete EPS"
 Description: "Example of a complete HL7 Europe Patient Summary (EPS) FHIR Composition [Petra Schwartz]"
-Usage: #example
+Usage: #inline
 * id = "76279633-d5a6-439b-9e88-5880c531e241"
 * identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "166615c7-0536-4d24-b5d7-8d659a29ce3e"
