@@ -121,7 +121,7 @@ Description: """This profile defines how the Bundle resource is used to represen
     observation-pregnancy-status 0..* and
     observation-alcohol-use 0..* and
     observation-tobacco-use 0..* and
-    observation-medical-test-result 0..* and
+    // observation-medical-test-result 0..* and
     // observation-results 0..* and
     // observation-results-laboratory-pathology 0..* and
     // observation-results-radiology 0..* and
@@ -197,8 +197,8 @@ Description: """This profile defines how the Bundle resource is used to represen
 * entry[observation-vital-signs].resource 1..
 * entry[observation-vital-signs].resource only $vitalsigns
 
-* entry[observation-medical-test-result].resource 1..
-* entry[observation-medical-test-result].resource only MedicalTestResultEuCore
+/* * entry[observation-medical-test-result].resource 1..
+* entry[observation-medical-test-result].resource only MedicalTestResultEuCore */
 
 /* * entry contains observation-social-history 0.. 
 * entry[observation-social-history] 0..
