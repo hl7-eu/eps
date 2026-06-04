@@ -57,7 +57,6 @@ Description: """This profile defines how the Composition resource is used to rep
 * section.code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
 * section.text 1..
 * section.text only Narrative
-* section obeys ips-comp-1
 
 * section.section ..0
 * section contains
@@ -82,7 +81,7 @@ Description: """This profile defines how the Composition resource is used to rep
 
 // ==  EPS Problem Section ==
 
-* section[sectionProblems]
+* section[sectionProblems] obeys ips-comp-1
   * insert SectionComRules ( 
       EPS Problems Section, 
       The EPS problem section lists and describes clinical problems or conditions currently being monitored for the patient., 
@@ -98,7 +97,7 @@ Description: """This profile defines how the Composition resource is used to rep
 
 // == EPS Allergies and Intolerances Section  ==
 
-* section[sectionAllergies]
+* section[sectionAllergies] obeys ips-comp-1
   * insert SectionComRules ( 
      	EPS Allergies and Intolerances Section, 
       This section documents the relevant allergies or intolerances for that patient\, describing the kind of reaction - e.g. rash\, anaphylaxis\,.. - preferably the agents that cause it; and optionally the criticality and the certainty of the allergy. At a minimum\, it should list currently active and any relevant historical allergies and adverse reactions. If no information about allergies is available\, or if no allergies are known this should be clearly documented in the section., 
@@ -116,7 +115,7 @@ Description: """This profile defines how the Composition resource is used to rep
 
 // === EPS Medication Summary Section ===
 
-* section[sectionMedications]
+* section[sectionMedications] obeys ips-comp-1
   * insert SectionComRules ( 
       EPS Medication Summary Section, 
       The medication summary section contains a description of the patient's medications relevant for the scope of the patient summary. The actual content could depend on the jurisdiction\, it could report:
@@ -138,7 +137,6 @@ Description: """This profile defines how the Composition resource is used to rep
 // === EPS Immunizations Section ===
 
 * section[sectionImmunizations]
-
   * insert SectionComRules (EPS Immunizations Section, 
   The Immunizations Section defines a patient's current immunization status and pertinent immunization history. The primary use case for the Immunization Section is to enable communication of a patient's immunization status. The section includes the current immunization status\, and may contain the entire immunization history that is relevant to the period of time being summarized.,
   http://loinc.org#11369-6)
@@ -178,7 +176,7 @@ Description: """This profile defines how the Composition resource is used to rep
 
 ///=== EPS Medical Devices Section
 
-* section[sectionMedicalDevices] 
+* section[sectionMedicalDevices]
   * insert SectionComRules (EPS Medical Devices Section, 
   The medical devices section contains narrative text and coded entries describing the patient history of medical device use.,
   http://loinc.org#46264-8)
@@ -199,7 +197,7 @@ Description: """This profile defines how the Composition resource is used to rep
 * section[sectionAlert]
   * insert SectionComRules ( 
       EPS Alerts Section, 
-      The alerts section flags potential concerns and/or dangers to/from the patient and may also include obstacles to care., 
+      The alerts section flags potential concerns and/or dangers to/from the patient and may also include obstacles to care.,
       http://loinc.org#104605-1)
 
   * entry only Reference(Flag or DocumentReference)
@@ -212,7 +210,7 @@ Description: """This profile defines how the Composition resource is used to rep
 
 // ==== EPS Results Section
 
-* section[sectionResults]  
+* section[sectionResults]
   * insert SectionComRules ( 
       EPS Results Section, 
       This section assembles relevant observation results collected on the patient or produced on in-vitro biologic specimens collected from the patient. Some of these results may be laboratory results\, others may be anatomic pathology results\, others\, radiology results\, and others\, clinical results., 
@@ -490,9 +488,6 @@ Description: "Either section.entry or emptyReason are present"
 * severity = #error
 * expression = "(entry.reference.exists() or emptyReason.exists())"
 * xpath = "(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)"
-
-
-
 
 
 
