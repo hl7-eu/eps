@@ -1,0 +1,11 @@
+{
+  "package-id" : "hl7.fhir.eu.eps",
+  "path" : "http://hl7.eu/fhir/eps/1.0.0-ballot",
+  "version" : "1.0.0-ballot",
+  "desc" : "This publication is for ballot of the first STU release (1.0.0) of the HL7 Europe European Patient Summary FHIR IG",
+  "descmd" : "This publication is for ballot of the first STU release (1.0.0) of the HL7 Europe European Patient Summary FHIR IG",
+  "status" : "ballot",
+  "mode": "milestone",
+  "sequence" : "STU 1",
+  "changes" : "changes.html"
+}

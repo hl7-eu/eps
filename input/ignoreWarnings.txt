@@ -50,7 +50,8 @@ This element does not match any known slice defined in the profile http://hl7.or
 
 # type is uri, warning is wrong
 If the parameter 'system-version' is an instance of the parameter defined in the base FHIR standard, then the type should be canonical, but found uri
+The parameter 'system-version' has the same name as a parameter for at least one operation in the core specification. In the base specification, the parameter has a type of canonical, but this parameter instead has a value of type uri. Check that this is correct
 
 # MedicalTestResult not specified as bunlde entry slice
-This element does not match any known slice defined in the profile http://hl7.eu/fhir/eps/StructureDefinition/bundle-eu-eps|1.0.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
+This element does not match any known slice defined in the profile http://hl7.eu/fhir/eps/StructureDefinition/bundle-eu-eps|1.0.0-ballot (this may not be a problem, but you should check that it's not intended to match a slice)
 

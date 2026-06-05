@@ -629,7 +629,7 @@ Instance: Instance-MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01
 InstanceOf: MedicationStatementEuEps
 Title: "MedicationStatement: Simvastatin 10 mg oral tablet"
 Description: "Example medication statement for Simvastatin 10 mg oral tablet [Petra Schwartz]"
-Usage: #example
+Usage: #inline
 * id = "635c4921-5fcb-4ce7-b6ef-d866b680ad01"
 * status = #active
 * medicationReference = Reference(urn:uuid:ccd55d45-87b7-43e7-bad3-29771293c8cc) "Simvastatin 10 mg oral tablet"
@@ -2113,7 +2113,7 @@ Instance: Instance-DeviceUse-90641744-8919-4b70-8ef7-d181b1fce3cb
 InstanceOf: DeviceUseStatementEuEps
 Title: "Device Use Statement Example: Home nebulizer"
 Description: "Example device use statement for the HL7 Europe Patient Summary (EPS)."
-Usage: #example
+Usage: #inline
 * id = "90641744-8919-4b70-8ef7-d181b1fce3cb"
 * status = #active
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
@@ -2132,7 +2132,7 @@ Instance: Instance-Device-575520ac-c2ef-4f47-82bf-1b691f5e6466
 InstanceOf: DeviceEuEps
 Title: "Device Example: Blood glucose meter"
 Description: "Example device for the HL7 Europe Patient Summary (EPS)."
-Usage: #example
+Usage: #inline
 * id = "575520ac-c2ef-4f47-82bf-1b691f5e6466"
 * status = #active
 * udiCarrier[0].id = "(01)70551104053281(11)910128(17)160212(10)34976447(21)50912"
@@ -2161,7 +2161,7 @@ Instance: Instance-Patient-f51071b2-6c06-4d31-85ed-26a6b964ef98
 InstanceOf: PatientEuEps
 Title: "Patient: Petra Schwartz"
 Description: "Example patient for the HL7 Europe Patient Summary (EPS)."
-Usage: #example
+Usage: #inline
 * id = "f51071b2-6c06-4d31-85ed-26a6b964ef98"
 * identifier[+].type = $v2-0203#JHN
 * identifier[=].system = "http://example.org/identifier-1"
