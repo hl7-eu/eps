@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/eps/1.0.0-ballot" ciUrl="https://build.fhir.org/ig/hl7-eu/eps" defaultVersion="1.0.0-ballot" defaultWorkgroup="eu" url="http://hl7.eu/fhir/eps">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/eps/1.0.0-ballot" ciUrl="https://build.fhir.org/ig/hl7-eu/eps" defaultVersion="1.0.0-ballot" defaultWorkgroup="eu" gitUrl="https://github.com/HL7-eu/eps" url="http://hl7.eu/fhir/eps">
 <version code="current" url="https://build.fhir.org/ig/hl7-eu/eps"/>
 <version code="1.0.0-ballot" url="http://hl7.eu/fhir/eps/1.0.0-ballot"/>
 <version code="1.0.0-alpha" deprecated="true" url="http://hl7.eu/fhir/eps/xtehr"/>
