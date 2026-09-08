@@ -61,8 +61,6 @@ pages:
     title: Authors and contributors
   obligations.md:
     title: Obligations
-  discharge-report-sections.md:
-    title: Discharge Report Sections
   knownIssues.md:
     title: Known Issues
 #  mappings.md:
@@ -249,7 +247,6 @@ menu:
   Functional:
     Logical Models: logicalmodels.html
     Obligations: obligations.html
-    Discharge Report Sections: discharge-report-sections.html
   Implementation:
     Mapping to Profiles: modelmap.html
   About:
