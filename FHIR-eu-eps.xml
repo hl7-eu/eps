@@ -31,7 +31,7 @@
 <artifact id="StructureDefinition/medication-obl-eu-eps" key="StructureDefinition-medication-obl-eu-eps" name="Medication - Obligations (EPS)"/>
 <artifact id="Medication/a20659b9-12e2-417a-aa70-98483da34f44" key="Medication-a20659b9-12e2-417a-aa70-98483da34f44" name="Medication: simvastatin 10 MG Oral Tablet"/>
 <artifact id="StructureDefinition/medicationrequest-obl-eu-eps" key="StructureDefinition-medicationrequest-obl-eu-eps" name="MedicationRequest - Obligations (EPS)"/>
-<artifact id="StructureDefinition/MedicationStatement-eu-eps" key="StructureDefinition-MedicationStatement-eu-eps" name="MedicationStatement (EPS)"/>
+<artifact id="StructureDefinition/medicationStatement-eu-eps" key="StructureDefinition-medicationStatement-eu-eps" name="MedicationStatement (EPS)"/>
 <artifact id="MedicationStatement/635c4921-5fcb-4ce7-b6ef-d866b680ad01" key="MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01" name="MedicationStatement: Simvastatin 10 mg oral tablet"/>
 <artifact id="MedicationStatement/b3a1ed32-3f44-41e2-919b-1c8bdeaee29c" key="MedicationStatement-b3a1ed32-3f44-41e2-919b-1c8bdeaee29c" name="MedicationStatement: Simvastatin 10 mg oral tablet"/>
 <artifact id="Observation/EPSExampleObservationPregnancyEdd" key="Observation-EPSExampleObservationPregnancyEdd" name="Observation : Pregnancy Expected Delivery Date"/>
