@@ -159,8 +159,8 @@
                     </td>
                     <td>
                         <a
-                            href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-flag-eu-core.html">
-                            <code>FlagEuCore</code>
+                            href="https://build.fhir.org/ig/hl7-eu/base/StructureDefinition-flag-patient-eu-core.html">
+                            <code>FlagPatientEuCore</code>
                         </a>
                     </td>
                     <td>
