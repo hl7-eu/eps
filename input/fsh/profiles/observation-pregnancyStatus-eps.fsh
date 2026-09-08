@@ -1,6 +1,6 @@
 Profile: ObservationPregnancyStatusEuEps
 Parent: Observation
-Id: observation-pregnancy-status-eu-ips
+Id: observation-pregnancy-status-eu-eps
 Title: "Observation: Pregnancy - Status (EPS)"
 Description: "This profile constrains the Observation resource to represent the pregnancy status in the scope of the European Patient Summary."
 

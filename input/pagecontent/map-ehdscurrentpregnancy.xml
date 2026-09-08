@@ -40,7 +40,7 @@
         </li>
         <li>
           <strong>Target FHIR profile:</strong>
-          <a href="StructureDefinition-observation-pregnancy-status-eu-ips.html">
+          <a href="StructureDefinition-observation-pregnancy-status-eu-eps.html">
         ObservationPregnancyStatusEuEps
           </a>
         </li>
@@ -69,7 +69,7 @@
             <th colspan="3" class="tgt-head">
               Pregnancy Observations
               <div class="tgt-head-links">
-                <a href="StructureDefinition-observation-pregnancy-status-eu-ips.html">ObservationPregnancyStatusEuEps</a>
+                <a href="StructureDefinition-observation-pregnancy-status-eu-eps.html">ObservationPregnancyStatusEuEps</a>
                 <span> | </span>
                 <a href="StructureDefinition-observation-pregnancy-edd-eu-eps.html">ObservationPregnancyEddEuEps</a>
                 <span> | </span>
