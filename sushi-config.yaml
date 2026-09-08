@@ -258,7 +258,7 @@ menu:
     Cross-version Analysis: crossversionanalysis.html
   Artifacts: artifacts.html
   # only for the development phase
-  IPS 2.0: https://hl7.org/fhir/uv/ips/STU2
+  IPS 2.0: https://hl7.org/fhir/uv/ips/2.0.1
 #    IPS Diff: ips-diff.html
 
 
