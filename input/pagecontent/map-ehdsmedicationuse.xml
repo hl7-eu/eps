@@ -2,7 +2,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>EHDSMedicationUse → MedicationStatement</title>
+    <title>EHDSMedicationUse -> MedicationStatement</title>
   </head>
   <body>
     <div class="model-map-block">
@@ -23,7 +23,7 @@
           the mappings. </div>
       </div>
     </div>
-    <h3>EHDSMedicationUse → MedicationStatement</h3>
+    <h3>EHDSMedicationUse -> MedicationStatement</h3>
     <a> </a>
     <p></p>
     <p>
@@ -52,8 +52,8 @@
     </div>
     <p></p>
     <div class="table-wrap">
-      <table summary="EHDSMedicationUse → MedicationStatement">
-        <caption>EHDSMedicationUse → MedicationStatement</caption>
+      <table summary="EHDSMedicationUse -> MedicationStatement">
+        <caption>EHDSMedicationUse -> MedicationStatement</caption>
         <thead>
           <tr>
             <th colspan="1" class="src-head">EHDSMedicationUse (Logical Model)</th>
@@ -207,7 +207,7 @@
       </table>
     </div>
     <p style="margin-top:2rem;color:#555;"> Return to overview: <a href="modelmap.html">EHDS Logical
-      Models → FHIR Profiles</a>
+      Models -> FHIR Profiles</a>
     </p>
   </body>
 </div>

@@ -2,7 +2,7 @@
 <div xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-    <title>EHDSAllergyIntolerance → AllergyIntolerance</title>
+    <title>EHDSAllergyIntolerance -> AllergyIntolerance</title>
   </head>
   <body>
     <div class="model-map-block">
@@ -21,7 +21,7 @@
         </div>
       </div>
     </div>
-    <h3>EHDSAllergyIntolerance → AllergyIntolerance</h3>
+    <h3>EHDSAllergyIntolerance -> AllergyIntolerance</h3>
     <a> </a>
     <p></p>
     <p>
@@ -48,8 +48,8 @@
     </div>
     <p></p>
     <div class="table-wrap">
-      <table summary="EHDSAllergyIntolerance → AllergyIntolerance">
-        <caption>EHDSAllergyIntolerance → AllergyIntolerance</caption>
+      <table summary="EHDSAllergyIntolerance -> AllergyIntolerance">
+        <caption>EHDSAllergyIntolerance -> AllergyIntolerance</caption>
         <thead>
           <tr>
             <th colspan="1" class="src-head">EHDSAllergyIntolerance (Logical Model)</th>
@@ -170,14 +170,14 @@
             <td>status</td>
             <td>equivalent</td>
             <td>AllergyIntolerance</td><td>clinicalStatus</td>
-            <td>EHDS "status" → FHIR "clinicalStatus". Both point to the clinical/temporal lifecycle.</td>
+            <td>EHDS "status" -> FHIR "clinicalStatus". Both point to the clinical/temporal lifecycle.</td>
           </tr>
           <!-- onsetDate -->
           <tr>
             <td>onsetDate</td>
             <td>equivalent</td>
             <td>AllergyIntolerance</td><td>onset[x]</td>
-            <td>FHIR supports multiple datatypes; here you have dateTime → map to <code>onsetDateTime</code>.
+            <td>FHIR supports multiple datatypes; here you have dateTime -> map to <code>onsetDateTime</code>.
             </td>
           </tr>
           <!-- endDate -->
@@ -226,7 +226,7 @@
       </table>
     </div>
     <p style="margin-top:2rem;color:#555;">
-      Return to overview: <a href="modelmap.html">EHDS Logical Models → FHIR Profiles</a>
+      Return to overview: <a href="modelmap.html">EHDS Logical Models -> FHIR Profiles</a>
     </p>
   </body>
 </div>
