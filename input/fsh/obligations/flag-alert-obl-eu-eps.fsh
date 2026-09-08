@@ -1,7 +1,7 @@
 Profile: FlagAlertOblEuEps
 Parent: FlagPatientEuCore
 Id: flag-alert-obl-eu-eps
-Title: "Flag :  Alert - Obligations (EPS)"
+Title: "Flag: Alert - Obligations (EPS)"
 Description: "This profile sets the IPS obligations on the EU Core Flag - Alert profile."
 
 // ================= IPS OBLIGATIONS =================
