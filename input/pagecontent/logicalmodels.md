@@ -1,6 +1,6 @@
 ### EHDS Logical Data Models
 
-The [**Xt-EHR Joint Action**](https://www.xt-ehr.eu/) has developped a set of Logical data models (or information models)  - see [**Xt-EHR EHDS Logical Information Models**](https://build.fhir.org/ig/Xt-EHR/xt-ehr-common) Implementation Guide - that have been used as **basis** for the future **European Health Data Space (EHDS)** Implementing Act.
+The [**Xt-EHR Joint Action**](https://www.xt-ehr.eu/) has developped a set of Logical data models (or information models)  - see [**Xt-EHR EHDS Logical Information Models**](https://www.xt-ehr.eu/fhir/models) Implementation Guide - that have been used as **basis** for the future **European Health Data Space (EHDS)** Implementing Act.
 
 They represent **evolving, refined interpretations** of the data sets described in the [**eHealth Network (eHN) Guidelines**](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/eu-cooperation/ehealth-network_en#ehealth-network-guidelines), and are subject to further refinement.
 
