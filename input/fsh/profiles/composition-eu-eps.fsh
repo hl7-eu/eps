@@ -68,7 +68,7 @@ Description: """This profile defines how the Composition resource is used to rep
     sectionProceduresHx 1..1  and // set to 1..1 to align with the EHDS model
     sectionMedicalDevices 1..1  and // set to 1..1 to align with the EHDS model
     sectionAdvanceDirectives 0..1  and
-    sectionAlert 0..1  and
+    sectionAlerts 0..1  and
     sectionFunctionalStatus 0..1  and
     // sectionPastProblems 0..1  and
     sectionPregnancyHx 0..1  and
@@ -194,7 +194,7 @@ Description: """This profile defines how the Composition resource is used to rep
 ///=== EPS Alerts Section
 
 
-* section[sectionAlert]
+* section[sectionAlerts]
   * insert SectionComRules ( 
       EPS Alerts Section, 
       The alerts section flags potential concerns and/or dangers to/from the patient and may also include obstacles to care.,
@@ -468,7 +468,7 @@ Description: """This profile defines how the Composition resource is used to rep
 
 * section[sectionAdvanceDirectives] insert ObligationIpsHandleDisplay
 
-* section[sectionAlert] insert ObligationIpsHandleDisplay
+* section[sectionAlerts] insert ObligationIpsHandleDisplay
 
 * section[sectionFunctionalStatus] insert ObligationIpsHandleDisplay
 

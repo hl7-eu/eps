@@ -96,12 +96,12 @@ Usage: #definition
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PatientSummary.body.alerts.alert					
 * group[=].element[=].display = "A.2.1.2 Medical alert information (other alerts not included in allergies)"
-* group[=].element[=].target.code = #Composition.section:sectionAlert					
+* group[=].element[=].target.code = #Composition.section:sectionAlerts					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #equivalent					
 * group[=].element[+].code = #PatientSummary.body.alerts.alert.description					
 * group[=].element[=].display = "A.2.1.2.1 Healthcare alert description"
-* group[=].element[=].target.code = #Composition.section:sectionAlert.text					
+* group[=].element[=].target.code = #Composition.section:sectionAlerts.text					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
 * group[=].element[+].code = #PatientSummary.body.medicalHistory					
@@ -260,13 +260,13 @@ Usage: #definition
 * group[=].element[=].target.code = #Flag.text					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Composition.section:sectionAlert.entry.otType(Flag)"
+* group[=].element[=].target.comment = "Composition.section:sectionAlerts.entry.otType(Flag)"
 * group[=].element[+].code = #PatientSummary.body.alerts.alert.description					
 * group[=].element[=].display = "A.2.1.2.1 Healthcare alert description"
 * group[=].element[=].target.code = #Flag.code.text					
 * group[=].element[=].target.display = ""
 * group[=].element[=].target.equivalence = #relatedto					
-* group[=].element[=].target.comment = "Composition.section:sectionAlert.entry.otType(Flag)"
+* group[=].element[=].target.comment = "Composition.section:sectionAlerts.entry.otType(Flag)"
 * group[+].source = "http://hl7.eu/fhir/eps/StructureDefinition/PatientSummary"
 * group[=].target = "http://hl7.eu/fhir/eps/StructureDefinition/observation-travel-eu-eps"
 * group[=].element[+].code = #PatientSummary.body.patientData.travelHistory.country					
