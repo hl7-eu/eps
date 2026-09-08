@@ -26,7 +26,7 @@ The EHDS logical models currently supported in this version of the guide are lis
 
 | **Model**     | **Description**       |
 | ------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------ |
-| [EHDSPatientSummary](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSPatientSummary.html)  | EHDS refined base model for Patient Summary       |
+| [EHDSPatientSummary](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSPatientSummary.html)  | EHDS refined base model for Patient Summary       |
 
 ---
 
@@ -34,25 +34,25 @@ The EHDS logical models currently supported in this version of the guide are lis
 
 | **Model** | **Description** |
 | --- | --- |
-| [EHDSPatient](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSPatient.html) | EHDS refined base model for Patient (subject of care) |
-| [EHDSHealthProfessional](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSHealthProfessional.html) | EHDS refined base model for Health Professional |
-| [EHDSOrganisation](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSOrganisation.html) | EHDS refined base model for healthcare organisations and providers |
-| [EHDSAttachment](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSAttachment.html) | EHDS refined base model for containing or referencing attachments. |
-| [EHDSDevice](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSDevice.html) | EHDS refined base model for Device information |
-| [EHDSAllergyIntolerance](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSAllergyIntolerance.html) | EHDS refined base model for allergy or intolerance information |
-| [EHDSAlert](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSAlert.html) | EHDS refined base model for clinical alerts |
-| [EHDSCondition](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSCondition.html) | EHDS refined base model for a clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern |
-| [EHDSMedicationUse](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSMedicationUse.html) | Statement about a single medication as part of a medication summary |
-| [EHDSProcedure](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSProcedure.html) | EHDS refined base model for an action that is or was performed on or for a patient |
-| [EHDSImmunisation](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSImmunisation.html) | EHDS refined base model for immunisation |
-| [EHDSDeviceUse](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSDeviceUse.html) | EHDS refined base model for device use information |
-| [EHDSCurrentPregnancy](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSCurrentPregnancy.html) | EHDS model for current pregnancy status |
-| [EHDSPregnancyHistory](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSPregnancyHistory.html) | EHDS model for Pregnancy history for one pregnancy |
-| [EHDSTravelHistory](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSTravelHistory.html) | EHDS model for Relevant information about the patient's recent travel history, for one visit |
-| [EHDSAdvanceDirective](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSAdvanceDirective.html) | EHDS model for Healthcare directives concerning life or after life wishes of the patient |
-| [EHDSObservation](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSObservation.html) | EHDS refined base model for medical test results and other clinical observations |
-| [EHDSCarePlan](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSCarePlan.html) | EHDS simplified model for care plan. The model includes very minimal information and is not designed to cover the full functionality of care plans. |
-| [EHDSLaboratoryObservation](https://www.xt-ehr.eu/fhir/models/StructureDefinition-EHDSLaboratoryObservation.html) | EHDS refined base model for Observation performed by laboratory |
+| [EHDSPatient](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSPatient.html) | EHDS refined base model for Patient (subject of care) |
+| [EHDSHealthProfessional](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSHealthProfessional.html) | EHDS refined base model for Health Professional |
+| [EHDSOrganisation](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSOrganisation.html) | EHDS refined base model for healthcare organisations and providers |
+| [EHDSAttachment](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSAttachment.html) | EHDS refined base model for containing or referencing attachments. |
+| [EHDSDevice](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDevice.html) | EHDS refined base model for Device information |
+| [EHDSAllergyIntolerance](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSAllergyIntolerance.html) | EHDS refined base model for allergy or intolerance information |
+| [EHDSAlert](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSAlert.html) | EHDS refined base model for clinical alerts |
+| [EHDSCondition](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSCondition.html) | EHDS refined base model for a clinical condition, problem, diagnosis, or other event, situation, issue, or clinical concept that has risen to a level of concern |
+| [EHDSMedicationUse](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSMedicationUse.html) | Statement about a single medication as part of a medication summary |
+| [EHDSProcedure](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSProcedure.html) | EHDS refined base model for an action that is or was performed on or for a patient |
+| [EHDSImmunisation](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSImmunisation.html) | EHDS refined base model for immunisation |
+| [EHDSDeviceUse](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSDeviceUse.html) | EHDS refined base model for device use information |
+| [EHDSCurrentPregnancy](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSCurrentPregnancy.html) | EHDS model for current pregnancy status |
+| [EHDSPregnancyHistory](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSPregnancyHistory.html) | EHDS model for Pregnancy history for one pregnancy |
+| [EHDSTravelHistory](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSTravelHistory.html) | EHDS model for Relevant information about the patient's recent travel history, for one visit |
+| [EHDSAdvanceDirective](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSAdvanceDirective.html) | EHDS model for Healthcare directives concerning life or after life wishes of the patient |
+| [EHDSObservation](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSObservation.html) | EHDS refined base model for medical test results and other clinical observations |
+| [EHDSCarePlan](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSCarePlan.html) | EHDS simplified model for care plan. The model includes very minimal information and is not designed to cover the full functionality of care plans. |
+| [EHDSLaboratoryObservation](https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSLaboratoryObservation.html) | EHDS refined base model for Observation performed by laboratory |
 
 ---
 

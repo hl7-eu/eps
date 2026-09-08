@@ -49,7 +49,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSPatientSummary.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSPatientSummary.html"
                             target="_blank">EHDSPatientSummary</a>
                     </td>
                     <td>
@@ -96,7 +96,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSPatient.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSPatient.html"
                             target="_blank">EHDSPatient</a>
                     </td>
                     <td>
@@ -115,7 +115,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSHealthProfessional.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSHealthProfessional.html"
                             target="_blank">EHDSHealthProfessional</a>
                     </td>
                     <td>
@@ -136,7 +136,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSOrganisation.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSOrganisation.html"
                             target="_blank">EHDSOrganisation</a>
                     </td>
                     <td>
@@ -154,7 +154,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSAlert.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSAlert.html"
                             target="_blank">EHDSAlert</a>
                     </td>
                     <td>
@@ -172,7 +172,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSAllergyIntolerance.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSAllergyIntolerance.html"
                             target="_blank">EHDSAllergyIntolerance</a>
                     </td>
                     <td>
@@ -190,7 +190,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSCondition.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSCondition.html"
                             target="_blank">EHDSCondition</a>
                     </td>
                     <td>
@@ -208,7 +208,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSObservation.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSObservation.html"
                             target="_blank">EHDSObservation</a>
                     </td>
                     <td>
@@ -225,7 +225,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSProcedure.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSProcedure.html"
                             target="_blank">EHDSProcedure</a>
                     </td>
                     <td>
@@ -243,7 +243,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSImmunisation.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSImmunisation.html"
                             target="_blank">EHDSImmunisation</a>
                     </td>
                     <td>
@@ -262,7 +262,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSMedication.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSMedication.html"
                             target="_blank">EHDSMedication</a>
                     </td>
                     <td>
@@ -300,7 +300,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSAttachment.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSAttachment.html"
                             target="_blank">EHDSAttachment</a>
                     </td>
                     <td>
@@ -315,7 +315,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSDevice.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSDevice.html"
                             target="_blank">EHDSDevice</a>
                     </td>
                     <td>
@@ -330,7 +330,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSDeviceUse.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSDeviceUse.html"
                             target="_blank">EHDSDeviceUse</a>
                     </td>
                     <td>
@@ -345,7 +345,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSCurrentPregnancy.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSCurrentPregnancy.html"
                             target="_blank">EHDSCurrentPregnancy</a>
                     </td>
                     <td>
@@ -368,7 +368,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSPregnancyHistory.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSPregnancyHistory.html"
                             target="_blank">EHDSPregnancyHistory</a>
                     </td>
                     <td>
@@ -384,7 +384,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSTravelHistory.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSTravelHistory.html"
                             target="_blank">EHDSTravelHistory</a>
                     </td>
                     <td>
@@ -399,7 +399,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSAdvanceDirective.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSAdvanceDirective.html"
                             target="_blank">EHDSAdvanceDirective</a>
                     </td>
                     <td>
@@ -415,7 +415,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSCarePlan.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSCarePlan.html"
                             target="_blank">EHDSCarePlan</a>
                     </td>
                     <td>
@@ -430,7 +430,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSLaboratoryObservation.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSLaboratoryObservation.html"
                             target="_blank">EHDSLaboratoryObservation</a>
                     </td>
                     <td>
@@ -447,7 +447,7 @@
                 <tr>
                     <td>
                         <a
-                            href="https://www.xt-ehr.eu/fhir/models/0.3.0/StructureDefinition-EHDSMedicationUse.html"
+                            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSMedicationUse.html"
                             target="_blank">EHDSMedicationUse</a>
                     </td>
                     <td>
