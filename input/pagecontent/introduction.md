@@ -22,7 +22,7 @@ The eHN Guideline defines the scope, purpose, and semantic content of the Europe
 
 ### European and International Standards Alignment
 
-The HL7 FHIR European Patient Summary aims **conformance with the HL7 FHIR International Patient Summary (IPS) Implementation Guide, version 2.0.0**, and with the HL7 FHIR EU Core profiles. Through the conformance with the HL7 FHIR IPS, this guide claims also compliance with the **ISO/EN 27269 – International Patient Summary (IPS)** standard, ensuring consistency with internationally recognized requirements for patient summary content and structure.
+The HL7 FHIR European Patient Summary aims **for conformance with the HL7 FHIR International Patient Summary (IPS) Implementation Guide, version 2.0.0**, and with the HL7 FHIR EU Core profiles. Through the conformance with the HL7 FHIR IPS, this guide claims also compliance with the **ISO/EN 27269 – International Patient Summary (IPS)** standard, ensuring consistency with internationally recognized requirements for patient summary content and structure.
 
 
 ### Audience

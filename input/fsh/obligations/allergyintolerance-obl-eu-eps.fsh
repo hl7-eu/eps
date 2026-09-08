@@ -2,7 +2,7 @@ Profile: AllergyIntoleranceOblEuEps
 Parent: AllergyIntoleranceEuCore
 Id: allergyintolerance-obl-eu-eps
 Title: "AllergyIntolerance - Obligations  (EPS)"
-Description: "This profiles set the IPS obligations on the EU Core AllergyIntolerance profile."
+Description: "This profile sets the IPS obligations on the EU Core AllergyIntolerance profile."
 
 // ================= IPS OBLIGATIONS =================
 * clinicalStatus insert ObligationIpsPopulateIfKnownDisplay
