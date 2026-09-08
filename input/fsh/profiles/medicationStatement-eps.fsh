@@ -4,7 +4,6 @@ Id: MedicationStatement-eu-eps
 Title:    "MedicationStatement (EPS)"
 Description: """This profile constrains the MedicationStatement resource in the scope of the European Patient Summary."""
 * ^experimental = false
-* ^purpose = "This profile constrains the MedicationStatement resource in the scope of the European Patient Summary."
 
 * insert SetFmmAndStatusRule (1, draft)
 * insert ImposeProfile($MedicationStatement-uv-ips, 0)
