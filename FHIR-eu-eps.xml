@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/eps/xtehr" ciUrl="https://build.fhir.org/ig/hl7-eu/eps" defaultVersion="current" defaultWorkgroup="eu" url="http://hl7.eu/fhir/eps">
+<specification xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" ballotUrl="http://hl7.eu/fhir/eps/1.0.0-ballot" ciUrl="https://build.fhir.org/ig/hl7-eu/eps" defaultVersion="1.0.0-ballot" defaultWorkgroup="eu" gitUrl="https://github.com/HL7-eu/eps" url="http://hl7.eu/fhir/eps">
 <version code="current" url="https://build.fhir.org/ig/hl7-eu/eps"/>
-<version code="1.0.0-alpha" url="http://hl7.eu/fhir/eps/xtehr"/>
+<version code="1.0.0-ballot" url="http://hl7.eu/fhir/eps/1.0.0-ballot"/>
+<version code="1.0.0-alpha" deprecated="true" url="http://hl7.eu/fhir/eps/xtehr"/>
 <artifactPageExtension value="-definitions"/>
 <artifactPageExtension value="-examples"/>
 <artifactPageExtension value="-mappings"/>
@@ -19,11 +20,11 @@
 <artifact id="StructureDefinition/device-eu-eps" key="StructureDefinition-device-eu-eps" name="Device (EPS)"/>
 <artifact id="Device/575520ac-c2ef-4f47-82bf-1b691f5e6466" key="Device-575520ac-c2ef-4f47-82bf-1b691f5e6466" name="Device Example: Blood glucose meter"/>
 <artifact id="Device/0b89dcab-1d0c-44fa-a958-3131452d8cca" key="Device-0b89dcab-1d0c-44fa-a958-3131452d8cca" name="Device Example: Home nebulizer (physical object)"/>
-<artifact id="DeviceUseStatement/90641744-8919-4b70-8ef7-d181b1fce3cb" key="DeviceUseStatement-90641744-8919-4b70-8ef7-d181b1fce3cb" name="Device Use Statement Example: Home nebulizer"/>
+<artifact id="DeviceUseStatement/90641744-8919-4b70-8ef7-d181b1fce3cb" key="DeviceUseStatement-9ee7b991-3240-42e3-9bcf-a1de0507754f" name="Device Use Statement Example: Home nebulizer"/>
 <artifact id="DeviceUseStatement/9ee7b991-3240-42e3-9bcf-a1de0507754f" key="DeviceUseStatement-9ee7b991-3240-42e3-9bcf-a1de0507754f" name="Device Use Statement Example: Home nebulizer"/>
 <artifact id="StructureDefinition/deviceUseStatement-eu-eps" key="StructureDefinition-deviceUseStatement-eu-eps" name="DeviceUseStatement (EPS)"/>
 <artifact id="StructureDefinition/diagnosticReport-eu-eps" key="StructureDefinition-diagnosticReport-eu-eps" name="DiagnosticReport (EPS)"/>
-<artifact id="StructureDefinition/flag-alert-obl-eu-eps" key="StructureDefinition-flag-alert-obl-eu-eps" name="Flag : Alert - Obligations (EPS)"/>
+<artifact id="StructureDefinition/flag-alert-obl-eu-eps" key="StructureDefinition-flag-alert-obl-eu-eps" name="Flag: Alert - Obligations (EPS)"/>
 <artifact id="ValueSet/gestational-age-loinc" key="ValueSet-gestational-age-loinc" name="Gestational Age (LOINC)"/>
 <artifact id="Immunization/2c268a6d-fd6e-4580-acae-3b5f52d43c26" key="Immunization-2c268a6d-fd6e-4580-acae-3b5f52d43c26" name="Immunization"/>
 <artifact id="StructureDefinition/immunization-obl-eu-eps" key="StructureDefinition-immunization-obl-eu-eps" name="Immunization - Obligations (EPS)"/>
@@ -31,8 +32,8 @@
 <artifact id="StructureDefinition/medication-obl-eu-eps" key="StructureDefinition-medication-obl-eu-eps" name="Medication - Obligations (EPS)"/>
 <artifact id="Medication/a20659b9-12e2-417a-aa70-98483da34f44" key="Medication-a20659b9-12e2-417a-aa70-98483da34f44" name="Medication: simvastatin 10 MG Oral Tablet"/>
 <artifact id="StructureDefinition/medicationrequest-obl-eu-eps" key="StructureDefinition-medicationrequest-obl-eu-eps" name="MedicationRequest - Obligations (EPS)"/>
-<artifact id="StructureDefinition/medicationStatement-eu-eps" key="StructureDefinition-medicationStatement-eu-eps" name="MedicationStatement (EPS)"/>
-<artifact id="MedicationStatement/635c4921-5fcb-4ce7-b6ef-d866b680ad01" key="MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01" name="MedicationStatement: Simvastatin 10 mg oral tablet"/>
+<artifact id="StructureDefinition/medicationStatement-eu-eps" key="StructureDefinition-MedicationStatement-eu-eps" name="MedicationStatement (EPS)"/>
+<artifact id="MedicationStatement/635c4921-5fcb-4ce7-b6ef-d866b680ad01" key="MedicationStatement-b3a1ed32-3f44-41e2-919b-1c8bdeaee29c" name="MedicationStatement: Simvastatin 10 mg oral tablet"/>
 <artifact id="MedicationStatement/b3a1ed32-3f44-41e2-919b-1c8bdeaee29c" key="MedicationStatement-b3a1ed32-3f44-41e2-919b-1c8bdeaee29c" name="MedicationStatement: Simvastatin 10 mg oral tablet"/>
 <artifact id="Observation/EPSExampleObservationPregnancyEdd" key="Observation-EPSExampleObservationPregnancyEdd" name="Observation : Pregnancy Expected Delivery Date"/>
 <artifact id="Observation/EPSExampleObservationPregnancyGestationalAge" key="Observation-EPSExampleObservationPregnancyGestationalAge" name="Observation : Pregnancy Gestational Age"/>
@@ -42,13 +43,13 @@
 <artifact id="StructureDefinition/observation-pregnancy-edd-eu-eps" key="StructureDefinition-observation-pregnancy-edd-eu-eps" name="Observation: Pregnancy - Expected Delivery Date (EPS)"/>
 <artifact id="StructureDefinition/observation-pregnancy-gestationalAge-eu-eps" key="StructureDefinition-observation-pregnancy-gestationalAge-eu-eps" name="Observation: Pregnancy - Gestational Age (EPS)"/>
 <artifact id="StructureDefinition/observation-pregnancy-outcome-eu-eps" key="StructureDefinition-observation-pregnancy-outcome-eu-eps" name="Observation: Pregnancy - Outcome (EPS)"/>
-<artifact id="StructureDefinition/observation-pregnancy-status-eu-ips" key="StructureDefinition-observation-pregnancy-status-eu-ips" name="Observation: Pregnancy - Status (EPS)"/>
+<artifact id="StructureDefinition/observation-pregnancy-status-eu-eps" key="StructureDefinition-observation-pregnancy-status-eu-ips" name="Observation: Pregnancy - Status (EPS)"/>
 <artifact id="StructureDefinition/organization-obl-eu-eps" key="StructureDefinition-organization-obl-eu-eps" name="Organization - Obligations (EPS)"/>
 <artifact id="Organization/ce815734-508a-4c1d-8b63-01e1d02a5614" key="Organization-ce815734-508a-4c1d-8b63-01e1d02a5614" name="Organization: BfA-Klinik"/>
 <artifact id="Parameters/exp-params" key="Parameters-exp-params" name="Parameters for Terminology expansion using Snomed-CT international edition"/>
 <artifact id="StructureDefinition/patient-eu-eps" key="StructureDefinition-patient-eu-eps" name="Patient (EPS)"/>
 <artifact id="Patient/f0b2dcfe-e837-464b-ae8a-3b9da1807dd3" key="Patient-f0b2dcfe-e837-464b-ae8a-3b9da1807dd3" name="Patient: Petra Schwartz"/>
-<artifact id="Patient/f51071b2-6c06-4d31-85ed-26a6b964ef98" key="Patient-f51071b2-6c06-4d31-85ed-26a6b964ef98" name="Patient: Petra Schwartz"/>
+<artifact id="Patient/f51071b2-6c06-4d31-85ed-26a6b964ef98" key="Patient-f0b2dcfe-e837-464b-ae8a-3b9da1807dd3" name="Patient: Petra Schwartz"/>
 <artifact id="StructureDefinition/practitioner-obl-eu-eps" key="StructureDefinition-practitioner-obl-eu-eps" name="Practitioner - Obligations (EPS)"/>
 <artifact id="Practitioner/3752dacc-a6e8-4cdd-b82f-92e1647de816" key="Practitioner-3752dacc-a6e8-4cdd-b82f-92e1647de816" name="Practitioner: Dr. Hel Ping"/>
 <artifact id="PractitionerRole/01d682e6-bb2d-4b31-9d3c-51cdc6dfb39b" key="PractitionerRole-01d682e6-bb2d-4b31-9d3c-51cdc6dfb39b" name="PractitionerRole"/>
@@ -59,7 +60,7 @@
 <page key="many" name="(many)"/>
 <page key="artifacts" name="Artifacts Summary"/>
 <page key="authors" name="Authors and Contributors"/>
-<page key="contributors" name="Authors and contributors"/>
+<page deprecated="true" key="contributors" name="Authors and contributors"/>
 <page key="copyright" name="Copyright"/>
 <page key="crossversionanalysis" name="Cross-version Analysis"/>
 <page key="dependencies" name="Dependencies"/>

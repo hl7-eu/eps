@@ -37,7 +37,7 @@
         <li>
           <strong>Source logical model:</strong>
           <a
-            href="https://www.xt-ehr.eu/fhir/models/1.0.0/0.3.0/StructureDefinition-EHDSMedicationUse.html"
+            href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSMedicationUse.html"
             target="_blank">
             EHDSMedicationUse
           </a>
@@ -131,7 +131,7 @@
             <td>treatmentStatus</td>
             <td>equivalent</td>
             <td>MedicationStatement</td>
-            <td>extension:adherence-code<span style="color:#2e7d32;font-weight:600;">(R4)</span>
+            <td>extension:adherence-code<span style="color:#2e7d32;font-weight:600;">〔R4〕</span>
             </td>
             <td></td>
           </tr>
@@ -139,7 +139,7 @@
             <td>treatmentStatus</td>
             <td>equivalent</td>
             <td>MedicationStatement</td>
-            <td>adherence.code<span style="color:#2e7d32;font-weight:600;">(R5)</span>
+            <td>adherence.code<span style="color:#2e7d32;font-weight:600;">〔R5〕</span>
             </td>
             <td></td>
           </tr>
@@ -147,7 +147,7 @@
             <td>medication</td>
             <td>equivalent</td>
             <td>MedicationStatement</td>
-            <td>medication[x] <span style="color:#2e7d32;font-weight:600;">(R4)</span>
+            <td>medication[x] <span style="color:#2e7d32;font-weight:600;">〔R4〕</span>
             </td>
             <td>In the model only the Reference to <code>Medication</code>. </td>
           </tr>
@@ -155,7 +155,7 @@
             <td>medication</td>
             <td>equivalent</td>
             <td>MedicationStatement</td>
-            <td>medication<span style="color:#2e7d32;font-weight:600;">(R5)</span>
+            <td>medication<span style="color:#2e7d32;font-weight:600;">〔R5〕</span>
             </td>
             <td>In the model only the Reference to <code>Medication</code>. </td>
           </tr>
@@ -163,7 +163,7 @@
             <td>reason[x]</td>
             <td>equivalent</td>
             <td>MedicationStatement</td>
-            <td>reasonCode <span style="color:#2e7d32;font-weight:600;">(R4)</span>
+            <td>reasonCode <span style="color:#2e7d32;font-weight:600;">〔R4〕</span>
             </td>
             <td></td>
           </tr>
@@ -171,7 +171,7 @@
             <td>reason[x]</td>
             <td>equivalent</td>
             <td>MedicationStatement</td>
-            <td>reason.concept<span style="color:#2e7d32;font-weight:600;">(R5)</span>
+            <td>reason.concept<span style="color:#2e7d32;font-weight:600;">〔R5〕</span>
             </td>
             <td></td>
           </tr>
