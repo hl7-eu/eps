@@ -194,14 +194,14 @@
             <td>bodySite</td>
             <td>source-is-broader-than-target</td>
             <td>Observation</td>
-            <td>extension[bodyStructure]<span style="color:#2e7d32;font-weight:600;">?R4?</span></td>
+            <td>extension[bodyStructure]<span style="color:#2e7d32;font-weight:600;">(R4)</span></td>
             <td></td>
           </tr>
           <tr>
             <td>bodySite</td>
             <td>equivalent</td>
             <td>Observation</td>
-            <td>bodyStructure<span style="color:#2e7d32;font-weight:600;">?R5?</span></td>
+            <td>bodyStructure<span style="color:#2e7d32;font-weight:600;">(R5)</span></td>
             <td></td>
           </tr>
           <!-- result -->
@@ -227,7 +227,7 @@
             <td>See included elements for mapping details</td>
           </tr>
           <tr>
-            <td>result.uncertaint.value</td>
+            <td>result.uncertainty.value</td>
             <td>equivalent</td>
             <td>Quantity</td>
             <td>extension:uncertainty</td>
@@ -313,7 +313,7 @@
             <td>See included elements for mapping details</td>
           </tr>
           <tr>
-            <td>component.result.uncertaint.value</td>
+            <td>component.result.uncertainty.value</td>
             <td>equivalent</td>
             <td>Quantity</td>
             <td>extension:uncertainty</td>

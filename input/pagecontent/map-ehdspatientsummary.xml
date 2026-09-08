@@ -506,7 +506,7 @@
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionSocialHistory</td>
-          <td></td>
+          <td>Use LOINC 29762-2</td>
           </tr>
           <tr>
             <td>socialHistory.generatedNarrative</td>
@@ -600,7 +600,7 @@
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionPatientHx</td>
-          <td class="highlight-yellow">check if the propoer loinc code is used and the patient history section is added.</td>
+          <td class="highlight-yellow"></td>
           </tr>
           <tr>
             <td>patientStory.note</td>

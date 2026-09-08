@@ -154,7 +154,7 @@
             <td>related-to</td>
             <td>CarePlan</td>
             <td>activity.reference</td>
-            <td class="highlight-yellow">When EHDS activity is a CodeableConcept the code is determined by the referred resource. activity.detail is no more present in FHIR R5</td>
+            <td class="highlight-yellow">When EHDS activity is a CodeableConcept the code is determined by the referred resource. activity.detail is no longer present in FHIR R5</td>
           </tr>
           <tr>
             <td>goal</td>
