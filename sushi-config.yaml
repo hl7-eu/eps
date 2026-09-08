@@ -57,8 +57,6 @@ pages:
     title: Home
   logicalmodels.md:
     title: Logical Models
-  contributors.md:
-    title: Authors and contributors
   obligations.md:
     title: Obligations
   knownIssues.md:
