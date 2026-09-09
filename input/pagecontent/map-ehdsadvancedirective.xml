@@ -108,7 +108,7 @@
             <td>status</td>
             <td>Align to ConsentState.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.source</td>
             <td>no-map</td>
             <td>Consent</td>

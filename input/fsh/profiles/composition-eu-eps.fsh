@@ -304,11 +304,11 @@ Description: """This profile defines how the Composition resource is used to rep
     Description of the persona's Health related \"lifestyle observations\" (e.g. smoke habits; alcohol consumption; diets\, risky habits.\)
     )
   
-  * insert SectionEntrySliceDefRules (smokingTobaccoUse, 0..*, 
+  * insert SectionEntrySliceDefRules (smokingTobaccoUse, 0..1, 
       Smoke habits,  	
       A description of the persona's smoke habits,
       $Observation-tobaccouse-uv-ips)
-  * insert SectionEntrySliceDefRules (alcoholUse, 0..*, 
+  * insert SectionEntrySliceDefRules (alcoholUse, 0..1, 
       Alcohol consumption,  	
       A description of the persona's alcohol consumption habits,
       $Observation-alcoholuse-uv-ips)
