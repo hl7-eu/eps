@@ -153,7 +153,7 @@ Description: """This profile defines how the Composition resource is used to rep
   
 // === EPS History of Procedures Section ===
 
-* section[sectionProceduresHx]
+* section[sectionProceduresHx] obeys ips-comp-1
   * insert SectionComRules ( 
       EPS History of Procedures Section, 
       The History of Procedures Section contains a description of the patient past procedures that are pertinent to the scope of this document. Procedures may refer for example to:\r\n
@@ -176,7 +176,7 @@ Description: """This profile defines how the Composition resource is used to rep
 
 ///=== EPS Medical Devices Section
 
-* section[sectionMedicalDevices]
+* section[sectionMedicalDevices] obeys ips-comp-1 
   * insert SectionComRules (EPS Medical Devices Section, 
   The medical devices section contains narrative text and coded entries describing the patient history of medical device use.,
   http://loinc.org#46264-8)
