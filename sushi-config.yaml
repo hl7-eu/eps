@@ -253,7 +253,7 @@ menu:
     Download: downloads.html
     Dependencies: dependencies.html
     Expansion parameters: expansion-params.html
-    #  Change Log: changes.html <== NOT FOR THIS VERSION
+    Change Log: changes.html
     Copyright: copyright.html
     Cross-version Analysis: crossversionanalysis.html
   Artifacts: artifacts.html
