@@ -1,6 +1,6 @@
 <div xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-	<h3>Patient Story versus Patient History</h3>
+	<h4>Patient Story versus Patient History</h4>
 	<p>The <b>Patient Story</b> section - inherited from ISO 27269 and FHIR IPS IG - <i>"contains narrative text along with optional resources that express what matters to a patient. This may include needs, strengths, values, concerns and preferences to others providing supportand care. The patient’s story, provided here, may be told by the patient or by a proxy"</i>
 	</p>
 

@@ -87,6 +87,8 @@ pages:
 # == MODEL MAPS
   modelmap.html:
     title: Model Map
+  changes.md:
+    title: Change Log
   map-ehdspatientsummary.xml:
     title: EHDSPatientSummary to Composition (EPS)
   map-ehdsattachment.xml:
