@@ -235,13 +235,6 @@
             <td></td>
           </tr>
           <tr>
-            <td>alerts.emptyReason</td>
-            <td>equivalent</td>
-            <td>Composition</td>
-            <td>section:sectionAlerts.emptyReason</td>
-            <td></td>
-          </tr>
-          <tr>
           <td>alerts.medicalAlert</td>
           <td>equivalent</td>
           <td>Composition</td>

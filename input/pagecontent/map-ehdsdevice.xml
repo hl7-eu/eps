@@ -73,7 +73,7 @@
             <td>Repeat for multiple instance identifiers.</td>
           </tr>
           <tr>
-            <td>udiCarrier</td>
+            <td>udi</td>
             <td>equivalent</td>
             <td>Device</td>
             <td>udiCarrier</td>

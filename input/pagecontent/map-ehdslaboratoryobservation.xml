@@ -278,7 +278,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>component.code</td>
+            <td>component.type</td>
             <td>equivalent</td>
             <td>Observation</td>
             <td>component.code</td>
