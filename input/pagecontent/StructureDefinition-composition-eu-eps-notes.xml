@@ -1,0 +1,11 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<h3>Patient Story versus Patient History</h3>
+	<p>The <b>Patient Story</b> section - inherited from ISO 27269 and FHIR IPS IG - <i>"contains narrative text along with optional resources that express what matters to a patient. This may include needs, strengths, values, concerns and preferences to others providing supportand care. The patient’s story, provided here, may be told by the patient or by a proxy"</i>
+	</p>
+
+	<p>
+		While, the <b>Patient History</b> - derived from the eHN PS Guidelines A.2.2.3 Medical history (not to be confused with the overarching structure A.2.2 Medical history) - <i>"may provide both synthetic anamnesis (e.g. description of phases of the pathology as
+		a chronological summary of clustered clinical information) and anecdotal evidence that clinicians can collect from the patient, and can read in a narrative form. See Section 2, Chapter III, Art 7, (c)."</i></p>
+	
+</div>
