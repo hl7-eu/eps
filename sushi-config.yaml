@@ -25,7 +25,7 @@ copyright: >-
 #
 dependencies:
   hl7.fhir.uv.ips: 2.0.1
-  hl7.fhir.eu.base: 2.0.0
+  hl7.fhir.eu.base: 2.0.1
   # hl7.fhir.uv.extensions.r4: 5.2.0
   hl7.fhir.uv.xver-r5.r4: 0.1.0
   hl7.fhir.eu.extensions.r4:
@@ -87,6 +87,8 @@ pages:
 # == MODEL MAPS
   modelmap.html:
     title: Model Map
+  variance.md:
+    title: EU Variance Statement
   changes.md:
     title: Change Log
   map-ehdspatientsummary.xml:
@@ -208,7 +210,7 @@ parameters: #see https://confluence.hl7.org/display/FHIR/Implementation+Guide+Pa
   apply-version: true
   show-inherited-invariants: true
   usage-stats-opt-out: true
-  ips-comparison: 2.0.0 
+  ips-comparison: 2.0.1
   # excludexml: false
   # excludejson: false
   # excludettl: true
@@ -249,6 +251,7 @@ menu:
     Obligations: obligations.html
   Implementation:
     Mapping to Profiles: modelmap.html
+    EU Variance Statement: variance.html
   About:
     Authors and Contributors: authors.html
     Known/Open Issues: knownIssues.html
@@ -260,7 +263,7 @@ menu:
     Cross-version Analysis: crossversionanalysis.html
   Artifacts: artifacts.html
   # only for the development phase
-  IPS 2.0: https://hl7.org/fhir/uv/ips/2.0.1
+  IPS 2.0.1: https://hl7.org/fhir/uv/ips/2.0.1
 #    IPS Diff: ips-diff.html
 
 

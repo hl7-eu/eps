@@ -1,3 +1,4 @@
+{% include variables.html %}
 
 <div class="model-map-block">
       <div class="callout-wrapper">
@@ -21,9 +22,9 @@ See also the HL7 FHIR obligation extension and obligation code value set for the
 
 The actors used in this version of this guides are those defined by the IPS. 
 The IPS actors are (definitions in the IPS guide):
-- **Creator (IPS)**: a system which produces/assembles/creates an IPS document. See [ActorDefinition-Creator](https://hl7.org/fhir/uv/ips/ActorDefinition-Creator.html).
-- **Consumer (IPS)**: a system that receives an IPS document and uses its content. See [ActorDefinition-Consumer](https://hl7.org/fhir/uv/ips/ActorDefinition-Consumer.html).
-- **Server (IPS)**: a FHIR server acting as an IPS Creator by providing conformant IPS documents in response to FHIR API requests. See [ActorDefinition-Server](https://hl7.org/fhir/uv/ips/ActorDefinition-Server.html).
+- **Creator (IPS)**: a system which produces/assembles/creates an IPS document. See [ActorDefinition-Creator]({{ ips_base }}ActorDefinition-Creator.html).
+- **Consumer (IPS)**: a system that receives an IPS document and uses its content. See [ActorDefinition-Consumer]({{ ips_base }}ActorDefinition-Consumer.html).
+- **Server (IPS)**: a FHIR server acting as an IPS Creator by providing conformant IPS documents in response to FHIR API requests. See [ActorDefinition-Server]({{ ips_base }}ActorDefinition-Server.html).
 
 
 ### Usage of Obligations

@@ -1,8 +1,9 @@
+{% include variables.html %}
 ### Missing Data
 
 This page provides general rules to deal with missing data, not all these rules may apply to this version of this guide. 
 
-The content of this page is adapted from the [HL7 International Patient Summary Implementation Guide (IPS)](https://hl7.org/fhir/uv/ips/)
+The content of this page is adapted from the [HL7 International Patient Summary Implementation Guide (IPS)]({{ ips_base }})
 
 
 #### Optional Data Elements (cardinality of 0..1 or 0..\*)
