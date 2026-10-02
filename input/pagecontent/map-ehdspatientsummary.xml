@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml">
+    {% include variables.html %}
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
     <title>EHDSPatientSummary -> Composition (EPS)</title>
@@ -34,7 +35,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSPatientSummary.html" target="_blank">
+          <a href="{{ xtehr_models }}StructureDefinition-EHDSPatientSummary.html" target="_blank">
             EHDSPatientSummary
           </a>
         </li>
@@ -164,7 +165,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>header.attestation.attester</td>
+            <td>header.attestation.attester[x]</td>
             <td>equivalent</td>
             <td>Composition</td>
             <td>attester.party</td>
@@ -185,7 +186,7 @@
             <td></td>
           </tr>
           <tr>
-            <td>header.legalAuthentication.legalAuthenticator</td>
+            <td>header.legalAuthentication.legalAuthenticator[x]</td>
             <td>related-to</td>
             <td>Composition</td>
             <td>attester.party</td>
@@ -217,6 +218,14 @@
             <td>equivalent</td>
             <td>Composition</td>
             <td>custodian</td>
+            <td></td>
+          </tr>
+          <!-- DOCUMENT BODY -->
+          <tr>
+            <td>presentedForm</td>
+            <td>no-map</td>
+            <td>Composition</td>
+            <td></td>
             <td></td>
           </tr>
           <!-- SECTION: ALERTS -->

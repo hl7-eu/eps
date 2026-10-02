@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml">
+    {% include variables.html %}
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
     <title>EHDSMedicationUse -> MedicationStatement</title>
@@ -37,7 +38,7 @@
         <li>
           <strong>Source logical model:</strong>
           <a
-            href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSMedicationUse.html"
+            href="{{ xtehr_models }}StructureDefinition-EHDSMedicationUse.html"
             target="_blank">
             EHDSMedicationUse
           </a>
@@ -187,7 +188,7 @@
             <td>equivalent</td>
             <td>MedicationStatement</td>
             <td>dosage</td>
-            <td>Map each EHDSDosaging row to a <code>dosage</code> element.</td>
+            <td>Map each EHDSDosage row to a <code>dosage</code> element.</td>
           </tr>
           <tr>
             <td>periodOfUse</td>

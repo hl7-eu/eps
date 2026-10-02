@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml">
+    {% include variables.html %}
   <head>
     <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
     <title>EHDSAttachment -> Attachment</title>
@@ -34,7 +35,7 @@
       <ul>
         <li>
           <strong>Source logical model:</strong>
-          <a href="https://www.xt-ehr.eu/fhir/models/1.0.0/StructureDefinition-EHDSAttachment.html" target="_blank">
+          <a href="{{ xtehr_models }}StructureDefinition-EHDSAttachment.html" target="_blank">
         EHDSAttachment
           </a>
         </li>
