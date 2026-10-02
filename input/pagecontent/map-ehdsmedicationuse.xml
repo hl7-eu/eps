@@ -14,16 +14,6 @@
           Implementing Acts. </div>
       </div>
     </div>
-    <div class="model-map-block">
-      <div class="callout-wrapper">
-        <div class="callout-box">
-          <strong>Yellow row/cells:</strong> In this ballot publication, some row/cells of the
-          mapping table have been left in yellow to indicate areas requiring further review or
-          refinement; including feedback from the Xt-EHR joint action (see note above). These
-          highlights will be addressed in subsequent updates to ensure accuracy and completeness of
-          the mappings. </div>
-      </div>
-    </div>
     <h3>EHDSMedicationUse -> MedicationStatement</h3>
     <a> </a>
     <p></p>
@@ -92,18 +82,18 @@
             <td>identifier</td>
             <td>Copy over all identifiers if multiple.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.author[x]</td>
             <td>no-map</td>
             <td>MedicationStatement</td>
             <td></td>
-            <td></td>
+            <td>If with author is intended the source of information, use the informationSource element.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.date</td>
             <td>no-map</td>
             <td>MedicationStatement</td>
-            <td></td>
+            <td>dateAsserted</td>
             <td></td>
           </tr>
           <tr>
@@ -144,12 +134,12 @@
             </td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>changeType</td>
             <td>no-map</td>
             <td>MedicationStatement</td>
             <td></td>
-            <td>No equivalent element in MedicationStatement.</td>
+            <td>No native element in MedicationStatement to record the change type ('added', 'removed', 'altered') within a medication summary; consider an extension if needed.</td>
           </tr>
           <tr>
             <td>medication</td>

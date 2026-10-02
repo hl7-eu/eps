@@ -78,6 +78,7 @@
 <page key="map-ehdspatientsummary" name="EHDSPatientSummary to Composition (EPS)"/>
 <page key="map-ehdspregnancyhistory" name="EHDSPregnancyHistory Mapping"/>
 <page key="map-ehdstravelhistory" name="EHDSTravelHistory Mapping"/>
+<page key="variance" name="EU Variance Statement"/>
 <page key="expansion-params" name="Expansion Parameters"/>
 <page key="missing-data" name="Handling Missing Data"/>
 <page key="index" name="Home"/>

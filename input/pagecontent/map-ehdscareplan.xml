@@ -14,14 +14,6 @@
         </div>
       </div>
     </div>
-    <div class="model-map-block">
-      <div class="callout-wrapper">
-        <div class="callout-box">
-          <strong>Yellow row/cells:</strong>
-              In this ballot publication, some row/cells of the mapping table have been left in yellow to indicate areas requiring further review or refinement; including feedback from the Xt-EHR joint action (see note above). These highlights will be addressed in subsequent updates to ensure accuracy and completeness of the mappings.
-        </div>
-      </div>
-    </div>
     <h3>EHDSCarePlan -> CarePlan</h3>
     <a> </a>
     <p></p>
@@ -108,12 +100,12 @@
             <td>status</td>
             <td>Preferred binding: HL7 Request status.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.source</td>
-            <td>no-map</td>
+            <td>narrower</td>
             <td>CarePlan</td>
-            <td></td>
-            <td>No direct core element in CarePlan for information source provenance.</td>
+            <td>contributor</td>
+            <td>Who provided the content of the care plan.</td>
           </tr>
           <tr>
             <td>header.language</td>
@@ -148,14 +140,14 @@
             <td>source-is-broader-than-target</td>
             <td>CarePlan</td>
             <td>addresses</td>
-            <td class="highlight-yellow">CarePlan.addresses is Reference(Condition); CodeableConcept may need a referenced Condition.</td>
+            <td>CarePlan.addresses is Reference(Condition); CodeableConcept may need a referenced Condition.</td>
           </tr>
           <tr>
             <td>activity[x]</td>
             <td>related-to</td>
             <td>CarePlan</td>
             <td>activity.reference</td>
-            <td class="highlight-yellow">When EHDS activity is a CodeableConcept the code is determined by the referred resource. activity.detail is no longer present in FHIR R5</td>
+            <td>When EHDS activity is a CodeableConcept the code is determined by the referred resource. activity.detail is discouraged and no longer present in FHIR R5</td>
           </tr>
           <tr>
             <td>goal</td>

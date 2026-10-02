@@ -14,14 +14,6 @@
         </div>
       </div>
     </div>
-    <div class="model-map-block">
-      <div class="callout-wrapper">
-        <div class="callout-box">
-          <strong>Yellow row/cells:</strong>
-              In this ballot publication, some row/cells of the mapping table have been left in yellow to indicate areas requiring further review or refinement; including feedback from the Xt-EHR joint action (see note above). These highlights will be addressed in subsequent updates to ensure accuracy and completeness of the mappings.
-        </div>
-      </div>
-    </div>
     <h3>EHDSTravelHistory -> ObservationTravelEuEps</h3>
     <a> </a>
     <p></p>
@@ -88,13 +80,13 @@
             <td>identifier</td>
             <td>Copy over all identifiers if multiple.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.author[x]</td>
             <td>related-to</td>
             <td>Observation</td>
             <td>performer</td>
-            <td></td>
-          </tr>
+            <td>Observation lacks a dedicated author participant. Usually, the performer is also the author; however in case the two participants shall be clearly distinguished, the PerformerFunction extension can be used for this purpose.</td>
+         </tr>
           <tr>
             <td>header.date</td>
             <td>equivalent</td>
@@ -111,10 +103,10 @@
           </tr>
           <tr>
             <td>header.source</td>
-            <td>related-to</td>
+            <td>no-map</td>
             <td>Observation</td>
-            <td>note</td>
-            <td>Observation has no direct informationSource element.</td>
+            <td></td>
+            <td>No direct native Observation element; consider extension or use note to carry source information if needed.</td>
           </tr>
           <tr>
             <td>header.language</td>

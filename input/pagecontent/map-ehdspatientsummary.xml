@@ -14,14 +14,6 @@
         </div>
       </div>
     </div>
-    <div class="model-map-block">
-      <div class="callout-wrapper">
-        <div class="callout-box">
-          <strong>Yellow row/cells:</strong>
-              In this ballot publication, some row/cells of the mapping table have been left in yellow to indicate areas requiring further review or refinement; including feedback from the Xt-EHR joint action (see note above). These highlights will be addressed in subsequent updates to ensure accuracy and completeness of the mappings.
-        </div>
-      </div>
-    </div>
     <h3>EHDSPatientSummary -> Composition, Bundle (EPS)</h3>
     <a> </a>
     <p></p>
@@ -199,14 +191,14 @@
             <td>attester.time</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.eventType</td>
             <td>related-to</td>
             <td>Composition</td>
-            <td>event.code</td>
-            <td>Not clear if it is a type of event - PCPR for Patient Summary - or a classification of the document.</td>
+            <td>category</td>
+            <td>The mapping proposed reflects a possible interpretation of this element as classification of the document; DocumentReference.category should be used if used for filtering document searches. If instead it represents the type of event that occurred, event.code for 〔R4〕 and event.detail.concept for〔R5〕.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>header.serviceSpecialty</td>
             <td>source-is-narrower-than-target</td>
             <td>Composition</td>
@@ -488,12 +480,12 @@
             <td>section:sectionFunctionalStatus.entry</td>
             <td>Target slice/profile alignment may need clarification.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
           <td>functionalStatus.assessment</td>
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionFunctionalStatus.entry:functionalStatus</td>
-          <td>The actual content maps better into an Observation profile, not allowed in this section</td>
+          <td>The actual content would map better into an Observation profile, not it is not allowed in this section</td>
           </tr>
           <tr>
             <td>functionalStatus.note</td>
@@ -602,7 +594,7 @@
           <td>equivalent</td>
           <td>Composition</td>
           <td>section:sectionPatientHx</td>
-          <td class="highlight-yellow"></td>
+          <td></td>
           </tr>
           <tr>
             <td>patientStory.note</td>
