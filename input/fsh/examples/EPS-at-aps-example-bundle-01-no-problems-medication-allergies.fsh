@@ -63,6 +63,9 @@ Usage: #inline
 * name.given[0] = "Maria"
 * name.given[+] = "Johanna"
 * name.prefix = "Dr."
+* identifier.system = "urn:ietf:rfc:9562"
+* identifier.value = "166615c8-0536-4d24-b7d7-8d659a29ce3e"
+* identifier.assigner.display = "HL7 Europe"
 * telecom[0].system = #phone
 * telecom[=].value = "+43.2682.40400"
 * telecom[=].use = #home

@@ -376,7 +376,7 @@ groups:
         - StructureDefinition/flag-alert-obl-eu-eps
         - StructureDefinition/immunization-obl-eu-eps
         - StructureDefinition/medication-obl-eu-eps
-        - StructureDefinition/medicationrequest-obl-eu-eps
+        - StructureDefinition/medicationstatement-obl-eu-eps
         - StructureDefinition/organization-obl-eu-eps
         - StructureDefinition/practitioner-obl-eu-eps
         - StructureDefinition/practitionerrole-obl-eu-eps

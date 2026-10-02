@@ -8,6 +8,7 @@ Description: """This profile defines how to represent a human Patient in HL7 FHI
 * insert ImposeProfile($Patient-uv-ips, 0)
 
 * name obeys ips-pat-1
+* identifier 1..
 * generalPractitioner only Reference($organization-eu-core or $practitionerRole-eu-core or PractitionerEuCore) 
 
 // ================= IPS OBLIGATIONS =================
