@@ -78,6 +78,8 @@ Description: """This profile defines how the Bundle resource is used to represen
 * obeys eps-bundle-subject-ref
 * obeys eps-bundle-resource-code
 
+* timestamp 1..1
+
 //================================
 // Verify if all the IPS rules are reported in the profile
 //================================
@@ -220,6 +222,7 @@ Description: """This profile defines how the Bundle resource is used to represen
 * entry[specimen].resource only $Specimen-uv-ips
 
 // ================= IPS OBLIGATIONS =================
+
 * identifier insert ObligationIpsPopulateHandle
 
 * timestamp insert ObligationIpsPopulateHandle
