@@ -5,6 +5,8 @@ Title: "Observation: Country Visited (EPS)"
 Description: "This profile constrains the Observation resource to record, search, and fetch travel history in the scope of the European Patient Summary."
 * ^experimental = false
 
+* insert SetFmmAndStatusRule (1, draft)
+
 * identifier ^short = "Business identifier"
 * status ^short = "The status of the observation."
 * code = $loinc#94651-7 // "Country of travel [Location]"

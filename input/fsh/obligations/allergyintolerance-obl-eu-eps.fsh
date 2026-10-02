@@ -4,6 +4,8 @@ Id: allergyintolerance-obl-eu-eps
 Title: "AllergyIntolerance - Obligations (EPS)"
 Description: "This profile sets the IPS obligations on the EU Core AllergyIntolerance profile."
 
+* insert SetFmmAndStatusRule (1, draft)
+
 // ================= IPS OBLIGATIONS =================
 * clinicalStatus insert ObligationIpsPopulateIfKnownDisplay
 * type insert ObligationIpsPopulateIfKnownDisplay

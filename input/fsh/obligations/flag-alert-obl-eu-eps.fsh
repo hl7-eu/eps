@@ -4,6 +4,8 @@ Id: flag-alert-obl-eu-eps
 Title: "Flag: Alert - Obligations (EPS)"
 Description: "This profile sets the IPS obligations on the EU Core Flag - Alert profile."
 
+* insert SetFmmAndStatusRule (1, draft)
+
 // ================= IPS OBLIGATIONS =================
 * extension[flag-priority] insert ObligationIpsPopulateIfKnownDisplay
 * category insert ObligationIpsPopulateIfKnownDisplay

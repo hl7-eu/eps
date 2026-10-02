@@ -4,6 +4,8 @@ Id: medication-obl-eu-eps
 Title: "Medication - Obligations (EPS)"
 Description: "This profile sets the IPS obligations on the EU Core Medication profile."
 
+* insert SetFmmAndStatusRule (1, draft)
+
 // ================= IPS OBLIGATIONS =================
 * code insert ObligationIpsPopulateIfKnownDisplay
 * form insert ObligationIpsPopulateIfKnownDisplay

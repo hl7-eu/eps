@@ -4,6 +4,8 @@ Id: condition-obl-eu-eps
 Title: "Condition - Obligations (EPS)"
 Description: "This profile sets the IPS obligations on the EU Core Condition profile."
 
+* insert SetFmmAndStatusRule (1, draft)
+
 // ================= IPS OBLIGATIONS =================
 * clinicalStatus insert ObligationIpsPopulateIfKnownDisplay
 * category insert ObligationIpsPopulateIfKnownDisplay

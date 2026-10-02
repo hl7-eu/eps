@@ -4,6 +4,8 @@ Id: immunization-obl-eu-eps
 Title: "Immunization - Obligations (EPS)"
 Description: "This profile sets the IPS obligations on the EU Core Immunization profile."
 
+* insert SetFmmAndStatusRule (1, draft)
+
 // ================= IPS OBLIGATIONS =================
 * status insert ObligationIpsPopulateIfKnownDisplay
 * vaccineCode insert ObligationIpsPopulateIfKnownDisplay
