@@ -165,11 +165,13 @@ Description: """This profile defines how the Bundle resource is used to represen
 * entry[medication].resource 1..
 * entry[medication].resource only MedicationOblEuEps
 
+/* Commented out because of https://jira.hl7.org/browse/FHIR-58509
 * entry[medicationrequest].resource 1..
-* entry[medicationrequest].resource only MedicationRequestOblEuEps
+* entry[medicationrequest].resource only MedicationRequestOblEuEps 
+*/
 
 * entry[medicationstatement].resource 1..
-* entry[medicationstatement].resource only MedicationStatementEuEps
+* entry[medicationstatement].resource only MedicationStatementOblEuEps
 
 * entry[practitioner].resource 1..
 * entry[practitioner].resource only PractitionerOblEuEps

@@ -19,22 +19,6 @@ Description: """This profile constrains the MedicationStatement resource in the 
 * dosage.route ^short = "Route of administration"
 // * dosage.route from EHDSIRouteofAdministration (preferred)
 
-// ================= IPS OBLIGATIONS =================
-* medication[x] insert ObligationIpsPopulateIfKnownDisplay
-
-* subject insert ObligationIpsPopulateIfKnownDisplay
-
-* subject.reference insert ObligationIpsPopulateIfKnownHandle
-
-* effective[x] insert ObligationIpsPopulateIfKnownDisplay
-
-* effectiveDateTime insert ObligationIpsAbleToPopulateDisplay
-
-* dosage insert ObligationIpsPopulateIfKnownDisplay
-
-* dosage.text insert ObligationIpsPopulateIfKnownDisplay
-
-* dosage.timing insert ObligationIpsPopulateIfKnownDisplay
 
 
 
