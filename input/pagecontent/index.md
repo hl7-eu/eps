@@ -28,8 +28,8 @@
 
 ### Scope
 
-Specify a set of rules to be applied to HL7 FHIR to define how to represent a **Patient Summary** in the **European** Context, coherently with the European eHN Guidelines (see the [European eHealth - Key documents](https://health.ec.europa.eu/ehealth-digital-health-and-care/key-documents_en) ).
-s
+Specify a set of rules to be applied to HL7 FHIR to define how to define a **European standard** for the **Patient Summary**, facilitating harmonisation among national initiatives and preparing the ground for the European electronic health record exchange format (EEHRxF) specifications applicable to the “patient summaries” priority category of personal electronic health data, as defined in [Article 14 of the EHDS Regulation](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0327#art_14).
+
 
 ### Purpose
 The goal of this Implementation Guide is to define an European standard for the Patient Summary to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (E-EHRxF).
