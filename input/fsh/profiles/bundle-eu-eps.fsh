@@ -113,7 +113,7 @@ Description: """This profile defines how the Bundle resource is used to represen
     immunization 0..* and
     // immunizationrecommendation 0..* and 
     medication 0..* and
-    medicationrequest 0..* and
+    // medicationrequest 0..* and
     medicationstatement 0..* and
     practitioner 0..* and
     practitionerrole 0..* and
