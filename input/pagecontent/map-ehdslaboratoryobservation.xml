@@ -387,21 +387,21 @@
             <td>extension:certifiedRefMaterialIdentifier</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>accreditationStatus</td>
             <td>related-to</td>
             <td>Organization</td>
-            <td>extension:qualification</td>
-            <td>Observation.performer (of type Organization), or Observation.performer.organization if performer is of type PractitionerRole. Organization.qualification is preadopted from R5.</td>
+            <td>extension:accredited</td>
+            <td>Laboratory Accredited extension (boolean), defined in the HL7 Europe Extensions IG.</td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>previousResults</td>
             <td>related-to</td>
             <td>Observation</td>
             <td>extension:supportingInfo</td>
             <td></td>
           </tr>
-          <tr class="highlight-yellow">
+          <tr>
             <td>pointOfCareTest</td>
             <td>related-to</td>
             <td>Observation</td>

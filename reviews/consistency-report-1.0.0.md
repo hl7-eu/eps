@@ -1,6 +1,6 @@
 # HL7 Europe Patient Summary – Consistency Review for 1.0.0 (release after 1.0.0-ballot)
 
-- **Date:** 2026-10-02. Last updated after fixing 2-3 to 2-6. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-02. Last updated 2026-10-03 after fixing 2-1 and 2-3 to 2-6. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
   - SUSHI 3.20.1 reports 0 errors and 0 warnings (run of 2026-10-02).
@@ -29,7 +29,6 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 2-1 | Medium | `sushi-config.yaml:27-29` | `ihe.pharm.mpd.r4#1.0.0-comment-2` is a pre-release dependency. `knownIssues.md` doesn't mention it. `hl7.terminology.r4` is not pinned (the Publisher resolved 7.4.0). | Pin to a released version if one exists; otherwise document it (6.6-1). Pin `hl7.terminology.r4` or note the version used. |
 | 2-2 | Medium | `sushi-config.yaml` `groups:` | Only 2 groups. 13 profiles and the value set are in no group: patient, consent, device, deviceUseStatement, diagnosticReport, medicationStatement, procedure, the 4 pregnancy profiles, the travel profile, `gestational-age-loinc`. They show in the default group on the Artifacts page. | Add groups (e.g. "Entry profiles", "Terminology"), or put them in `EuPatientSummary` and rewrite its description ("entry profiles" currently lists only Bundle and Composition). |
 | 2-7 | Low | `sushi-config.yaml` `menu:` | Menu labels differ from page titles: "Patient Summary" / Introduction, "Mapping to Profiles" / Model Map, "Known/Open Issues" / Known Issues, "Download" / Downloads, "Expansion parameters" / Expansion Parameters. | Use the same text in both. |
 
@@ -143,7 +142,6 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
 
 ### 6.6 `knownIssues.md`: suggested additions
 
-- **[6.6-1]** The IHE MPD dependency is a pre-release (`1.0.0-comment-2`).
 - **[6.6-2]** Known cardinality differences with Xt-EHR 1.0.0, kept as they are for this release:
   - `EHDSMedicationUse.dosageInstructions` 1..1 vs `MedicationStatement.dosage` 0..*
   - `EHDSCurrentPregnancy.currentPregnancyStatus` 1..1 vs `Observation.value[x]` 0..1
@@ -207,7 +205,7 @@ The wildcards on line 7 (5 uses, R5 document rule) and line 59 (24 uses, OIDs) a
 4. Example titles (5-3, 5-2), then regenerate and submit the Jira spec file (1-2).
 5. Narrative pages: Variance and Missing Data (6.4-1, 6.4-2), lab mapping rows (6.4-3), Known Issues additions (§6.6), then `changes.md` (6.1-1, 6.1-2).
 6. QA leftovers: 7-2, 7-3, 7-4, 7-9.
-7. Release configuration (1-1, 2-1), rebuild, re-run this review.
+7. Release configuration (1-1), rebuild, re-run this review.
 8. Cleanup: §3.3, §3.4, 2-7, §6.5, §8.
 
 ---
@@ -228,6 +226,10 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 ## Fixed since the first review
 
 **Working copy, not yet committed**
+
+- **[2-1]**, **[6.6-1]** Added a "Dependencies" known issue for the pre-release `ihe.pharm.mpd.r4#1.0.0-comment-2` (`input/pagecontent/knownIssues.md`). `hl7.terminology.r4` stays unpinned by decision (see `reviews/review-notes.md`).
+
+**Commit `3aa860c`**
 
 - **[2-3]** Added `SetFmmAndStatusRule (1, draft)` to the 9 obligation profiles, `DeviceEuEps`, `DeviceUseStatementEuEps` and `ObservationTravelEuEps`. All 24 artifacts now have FMM 1 / draft.
 - **[2-4]** Removed the Laboratory IG leftovers (`sushi-config.yaml` line 1, the commented lab groups) and the SUSHI template comments from `sushi-config.yaml`. Reduced `ig.ini` to its three settings. The commented-out page entries are still there (8-6).

@@ -17,3 +17,8 @@ Decisions already taken for this guide. Consistency reviews do not raise these a
 ## QA and ignoreWarnings
 
 - **Duplicate anchor on the complete Bundle page** (`Patient_f51071b2-…`). This is an IG Publisher rendering issue that appears when the Patient has an authored narrative. The narrative is kept, and the warning is suppressed (`input/ignoreWarnings.txt`).
+
+## Configuration
+
+- **`hl7.terminology.r4` is not pinned** (decided 2026-10-03). The IG Publisher resolves the version; the 1.0.0 review build used 7.4.0. Reviews do not raise the missing pin again.
+- **IHE MPD pre-release dependency.** `ihe.pharm.mpd.r4#1.0.0-comment-2` is kept until a published version exists, and is documented in `knownIssues.md`.
