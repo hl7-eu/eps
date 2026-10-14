@@ -1,13 +1,16 @@
 {% include variables.html %}
 ### EHDS Logical Data Models
 
-The [**Xt-EHR Joint Action**](https://www.xt-ehr.eu/) has developed a set of Logical data models (or information models)  - see [**Xt-EHR EHDS Logical Information Models**](https://www.xt-ehr.eu/fhir/models) Implementation Guide - that have been used as **basis** for the future **European Health Data Space (EHDS)** Implementing Act.
 
-They represent **evolving, refined interpretations** of the data sets described in the [**eHealth Network (eHN) Guidelines**](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/eu-cooperation/ehealth-network_en#ehealth-network-guidelines), and are subject to further refinement.
+The [**Xt-EHR Joint Action**](https://www.xt-ehr.eu/) has developed a set of Logical data models (or information models) - see [**Xt-EHR EHDS Logical Information Models**](https://www.xt-ehr.eu/fhir/models) Implementation Guide - that have been used as **basis** for the future **European Health Data Space** (EHDS) Implementing Act.
+
+They represent **evolving, refined interpretations** of the data sets described in the [**eHealth Network (eHN) Guidelines**](https://health.ec.europa.eu/ehealth-digital-health-and-care/digital-health-and-care/eu-cooperation/ehealth-network_en#ehealth-network-guidelines), and are subject to further refinement, including as part of the work towards the specifications required by the EHDS Implementing Act, in particular those concerning the definition and maintenance of the EHDS logical information models referred to in Article 15.
 
 This Implementation Guide (IG) aims to **align with the emerging EHDS logical models** and to **provide HL7 FHIR profiles** that **realise the requirements identified in these models**.
 
-The EHDS logical models currently supported in this version of the guide are listed below.
+As the EHDS Implementing Act and its associated logical models evolve, further alignment and updates to this IG are therefore expected.
+
+The EHDS logical models - based on the Xt-EHR work - currently supported in this version of the guide are listed below.
 
 
 <div class="model-map-block">

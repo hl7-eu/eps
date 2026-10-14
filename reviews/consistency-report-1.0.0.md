@@ -1,10 +1,10 @@
 # HL7 Europe Patient Summary – Consistency Review for 1.0.0 (release after 1.0.0-ballot)
 
-- **Date:** 2026-10-02. Last updated 2026-10-03 after fixing 2-1 and 2-3 to 2-6. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-02. Last updated 2026-10-05 after a rebuild and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
-  - SUSHI 3.20.1 reports 0 errors and 0 warnings (run of 2026-10-02).
-  - The IG Publisher v2.3.4 run of 2026-10-02 17:11 was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`, and includes all commits up to `9437507`. The run started 5 seconds before that commit, but it already used its content (`hl7.fhir.eu.extensions.r4#1.3.1` is in the built ImplementationGuide), so the results are current.
+  - SUSHI 3.20.1 reports 0 errors and 0 warnings (run of 2026-10-05, inside the IG Publisher build).
+  - The IG Publisher v2.3.4 run of 2026-10-05 19:00 was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`, and includes all commits up to `530206b`. The results are current.
   - It reports **0 errors, 2 warnings and 2 information messages**, plus 106 suppressed warnings and 651 suppressed hints.
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 1.0.0. **Low** means cleanup or editorial.
@@ -116,8 +116,8 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
 |---|---|---|---|
 | 6.4-1 | Medium | `input/pagecontent/variance.md:106-108` | The list of requirements added to IPS has only the two required sections. It leaves out `Patient.identifier 1..*` (FHIR-58492; IPS has `0..*`). → Add it to the list. |
 | 6.4-2 | Medium | `input/pagecontent/missing-data.md:38, 65` | "performedDateTime is must support" contradicts `variance.md`: EPS does not use `mustSupport`. The page also uses IPS profile names ("Observation Results - Laboratory/Pathology"). → Reword using obligations and EPS/EU Core profile names. |
-| 6.4-3 | Medium | `input/pagecontent/map-ehdslaboratoryobservation.xml:390, 397, 404` | Three rows are still yellow (`accreditationStatus`, `previousResults`, `pointOfCareTest`; FHIR-58918), and the page no longer has the note that explains what yellow means. → Resolve them, or add the note back on this page (and list them in 6.6-3). |
 | 6.4-4 | Low | `input/pagecontent/index.md:31, 35` | Scope and Purpose say the same thing twice, with two acronyms ("EEHRxF" and "E-EHRxF"). `introduction.md:8` uses "EEHRxF". → Merge the Purpose paragraph into Scope, and use "EEHRxF". |
+| 6.4-8 | Medium | `input/pagecontent/map-ehdslaboratoryobservation.xml:391-395` | **New:** `accreditationStatus` is now mapped to `extension:accredited` with Resource **Organization**. The extension (`http://hl7.eu/fhir/StructureDefinition/laboratory-accredited`, EU Extensions 1.3.1) can only be used on Observation and ServiceRequest. → Set the Resource column to Observation, and link the extension in the note. |
 
 ### 6.5 Language and editorial conventions
 
@@ -146,14 +146,13 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
   - `EHDSMedicationUse.dosageInstructions` 1..1 vs `MedicationStatement.dosage` 0..*
   - `EHDSCurrentPregnancy.currentPregnancyStatus` 1..1 vs `Observation.value[x]` 0..1
   - `EHDSAdvanceDirective.header.subject` 1..1 vs `Consent.patient` 0..1
-- **[6.6-3]** The open LaboratoryObservation mapping rows (6.4-3), if not resolved.
 - **[6.6-4]** MedicationRequest, MedicationAdministration and MedicationDispense are allowed in the Medication Summary section but not profiled (3.1-3).
 
 ---
 
 ## 7. QA output and `ignoreWarnings.txt`
 
-This section is based on the IG Publisher v2.3.4 run of 2026-10-02 17:11, built as `1.0.0-ci-build` / `draft` / `ci-build`.
+This section is based on the IG Publisher v2.3.4 run of 2026-10-05 19:00, built as `1.0.0-ci-build` / `draft` / `ci-build`.
 
 **Visible messages:** 0 errors, 2 warnings and 2 information messages.
 
@@ -203,7 +202,7 @@ The wildcards on line 7 (5 uses, R5 document rule) and line 59 (24 uses, OIDs) a
 2. Examples for the four profiles without one (5-1), then narrow the suppressions 7-5 to 7-7.
 3. Groups (2-2), and obligations vs cardinality (4-1, 4-2).
 4. Example titles (5-3, 5-2), then regenerate and submit the Jira spec file (1-2).
-5. Narrative pages: Variance and Missing Data (6.4-1, 6.4-2), lab mapping rows (6.4-3), Known Issues additions (§6.6), then `changes.md` (6.1-1, 6.1-2).
+5. Narrative pages: Variance and Missing Data (6.4-1, 6.4-2), lab mapping row (6.4-8), Known Issues additions (§6.6), then `changes.md` (6.1-1, 6.1-2).
 6. QA leftovers: 7-2, 7-3, 7-4, 7-9.
 7. Release configuration (1-1), rebuild, re-run this review.
 8. Cleanup: §3.3, §3.4, 2-7, §6.5, §8.
@@ -225,8 +224,9 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 
 ## Fixed since the first review
 
-**Working copy, not yet committed**
+**Commit `530206b`**
 
+- **[6.4-3]** Resolved the three yellow rows in the LaboratoryObservation map (`accreditationStatus`, `previousResults`, `pointOfCareTest`; FHIR-58918). **[6.6-3]** (list them in Known Issues) is no longer needed. The new mapping of `accreditationStatus` has its own finding (6.4-8).
 - **[2-1]**, **[6.6-1]** Added a "Dependencies" known issue for the pre-release `ihe.pharm.mpd.r4#1.0.0-comment-2` (`input/pagecontent/knownIssues.md`). `hl7.terminology.r4` stays unpinned by decision (see `reviews/review-notes.md`).
 
 **Commit `3aa860c`**
