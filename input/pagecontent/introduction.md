@@ -1,3 +1,8 @@
+The **European Patient Summary (EPS)** is a standardized, cross-border health data set intended to support safe and effective healthcare delivery, particularly in unplanned care scenarios. It enables healthcare professionals to access essential clinical information about a patient, regardless of where the data was originally recorded.
+
+This **FHIR Implementation Guide (IG)** defines the European Patient Summary using **HL7® FHIR®**, providing a computable and interoperable specification aligned with European and international standards and initiatives.
+
+
 ### Purpose of This Guide
 
 This guide provides:
@@ -7,11 +12,6 @@ This guide provides:
 
 It is intended to support national and regional implementations, cross-border health information exchange, and alignment with the European Health Data Space (EHDS), supporting the implementation of the European Electronic Health Record Exchange Format (EEHRxF).
 
-### Introduction
-
-The **European Patient Summary (EPS)** is a standardized, cross-border health data set intended to support safe and effective healthcare delivery, particularly in unplanned care scenarios. It enables healthcare professionals to access essential clinical information about a patient, regardless of where the data was originally recorded.
-
-This **FHIR Implementation Guide (IG)** defines the European Patient Summary using **HL7® FHIR®**, providing a computable and interoperable specification aligned with European and international standards and initiatives.
 
 ### Policy and Semantic Foundations
 
