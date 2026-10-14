@@ -32,8 +32,9 @@ Specify a set of rules to be applied to HL7 FHIR to define how to define a **Eur
 
 
 ### Purpose
-The goal of this Implementation Guide is to define an European standard for the Patient Summary to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (E-EHRxF).
 
-This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects.
+The goal of this Implementation Guide is to define an European standard for the Patient Summary, building on and aligning with the [HL7 International Patient Summary](https://hl7.org/fhir/uv/ips/) (IPS) as its global reference, to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (E-EHRxF).
+
+This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects, including close alignment with the HL7 IPS work to ensure European specifications remain compatible with the international standard.
 
 The aspiration of this guide is that of being used as basis for European National Guides, the European EHRxF and - consequently - by MyHealth@EU for the EU cross-border services.
