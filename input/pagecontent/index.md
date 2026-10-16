@@ -30,7 +30,9 @@ The **European Patient Summary (EPS)** is a standardized non-exhaustive health d
 
 ### Scope
 
-Specify a set of rules to be applied to HL7 FHIR to define how to define a **European standard** for the **Patient Summary**, facilitating harmonisation among national initiatives and preparing the ground for the European electronic health record exchange format (EEHRxF) specifications applicable to the “patient summaries” priority category of personal electronic health data, as defined in [Article 14 of the EHDS Regulation](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0327#art_14).
+Specify a set of rules to be applied to HL7 FHIR to define a **European standard for representing a Patient Summary**. The standard is intended to facilitate harmonisation among national initiatives and to prepare the ground for the European electronic health record exchange format (EEHRxF) specifications applicable to the “patient summaries” priority category of personal electronic health data, as defined in [Article 14 of the EHDS Regulation](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0327#art_14).
+
+It is intended to be coherent with the semantic model developed by the [Xt-EHR Joint Action](https://www.xt-ehr.eu/fhir/models), which refines and further specifies the principles and requirements established by the [eHealth Network (eHN) Guideline on the Patient Summary](https://health.ec.europa.eu/system/files/2023-10/ehn_guidelines_patientsummary_en.pdf). As these models evolve, relevant updates are expected to be incorporated into this Implementation Guide to maintain alignment with the EHDS Implementing Acts.
 
 
 ### Purpose
