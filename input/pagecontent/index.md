@@ -26,6 +26,8 @@
 </div>
 
 
+The **European Patient Summary (EPS)** is a standardized non-exhaustive health data set intended to support safe and effective healthcare delivery, by enabling healthcare professionals to access essential clinical information about a patient, regardless of where the data was originally recorded.
+
 ### Scope
 
 Specify a set of rules to be applied to HL7 FHIR to define how to define a **European standard** for the **Patient Summary**, facilitating harmonisation among national initiatives and preparing the ground for the European electronic health record exchange format (EEHRxF) specifications applicable to the “patient summaries” priority category of personal electronic health data, as defined in [Article 14 of the EHDS Regulation](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32025R0327#art_14).
