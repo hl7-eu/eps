@@ -20,7 +20,7 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 | ID | Area | Finding | Fix |
 |---|---|---|---|
 | 1-1 | Configuration | `sushi-config.yaml:6-11` still has `version: 1.0.0-ci-build`, `status: draft`, `releaseLabel: ci-build`, and there is no `publication-request.json`. The release cannot be published like this. | Set the release version, status and label (e.g. `1.0.0`, `active`, `trial-use` for an STU), add `publication-request.json`, and rebuild. |
-| 1-2 | Jira spec | QA warning: the Jira specification file `FHIR-eu-eps.xml` is out of date with the artifacts and pages (new Variance page, MedicationStatement obligation profile, removed pages). | Replace it with the proposed file from the Publisher output, review it, and submit it to the HL7 JIRA-Spec-Artifacts repository. Fix the title collisions in 5-3 first, so the keys are correct. |
+| 1-2 | Jira spec | QA warning: the Jira specification file `FHIR-eu-eps.xml` is out of date with the artifacts and pages (new Variance page, MedicationStatement obligation profile, removed pages). | Replace it with the proposed file from the Publisher output, review it, and submit it to the HL7 JIRA-Spec-Artifacts repository. The title collisions (5-3) are fixed, so the keys will be correct. |
 | 1-3 | Profiles | The Pregnancy History section uses the **IPS** profiles, not the EPS ones: `pregnancyStatus` → `Observation-pregnancy-status-uv-ips` and `pregnancyOutcome` → `Observation-pregnancy-outcome-uv-ips` (`input/fsh/profiles/composition-eu-eps.fsh:324-332`). The Bundle slices and the mapping pages use the EPS profiles. The EPS EDD profile is not reachable from the Composition at all: `ObservationPregnancyStatusEuEps.hasMember` allows only the IPS EDD profile (`input/fsh/profiles/observation-pregnancyStatus-eps.fsh:25`). Its comment says gestational age is not allowed, yet the section has a `gestationalAge` slice. | Point the section slices to `ObservationPregnancyStatusEuEps` and `ObservationPregnancyOutcomeEuEps`. Let `hasMember` reference `ObservationPregnancyEddEuEps` (and `ObservationPregnancyGestationalAgeEuEps` if intended). Remove the stale comment. |
 
 ---
@@ -82,8 +82,7 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
 | 5-1 | Medium | `fsh-generated/resources` | No example for `consent-eu-eps`, `diagnosticReport-eu-eps`, `observation-travel-eu-eps` or `procedure-eu-eps`. The QA doesn't show this because the blanket suppression in 7-6 hides it. | Add one example each (e.g. in the complete Bundle), then narrow the suppression. |
-| 5-2 | Medium | `input/fsh/examples/__5042-537688-1-eps-composition.fsh` | 15 standalone examples that repeat the complete Bundle example (same patient, same titles), plus about 1,100 commented-out lines. They cause most of the title collisions in 5-3. | Keep either the standalone set or the Bundle; delete the commented instances. |
-| 5-3 | Medium | `__5042-537688-1-eps-example.fsh`, `__5042-537688-1-eps-composition.fsh` | Example titles collide for the Jira spec file: "Vital Signs" ×16, "Medication" ×11, "Immunization" ×4, plus pairs such as "Composition: Complete EPS" and "Patient: Petra Schwartz" in both files. | Give each example a distinct title (e.g. "Vital Signs: Body height"), then regenerate the Jira file (1-2). |
+| 5-2 | Medium | `input/fsh/examples/__5042-537688-1-eps-composition.fsh` | 15 standalone examples that repeat the complete Bundle example (same patient, same content), plus about 1,100 commented-out lines. Their titles are now distinct (5-3), but the content is still duplicated. | Keep either the standalone set or the Bundle; delete the commented instances. |
 | 5-4 | Low | examples | Ids follow three patterns: `Instance-Bundle-…`, `EPSExampleBundle01…`, `Composition-…`/`DeviceUse-…`. In Bundle 01, all 4 `fullUrl` UUIDs differ from the resource ids. The two Bundle identifiers differ in form (one has `assigner`). | Pick one id pattern for new examples. Align the Bundle identifiers. |
 | 5-5 | Low | `observation-pregnancy*-eps-example.fsh:3` | The titles have a space before the colon ("Observation : Pregnancy Status"); the other examples use "Type: Name". | "Observation: Pregnancy Status". |
 
@@ -213,7 +212,7 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 59 (O
 2. Profile coherence: the pregnancy section (1-3), Bundle slices (3.1-1), section entry rules (3.1-2), the invariant description (3.2-1).
 3. Examples for the four profiles without one (5-1), then narrow the suppressions 7-5 to 7-7.
 4. Groups (2-2), and obligations vs cardinality (4-1, 4-2).
-5. Example titles (5-3, 5-2), then regenerate and submit the Jira spec file (1-2).
+5. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
 6. Narrative pages: copyright statement (6.4-11), Variance and Missing Data (6.4-1, 6.4-2), lab mapping row (6.4-8), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-4, 6.4-9, 6.3-2, 6.3-3), then `changes.md` (6.1-1, 6.1-2).
 7. QA leftovers: 7-3, 7-4, 7-9.
 8. Release configuration (1-1), rebuild, re-run this review.
@@ -236,9 +235,21 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 
 ## Fixed since the first review
 
+**Commit `b431cb7`**
+
+- **[5-3]** Example titles no longer collide (case and text in parentheses ignored), so the Jira spec file and the table of contents get distinct entries. The multi-language template reports duplicate titles of `#example` resources as errors; there were three. Medications, immunizations and vital signs in the complete Bundle (`__5042-537688-1-eps-example.fsh`) are now named by content and date (e.g. "Medication: Clopidogrel 75 mg oral tablet", "Immunization: SARS-CoV-2 mRNA vaccine, 2021-03-01", "Vital Signs: Body weight, 2024-07-08"). The seven instances of the standalone Composition example (`__5042-537688-1-eps-composition.fsh`) that repeat a Bundle entry end with ", standalone Composition". The duplication of the two example sets is still open (5-2).
+
+**Commit `b09fefe`**
+
+- **[7-12]** Follow-up. The HL7 Europe template (`ig-template/`) now builds on the multi-language base: `hl7.fhir.template#current`, which resolves to `hl7.base.template` and then `fhir2.base.template`. `sushi-config.yaml` sets `i18n-default-lang: en`. The header, footer and search page overrides are rebased on the translated fragments, and the HL7 Europe branding (`hl7eu.css`) is kept. Pages are now generated under `output/en/`, so the six package and example links in `downloads.md` use `../`. Verified with two Publisher builds on 2026-10-23: the template chain loads, there are 0 broken links, and no warnings come from the template.
+
+**Commit `203a3b0`**
+
+- **[5-6]** Follow-up. The issuer `http://hl7.org/fhir/NamingSystem/gs1-di`, the R4 value for GS1, gave "No definition could be found for URL value", because no loaded package defines that NamingSystem. The three Device examples now use `http://example.org/fhir/NamingSystem/gs1-di`.
+
 **Commit `ac7095e`**
 
-- **[5-6]** New in this run, and fixed. The three Device examples (`Device-0b89dcab-…` in `__5042-537688-1-eps-composition.fsh:1752`, and `Instance-Device-b3c78022-…` and `Instance-Device-575520ac-…` in `__5042-537688-1-eps-example.fsh:2106, 2140`) put the GS1 UDI string in `udiCarrier[0].id`, the element id. The carrier was therefore empty, and Publisher 3.0.1 reports `ele-1`. That caused the 12 QA errors, including the cascade errors on the complete Bundle (no profile match for the DeviceUseStatements, no matching `composition` slice). The UDI is now in `deviceIdentifier` (the GTIN), `issuer` (`http://hl7.org/fhir/NamingSystem/gs1-di`) and `carrierHRF` (the full string). SUSHI reports 0 errors; a Publisher rebuild is still needed.
+- **[5-6]** New in this run, and fixed. The three Device examples (`Device-0b89dcab-…` in `__5042-537688-1-eps-composition.fsh:1752`, and `Instance-Device-b3c78022-…` and `Instance-Device-575520ac-…` in `__5042-537688-1-eps-example.fsh:2106, 2140`) put the GS1 UDI string in `udiCarrier[0].id`, the element id. The carrier was therefore empty, and Publisher 3.0.1 reports `ele-1`. That caused the 12 QA errors, including the cascade errors on the complete Bundle (no profile match for the DeviceUseStatements, no matching `composition` slice). The UDI is now in `deviceIdentifier` (the GTIN), `issuer` and `carrierHRF` (the full string). SUSHI reports 0 errors; a Publisher rebuild is still needed.
 - **[7-12]** New in this run, and fixed. The Publisher reported 8 warnings, "`output/searchform.html`: The html source is not well formed". The page comes from the base template (`hl7.fhir.template`): it has an unclosed `<img>`, unbalanced `</div>`s, Jekyll placeholders (`{{site.data.info.assets}}`) that are never resolved, a footer copied from `hl7.fhir.us.hai`, and a typo ("curent"). Added a well-formed override, `ig-template/content/searchform.html`, with the HL7 Europe logos and footer and relative asset paths. Per the editor's decision, this is fixed, not suppressed. It should also be reported upstream.
 - **[7-11]** New in this run, and fixed. Publisher 3.0.1 appends " at `<element>`" to the `ext-ab-1` message ("Additional Bindings SHOULD have a key"), so the old suppression matched nothing, and 12 warnings were visible. The only additional binding defined in this guide (`Device.type`, `input/fsh/profiles/device-eps.fsh:17-25`) now has `key = myhealtheu-medical-device`; that removes 2 warnings. The other 10 are inherited from EU Core 2.0.1 (AllergyIntolerance, Condition, Immunization, Medication, MedicationStatement) and can't be fixed here. They are suppressed with one exact entry per element (`input/ignoreWarnings.txt:32-38`), so new keyless bindings still show. SUSHI reports 0 errors.
 
