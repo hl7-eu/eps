@@ -1,42 +1,64 @@
+---
+---
+{% assign pathparts = page.path | split: "/" %}
+{% if pathparts.size > 1 %}{% assign lang = pathparts.first %}{% else %}{% assign lang = site.data.languages.langs.first.code | default: 'en' %}{% endif %}
 <!DOCTYPE HTML>
-<!-- Overrides the base template searchform.html, which is not well-formed XHTML -->
-<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<!-- HL7 Europe version of the fhir2.base.template search page -->
+<html xml:lang="{{lang}}" xmlns="http://www.w3.org/1999/xhtml" lang="{{lang}}">
 <head>
   <meta charset="UTF-8"/>
-  <title>Search {{title}}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="author" content="http://www.hl7.eu"/>
+  <title>{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.titlelang[lang] | escape_once}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</title>
 
-  <link href="fhir.css" rel="stylesheet"/>
-  <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
-  <link href="assets/css/project.css" rel="stylesheet"/>
-  <link href="assets/css/hl7eu.css" rel="stylesheet"/>
-  <link rel="shortcut icon" href="assets/ico/favicon.ico"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="author" content="https://hl7europe.org"/>
+
+  <link href="{{site.data.info.assets}}fhir.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets}}assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets}}assets/css/project.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets}}assets/css/pygments-manni.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets}}assets/css/jquery-ui.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets}}assets/css/hl7.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets}}assets/css/fhir-ig.css" rel="stylesheet"/>
+  <link href="{{site.data.info.assets}}assets/css/hl7eu.css" rel="stylesheet"/>
+
+  <link rel="shortcut icon" href="{{site.data.info.assets}}assets/ico/favicon.ico"/>
 </head>
 
 <body>
   <div id="segment-header" class="segment">  <!-- segment-header -->
     <div class="container">  <!-- container -->
-      <div id="hl7-nav">
-        <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="45" alt="FHIR" src="assets/images/fhir-logo-www.png"/></a>
-        <a id="hl7-logo" no-external="true" href="https://hl7europe.org"><img height="50" alt="HL7 Europe website" src="assets/images/hl7-eu-logo.png"/></a>
-      </div>
+      {% include fragment-header.html lang=lang %}
       <div id="ig-status" style="font-size:24px;padding-top: 20px;">
-        <b id="ig-title">Search {{title}}</b>
+        <b id="ig-title">{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.titlelang[lang] | escape_once}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</b>
       </div>
     </div>  <!-- /container -->
   </div>  <!-- /segment-header -->
+
+  <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+    <div id="stripe"> </div>
+    <div class="container">  <!-- container -->
+      <nav class="navbar navbar-inverse">
+        <div class="container">
+          <div class="nav-collapse collapse navbar-inverse-collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">{{site.data.stringsBase[lang]['Specification']}}</a></li>
+              <li><a href="history.html">{{site.data.stringsBase[lang]['History']}}</a></li>
+            </ul>
+          </div>  <!-- /.nav-collapse -->
+        </div>  <!-- /.container -->
+      </nav>  <!-- /.navbar -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-navbar -->
 
   <div id="segment-content" class="segment">  <!-- segment-content -->
     <div class="container">  <!-- container -->
       <div class="row">
         <div class="inner-wrapper">
           <div class="col-12">
-            <h2>Search {{title}}</h2>
-            <iframe src="https://duckduckgo.com/search.html?site={{url}}&amp;prefill=Search {{title}}&amp;focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
+            <h2>{{site.data.stringsBase[lang]['Search']}} {{site.data.fhir.ig.titlelang[lang] | escape_once}} ({{site.data.stringsBase[lang]['CurrentBuild']}})</h2>
+            <iframe title="search" src="https://duckduckgo.com/search.html?site={{site.data.fhir.canonical | remove: 'https://' | remove: 'http://'}}&amp;prefill=Search {{site.data.fhir.ig.titlelang[lang] | escape_once}}&amp;focus=yes" style="overflow:hidden;margin:0;padding:0;width:408px;height:40px;" frameborder="0"></iframe>
             <hr/>
-            <p>Note: this form searches the current published version of {{title}}.</p>
-            <p><a href="index.html">Back to the Implementation Guide</a></p>
+            <p>{{site.data.stringsBase[lang]['CISearchMsg'] | replace: "@@@", site.data.fhir.ig.titlelang[lang] | escape_once}}</p>
           </div>
         </div>  <!-- /inner-wrapper -->
       </div>  <!-- /row -->
@@ -47,8 +69,8 @@
     <div class="container">  <!-- container -->
       <div class="inner-wrapper">
         <p>
-          <span id="ig-footer">{{title}}</span> &copy; <a href="https://hl7europe.org">HL7 Europe</a> |
-          <a rel="license" href="http://hl7.org/fhir/license.html">CC0</a>
+          <span id="ig-footer">{{site.data.fhir.ig.titlelang[lang] | escape_once}}</span> &#169; <a style="color: var(--footer-hyperlink-text-color)" href="https://hl7europe.org">HL7 Europe</a> |
+          <a style="color: var(--footer-hyperlink-text-color)" rel="license" href="{{site.data.fhir.path}}license.html"><img style="border-style: none;" alt="CC0" src="cc0.png"/></a>
         </p>
       </div>  <!-- /inner-wrapper -->
     </div>  <!-- /container -->

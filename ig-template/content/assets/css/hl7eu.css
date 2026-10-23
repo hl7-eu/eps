@@ -32,7 +32,7 @@
   --breadcrumb-bg-color: #e7e7e7  ; /* 27. Breadcrumb background color */
   --breadcrumb-text-color: #000000; /* 28. Breadcrumb font color */
   --dragon-background-color: #ebe7ee; /* 29. Dragon background color */
-  --dragon-font-color: #c76139; /* 30. Dragon font color */
+  --dragon-text-color: #c76139; /* 30. Dragon font color */
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 1em 0 0.4em 0;

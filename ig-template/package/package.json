@@ -1,11 +1,11 @@
 {
     "name": "hl7.fhir.eu.template",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "type": "fhir.template",
     "license": "CC0-1.0",
-    "description": "HL7 Europe FHIR Template",
+    "description": "HL7 Europe FHIR Template (multi-language, based on hl7.fhir.template / fhir2.base.template)",
     "base": "hl7.fhir.template",
     "dependencies": {
-      "hl7.fhir.template": "1.0.0"
+      "hl7.fhir.template": "current"
     }
 }

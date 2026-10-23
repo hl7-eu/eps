@@ -155,6 +155,9 @@ parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
     - http://terminology.ehdsi.eu/ValueSet/eHDSISocialHistory
   path-expansion-params: ../resources/Parameters-exp-params.json
 
+  # multi-language support (hl7.fhir.template -> fhir2.base.template)
+  i18n-default-lang: en
+
   apply-contact: true
   apply-jurisdiction: true
   apply-publisher: true
