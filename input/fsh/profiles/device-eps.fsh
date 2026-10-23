@@ -18,6 +18,8 @@ Description: """This profile constrains the Device resource in the scope of the 
 * type ^binding.extension[=].extension[=].valueCode = #candidate
 * type ^binding.extension[=].extension[+].url = "valueSet"
 * type ^binding.extension[=].extension[=].valueCanonical = $eHDSIMedicalDevice
+* type ^binding.extension[=].extension[+].url = "key"
+* type ^binding.extension[=].extension[=].valueId = "myhealtheu-medical-device"
 * type ^binding.extension[=].extension[+].url = "documentation"
 * type ^binding.extension[=].extension[=].valueMarkdown = "Codes for medical devices from MyHealth@EU"
 * type ^binding.extension[=].url = "http://hl7.org/fhir/tools/StructureDefinition/additional-binding"

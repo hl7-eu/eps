@@ -28,8 +28,14 @@ All_observations_should_have_a_performer
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips|2.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 This element does not match any known slice defined in the profile http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips|2.0.1 (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# missing key in addiitonal binding
-Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())'
+# Missing key in additional bindings inherited from EU Core 2.0.1 (not fixable in this guide; bindings defined here have a key)
+Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at AllergyIntolerance.code
+Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at AllergyIntolerance.reaction.manifestation
+Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at Condition.code
+Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at Immunization.vaccineCode
+Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at Immunization.protocolApplied.targetDisease
+Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at Medication.ingredient.item[x]:itemCodeableConcept
+Constraint failed: ext-ab-1: 'Additional Bindings SHOULD have a key to allow a binding to be constrained. (extension.where(url='key').exists())' at MedicationStatement.category
 
 # Examples are not planned for obligation profiles
 INFORMATION: StructureDefinition.where(url = 'http://hl7.eu/fhir/eps/StructureDefinition/allergyintolerance-obl-eu-eps'): The Implementation Guide contains no explicitly linked examples for this profile

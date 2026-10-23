@@ -1749,7 +1749,9 @@ Description: "Example device for the HL7 Europe Patient Summary (EPS)."
 Usage: #example
 * id = "0b89dcab-1d0c-44fa-a958-3131452d8cca"
 * status = #active
-* udiCarrier[0].id = "(01)16823880124549(11)210531(17)460615(10)48877640253395325(21)109490485862"
+* udiCarrier[0].deviceIdentifier = "16823880124549"
+* udiCarrier[0].issuer = "http://hl7.org/fhir/NamingSystem/gs1-di"
+* udiCarrier[0].carrierHRF = "(01)16823880124549(11)210531(17)460615(10)48877640253395325(21)109490485862"
 * type = $sct#170615005 "Home nebulizer (physical object)"
 * patient = Reference(Patient-f0b2dcfe-e837-464b-ae8a-3b9da1807dd3) "Petra Schwartz"
 
