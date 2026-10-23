@@ -602,7 +602,7 @@ Usage: #inline
 
 Instance: Instance-Medication-ccd55d45-87b7-43e7-bad3-29771293c8cc
 InstanceOf: MedicationEuCore
-Title: "Medication"
+Title: "Medication: Simvastatin 10 mg oral tablet"
 Description: "Medication"
 Usage: #inline
 * id = "ccd55d45-87b7-43e7-bad3-29771293c8cc"
@@ -660,7 +660,7 @@ Usage: #example
 
 Instance: Instance-Medication-e6929ae1-7ef5-414a-a0a3-d7866af0cce7
 InstanceOf: MedicationEuCore
-Title: "Medication"
+Title: "Medication: Albuterol 5 mg/mL solution for inhalation"
 Description: "Medication"
 Usage: #inline
 * id = "e6929ae1-7ef5-414a-a0a3-d7866af0cce7"
@@ -712,7 +712,7 @@ Usage: #inline
 
 Instance: Instance-Medication-0467eb4f-79e6-4ed5-b076-f7ea83050b81
 InstanceOf: MedicationEuCore
-Title: "Medication"
+Title: "Medication: Acetaminophen 300 mg and hydrocodone bitartrate 5 mg oral tablet"
 Description: "Medication"
 Usage: #inline
 * id = "0467eb4f-79e6-4ed5-b076-f7ea83050b81"
@@ -767,7 +767,7 @@ Usage: #inline
 
 Instance: Instance-Medication-6391cd91-896f-4730-abca-6f24edf18229
 InstanceOf: MedicationEuCore
-Title: "Medication"
+Title: "Medication: Fluticasone propionate 0.25 mg and salmeterol 0.05 mg per actuation inhaler"
 Description: "Medication"
 Usage: #inline
 * id = "6391cd91-896f-4730-abca-6f24edf18229"
@@ -817,7 +817,7 @@ Usage: #inline
 
 Instance: Instance-Medication-a27b547a-e5c0-451f-bda8-10d2341e09d5
 InstanceOf: MedicationEuCore
-Title: "Medication"
+Title: "Medication: Clopidogrel 75 mg oral tablet"
 Description: "Medication"
 Usage: #inline
 * id = "a27b547a-e5c0-451f-bda8-10d2341e09d5"
@@ -872,7 +872,7 @@ Usage: #inline
 
 Instance: Instance-Medication-b8a35f26-2d5d-4d04-bcb7-c314d6a29c2d
 InstanceOf: MedicationEuCore
-Title: "Medication"
+Title: "Medication: Simvastatin 20 mg oral tablet"
 Description: "Medication"
 Usage: #inline
 * id = "b8a35f26-2d5d-4d04-bcb7-c314d6a29c2d"
@@ -927,7 +927,7 @@ Usage: #inline
 
 Instance: Instance-Medication-e87b3b43-9d7f-4b8a-9a61-c9c51886fa9c
 InstanceOf: MedicationEuCore
-Title: "Medication"
+Title: "Medication: Nitroglycerin 400 microgram/actuation sublingual spray"
 Description: "Medication"
 Usage: #inline
 * id = "e87b3b43-9d7f-4b8a-9a61-c9c51886fa9c"
@@ -982,7 +982,7 @@ Usage: #inline
 
 Instance: Instance-Medication-3008cc5e-e349-44c1-bac1-0b4618174bda
 InstanceOf: MedicationEuCore
-Title: "Medication"
+Title: "Medication: Metoprolol 100 mg prolonged-release oral tablet"
 Description: "Medication"
 Usage: #inline
 * id = "3008cc5e-e349-44c1-bac1-0b4618174bda"
@@ -1037,7 +1037,7 @@ Usage: #inline
 
 Instance: Instance-Medication-6629cc00-0c19-482a-b793-05a17ce1fb9d
 InstanceOf: MedicationEuCore
-Title: "Medication"
+Title: "Medication: Doxycycline hyclate 100 mg"
 Description: "Medication"
 Usage: #inline
 * id = "6629cc00-0c19-482a-b793-05a17ce1fb9d"
@@ -1087,7 +1087,7 @@ Usage: #inline
 
 Instance: Instance-Medication-c30f7139-87a0-4e6d-aabe-f45f226aa766
 InstanceOf: MedicationEuCore
-Title: "Medication"
+Title: "Medication: Astemizole 10 mg oral tablet"
 Description: "Medication"
 Usage: #inline
 * id = "c30f7139-87a0-4e6d-aabe-f45f226aa766"
@@ -1142,7 +1142,7 @@ Usage: #inline
 
 Instance: Instance-Medication-08c33e59-a884-45cc-8d4c-f28165dd09ce
 InstanceOf: MedicationEuCore
-Title: "Medication"
+Title: "Medication: Hydrocortisone 10 mg/g and urea 100 mg/g cutaneous cream"
 Description: "Medication"
 Usage: #inline
 * id = "08c33e59-a884-45cc-8d4c-f28165dd09ce"
@@ -1194,7 +1194,7 @@ Usage: #inline
 
 Instance: Instance-Immunization-cfe36253-0c9c-49b6-8272-39d067952592
 InstanceOf: ImmunizationEuCore
-Title: "Immunization"
+Title: "Immunization: Influenza vaccine, 2025-07-14"
 Description: "Immunization"
 Usage: #inline
 * id = "cfe36253-0c9c-49b6-8272-39d067952592"
@@ -1221,7 +1221,7 @@ Usage: #inline
 
 Instance: Instance-Immunization-6dfba8ba-2107-4e59-8b86-edcfda8bab98
 InstanceOf: ImmunizationEuCore
-Title: "Immunization"
+Title: "Immunization: SARS-CoV-2 mRNA vaccine, 2021-03-01"
 Description: "Immunization"
 Usage: #inline
 * id = "6dfba8ba-2107-4e59-8b86-edcfda8bab98"
@@ -1249,7 +1249,7 @@ Usage: #inline
 
 Instance: Instance-Immunization-89ebeb22-4a66-42de-93c8-bd67c841514d
 InstanceOf: ImmunizationEuCore
-Title: "Immunization"
+Title: "Immunization: Tetanus toxoid vaccine, 2018-06-04"
 Description: "Immunization"
 Usage: #inline
 * id = "89ebeb22-4a66-42de-93c8-bd67c841514d"
@@ -1408,7 +1408,7 @@ Usage: #inline
 
 Instance: Instance-Observation-c9be3179-d3d7-4d62-98e8-722a1037acb3
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Body height, 2025-07-14"
 Description: "Vital Signs"
 Usage: #inline
 * id = "c9be3179-d3d7-4d62-98e8-722a1037acb3"
@@ -1432,7 +1432,7 @@ Usage: #inline
 
 Instance: Instance-Observation-47ac0bbe-89be-4c51-af57-1a62526498e0
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Pain severity, 2025-07-14"
 Description: "Vital Signs"
 Usage: #inline
 * id = "47ac0bbe-89be-4c51-af57-1a62526498e0"
@@ -1456,7 +1456,7 @@ Usage: #inline
 
 Instance: Instance-Observation-c5d48672-464e-4165-8d63-1320c5f6d1bd
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Body weight, 2025-07-14"
 Description: "Vital Signs"
 Usage: #inline
 * id = "c5d48672-464e-4165-8d63-1320c5f6d1bd"
@@ -1480,7 +1480,7 @@ Usage: #inline
 
 Instance: Instance-Observation-d7471903-d75e-4537-a6ce-a79d517cf685
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Body mass index, 2025-07-14"
 Description: "Vital Signs"
 Usage: #inline
 * id = "d7471903-d75e-4537-a6ce-a79d517cf685"
@@ -1504,7 +1504,7 @@ Usage: #inline
 
 Instance: Instance-Observation-c70a509b-60e4-4cb5-b8ce-dcbf43753cbc
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Diastolic blood pressure, 2025-07-14"
 Description: "Vital Signs"
 Usage: #inline
 * id = "c70a509b-60e4-4cb5-b8ce-dcbf43753cbc"
@@ -1528,7 +1528,7 @@ Usage: #inline
 
 Instance: Instance-Observation-02e1109c-cbf1-4586-83e5-4eabbefac521
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Blood pressure panel, 2025-07-14"
 Description: "Vital Signs"
 Usage: #inline
 * id = "02e1109c-cbf1-4586-83e5-4eabbefac521"
@@ -1568,7 +1568,7 @@ Usage: #inline
 
 Instance: Instance-Observation-d11fd424-e9f8-44bd-a2ec-03b2dd1e5a62
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Respiratory rate, 2025-07-14"
 Description: "Vital Signs"
 Usage: #inline
 * id = "d11fd424-e9f8-44bd-a2ec-03b2dd1e5a62"
@@ -1592,7 +1592,7 @@ Usage: #inline
 
 Instance: Instance-Observation-9a4297dd-50ec-4632-b916-c6a364cfde84
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Body height, 2024-07-08"
 Description: "Vital Signs"
 Usage: #inline
 * id = "9a4297dd-50ec-4632-b916-c6a364cfde84"
@@ -1616,7 +1616,7 @@ Usage: #inline
 
 Instance: Instance-Observation-78e73600-a5c2-48f8-a59b-7a09954332c3
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Pain severity, 2024-07-08"
 Description: "Vital Signs"
 Usage: #inline
 * id = "78e73600-a5c2-48f8-a59b-7a09954332c3"
@@ -1640,7 +1640,7 @@ Usage: #inline
 
 Instance: Instance-Observation-e6b94ffc-e27e-4e18-8c7d-8a26e959276a
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Body weight, 2024-07-08"
 Description: "Vital Signs"
 Usage: #inline
 * id = "e6b94ffc-e27e-4e18-8c7d-8a26e959276a"
@@ -1664,7 +1664,7 @@ Usage: #inline
 
 Instance: Instance-Observation-0a321a2d-6abb-4b3d-b189-992fcc040e89
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Body mass index, 2024-07-08"
 Description: "Vital Signs"
 Usage: #inline
 * id = "0a321a2d-6abb-4b3d-b189-992fcc040e89"
@@ -1688,7 +1688,7 @@ Usage: #inline
 
 Instance: Instance-Observation-bb3b3ba1-43cf-486f-b7db-0178fb9f0f0f
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Blood pressure panel, 2024-07-08"
 Description: "Vital Signs"
 Usage: #inline
 * id = "bb3b3ba1-43cf-486f-b7db-0178fb9f0f0f"
@@ -1726,7 +1726,7 @@ Usage: #inline
 
 Instance: Instance-Observation-13686462-9b29-41c7-8645-2bf6b9d61e1a
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Heart rate, 2024-07-08"
 Description: "Vital Signs"
 Usage: #inline
 * id = "13686462-9b29-41c7-8645-2bf6b9d61e1a"
@@ -1750,7 +1750,7 @@ Usage: #inline
 
 Instance: Instance-Observation-a89003d1-35dd-4f0c-ab3b-aed081ae887e
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Respiratory rate, 2024-07-08"
 Description: "Vital Signs"
 Usage: #inline
 * id = "a89003d1-35dd-4f0c-ab3b-aed081ae887e"

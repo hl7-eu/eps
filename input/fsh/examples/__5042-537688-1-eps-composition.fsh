@@ -1,6 +1,6 @@
 Instance: Composition-24c0f4df-ed5c-4a81-b34f-6d7cfffe310b
 InstanceOf: CompositionEuEps
-Title: "Composition: Complete EPS"
+Title: "Composition: Complete EPS, standalone Composition"
 Description: "Example of a complete HL7 Europe Patient Summary (EPS) FHIR Composition [Petra Schwartz]"
 Usage: #example
 * id = "24c0f4df-ed5c-4a81-b34f-6d7cfffe310b"
@@ -178,7 +178,7 @@ Usage: #example
 
 Instance: Medication-a20659b9-12e2-417a-aa70-98483da34f44
 InstanceOf: MedicationEuCore
-Title: "Medication: simvastatin 10 MG Oral Tablet"
+Title: "Medication: Simvastatin 10 mg oral tablet, standalone Composition"
 Description: "Medication: simvastatin 10 MG Oral Tablet"
 Usage: #example
 * id = "a20659b9-12e2-417a-aa70-98483da34f44"
@@ -201,7 +201,7 @@ Simvastatin 10 mg oral tablet, Oral tablet
 
 Instance: MedicationStatement-b3a1ed32-3f44-41e2-919b-1c8bdeaee29c
 InstanceOf: MedicationStatementEuEps
-Title: "MedicationStatement: Simvastatin 10 mg oral tablet"
+Title: "MedicationStatement: Simvastatin 10 mg oral tablet, standalone Composition"
 Description: "Example medication statement for Simvastatin 10 mg oral tablet [Petra Schwartz]"
 Usage: #example
 * id = "b3a1ed32-3f44-41e2-919b-1c8bdeaee29c"
@@ -788,7 +788,7 @@ Usage: #example
 
 Instance: Immunization-2c268a6d-fd6e-4580-acae-3b5f52d43c26
 InstanceOf: ImmunizationEuCore
-Title: "Immunization"
+Title: "Immunization: Influenza vaccine, 2025-07-14, standalone Composition"
 Description: "Immunization"
 Usage: #example
 * id = "2c268a6d-fd6e-4580-acae-3b5f52d43c26"
@@ -1014,7 +1014,7 @@ Usage: #example
 
 Instance: Observation-62e65dfb-d837-4556-8e75-2ca7a6fe6e40
 InstanceOf: http://hl7.org/fhir/StructureDefinition/vitalsigns
-Title: "Vital Signs"
+Title: "Vital Signs: Body height, 2025-07-14, standalone Composition"
 Description: "Vital Signs"
 Usage: #example
 * id = "62e65dfb-d837-4556-8e75-2ca7a6fe6e40"
@@ -1759,7 +1759,7 @@ Usage: #example
 
 Instance: DeviceUse-9ee7b991-3240-42e3-9bcf-a1de0507754f
 InstanceOf: DeviceUseStatementEuEps
-Title: "Device Use Statement Example: Home nebulizer"
+Title: "Device Use Statement Example: Home nebulizer, standalone Composition"
 Description: "Example device use statement for the HL7 Europe Patient Summary (EPS)."
 Usage: #example
 * id = "9ee7b991-3240-42e3-9bcf-a1de0507754f"
@@ -1809,7 +1809,7 @@ Usage: #example
 
 Instance: Patient-f0b2dcfe-e837-464b-ae8a-3b9da1807dd3
 InstanceOf: PatientEuEps
-Title: "Patient: Petra Schwartz"
+Title: "Patient: Petra Schwartz, standalone Composition"
 Description: "Example patient for the HL7 Europe Patient Summary (EPS)."
 Usage: #example
 * id = "f0b2dcfe-e837-464b-ae8a-3b9da1807dd3"
