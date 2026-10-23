@@ -18,6 +18,9 @@ Decisions already taken for this guide. Consistency reviews do not raise these a
 
 - **Duplicate anchor on the complete Bundle page** (`Patient_f51071b2-…`). This is an IG Publisher rendering issue that appears when the Patient has an authored narrative. The narrative is kept, and the warning is suppressed (`input/ignoreWarnings.txt`).
 
+- **Additional bindings without a key** (decided 2026-10-23). Additional bindings defined in this guide have a `key`. The `ext-ab-1` warnings inherited from EU Core 2.0.1 are suppressed, with one exact entry per element. Remove them when EU Core adds the keys.
+- **Template QA warnings are fixed, not suppressed** (decided 2026-10-23). When a page from the base template is not well-formed (e.g. `searchform.html`), override it in `ig-template/content/`. Don't add it to `ignoreWarnings.txt`.
+
 ## Configuration
 
 - **`hl7.terminology.r4` is not pinned** (decided 2026-10-03). The IG Publisher resolves the version; the 1.0.0 review build used 7.4.0. Reviews do not raise the missing pin again.
