@@ -147,7 +147,10 @@
             <td>equivalent</td>
             <td>Device</td>
             <td>type</td>
-            <td></td>
+            <td>
+              Cardinality mismatch: the model element is 0..*, while <code>Device.type</code> in FHIR R4 is 0..1.<br/>
+              Use multiple <code>coding</code> entries within the single <code>type</code> to express the same concept in different code systems, possibly at different levels of granularity.
+            </td>
           </tr>
           <tr>
             <td>note</td>
