@@ -2104,7 +2104,7 @@ Usage: #inline
 * id = "b3c78022-b120-40c2-84e0-afe0e2d07c18"
 * status = #active
 * udiCarrier[0].deviceIdentifier = "16823880124549"
-* udiCarrier[0].issuer = "http://hl7.org/fhir/NamingSystem/gs1-di"
+* udiCarrier[0].issuer = "http://example.org/fhir/NamingSystem/gs1-di"
 * udiCarrier[0].carrierHRF = "(01)16823880124549(11)210531(17)460615(10)48877640253395325(21)109490485862"
 * type = $sct#170615005 "Home nebulizer (physical object)"
 * patient = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
@@ -2138,7 +2138,7 @@ Usage: #example
 * id = "575520ac-c2ef-4f47-82bf-1b691f5e6466"
 * status = #active
 * udiCarrier[0].deviceIdentifier = "70551104053281"
-* udiCarrier[0].issuer = "http://hl7.org/fhir/NamingSystem/gs1-di"
+* udiCarrier[0].issuer = "http://example.org/fhir/NamingSystem/gs1-di"
 * udiCarrier[0].carrierHRF = "(01)70551104053281(11)910128(17)160212(10)34976447(21)50912"
 * type = $sct#337414009 "Blood glucose meter (physical object)"
 * patient = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
