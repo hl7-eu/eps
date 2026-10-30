@@ -6,6 +6,10 @@ Description: "This profile sets the IPS obligations on the Procedure (EPS) profi
 
 * insert SetFmmAndStatusRule (1, draft)
 
+// ================= REFERENCES TO OBLIGATION PROFILES =================
+* performer.actor only Reference(PractitionerRoleEuCore or PractitionerEuCore or $Device-observer-uv-ips or PatientOblEuEps or RelatedPerson or OrganizationEuCore)
+* reasonReference only Reference(ConditionEuCore or Observation or ProcedureOblEuEps or DiagnosticReportEuCore or DocumentReference)
+
 // ================= IPS OBLIGATIONS =================
 * code insert ObligationIpsPopulateIfKnownDisplay
 

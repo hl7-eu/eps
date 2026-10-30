@@ -143,9 +143,9 @@ Description: """This profile defines how the Bundle resource is used to represen
 * entry[patient].resource 1..
 * entry[patient].resource only PatientEuEps  
 * entry[allergyintolerance].resource 1..
-* entry[allergyintolerance].resource only AllergyIntoleranceOblEuEps
+* entry[allergyintolerance].resource only AllergyIntoleranceEuCore
 * entry[condition].resource 1..
-* entry[condition].resource only ConditionOblEuEps
+* entry[condition].resource only ConditionEuCore
 * entry[device].resource 1..
 * entry[device].resource only DeviceEuEps
 * entry[deviceusestatement].resource 1..
@@ -157,13 +157,13 @@ Description: """This profile defines how the Bundle resource is used to represen
 * entry[imagingstudy].resource only $ImagingStudy-uv-ips  //EuEps
     
 * entry[immunization].resource 1..
-* entry[immunization].resource only ImmunizationOblEuEps // check if this works...
+* entry[immunization].resource only ImmunizationEuCore // check if this works...
 
 * entry[flag].resource 1..
-* entry[flag].resource only FlagAlertOblEuEps
+* entry[flag].resource only FlagPatientEuCore
 
 * entry[medication].resource 1..
-* entry[medication].resource only MedicationOblEuEps
+* entry[medication].resource only MedicationEuCore
 
 /* Commented out because of https://jira.hl7.org/browse/FHIR-58509
 * entry[medicationrequest].resource 1..
@@ -171,18 +171,18 @@ Description: """This profile defines how the Bundle resource is used to represen
 */
 
 * entry[medicationstatement].resource 1..
-* entry[medicationstatement].resource only MedicationStatementOblEuEps
+* entry[medicationstatement].resource only MedicationStatementEuEps
 
 * entry[practitioner].resource 1..
-* entry[practitioner].resource only PractitionerOblEuEps
+* entry[practitioner].resource only PractitionerEuCore
 * entry[practitionerrole].resource 1..
-* entry[practitionerrole].resource only PractitionerRoleOblEuEps
+* entry[practitionerrole].resource only PractitionerRoleEuCore
 
 * entry[procedure].resource 1..
 * entry[procedure].resource only ProcedureEuEps
 
 * entry[organization].resource 1..
-* entry[organization].resource only OrganizationOblEuEps
+* entry[organization].resource only OrganizationEuCore
 * entry[observation-pregnancy-edd].resource 1..
 * entry[observation-pregnancy-edd].resource only ObservationPregnancyEddEuEps
 * entry[observation-pregnancy-outcome].resource 1..

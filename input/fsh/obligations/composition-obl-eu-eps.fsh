@@ -6,6 +6,15 @@ Description: "This profile sets the IPS obligations on the Composition (EPS) pro
 
 * insert SetFmmAndStatusRule (1, draft)
 
+// ================= REFERENCES TO OBLIGATION PROFILES =================
+* subject only Reference(PatientOblEuEps)
+* author only Reference(PractitionerEuCore or PractitionerRoleEuCore or Device or OrganizationEuCore or PatientOblEuEps or RelatedPerson)
+* attester.party only Reference(PatientOblEuEps or RelatedPerson or PractitionerEuCore or PractitionerRoleEuCore or OrganizationEuCore)
+* section[sectionMedications].entry[medicationStatementOrRequest] only Reference(MedicationStatementOblEuEps)
+* section[sectionResults].entry[results-diagnosticReport] only Reference(DiagnosticReportOblEuEps)
+* section[sectionProceduresHx].entry[procedure] only Reference(ProcedureOblEuEps)
+* section[sectionMedicalDevices].entry[deviceStatement] only Reference(DeviceUseStatementOblEuEps)
+
 // ================= IPS OBLIGATIONS =================
 * meta.profile insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #MAY:able-to-populate)
 

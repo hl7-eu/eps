@@ -6,6 +6,9 @@ Description: "This profile sets the IPS obligations on the EU Core MedicationSta
 
 * insert SetFmmAndStatusRule (1, draft)
 
+// ================= REFERENCES TO OBLIGATION PROFILES =================
+* subject only Reference(PatientOblEuEps)
+
 // ================= IPS OBLIGATIONS =================
 * medication[x] insert ObligationIpsPopulateIfKnownDisplay
 * subject insert ObligationIpsPopulateIfKnownDisplay

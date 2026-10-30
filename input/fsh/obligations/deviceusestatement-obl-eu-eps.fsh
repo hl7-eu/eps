@@ -6,6 +6,11 @@ Description: "This profile sets the IPS obligations on the DeviceUseStatement (E
 
 * insert SetFmmAndStatusRule (1, draft)
 
+// ================= REFERENCES TO OBLIGATION PROFILES =================
+* subject only Reference(PatientOblEuEps)
+* source only Reference(PatientOblEuEps or PractitionerEuCore or PractitionerRoleEuCore or RelatedPerson)
+* device only Reference(DeviceOblEuEps)
+
 // ================= IPS OBLIGATIONS =================
 * subject insert ObligationIpsPopulateIfKnownDisplay
 
