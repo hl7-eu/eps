@@ -1,11 +1,11 @@
 # HL7 Europe Patient Summary – Consistency Review for 1.0.0 (release after 1.0.0-ballot)
 
-- **Date:** 2026-10-02. Last updated 2026-10-23 after a rebuild with IG Publisher 3.0.1 and a re-run of all checks; findings 4-1 to 4-3 and 6.4-12 updated on 2026-10-30 after the obligation split in `3030934` (no rebuild). Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-02. Last updated 2026-10-30 after a rebuild with IG Publisher 3.0.1 and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
-  - SUSHI reports 0 errors and 0 warnings (run of 2026-10-23, after the fixes in `ac7095e`).
-  - The IG Publisher 3.0.1 run of 2026-10-23 12:23 (validator core `6.0.0-snapshot1`) was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `7a842ec`, but not the fixes in `ac7095e` (5-6, 7-11, 7-12).
-  - It reports **12 errors, 22 warnings and 41 information messages**, plus 94 suppressed warnings and 530 suppressed hints. All 12 errors come from 5-6, which is fixed in `ac7095e`. The upgrade from Publisher 2.3.4 changed some message texts, so two suppressions no longer match (7-2, 7-11). A rebuild is needed to confirm the counts.
+  - SUSHI reports 0 errors and 0 warnings (run of 2026-10-30).
+  - The IG Publisher 3.0.1 run of 2026-10-30 was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `020ebf3`, plus the fixes for 1-4 and 7-13 (`1d6b20f`, `e7aee6e`).
+  - It reports **0 errors, 2 warnings and 35 information messages**, 0 broken links, plus 142 suppressed warnings and 498 suppressed hints. 33 of the information messages are the OID messages (7-2).
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 1.0.0. **Low** means cleanup or editorial.
 
@@ -20,7 +20,7 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 | ID | Area | Finding | Fix |
 |---|---|---|---|
 | 1-1 | Configuration | `sushi-config.yaml:6-11` still has `version: 1.0.0-ci-build`, `status: draft`, `releaseLabel: ci-build`, and there is no `publication-request.json`. The release cannot be published like this. | Set the release version, status and label (e.g. `1.0.0`, `active`, `trial-use` for an STU), add `publication-request.json`, and rebuild. |
-| 1-2 | Jira spec | QA warning: the Jira specification file `FHIR-eu-eps.xml` is out of date with the artifacts and pages (new Variance page, MedicationStatement obligation profile, removed pages). | Replace it with the proposed file from the Publisher output, review it, and submit it to the HL7 JIRA-Spec-Artifacts repository. The title collisions (5-3) are fixed, so the keys will be correct. |
+| 1-2 | Jira spec | QA warning: the Jira specification file `FHIR-eu-eps.xml` is out of date with the artifacts and pages. It was updated in `802d156`, but the 10 obligation profiles added in `3030934` (FHIR-58110) came after, and the QA still reports it as out of date. | Replace it with the proposed file from the Publisher output, review it, and submit it to the HL7 JIRA-Spec-Artifacts repository. The title collisions (5-3) are fixed, so the keys will be correct. |
 | 1-3 | Profiles | The Pregnancy History section uses the **IPS** profiles, not the EPS ones: `pregnancyStatus` → `Observation-pregnancy-status-uv-ips` and `pregnancyOutcome` → `Observation-pregnancy-outcome-uv-ips` (`input/fsh/profiles/composition-eu-eps.fsh:324-332`). The Bundle slices and the mapping pages use the EPS profiles. The EPS EDD profile is not reachable from the Composition at all: `ObservationPregnancyStatusEuEps.hasMember` allows only the IPS EDD profile (`input/fsh/profiles/observation-pregnancyStatus-eps.fsh:25`). Its comment says gestational age is not allowed, yet the section has a `gestationalAge` slice. | Point the section slices to `ObservationPregnancyStatusEuEps` and `ObservationPregnancyOutcomeEuEps`. Let `hasMember` reference `ObservationPregnancyEddEuEps` (and `ObservationPregnancyGestationalAgeEuEps` if intended). Remove the stale comment. |
 
 ---
@@ -49,8 +49,8 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
 | 3.2-1 | Medium | `input/fsh/profiles/bundle-eu-eps.fsh:15` | The `eps-bundle-patient-ref` description lists AllergyIntolerance, Immunization and ImmunizationRecommendation; the expression also checks Consent. | Add Consent to the description. |
-| 3.2-2 | Low | `input/fsh/profiles/composition-eu-eps.fsh:490` | The `ips-comp-1` XPath has two identical branches and requires that `emptyReason` is absent, which the FHIRPath doesn't. XPath is no longer used by R4 tooling. | Delete the `xpath` rule. |
-| 3.2-3 | Low | `input/fsh/invariants/ips-pat-1.fsh:1`, `composition-eu-eps.fsh:486` | Two invariants reuse IPS ids (`ips-pat-1`, `ips-comp-1`) next to `eps-bundle-*` ids. IPS defines the same constraints, and they're already imposed through `imposeProfile`. | Keep the IPS ids only if the duplication is intended; otherwise use `eps-` ids or rely on the imposed IPS profiles. |
+| 3.2-2 | Low | `input/fsh/profiles/composition-eu-eps.fsh:392` | The `ips-comp-1` XPath has two identical branches and requires that `emptyReason` is absent, which the FHIRPath doesn't. XPath is no longer used by R4 tooling. | Delete the `xpath` rule. |
+| 3.2-3 | Low | `input/fsh/invariants/ips-pat-1.fsh:1`, `composition-eu-eps.fsh:388` | Two invariants reuse IPS ids (`ips-pat-1`, `ips-comp-1`) next to `eps-bundle-*` ids. IPS defines the same constraints, and they're already imposed through `imposeProfile`. | Keep the IPS ids only if the duplication is intended; otherwise use `eps-` ids or rely on the imposed IPS profiles. |
 
 ### 3.3 Leftovers in FSH
 
@@ -74,6 +74,7 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 | 4-1 | Low | `input/fsh/obligations/medicationstatement-obl-eu-eps.fsh:5` | Since `3030934`, an obligation profile derives from the EPS profile when there is one, and from EU Core otherwise, so the parent of `MedicationStatementOblEuEps` is now consistent. Its description still says "on the EU Core MedicationStatement profile"; the new obligation profiles say "on the <title> profile". | "…on the MedicationStatement (EPS) profile." |
 | 4-2 | Medium | `patient-eps.fsh:11` / `patient-obl-eu-eps.fsh:10`; `composition-obl-eu-eps.fsh:82-88` | Some obligations are weaker than the EPS cardinality. `Patient.identifier` is `1..*` (FHIR-58492) but has *populate-if-known*. `sectionProceduresHx` and `sectionMedicalDevices` are `1..1` but have *SHOULD populate-if-known*. These are the IPS obligations, copied as they are, while EPS tightened the cardinality. Since `3030934` the cardinality and the obligation are in different profiles. | Align the obligations with the cardinality (e.g. *SHALL populate*), or say on the Obligations page that the cardinality takes precedence. |
 | 4-3 | Low | `input/pagecontent/obligations.md` | Since `3030934` all obligations are in separate `-obl-` profiles (19, all informative). The page now says so, but it doesn't list which profiles have an obligation profile; Consent, travel and gestational age have none. | Add a table: profile → obligation profile, or rely on the EPS Obligations group on the Artifacts page. |
+| 4-4 | Low | `sushi-config.yaml` `groups: EpsObligations` | **New:** The group description says "obligation-only profiles". Since `28ef9bb` (FHIR-58508), 8 obligation profiles also narrow inherited references to the matching obligation profiles (e.g. `bundle-obl-eu-eps`: `entry[patient].resource only PatientOblEuEps`). | "IPS-derived obligation profiles for EPS. They set the IPS obligations and point their references to the other obligation profiles. Informative for this version of the guide." Say the same on the Obligations page. |
 
 ---
 
@@ -94,7 +95,7 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 
 | ID | Sev | Line | Finding → Proposed |
 |---|---|---|---|
-| 6.1-1 | Medium | – | Missing changes made since `1.0.0-ballot`: FHIR-57679 (EHDS Art. 14 in the scope), FHIR-58104 (alignment with Xt-EHR 1.0.0), FHIR-58138 (`Bundle.timestamp` 1..1), FHIR-58492 (`Patient.identifier` 1..*), FHIR-58509 (new MedicationStatement obligation profile; MedicationRequest obligation profile removed), FHIR-58917 (Change Log page), FHIR-58918 (mapping tables reviewed), FHIR-59046 (Model Map names), FHIR-59501 (new Variance Statement page). Also: EU Base and IPS aligned to 2.0.1 (`10fe8d9`), EU Extensions 1.3.1 (`9437507`), MedicationRequest Bundle slice removed (`035638d`), old allergy mapping page removed. → Add them. |
+| 6.1-1 | Medium | – | Missing changes made since `1.0.0-ballot`: FHIR-57679 (EHDS Art. 14 in the scope), FHIR-58104 (alignment with Xt-EHR 1.0.0), FHIR-58138 (`Bundle.timestamp` 1..1), FHIR-58492 (`Patient.identifier` 1..*), FHIR-58509 (new MedicationStatement obligation profile; MedicationRequest obligation profile removed), FHIR-58917 (Change Log page), FHIR-58918 (mapping tables reviewed), FHIR-59046 (Model Map names), FHIR-59501 (new Variance Statement page). **New:** FHIR-58110 (obligations moved to separate, informative obligation profiles), FHIR-58508 (structural and obligation profiles reference only their own kind), FHIR-58258 (delegation note in the Composition profile). Also: EU Base and IPS aligned to 2.0.1 (`10fe8d9`), EU Extensions 1.3.1 (`9437507`), MedicationRequest Bundle slice removed (`035638d`), old allergy mapping page removed. → Add them. |
 | 6.1-2 | Low | 3, 8, 13, 23 | "summarizes" → "summarises". "xtEHR" → "Xt-EHR". "from 0.3.0 to 1.0" → "from 0.3.0 to 1.0.0". "Composition (EU EPS)" → "Composition (EPS)". The Xt-EHR models are not a package dependency: "Aligned with the Xt-EHR EHDS Logical Models 1.0.0 (previously 0.3.0)". |
 
 ### 6.2 Stale ballot or preview wording
@@ -146,6 +147,7 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
   - The 11 map pages and `modelmap.xml` contain `<head>`/`<title>` (line 4), and empty `<a>`/`<p>` elements (lines 18-19), inside page fragments.
   - 10 files have no trailing newline, among them `authors.md`, `obligations.md`, `modelmap.xml` and two map pages.
   - **New:** `authors.md:20-24`: the figure has empty `<p>` elements and an `<img>` without `alt` text.
+  - **New:** `input/includes/composition-eu-eps-notes.xml:4`: an empty `<a> </a>` (carried over from the old notes page).
 
 ### 6.6 `knownIssues.md`: suggested additions
 
@@ -160,37 +162,39 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
 
 ## 7. QA output and `ignoreWarnings.txt`
 
-This section is based on the IG Publisher 3.0.1 run of 2026-10-23 12:23, built as `1.0.0-ci-build` / `draft` / `ci-build`.
+This section is based on the IG Publisher 3.0.1 run of 2026-10-30, built as `1.0.0-ci-build` / `draft` / `ci-build`, with the fixes for 1-4 and 7-13.
 
-**Visible messages:** 12 errors, 22 warnings and 41 information messages.
+**Visible messages:** 0 errors, 2 warnings and 35 information messages.
 
-The 12 errors, and 15 of the information messages ("Details for … matching against profile", "does not match any known slice"), all come from the empty `Device.udiCarrier` in the Device examples (5-6). They are fixed in `ac7095e`, and will go away after a rebuild.
+The 6 errors of the first 2026-10-30 run (1-4) and the about 420 information messages on the obligation profiles (7-13) are gone. The 12 errors of the run of 2026-10-23 (5-6) are gone too.
 
 | ID | Message | Resources | Fix |
 |---|---|---|---|
 | 7-1 | Warning: the Jira specification file appears to be out of date. | `FHIR-eu-eps.xml` | See 1-2. |
-| 7-2 | Warning: "The resource ValueSet/gestational-age-loinc **should** have an OID assigned", plus 24 information messages "… **could usefully** have an OID assigned" (all profiles and the IG). The wildcard on line 65 now has 0 uses: Publisher 3.0.1 links to `ig-guidance/oids.html`, not to the `fhir-tools-ig` URL in the entry. | all StructureDefinitions, `ValueSet-gestational-age-loinc`, the IG | Set the `auto-oid-root` IG parameter (or assign OIDs); that fixes both wordings. Otherwise shorten line 65 to `%could usefully have an OID assigned%`. |
-| 7-3 | Information: the parameter `system-version` has the same name as a core operation parameter but has type uri. | `Parameters-exp-params` | The suppression on line 59 uses an older message text (0 uses). Replace it with the current text. |
-| 7-4 | Information: no explicitly linked examples for `medicationstatement-obl-eu-eps`. | `StructureDefinition-medicationstatement-obl-eu-eps` | Line 48 was copied from `qa.html` and contains zero-width spaces (U+200B), so it never matches (0 uses). Retype it without them. |
+| 7-2 | Warning: "The resource ValueSet/gestational-age-loinc **should** have an OID assigned", plus information messages "… **could usefully** have an OID assigned" (all profiles and the IG). The wildcard on line 75 has 0 uses: Publisher 3.0.1 links to `ig-guidance/oids.html`, not to the `fhir-tools-ig` URL in the entry. | all StructureDefinitions, `ValueSet-gestational-age-loinc`, the IG | Set the `auto-oid-root` IG parameter (or assign OIDs); that fixes both wordings. Otherwise shorten line 75 to `%could usefully have an OID assigned%`. |
+| 7-3 | Information: the parameter `system-version` has the same name as a core operation parameter but has type uri. | `Parameters-exp-params` | The suppression on line 69 uses an older message text (0 uses). Replace it with the current text. |
+| 7-4 | Lines 41-58: the 18 "no explicitly linked examples" entries for the obligation profiles have 0 uses. Publisher 3.0.1 no longer emits that message; the obligation profiles are covered by line 10 instead (7-6). Line 49 also contains zero-width spaces (U+200B). | `input/ignoreWarnings.txt` | Delete lines 40-58. |
+
 **Publication request check:** `publication-request.json` is missing (see 1-1).
 
-**Suppressed messages:** 94 warnings and 530 hints, from 26 entries. Five entries had 0 uses: line 32 (7-11, now replaced by lines 32-38), and lines 48 (7-4), 53 (7-9), 59 (7-3) and 65 (7-2) in the current file.
+**Suppressed messages:** 142 warnings and 498 hints, from 42 entries. 22 entries have 0 uses: lines 41-58 (7-4), 63 (7-9), 69 (7-3), 75 (7-2) and 78 (7-14).
 
 **Suppressions that hide fixable issues:**
 
 | ID | Lines | Entry (uses) | Fix |
 |---|---|---|---|
-| 7-5 | 61-62 | "does not match any known slice defined in the profile …/bundle-eu-eps" (19) | These are the lab Observations of the complete example. Add a medical test result slice (3.1-1), then delete the entry. The comment also has a typo ("bunlde"). The entry ends with the profile version `1.0.0-ci-build`, so it stops matching once the version is set for the release (1-1), and the 19 messages come back. |
-| 7-6 | 9-10 | "The Implementation Guide contains no examples for this profile" (5) | The comment says it's for obligation profiles, but those are covered by lines 34-42. This one hides the missing examples in 5-1. Add the examples, then delete or narrow the entry. |
+| 7-5 | 71-72 | "does not match any known slice defined in the profile …/bundle-eu-eps" (19) | These are the lab Observations of the complete example. Add a medical test result slice (3.1-1), then delete the entry. The comment also has a typo ("bunlde"). The entry ends with the profile version `1.0.0-ci-build`, so it stops matching once the version is set for the release (1-1), and the 19 messages come back. |
+| 7-6 | 9-10 | "The Implementation Guide contains no examples for this profile" (23) | It now covers the 19 obligation profiles, as its comment says, but it also hides the missing examples of 4 structural profiles (5-1). Add the examples. If the entry stays, keep the comment accurate ("Obligation profiles have no examples"). |
 | 7-7 | 24-25 | `All_observations_should_have_a_performer` (19) | A blanket suppression by message id. Add a performer (the lab Organization) to the example lab Observations, and delete it. |
-| 7-8 | 12-19 | `Terminology_TX_NoValid_3_CC` (61), `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` (37), `TYPE_SPECIFIC_CHECKS_DT_QTY_UCUM_ANNOTATIONS` (16) | Blanket suppressions by message id that will also hide new occurrences. Check the current hits once, then narrow them to message texts, or document why they are global. |
+| 7-8 | 12-19 | `Terminology_TX_NoValid_3_CC` (41), `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` (65), `TYPE_SPECIFIC_CHECKS_DT_QTY_UCUM_ANNOTATIONS` (10) | Blanket suppressions by message id that will also hide new occurrences. Check the current hits once, then narrow them to message texts, or document why they are global. |
 
-The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 59 (OIDs) no longer matches anything; see 7-2.
+The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 75 (OIDs) no longer matches anything; see 7-2.
 
 **Stale entries** (0 uses, safe to delete), by line in `ignoreWarnings.txt`:
 
-- **[7-9]** Line 53: "Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentscope|4.0.1".
-- Lines 48, 59 and 65 also have 0 uses, but they should be corrected rather than deleted (7-4, 7-3, 7-2).
+- **[7-9]** Line 63: "Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentscope|4.0.1".
+- **[7-14]** **New:** Line 78: the duplicate anchor `Patient_f51071b2-…` (accepted as 7-10) is no longer reported. The template move in `b09fefe` seems to have fixed the rendering. Delete the entry, and remove the decision from `reviews/review-notes.md` once confirmed.
+- Lines 41-58, 69 and 75 also have 0 uses; see 7-4, 7-3 and 7-2.
 
 ---
 
@@ -209,10 +213,10 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 59 (O
 
 ## 9. Suggested order of work
 
-1. Commit the 5-6, 7-11 and 7-12 fixes, fix 7-2, then rebuild to get back to a clean QA baseline.
+1. Delete the stale entries (7-4, 7-9, 7-14), fix 7-2, then rebuild.
 2. Profile coherence: the pregnancy section (1-3), Bundle slices (3.1-1), section entry rules (3.1-2), the invariant description (3.2-1).
 3. Examples for the four profiles without one (5-1), then narrow the suppressions 7-5 to 7-7.
-4. Groups (2-2), and obligations vs cardinality (4-1, 4-2).
+4. Groups (2-2, 4-4), and obligations vs cardinality (4-1, 4-2).
 5. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
 6. Narrative pages: copyright statement (6.4-11), Variance and Missing Data (6.4-1, 6.4-12, 6.4-2), lab mapping row (6.4-8), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-4, 6.4-9, 6.3-2, 6.3-3), then `changes.md` (6.1-1, 6.1-2).
 7. QA leftovers: 7-3, 7-4, 7-9.
@@ -235,6 +239,18 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 ---
 
 ## Fixed since the first review
+
+**Commit `1d6b20f`**
+
+- **[1-4]** New in this run, and fixed. `CompositionOblEuEps` widened the `legalAuthenticator` and `validator` slices of `attester.party`: SUSHI had copied the `attester.party` rule (from `28ef9bb`, FHIR-58508) to them, which gave 6 QA errors. The slice constraints of `CompositionEuEps` are now restated (`input/fsh/obligations/composition-obl-eu-eps.fsh:13-14`). Confirmed by a Publisher rebuild: 0 errors.
+
+**Commit `e7aee6e`**
+
+- **[7-13]** New in this run, and fixed. The suppressions for the deprecated `maxValueSet` and `regex` extensions and for the obligation extension slice (`input/ignoreWarnings.txt:61, 62, 66`) pinned the version `5.3.0`; the Publisher loads 5.4.0. They now end with `|%`, so they match any version. Confirmed by a Publisher rebuild: information messages went from 456 to 35.
+
+**Rebuild of 2026-10-30**
+
+- **[5-6]**, **[7-11]**, **[7-12]** Confirmed by the IG Publisher 3.0.1 rebuild: the 12 `ele-1` errors, the `ext-ab-1` warnings and the `searchform.html` warnings are gone.
 
 **Commit `b431cb7`**
 
