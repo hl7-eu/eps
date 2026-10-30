@@ -37,32 +37,26 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 
 ### 3.1 Composition sections vs Bundle entry slices
 
-| ID | Sev | Location | Finding | Fix |
-|---|---|---|---|---|
-| 3.1-1 | Medium | `input/fsh/profiles/bundle-eu-eps.fsh:99-135` | Profiles that sections reference have no Bundle entry slice: `medicalTestResult-eu-core` (Results), `observation-travel-eu-eps` (Travel History), `consent-eu-eps` (Advance Directives, slice commented out). The 19 lab Observations of the complete example match no slice, which is hidden by a suppression (7-5). DocumentReference, ClinicalImpression, ImmunizationRecommendation and MedicationRequest/Administration/Dispense have no slice either. | Add slices at least for medical test results, travel and consent. Decide for the others and say so in the Bundle profile description. |
-| 3.1-2 | Medium | `input/fsh/profiles/composition-eu-eps.fsh:318`, `:354`, `:380` | No `entry only` rule on three sections. Pregnancy History allows any resource type next to its slices. Patient Story allows any type (as documented). Patient History is commented "purely narrative" (`:379`) but allows entries. | Add `entry only Reference(Observation or DocumentReference)` to Pregnancy History, and `entry ..0` to Patient History if it is narrative only. Leave Patient Story as documented. |
-| 3.1-3 | Low | `input/fsh/profiles/composition-eu-eps.fsh:128-135` | The only Medication Summary slice is named `medicationStatementOrRequest` but allows only `MedicationStatementEuEps`. MedicationRequest, MedicationAdministration and MedicationDispense are allowed with no profile. After `035638d` they also have no Bundle slice. | Rename the slice (e.g. `medicationStatement`), or add profiled slices. Document the choice (6.6-4). |
+No open items.
+
 
 ### 3.2 Invariants
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 3.2-1 | Medium | `input/fsh/profiles/bundle-eu-eps.fsh:15` | The `eps-bundle-patient-ref` description lists AllergyIntolerance, Immunization and ImmunizationRecommendation; the expression also checks Consent. | Add Consent to the description. |
-| 3.2-2 | Low | `input/fsh/profiles/composition-eu-eps.fsh:392` | The `ips-comp-1` XPath has two identical branches and requires that `emptyReason` is absent, which the FHIRPath doesn't. XPath is no longer used by R4 tooling. | Delete the `xpath` rule. |
-| 3.2-3 | Low | `input/fsh/invariants/ips-pat-1.fsh:1`, `composition-eu-eps.fsh:388` | Two invariants reuse IPS ids (`ips-pat-1`, `ips-comp-1`) next to `eps-bundle-*` ids. IPS defines the same constraints, and they're already imposed through `imposeProfile`. | Keep the IPS ids only if the duplication is intended; otherwise use `eps-` ids or rely on the imposed IPS profiles. |
+| 3.2-3 | Low | `input/fsh/invariants/ips-pat-1.fsh:1`, `composition-eu-eps.fsh:382` | Two invariants reuse IPS ids (`ips-pat-1`, `ips-comp-1`) next to `eps-bundle-*` ids. IPS defines the same constraints, and they're already imposed through `imposeProfile`. | Keep the IPS ids only if the duplication is intended; otherwise use `eps-` ids or rely on the imposed IPS profiles. |
 
 ### 3.3 Leftovers in FSH
 
-- **[3.3-1]** **Stale TODO comments:** `input/fsh/alias-systems.fsh:3, 31, 34, 40` ("to be checked"), `input/fsh/profiles/bundle-eu-eps.fsh:155`. Also "Check if this is appropriate (see  support)" on the `ImposeProfile` lines of `device-eps.fsh:11`, `deviceUseStatement-eps.fsh:10` and `procedure-eps.fsh:8`, and `// Parent: DeviceUvIps` in `deviceUseStatement-eps.fsh:3`.
-- **[3.3-2]** **Commented-out blocks:** 29 blocks. Most of them (about 1,100 lines) are commented-out instances in `input/fsh/examples/__5042-537688-1-eps-composition.fsh:235-1807` (see 5-2). In the profiles: 4 `/* … */` blocks in `bundle-eu-eps.fsh` (168-171, 204-217), plus `composition-eu-eps.fsh:13, 26, 52, 327-329`, `device-eps.fsh:8-9` and `procedure-eps.fsh:22-29`. Wrong or stale comments: `bundle-eu-eps.fsh:219` (`// ObservationResultsEuEps` on the CarePlan slice), and `composition-eu-eps.fsh:378` ("EPS Travel History Section" above the Patient History section).
+- **[3.3-1]** **Stale TODO comments:** `input/fsh/alias-systems.fsh:3, 31, 34, 40` ("to be checked"), `input/fsh/profiles/bundle-eu-eps.fsh:155`. Also "Check if this is appropriate (see  support)" on the `ImposeProfile` lines of `device-eps.fsh:9`, `deviceUseStatement-eps.fsh:10` and `procedure-eps.fsh:8`, and `// Parent: DeviceUvIps` in `deviceUseStatement-eps.fsh:3`.
 - **[3.3-3]** **Unused rulesets:** 12 of them: `ExtensionContext`, `SetFmmAndStatusRuleInstance`, `NoSubSectionsRules`, `SectionElementsRules`, `SectionCommonRules`, `SNOMEDCopyrightForVS`, `NPUCopyrightForVS`, `NIBSCCopyrightForVS`, `ObligationElement` (`rulesSet-common.fsh`), and `ObligationSet1`–`3` (`rulesSet-obligations.fsh`).
-- **[3.3-4]** **Aliases:** 171 of 217 are unused (mostly eHDSI value sets, IPS profiles and R5 cross-version extensions). There are 3 duplicates: `$allergyintolerance-clinical` (`alias-systems.fsh:9, 65`), `$list-empty-reason` (`alias-systems.fsh:33, 64`) and `$eHDSIMedicalDevice` (`alias-valuesets.fsh:30, 53`). There are no placeholder URLs.
+- **[3.3-4]** **Aliases:** 171 of 214 are unused (mostly eHDSI value sets, IPS profiles and R5 cross-version extensions). There are no placeholder URLs. The duplicates are fixed (see *Fixed*).
 
 ### 3.4 Terminology
 
 - **[3.4-1]** `input/fsh/profiles/observation-travel-eps.fsh:18`: `valueCodeableConcept from $iso3166-1-2` has no strength, so SUSHI makes it `required`. Make the strength explicit, so the binding is visibly intended.
-- **[3.4-2]** Bindings commented out: `medicationStatement-eps.fsh:20` (`EHDSIRouteofAdministration`) and `procedure-eps.fsh:24` (`SNOMEDCTBodyStructures`). Restore them or delete them.
-- **[3.4-3]** `input/fsh/rulesSet/rulesSet-common.fsh:86`: the LOINC copyright says "1995-2020". Use "1995+" or the current year. The SNOMED copyright ruleset (`:82`) is unused (3.3-3) and has a mojibake `Â©`.
+- **[3.4-2]** Bindings commented out: `medicationStatement-eps.fsh:20` (`EHDSIRouteofAdministration`) and `procedure-eps.fsh:22` (`SNOMEDCTBodyStructures`). Restore them or delete them.
+- **[3.4-3]** `input/fsh/rulesSet/rulesSet-common.fsh:76`: the LOINC copyright says "1995-2020". Use "1995+" or the current year. The SNOMED copyright ruleset (`:72`) is unused (3.3-3) and has a mojibake `Â©`.
 
 ---
 
@@ -82,7 +76,7 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
 | 5-1 | Medium | `fsh-generated/resources` | No example for `consent-eu-eps`, `diagnosticReport-eu-eps`, `observation-travel-eu-eps` or `procedure-eu-eps`. The QA doesn't show this because the blanket suppression in 7-6 hides it. | Add one example each (e.g. in the complete Bundle), then narrow the suppression. |
-| 5-2 | Medium | `input/fsh/examples/__5042-537688-1-eps-composition.fsh` | 15 standalone examples that repeat the complete Bundle example (same patient, same content), plus about 1,100 commented-out lines. Their titles are now distinct (5-3), but the content is still duplicated. | Keep either the standalone set or the Bundle; delete the commented instances. |
+| 5-2 | Medium | `input/fsh/examples/__5042-537688-1-eps-composition.fsh` | 15 standalone examples that repeat the complete Bundle example (same patient, same content). Their titles are now distinct (5-3), but the content is still duplicated. | Keep either the standalone set or the Bundle. |
 | 5-4 | Low | examples | Ids follow three patterns: `Instance-Bundle-…`, `EPSExampleBundle01…`, `Composition-…`/`DeviceUse-…`. In Bundle 01, all 4 `fullUrl` UUIDs differ from the resource ids. The two Bundle identifiers differ in form (one has `assigner`). | Pick one id pattern for new examples. Align the Bundle identifiers. |
 | 5-5 | Low | `observation-pregnancy*-eps-example.fsh:3` | The titles have a space before the colon ("Observation : Pregnancy Status"); the other examples use "Type: Name". | "Observation: Pregnancy Status". |
 
@@ -140,9 +134,9 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
 - **[6.5-2]** **Naming and grammar.**
   - "Xt-EHR" also appears as "xtEHR" (`changes.md:8, 23`) and "XTEHR" (`index.md:17`, logo alt text).
   - `index.md:40` "an European" → "a European".
-- **[6.5-3]** **Punctuation.** `composition-eu-eps.fsh:366` "e.g.recent" → "e.g. recent". `observation-travel-eps.fsh:5` "to record, search, and fetch travel history" was copied from a US profile → "to represent a country visited by the patient".
+- **[6.5-3]** **Punctuation.** `composition-eu-eps.fsh:360` "e.g.recent" → "e.g. recent". `observation-travel-eps.fsh:5` "to record, search, and fetch travel history" was copied from a US profile → "to represent a country visited by the patient".
 - **[6.5-4]** **Markup.**
-  - Mojibake in `composition-eu-eps.fsh:357` ("patientâ€™s", which appears in the published profile) and `rulesSet-common.fsh:82` ("Â©").
+  - Mojibake in `composition-eu-eps.fsh:351` ("patientâ€™s", which appears in the published profile) and `rulesSet-common.fsh:72` ("Â©").
   - The 11 map pages and `modelmap.xml` contain `<head>`/`<title>` (line 4), and empty `<a>`/`<p>` elements (lines 18-19), inside page fragments.
   - 10 files have no trailing newline, among them `authors.md`, `obligations.md`, `modelmap.xml` and two map pages.
   - **New:** `authors.md:20-24`: the figure has empty `<p>` elements and an `<img>` without `alt` text.
@@ -155,7 +149,8 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
   - `EHDSCurrentPregnancy.currentPregnancyStatus` 1..1 vs `Observation.value[x]` 0..1
   - `EHDSAdvanceDirective.header.subject` 1..1 vs `Consent.patient` 0..1
   - Optionally, `EHDSDevice.type` 0..* vs `Device.type` 0..1. This is a FHIR R4 limit, documented in `map-ehdsdevice.xml` since `7a842ec`.
-- **[6.6-4]** MedicationRequest, MedicationAdministration and MedicationDispense are allowed in the Medication Summary section but not profiled (3.1-3).
+- **[6.6-4]** MedicationRequest, MedicationAdministration and MedicationDispense are allowed in the Medication Summary section but not profiled (3.1-3, won't fix).
+- **[6.6-5]** **New:** The Bundle has no entry slices for some resources referenced by sections (medical test results, travel, consent, DocumentReference, ClinicalImpression, ImmunizationRecommendation, MedicationRequest/Administration/Dispense). They are allowed, since the slicing is open (3.1-1, won't fix).
 
 ---
 
@@ -182,7 +177,7 @@ The 6 errors of the first 2026-10-30 run (1-4) and the about 420 information mes
 
 | ID | Lines | Entry (uses) | Fix |
 |---|---|---|---|
-| 7-5 | 71-72 | "does not match any known slice defined in the profile …/bundle-eu-eps" (19) | These are the lab Observations of the complete example. Add a medical test result slice (3.1-1), then delete the entry. The comment also has a typo ("bunlde"). The entry ends with the profile version `1.0.0-ci-build`, so it stops matching once the version is set for the release (1-1), and the 19 messages come back. |
+| 7-5 | 71-72 | "does not match any known slice defined in the profile …/bundle-eu-eps" (19) | These are the lab Observations of the complete example, which have no Bundle slice by decision (3.1-1, won't fix), so the entry stays. It ends with the profile version `1.0.0-ci-build`, so it stops matching once the version is set for the release (1-1), and the 19 messages come back. Replace the version with `%` (`…/bundle-eu-eps|%`), and fix the typo in the comment ("bunlde"). |
 | 7-6 | 9-10 | "The Implementation Guide contains no examples for this profile" (23) | It now covers the 19 obligation profiles, as its comment says, but it also hides the missing examples of 4 structural profiles (5-1). Add the examples. If the entry stays, keep the comment accurate ("Obligation profiles have no examples"). |
 | 7-7 | 24-25 | `All_observations_should_have_a_performer` (19) | A blanket suppression by message id. Add a performer (the lab Organization) to the example lab Observations, and delete it. |
 | 7-8 | 12-19 | `Terminology_TX_NoValid_3_CC` (41), `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` (65), `TYPE_SPECIFIC_CHECKS_DT_QTY_UCUM_ANNOTATIONS` (10) | Blanket suppressions by message id that will also hide new occurrences. Check the current hits once, then narrow them to message texts, or document why they are global. |
@@ -212,14 +207,13 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 75 (O
 ## 9. Suggested order of work
 
 1. Delete the stale entries (7-4, 7-9), fix 7-2, then rebuild.
-2. Profile coherence: Bundle slices (3.1-1), section entry rules (3.1-2), the invariant description (3.2-1).
-3. Examples for the four profiles without one (5-1), then narrow the suppressions 7-5 to 7-7.
-4. Groups (2-2, 4-4), and obligations vs cardinality (4-1, 4-2).
-5. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
-6. Narrative pages: copyright statement (6.4-11), Variance and Missing Data (6.4-1, 6.4-12, 6.4-2), lab mapping row (6.4-8), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-4, 6.4-9, 6.3-2, 6.3-3), then `changes.md` (6.1-1, 6.1-2).
-7. QA leftovers: 7-3, 7-4, 7-9.
-8. Release configuration (1-1), rebuild, re-run this review.
-9. Cleanup: §3.3, §3.4, 2-7, §6.5, §8.
+2. Examples for the four profiles without one (5-1), then narrow the suppressions 7-5 to 7-7.
+3. Groups (2-2, 4-4), and obligations vs cardinality (4-1, 4-2).
+4. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
+5. Narrative pages: copyright statement (6.4-11), Variance and Missing Data (6.4-1, 6.4-12, 6.4-2), lab mapping row (6.4-8), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-4, 6.4-9, 6.3-2, 6.3-3), then `changes.md` (6.1-1, 6.1-2).
+6. QA leftovers: 7-3, 7-4, 7-9.
+7. Release configuration (1-1), rebuild, re-run this review.
+8. Cleanup: §3.3, §3.4, 2-7, §6.5, §8.
 
 ---
 
@@ -229,6 +223,9 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 
 | ID | Sev | Location | Finding | Rationale |
 |---|---|---|---|---|
+| 3.1-1 | Medium | `input/fsh/profiles/bundle-eu-eps.fsh:99-135` | Some resources referenced by sections have no Bundle entry slice: medical test results (`medicalTestResult-eu-core`), travel (`observation-travel-eu-eps`), consent (`consent-eu-eps`), DocumentReference, ClinicalImpression, ImmunizationRecommendation and MedicationRequest/Administration/Dispense. | Won't fix, decided by the editor (2026-10-30). The entry slicing is open (`bundle-eu-eps.fsh:90`), so these resources are allowed without a dedicated slice. List it in `knownIssues.md` (6.6-5). |
+| 3.1-2 | Medium | `input/fsh/profiles/composition-eu-eps.fsh:318`, `:354`, `:380` | No `entry only` rule on three sections: Pregnancy History allows any resource type next to its slices, Patient Story allows any type (as documented), and Patient History is commented "purely narrative" but allows entries. | Won't fix, decided by the editor (2026-10-30). |
+| 3.1-3 | Low | `input/fsh/profiles/composition-eu-eps.fsh:128-135` | The only Medication Summary slice is named `medicationStatementOrRequest` but allows only `MedicationStatementEuEps`; MedicationRequest, MedicationAdministration and MedicationDispense are allowed with no profile and have no Bundle slice. | Won't fix, decided by the editor (2026-10-30). List the unprofiled medication resources in `knownIssues.md` (6.6-4). |
 | 6.4-5 | Medium | `medicationStatement-eu-eps`, `observation-pregnancy-status-eu-eps`, `consent-eu-eps` | Three Xt-EHR 1.0.0 elements are 1..1 but optional in the profiles (`dosageInstructions`, `currentPregnancyStatus`, `header.subject`). | The editor decided to keep the profiles unchanged for this release (2026-10-02). Document them in `knownIssues.md` (6.6-2). |
 | 6.4-6 | Low | `map-ehdslaboratoryobservation.xml:246, 332` | `referenceRange` and `component.referenceRange` are mapped as a whole, without their sub-elements. | Accepted by the editor: the mapping as a whole is enough. |
 | 6.4-7 | Low | `map-ehdspatientsummary.xml` | `header.source` is not mapped. | `EHDSDocument` forbids it (max 0), so there is nothing to map. |
@@ -236,6 +233,13 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 ---
 
 ## Fixed since the first review
+
+**Commit `ade6d47`**
+
+- **[3.3-2]** Commented-out FSH removed: the commented instances and entries in the examples (about 1,430 lines in `__5042-537688-1-eps-composition.fsh`, plus single lines in `__5042-537688-1-eps-example.fsh` and the Austrian Bundle example), the `/* … */` blocks in `bundle-eu-eps.fsh`, the commented rules in `composition-eu-eps.fsh`, `device-eps.fsh`, `procedure-eps.fsh`, `rulesSet-common.fsh` and `rulesSet-obligations.fsh`. Stale comments fixed: `// ObservationResultsEuEps` on the CarePlan slice is removed, and the Patient History heading no longer says "Travel History". The commented `bodySite` binding in `procedure-eps.fsh:22` is kept for 3.4-2. SUSHI reports 0 errors, and the generated resources are byte-for-byte identical.
+- **[3.3-4]** (part) The three duplicate aliases are removed, keeping the first definition: `$allergyintolerance-clinical` and `$list-empty-reason` (`alias-systems.fsh`), and `$eHDSIMedicalDevice` (`alias-valuesets.fsh`). The generated resources are unchanged.
+- **[3.2-1]** The `eps-bundle-patient-ref` description now lists Consent, as the expression checks it (`input/fsh/profiles/bundle-eu-eps.fsh:15`).
+- **[3.2-2]** The `xpath` rule of `ips-comp-1` is deleted (`input/fsh/profiles/composition-eu-eps.fsh:388-391`). SUSHI reports 0 errors.
 
 **Commit `0e991cd`**
 

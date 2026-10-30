@@ -14,6 +14,12 @@ Decisions already taken for this guide. Consistency reviews do not raise these a
 - **PatientSummary map.** `header.source` is not mapped, because `EHDSDocument` forbids it (max 0). `presentedForm` is `no-map`, as in EU Base.
 - **`header.source` in Observation-based maps.** It is `no-map`, with the note "No direct native Observation element; consider extension or use note…", in LaboratoryObservation, CurrentPregnancy, PregnancyHistory and TravelHistory.
 
+## Profiles
+
+- **Bundle entry slices** (decided 2026-10-30). Not every resource referenced by a Composition section has a Bundle entry slice (e.g. medical test results, travel, consent). The entry slicing is open, so they are allowed without a dedicated slice. Reviews do not raise the missing slices again.
+- **Section entry rules** (decided 2026-10-30). Pregnancy History, Patient Story and Patient History have no `entry only` rule. Kept as they are.
+- **Medication Summary slice** (decided 2026-10-30). The `medicationStatementOrRequest` slice keeps its name and allows only `MedicationStatementEuEps`. MedicationRequest, MedicationAdministration and MedicationDispense stay allowed without a profile or a Bundle slice.
+
 ## QA and ignoreWarnings
 
 - **Additional bindings without a key** (decided 2026-10-23). Additional bindings defined in this guide have a `key`. The `ext-ab-1` warnings inherited from EU Core 2.0.1 are suppressed, with one exact entry per element. Remove them when EU Core adds the keys.
