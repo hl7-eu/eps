@@ -1,0 +1,35 @@
+<!-- Shared by StructureDefinition-composition-eu-eps-intro.xml and StructureDefinition-composition-obl-eu-eps-intro.xml -->
+	<div class="model-map-block">
+		<div class="callout-wrapper">
+			<div class="callout-box">
+				<p>
+					<strong>Note about the Functional Status Section</strong>
+				</p>
+
+				<p> The Functional Status model used by the (Xt-EHR) European Patient Summary
+					identifies, as part of that model, a set of assessment results that appear to be
+					more appropriately represented by an <b>Observation</b> rather than by a <b>ClinicalImpression</b>.
+				</p>
+
+				<p>
+					However, Observation is not included among the allowed target resources for this
+					section.
+				</p>
+
+				<p>Considering that:</p>
+				<ul>
+					<li>in most cases this section is textual, and</li>
+					<li>further analysis is needed to increase the maturity of this section,</li>
+				</ul>
+
+				<p>
+					it has been agreed, for this version, to maintain conformance with the IPS.
+				</p>
+
+				<p>
+					Adopters should nevertheless be aware that this section may be subject to
+					substantial changes in future versions.
+				</p>
+			</div>
+		</div>
+	</div>
