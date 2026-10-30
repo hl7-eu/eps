@@ -10,6 +10,8 @@ Description: "This profile sets the IPS obligations on the Composition (EPS) pro
 * subject only Reference(PatientOblEuEps)
 * author only Reference(PractitionerEuCore or PractitionerRoleEuCore or Device or OrganizationEuCore or PatientOblEuEps or RelatedPerson)
 * attester.party only Reference(PatientOblEuEps or RelatedPerson or PractitionerEuCore or PractitionerRoleEuCore or OrganizationEuCore)
+* attester[legalAuthenticator].party only Reference(PractitionerRoleEuCore or PractitionerEuCore)
+* attester[validator].party only Reference(PractitionerRoleEuCore or PractitionerEuCore)
 * section[sectionMedications].entry[medicationStatementOrRequest] only Reference(MedicationStatementOblEuEps)
 * section[sectionResults].entry[results-diagnosticReport] only Reference(DiagnosticReportOblEuEps)
 * section[sectionProceduresHx].entry[procedure] only Reference(ProcedureOblEuEps)
