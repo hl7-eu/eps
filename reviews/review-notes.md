@@ -20,6 +20,11 @@ Decisions already taken for this guide. Consistency reviews do not raise these a
 - **Section entry rules** (decided 2026-10-30). Pregnancy History, Patient Story and Patient History have no `entry only` rule. Kept as they are.
 - **Medication Summary slice** (decided 2026-10-30). The `medicationStatementOrRequest` slice keeps its name and allows only `MedicationStatementEuEps`. MedicationRequest, MedicationAdministration and MedicationDispense stay allowed without a profile or a Bundle slice.
 
+## FSH sources
+
+- **Unused rulesets** (decided 2026-10-30). The 12 unused rulesets in `rulesSet-common.fsh` and `rulesSet-obligations.fsh` are kept. Reviews do not raise them again.
+- **Unused aliases** (decided 2026-10-30). Unused aliases in `alias-*.fsh` are kept. Duplicate aliases are still to be avoided.
+
 ## QA and ignoreWarnings
 
 - **Additional bindings without a key** (decided 2026-10-23). Additional bindings defined in this guide have a `key`. The `ext-ab-1` warnings inherited from EU Core 2.0.1 are suppressed, with one exact entry per element. Remove them when EU Core adds the keys.
