@@ -33,6 +33,3 @@ Description: """This profile constrains the Device resource in the scope of the 
 * version.value ^short = "Device Version"
 * note ^short = "Device Note"
 
-// ================= IPS OBLIGATIONS =================
-* type insert ObligationIpsPopulateIfKnownDisplay
-

@@ -26,16 +26,5 @@ Description: "This profile constrains the Procedure resource in the scope of the
   // * ^definition = "Anatomical location which is the focus of the problem."
   //* extension contains LateralityQualifier named laterality 0..1
 
-// ================= IPS OBLIGATIONS =================
-* code insert ObligationIpsPopulateIfKnownDisplay
-
-* subject insert ObligationIpsPopulateIfKnownDisplay
-
-* subject.reference insert ObligationIpsPopulateIfKnownHandle
-
-* performed[x] insert ObligationIpsPopulateIfKnownDisplay
-
-* performedDateTime insert ObligationIpsAbleToPopulateDisplay
-
 
 

@@ -203,14 +203,24 @@ groups:
       description: IPS-derived obligation-only profiles for EPS. Informative for this version of the guide.
       resources:
         - StructureDefinition/allergyintolerance-obl-eu-eps
+        - StructureDefinition/bundle-obl-eu-eps
+        - StructureDefinition/composition-obl-eu-eps
         - StructureDefinition/condition-obl-eu-eps
+        - StructureDefinition/device-obl-eu-eps
+        - StructureDefinition/deviceusestatement-obl-eu-eps
+        - StructureDefinition/diagnosticreport-obl-eu-eps
         - StructureDefinition/flag-alert-obl-eu-eps
         - StructureDefinition/immunization-obl-eu-eps
         - StructureDefinition/medication-obl-eu-eps
         - StructureDefinition/medicationstatement-obl-eu-eps
+        - StructureDefinition/observation-pregnancy-edd-obl-eu-eps
+        - StructureDefinition/observation-pregnancy-outcome-obl-eu-eps
+        - StructureDefinition/observation-pregnancy-status-obl-eu-eps
         - StructureDefinition/organization-obl-eu-eps
+        - StructureDefinition/patient-obl-eu-eps
         - StructureDefinition/practitioner-obl-eu-eps
         - StructureDefinition/practitionerrole-obl-eu-eps
+        - StructureDefinition/procedure-obl-eu-eps
 
 instanceOptions:
   manualSliceOrdering: true

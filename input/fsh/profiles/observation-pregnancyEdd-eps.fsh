@@ -23,15 +23,4 @@ Description: "This profile constrains the Observation resource to represent the 
 * referenceRange ..0
 * component ..0
 
-// ================= IPS OBLIGATIONS =================
-* code insert ObligationIpsPopulateIfKnownDisplay
-
-* subject insert ObligationIpsPopulateIfKnownDisplay
-
-* subject.reference insert ObligationIpsPopulateIfKnownHandle
-
-* effective[x] insert ObligationIpsPopulateIfKnownDisplay
-
-* valueDateTime insert ObligationIpsPopulateIfKnownDisplay
-
 

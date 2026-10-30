@@ -29,19 +29,4 @@ Description: "This profile constrains the Observation resource to represent the 
 * hasMember.reference 1.. 
 * component ..0
 
-// ================= IPS OBLIGATIONS =================
-* code insert ObligationIpsPopulateIfKnownDisplay
-
-* subject insert ObligationIpsPopulateIfKnownDisplay
-
-* subject.reference insert ObligationIpsPopulateIfKnownHandle
-
-* effective[x] insert ObligationIpsPopulateIfKnownDisplay
-
-* valueCodeableConcept insert ObligationIpsPopulateIfKnownDisplay
-
-* hasMember insert ObligationIpsPopulateIfKnownDisplay
-
-* hasMember.reference insert ObligationIpsPopulateIfKnownHandle
-
 

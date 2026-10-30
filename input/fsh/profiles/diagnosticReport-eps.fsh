@@ -17,22 +17,7 @@ Description: "This profile constrains the DiagnosticReport resource in the scope
 * result ^slicing.rules = #open
 * result contains observation-results 0..*
 * result[observation-results] only Reference(MedicalTestResultEuCore)
-
-// ================= IPS OBLIGATIONS =================
-* code insert ObligationIpsPopulateIfKnownDisplay
-
-* subject insert ObligationIpsPopulateIfKnownDisplay
-
-* subject.reference insert ObligationIpsPopulateIfKnownHandle
-
 * effective[x] 1..
-* effective[x] insert ObligationIpsPopulateIfKnownDisplay
-
-* effectiveDateTime insert ObligationIpsAbleToPopulateDisplay
-
-* performer insert ObligationIpsPopulateIfKnownDisplay
-
-* result[observation-results] insert ObligationIpsPopulateIfKnownDisplay
 
 
 

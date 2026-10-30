@@ -25,18 +25,5 @@ Description: """This profile constrains the DeviceUseStatement resource in the s
 * status ^short = "Current status of the Device Usage"
 * note ^short = "Additional information about the device usage"
 
-// ================= IPS OBLIGATIONS =================
-* subject insert ObligationIpsPopulateIfKnownDisplay
-
-* subject.reference insert ObligationIpsPopulateIfKnownHandle
-
-* timing[x] insert ObligationIpsPopulateIfKnownDisplay
-
-* timingDateTime insert ObligationIpsAbleToPopulateDisplay
-
-* timingPeriod insert ObligationIpsAbleToPopulateDisplay
-
-* device insert ObligationIpsPopulateIfKnownDisplay
-
 
 

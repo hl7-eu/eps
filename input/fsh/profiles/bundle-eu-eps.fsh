@@ -223,12 +223,4 @@ Description: """This profile defines how the Bundle resource is used to represen
 * entry[specimen].resource 1..
 * entry[specimen].resource only $Specimen-uv-ips
 
-// ================= IPS OBLIGATIONS =================
-
-* identifier insert ObligationIpsPopulateHandle
-
-* timestamp insert ObligationIpsPopulateHandle
-
-* entry[composition] insert ObligationIpsPopulateDisplay
-
 
