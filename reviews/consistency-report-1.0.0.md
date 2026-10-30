@@ -177,7 +177,7 @@ The 6 errors of the first 2026-10-30 run (1-4) and the about 420 information mes
 
 **Publication request check:** `publication-request.json` is missing (see 1-1).
 
-**Suppressed messages:** 142 warnings and 498 hints, from 42 entries. 22 entries have 0 uses: lines 41-58 (7-4), 63 (7-9), 69 (7-3), 75 (7-2) and 78 (7-14).
+**Suppressed messages:** 142 warnings and 498 hints, from 42 entries. 22 entries have 0 uses: lines 41-58 (7-4), 63 (7-9), 69 (7-3), 75 (7-2) and 78 (7-14, deleted since).
 
 **Suppressions that hide fixable issues:**
 
@@ -193,7 +193,6 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 75 (O
 **Stale entries** (0 uses, safe to delete), by line in `ignoreWarnings.txt`:
 
 - **[7-9]** Line 63: "Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentscope|4.0.1".
-- **[7-14]** **New:** Line 78: the duplicate anchor `Patient_f51071b2-…` (accepted as 7-10) is no longer reported. The template move in `b09fefe` seems to have fixed the rendering. Delete the entry, and remove the decision from `reviews/review-notes.md` once confirmed.
 - Lines 41-58, 69 and 75 also have 0 uses; see 7-4, 7-3 and 7-2.
 
 ---
@@ -213,7 +212,7 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 75 (O
 
 ## 9. Suggested order of work
 
-1. Delete the stale entries (7-4, 7-9, 7-14), fix 7-2, then rebuild.
+1. Delete the stale entries (7-4, 7-9), fix 7-2, then rebuild.
 2. Profile coherence: the pregnancy section (1-3), Bundle slices (3.1-1), section entry rules (3.1-2), the invariant description (3.2-1).
 3. Examples for the four profiles without one (5-1), then narrow the suppressions 7-5 to 7-7.
 4. Groups (2-2, 4-4), and obligations vs cardinality (4-1, 4-2).
@@ -234,11 +233,14 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 | 6.4-5 | Medium | `medicationStatement-eu-eps`, `observation-pregnancy-status-eu-eps`, `consent-eu-eps` | Three Xt-EHR 1.0.0 elements are 1..1 but optional in the profiles (`dosageInstructions`, `currentPregnancyStatus`, `header.subject`). | The editor decided to keep the profiles unchanged for this release (2026-10-02). Document them in `knownIssues.md` (6.6-2). |
 | 6.4-6 | Low | `map-ehdslaboratoryobservation.xml:246, 332` | `referenceRange` and `component.referenceRange` are mapped as a whole, without their sub-elements. | Accepted by the editor: the mapping as a whole is enough. |
 | 6.4-7 | Low | `map-ehdspatientsummary.xml` | `header.source` is not mapped. | `EHDSDocument` forbids it (max 0), so there is nothing to map. |
-| 7-10 | Low | `input/ignoreWarnings.txt:67-68` | The duplicate anchor `Patient_f51071b2-…` on the complete Bundle page is suppressed. | The IG Publisher writes the subject's anchor twice when the Patient has an authored narrative. The editor chose to keep the narrative and suppress the warning. |
 
 ---
 
 ## Fixed since the first review
+
+**Commit `d7bfced`**
+
+- **[7-14]**, **[7-10]** The duplicate anchor `Patient_f51071b2-…` on the complete Bundle page is no longer reported (0 uses in the 2026-10-30 builds); the template move in `b09fefe` fixed the rendering. The suppression is deleted from `input/ignoreWarnings.txt`, and the decision from `reviews/review-notes.md`. 7-10 is no longer an accepted item.
 
 **Commit `1d6b20f`**
 
