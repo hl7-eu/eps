@@ -12,7 +12,7 @@ entry.where(
 ).all(resource.code.exists())"
 
 Invariant: eps-bundle-patient-ref
-Description: "If the Bundle contains patient-based resources (AllergyIntolerance, Immunization, ImmunizationRecommendation), each SHALL have patient.reference populated."
+Description: "If the Bundle contains patient-based resources (AllergyIntolerance, Immunization, Consent, ImmunizationRecommendation), each SHALL have patient.reference populated."
 Severity: #error
 Expression: "entry.where(
   resource.is(AllergyIntolerance) or
@@ -165,11 +165,6 @@ Description: """This profile defines how the Bundle resource is used to represen
 * entry[medication].resource 1..
 * entry[medication].resource only MedicationEuCore
 
-/* Commented out because of https://jira.hl7.org/browse/FHIR-58509
-* entry[medicationrequest].resource 1..
-* entry[medicationrequest].resource only MedicationRequestOblEuEps 
-*/
-
 * entry[medicationstatement].resource 1..
 * entry[medicationstatement].resource only MedicationStatementEuEps
 
@@ -201,22 +196,8 @@ Description: """This profile defines how the Bundle resource is used to represen
 * entry[observation-vital-signs].resource 1..
 * entry[observation-vital-signs].resource only $vitalsigns
 
-/* * entry[observation-medical-test-result].resource 1..
-* entry[observation-medical-test-result].resource only MedicalTestResultEuCore */
-
-/* * entry contains observation-social-history 0.. 
-* entry[observation-social-history] 0..
-* entry[observation-social-history] ^short = "Social History Observation"
-* entry[observation-social-history] ^definition = "Slice including a generic social history Observation"
-* entry[observation-social-history].resource only ObservationSocialHistoryEuEps
- 
-*/
-
-/* * entry[observation-results].resource 1..
-* entry[observation-results].resource only MedicalTestResultEuCore // ObservationResultsEuEps
- */
 * entry[careplan].resource 1..
-* entry[careplan].resource only CarePlan // ObservationResultsEuEps
+* entry[careplan].resource only CarePlan
 
 
 

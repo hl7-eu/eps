@@ -19,7 +19,6 @@ Usage: #example
 Instance: EPSExampleBundle01-composition
 InstanceOf: CompositionEuEps
 Usage: #inline
-// * language = #de-AT
 * status = #preliminary
 * identifier.system = "urn:ietf:rfc:9562"
 * identifier.value = "f4d1c16a-3421-43b1-9c74-dac7fcb52ca4"
@@ -29,7 +28,6 @@ Usage: #inline
 * author = Reference(urn:uuid:75db30ee-7028-486c-929a-c5126837f472) "APS Generator"
 * title = "Austrian Patient Summary"
 * custodian = Reference(urn:uuid:6bcdcc96-1443-48bd-ab41-7692dc1baecd) "Muster-Organization"
-// * extension[countryOfAffiliation].valueString = "AT"
 * section[sectionMedications].title = "Medikationsliste"
 * section[sectionMedications].code = $loinc#10160-0 "History of Medication use Narrative"
 * section[sectionMedications].text.status = #empty

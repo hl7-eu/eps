@@ -10,7 +10,6 @@ Description: """This profile defines how the Composition resource is used to rep
 * insert ImposeProfile($Composition-uv-ips, 0)
 
 
-// * extension contains $composition.version-r5  named version 0..1
 * extension[version] ^short = "Business version"
 
 * identifier ^short = "PS business identifier"
@@ -23,7 +22,6 @@ Description: """This profile defines how the Composition resource is used to rep
 * subject 1..1
 * subject.reference 1..1
 * subject ^definition = "Who or what the composition is about. \r\nIn general a composition can be about a person, (patient or healthcare practitioner), a device (e.g. a machine) or even a group of subjects (such as a document about a herd of livestock, or a set of patients that share a common exposure).\r\nFor the PS the subject is always the patient."
-// * encounter only Reference ( EncounterEuEps )
 * date ^short = "PS date"
 * author only Reference ($practitioner-eu-core or $practitionerRole-eu-core or Device or $organization-eu-core or PatientEuEps or RelatedPerson)
   * ^short = "Who and/or what authored the Patient Summary"
@@ -49,7 +47,6 @@ Description: """This profile defines how the Composition resource is used to rep
 * section ^slicing.rules = #open
 * section ^short = "Sections composing the IPS"
 * section ^definition = "The root of the sections that make up the IPS composition."
-// * section.extension contains $note named section-note 0..*
 * section.extension[section-note] ^short = "Additional notes that apply to the section (but not to specific resource)."
 * section.extension[section-note] ^definition = "Additional notes that apply to the section (but not to specific resource)."
 * section.title 1..1
@@ -324,9 +321,6 @@ Description: """This profile defines how the Composition resource is used to rep
   * insert SectionEntrySliceDefRules (pregnancyStatus, 0..*,
     Current pregnancy status , Current pregnancy status ,
     ObservationPregnancyStatusEuEps)
-/*   * insert SectionEntrySliceDefRules (previousPregnanciesStatus, 0..*,
-    Overall status of previous pregnancies , Overall status of previous pregnancies ,
-    ObservationPreviousPregnanciesStatusEuEps) */
   * insert SectionEntrySliceDefRules (pregnancyOutcome, 0..*, Information about the outcome of earlier pregnancies ,
     Information about the outcome of earlier pregnancies,
     ObservationPregnancyOutcomeEuEps)
@@ -375,7 +369,7 @@ Description: """This profile defines how the Composition resource is used to rep
     Relevant information about the patient's recent travel history\, for one visit,
     ObservationTravelEuEps)
 
-// ---- EPS Travel History Section ---- 
+// ---- EPS Patient History Section ----
 // This is a purely narrative section
 * section[sectionPatientHx]
   * insert SectionComRules ( 
@@ -389,8 +383,5 @@ Invariant: ips-comp-1
 Description: "Either section.entry or emptyReason are present"
 * severity = #error
 * expression = "(entry.reference.exists() or emptyReason.exists())"
-* xpath = "(/f:entry.reference and not /f:emptyReason) or (not(/f:emptyReason) and /f:entry.reference)"
-
-
 
 

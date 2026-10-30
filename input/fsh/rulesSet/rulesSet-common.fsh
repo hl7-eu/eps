@@ -25,14 +25,6 @@ RuleSet: SectionComRules (short, def, code)
 * ^short = "{short}"
 * ^definition = "{def}"
 * code = {code}
-// * title 1..
-// * code 1..
-// * code only http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips
-// * text 1..
-// * text only Narrative
-// * obeys ips-comp-1
-// * emptyReason ..0
-// * emptyReason ^mustSupport = false
 
 RuleSet: SectionEntrySliceComRules (short, def)
 * entry ^slicing.discriminator[0].type = #type
@@ -68,8 +60,6 @@ RuleSet: SectionElementsRules
 * code from LabStudyTypesEuVs (preferred)
 * text ^short = "Text summary of the section, for human interpretation."
 * entry only Reference (ObservationResultsLaboratoryEu )
-// * entry only Reference (ObservationResultsLaboratoryEu or DiagnosticReport)
-// * entry ^comment = "The DiagnosticReport referred in the entry SHALL NOT be that representing the whole Laboratory Report"
 * entry 1..
 * section ..0
 
@@ -89,10 +79,6 @@ RuleSet: LOINCCopyrightForVS
 RuleSet: NPUCopyrightForVS
 * ^copyright = "This material contains content from NPU Terminology (http://npu-terminology.org). NPU is copyright International Federation of Clinical Chemistry (IFCC) and International Union of Pure and Applied Chemistry (IUPAC) and is available at no cost under the license at https://www.labterm.dk/."
 * ^experimental = false
-
-/* RuleSet: JCTLMCopyrightForVS
-* ^copyright = "This material contains content from JCTLM Database (https://www.jctlmdb.org). The JCTLM Database is copyright Joint Committee for Traceability in Laboratory Medicine (JCTLM)."
-* ^experimental = false */
 
 RuleSet: NIBSCCopyrightForVS
 * ^copyright = "This material contains content from the NIBSC Product list (https://nibsc.org/NIBSC%20Product%20List%20-%20Feb%2024.pdf). The National Institute for Biological Standards and Control part of the UK Medicines and Healthcare products Regulatory Agency (MHRA)."

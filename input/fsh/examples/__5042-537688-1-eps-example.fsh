@@ -622,9 +622,6 @@ Simvastatin 10 mg oral tablet, Oral tablet
 
 
 
-
-
-
 Instance: Instance-MedicationStatement-635c4921-5fcb-4ce7-b6ef-d866b680ad01
 InstanceOf: MedicationStatementEuEps
 Title: "MedicationStatement: Simvastatin 10 mg oral tablet"
@@ -652,9 +649,6 @@ Usage: #example
 </td><td>1 tablet (10 mg) by mouth once daily</td><td>Hyperlipidemia</td></tr></table>
 </div>
 """
-
-
-
 
 
 
@@ -707,9 +701,6 @@ Usage: #inline
 
 
 
-
-
-
 Instance: Instance-Medication-0467eb4f-79e6-4ed5-b076-f7ea83050b81
 InstanceOf: MedicationEuCore
 Title: "Medication: Acetaminophen 300 mg and hydrocodone bitartrate 5 mg oral tablet"
@@ -729,9 +720,6 @@ Acetaminophen 300 mg and hydrocodone bitartrate 5 mg oral tablet, Oral tablet
 
 </div>
 """
-
-
-
 
 
 
@@ -762,9 +750,6 @@ Usage: #inline
 
 
 
-
-
-
 Instance: Instance-Medication-6391cd91-896f-4730-abca-6f24edf18229
 InstanceOf: MedicationEuCore
 Title: "Medication: Fluticasone propionate 0.25 mg and salmeterol 0.05 mg per actuation inhaler"
@@ -779,9 +764,6 @@ Usage: #inline
 60 ACTUAT Fluticasone propionate 0.25 MG/ACTUAT / salmeterol 0.05 MG/ACTUAT Dry Powder Inhaler, 
 </div>
 """
-
-
-
 
 
 
@@ -812,9 +794,6 @@ Usage: #inline
 
 
 
-
-
-
 Instance: Instance-Medication-a27b547a-e5c0-451f-bda8-10d2341e09d5
 InstanceOf: MedicationEuCore
 Title: "Medication: Clopidogrel 75 mg oral tablet"
@@ -834,9 +813,6 @@ Clopidogrel (as clopidogrel bisulfate) 75 mg oral tablet, Oral tablet
 
 </div>
 """
-
-
-
 
 
 
@@ -867,9 +843,6 @@ Usage: #inline
 
 
 
-
-
-
 Instance: Instance-Medication-b8a35f26-2d5d-4d04-bcb7-c314d6a29c2d
 InstanceOf: MedicationEuCore
 Title: "Medication: Simvastatin 20 mg oral tablet"
@@ -889,9 +862,6 @@ Simvastatin 20 mg oral tablet, Oral tablet
 
 </div>
 """
-
-
-
 
 
 
@@ -922,9 +892,6 @@ Usage: #inline
 
 
 
-
-
-
 Instance: Instance-Medication-e87b3b43-9d7f-4b8a-9a61-c9c51886fa9c
 InstanceOf: MedicationEuCore
 Title: "Medication: Nitroglycerin 400 microgram/actuation sublingual spray"
@@ -944,9 +911,6 @@ Nitroglycerin 400 microgram/actuation sublingual spray, Sublingual spray
 
 </div>
 """
-
-
-
 
 
 
@@ -977,9 +941,6 @@ Usage: #inline
 
 
 
-
-
-
 Instance: Instance-Medication-3008cc5e-e349-44c1-bac1-0b4618174bda
 InstanceOf: MedicationEuCore
 Title: "Medication: Metoprolol 100 mg prolonged-release oral tablet"
@@ -999,9 +960,6 @@ Metoprolol tartrate (as metoprolol succinate) 100 mg prolonged-release oral tabl
 
 </div>
 """
-
-
-
 
 
 
@@ -1032,9 +990,6 @@ Usage: #inline
 
 
 
-
-
-
 Instance: Instance-Medication-6629cc00-0c19-482a-b793-05a17ce1fb9d
 InstanceOf: MedicationEuCore
 Title: "Medication: Doxycycline hyclate 100 mg"
@@ -1049,9 +1004,6 @@ Usage: #inline
 doxycycline hyclate 100 MG, 
 </div>
 """
-
-
-
 
 
 
@@ -1082,9 +1034,6 @@ Usage: #inline
 
 
 
-
-
-
 Instance: Instance-Medication-c30f7139-87a0-4e6d-aabe-f45f226aa766
 InstanceOf: MedicationEuCore
 Title: "Medication: Astemizole 10 mg oral tablet"
@@ -1104,9 +1053,6 @@ Astemizole 10 mg oral tablet, Oral tablet
 
 </div>
 """
-
-
-
 
 
 
@@ -1137,9 +1083,6 @@ Usage: #inline
 
 
 
-
-
-
 Instance: Instance-Medication-08c33e59-a884-45cc-8d4c-f28165dd09ce
 InstanceOf: MedicationEuCore
 Title: "Medication: Hydrocortisone 10 mg/g and urea 100 mg/g cutaneous cream"
@@ -1159,9 +1102,6 @@ Hydrocortisone 10 mg/g and urea 100 mg/g cutaneous cream, Cutaneous cream
 
 </div>
 """
-
-
-
 
 
 
@@ -1227,7 +1167,6 @@ Usage: #inline
 * id = "6dfba8ba-2107-4e59-8b86-edcfda8bab98"
 * status = #completed
 * vaccineCode.coding[0] = $sct#1119349007 "Vaccine product containing only severe acute respiratory syndrome coronavirus 2 messenger ribonucleic acid (medicinal product)"
-// * vaccineCode.coding[+] = $atc#J07BX03 "COVID-19 mRNA vaccines"
 
 * vaccineCode.text = "SARS-CoV-2 mRNA vaccine"
 * patient = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
@@ -2192,8 +2131,6 @@ Usage: #example
 <table class="hl7__ips"><tr><td>Petra Schwartz</td><td>1950-04-19</td></tr></table>
 </div>
 """
-
-
 
 
 
