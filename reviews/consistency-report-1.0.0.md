@@ -21,7 +21,6 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 |---|---|---|---|
 | 1-1 | Configuration | `sushi-config.yaml:6-11` still has `version: 1.0.0-ci-build`, `status: draft`, `releaseLabel: ci-build`, and there is no `publication-request.json`. The release cannot be published like this. | Set the release version, status and label (e.g. `1.0.0`, `active`, `trial-use` for an STU), add `publication-request.json`, and rebuild. |
 | 1-2 | Jira spec | QA warning: the Jira specification file `FHIR-eu-eps.xml` is out of date with the artifacts and pages. It was updated in `802d156`, but the 10 obligation profiles added in `3030934` (FHIR-58110) came after, and the QA still reports it as out of date. | Replace it with the proposed file from the Publisher output, review it, and submit it to the HL7 JIRA-Spec-Artifacts repository. The title collisions (5-3) are fixed, so the keys will be correct. |
-| 1-3 | Profiles | The Pregnancy History section uses the **IPS** profiles, not the EPS ones: `pregnancyStatus` → `Observation-pregnancy-status-uv-ips` and `pregnancyOutcome` → `Observation-pregnancy-outcome-uv-ips` (`input/fsh/profiles/composition-eu-eps.fsh:324-332`). The Bundle slices and the mapping pages use the EPS profiles. The EPS EDD profile is not reachable from the Composition at all: `ObservationPregnancyStatusEuEps.hasMember` allows only the IPS EDD profile (`input/fsh/profiles/observation-pregnancyStatus-eps.fsh:25`). Its comment says gestational age is not allowed, yet the section has a `gestationalAge` slice. | Point the section slices to `ObservationPregnancyStatusEuEps` and `ObservationPregnancyOutcomeEuEps`. Let `hasMember` reference `ObservationPregnancyEddEuEps` (and `ObservationPregnancyGestationalAgeEuEps` if intended). Remove the stale comment. |
 
 ---
 
@@ -95,7 +94,7 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 
 | ID | Sev | Line | Finding → Proposed |
 |---|---|---|---|
-| 6.1-1 | Medium | – | Missing changes made since `1.0.0-ballot`: FHIR-57679 (EHDS Art. 14 in the scope), FHIR-58104 (alignment with Xt-EHR 1.0.0), FHIR-58138 (`Bundle.timestamp` 1..1), FHIR-58492 (`Patient.identifier` 1..*), FHIR-58509 (new MedicationStatement obligation profile; MedicationRequest obligation profile removed), FHIR-58917 (Change Log page), FHIR-58918 (mapping tables reviewed), FHIR-59046 (Model Map names), FHIR-59501 (new Variance Statement page). **New:** FHIR-58110 (obligations moved to separate, informative obligation profiles), FHIR-58508 (structural and obligation profiles reference only their own kind), FHIR-58258 (delegation note in the Composition profile). Also: EU Base and IPS aligned to 2.0.1 (`10fe8d9`), EU Extensions 1.3.1 (`9437507`), MedicationRequest Bundle slice removed (`035638d`), old allergy mapping page removed. → Add them. |
+| 6.1-1 | Medium | – | Missing changes made since `1.0.0-ballot`: FHIR-57679 (EHDS Art. 14 in the scope), FHIR-58104 (alignment with Xt-EHR 1.0.0), FHIR-58138 (`Bundle.timestamp` 1..1), FHIR-58492 (`Patient.identifier` 1..*), FHIR-58509 (new MedicationStatement obligation profile; MedicationRequest obligation profile removed), FHIR-58917 (Change Log page), FHIR-58918 (mapping tables reviewed), FHIR-59046 (Model Map names), FHIR-59501 (new Variance Statement page). **New:** FHIR-58110 (obligations moved to separate, informative obligation profiles), FHIR-58508 (structural and obligation profiles reference only their own kind), FHIR-58258 (delegation note in the Composition profile), FHIR-59755 (Pregnancy History section uses the EPS pregnancy profiles). Also: EU Base and IPS aligned to 2.0.1 (`10fe8d9`), EU Extensions 1.3.1 (`9437507`), MedicationRequest Bundle slice removed (`035638d`), old allergy mapping page removed. → Add them. |
 | 6.1-2 | Low | 3, 8, 13, 23 | "summarizes" → "summarises". "xtEHR" → "Xt-EHR". "from 0.3.0 to 1.0" → "from 0.3.0 to 1.0.0". "Composition (EU EPS)" → "Composition (EPS)". The Xt-EHR models are not a package dependency: "Aligned with the Xt-EHR EHDS Logical Models 1.0.0 (previously 0.3.0)". |
 
 ### 6.2 Stale ballot or preview wording
@@ -213,7 +212,7 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 75 (O
 ## 9. Suggested order of work
 
 1. Delete the stale entries (7-4, 7-9), fix 7-2, then rebuild.
-2. Profile coherence: the pregnancy section (1-3), Bundle slices (3.1-1), section entry rules (3.1-2), the invariant description (3.2-1).
+2. Profile coherence: Bundle slices (3.1-1), section entry rules (3.1-2), the invariant description (3.2-1).
 3. Examples for the four profiles without one (5-1), then narrow the suppressions 7-5 to 7-7.
 4. Groups (2-2, 4-4), and obligations vs cardinality (4-1, 4-2).
 5. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
@@ -237,6 +236,10 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 ---
 
 ## Fixed since the first review
+
+**Commit `0e991cd`**
+
+- **[1-3]** (FHIR-59755) The Pregnancy History section now uses the EPS profiles: `pregnancyStatus` → `ObservationPregnancyStatusEuEps`, `pregnancyOutcome` → `ObservationPregnancyOutcomeEuEps` (`input/fsh/profiles/composition-eu-eps.fsh`). `ObservationPregnancyStatusEuEps.hasMember` references `ObservationPregnancyEddEuEps`; its short and definition no longer mention gestational age, which is not allowed there, and the stale comment is removed (`observation-pregnancyStatus-eps.fsh:25-28`). The obligation profiles point to the matching obligation profiles (`composition-obl-eu-eps.fsh`, `observation-pregnancy-status-obl-eu-eps.fsh`). The section keeps its `gestationalAge` slice. Confirmed by a Publisher rebuild: 0 errors.
 
 **Commit `d7bfced`**
 
