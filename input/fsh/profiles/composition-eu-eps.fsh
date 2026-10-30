@@ -323,13 +323,13 @@ Description: """This profile defines how the Composition resource is used to rep
      It contains information about whether the patient is currently pregnant or not. It may contain addition summarizing information about the outcome of earlier pregnancies.)
   * insert SectionEntrySliceDefRules (pregnancyStatus, 0..*,
     Current pregnancy status , Current pregnancy status ,
-    ObservationPregnancyStatusUvIps)
+    ObservationPregnancyStatusEuEps)
 /*   * insert SectionEntrySliceDefRules (previousPregnanciesStatus, 0..*,
     Overall status of previous pregnancies , Overall status of previous pregnancies ,
     ObservationPreviousPregnanciesStatusEuEps) */
   * insert SectionEntrySliceDefRules (pregnancyOutcome, 0..*, Information about the outcome of earlier pregnancies ,
     Information about the outcome of earlier pregnancies,
-    ObservationPregnancyOutcomeUvIps)
+    ObservationPregnancyOutcomeEuEps)
   * insert SectionEntrySliceDefRules (gestationalAge, 0..*, Information about the gestational age of the pregnancy ,
     Information about the gestational age of the pregnancy,
     ObservationPregnancyGestationalAgeEuEps)

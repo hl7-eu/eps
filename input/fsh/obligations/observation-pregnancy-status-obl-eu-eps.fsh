@@ -8,6 +8,7 @@ Description: "This profile sets the IPS obligations on the Observation: Pregnanc
 
 // ================= REFERENCES TO OBLIGATION PROFILES =================
 * subject only Reference(PatientOblEuEps)
+* hasMember only Reference(ObservationPregnancyEddOblEuEps)
 
 // ================= IPS OBLIGATIONS =================
 * code insert ObligationIpsPopulateIfKnownDisplay

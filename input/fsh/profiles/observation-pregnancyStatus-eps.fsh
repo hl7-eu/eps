@@ -22,10 +22,10 @@ Description: "This profile constrains the Observation resource to represent the 
 * specimen ..0
 * device ..0
 * referenceRange ..0
-* hasMember only Reference(ObservationPregnancyEddUvIps) // gestational age not allowed for the IPS or ObservationPregnancyGestationalAgeEuEps)
+* hasMember only Reference(ObservationPregnancyEddEuEps)
 * hasMember 
-* hasMember ^short = "Expected delivery date or gestational age"
-* hasMember ^definition = "A reference to the expected delivery date or gestational age observation."
+* hasMember ^short = "Expected delivery date"
+* hasMember ^definition = "A reference to the expected delivery date observation."
 * hasMember.reference 1.. 
 * component ..0
 

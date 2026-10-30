@@ -16,6 +16,8 @@ Description: "This profile sets the IPS obligations on the Composition (EPS) pro
 * section[sectionResults].entry[results-diagnosticReport] only Reference(DiagnosticReportOblEuEps)
 * section[sectionProceduresHx].entry[procedure] only Reference(ProcedureOblEuEps)
 * section[sectionMedicalDevices].entry[deviceStatement] only Reference(DeviceUseStatementOblEuEps)
+* section[sectionPregnancyHx].entry[pregnancyStatus] only Reference(ObservationPregnancyStatusOblEuEps)
+* section[sectionPregnancyHx].entry[pregnancyOutcome] only Reference(ObservationPregnancyOutcomeOblEuEps)
 
 // ================= IPS OBLIGATIONS =================
 * meta.profile insert ObligationActorAndCode(http://hl7.org/fhir/uv/ips/ActorDefinition/Creator, #MAY:able-to-populate)
