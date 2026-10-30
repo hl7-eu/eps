@@ -73,6 +73,3 @@ This element does not match any known slice defined in the profile http://hl7.eu
 
 # OID not assiged in this Implementation Guide
 %could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)%
-
-# IG Publisher document rendering emits the subject Patient anchor twice (Document Subject + Additional Resources) when the Patient has an authored narrative
-The html source has duplicate anchor Ids: Patient_f51071b2-6c06-4d31-85ed-26a6b964ef98
