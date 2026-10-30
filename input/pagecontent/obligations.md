@@ -36,3 +36,5 @@ Obligations can differ between Creator and Consumer, and IPS highlights that obl
 In the HL7 Europe approach, the `mustSupport` flag is not used; instead, Must Support is derived implicitly from the obligations defined for the relevant actors.
 
 Following the HL7 Europe design approach, structural and obligation rules are kept separate: each EPS profile defines the structural rules only, while the IPS obligations are set in a distinct obligation profile derived from it (see the EPS Obligations group in the [Artifacts](artifacts.html) page).
+
+All the obligation profiles are informative for this version of the guide.

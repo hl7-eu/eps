@@ -1,6 +1,6 @@
 # HL7 Europe Patient Summary – Consistency Review for 1.0.0 (release after 1.0.0-ballot)
 
-- **Date:** 2026-10-02. Last updated 2026-10-23 after a rebuild with IG Publisher 3.0.1 and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-02. Last updated 2026-10-23 after a rebuild with IG Publisher 3.0.1 and a re-run of all checks; findings 4-1 to 4-3 and 6.4-12 updated on 2026-10-30 after the obligation split in `3030934` (no rebuild). Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
   - SUSHI reports 0 errors and 0 warnings (run of 2026-10-23, after the fixes in `ac7095e`).
@@ -71,9 +71,9 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 4-1 | Medium | `input/fsh/obligations/medicationstatement-obl-eu-eps.fsh:2,5` | `MedicationStatementOblEuEps` derives from `MedicationStatementEuEps`; all the other obligation profiles derive from EU Core. Its description says "on the EU Core MedicationStatement profile". | Fix the description ("…on the EPS MedicationStatement profile"), or derive it from EU Core like the others. |
-| 4-2 | Medium | `patient-eps.fsh:11,15`; `composition-eu-eps.fsh:461-467` | Some obligations are weaker than the EPS cardinality. `Patient.identifier` is `1..*` (FHIR-58492) but has *populate-if-known*. `sectionProceduresHx` and `sectionMedicalDevices` are `1..1` but have *SHOULD populate-if-known*. These are the IPS obligations, copied as they are, while EPS tightened the cardinality. | Align the obligations with the cardinality (e.g. *SHALL populate*), or say on the Obligations page that the cardinality takes precedence. |
-| 4-3 | Low | `input/pagecontent/obligations.md` | Obligations are set in two ways: inline in 9 EPS profiles, and in separate `-obl-` profiles for the EU Core ones. Consent, travel, gestational age and `MedicationStatementEuEps` itself have none. The page lists the actors but not which profiles carry obligations. | Add a table: profile → where the obligations are defined. |
+| 4-1 | Low | `input/fsh/obligations/medicationstatement-obl-eu-eps.fsh:5` | Since `3030934`, an obligation profile derives from the EPS profile when there is one, and from EU Core otherwise, so the parent of `MedicationStatementOblEuEps` is now consistent. Its description still says "on the EU Core MedicationStatement profile"; the new obligation profiles say "on the <title> profile". | "…on the MedicationStatement (EPS) profile." |
+| 4-2 | Medium | `patient-eps.fsh:11` / `patient-obl-eu-eps.fsh:10`; `composition-obl-eu-eps.fsh:82-88` | Some obligations are weaker than the EPS cardinality. `Patient.identifier` is `1..*` (FHIR-58492) but has *populate-if-known*. `sectionProceduresHx` and `sectionMedicalDevices` are `1..1` but have *SHOULD populate-if-known*. These are the IPS obligations, copied as they are, while EPS tightened the cardinality. Since `3030934` the cardinality and the obligation are in different profiles. | Align the obligations with the cardinality (e.g. *SHALL populate*), or say on the Obligations page that the cardinality takes precedence. |
+| 4-3 | Low | `input/pagecontent/obligations.md` | Since `3030934` all obligations are in separate `-obl-` profiles (19, all informative). The page now says so, but it doesn't list which profiles have an obligation profile; Consent, travel and gestational age have none. | Add a table: profile → obligation profile, or rely on the EPS Obligations group on the Artifacts page. |
 
 ---
 
@@ -122,6 +122,7 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
 | 6.4-9 | Low | `input/pagecontent/index.md:29`, `introduction.md:1` | **New:** Two different definitions of the EPS. The home page says "a standardized non-exhaustive health data set"; the Introduction says "a standardized, cross-border health data set… particularly in unplanned care scenarios". → Use one definition on both pages (e.g. "a standardised, non-exhaustive, cross-border health data set… particularly in unplanned care"). |
 | 6.4-10 | Low | `input/pagecontent/knownIssues.md:9` | **New:** "Xt-EHR EHDS Logical Information Models version 1.0" → "version 1.0.0" (as on the other pages). "The dependency and the related mappings will be updated" → "The alignment and the related mappings will be updated": the models are not a package dependency. |
 | 6.4-11 | Medium | `input/pagecontent/copyright.md:2-4` | **New:** "This Implementation Guide is protected by Copyright 2026 HL7 Europe. It is licensed under the Creative Commons Public Domain dedication (CC0 1.0)". CC0 waives copyright, so the two sentences contradict each other, and CC0 is a dedication, not a licence. → "© 2026 HL7 Europe. HL7 Europe dedicates this Implementation Guide to the public domain under the Creative Commons CC0 1.0 Universal Public Domain Dedication, so it can be freely used, distributed and adapted." Check the wording with HL7 Europe. |
+| 6.4-12 | Medium | `input/pagecontent/variance.md:17-38, 59-89, 96-100` | **New (2026-10-30):** the page predates the obligation split (`3030934`, FHIR-58110). It still describes the EPS profiles as carrying the IPS obligations (`:19`), lists only the EU Core-based obligation profiles (`:27-37`, `:80-89`), and doesn't list the 10 new ones (Bundle, Composition, Device, DeviceUseStatement, DiagnosticReport, the 3 pregnancy Observations, Patient, Procedure). It doesn't say that the obligation profiles are informative. The editor decided to leave the page unchanged for now (2026-10-30). → Revise the page: structural EPS profiles vs informative obligation profiles, the derivation tables, and the "Must Support, Obligations and Actors" section. |
 
 ### 6.5 Language and editorial conventions
 
@@ -213,7 +214,7 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 59 (O
 3. Examples for the four profiles without one (5-1), then narrow the suppressions 7-5 to 7-7.
 4. Groups (2-2), and obligations vs cardinality (4-1, 4-2).
 5. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
-6. Narrative pages: copyright statement (6.4-11), Variance and Missing Data (6.4-1, 6.4-2), lab mapping row (6.4-8), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-4, 6.4-9, 6.3-2, 6.3-3), then `changes.md` (6.1-1, 6.1-2).
+6. Narrative pages: copyright statement (6.4-11), Variance and Missing Data (6.4-1, 6.4-12, 6.4-2), lab mapping row (6.4-8), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-4, 6.4-9, 6.3-2, 6.3-3), then `changes.md` (6.1-1, 6.1-2).
 7. QA leftovers: 7-3, 7-4, 7-9.
 8. Release configuration (1-1), rebuild, re-run this review.
 9. Cleanup: §3.3, §3.4, 2-7, §6.5, §8.
