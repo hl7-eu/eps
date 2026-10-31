@@ -176,6 +176,14 @@ Usage: #example
 * entry[deviceusestatement][=].resource = Instance-DeviceUse-4fe58eba-854d-48a6-add1-42846081f515
 * entry[device][+].fullUrl = "urn:uuid:575520ac-c2ef-4f47-82bf-1b691f5e6466"
 * entry[device][=].resource = Instance-Device-575520ac-c2ef-4f47-82bf-1b691f5e6466
+* entry[procedure][+].fullUrl = "urn:uuid:28491b08-918a-41d0-a3aa-3b10e428eb70"
+* entry[procedure][=].resource = Instance-Procedure-28491b08-918a-41d0-a3aa-3b10e428eb70
+* entry[diagnosticreport][+].fullUrl = "urn:uuid:d3b00375-a7dd-4f4f-b753-8b4550cff316"
+* entry[diagnosticreport][=].resource = Instance-DiagnosticReport-d3b00375-a7dd-4f4f-b753-8b4550cff316
+* entry[+].fullUrl = "urn:uuid:b8c48ab1-24d7-4315-8502-dbae014fde57"
+* entry[=].resource = Instance-Consent-b8c48ab1-24d7-4315-8502-dbae014fde57
+* entry[+].fullUrl = "urn:uuid:1e3faf58-f0ac-42fa-bc14-6afc9e987af1"
+* entry[=].resource = Instance-Observation-1e3faf58-f0ac-42fa-bc14-6afc9e987af1
 
 
 Instance: Instance-Composition-76279633-d5a6-439b-9e88-5880c531e241
@@ -297,10 +305,10 @@ Usage: #inline
   * text.status = #generated
   * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
-<table class='hl7__ips'><tr><td>No known procedures</td></tr></table>
+<table class='hl7__ips'><tr><th>Procedure</th><th>Date</th></tr><tr><td>Appendectomy</td><td><span class='nb'>1998-04-12</span></td></tr></table>
 </div>
 """
-  * emptyReason = $list-empty-reason#nilknown
+  * entry[procedure][+] = Reference(urn:uuid:28491b08-918a-41d0-a3aa-3b10e428eb70)
 //
 // section, slice sectionVitalSigns
 //
@@ -336,6 +344,7 @@ Usage: #inline
   * text.status = #generated
   * text.div = """
 <div xmlns="http://www.w3.org/1999/xhtml">
+<p>Lipid panel with direct LDL, 2024-07-15: cholesterol, triglyceride, LDL and HDL cholesterol (see the table).</p>
 <table class="hl7__ips"><thead><tr><th>Recent Lab Observations</th><th>15 Jul 2024</th><th>Reference Range</th><th>Unit</th></tr></thead><tbody><tr><td>Glucose [Mass/volume] in Blood</td><td><strong>65.9 L</strong></td><td>70 - 99</td><td>mg/dL</td></tr><tr><td>Urea nitrogen [Mass/volume] in Blood</td><td>9.2</td><td>7 - 20</td><td>mg/dL</td></tr><tr><td>Creatinine [Mass/volume] in Blood</td><td><strong>2.7 H</strong></td><td>0.6 - 1.3</td><td>mg/dL</td></tr><tr><td>Calcium [Mass/volume] in Blood</td><td>8.7</td><td>8.5 - 10.3</td><td>mg/dL</td></tr><tr><td>Sodium [Moles/volume] in Blood</td><td>136.4</td><td>135 - 145</td><td>mmol/L</td></tr><tr><td>Potassium [Moles/volume] in Blood</td><td>4.4</td><td>3.5 - 5.1</td><td>mmol/L</td></tr><tr><td>Chloride [Moles/volume] in Blood</td><td>101.2</td><td>98 - 108</td><td>mmol/L</td></tr><tr><td>Carbon dioxide, total [Moles/volume] in Blood</td><td>28.5</td><td>22 - 32</td><td>mmol/L</td></tr><tr><td>Protein [Mass/volume] in Serum or Plasma</td><td>6.9</td><td>6 - 8.3</td><td>g/dL</td></tr><tr><td>Albumin [Mass/volume] in Serum or Plasma</td><td>4.0</td><td>3.5 - 5</td><td>g/dL</td></tr><tr><td>Globulin [Mass/volume] in Serum by calculation</td><td>2.9</td><td>2 - 3.5</td><td>g/L</td></tr><tr><td>Bilirubin.total [Mass/volume] in Serum or Plasma</td><td>0.8</td><td>0.3 - 1.2</td><td>mg/dL</td></tr><tr><td>Alkaline phosphatase [Enzymatic activity/volume] in Serum or Plasma</td><td>87.0</td><td>35 - 117</td><td>U/L</td></tr><tr><td>Alanine aminotransferase [Enzymatic activity/volume] in Serum or Plasma</td><td>45.0</td><td>7 - 46</td><td>U/L</td></tr><tr><td>Aspartate aminotransferase [Enzymatic activity/volume] in Serum or Plasma</td><td><strong>8.7 L</strong></td><td>10 - 40</td><td>U/L</td></tr><tr><td>Cholesterol [Mass/volume] in Serum or Plasma</td><td>193.2</td><td>125 - 200</td><td>mg/dL</td></tr><tr><td>Triglyceride [Mass/volume] in Serum or Plasma</td><td>149.3</td><td>0 - 199</td><td>mg/dL</td></tr><tr><td>Cholesterol in LDL [Mass/volume] in Serum or Plasma by Direct assay</td><td>129.5</td><td>0 - 159</td><td>mg/dL</td></tr><tr><td>Cholesterol in HDL [Mass/volume] in Serum or Plasma</td><td>62.7</td><td>50 - 100</td><td>mg/dL</td></tr></tbody></table>
 </div>
 """
@@ -358,6 +367,7 @@ Usage: #inline
   * entry[results-medicalTestResult][+] = Reference(urn:uuid:762d6f8f-ec3d-445c-8547-f26ce553eedf)
   * entry[results-medicalTestResult][+] = Reference(urn:uuid:1e8a72c6-c4f4-4545-adcb-c5b542f86d7d)
   * entry[results-medicalTestResult][+] = Reference(urn:uuid:a78303a0-a824-499d-a76a-76e131d9dcb7)
+  * entry[results-diagnosticReport][+] = Reference(urn:uuid:d3b00375-a7dd-4f4f-b753-8b4550cff316)
 //
 // section, slice sectionMedicalDevices
 //
@@ -372,6 +382,32 @@ Usage: #inline
 """
   * entry[deviceStatement][+] = Reference(urn:uuid:90641744-8919-4b70-8ef7-d181b1fce3cb)
   * entry[deviceStatement][+] = Reference(urn:uuid:4fe58eba-854d-48a6-add1-42846081f515)
+//
+// section, slice sectionAdvanceDirectives
+//
+* section[sectionAdvanceDirectives]
+  * title = "Advance Directives"
+  * code = $loinc#42348-3 "Advance Healthcare Directives"
+  * text.status = #generated
+  * text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+<table class='hl7__ips'><tr><th>Advance directive</th><th>Date</th></tr><tr><td>Do not resuscitate</td><td><span class='nb'>2023-05-10</span></td></tr></table>
+</div>
+"""
+  * entry[advanceDirectivesConsent][+] = Reference(urn:uuid:b8c48ab1-24d7-4315-8502-dbae014fde57)
+//
+// section, slice sectionTravelHx
+//
+* section[sectionTravelHx]
+  * title = "Travel History"
+  * code = $loinc#10182-4 "History of Travel note"
+  * text.status = #generated
+  * text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+<table class='hl7__ips'><tr><th>Country visited</th><th>Period</th></tr><tr><td>Brazil</td><td><span class='nb'>2025-02-01</span> to <span class='nb'>2025-02-20</span></td></tr></table>
+</div>
+"""
+  * entry[travelObservation][+] = Reference(urn:uuid:1e3faf58-f0ac-42fa-bc14-6afc9e987af1)
 
 
 
@@ -2166,3 +2202,85 @@ Usage: #inline
 * name.family = "Ping"
 
 
+
+Instance: Instance-Procedure-28491b08-918a-41d0-a3aa-3b10e428eb70
+InstanceOf: ProcedureEuEps
+Title: "Procedure: Appendectomy, 1998-04-12"
+Description: "Example procedure: appendectomy [Petra Schwartz]"
+Usage: #example
+* id = "28491b08-918a-41d0-a3aa-3b10e428eb70"
+* status = #completed
+* code = $sct#80146002 "Appendectomy"
+* code.text = "Appendectomy"
+* subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98)
+* performedDateTime = "1998-04-12"
+* text.status = #generated
+* text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+<p>Appendectomy, <span class='nb'>1998-04-12</span></p>
+</div>
+"""
+
+Instance: Instance-DiagnosticReport-d3b00375-a7dd-4f4f-b753-8b4550cff316
+InstanceOf: DiagnosticReportEuEps
+Title: "DiagnosticReport: Lipid panel, 2024-07-15"
+Description: "Example diagnostic report grouping the lipid panel results [Petra Schwartz]"
+Usage: #example
+* id = "d3b00375-a7dd-4f4f-b753-8b4550cff316"
+* status = #final
+* category = $v2-0074#LAB "Laboratory"
+* code = $loinc#57698-3 "Lipid panel with direct LDL - Serum or Plasma"
+* code.text = "Lipid panel with direct LDL"
+* subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98)
+* effectiveDateTime = "2024-07-15"
+* performer[+].display = "The Central European Lab"
+* result[observation-results][+] = Reference(urn:uuid:71c73db3-4d99-4594-b92e-cbb5cc09b517)
+* result[observation-results][+] = Reference(urn:uuid:762d6f8f-ec3d-445c-8547-f26ce553eedf)
+* result[observation-results][+] = Reference(urn:uuid:1e8a72c6-c4f4-4545-adcb-c5b542f86d7d)
+* result[observation-results][+] = Reference(urn:uuid:a78303a0-a824-499d-a76a-76e131d9dcb7)
+* text.status = #generated
+* text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+<p>Lipid panel with direct LDL, <span class='nb'>2024-07-15</span>: cholesterol 193.2 mg/dL, triglyceride 149.3 mg/dL, LDL cholesterol 129.5 mg/dL, HDL cholesterol 62.7 mg/dL.</p>
+</div>
+"""
+
+Instance: Instance-Consent-b8c48ab1-24d7-4315-8502-dbae014fde57
+InstanceOf: ConsentEuEps
+Title: "Consent: Advance directive, do not resuscitate"
+Description: "Example advance directive: do not resuscitate [Petra Schwartz]"
+Usage: #example
+* id = "b8c48ab1-24d7-4315-8502-dbae014fde57"
+* status = #active
+* scope = $consentscope#adr
+* category = $loinc#75320-2 "Advance directive"
+* patient = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98)
+* dateTime = "2023-05-10"
+* policy.uri = "http://example.org/policies/advance-directives"
+* provision.type = #deny
+* provision.code = $sct#89666000 "Cardiopulmonary resuscitation"
+* text.status = #generated
+* text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+<p>Advance directive, <span class='nb'>2023-05-10</span>: do not resuscitate.</p>
+</div>
+"""
+
+Instance: Instance-Observation-1e3faf58-f0ac-42fa-bc14-6afc9e987af1
+InstanceOf: ObservationTravelEuEps
+Title: "Observation: Country visited, Brazil, 2025-02"
+Description: "Example travel history: stay in Brazil in February 2025 [Petra Schwartz]"
+Usage: #example
+* id = "1e3faf58-f0ac-42fa-bc14-6afc9e987af1"
+* status = #final
+* code = $loinc#94651-7 "Country of travel [Location]"
+* subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98)
+* effectivePeriod.start = "2025-02-01"
+* effectivePeriod.end = "2025-02-20"
+* valueCodeableConcept = urn:iso:std:iso:3166#BR "Brazil"
+* text.status = #generated
+* text.div = """
+<div xmlns="http://www.w3.org/1999/xhtml">
+<p>Brazil, <span class='nb'>2025-02-01</span> to <span class='nb'>2025-02-20</span></p>
+</div>
+"""

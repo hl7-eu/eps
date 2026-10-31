@@ -19,6 +19,7 @@
 <artifact id="StructureDefinition/condition-obl-eu-eps" key="StructureDefinition-condition-obl-eu-eps" name="Condition - Obligations (EPS)"/>
 <artifact id="Condition/1945356e-a6aa-498e-9aee-9f708bd78c35" key="Condition-1945356e-a6aa-498e-9aee-9f708bd78c35" name="Condition: Hyperlipidemia"/>
 <artifact id="StructureDefinition/consent-eu-eps" key="StructureDefinition-consent-eu-eps" name="Consent: Advance Directives (EPS)"/>
+<artifact id="Consent/b8c48ab1-24d7-4315-8502-dbae014fde57" key="Consent-b8c48ab1-24d7-4315-8502-dbae014fde57" name="Consent: Advance directive, do not resuscitate"/>
 <artifact id="StructureDefinition/device-eu-eps" key="StructureDefinition-device-eu-eps" name="Device (EPS)"/>
 <artifact id="StructureDefinition/device-obl-eu-eps" key="StructureDefinition-device-obl-eu-eps" name="Device - Obligations (EPS)"/>
 <artifact id="Device/575520ac-c2ef-4f47-82bf-1b691f5e6466" key="Device-575520ac-c2ef-4f47-82bf-1b691f5e6466" name="Device Example: Blood glucose meter"/>
@@ -29,6 +30,7 @@
 <artifact id="StructureDefinition/deviceusestatement-obl-eu-eps" key="StructureDefinition-deviceusestatement-obl-eu-eps" name="DeviceUseStatement - Obligations (EPS)"/>
 <artifact id="StructureDefinition/diagnosticReport-eu-eps" key="StructureDefinition-diagnosticReport-eu-eps" name="DiagnosticReport (EPS)"/>
 <artifact id="StructureDefinition/diagnosticreport-obl-eu-eps" key="StructureDefinition-diagnosticreport-obl-eu-eps" name="DiagnosticReport - Obligations (EPS)"/>
+<artifact id="DiagnosticReport/d3b00375-a7dd-4f4f-b753-8b4550cff316" key="DiagnosticReport-d3b00375-a7dd-4f4f-b753-8b4550cff316" name="DiagnosticReport: Lipid panel, 2024-07-15"/>
 <artifact id="StructureDefinition/flag-alert-obl-eu-eps" key="StructureDefinition-flag-alert-obl-eu-eps" name="Flag: Alert - Obligations (EPS)"/>
 <artifact id="ValueSet/gestational-age-loinc" key="ValueSet-gestational-age-loinc" name="Gestational Age (LOINC)"/>
 <artifact id="StructureDefinition/immunization-obl-eu-eps" key="StructureDefinition-immunization-obl-eu-eps" name="Immunization - Obligations (EPS)"/>
@@ -41,11 +43,8 @@
 <artifact id="StructureDefinition/medicationstatement-obl-eu-eps" key="StructureDefinition-medicationstatement-obl-eu-eps" name="MedicationStatement - Obligations (EPS)"/>
 <artifact id="MedicationStatement/635c4921-5fcb-4ce7-b6ef-d866b680ad01" key="MedicationStatement-b3a1ed32-3f44-41e2-919b-1c8bdeaee29c" name="MedicationStatement: Simvastatin 10 mg oral tablet"/>
 <artifact id="MedicationStatement/b3a1ed32-3f44-41e2-919b-1c8bdeaee29c" key="MedicationStatement-b3a1ed32-3f44-41e2-919b-1c8bdeaee29c" name="MedicationStatement: Simvastatin 10 mg oral tablet, standalone Composition"/>
-<artifact id="Observation/EPSExampleObservationPregnancyEdd" key="Observation-EPSExampleObservationPregnancyEdd" name="Observation : Pregnancy Expected Delivery Date"/>
-<artifact id="Observation/EPSExampleObservationPregnancyGestationalAge" key="Observation-EPSExampleObservationPregnancyGestationalAge" name="Observation : Pregnancy Gestational Age"/>
-<artifact id="Observation/EPSExampleObservationPregnancyOutcome" key="Observation-EPSExampleObservationPregnancyOutcome" name="Observation : Pregnancy Outcome"/>
-<artifact id="Observation/EPSExampleObservationPregnancyStatus" key="Observation-EPSExampleObservationPregnancyStatus" name="Observation : Pregnancy Status"/>
 <artifact id="StructureDefinition/observation-travel-eu-eps" key="StructureDefinition-observation-travel-eu-eps" name="Observation: Country Visited (EPS)"/>
+<artifact id="Observation/1e3faf58-f0ac-42fa-bc14-6afc9e987af1" key="Observation-1e3faf58-f0ac-42fa-bc14-6afc9e987af1" name="Observation: Country visited, Brazil, 2025-02"/>
 <artifact id="StructureDefinition/observation-pregnancy-edd-eu-eps" key="StructureDefinition-observation-pregnancy-edd-eu-eps" name="Observation: Pregnancy - Expected Delivery Date (EPS)"/>
 <artifact id="StructureDefinition/observation-pregnancy-edd-obl-eu-eps" key="StructureDefinition-observation-pregnancy-edd-obl-eu-eps" name="Observation: Pregnancy - Expected Delivery Date - Obligations (EPS)"/>
 <artifact id="StructureDefinition/observation-pregnancy-gestationalAge-eu-eps" key="StructureDefinition-observation-pregnancy-gestationalAge-eu-eps" name="Observation: Pregnancy - Gestational Age (EPS)"/>
@@ -53,6 +52,10 @@
 <artifact id="StructureDefinition/observation-pregnancy-outcome-obl-eu-eps" key="StructureDefinition-observation-pregnancy-outcome-obl-eu-eps" name="Observation: Pregnancy - Outcome - Obligations (EPS)"/>
 <artifact id="StructureDefinition/observation-pregnancy-status-eu-eps" key="StructureDefinition-observation-pregnancy-status-eu-ips" name="Observation: Pregnancy - Status (EPS)"/>
 <artifact id="StructureDefinition/observation-pregnancy-status-obl-eu-eps" key="StructureDefinition-observation-pregnancy-status-obl-eu-eps" name="Observation: Pregnancy - Status - Obligations (EPS)"/>
+<artifact id="Observation/EPSExampleObservationPregnancyEdd" key="Observation-EPSExampleObservationPregnancyEdd" name="Observation: Pregnancy Expected Delivery Date"/>
+<artifact id="Observation/EPSExampleObservationPregnancyGestationalAge" key="Observation-EPSExampleObservationPregnancyGestationalAge" name="Observation: Pregnancy Gestational Age"/>
+<artifact id="Observation/EPSExampleObservationPregnancyOutcome" key="Observation-EPSExampleObservationPregnancyOutcome" name="Observation: Pregnancy Outcome"/>
+<artifact id="Observation/EPSExampleObservationPregnancyStatus" key="Observation-EPSExampleObservationPregnancyStatus" name="Observation: Pregnancy Status"/>
 <artifact id="StructureDefinition/organization-obl-eu-eps" key="StructureDefinition-organization-obl-eu-eps" name="Organization - Obligations (EPS)"/>
 <artifact id="Organization/ce815734-508a-4c1d-8b63-01e1d02a5614" key="Organization-ce815734-508a-4c1d-8b63-01e1d02a5614" name="Organization: BfA-Klinik"/>
 <artifact id="Parameters/exp-params" key="Parameters-exp-params" name="Parameters for Terminology expansion using Snomed-CT international edition"/>
@@ -66,6 +69,7 @@
 <artifact id="StructureDefinition/practitionerrole-obl-eu-eps" key="StructureDefinition-practitionerrole-obl-eu-eps" name="PractitionerRole - Obligations (EPS)"/>
 <artifact id="StructureDefinition/procedure-eu-eps" key="StructureDefinition-procedure-eu-eps" name="Procedure (EPS)"/>
 <artifact id="StructureDefinition/procedure-obl-eu-eps" key="StructureDefinition-procedure-obl-eu-eps" name="Procedure - Obligations (EPS)"/>
+<artifact id="Procedure/28491b08-918a-41d0-a3aa-3b10e428eb70" key="Procedure-28491b08-918a-41d0-a3aa-3b10e428eb70" name="Procedure: Appendectomy, 1998-04-12"/>
 <artifact id="Observation/62e65dfb-d837-4556-8e75-2ca7a6fe6e40" key="Observation-62e65dfb-d837-4556-8e75-2ca7a6fe6e40" name="Vital Signs: Body height, 2025-07-14, standalone Composition"/>
 <page key="NA" name="(NA)"/>
 <page key="many" name="(many)"/>
@@ -94,8 +98,8 @@
 <page key="index" name="Home"/>
 <page key="introduction" name="Introduction"/>
 <page key="knownIssues" name="Known Issues"/>
+<page key="modelmap" name="Logical Model Mappings"/>
 <page key="logicalmodels" name="Logical Models"/>
-<page key="modelmap" name="Model Map"/>
 <page key="obligations" name="Obligations"/>
 <page key="toc" name="Table of Contents"/>
 </specification>

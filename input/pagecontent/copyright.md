@@ -1,3 +1,4 @@
+{% include variables.html %}
 
 This Implementation Guide is protected by Copyright 2026 HL7 Europe. 
 
@@ -17,4 +18,4 @@ Terminology licenses, where required, must be obtained from the relevant rights 
 {% include ip-statements.xhtml %}
 
 ### HL7 IPS and FHIR
-This guide builds on the HL7 FHIR standard and the HL7 International Patient Summary (IPS) FHIR Implementation Guide. Intellectual property and license requirements for the HL7 IPS specification are documented on the HL7 IPS Copyrights page.
+This guide builds on the HL7 FHIR standard and the HL7 International Patient Summary (IPS) FHIR Implementation Guide. Intellectual property and license requirements for the HL7 IPS specification are documented on the [HL7 IPS Copyrights]({{ ips_base }}copyrights.html) page.
