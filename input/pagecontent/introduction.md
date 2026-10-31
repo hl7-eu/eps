@@ -1,4 +1,4 @@
-The **European Patient Summary (EPS)** is a standardized, cross-border health data set intended to support safe and effective healthcare delivery, particularly in unplanned care scenarios. It enables healthcare professionals to access essential clinical information about a patient, regardless of where the data was originally recorded.
+The **European Patient Summary (EPS)** is a standardised, cross-border health data set intended to support safe and effective healthcare delivery, particularly in unplanned care scenarios. It enables healthcare professionals to access essential clinical information about a patient, regardless of where the data was originally recorded.
 
 This **FHIR Implementation Guide (IG)** defines the European Patient Summary using **HL7® FHIR®**, providing a computable and interoperable specification aligned with European and international standards and initiatives.
 
@@ -10,7 +10,7 @@ This guide provides:
 - European-specific constraints and guidance where required
 - Alignment with EU policy, international standards, and global FHIR specifications
 
-It is intended to support national and regional implementations, cross-border health information exchange, and alignment with the European Health Data Space (EHDS), supporting the implementation of the European Electronic Health Record Exchange Format (EEHRxF).
+It is intended to support national and regional implementations, cross-border health information exchange, and alignment with the European Health Data Space (EHDS), supporting the implementation of the European electronic health record exchange format (EEHRxF).
 
 
 ### Policy and Semantic Foundations
@@ -22,13 +22,13 @@ The eHN Guideline defines the scope, purpose, and semantic content of the Europe
 
 ### European and International Standards Alignment
 
-The HL7 FHIR European Patient Summary aims **for conformance with the HL7 FHIR International Patient Summary (IPS) Implementation Guide, version 2**, and with the HL7 FHIR EU Core profiles. Through the conformance with the HL7 FHIR IPS, this guide claims also compliance with the **ISO/EN 27269 – International Patient Summary (IPS)** standard, ensuring consistency with internationally recognized requirements for patient summary content and structure.
+The HL7 FHIR European Patient Summary aims **for conformance with the HL7 FHIR International Patient Summary (IPS) Implementation Guide, version 2**, and with the HL7 FHIR EU Core profiles. Through the conformance with the HL7 FHIR IPS, this guide claims also compliance with the **ISO/EN 27269 – International Patient Summary (IPS)** standard, ensuring consistency with internationally recognised requirements for patient summary content and structure.
 
 
 ### Audience
 
 This Implementation Guide is intended for:
 - System architects and developers
-- Standards organizations and national authorities
+- Standards organisations and national authorities
 - Vendors implementing EPS-compatible systems
 - Cross-border and European interoperability initiatives

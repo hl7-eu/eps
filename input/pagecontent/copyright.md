@@ -13,7 +13,7 @@ This guide contains references to, mappings to, and dependencies on third-party 
 
 Implementers, testers, and users of this guide are responsible for identifying the third-party material they use in their own products, services, publications, submissions, or deployments, and for complying with the applicable license terms and conditions for that material.
 
-Terminology licenses, where required, must be obtained from the relevant rights holder or authorized distributor. Use of this guide does not grant a license to use any third-party terminology, code system, standard, mapping, or conformance rule beyond the rights expressly provided by the owner or publisher of that material.
+Terminology licenses, where required, must be obtained from the relevant rights holder or authorised distributor. Use of this guide does not grant a license to use any third-party terminology, code system, standard, mapping, or conformance rule beyond the rights expressly provided by the owner or publisher of that material.
 
 {% include ip-statements.xhtml %}
 

@@ -15,7 +15,7 @@
   /* margin-top: -0.75rem;  uncomment/tweak if you want tighter vertical alignment */
 ">
   <div style="margin-bottom: 1em;">
-    <img src="xtehr-logo.png" alt="XTEHR Logo" style="max-width: 100%; height: 40px;" />
+    <img src="xtehr-logo.png" alt="Xt-EHR logo" style="max-width: 100%; height: 40px;" />
   </div>
   <div style="text-align: left;">
     <strong>Acknowledgment</strong><br/>
@@ -27,7 +27,7 @@
 </div>
 
 
-The **European Patient Summary (EPS)** is a standardized non-exhaustive health data set intended to support safe and effective healthcare delivery, by enabling healthcare professionals to access essential clinical information about a patient, regardless of where the data was originally recorded.
+The **European Patient Summary (EPS)** is a standardised non-exhaustive health data set intended to support safe and effective healthcare delivery, by enabling healthcare professionals to access essential clinical information about a patient, regardless of where the data was originally recorded.
 
 ### Scope
 
@@ -38,8 +38,8 @@ It is intended to be coherent with the semantic model developed by the [Xt-EHR J
 
 ### Purpose
 
-The goal of this Implementation Guide is to define an European standard for the Patient Summary, building on and aligning with the [HL7 International Patient Summary](https://hl7.org/fhir/uv/ips/) (IPS) as its global reference, to facilitate the harmonization among the national initiatives and prepare the ground for the European EHR eXchange Format (E-EHRxF).
+The goal of this Implementation Guide is to define a European standard for the Patient Summary, building on and aligning with the [HL7 International Patient Summary](https://hl7.org/fhir/uv/ips/) (IPS) as its global reference.
 
-This project is promoted by HL7 Europe, but realized in collaboration with several other European and national organizations and projects, including close alignment with the HL7 IPS work to ensure European specifications remain compatible with the international standard.
+This project is promoted by HL7 Europe, but realised in collaboration with several other European and national organisations and projects, including close alignment with the HL7 IPS work to ensure European specifications remain compatible with the international standard.
 
-The aspiration of this guide is that of being used as basis for European National Guides, the European EHRxF and - consequently - by MyHealth@EU for the EU cross-border services.
+The aspiration of this guide is that of being used as basis for European National Guides, the EEHRxF and - consequently - by MyHealth@EU for the EU cross-border services.

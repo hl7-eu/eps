@@ -106,6 +106,7 @@ Each of the IPS required sections (Problems, Allergies and Intolerances, Medicat
 EPS imposes the following requirements additional to IPS:
 
 - The **History of Procedures** and the **Medical Devices** sections are **required** (`1..1`) in EPS, to align with the EHDS Patient Summary model. They are optional in IPS.
+- **`Patient.identifier`** is **required** (`1..*`) in EPS. It is optional (`0..*`) in IPS.
 
 EPS introduces the following sections that are not defined in IPS:
 

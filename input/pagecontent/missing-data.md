@@ -35,7 +35,7 @@ If a content creator does not have data to be included in the resources, the rea
     }
     ```
 
-    Example: Procedure resource where the performed value is not known. The performed[x] is a choice of type, although any performed[x] choice element can be used to include the data absent reason extension, in this case performedDateTime is must support and hence a good choice (note that performedDateTime is a dateTime primitive datatype, in JSON the \_performedDateTime sibling property is used for the extension). Other required properties of Procedure resource are omitted (shown by ...) in the simplified example below.
+    Example: Procedure resource where the performed value is not known. The performed[x] is a choice of type, although any performed[x] choice element can be used to include the data absent reason extension, in this case performedDateTime is a good choice, because the IPS obligations ask the Creator to be able to populate it (see [Procedure - Obligations (EPS)](StructureDefinition-procedure-obl-eu-eps.html)) (note that performedDateTime is a dateTime primitive datatype, in JSON the \_performedDateTime sibling property is used for the extension). Other required properties of Procedure resource are omitted (shown by ...) in the simplified example below.
 
     ```
     {
@@ -62,7 +62,7 @@ If a content creator does not have data to be included in the resources, the rea
     - _required_ binding strength (CodeableConcept or code datatypes):
       - use the appropriate exceptional concept code from the element's binding value set
 
-    Example: Observation Results - Laboratory/Pathology (resources) resource where the code is not allowed to be shared (e.g. suppressed), the code element contains the data-absent-reason extension. Other required properties of Observation resource are omitted (shown by ...) in the simplified example below.
+    Example: [Observation: Medical Test Result (EU core)]({{ eu_base }}StructureDefinition-medicalTestResult-eu-core.html) resource where the code is not allowed to be shared (e.g. suppressed), the code element contains the data-absent-reason extension. Other required properties of Observation resource are omitted (shown by ...) in the simplified example below.
 
     ```
     {

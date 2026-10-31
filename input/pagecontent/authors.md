@@ -17,8 +17,6 @@ It reflects the substantial contribution of a broad and diverse community of **2
 
 
 <div>
-<p>  </p>
-<img src="experts.png" class="figure-img img-responsive img-rounded center-block" width="40%">
-<p> </p>
+<img src="experts.png" class="figure-img img-responsive img-rounded center-block" width="40%" alt="Map of the distribution of the experts in Europe"/>
 <p><strong>Fig. 1: Experts Distribution (Europe)</strong></p>
 </div>
