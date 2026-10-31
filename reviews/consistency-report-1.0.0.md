@@ -4,7 +4,7 @@
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
   - SUSHI reports 0 errors and 0 warnings (run of 2026-10-30).
-  - The IG Publisher 3.0.1 run of 2026-10-30 was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `020ebf3`, plus the fixes for 1-4 and 7-13 (`1d6b20f`, `e7aee6e`).
+  - The IG Publisher 3.0.1 run of 2026-10-30 was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. This is the run of 19:32. It includes all commits up to `e6eb580`. The mojibake fix in `rulesSet-common.fsh:72` (`4c7057b`) came after it and doesn't affect the build (the ruleset is unused).
   - It reports **0 errors, 2 warnings and 35 information messages**, 0 broken links, plus 142 suppressed warnings and 498 suppressed hints. 33 of the information messages are the OID messages (7-2).
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 1.0.0. **Low** means cleanup or editorial.
@@ -54,7 +54,7 @@ No open items.
 
 - **[3.4-1]** `input/fsh/profiles/observation-travel-eps.fsh:18`: `valueCodeableConcept from $iso3166-1-2` has no strength, so SUSHI makes it `required`. Make the strength explicit, so the binding is visibly intended.
 - **[3.4-2]** Bindings commented out: `medicationStatement-eps.fsh:20` (`EHDSIRouteofAdministration`) and `procedure-eps.fsh:22` (`SNOMEDCTBodyStructures`). Restore them or delete them.
-- **[3.4-3]** `input/fsh/rulesSet/rulesSet-common.fsh:76`: the LOINC copyright says "1995-2020". Use "1995+" or the current year. The SNOMED copyright ruleset (`:72`) is unused (3.3-3, won't fix) and has a mojibake `Â©`.
+- **[3.4-3]** `input/fsh/rulesSet/rulesSet-common.fsh:76`: the LOINC copyright says "1995-2020". Use "1995+" or the current year. The SNOMED copyright ruleset (`:72`) is unused (3.3-3, won't fix).
 
 ---
 
@@ -134,7 +134,7 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
   - `index.md:40` "an European" → "a European".
 - **[6.5-3]** **Punctuation.** `composition-eu-eps.fsh:360` "e.g.recent" → "e.g. recent". `observation-travel-eps.fsh:5` "to record, search, and fetch travel history" was copied from a US profile → "to represent a country visited by the patient".
 - **[6.5-4]** **Markup.**
-  - Mojibake in `composition-eu-eps.fsh:351` ("patientâ€™s", which appears in the published profile) and `rulesSet-common.fsh:72` ("Â©").
+  - Mojibake in `composition-eu-eps.fsh:351` ("patientâ€™s", which appears in the published profile).
   - The 11 map pages and `modelmap.xml` contain `<head>`/`<title>` (line 4), and empty `<a>`/`<p>` elements (lines 18-19), inside page fragments.
   - 10 files have no trailing newline, among them `authors.md`, `obligations.md`, `modelmap.xml` and two map pages.
   - **New:** `authors.md:20-24`: the figure has empty `<p>` elements and an `<img>` without `alt` text.
@@ -169,7 +169,7 @@ The 6 errors of the first 2026-10-30 run (1-4) and the about 420 information mes
 
 **Publication request check:** `publication-request.json` is missing (see 1-1).
 
-**Suppressed messages:** 142 warnings and 498 hints, from 42 entries. 22 entries have 0 uses: lines 41-58 (7-4), 63 (7-9), 69 (7-3), 75 (7-2) and 78 (7-14, deleted since).
+**Suppressed messages:** 142 warnings and 498 hints, from 41 entries. 21 entries have 0 uses: lines 41-58 (7-4), 63 (7-9), 69 (7-3) and 75 (7-2).
 
 **Suppressions that hide fixable issues:**
 
@@ -225,7 +225,7 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 | 3.1-2 | Medium | `input/fsh/profiles/composition-eu-eps.fsh:318`, `:354`, `:380` | No `entry only` rule on three sections: Pregnancy History allows any resource type next to its slices, Patient Story allows any type (as documented), and Patient History is commented "purely narrative" but allows entries. | Won't fix, decided by the editor (2026-10-30). |
 | 3.1-3 | Low | `input/fsh/profiles/composition-eu-eps.fsh:128-135` | The only Medication Summary slice is named `medicationStatementOrRequest` but allows only `MedicationStatementEuEps`; MedicationRequest, MedicationAdministration and MedicationDispense are allowed with no profile and have no Bundle slice. | Won't fix, decided by the editor (2026-10-30). List the unprofiled medication resources in `knownIssues.md` (6.6-4). |
 | 3.3-3 | Low | `input/fsh/rulesSet/rulesSet-common.fsh`, `rulesSet-obligations.fsh` | 12 unused rulesets: `ExtensionContext`, `SetFmmAndStatusRuleInstance`, `NoSubSectionsRules`, `SectionElementsRules`, `SectionCommonRules`, `SNOMEDCopyrightForVS`, `NPUCopyrightForVS`, `NIBSCCopyrightForVS`, `ObligationElement`, `ObligationSet1`–`3`. | Won't fix, decided by the editor (2026-10-30). |
-| 3.3-4 | Low | `input/fsh/alias-*.fsh` | 171 of 214 aliases are unused (mostly eHDSI value sets, IPS profiles and R5 cross-version extensions). | Won't fix, decided by the editor (2026-10-30). The duplicates are fixed in `ade6d47`. |
+| 3.3-4 | Low | `input/fsh/alias-*.fsh` | 172 of 217 aliases are unused (`$composition.version-r5` became unused when its commented-out rule was removed in `ade6d47`) (mostly eHDSI value sets, IPS profiles and R5 cross-version extensions). | Won't fix, decided by the editor (2026-10-30). The duplicates are fixed in `ade6d47`. |
 | 6.4-5 | Medium | `medicationStatement-eu-eps`, `observation-pregnancy-status-eu-eps`, `consent-eu-eps` | Three Xt-EHR 1.0.0 elements are 1..1 but optional in the profiles (`dosageInstructions`, `currentPregnancyStatus`, `header.subject`). | The editor decided to keep the profiles unchanged for this release (2026-10-02). Document them in `knownIssues.md` (6.6-2). |
 | 6.4-6 | Low | `map-ehdslaboratoryobservation.xml:246, 332` | `referenceRange` and `component.referenceRange` are mapped as a whole, without their sub-elements. | Accepted by the editor: the mapping as a whole is enough. |
 | 6.4-7 | Low | `map-ehdspatientsummary.xml` | `header.source` is not mapped. | `EHDSDocument` forbids it (max 0), so there is nothing to map. |
@@ -233,6 +233,10 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 ---
 
 ## Fixed since the first review
+
+**Commit `4c7057b`**
+
+- **[3.4-3]**, **[6.5-4]** (part) The mojibake `Â©` in the SNOMED copyright ruleset is fixed (`input/fsh/rulesSet/rulesSet-common.fsh:72`). The LOINC copyright years (3.4-3) and the mojibake in `composition-eu-eps.fsh:351` (6.5-4) are still open.
 
 **Commit `ade6d47`**
 
