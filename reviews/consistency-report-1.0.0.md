@@ -4,7 +4,7 @@
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
   - SUSHI reports 0 errors and 0 warnings (run of 2026-10-31).
-  - The IG Publisher 3.0.1 run of 2026-10-31 (the last of several that day) was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `6875781`.
+  - The IG Publisher 3.0.1 run of 2026-10-31 22:26 was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `b89c1ff`.
   - It reports **0 errors, 2 warnings and 50 information messages**, 0 broken links, plus 140 suppressed warnings and 500 suppressed hints. 33 of the information messages are the OID messages (7-2); 15 come from the new examples (see §7).
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 1.0.0. **Low** means cleanup or editorial.
@@ -96,36 +96,14 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
 
 | ID | Sev | Location | Finding → Proposed |
 |---|---|---|---|
-| 6.4-1 | Medium | `input/pagecontent/variance.md:106-108` | The list of requirements added to IPS has only the two required sections. It leaves out `Patient.identifier 1..*` (FHIR-58492; IPS has `0..*`). → Add it to the list. |
-| 6.4-2 | Medium | `input/pagecontent/missing-data.md:38, 65` | "performedDateTime is must support" contradicts `variance.md`: EPS does not use `mustSupport`. The page also uses IPS profile names ("Observation Results - Laboratory/Pathology"). → Reword using obligations and EPS/EU Core profile names. |
-| 6.4-4 | Low | `input/pagecontent/index.md:33, 40` | Scope and Purpose still say the same thing twice ("harmonisation among national initiatives… prepare the ground for…"), with two acronyms: "EEHRxF" (`:33`) and "E-EHRxF" (`:40`). `introduction.md:13` uses "EEHRxF". → Keep the IPS sentence of Purpose, drop the repeated part, and use "EEHRxF". |
-| 6.4-8 | Medium | `input/pagecontent/map-ehdslaboratoryobservation.xml:391-395` | **New:** `accreditationStatus` is now mapped to `extension:accredited` with Resource **Organization**. The extension (`http://hl7.eu/fhir/StructureDefinition/laboratory-accredited`, EU Extensions 1.3.1) can only be used on Observation and ServiceRequest. → Set the Resource column to Observation, and link the extension in the note. |
 | 6.4-9 | Low | `input/pagecontent/index.md:29`, `introduction.md:1` | **New:** Two different definitions of the EPS. The home page says "a standardized non-exhaustive health data set"; the Introduction says "a standardized, cross-border health data set… particularly in unplanned care scenarios". → Use one definition on both pages (e.g. "a standardised, non-exhaustive, cross-border health data set… particularly in unplanned care"). |
 | 6.4-10 | Low | `input/pagecontent/knownIssues.md:9` | **New:** "Xt-EHR EHDS Logical Information Models version 1.0" → "version 1.0.0" (as on the other pages). "The dependency and the related mappings will be updated" → "The alignment and the related mappings will be updated": the models are not a package dependency. |
-| 6.4-11 | Medium | `input/pagecontent/copyright.md:2-4` | **New:** "This Implementation Guide is protected by Copyright 2026 HL7 Europe. It is licensed under the Creative Commons Public Domain dedication (CC0 1.0)". CC0 waives copyright, so the two sentences contradict each other, and CC0 is a dedication, not a licence. → "© 2026 HL7 Europe. HL7 Europe dedicates this Implementation Guide to the public domain under the Creative Commons CC0 1.0 Universal Public Domain Dedication, so it can be freely used, distributed and adapted." Check the wording with HL7 Europe. |
 | 6.4-12 | Medium | `input/pagecontent/variance.md:17-38, 59-89, 96-100` | **New (2026-10-30):** the page predates the obligation split (`3030934`, FHIR-58110). It still describes the EPS profiles as carrying the IPS obligations (`:19`), lists only the EU Core-based obligation profiles (`:27-37`, `:80-89`), and doesn't list the 10 new ones (Bundle, Composition, Device, DeviceUseStatement, DiagnosticReport, the 3 pregnancy Observations, Patient, Procedure). It doesn't say that the obligation profiles are informative. The editor decided to leave the page unchanged for now (2026-10-30). → Revise the page: structural EPS profiles vs informative obligation profiles, the derivation tables, and the "Must Support, Obligations and Actors" section. |
 
 ### 6.5 Language and editorial conventions
 
-- **[6.5-1]** **Spelling.** These pages use US spellings, but HL7 Europe uses British English. Proposed changes:
-  - `index.md:29` "standardized" → "standardised"
-  - `index.md:40` "harmonization" → "harmonisation"
-  - `index.md:42` "realized" → "realised", "organizations" → "organisations"
-  - `introduction.md:1` "standardized" → "standardised"
-  - `introduction.md:25` "recognized" → "recognised"
-  - `introduction.md:32` "organizations" → "organisations"
-  - `copyright.md:15` "authorized" → "authorised"
-
-  Keep `Organization` where it names the FHIR resource.
-- **[6.5-2]** **Naming and grammar.**
-  - "Xt-EHR" also appears as "XTEHR" (`index.md:17`, logo alt text).
-  - `index.md:40` "an European" → "a European".
-- **[6.5-3]** **Punctuation.** `composition-eu-eps.fsh:360` "e.g.recent" → "e.g. recent". `observation-travel-eps.fsh:5` "to record, search, and fetch travel history" was copied from a US profile → "to represent a country visited by the patient".
 - **[6.5-4]** **Markup.**
-  - Mojibake in `composition-eu-eps.fsh:351` ("patientâ€™s", which appears in the published profile).
   - The 11 map pages and `modelmap.xml` contain `<head>`/`<title>` (line 4), and empty `<a>`/`<p>` elements (lines 18-19), inside page fragments.
-  - 10 files have no trailing newline, among them `authors.md`, `obligations.md`, `modelmap.xml` and two map pages.
-  - **New:** `authors.md:20-24`: the figure has empty `<p>` elements and an `<img>` without `alt` text.
   - **New:** `input/includes/composition-eu-eps-notes.xml:4`: an empty `<a> </a>` (carried over from the old notes page).
 
 ### 6.6 `knownIssues.md`: suggested additions
@@ -135,7 +113,6 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
   - `EHDSCurrentPregnancy.currentPregnancyStatus` 1..1 vs `Observation.value[x]` 0..1
   - `EHDSAdvanceDirective.header.subject` 1..1 vs `Consent.patient` 0..1
   - Optionally, `EHDSDevice.type` 0..* vs `Device.type` 0..1. This is a FHIR R4 limit, documented in `map-ehdsdevice.xml` since `7a842ec`.
-- **[6.6-4]** MedicationRequest, MedicationAdministration and MedicationDispense are allowed in the Medication Summary section but not profiled (3.1-3, won't fix).
 - **[6.6-5]** **New:** The Bundle has no entry slices for some resources referenced by sections (medical test results, travel, consent, DocumentReference, ClinicalImpression, ImmunizationRecommendation, MedicationRequest/Administration/Dispense). They are allowed, since the slicing is open (3.1-1, won't fix).
 
 ---
@@ -195,7 +172,7 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 75 (O
 2. Narrow the suppressions 7-5 and 7-7.
 3. Groups (2-2), and obligations vs cardinality (4-2).
 4. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
-5. Narrative pages: copyright statement (6.4-11), Variance and Missing Data (6.4-1, 6.4-12, 6.4-2), lab mapping row (6.4-8), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-4, 6.4-9), then `changes.md` (6.1-1).
+5. Narrative pages: Variance (6.4-12), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-9), then `changes.md` (6.1-1).
 6. QA leftovers: 7-3, 7-4, 7-9.
 7. Release configuration (1-1), rebuild, re-run this review.
 8. Cleanup: §3.3, §3.4, §6.5, §8.
@@ -210,17 +187,30 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 |---|---|---|---|---|
 | 3.1-1 | Medium | `input/fsh/profiles/bundle-eu-eps.fsh:99-135` | Some resources referenced by sections have no Bundle entry slice: medical test results (`medicalTestResult-eu-core`), travel (`observation-travel-eu-eps`), consent (`consent-eu-eps`), DocumentReference, ClinicalImpression, ImmunizationRecommendation and MedicationRequest/Administration/Dispense. | Won't fix, decided by the editor (2026-10-30). The entry slicing is open (`bundle-eu-eps.fsh:90`), so these resources are allowed without a dedicated slice. List it in `knownIssues.md` (6.6-5). |
 | 3.1-2 | Medium | `input/fsh/profiles/composition-eu-eps.fsh:318`, `:354`, `:380` | No `entry only` rule on three sections: Pregnancy History allows any resource type next to its slices, Patient Story allows any type (as documented), and Patient History is commented "purely narrative" but allows entries. | Won't fix, decided by the editor (2026-10-30). |
-| 3.1-3 | Low | `input/fsh/profiles/composition-eu-eps.fsh:128-135` | The only Medication Summary slice is named `medicationStatementOrRequest` but allows only `MedicationStatementEuEps`; MedicationRequest, MedicationAdministration and MedicationDispense are allowed with no profile and have no Bundle slice. | Won't fix, decided by the editor (2026-10-30). List the unprofiled medication resources in `knownIssues.md` (6.6-4). |
+| 3.1-3 | Low | `input/fsh/profiles/composition-eu-eps.fsh:128-135` | The only Medication Summary slice is named `medicationStatementOrRequest` but allows only `MedicationStatementEuEps`; MedicationRequest, MedicationAdministration and MedicationDispense are allowed with no profile and have no Bundle slice. | Won't fix, decided by the editor (2026-10-30). Not listed in `knownIssues.md` either (6.6-4). |
 | 3.3-3 | Low | `input/fsh/rulesSet/rulesSet-common.fsh`, `rulesSet-obligations.fsh` | 12 unused rulesets: `ExtensionContext`, `SetFmmAndStatusRuleInstance`, `NoSubSectionsRules`, `SectionElementsRules`, `SectionCommonRules`, `SNOMEDCopyrightForVS`, `NPUCopyrightForVS`, `NIBSCCopyrightForVS`, `ObligationElement`, `ObligationSet1`–`3`. | Won't fix, decided by the editor (2026-10-30). |
 | 3.3-4 | Low | `input/fsh/alias-*.fsh` | 172 of 217 aliases are unused (`$composition.version-r5` became unused when its commented-out rule was removed in `ade6d47`) (mostly eHDSI value sets, IPS profiles and R5 cross-version extensions). | Won't fix, decided by the editor (2026-10-30). The duplicates are fixed in `ade6d47`. |
 | 3.4-3 | Low | `input/fsh/rulesSet/rulesSet-common.fsh:76` | The LOINC copyright says "1995-2020". | Won't fix, decided by the editor (2026-10-31). The SNOMED copyright mojibake, also part of this item, is fixed in `4c7057b`. |
 | 6.4-5 | Medium | `medicationStatement-eu-eps`, `observation-pregnancy-status-eu-eps`, `consent-eu-eps` | Three Xt-EHR 1.0.0 elements are 1..1 but optional in the profiles (`dosageInstructions`, `currentPregnancyStatus`, `header.subject`). | The editor decided to keep the profiles unchanged for this release (2026-10-02). Document them in `knownIssues.md` (6.6-2). |
 | 6.4-6 | Low | `map-ehdslaboratoryobservation.xml:246, 332` | `referenceRange` and `component.referenceRange` are mapped as a whole, without their sub-elements. | Accepted by the editor: the mapping as a whole is enough. |
 | 6.4-7 | Low | `map-ehdspatientsummary.xml` | `header.source` is not mapped. | `EHDSDocument` forbids it (max 0), so there is nothing to map. |
+| 6.4-11 | Medium | `input/pagecontent/copyright.md:2-4` | The statement "protected by Copyright 2026 HL7 Europe" sits next to the CC0 1.0 dedication, which waives copyright. | The editor decided to keep the current copyright statement (2026-10-31). |
+| 6.6-4 | Low | `input/pagecontent/knownIssues.md` | Proposed known issue: MedicationRequest, MedicationAdministration and MedicationDispense are allowed in the Medication Summary section but not profiled (3.1-3). | Won't fix, decided by the editor (2026-10-31): not added to Known Issues. |
 
 ---
 
 ## Fixed since the first review
+
+**Commit `b89c1ff`**
+
+- **[6.5-1]** British spellings: "standardised" (`index.md`, `introduction.md:1`), "realised", "organisations" (`index.md`, `introduction.md:32`), "recognised" (`introduction.md:25`), "authorised" (`copyright.md:16`). "harmonization" went with 6.4-4.
+- **[6.5-2]** The Xt-EHR logo alt text is "Xt-EHR logo" (`index.md:18`); "an European" → "a European" (with 6.4-4).
+- **[6.5-4]** (part) The mojibake "patientâ€™s" is now "patient’s" (`composition-eu-eps.fsh:351`). The 13 text files without a trailing newline now end with one (4 pages, 2 map pages, `fragment-head.html` and 6 FSH files). The `authors.md` figure has no empty `<p>` elements, and the `<img>` has `alt` text. The `<head>`/`<title>` and empty `<a>` parts are still open.
+- **[6.5-3]** "e.g.recent" → "e.g. recent" (`composition-eu-eps.fsh:360`). The `ObservationTravelEuEps` description now says "to represent a country visited by the patient" instead of the US "to record, search, and fetch travel history" (`observation-travel-eps.fsh:5`).
+- **[6.4-1]** `variance.md` lists `Patient.identifier 1..*` (IPS `0..*`, FHIR-58492) among the requirements EPS adds to IPS.
+- **[6.4-2]** `missing-data.md` no longer says "performedDateTime is must support": performedDateTime is a good choice because the IPS obligations ask the Creator to be able to populate it (link to `procedure-obl-eu-eps`). The IPS name "Observation Results - Laboratory/Pathology" is replaced by a link to Observation: Medical Test Result (EU core).
+- **[6.4-4]** `index.md` Purpose keeps only the IPS sentence; the repeated "harmonisation… prepare the ground for the E-EHRxF" is dropped ("an European" → "a European" in the same sentence). The acronym is harmonised to "European electronic health record exchange format (EEHRxF)", as in the EHDS Regulation: `index.md` (Scope; "the European EHRxF" → "the EEHRxF") and `introduction.md:13`.
+- **[6.4-8]** The `accreditationStatus` row of the LaboratoryObservation map now has Resource **Observation**, and the note links the Laboratory Accredited extension (EU Extensions 1.3.1).
 
 **Commit `6875781`**
 

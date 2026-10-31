@@ -31,6 +31,11 @@ Decisions already taken for this guide. Consistency reviews do not raise these a
 - **Additional bindings without a key** (decided 2026-10-23). Additional bindings defined in this guide have a `key`. The `ext-ab-1` warnings inherited from EU Core 2.0.1 are suppressed, with one exact entry per element. Remove them when EU Core adds the keys.
 - **Template QA warnings are fixed, not suppressed** (decided 2026-10-23). When a page from the base template is not well-formed (e.g. `searchform.html`), override it in `ig-template/content/`. Don't add it to `ignoreWarnings.txt`.
 
+## Pages
+
+- **Copyright statement** (decided 2026-10-31). `copyright.md` keeps "protected by Copyright … HL7 Europe" together with the CC0 1.0 dedication. Reviews do not raise it again.
+- **Unprofiled medication resources not in Known Issues** (decided 2026-10-31). MedicationRequest, MedicationAdministration and MedicationDispense in the Medication Summary section are not listed in `knownIssues.md`.
+
 ## Configuration
 
 - **`hl7.terminology.r4` is not pinned** (decided 2026-10-03). The IG Publisher resolves the version; the 1.0.0 review build used 7.4.0. Reviews do not raise the missing pin again.
