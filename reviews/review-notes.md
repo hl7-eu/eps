@@ -24,6 +24,7 @@ Decisions already taken for this guide. Consistency reviews do not raise these a
 
 - **Unused rulesets** (decided 2026-10-30). The 12 unused rulesets in `rulesSet-common.fsh` and `rulesSet-obligations.fsh` are kept. Reviews do not raise them again.
 - **Unused aliases** (decided 2026-10-30). Unused aliases in `alias-*.fsh` are kept. Duplicate aliases are still to be avoided.
+- **LOINC copyright years** (decided 2026-10-31). The LOINC copyright text in `LOINCCopyrightForVS` keeps "1995-2020".
 
 ## QA and ignoreWarnings
 

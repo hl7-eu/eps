@@ -29,7 +29,7 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
 | 2-2 | Medium | `sushi-config.yaml` `groups:` | Only 2 groups. 13 profiles and the value set are in no group: patient, consent, device, deviceUseStatement, diagnosticReport, medicationStatement, procedure, the 4 pregnancy profiles, the travel profile, `gestational-age-loinc`. They show in the default group on the Artifacts page. | Add groups (e.g. "Entry profiles", "Terminology"), or put them in `EuPatientSummary` and rewrite its description ("entry profiles" currently lists only Bundle and Composition). |
-| 2-7 | Low | `sushi-config.yaml` `menu:` | Menu labels differ from page titles: "Patient Summary" / Introduction, "Mapping to Profiles" / Model Map, "Known/Open Issues" / Known Issues, "Download" / Downloads, "Expansion parameters" / Expansion Parameters. | Use the same text in both. |
+| 2-7 | Low | `sushi-config.yaml` `menu:` | The menu label "Mapping to Profiles" differs from the page title "Model Map". The other four labels are fixed (see *Fixed*). | Use the same text in both. |
 
 ---
 
@@ -53,8 +53,6 @@ No open items.
 ### 3.4 Terminology
 
 - **[3.4-1]** `input/fsh/profiles/observation-travel-eps.fsh:18`: `valueCodeableConcept from $iso3166-1-2` has no strength, so SUSHI makes it `required`. Make the strength explicit, so the binding is visibly intended.
-- **[3.4-2]** Bindings commented out: `medicationStatement-eps.fsh:20` (`EHDSIRouteofAdministration`) and `procedure-eps.fsh:22` (`SNOMEDCTBodyStructures`). Restore them or delete them.
-- **[3.4-3]** `input/fsh/rulesSet/rulesSet-common.fsh:76`: the LOINC copyright says "1995-2020". Use "1995+" or the current year. The SNOMED copyright ruleset (`:72`) is unused (3.3-3, won't fix).
 
 ---
 
@@ -226,6 +224,7 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 | 3.1-3 | Low | `input/fsh/profiles/composition-eu-eps.fsh:128-135` | The only Medication Summary slice is named `medicationStatementOrRequest` but allows only `MedicationStatementEuEps`; MedicationRequest, MedicationAdministration and MedicationDispense are allowed with no profile and have no Bundle slice. | Won't fix, decided by the editor (2026-10-30). List the unprofiled medication resources in `knownIssues.md` (6.6-4). |
 | 3.3-3 | Low | `input/fsh/rulesSet/rulesSet-common.fsh`, `rulesSet-obligations.fsh` | 12 unused rulesets: `ExtensionContext`, `SetFmmAndStatusRuleInstance`, `NoSubSectionsRules`, `SectionElementsRules`, `SectionCommonRules`, `SNOMEDCopyrightForVS`, `NPUCopyrightForVS`, `NIBSCCopyrightForVS`, `ObligationElement`, `ObligationSet1`–`3`. | Won't fix, decided by the editor (2026-10-30). |
 | 3.3-4 | Low | `input/fsh/alias-*.fsh` | 172 of 217 aliases are unused (`$composition.version-r5` became unused when its commented-out rule was removed in `ade6d47`) (mostly eHDSI value sets, IPS profiles and R5 cross-version extensions). | Won't fix, decided by the editor (2026-10-30). The duplicates are fixed in `ade6d47`. |
+| 3.4-3 | Low | `input/fsh/rulesSet/rulesSet-common.fsh:76` | The LOINC copyright says "1995-2020". | Won't fix, decided by the editor (2026-10-31). The SNOMED copyright mojibake, also part of this item, is fixed in `4c7057b`. |
 | 6.4-5 | Medium | `medicationStatement-eu-eps`, `observation-pregnancy-status-eu-eps`, `consent-eu-eps` | Three Xt-EHR 1.0.0 elements are 1..1 but optional in the profiles (`dosageInstructions`, `currentPregnancyStatus`, `header.subject`). | The editor decided to keep the profiles unchanged for this release (2026-10-02). Document them in `knownIssues.md` (6.6-2). |
 | 6.4-6 | Low | `map-ehdslaboratoryobservation.xml:246, 332` | `referenceRange` and `component.referenceRange` are mapped as a whole, without their sub-elements. | Accepted by the editor: the mapping as a whole is enough. |
 | 6.4-7 | Low | `map-ehdspatientsummary.xml` | `header.source` is not mapped. | `EHDSDocument` forbids it (max 0), so there is nothing to map. |
@@ -233,6 +232,11 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 ---
 
 ## Fixed since the first review
+
+**Commit `80c4a6b`**
+
+- **[3.4-2]** The commented-out bindings are deleted: `dosage.route` (`EHDSIRouteofAdministration`) in `medicationStatement-eps.fsh`, and `bodySite` (`SNOMEDCTBodyStructures`) in `procedure-eps.fsh`.
+- **[2-7]** (part) Menu labels now match the page titles: "Introduction", "Known Issues", "Downloads" and "Expansion Parameters" (`sushi-config.yaml` `menu:`). "Mapping to Profiles" / "Model Map" is still open.
 
 **Commit `4c7057b`**
 
