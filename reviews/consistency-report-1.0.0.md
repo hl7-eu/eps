@@ -1,10 +1,10 @@
 # HL7 Europe Patient Summary – Consistency Review for 1.0.0 (release after 1.0.0-ballot)
 
-- **Date:** 2026-10-02. Last updated 2026-10-30 after a rebuild with IG Publisher 3.0.1 and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-02. Last updated 2026-10-31 after a rebuild with IG Publisher 3.0.1 and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
-  - SUSHI reports 0 errors and 0 warnings (run of 2026-10-30).
-  - The IG Publisher 3.0.1 run of 2026-10-30 was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. This is the run of 19:32. It includes all commits up to `e6eb580`. The mojibake fix in `rulesSet-common.fsh:72` (`4c7057b`) came after it and doesn't affect the build (the ruleset is unused).
+  - SUSHI reports 0 errors and 0 warnings (run of 2026-10-31).
+  - The IG Publisher 3.0.1 run of 2026-10-31 14:26 (rebuilt after the fixes in `9d86441`, with the same counts and 0 broken links) was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `cde5a92`; the working tree was clean.
   - It reports **0 errors, 2 warnings and 35 information messages**, 0 broken links, plus 142 suppressed warnings and 498 suppressed hints. 33 of the information messages are the OID messages (7-2).
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 1.0.0. **Low** means cleanup or editorial.
@@ -29,7 +29,6 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
 | 2-2 | Medium | `sushi-config.yaml` `groups:` | Only 2 groups. 13 profiles and the value set are in no group: patient, consent, device, deviceUseStatement, diagnosticReport, medicationStatement, procedure, the 4 pregnancy profiles, the travel profile, `gestational-age-loinc`. They show in the default group on the Artifacts page. | Add groups (e.g. "Entry profiles", "Terminology"), or put them in `EuPatientSummary` and rewrite its description ("entry profiles" currently lists only Bundle and Composition). |
-| 2-7 | Low | `sushi-config.yaml` `menu:` | The menu label "Mapping to Profiles" differs from the page title "Model Map". The other four labels are fixed (see *Fixed*). | Use the same text in both. |
 
 ---
 
@@ -60,10 +59,7 @@ No open items.
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 4-1 | Low | `input/fsh/obligations/medicationstatement-obl-eu-eps.fsh:5` | Since `3030934`, an obligation profile derives from the EPS profile when there is one, and from EU Core otherwise, so the parent of `MedicationStatementOblEuEps` is now consistent. Its description still says "on the EU Core MedicationStatement profile"; the new obligation profiles say "on the <title> profile". | "…on the MedicationStatement (EPS) profile." |
 | 4-2 | Medium | `patient-eps.fsh:11` / `patient-obl-eu-eps.fsh:10`; `composition-obl-eu-eps.fsh:82-88` | Some obligations are weaker than the EPS cardinality. `Patient.identifier` is `1..*` (FHIR-58492) but has *populate-if-known*. `sectionProceduresHx` and `sectionMedicalDevices` are `1..1` but have *SHOULD populate-if-known*. These are the IPS obligations, copied as they are, while EPS tightened the cardinality. Since `3030934` the cardinality and the obligation are in different profiles. | Align the obligations with the cardinality (e.g. *SHALL populate*), or say on the Obligations page that the cardinality takes precedence. |
-| 4-3 | Low | `input/pagecontent/obligations.md` | Since `3030934` all obligations are in separate `-obl-` profiles (19, all informative). The page now says so, but it doesn't list which profiles have an obligation profile; Consent, travel and gestational age have none. | Add a table: profile → obligation profile, or rely on the EPS Obligations group on the Artifacts page. |
-| 4-4 | Low | `sushi-config.yaml` `groups: EpsObligations` | **New:** The group description says "obligation-only profiles". Since `28ef9bb` (FHIR-58508), 8 obligation profiles also narrow inherited references to the matching obligation profiles (e.g. `bundle-obl-eu-eps`: `entry[patient].resource only PatientOblEuEps`). | "IPS-derived obligation profiles for EPS. They set the IPS obligations and point their references to the other obligation profiles. Informative for this version of the guide." Say the same on the Obligations page. |
 
 ---
 
@@ -74,7 +70,6 @@ No open items.
 | 5-1 | Medium | `fsh-generated/resources` | No example for `consent-eu-eps`, `diagnosticReport-eu-eps`, `observation-travel-eu-eps` or `procedure-eu-eps`. The QA doesn't show this because the blanket suppression in 7-6 hides it. | Add one example each (e.g. in the complete Bundle), then narrow the suppression. |
 | 5-2 | Medium | `input/fsh/examples/__5042-537688-1-eps-composition.fsh` | 15 standalone examples that repeat the complete Bundle example (same patient, same content). Their titles are now distinct (5-3), but the content is still duplicated. | Keep either the standalone set or the Bundle. |
 | 5-4 | Low | examples | Ids follow three patterns: `Instance-Bundle-…`, `EPSExampleBundle01…`, `Composition-…`/`DeviceUse-…`. In Bundle 01, all 4 `fullUrl` UUIDs differ from the resource ids. The two Bundle identifiers differ in form (one has `assigner`). | Pick one id pattern for new examples. Align the Bundle identifiers. |
-| 5-5 | Low | `observation-pregnancy*-eps-example.fsh:3` | The titles have a space before the colon ("Observation : Pregnancy Status"); the other examples use "Type: Name". | "Observation: Pregnancy Status". |
 
 ---
 
@@ -85,7 +80,6 @@ No open items.
 | ID | Sev | Line | Finding → Proposed |
 |---|---|---|---|
 | 6.1-1 | Medium | – | Missing changes made since `1.0.0-ballot`: FHIR-57679 (EHDS Art. 14 in the scope), FHIR-58104 (alignment with Xt-EHR 1.0.0), FHIR-58138 (`Bundle.timestamp` 1..1), FHIR-58492 (`Patient.identifier` 1..*), FHIR-58509 (new MedicationStatement obligation profile; MedicationRequest obligation profile removed), FHIR-58917 (Change Log page), FHIR-58918 (mapping tables reviewed), FHIR-59046 (Model Map names), FHIR-59501 (new Variance Statement page). **New:** FHIR-58110 (obligations moved to separate, informative obligation profiles), FHIR-58508 (structural and obligation profiles reference only their own kind), FHIR-58258 (delegation note in the Composition profile), FHIR-59755 (Pregnancy History section uses the EPS pregnancy profiles). Also: EU Base and IPS aligned to 2.0.1 (`10fe8d9`), EU Extensions 1.3.1 (`9437507`), MedicationRequest Bundle slice removed (`035638d`), old allergy mapping page removed. → Add them. |
-| 6.1-2 | Low | 3, 8, 13, 23 | "summarizes" → "summarises". "xtEHR" → "Xt-EHR". "from 0.3.0 to 1.0" → "from 0.3.0 to 1.0.0". "Composition (EU EPS)" → "Composition (EPS)". The Xt-EHR models are not a package dependency: "Aligned with the Xt-EHR EHDS Logical Models 1.0.0 (previously 0.3.0)". |
 
 ### 6.2 Stale ballot or preview wording
 
@@ -99,7 +93,7 @@ No stale ballot or preview wording. The two hits in `changes.md:1,3` correctly r
 | 6.3-2 | Low | `input/pagecontent/index.md:35`, `logicalmodels.md:5` | **New:** Both link to the unversioned `https://www.xt-ehr.eu/fhir/models`, not to `{{ xtehr_models }}` (1.0.0) like the other model links. In `index.md` the link text is "Xt-EHR Joint Action", but the target is the models guide. → Use `{{ xtehr_models }}` (add `{% include variables.html %}` to `index.md`), and link "Xt-EHR Joint Action" to `https://www.xt-ehr.eu/`. |
 | 6.3-3 | Low | `input/pagecontent/copyright.md:20` | **New:** "documented on the HL7 IPS Copyrights page" has no link. → Link the IPS 2.0.1 copyright page through `variables.html`. |
 
-There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Base and IPS links go through `input/includes/variables.html` (`1.0.0`, `2.0.1`, `2.0.1`), and the 10 EU Base map pages that the Model Map links to are online. The regulation link (`index.md:31`) points to the adopted text (CELEX 32025R0327).
+There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Base and IPS links go through `input/includes/variables.html` (`1.0.0`, `2.0.1`, `2.0.1`), and the 10 EU Base map pages that the Logical Model Mappings page links to are online. The regulation link (`index.md:31`) points to the adopted text (CELEX 32025R0327).
 
 ### 6.4 Content inconsistencies
 
@@ -124,11 +118,10 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
   - `introduction.md:25` "recognized" → "recognised"
   - `introduction.md:32` "organizations" → "organisations"
   - `copyright.md:15` "authorized" → "authorised"
-  - `changes.md:3` "summarizes" → "summarises"
 
   Keep `Organization` where it names the FHIR resource.
 - **[6.5-2]** **Naming and grammar.**
-  - "Xt-EHR" also appears as "xtEHR" (`changes.md:8, 23`) and "XTEHR" (`index.md:17`, logo alt text).
+  - "Xt-EHR" also appears as "XTEHR" (`index.md:17`, logo alt text).
   - `index.md:40` "an European" → "a European".
 - **[6.5-3]** **Punctuation.** `composition-eu-eps.fsh:360` "e.g.recent" → "e.g. recent". `observation-travel-eps.fsh:5` "to record, search, and fetch travel history" was copied from a US profile → "to represent a country visited by the patient".
 - **[6.5-4]** **Markup.**
@@ -152,7 +145,7 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
 
 ## 7. QA output and `ignoreWarnings.txt`
 
-This section is based on the IG Publisher 3.0.1 run of 2026-10-30, built as `1.0.0-ci-build` / `draft` / `ci-build`, with the fixes for 1-4 and 7-13.
+This section is based on the IG Publisher 3.0.1 run of 2026-10-31 14:26, built as `1.0.0-ci-build` / `draft` / `ci-build`.
 
 **Visible messages:** 0 errors, 2 warnings and 35 information messages.
 
@@ -204,12 +197,12 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 75 (O
 
 1. Delete the stale entries (7-4, 7-9), fix 7-2, then rebuild.
 2. Examples for the four profiles without one (5-1), then narrow the suppressions 7-5 to 7-7.
-3. Groups (2-2, 4-4), and obligations vs cardinality (4-1, 4-2).
+3. Groups (2-2), and obligations vs cardinality (4-2).
 4. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
-5. Narrative pages: copyright statement (6.4-11), Variance and Missing Data (6.4-1, 6.4-12, 6.4-2), lab mapping row (6.4-8), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-4, 6.4-9, 6.3-2, 6.3-3), then `changes.md` (6.1-1, 6.1-2).
+5. Narrative pages: copyright statement (6.4-11), Variance and Missing Data (6.4-1, 6.4-12, 6.4-2), lab mapping row (6.4-8), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-4, 6.4-9, 6.3-2, 6.3-3), then `changes.md` (6.1-1).
 6. QA leftovers: 7-3, 7-4, 7-9.
 7. Release configuration (1-1), rebuild, re-run this review.
-8. Cleanup: §3.3, §3.4, 2-7, §6.5, §8.
+8. Cleanup: §3.3, §3.4, §6.5, §8.
 
 ---
 
@@ -232,6 +225,15 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 ---
 
 ## Fixed since the first review
+
+**Commit `9d86441`**
+
+- **[5-5]** The four pregnancy example titles no longer have a space before the colon: "Observation: Pregnancy Status", "Observation: Pregnancy Outcome", "Observation: Pregnancy Expected Delivery Date" and "Observation: Pregnancy Gestational Age" (`input/fsh/examples/observation-pregnancy*-eps-example.fsh:3`). No title collisions.
+- **[6.1-2]** `changes.md`: "summarizes" → "summarises", "xtEHR" → "Xt-EHR" (lines 8, 23), "Composition (EU EPS)" → "Composition (EPS)", and the Xt-EHR entry now reads "Aligned with the **Xt-EHR EHDS Logical Models** 1.0.0 (previously 0.3.0)", since the models are not a package dependency. The two `changes.md` items in 6.5-1 and 6.5-2 are fixed with it.
+- **[4-4]** The `EpsObligations` group description now says "IPS-derived obligation profiles for EPS" instead of "obligation-only profiles" (`sushi-config.yaml`), since 8 of them also narrow references to other obligation profiles.
+- **[4-3]** The Obligations page now has a table that lists, for each of the 19 profiles, its obligation profile (11 EPS and 8 EU Core profiles), and names the three profiles without one: Consent, Pregnancy - Gestational Age and Country Visited (`input/pagecontent/obligations.md`).
+- **[4-1]** The `MedicationStatementOblEuEps` description now says "…on the MedicationStatement (EPS) profile", matching its parent and the other obligation profiles (`input/fsh/obligations/medicationstatement-obl-eu-eps.fsh:5`).
+- **[2-7]** The Model Map page is now titled "Logical Model Mappings", in the menu as well (`sushi-config.yaml`); the link text in `variance.md:21` follows. Together with the labels fixed in `80c4a6b`, every menu label now matches its page title.
 
 **Commit `80c4a6b`**
 
