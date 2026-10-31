@@ -1,16 +1,16 @@
 ### From 1.0.0-ballot to 1.0.0
 
-This page summarizes the main changes made to this Implementation Guide since the **1.0.0-ballot** release
+This page summarises the main changes made to this Implementation Guide since the **1.0.0-ballot** release
 
 
 #### Dependencies
 
-* Upgraded the **xtEHR EHDS Logical Models** dependency from 0.3.0 to 1.0, and pinned mapping pages to this specific model version. (FHIR-58103)
+* Aligned with the **Xt-EHR EHDS Logical Models** 1.0.0 (previously 0.3.0), and pinned mapping pages to this specific model version. (FHIR-58103)
 * Upgraded the **IPS (International Patient Summary)** dependency to 2.0.1, and fixed the corresponding link in the site menu. (FHIR-57675)
 
 #### Profile changes
 
-* **Composition (EU EPS)**
+* **Composition (EPS)**
   * Fixed the cardinality of the `smokingTobaccoUse` and `alcoholUse` entries. (FHIR-58506)
   * Added the `ips-comp-1` invariant to the `sectionMedicalDevices` and `sectionProceduresHx` sections. (FHIR-58758)
   * Clarified the purpose of the Patient History section. (FHIR-58505)
@@ -20,7 +20,7 @@ This page summarizes the main changes made to this Implementation Guide since th
 
 #### Documentation
 
-* Fixed the xtEHR logical model link on the Logical Models page. (FHIR-58757)
+* Fixed the Xt-EHR logical model link on the Logical Models page. (FHIR-58757)
 * Removed the inaccurate "R4 vs R5 IG" paragraph from the Cross-version Analysis page. (FHIR-58109)
 
 

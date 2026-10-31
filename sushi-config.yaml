@@ -62,7 +62,7 @@ pages:
 #    title: Subject Relationships
 # == MODEL MAPS
   modelmap.html:
-    title: Model Map
+    title: Logical Model Mappings
   variance.md:
     title: EU Variance Statement
   changes.md:
@@ -175,7 +175,7 @@ menu:
     Logical Models: logicalmodels.html
     Obligations: obligations.html
   Implementation:
-    Mapping to Profiles: modelmap.html
+    Logical Model Mappings: modelmap.html
     EU Variance Statement: variance.html
   About:
     Authors and Contributors: authors.html
@@ -200,7 +200,7 @@ groups:
         - StructureDefinition/composition-eu-eps
     EpsObligations:
       name:  EPS Obligations
-      description: IPS-derived obligation-only profiles for EPS. Informative for this version of the guide.
+      description: IPS-derived obligation profiles for EPS. Informative for this version of the guide.
       resources:
         - StructureDefinition/allergyintolerance-obl-eu-eps
         - StructureDefinition/bundle-obl-eu-eps

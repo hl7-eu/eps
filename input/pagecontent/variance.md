@@ -18,7 +18,7 @@ When a corresponding EU Core profile exists, the EPS profile is derived from it.
 
 - the obligations defined for the [IPS actors](obligations.html#actors);
 - the patient summary specific constraints (e.g. Composition sections, Bundle entries);
-- the alignment with the EHDS Patient Summary logical model (see the [Model Map](modelmap.html)).
+- the alignment with the EHDS Patient Summary logical model (see the [Logical Model Mappings](modelmap.html)).
 
 | EPS profile | Derived from (EU Core) |
 | --- | --- |
