@@ -17,7 +17,6 @@ Description: """This profile constrains the MedicationStatement resource in the 
 *  effective[x] 1..
 
 * dosage.route ^short = "Route of administration"
-// * dosage.route from EHDSIRouteofAdministration (preferred)
 
 
 

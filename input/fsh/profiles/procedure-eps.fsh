@@ -19,6 +19,5 @@ Description: "This profile constrains the Procedure resource in the scope of the
 * complication ^short = "Complications that occurred during the procedure (code)"
 * complicationDetail ^short = "Complications that occurred during the procedure (details)"
 * focalDevice ^short = "Device implanted, removed or otherwise manipulated"
-// * bodySite from SNOMEDCTBodyStructures (preferred)
 
 
