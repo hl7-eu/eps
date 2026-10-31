@@ -4,8 +4,8 @@
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
   - SUSHI reports 0 errors and 0 warnings (run of 2026-10-31).
-  - The IG Publisher 3.0.1 run of 2026-10-31 14:26 (rebuilt after the fixes in `9d86441`, with the same counts and 0 broken links) was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `cde5a92`; the working tree was clean.
-  - It reports **0 errors, 2 warnings and 35 information messages**, 0 broken links, plus 142 suppressed warnings and 498 suppressed hints. 33 of the information messages are the OID messages (7-2).
+  - The IG Publisher 3.0.1 run of 2026-10-31 (the last of several that day) was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `6875781`.
+  - It reports **0 errors, 2 warnings and 50 information messages**, 0 broken links, plus 140 suppressed warnings and 500 suppressed hints. 33 of the information messages are the OID messages (7-2); 15 come from the new examples (see §7).
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 1.0.0. **Low** means cleanup or editorial.
 
@@ -67,7 +67,6 @@ No open items.
 
 | ID | Sev | Location | Finding | Fix |
 |---|---|---|---|---|
-| 5-1 | Medium | `fsh-generated/resources` | No example for `consent-eu-eps`, `diagnosticReport-eu-eps`, `observation-travel-eu-eps` or `procedure-eu-eps`. The QA doesn't show this because the blanket suppression in 7-6 hides it. | Add one example each (e.g. in the complete Bundle), then narrow the suppression. |
 | 5-2 | Medium | `input/fsh/examples/__5042-537688-1-eps-composition.fsh` | 15 standalone examples that repeat the complete Bundle example (same patient, same content). Their titles are now distinct (5-3), but the content is still duplicated. | Keep either the standalone set or the Bundle. |
 | 5-4 | Low | examples | Ids follow three patterns: `Instance-Bundle-…`, `EPSExampleBundle01…`, `Composition-…`/`DeviceUse-…`. In Bundle 01, all 4 `fullUrl` UUIDs differ from the resource ids. The two Bundle identifiers differ in form (one has `assigner`). | Pick one id pattern for new examples. Align the Bundle identifiers. |
 
@@ -90,8 +89,6 @@ No stale ballot or preview wording. The two hits in `changes.md:1,3` correctly r
 | ID | Sev | Location | Finding → Fix |
 |---|---|---|---|
 | 6.3-1 | Low | `input/pagecontent/variance.md:15, 55` | The link text "current" points to the versioned 2.0.1 pages. → Use "published version" or remove the extra link. |
-| 6.3-2 | Low | `input/pagecontent/index.md:35`, `logicalmodels.md:5` | **New:** Both link to the unversioned `https://www.xt-ehr.eu/fhir/models`, not to `{{ xtehr_models }}` (1.0.0) like the other model links. In `index.md` the link text is "Xt-EHR Joint Action", but the target is the models guide. → Use `{{ xtehr_models }}` (add `{% include variables.html %}` to `index.md`), and link "Xt-EHR Joint Action" to `https://www.xt-ehr.eu/`. |
-| 6.3-3 | Low | `input/pagecontent/copyright.md:20` | **New:** "documented on the HL7 IPS Copyrights page" has no link. → Link the IPS 2.0.1 copyright page through `variables.html`. |
 
 There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Base and IPS links go through `input/includes/variables.html` (`1.0.0`, `2.0.1`, `2.0.1`), and the 10 EU Base map pages that the Logical Model Mappings page links to are online. The regulation link (`index.md:31`) points to the adopted text (CELEX 32025R0327).
 
@@ -145,11 +142,11 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
 
 ## 7. QA output and `ignoreWarnings.txt`
 
-This section is based on the IG Publisher 3.0.1 run of 2026-10-31 14:26, built as `1.0.0-ci-build` / `draft` / `ci-build`.
+This section is based on the last IG Publisher 3.0.1 run of 2026-10-31, built as `1.0.0-ci-build` / `draft` / `ci-build`.
 
-**Visible messages:** 0 errors, 2 warnings and 35 information messages.
+**Visible messages:** 0 errors, 2 warnings and 50 information messages.
 
-The 6 errors of the first 2026-10-30 run (1-4) and the about 420 information messages on the obligation profiles (7-13) are gone. The 12 errors of the run of 2026-10-23 (5-6) are gone too.
+The 6 errors of the first 2026-10-30 run (1-4) and the about 420 information messages on the obligation profiles (7-13) are gone. The 12 errors of the run of 2026-10-23 (5-6) are gone too. The 15 information messages added on 2026-10-31 come from the new examples (5-1) and are expected: the standalone DiagnosticReport refers to its lab results by `urn:uuid`, which only resolves inside the Bundle ("does not match any known slice", 8+1); the Consent and travel Observation have no slice in the open IPS and EPS Bundle slicing; the Travel History section has no slice in the IPS Composition; the Consent `policy.uri` is an example.org address; and the IPS DiagnosticReport status value set refers to a draft code system.
 
 | ID | Message | Resources | Fix |
 |---|---|---|---|
@@ -166,8 +163,7 @@ The 6 errors of the first 2026-10-30 run (1-4) and the about 420 information mes
 
 | ID | Lines | Entry (uses) | Fix |
 |---|---|---|---|
-| 7-5 | 71-72 | "does not match any known slice defined in the profile …/bundle-eu-eps" (19) | These are the lab Observations of the complete example, which have no Bundle slice by decision (3.1-1, won't fix), so the entry stays. It ends with the profile version `1.0.0-ci-build`, so it stops matching once the version is set for the release (1-1), and the 19 messages come back. Replace the version with `%` (`…/bundle-eu-eps|%`), and fix the typo in the comment ("bunlde"). |
-| 7-6 | 9-10 | "The Implementation Guide contains no examples for this profile" (23) | It now covers the 19 obligation profiles, as its comment says, but it also hides the missing examples of 4 structural profiles (5-1). Add the examples. If the entry stays, keep the comment accurate ("Obligation profiles have no examples"). |
+| 7-5 | 71-72 | "does not match any known slice defined in the profile …/bundle-eu-eps" (21) | These are the lab Observations, the Consent and the travel Observation of the complete example, which have no Bundle slice by decision (3.1-1, won't fix), so the entry stays. It ends with the profile version `1.0.0-ci-build`, so it stops matching once the version is set for the release (1-1), and the 19 messages come back. Replace the version with `%` (`…/bundle-eu-eps|%`), and fix the typo in the comment ("bunlde"). |
 | 7-7 | 24-25 | `All_observations_should_have_a_performer` (19) | A blanket suppression by message id. Add a performer (the lab Organization) to the example lab Observations, and delete it. |
 | 7-8 | 12-19 | `Terminology_TX_NoValid_3_CC` (41), `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` (65), `TYPE_SPECIFIC_CHECKS_DT_QTY_UCUM_ANNOTATIONS` (10) | Blanket suppressions by message id that will also hide new occurrences. Check the current hits once, then narrow them to message texts, or document why they are global. |
 
@@ -196,10 +192,10 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 75 (O
 ## 9. Suggested order of work
 
 1. Delete the stale entries (7-4, 7-9), fix 7-2, then rebuild.
-2. Examples for the four profiles without one (5-1), then narrow the suppressions 7-5 to 7-7.
+2. Narrow the suppressions 7-5 and 7-7.
 3. Groups (2-2), and obligations vs cardinality (4-2).
 4. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
-5. Narrative pages: copyright statement (6.4-11), Variance and Missing Data (6.4-1, 6.4-12, 6.4-2), lab mapping row (6.4-8), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-4, 6.4-9, 6.3-2, 6.3-3), then `changes.md` (6.1-1).
+5. Narrative pages: copyright statement (6.4-11), Variance and Missing Data (6.4-1, 6.4-12, 6.4-2), lab mapping row (6.4-8), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-4, 6.4-9), then `changes.md` (6.1-1).
 6. QA leftovers: 7-3, 7-4, 7-9.
 7. Release configuration (1-1), rebuild, re-run this review.
 8. Cleanup: §3.3, §3.4, §6.5, §8.
@@ -225,6 +221,13 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 ---
 
 ## Fixed since the first review
+
+**Commit `6875781`**
+
+- **[5-1]** No inline instance existed for the four profiles, so four new `#example` instances were written for the complete example (Petra Schwartz) and added to its Bundle and Composition (`input/fsh/examples/__5042-537688-1-eps-example.fsh`): `Procedure: Appendectomy, 1998-04-12` (History of Procedures, which was "no known procedures"), `DiagnosticReport: Lipid panel, 2024-07-15` (Results, grouping the 4 lipid results), `Consent: Advance directive, do not resuscitate` (new Advance Directives section) and `Observation: Country visited, Brazil, 2025-02` (new Travel History section). Every structural profile now has an example. Confirmed by a Publisher rebuild: 0 errors.
+- **[7-6]** Follows from 5-1: the suppression on lines 9-10 now matches only the 19 obligation profiles (19 uses), as its comment says.
+- **[6.3-2]** `index.md` links "Xt-EHR Joint Action" to `https://www.xt-ehr.eu/` and the models through `{{ xtehr_models }}` (1.0.0); `logicalmodels.md:5` uses `{{ xtehr_models }}`. `index.md` now includes `variables.html`.
+- **[6.3-3]** `copyright.md` links the HL7 IPS Copyrights page (`{{ ips_base }}copyrights.html`, IPS 2.0.1) and now includes `variables.html`. 0 broken links.
 
 **Commit `9d86441`**
 
