@@ -35,6 +35,7 @@ Decisions already taken for this guide. Consistency reviews do not raise these a
 
 - **Copyright statement** (decided 2026-10-31). `copyright.md` keeps "protected by Copyright … HL7 Europe" together with the CC0 1.0 dedication. Reviews do not raise it again.
 - **Unprofiled medication resources not in Known Issues** (decided 2026-10-31). MedicationRequest, MedicationAdministration and MedicationDispense in the Medication Summary section are not listed in `knownIssues.md`.
+- **Markup inside page fragments** (decided 2026-11-01). The `<head>`/`<title>` and empty `<a>`/`<p>` elements in the map pages, `modelmap.xml` and `composition-eu-eps-notes.xml` are kept. Reviews do not raise them again.
 
 ## Configuration
 

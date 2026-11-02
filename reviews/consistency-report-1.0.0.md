@@ -1,11 +1,11 @@
 # HL7 Europe Patient Summary – Consistency Review for 1.0.0 (release after 1.0.0-ballot)
 
-- **Date:** 2026-10-02. Last updated 2026-10-31 after a rebuild with IG Publisher 3.0.1 and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-02. Last updated 2026-11-01 after a rebuild with IG Publisher 3.0.1 and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
-  - SUSHI reports 0 errors and 0 warnings (run of 2026-10-31).
-  - The IG Publisher 3.0.1 run of 2026-10-31 22:26 was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `b89c1ff`.
-  - It reports **0 errors, 2 warnings and 50 information messages**, 0 broken links, plus 140 suppressed warnings and 500 suppressed hints. 33 of the information messages are the OID messages (7-2); 15 come from the new examples (see §7).
+  - SUSHI reports 0 errors and 0 warnings (run of 2026-11-01).
+  - The IG Publisher 3.0.1 run of 2026-11-01 20:36 was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `dfc687f`.
+  - It reports **0 errors, 2 warnings and 16 information messages**, 0 broken links, plus 140 suppressed warnings and 499 suppressed hints. The OID messages (7-2) are gone; the new warning is about the OID root registration (7-15). 15 information messages come from the examples added for 5-1 (see §7).
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 1.0.0. **Low** means cleanup or editorial.
 
@@ -102,54 +102,47 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
 
 ### 6.5 Language and editorial conventions
 
-- **[6.5-4]** **Markup.**
-  - The 11 map pages and `modelmap.xml` contain `<head>`/`<title>` (line 4), and empty `<a>`/`<p>` elements (lines 18-19), inside page fragments.
-  - **New:** `input/includes/composition-eu-eps-notes.xml:4`: an empty `<a> </a>` (carried over from the old notes page).
+No open items.
 
 ### 6.6 `knownIssues.md`: suggested additions
 
-- **[6.6-2]** Known cardinality differences with Xt-EHR 1.0.0, kept as they are for this release:
-  - `EHDSMedicationUse.dosageInstructions` 1..1 vs `MedicationStatement.dosage` 0..*
-  - `EHDSCurrentPregnancy.currentPregnancyStatus` 1..1 vs `Observation.value[x]` 0..1
-  - `EHDSAdvanceDirective.header.subject` 1..1 vs `Consent.patient` 0..1
-  - Optionally, `EHDSDevice.type` 0..* vs `Device.type` 0..1. This is a FHIR R4 limit, documented in `map-ehdsdevice.xml` since `7a842ec`.
-- **[6.6-5]** **New:** The Bundle has no entry slices for some resources referenced by sections (medical test results, travel, consent, DocumentReference, ClinicalImpression, ImmunizationRecommendation, MedicationRequest/Administration/Dispense). They are allowed, since the slicing is open (3.1-1, won't fix).
+No open items.
 
 ---
 
 ## 7. QA output and `ignoreWarnings.txt`
 
-This section is based on the last IG Publisher 3.0.1 run of 2026-10-31, built as `1.0.0-ci-build` / `draft` / `ci-build`.
+This section is based on the IG Publisher 3.0.1 run of 2026-11-01 20:36, built as `1.0.0-ci-build` / `draft` / `ci-build`.
 
-**Visible messages:** 0 errors, 2 warnings and 50 information messages.
+**Visible messages:** 0 errors, 2 warnings and 16 information messages.
 
-The 6 errors of the first 2026-10-30 run (1-4) and the about 420 information messages on the obligation profiles (7-13) are gone. The 12 errors of the run of 2026-10-23 (5-6) are gone too. The 15 information messages added on 2026-10-31 come from the new examples (5-1) and are expected: the standalone DiagnosticReport refers to its lab results by `urn:uuid`, which only resolves inside the Bundle ("does not match any known slice", 8+1); the Consent and travel Observation have no slice in the open IPS and EPS Bundle slicing; the Travel History section has no slice in the IPS Composition; the Consent `policy.uri` is an example.org address; and the IPS DiagnosticReport status value set refers to a draft code system.
+The 6 errors of the first 2026-10-30 run (1-4) and the about 420 information messages on the obligation profiles (7-13) are gone. The 12 errors of the run of 2026-10-23 (5-6) are gone too. The 15 information messages added on 2026-10-31 come from the new examples (5-1) and are expected: the standalone DiagnosticReport refers to its lab results by `urn:uuid`, which only resolves inside the Bundle ("does not match any known slice", 8+1); the travel Observation has no slice in the open EPS Bundle slicing, and the Consent and the travel Observation have none in the IPS one; the Travel History section has no slice in the IPS Composition; the Consent `policy.uri` is an example.org address; and the IPS DiagnosticReport status value set refers to a draft code system.
 
 | ID | Message | Resources | Fix |
 |---|---|---|---|
 | 7-1 | Warning: the Jira specification file appears to be out of date. | `FHIR-eu-eps.xml` | See 1-2. |
-| 7-2 | Warning: "The resource ValueSet/gestational-age-loinc **should** have an OID assigned", plus information messages "… **could usefully** have an OID assigned" (all profiles and the IG). The wildcard on line 75 has 0 uses: Publisher 3.0.1 links to `ig-guidance/oids.html`, not to the `fhir-tools-ig` URL in the entry. | all StructureDefinitions, `ValueSet-gestational-age-loinc`, the IG | Set the `auto-oid-root` IG parameter (or assign OIDs); that fixes both wordings. Otherwise shorten line 75 to `%could usefully have an OID assigned%`. |
 | 7-3 | Information: the parameter `system-version` has the same name as a core operation parameter but has type uri. | `Parameters-exp-params` | The suppression on line 69 uses an older message text (0 uses). Replace it with the current text. |
+| 7-15 | **New:** Warning: "The assigned auto-oid-root value '2.16.840.1.113883.2.51.22.3' is not registered in https://github.com/FHIR/ig-registry/blob/master/oid-assignments.json so isn't known to be valid". | the IG | Register the root for `hl7.fhir.eu.eps` in the FHIR IG registry (`oid-assignments.json`, pull request to `FHIR/ig-registry`). |
 | 7-4 | Lines 41-58: the 18 "no explicitly linked examples" entries for the obligation profiles have 0 uses. Publisher 3.0.1 no longer emits that message; the obligation profiles are covered by line 10 instead (7-6). Line 49 also contains zero-width spaces (U+200B). | `input/ignoreWarnings.txt` | Delete lines 40-58. |
 
 **Publication request check:** `publication-request.json` is missing (see 1-1).
 
-**Suppressed messages:** 142 warnings and 498 hints, from 41 entries. 21 entries have 0 uses: lines 41-58 (7-4), 63 (7-9), 69 (7-3) and 75 (7-2).
+**Suppressed messages:** 140 warnings and 499 hints, from 40 entries. 20 entries have 0 uses: lines 41-58 (7-4), 63 (7-9) and 69 (7-3).
 
 **Suppressions that hide fixable issues:**
 
 | ID | Lines | Entry (uses) | Fix |
 |---|---|---|---|
-| 7-5 | 71-72 | "does not match any known slice defined in the profile …/bundle-eu-eps" (21) | These are the lab Observations, the Consent and the travel Observation of the complete example, which have no Bundle slice by decision (3.1-1, won't fix), so the entry stays. It ends with the profile version `1.0.0-ci-build`, so it stops matching once the version is set for the release (1-1), and the 19 messages come back. Replace the version with `%` (`…/bundle-eu-eps|%`), and fix the typo in the comment ("bunlde"). |
+| 7-5 | 71-72 | "does not match any known slice defined in the profile …/bundle-eu-eps" (21) | These are the lab Observations and the travel Observation of the complete example (the Consent now has a slice, 6.6-5), which have no Bundle slice by decision (3.1-1, won't fix), so the entry stays. It ends with the profile version `1.0.0-ci-build`, so it stops matching once the version is set for the release (1-1), and the 19 messages come back. Replace the version with `%` (`…/bundle-eu-eps|%`), and fix the typo in the comment ("bunlde"). |
 | 7-7 | 24-25 | `All_observations_should_have_a_performer` (19) | A blanket suppression by message id. Add a performer (the lab Organization) to the example lab Observations, and delete it. |
 | 7-8 | 12-19 | `Terminology_TX_NoValid_3_CC` (41), `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` (65), `TYPE_SPECIFIC_CHECKS_DT_QTY_UCUM_ANNOTATIONS` (10) | Blanket suppressions by message id that will also hide new occurrences. Check the current hits once, then narrow them to message texts, or document why they are global. |
 
-The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 75 (OIDs) no longer matches anything; see 7-2.
+The wildcard on line 7 (5 uses, R5 document rule) is still justified.
 
 **Stale entries** (0 uses, safe to delete), by line in `ignoreWarnings.txt`:
 
 - **[7-9]** Line 63: "Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentscope|4.0.1".
-- Lines 41-58, 69 and 75 also have 0 uses; see 7-4, 7-3 and 7-2.
+- Lines 41-58 and 69 also have 0 uses; see 7-4 and 7-3.
 
 ---
 
@@ -168,11 +161,11 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified. Line 75 (O
 
 ## 9. Suggested order of work
 
-1. Delete the stale entries (7-4, 7-9), fix 7-2, then rebuild.
+1. Delete the stale entries (7-4, 7-9), register the OID root (7-15), then rebuild.
 2. Narrow the suppressions 7-5 and 7-7.
 3. Groups (2-2), and obligations vs cardinality (4-2).
 4. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
-5. Narrative pages: Variance (6.4-12), Known Issues (§6.6, 6.4-10), home page and Introduction (6.4-9), then `changes.md` (6.1-1).
+5. Narrative pages: Variance (6.4-12), Known Issues (6.4-10), home page and Introduction (6.4-9), then `changes.md` (6.1-1).
 6. QA leftovers: 7-3, 7-4, 7-9.
 7. Release configuration (1-1), rebuild, re-run this review.
 8. Cleanup: §3.3, §3.4, §6.5, §8.
@@ -185,21 +178,28 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 
 | ID | Sev | Location | Finding | Rationale |
 |---|---|---|---|---|
-| 3.1-1 | Medium | `input/fsh/profiles/bundle-eu-eps.fsh:99-135` | Some resources referenced by sections have no Bundle entry slice: medical test results (`medicalTestResult-eu-core`), travel (`observation-travel-eu-eps`), consent (`consent-eu-eps`), DocumentReference, ClinicalImpression, ImmunizationRecommendation and MedicationRequest/Administration/Dispense. | Won't fix, decided by the editor (2026-10-30). The entry slicing is open (`bundle-eu-eps.fsh:90`), so these resources are allowed without a dedicated slice. List it in `knownIssues.md` (6.6-5). |
+| 3.1-1 | Medium | `input/fsh/profiles/bundle-eu-eps.fsh:99-135` | Some resources referenced by sections have no Bundle entry slice: medical test results (`medicalTestResult-eu-core`), travel (`observation-travel-eu-eps`), consent (`consent-eu-eps`), DocumentReference, ClinicalImpression, ImmunizationRecommendation and MedicationRequest/Administration/Dispense. | Won't fix, decided by the editor (2026-10-30). The entry slicing is open (`bundle-eu-eps.fsh:90`), so these resources are allowed without a dedicated slice. Partly superseded by 6.6-5: Consent and DocumentReference now have slices. |
 | 3.1-2 | Medium | `input/fsh/profiles/composition-eu-eps.fsh:318`, `:354`, `:380` | No `entry only` rule on three sections: Pregnancy History allows any resource type next to its slices, Patient Story allows any type (as documented), and Patient History is commented "purely narrative" but allows entries. | Won't fix, decided by the editor (2026-10-30). |
 | 3.1-3 | Low | `input/fsh/profiles/composition-eu-eps.fsh:128-135` | The only Medication Summary slice is named `medicationStatementOrRequest` but allows only `MedicationStatementEuEps`; MedicationRequest, MedicationAdministration and MedicationDispense are allowed with no profile and have no Bundle slice. | Won't fix, decided by the editor (2026-10-30). Not listed in `knownIssues.md` either (6.6-4). |
 | 3.3-3 | Low | `input/fsh/rulesSet/rulesSet-common.fsh`, `rulesSet-obligations.fsh` | 12 unused rulesets: `ExtensionContext`, `SetFmmAndStatusRuleInstance`, `NoSubSectionsRules`, `SectionElementsRules`, `SectionCommonRules`, `SNOMEDCopyrightForVS`, `NPUCopyrightForVS`, `NIBSCCopyrightForVS`, `ObligationElement`, `ObligationSet1`–`3`. | Won't fix, decided by the editor (2026-10-30). |
 | 3.3-4 | Low | `input/fsh/alias-*.fsh` | 172 of 217 aliases are unused (`$composition.version-r5` became unused when its commented-out rule was removed in `ade6d47`) (mostly eHDSI value sets, IPS profiles and R5 cross-version extensions). | Won't fix, decided by the editor (2026-10-30). The duplicates are fixed in `ade6d47`. |
 | 3.4-3 | Low | `input/fsh/rulesSet/rulesSet-common.fsh:76` | The LOINC copyright says "1995-2020". | Won't fix, decided by the editor (2026-10-31). The SNOMED copyright mojibake, also part of this item, is fixed in `4c7057b`. |
-| 6.4-5 | Medium | `medicationStatement-eu-eps`, `observation-pregnancy-status-eu-eps`, `consent-eu-eps` | Three Xt-EHR 1.0.0 elements are 1..1 but optional in the profiles (`dosageInstructions`, `currentPregnancyStatus`, `header.subject`). | The editor decided to keep the profiles unchanged for this release (2026-10-02). Document them in `knownIssues.md` (6.6-2). |
+| 6.4-5 | Medium | `medicationStatement-eu-eps`, `observation-pregnancy-status-eu-eps`, `consent-eu-eps` | Three Xt-EHR 1.0.0 elements are 1..1 but optional in the profiles (`dosageInstructions`, `currentPregnancyStatus`, `header.subject`). | The editor decided to keep the profiles unchanged for this release (2026-10-02). Documented in `knownIssues.md` (6.6-2). |
 | 6.4-6 | Low | `map-ehdslaboratoryobservation.xml:246, 332` | `referenceRange` and `component.referenceRange` are mapped as a whole, without their sub-elements. | Accepted by the editor: the mapping as a whole is enough. |
 | 6.4-7 | Low | `map-ehdspatientsummary.xml` | `header.source` is not mapped. | `EHDSDocument` forbids it (max 0), so there is nothing to map. |
 | 6.4-11 | Medium | `input/pagecontent/copyright.md:2-4` | The statement "protected by Copyright 2026 HL7 Europe" sits next to the CC0 1.0 dedication, which waives copyright. | The editor decided to keep the current copyright statement (2026-10-31). |
+| 6.5-4 | Low | 11 map pages, `modelmap.xml`, `input/includes/composition-eu-eps-notes.xml:4` | The map pages contain `<head>`/`<title>` and empty `<a>`/`<p>` elements inside page fragments; the Composition notes include has an empty `<a> </a>`. | Won't fix, decided by the editor (2026-11-01). The pages render correctly and the QA reports no invalid XHTML. |
 | 6.6-4 | Low | `input/pagecontent/knownIssues.md` | Proposed known issue: MedicationRequest, MedicationAdministration and MedicationDispense are allowed in the Medication Summary section but not profiled (3.1-3). | Won't fix, decided by the editor (2026-10-31): not added to Known Issues. |
 
 ---
 
 ## Fixed since the first review
+
+**Commit `dfc687f`**
+
+- **[7-2]** `sushi-config.yaml` sets `auto-oid-root: 2.16.840.1.113883.2.51.22.3`, so the Publisher assigns OIDs to all artifacts (e.g. `urn:oid:2.16.840.1.113883.2.51.22.3.42.2` for `bundle-eu-eps`). The "should/could usefully have an OID assigned" messages are gone, and the unused OID suppression is deleted from `input/ignoreWarnings.txt`. The first root tried, `2.16.840.1.113883.2.51.22.2`, is registered to `hl7.fhir.be.pss`. The root still has to be registered (7-15).
+- **[6.6-5]** Instead of a known issue, the Bundle now has entry slices for Consent (`consent`, `ConsentEuEps`) and DocumentReference (`documentreference`, any DocumentReference: no EU Core or IPS profile exists) (`input/fsh/profiles/bundle-eu-eps.fsh`). The complete example puts its advance directive in the `consent` slice. By the editor's decision, the other resources (medical test results, travel, ClinicalImpression, ImmunizationRecommendation, MedicationRequest/Administration/Dispense) keep no slice and are not listed in Known Issues.
+- **[6.6-2]** `knownIssues.md` has a new section, "Alignment with the Xt-EHR models". It lists the three elements that are `1..1` in Xt-EHR 1.0.0 but optional in the profiles (`dosageInstructions`, `currentPregnancyStatus`, `header.subject` of the advance directive), linking the profiles and map pages, and the R4 limit on `Device.type`.
 
 **Commit `b89c1ff`**
 
