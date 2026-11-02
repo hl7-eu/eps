@@ -2,6 +2,7 @@
 ### Obligations
 
 1. Obligations are only informative for this version of the guide. Further analysis is needed for consolidating them.
+2. This version of the guide reuses the IPS obligations as they are, waiting for the obligations of the European electronic health record exchange format (EEHRxF). Some of them are therefore weaker than the cardinality set by the EPS profiles. For example, `Patient.identifier` is required (`1..*`) in [Patient (EPS)](StructureDefinition-patient-eu-eps.html) but has a *populate-if-known* obligation, and the History of Procedures and Medical Devices sections are required (`1..1`) in [Composition (EPS)](StructureDefinition-composition-eu-eps.html) but have a *SHOULD populate-if-known* obligation. In these cases the cardinality of the profile applies.
 
 ### Dependencies
 
