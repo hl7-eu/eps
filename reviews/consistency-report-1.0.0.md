@@ -57,9 +57,7 @@ No open items.
 
 ## 4. Obligation profiles
 
-| ID | Sev | Location | Finding | Fix |
-|---|---|---|---|---|
-| 4-2 | Medium | `patient-eps.fsh:11` / `patient-obl-eu-eps.fsh:10`; `composition-obl-eu-eps.fsh:82-88` | Some obligations are weaker than the EPS cardinality. `Patient.identifier` is `1..*` (FHIR-58492) but has *populate-if-known*. `sectionProceduresHx` and `sectionMedicalDevices` are `1..1` but have *SHOULD populate-if-known*. These are the IPS obligations, copied as they are, while EPS tightened the cardinality. Since `3030934` the cardinality and the obligation are in different profiles. | Align the obligations with the cardinality (e.g. *SHALL populate*), or say on the Obligations page that the cardinality takes precedence. |
+No open items.
 
 ---
 
@@ -149,7 +147,7 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified.
 
 1. Register the OID root (7-15, pull request open), then rebuild.
 2. Narrow the blanket suppressions (7-8).
-3. Groups (2-2), and obligations vs cardinality (4-2).
+3. Groups (2-2).
 4. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
 5. Narrative pages: Variance (6.4-12), Known Issues (6.4-10), home page and Introduction (6.4-9), then `changes.md` (6.1-1).
 6. Cleanup: §3.3, §3.4, `Requirements-fromNarrative.json` (8-4).
@@ -179,6 +177,10 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 ---
 
 ## Fixed since the first review
+
+**Commit `eaf94b4`**
+
+- **[4-2]** The obligations stay as in IPS. `knownIssues.md` (Obligations, item 2) now says that this version reuses the IPS obligations, waiting for the EEHRxF ones, that some are weaker than the EPS cardinality (`Patient.identifier`, History of Procedures, Medical Devices), and that the cardinality of the profile applies.
 
 **Commit `d9f46f5`**
 
