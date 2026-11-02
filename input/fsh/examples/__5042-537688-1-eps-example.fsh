@@ -180,8 +180,8 @@ Usage: #example
 * entry[procedure][=].resource = Instance-Procedure-28491b08-918a-41d0-a3aa-3b10e428eb70
 * entry[diagnosticreport][+].fullUrl = "urn:uuid:d3b00375-a7dd-4f4f-b753-8b4550cff316"
 * entry[diagnosticreport][=].resource = Instance-DiagnosticReport-d3b00375-a7dd-4f4f-b753-8b4550cff316
-* entry[+].fullUrl = "urn:uuid:b8c48ab1-24d7-4315-8502-dbae014fde57"
-* entry[=].resource = Instance-Consent-b8c48ab1-24d7-4315-8502-dbae014fde57
+* entry[consent][+].fullUrl = "urn:uuid:b8c48ab1-24d7-4315-8502-dbae014fde57"
+* entry[consent][=].resource = Instance-Consent-b8c48ab1-24d7-4315-8502-dbae014fde57
 * entry[+].fullUrl = "urn:uuid:1e3faf58-f0ac-42fa-bc14-6afc9e987af1"
 * entry[=].resource = Instance-Observation-1e3faf58-f0ac-42fa-bc14-6afc9e987af1
 

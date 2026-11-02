@@ -103,11 +103,11 @@ Description: """This profile defines how the Bundle resource is used to represen
     careplan 0..* and
     // clinicalimpression 0..* and
     condition 0..* and
-    // consent 0..* and
+    consent 0..* and
     device 0..* and
     deviceusestatement 0..* and
     diagnosticreport 0..* and
-    // documentreference 0..* and
+    documentreference 0..* and
     flag 0..* and
     imagingstudy 0..* and
     immunization 0..* and
@@ -146,6 +146,8 @@ Description: """This profile defines how the Bundle resource is used to represen
 * entry[allergyintolerance].resource only AllergyIntoleranceEuCore
 * entry[condition].resource 1..
 * entry[condition].resource only ConditionEuCore
+* entry[consent].resource 1..
+* entry[consent].resource only ConsentEuEps
 * entry[device].resource 1..
 * entry[device].resource only DeviceEuEps
 * entry[deviceusestatement].resource 1..
@@ -153,6 +155,8 @@ Description: """This profile defines how the Bundle resource is used to represen
 
 * entry[diagnosticreport].resource 1..
 * entry[diagnosticreport].resource only DiagnosticReportEuEps  // to be checked
+* entry[documentreference].resource 1..
+* entry[documentreference].resource only DocumentReference
 * entry[imagingstudy].resource 1..
 * entry[imagingstudy].resource only $ImagingStudy-uv-ips  //EuEps
     

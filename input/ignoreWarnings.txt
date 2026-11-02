@@ -71,5 +71,3 @@ If the parameter 'system-version' is an instance of the parameter defined in the
 # MedicalTestResult not specified as bunlde entry slice
 This element does not match any known slice defined in the profile http://hl7.eu/fhir/eps/StructureDefinition/bundle-eu-eps|1.0.0-ci-build (this may not be a problem, but you should check that it's not intended to match a slice)
 
-# OID not assiged in this Implementation Guide
-%could usefully have an OID assigned (OIDs are easy to assign - see https://build.fhir.org/ig/FHIR/fhir-tools-ig/CodeSystem-ig-parameters.html#ig-parameters-auto-oid-root)%

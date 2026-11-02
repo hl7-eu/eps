@@ -165,6 +165,7 @@ parameters: # see https://confluence.hl7.org/display/FHIR/Implementation+Guide+P
   show-inherited-invariants: true
   usage-stats-opt-out: true
   ips-comparison: 2.0.1
+  auto-oid-root: 2.16.840.1.113883.2.51.22.3
 
 menu:
   Home: index.html
