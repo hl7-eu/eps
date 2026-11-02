@@ -1,3 +1,6 @@
+RuleSet: CompliesWithProfile ( profile, index )
+* ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-compliesWithProfile][{index}].valueCanonical = {profile}
+
 RuleSet: ImposeProfile ( profile, index )
 * ^extension[http://hl7.org/fhir/StructureDefinition/structuredefinition-imposeProfile][{index}].valueCanonical = {profile}
 

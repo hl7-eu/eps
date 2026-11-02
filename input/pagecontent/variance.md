@@ -60,7 +60,7 @@ Note that while the intent is to have no variance, this implementation guide imp
 
 #### Profile Conformance
 
-The EPS profiles are derived from EU Core (see [above](#variance-from-hl7-europe-base-and-core)) rather than from the IPS profiles. Conformance with the IPS profiles is declared using the [imposeProfile](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html) extension.
+The EPS profiles are derived from EU Core (see [above](#variance-from-hl7-europe-base-and-core)) rather than from the IPS profiles. Conformance with the IPS profiles is declared using the [compliesWithProfile](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html) extension.
 
 | EPS profile | Also conforms to (IPS) |
 | --- | --- |

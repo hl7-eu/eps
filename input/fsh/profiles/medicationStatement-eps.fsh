@@ -6,7 +6,7 @@ Description: """This profile constrains the MedicationStatement resource in the 
 * ^experimental = false
 
 * insert SetFmmAndStatusRule (1, draft)
-* insert ImposeProfile($MedicationStatement-uv-ips, 0)
+* insert CompliesWithProfile ($MedicationStatement-uv-ips, 0)
 
 * extension[adherence].extension[code] ^short = "Type of adherence"
 
