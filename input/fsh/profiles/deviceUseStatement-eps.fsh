@@ -16,6 +16,7 @@ Description: """This profile constrains the DeviceUseStatement resource in the s
 * subject ^definition = "The patient using the device."
 * subject.reference 1.. 
 * timing[x] 1.. // 1.. in the IPS not in the EHDS model
+* timing[x] only Period or dateTime // as in the IPS
 * timingPeriod.start ^short = "Start of usage (dateTime)"
 * timingPeriod.end ^short = "End of usage (dateTime)"
 * reasonCode ^short = "Why is used (code)"
