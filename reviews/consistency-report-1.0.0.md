@@ -1,11 +1,11 @@
 # HL7 Europe Patient Summary – Consistency Review for 1.0.0 (release after 1.0.0-ballot)
 
-- **Date:** 2026-10-02. Last updated 2026-11-01 after a rebuild with IG Publisher 3.0.1 and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-02. Last updated 2026-11-02 after a rebuild with IG Publisher 3.0.1 and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
-  - SUSHI reports 0 errors and 0 warnings (run of 2026-11-01).
-  - The IG Publisher 3.0.1 run of 2026-11-01 20:36 was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `dfc687f`.
-  - It reports **0 errors, 2 warnings and 16 information messages**, 0 broken links, plus 140 suppressed warnings and 499 suppressed hints. The OID messages (7-2) are gone; the new warning is about the OID root registration (7-15). 15 information messages come from the examples added for 5-1 (see §7).
+  - SUSHI reports 0 errors and 0 warnings (run of 2026-11-02).
+  - The IG Publisher 3.0.1 run of 2026-11-02 was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `d9f46f5`.
+  - It reports **0 errors, 2 warnings and 15 information messages**, 0 broken links, plus 119 suppressed warnings and 500 suppressed hints, from 20 entries (all in use). The two warnings are the Jira spec file (1-2) and the unregistered OID root (7-15); the 15 information messages come from the examples added for 5-1 (see §7).
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 1.0.0. **Low** means cleanup or editorial.
 
@@ -112,63 +112,48 @@ No open items.
 
 ## 7. QA output and `ignoreWarnings.txt`
 
-This section is based on the IG Publisher 3.0.1 run of 2026-11-01 20:36, built as `1.0.0-ci-build` / `draft` / `ci-build`.
+This section is based on the IG Publisher 3.0.1 run of 2026-11-02, built as `1.0.0-ci-build` / `draft` / `ci-build`.
 
-**Visible messages:** 0 errors, 2 warnings and 16 information messages.
+**Visible messages:** 0 errors, 2 warnings and 15 information messages.
 
 The 6 errors of the first 2026-10-30 run (1-4) and the about 420 information messages on the obligation profiles (7-13) are gone. The 12 errors of the run of 2026-10-23 (5-6) are gone too. The 15 information messages added on 2026-10-31 come from the new examples (5-1) and are expected: the standalone DiagnosticReport refers to its lab results by `urn:uuid`, which only resolves inside the Bundle ("does not match any known slice", 8+1); the travel Observation has no slice in the open EPS Bundle slicing, and the Consent and the travel Observation have none in the IPS one; the Travel History section has no slice in the IPS Composition; the Consent `policy.uri` is an example.org address; and the IPS DiagnosticReport status value set refers to a draft code system.
 
 | ID | Message | Resources | Fix |
 |---|---|---|---|
 | 7-1 | Warning: the Jira specification file appears to be out of date. | `FHIR-eu-eps.xml` | See 1-2. |
-| 7-3 | Information: the parameter `system-version` has the same name as a core operation parameter but has type uri. | `Parameters-exp-params` | The suppression on line 69 uses an older message text (0 uses). Replace it with the current text. |
-| 7-15 | **New:** Warning: "The assigned auto-oid-root value '2.16.840.1.113883.2.51.22.3' is not registered in https://github.com/FHIR/ig-registry/blob/master/oid-assignments.json so isn't known to be valid". | the IG | Register the root for `hl7.fhir.eu.eps` in the FHIR IG registry (`oid-assignments.json`, pull request to `FHIR/ig-registry`). |
-| 7-4 | Lines 41-58: the 18 "no explicitly linked examples" entries for the obligation profiles have 0 uses. Publisher 3.0.1 no longer emits that message; the obligation profiles are covered by line 10 instead (7-6). Line 49 also contains zero-width spaces (U+200B). | `input/ignoreWarnings.txt` | Delete lines 40-58. |
+| 7-15 | **New:** Warning: "The assigned auto-oid-root value '2.16.840.1.113883.2.51.22.3' is not registered in https://github.com/FHIR/ig-registry/blob/master/oid-assignments.json so isn't known to be valid". | the IG | Register the root for `hl7.fhir.eu.eps` in the FHIR IG registry (`oid-assignments.json`). Pull request opened: https://github.com/FHIR/ig-registry/pull/706 (2026-11-02); the warning goes once it is merged. |
 
 **Publication request check:** `publication-request.json` is missing (see 1-1).
 
-**Suppressed messages:** 140 warnings and 499 hints, from 40 entries. 20 entries have 0 uses: lines 41-58 (7-4), 63 (7-9) and 69 (7-3).
+**Suppressed messages:** 119 warnings and 500 hints, from 20 entries, all in use.
 
 **Suppressions that hide fixable issues:**
 
 | ID | Lines | Entry (uses) | Fix |
 |---|---|---|---|
-| 7-5 | 71-72 | "does not match any known slice defined in the profile …/bundle-eu-eps" (21) | These are the lab Observations and the travel Observation of the complete example (the Consent now has a slice, 6.6-5), which have no Bundle slice by decision (3.1-1, won't fix), so the entry stays. It ends with the profile version `1.0.0-ci-build`, so it stops matching once the version is set for the release (1-1), and the 19 messages come back. Replace the version with `%` (`…/bundle-eu-eps|%`), and fix the typo in the comment ("bunlde"). |
-| 7-7 | 24-25 | `All_observations_should_have_a_performer` (19) | A blanket suppression by message id. Add a performer (the lab Organization) to the example lab Observations, and delete it. |
 | 7-8 | 12-19 | `Terminology_TX_NoValid_3_CC` (41), `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` (65), `TYPE_SPECIFIC_CHECKS_DT_QTY_UCUM_ANNOTATIONS` (10) | Blanket suppressions by message id that will also hide new occurrences. Check the current hits once, then narrow them to message texts, or document why they are global. |
 
 The wildcard on line 7 (5 uses, R5 document rule) is still justified.
 
-**Stale entries** (0 uses, safe to delete), by line in `ignoreWarnings.txt`:
-
-- **[7-9]** Line 63: "Reference to draft CodeSystem http://terminology.hl7.org/CodeSystem/consentscope|4.0.1".
-- Lines 41-58 and 69 also have 0 uses; see 7-4 and 7-3.
+**Stale entries:** none.
 
 ---
 
 ## 8. Repository hygiene
 
-- **[8-1]** `scripts/__pycache__/config.cpython-312.pyc` and `scripts/generateMapDiagramsFiles/__pycache__/config.cpython-312.pyc` are committed. Remove them and add `__pycache__/` to `.gitignore`.
-- **[8-2]** `scripts/_generateMapDiagrams.bat` and `scripts/generateMapDiagramsFiles/` generate the PlantUML map diagrams. Those pages are commented out in `sushi-config.yaml` (lines 59-62), and their sources were deleted. The scripts also use absolute local paths. Delete them or move them to `_attic`.
-- **[8-3]** `models-src/`: `__gen-fsh-from-xls.bat` and `config.ini` have absolute paths and write to `input/fsh/model-maps`, which no longer exists. The folder also holds the mapping workbook and the eHN guideline PDF (check that redistributing the PDF is allowed). Archive it or document how it's used.
 - **[8-4]** `Requirements-fromNarrative.json` at the repository root is committed but not part of the build. Delete it, or move it to `input/resources` if it should be published.
-- **[8-5]** Reference copies are committed: `_attic/` (101 files), `_ips_2.0/` (160) and `_xtehr_1.0/` (105). `_xtehr_1.0` is used for the Xt-EHR alignment check, so keep it. Decide whether the other two are still needed.
-- **[8-6]** `sushi-config.yaml` has many commented-out page entries (IPS comparison pages, map diagrams, `ips-diff.md`, `overview.md`, `recommendations.md`). Remove them before the release.
-- **[8-7]** **New:** `input/images/experts.png` (added in `033afaf`) is 1.5 MB, and `authors.md` shows it at 40% width. Compress or resize it (a few hundred KB is enough). This keeps the published guide and the package small.
-- **[8-8]** **New:** `ig-template/` contains 13 IG Publisher cache files (`.index.db`, `.index.json` in `content/`, `includes/`, `package/` and the `assets/` folders). Remove them from git and add `.index.db` and `.index.json` to `.gitignore`.
 
 ---
 
 ## 9. Suggested order of work
 
-1. Delete the stale entries (7-4, 7-9), register the OID root (7-15), then rebuild.
-2. Narrow the suppressions 7-5 and 7-7.
+1. Register the OID root (7-15, pull request open), then rebuild.
+2. Narrow the blanket suppressions (7-8).
 3. Groups (2-2), and obligations vs cardinality (4-2).
 4. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
 5. Narrative pages: Variance (6.4-12), Known Issues (6.4-10), home page and Introduction (6.4-9), then `changes.md` (6.1-1).
-6. QA leftovers: 7-3, 7-4, 7-9.
+6. Cleanup: §3.3, §3.4, `Requirements-fromNarrative.json` (8-4).
 7. Release configuration (1-1), rebuild, re-run this review.
-8. Cleanup: §3.3, §3.4, §6.5, §8.
 
 ---
 
@@ -194,6 +179,24 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 ---
 
 ## Fixed since the first review
+
+**Commit `d9f46f5`**
+
+- **[7-4]** The 18 "no explicitly linked examples" entries for the obligation profiles (0 uses, one with zero-width spaces) and their comment are deleted from `input/ignoreWarnings.txt`.
+- **[7-9]** The unused "Reference to draft CodeSystem …/consentscope|4.0.1" entry is deleted. The old `system-version` entry (7-3, 0 uses) and its comment are deleted too.
+- **[7-7]** The blanket suppression `All_observations_should_have_a_performer` is deleted. Its 21 hits were not lab results (those have a performer) but the 15 vital signs, the travel Observation and the 4 pregnancy Observations. They now have a performer: the practitioner Dr. Hel Ping for the vital signs (`__5042-537688-1-eps-example.fsh`, `__5042-537688-1-eps-composition.fsh`), and the patient (self-reported) for the travel and pregnancy Observations (`observation-pregnancy*-eps-example.fsh`).
+- **[7-5]** The `bundle-eu-eps` slice suppression ends with `|%` instead of the version `1.0.0-ci-build`, so it survives the release version. Its comment no longer says "bunlde" and names what it covers: lab results and travel Observations, which have no Bundle slice by decision (3.1-1).
+- **[7-3]** The `system-version` information message is suppressed with its current text, with the comment that the parameter is a uri, as in `$expand`.
+
+**Commit `8e06313`**
+
+- **[8-1]** The two committed `__pycache__/*.pyc` files are deleted (with 8-2), and `.gitignore` now ignores `__pycache__/`.
+- **[8-2]** `scripts/` is deleted: `_generateMapDiagrams.bat` and `generateMapDiagramsFiles/` (`config.py`, the CSV table and the XHTML template) generated the PlantUML map diagrams, whose pages are no longer built. The commented-out page entries in `sushi-config.yaml` remain (8-6).
+- **[8-3]** `models-src/` is deleted: `__gen-fsh-from-xls.bat` and `config.ini` wrote to `input/fsh/model-maps`, which no longer exists; the mapping workbook (`hl7-eps-models-and-maps.xlsx`) and the eHN guideline PDF were only used with them. The pages link the eHN guideline online. All files stay available in the git history.
+- **[8-5]** `_attic/` (101 files), `_ips_2.0/` (160) and `_xtehr_1.0/` (105) are removed from the repository but kept locally, and `.gitignore` now ignores them. `_xtehr_1.0` is still available locally for the Xt-EHR alignment check.
+- **[8-6]** `sushi-config.yaml`: the commented-out entries are deleted (the `hl7.fhir.uv.extensions.r4` dependency, the `mappings.md`, map diagram, 17 IPS comparison, `ips-diff.md`, `overview.md` and `recommendations.md` pages, and the "IPS Diff" menu item). The file still parses.
+- **[8-7]** `input/images/experts.png` is resized from 4592×3196 to 1200×835 pixels and reduced to 256 colours: 1.5 MB → 63 KB, with no visible loss (a flat map).
+- **[8-8]** The 13 IG Publisher cache files in `ig-template/` (`.index.db`, `.index.json`) are removed from git (kept locally), and `.gitignore` now ignores `.index.db` and `.index.json`.
 
 **Commit `dfc687f`**
 
