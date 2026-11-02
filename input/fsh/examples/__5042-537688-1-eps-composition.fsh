@@ -309,6 +309,7 @@ Usage: #example
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#8302-2 "Body Height"
 * subject = Reference(Patient-f0b2dcfe-e837-464b-ae8a-3b9da1807dd3) "Petra Schwartz"
+* performer = Reference(Practitioner-3752dacc-a6e8-4cdd-b82f-92e1647de816) "Dr. Hel Ping"
 * effectiveDateTime = "2025-07-14"
 * valueQuantity.value = 158.3
 * valueQuantity.code = #cm

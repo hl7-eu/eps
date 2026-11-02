@@ -1391,6 +1391,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#8302-2 "Body Height"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2025-07-14"
 * valueQuantity.value = 158.3
 * valueQuantity.code = #cm
@@ -1415,6 +1416,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#72514-3 "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2025-07-14"
 * valueQuantity.value = 3
 * valueQuantity.code = #{score}
@@ -1439,6 +1441,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#29463-7 "Body Weight"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2025-07-14"
 * valueQuantity.value = 73.3
 * valueQuantity.code = #kg
@@ -1463,6 +1466,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2025-07-14"
 * valueQuantity.value = 29.2
 * valueQuantity.code = #kg/m2
@@ -1487,6 +1491,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#8462-4 "Diastolic Blood Pressure"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2025-07-14"
 * valueQuantity.value = 55
 * valueQuantity.code = #mm[Hg]
@@ -1511,6 +1516,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2025-07-14"
 
 * code = $loinc#85354-9 "Blood Pressure panel with all children optional"
@@ -1551,6 +1557,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#9279-1 "Respiratory rate"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2025-07-14"
 * valueQuantity.value = 13
 * valueQuantity.code = #/min
@@ -1575,6 +1582,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#8302-2 "Body Height"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2024-07-08"
 * valueQuantity.value = 158.3
 * valueQuantity.code = #cm
@@ -1599,6 +1607,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#72514-3 "Pain severity - 0-10 verbal numeric rating [Score] - Reported"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2024-07-08"
 * valueQuantity.value = 2
 * valueQuantity.code = #{score}
@@ -1623,6 +1632,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#29463-7 "Body Weight"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2024-07-08"
 * valueQuantity.value = 71.3
 * valueQuantity.code = #kg
@@ -1647,6 +1657,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#39156-5 "Body mass index (BMI) [Ratio]"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2024-07-08"
 * valueQuantity.value = 28.5
 * valueQuantity.code = #kg/m2
@@ -1670,6 +1681,7 @@ Usage: #inline
 * status = #final
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2024-07-08"
 * code = $loinc#85354-9 "Blood Pressure panel with all children optional"
 
@@ -1709,6 +1721,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#8867-4 "Heart rate"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2024-07-08"
 * valueQuantity.value = 72
 * valueQuantity.code = #/min
@@ -1733,6 +1746,7 @@ Usage: #inline
 * category[VSCat].coding[0] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = $loinc#9279-1 "Respiratory rate"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
+* performer = Reference(urn:uuid:398f1dee-39b2-4259-8293-7385d482d06e) "Dr. Hel Ping"
 * effectiveDateTime = "2024-07-08"
 * valueQuantity.value = 14
 * valueQuantity.code = #/min
@@ -2275,6 +2289,7 @@ Usage: #example
 * status = #final
 * code = $loinc#94651-7 "Country of travel [Location]"
 * subject = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98)
+* performer = Reference(urn:uuid:f51071b2-6c06-4d31-85ed-26a6b964ef98) "Petra Schwartz"
 * effectivePeriod.start = "2025-02-01"
 * effectivePeriod.end = "2025-02-20"
 * valueCodeableConcept = urn:iso:std:iso:3166#BR "Brazil"
