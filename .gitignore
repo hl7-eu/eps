@@ -33,3 +33,18 @@ Thumbs.db
 /runJekyll.bat
 /.vscode
 ballot.md
+
+# Python cache #
+################
+__pycache__/
+
+# Local reference copies (not in the repository) #
+##################################################
+/_attic/
+/_ips_2.0/
+/_xtehr_1.0/
+
+# IG Publisher cache files #
+############################
+.index.db
+.index.json

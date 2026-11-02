@@ -1,1 +1,0 @@
- c:/workspace/___Python/env/Scripts/python.exe c:/workspace/___Python/fsh-excel-fsh/excel-to-fsh.py --config /workspace/hl7eu-eps/models-src/config.ini
