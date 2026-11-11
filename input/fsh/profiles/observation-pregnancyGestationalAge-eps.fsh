@@ -18,6 +18,10 @@ Description: "This profile constrains the Observation resource to represent gest
 * valueQuantity
   * system = $ucum
   * code = #d
+  * extension contains $originalText named originalText 0..1
+  * extension[originalText] ^short = "Gestational age as originally recorded"
+  * extension[originalText] ^definition = "The gestational age as it was originally recorded (e.g. \"26 weeks\" or \"26+0\"), before it was converted to days."
+  * extension[originalText] ^comment = "The text is for display only. The gestational age to be processed is the value in days."
 * bodySite ..0
 * method ..0
 * specimen ..0
