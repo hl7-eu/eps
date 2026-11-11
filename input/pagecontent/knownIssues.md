@@ -9,6 +9,10 @@
 1. This version of the guide depends on a pre-release version of the IHE Pharmacy Medication Prescription and Dispense (MPD) Implementation Guide (`ihe.pharm.mpd.r4#1.0.0-comment-2`). The dependency will be updated when a published version is available.
 2. This version of the guide is aligned with, and maps to, the [Xt-EHR EHDS Logical Information Models]({{ xtehr_models }}) version 1.0. These models are expected to be replaced by the EHDS logical information models defined under Article 15 of the EHDS Regulation. The dependency and the related mappings will be updated once those models are available.
 
+### Relationship with the IPS profiles
+
+1. In this version of the guide, conformance of the EPS profiles with the IPS profiles is declared using the [imposeProfile](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html) extension (see the [EU Variance Statement](variance.html)). In accordance with the EMG recommendations, this relationship will be declared using the [compliesWithProfile](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html) extension. This change depends on the resolution of the open IG Publisher issues related to `compliesWithProfile`.
+
 ### Alignment with the Xt-EHR models
 
 1. The following elements are required in the [Xt-EHR EHDS Logical Information Models]({{ xtehr_models }}) 1.0.0 but optional in the profiles of this guide. They are kept as they are for this version of the guide:
