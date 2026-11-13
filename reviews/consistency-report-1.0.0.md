@@ -37,9 +37,7 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 
 ### 3.1 Composition sections vs Bundle entry slices
 
-| ID | Sev | Location | Finding | Fix |
-|---|---|---|---|---|
-| 3.1-4 | Low | `input/fsh/profiles/composition-eu-eps.fsh:255` | **New:** The entry slice of the new Past Problems section (`058bbdc`) is named `problem`. In IPS it is `pastProblem`. Element ids and obligation paths therefore differ from IPS for the same slice (`section:sectionPastProblems.entry:problem` vs `…entry:pastProblem`). | Rename the slice to `pastProblem`, as in IPS, unless the EPS name is intended. |
+No open items.
 
 
 ### 3.2 Invariants
@@ -151,7 +149,7 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified.
 
 ## 9. Suggested order of work
 
-1. Past Problems section follow-ups: obligations (4-5), Variance page (6.4-13), slice name (3.1-4), Xt-EHR note (6.4-14).
+1. Past Problems section follow-ups: obligations (4-5), Variance page (6.4-13), Xt-EHR note (6.4-14).
 2. Narrow the blanket suppressions (7-8).
 3. Groups (2-2).
 4. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
@@ -183,6 +181,10 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 ---
 
 ## Fixed since the first review
+
+**Commit `37cb2f6`**
+
+- **[3.1-4]** The section entry slices now have the IPS names: `sectionPastProblems.entry:pastProblem` (was `problem`) and, found while checking all sections, `sectionAlerts.entry:alertsFlag` (was `flag`) (`input/fsh/profiles/composition-eu-eps.fsh:203, 256`). The Alerts row of the PatientSummary map follows (`map-ehdspatientsummary.xml:242`). All other section entry slices already had the IPS names; `gestationalAge` (Pregnancy History) and `travelObservation` (Travel History) have no IPS counterpart. The Bundle entry slice `flag` is a Bundle slice and is unchanged. SUSHI reports 0 errors. Confirmed by a Publisher 3.0.3 rebuild: 0 errors, 1 warning, 15 information messages, 0 broken links (unchanged).
 
 **Rebuild of 2026-11-11**
 
