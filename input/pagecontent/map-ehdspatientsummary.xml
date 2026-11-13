@@ -239,7 +239,7 @@
           <td>alerts.medicalAlert</td>
           <td>equivalent</td>
           <td>Composition</td>
-          <td>section:sectionAlerts.entry:flag</td>
+          <td>section:sectionAlerts.entry:alertsFlag</td>
           <td>Reference to <code>FlagPatientEuCore.</code></td>
           </tr>
           <tr>

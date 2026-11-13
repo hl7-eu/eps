@@ -200,7 +200,7 @@ Description: """This profile defines how the Composition resource is used to rep
   * entry only Reference(Flag or DocumentReference)
   * insert SectionEntrySliceComRules(EPS Alerts entry, EPS Alerts entry slice)
   // entry slices
-  * insert SectionEntrySliceDefRules (flag, 0..*, 
+  * insert SectionEntrySliceDefRules (alertsFlag, 0..*, 
   Alert information , 
   Contains alert information to be communicated. May optionally reference other resources in IPS.lags,
   FlagPatientEuCore)
@@ -253,7 +253,7 @@ Description: """This profile defines how the Composition resource is used to rep
   * entry only Reference(Condition or DocumentReference)
   * insert SectionEntrySliceComRules(Clinical problems the patient suffered in the past and not currently monitored., A list of problems that the patient suffered in the past\, and which have been closed or resolved and are not considered to be active or ongoing and are therefore not currently monitored.)
   // entry slices
-  * insert SectionEntrySliceDefRules (problem, 0..* ,
+  * insert SectionEntrySliceDefRules (pastProblem, 0..* ,
       Clinical problems the patient suffered in the past and not currently monitored. ,
       A list of problems that the patient suffered in the past\, and which have been closed or resolved and are not considered to be active or ongoing and are therefore not currently monitored. ,
       ConditionEuCore)
