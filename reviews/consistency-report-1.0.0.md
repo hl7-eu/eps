@@ -1,12 +1,12 @@
 # HL7 Europe Patient Summary – Consistency Review for 1.0.0 (release after 1.0.0-ballot)
 
-- **Date:** 2026-10-02. Last updated 2026-11-11 after a rebuild with IG Publisher 3.0.3 and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-02. Last updated 2026-11-13 after a rebuild with IG Publisher 3.0.3 and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
-  - SUSHI reports 0 errors and 0 warnings (run of 2026-11-11).
-  - The IG Publisher 3.0.3 run of 2026-11-11 (`~/.fhir/tools/publisher/publisher.jar`; the earlier runs used 3.0.1) was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `3314660`.
-  - It reports **0 errors, 1 warning and 15 information messages**, 0 broken links, plus 121 suppressed warnings and 500 suppressed hints, from 20 entries (all in use). The warning is the Jira spec file (1-2); the OID root warning (7-15) is gone. The 15 information messages are the same as in the previous run (see §7).
-  - The planned switch to `compliesWithProfile` (`reviews/review-notes.md`, Profiles) was re-tested with 3.0.3 on the branch `test-complieswith`: 6 errors, as with 3.0.1. The Publisher issues C-3 and C-4 (`ERROR_PROCESSING_SNAPSHOT` on Bundle and DiagnosticReport) are still there, and so is C-1 (Composition `sectionPastProblems`). `master` keeps `imposeProfile`.
+  - SUSHI reports 0 errors and 0 warnings (run of 2026-11-13).
+  - The IG Publisher 3.0.3 run of 2026-11-13 (`~/.fhir/tools/publisher/publisher.jar`; the runs before 2026-11-11 used 3.0.1) was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It was built from the working copy that was then committed as `058bbdc` (FHIR-57765, Past Problems section), so it includes all commits up to `058bbdc`.
+  - It reports **0 errors, 1 warning and 15 information messages**, 0 broken links, plus 123 suppressed warnings and 500 suppressed hints, from 20 entries (all in use). The warning is the Jira spec file (1-2). The 15 information messages are the same as in the previous runs (see §7).
+  - The planned switch to `compliesWithProfile` (`reviews/review-notes.md`, Profiles) was re-tested with 3.0.3 on 2026-11-11 on the branch `test-complieswith`: 6 errors, as with 3.0.1. The Publisher issues C-3 and C-4 (`ERROR_PROCESSING_SNAPSHOT` on Bundle and DiagnosticReport) are still there. C-1 (Composition, no `sectionPastProblems` slice) should be resolved by `058bbdc`; this is confirmed only when the branch is rebuilt with it. `master` keeps `imposeProfile`.
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 1.0.0. **Low** means cleanup or editorial.
 
@@ -37,7 +37,9 @@ Each open item has an id `<section>-<n>` (e.g. `3.1-2`). Ids are stable: fixed o
 
 ### 3.1 Composition sections vs Bundle entry slices
 
-No open items.
+| ID | Sev | Location | Finding | Fix |
+|---|---|---|---|---|
+| 3.1-4 | Low | `input/fsh/profiles/composition-eu-eps.fsh:255` | **New:** The entry slice of the new Past Problems section (`058bbdc`) is named `problem`. In IPS it is `pastProblem`. Element ids and obligation paths therefore differ from IPS for the same slice (`section:sectionPastProblems.entry:problem` vs `…entry:pastProblem`). | Rename the slice to `pastProblem`, as in IPS, unless the EPS name is intended. |
 
 
 ### 3.2 Invariants
@@ -58,7 +60,9 @@ No open items.
 
 ## 4. Obligation profiles
 
-No open items.
+| ID | Sev | Location | Finding | Fix |
+|---|---|---|---|---|
+| 4-5 | Medium | `input/fsh/obligations/composition-obl-eu-eps.fsh` | **New:** The new Past Problems section (`058bbdc`) has no obligations in `CompositionOblEuEps`. IPS 2.0.1 sets SHALL:handle and SHOULD:display for the Consumer on `sectionPastProblems`. The obligation profiles reuse the IPS obligations (Known Issues, Obligations item 2), so this section is the only one that does not. | Add `* section[sectionPastProblems] insert ObligationIpsHandleDisplay`, as for the Functional Status section (`:107`), and the IPS obligations of the entry slice if any. |
 
 ---
 
@@ -77,7 +81,7 @@ No open items.
 
 | ID | Sev | Line | Finding → Proposed |
 |---|---|---|---|
-| 6.1-1 | Medium | – | Missing changes made since `1.0.0-ballot`: FHIR-57679 (EHDS Art. 14 in the scope), FHIR-58104 (alignment with Xt-EHR 1.0.0), FHIR-58138 (`Bundle.timestamp` 1..1), FHIR-58492 (`Patient.identifier` 1..*), FHIR-58509 (new MedicationStatement obligation profile; MedicationRequest obligation profile removed), FHIR-58917 (Change Log page), FHIR-58918 (mapping tables reviewed), FHIR-59046 (Model Map names), FHIR-59501 (new Variance Statement page). **New:** FHIR-58110 (obligations moved to separate, informative obligation profiles), FHIR-58508 (structural and obligation profiles reference only their own kind), FHIR-58258 (delegation note in the Composition profile), FHIR-59755 (Pregnancy History section uses the EPS pregnancy profiles). Also: EU Base and IPS aligned to 2.0.1 (`10fe8d9`), EU Extensions 1.3.1 (`9437507`), MedicationRequest Bundle slice removed (`035638d`), old allergy mapping page removed. **New (2026-11-11):** Bundle entry slices for Consent and DocumentReference (`dfc687f`), OIDs assigned under `2.16.840.1.113883.2.51.22.3` (`dfc687f`, `3314660`), every structural profile has an example (`6875781`), DeviceUseStatement `timing[x]` restricted to Period or dateTime as in IPS (`c379b7d`), `originalText` extension allowed on the Gestational Age value (`007008d`), and the new Known Issues (IPS obligations reused, Xt-EHR gaps, `compliesWithProfile`). → Add them. |
+| 6.1-1 | Medium | – | Missing changes made since `1.0.0-ballot`: FHIR-57679 (EHDS Art. 14 in the scope), FHIR-58104 (alignment with Xt-EHR 1.0.0), FHIR-58138 (`Bundle.timestamp` 1..1), FHIR-58492 (`Patient.identifier` 1..*), FHIR-58509 (new MedicationStatement obligation profile; MedicationRequest obligation profile removed), FHIR-58917 (Change Log page), FHIR-58918 (mapping tables reviewed), FHIR-59046 (Model Map names), FHIR-59501 (new Variance Statement page). **New:** FHIR-58110 (obligations moved to separate, informative obligation profiles), FHIR-58508 (structural and obligation profiles reference only their own kind), FHIR-58258 (delegation note in the Composition profile), FHIR-59755 (Pregnancy History section uses the EPS pregnancy profiles). Also: EU Base and IPS aligned to 2.0.1 (`10fe8d9`), EU Extensions 1.3.1 (`9437507`), MedicationRequest Bundle slice removed (`035638d`), old allergy mapping page removed. **New (2026-11-11):** Bundle entry slices for Consent and DocumentReference (`dfc687f`), OIDs assigned under `2.16.840.1.113883.2.51.22.3` (`dfc687f`, `3314660`), every structural profile has an example (`6875781`), DeviceUseStatement `timing[x]` restricted to Period or dateTime as in IPS (`c379b7d`), `originalText` extension allowed on the Gestational Age value (`007008d`), and the new Known Issues (IPS obligations reused, Xt-EHR gaps, `compliesWithProfile`). **New (2026-11-13):** Past Problems section added to Composition (EPS) (FHIR-57765, `058bbdc`). → Add them. |
 
 ### 6.2 Stale ballot or preview wording
 
@@ -97,6 +101,8 @@ There are no `build.fhir.org`, `/current/` or `file://` links. All Xt-EHR, EU Ba
 |---|---|---|---|
 | 6.4-9 | Low | `input/pagecontent/index.md:29`, `introduction.md:1` | **New:** Two different definitions of the EPS. The home page says "a standardized non-exhaustive health data set"; the Introduction says "a standardized, cross-border health data set… particularly in unplanned care scenarios". → Use one definition on both pages (e.g. "a standardised, non-exhaustive, cross-border health data set… particularly in unplanned care"). |
 | 6.4-10 | Low | `input/pagecontent/knownIssues.md:9` | **New:** "Xt-EHR EHDS Logical Information Models version 1.0" → "version 1.0.0" (as on the other pages). "The dependency and the related mappings will be updated" → "The alignment and the related mappings will be updated": the models are not a package dependency. |
+| 6.4-13 | Medium | `input/pagecontent/variance.md:116` | **New:** "The IPS **History of Past Illness** section is not profiled in this guide." is no longer true: `058bbdc` (FHIR-57765) adds the Past Problems section (LOINC `11348-0`), with the same code as the IPS History of Past Illness section. → Remove the sentence, or say that the IPS History of Past Illness section is profiled as the EPS Past Problems section. |
+| 6.4-14 | Low | `input/pagecontent/map-ehdspatientsummary.xml:290`, `knownIssues.md` | **New:** The Xt-EHR `EHDSPatientSummary` model has one `problems` section and suggests combining the two problem sections of the eHN guideline. The new Past Problems section has no counterpart in the model, and the PatientSummary map does not say so. → Add a note to the `problems` row of the map (past problems may also go in the Past Problems section), and consider an item in Known Issues, "Alignment with the Xt-EHR models". |
 | 6.4-12 | Medium | `input/pagecontent/variance.md:17-38, 59-89, 96-100` | **New (2026-10-30):** the page predates the obligation split (`3030934`, FHIR-58110). It still describes the EPS profiles as carrying the IPS obligations (`:19`), lists only the EU Core-based obligation profiles (`:27-37`, `:80-89`), and doesn't list the 10 new ones (Bundle, Composition, Device, DeviceUseStatement, DiagnosticReport, the 3 pregnancy Observations, Patient, Procedure). It doesn't say that the obligation profiles are informative. The editor decided to leave the page unchanged for now (2026-10-30). → Revise the page: structural EPS profiles vs informative obligation profiles, the derivation tables, and the "Must Support, Obligations and Actors" section. |
 
 ### 6.5 Language and editorial conventions
@@ -111,7 +117,7 @@ No open items.
 
 ## 7. QA output and `ignoreWarnings.txt`
 
-This section is based on the IG Publisher 3.0.3 run of 2026-11-11, built as `1.0.0-ci-build` / `draft` / `ci-build`.
+This section is based on the IG Publisher 3.0.3 run of 2026-11-13, built as `1.0.0-ci-build` / `draft` / `ci-build`.
 
 **Visible messages:** 0 errors, 1 warning and 15 information messages.
 
@@ -123,13 +129,13 @@ The 6 errors of the first 2026-10-30 run (1-4) and the about 420 information mes
 
 **Publication request check:** `publication-request.json` is missing (see 1-1).
 
-**Suppressed messages:** 121 warnings and 500 hints, from 20 entries, all in use. With 3.0.3, `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` matches 67 messages instead of 65.
+**Suppressed messages:** 123 warnings and 500 hints, from 20 entries, all in use. `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` now matches 69 messages: 65 with 3.0.1, 67 with 3.0.3, and 2 more with the new section.
 
 **Suppressions that hide fixable issues:**
 
 | ID | Lines | Entry (uses) | Fix |
 |---|---|---|---|
-| 7-8 | 12-19 | `Terminology_TX_NoValid_3_CC` (41), `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` (67), `TYPE_SPECIFIC_CHECKS_DT_QTY_UCUM_ANNOTATIONS` (10) | Blanket suppressions by message id that will also hide new occurrences. Check the current hits once, then narrow them to message texts, or document why they are global. |
+| 7-8 | 12-19 | `Terminology_TX_NoValid_3_CC` (41), `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` (69), `TYPE_SPECIFIC_CHECKS_DT_QTY_UCUM_ANNOTATIONS` (10) | Blanket suppressions by message id that will also hide new occurrences. Check the current hits once, then narrow them to message texts, or document why they are global. |
 
 The wildcard on line 7 (5 uses, R5 document rule) is still justified.
 
@@ -145,12 +151,13 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified.
 
 ## 9. Suggested order of work
 
-1. Narrow the blanket suppressions (7-8).
-2. Groups (2-2).
-3. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
-4. Narrative pages: Variance (6.4-12), Known Issues (6.4-10), home page and Introduction (6.4-9), then `changes.md` (6.1-1).
-5. Cleanup: §3.3, §3.4, `Requirements-fromNarrative.json` (8-4).
-6. Release configuration (1-1), rebuild, re-run this review.
+1. Past Problems section follow-ups: obligations (4-5), Variance page (6.4-13), slice name (3.1-4), Xt-EHR note (6.4-14).
+2. Narrow the blanket suppressions (7-8).
+3. Groups (2-2).
+4. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
+5. Narrative pages: Variance (6.4-12), Known Issues (6.4-10), home page and Introduction (6.4-9), then `changes.md` (6.1-1).
+6. Cleanup: §3.3, §3.4, `Requirements-fromNarrative.json` (8-4).
+7. Release configuration (1-1), rebuild, re-run this review.
 
 ---
 
