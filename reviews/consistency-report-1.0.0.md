@@ -1,11 +1,12 @@
 # HL7 Europe Patient Summary – Consistency Review for 1.0.0 (release after 1.0.0-ballot)
 
-- **Date:** 2026-10-02. Last updated 2026-11-02 after a rebuild with IG Publisher 3.0.1 and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
+- **Date:** 2026-10-02. Last updated 2026-11-11 after a rebuild with IG Publisher 3.0.3 and a re-run of all checks. Items that have been fixed have been removed; they are listed under *Fixed since the first review* at the end of the report.
 - **Scope:** FSH sources (`input/fsh`), narrative pages (`input/pagecontent`, `input/includes`), configuration (`sushi-config.yaml`, `publication-request.json`, `ig.ini`), examples, the latest IG Publisher QA output (`output/qa.*`) and `input/ignoreWarnings.txt`.
 - **Build status:**
-  - SUSHI reports 0 errors and 0 warnings (run of 2026-11-02).
-  - The IG Publisher 3.0.1 run of 2026-11-02 was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `d9f46f5`.
-  - It reports **0 errors, 2 warnings and 15 information messages**, 0 broken links, plus 119 suppressed warnings and 500 suppressed hints, from 20 entries (all in use). The two warnings are the Jira spec file (1-2) and the unregistered OID root (7-15); the 15 information messages come from the examples added for 5-1 (see §7).
+  - SUSHI reports 0 errors and 0 warnings (run of 2026-11-11).
+  - The IG Publisher 3.0.3 run of 2026-11-11 (`~/.fhir/tools/publisher/publisher.jar`; the earlier runs used 3.0.1) was built as `hl7.fhir.eu.eps#1.0.0-ci-build`, status `draft`, release label `ci-build`. It includes all commits up to `3314660`.
+  - It reports **0 errors, 1 warning and 15 information messages**, 0 broken links, plus 121 suppressed warnings and 500 suppressed hints, from 20 entries (all in use). The warning is the Jira spec file (1-2); the OID root warning (7-15) is gone. The 15 information messages are the same as in the previous run (see §7).
+  - The planned switch to `compliesWithProfile` (`reviews/review-notes.md`, Profiles) was re-tested with 3.0.3 on the branch `test-complieswith`: 6 errors, as with 3.0.1. The Publisher issues C-3 and C-4 (`ERROR_PROCESSING_SNAPSHOT` on Bundle and DiagnosticReport) are still there, and so is C-1 (Composition `sectionPastProblems`). `master` keeps `imposeProfile`.
 
 Severity: **High** means fix before publication. **Medium** means it should be fixed for 1.0.0. **Low** means cleanup or editorial.
 
@@ -47,7 +48,7 @@ No open items.
 
 ### 3.3 Leftovers in FSH
 
-- **[3.3-1]** **Stale TODO comments:** `input/fsh/alias-systems.fsh:3, 31, 34, 40` ("to be checked"), `input/fsh/profiles/bundle-eu-eps.fsh:155`. Also "Check if this is appropriate (see  support)" on the `ImposeProfile` lines of `device-eps.fsh:9`, `deviceUseStatement-eps.fsh:10` and `procedure-eps.fsh:8`, and `// Parent: DeviceUvIps` in `deviceUseStatement-eps.fsh:3`.
+- **[3.3-1]** **Stale TODO comments:** `input/fsh/alias-systems.fsh:3, 31, 34, 40` ("to be checked"), `input/fsh/profiles/bundle-eu-eps.fsh:157`. Also "Check if this is appropriate (see  support)" on the `ImposeProfile` lines of `device-eps.fsh:9`, `deviceUseStatement-eps.fsh:10` and `procedure-eps.fsh:8`, and `// Parent: DeviceUvIps` in `deviceUseStatement-eps.fsh:3`.
 
 ### 3.4 Terminology
 
@@ -76,7 +77,7 @@ No open items.
 
 | ID | Sev | Line | Finding → Proposed |
 |---|---|---|---|
-| 6.1-1 | Medium | – | Missing changes made since `1.0.0-ballot`: FHIR-57679 (EHDS Art. 14 in the scope), FHIR-58104 (alignment with Xt-EHR 1.0.0), FHIR-58138 (`Bundle.timestamp` 1..1), FHIR-58492 (`Patient.identifier` 1..*), FHIR-58509 (new MedicationStatement obligation profile; MedicationRequest obligation profile removed), FHIR-58917 (Change Log page), FHIR-58918 (mapping tables reviewed), FHIR-59046 (Model Map names), FHIR-59501 (new Variance Statement page). **New:** FHIR-58110 (obligations moved to separate, informative obligation profiles), FHIR-58508 (structural and obligation profiles reference only their own kind), FHIR-58258 (delegation note in the Composition profile), FHIR-59755 (Pregnancy History section uses the EPS pregnancy profiles). Also: EU Base and IPS aligned to 2.0.1 (`10fe8d9`), EU Extensions 1.3.1 (`9437507`), MedicationRequest Bundle slice removed (`035638d`), old allergy mapping page removed. → Add them. |
+| 6.1-1 | Medium | – | Missing changes made since `1.0.0-ballot`: FHIR-57679 (EHDS Art. 14 in the scope), FHIR-58104 (alignment with Xt-EHR 1.0.0), FHIR-58138 (`Bundle.timestamp` 1..1), FHIR-58492 (`Patient.identifier` 1..*), FHIR-58509 (new MedicationStatement obligation profile; MedicationRequest obligation profile removed), FHIR-58917 (Change Log page), FHIR-58918 (mapping tables reviewed), FHIR-59046 (Model Map names), FHIR-59501 (new Variance Statement page). **New:** FHIR-58110 (obligations moved to separate, informative obligation profiles), FHIR-58508 (structural and obligation profiles reference only their own kind), FHIR-58258 (delegation note in the Composition profile), FHIR-59755 (Pregnancy History section uses the EPS pregnancy profiles). Also: EU Base and IPS aligned to 2.0.1 (`10fe8d9`), EU Extensions 1.3.1 (`9437507`), MedicationRequest Bundle slice removed (`035638d`), old allergy mapping page removed. **New (2026-11-11):** Bundle entry slices for Consent and DocumentReference (`dfc687f`), OIDs assigned under `2.16.840.1.113883.2.51.22.3` (`dfc687f`, `3314660`), every structural profile has an example (`6875781`), DeviceUseStatement `timing[x]` restricted to Period or dateTime as in IPS (`c379b7d`), `originalText` extension allowed on the Gestational Age value (`007008d`), and the new Known Issues (IPS obligations reused, Xt-EHR gaps, `compliesWithProfile`). → Add them. |
 
 ### 6.2 Stale ballot or preview wording
 
@@ -110,26 +111,25 @@ No open items.
 
 ## 7. QA output and `ignoreWarnings.txt`
 
-This section is based on the IG Publisher 3.0.1 run of 2026-11-02, built as `1.0.0-ci-build` / `draft` / `ci-build`.
+This section is based on the IG Publisher 3.0.3 run of 2026-11-11, built as `1.0.0-ci-build` / `draft` / `ci-build`.
 
-**Visible messages:** 0 errors, 2 warnings and 15 information messages.
+**Visible messages:** 0 errors, 1 warning and 15 information messages.
 
 The 6 errors of the first 2026-10-30 run (1-4) and the about 420 information messages on the obligation profiles (7-13) are gone. The 12 errors of the run of 2026-10-23 (5-6) are gone too. The 15 information messages added on 2026-10-31 come from the new examples (5-1) and are expected: the standalone DiagnosticReport refers to its lab results by `urn:uuid`, which only resolves inside the Bundle ("does not match any known slice", 8+1); the travel Observation has no slice in the open EPS Bundle slicing, and the Consent and the travel Observation have none in the IPS one; the Travel History section has no slice in the IPS Composition; the Consent `policy.uri` is an example.org address; and the IPS DiagnosticReport status value set refers to a draft code system.
 
 | ID | Message | Resources | Fix |
 |---|---|---|---|
 | 7-1 | Warning: the Jira specification file appears to be out of date. | `FHIR-eu-eps.xml` | See 1-2. |
-| 7-15 | **New:** Warning: "The assigned auto-oid-root value '2.16.840.1.113883.2.51.22.3' is not registered in https://github.com/FHIR/ig-registry/blob/master/oid-assignments.json so isn't known to be valid". | the IG | Register the root for `hl7.fhir.eu.eps` in the FHIR IG registry (`oid-assignments.json`). Pull request opened: https://github.com/FHIR/ig-registry/pull/706 (2026-11-02); the warning goes once it is merged. |
 
 **Publication request check:** `publication-request.json` is missing (see 1-1).
 
-**Suppressed messages:** 119 warnings and 500 hints, from 20 entries, all in use.
+**Suppressed messages:** 121 warnings and 500 hints, from 20 entries, all in use. With 3.0.3, `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` matches 67 messages instead of 65.
 
 **Suppressions that hide fixable issues:**
 
 | ID | Lines | Entry (uses) | Fix |
 |---|---|---|---|
-| 7-8 | 12-19 | `Terminology_TX_NoValid_3_CC` (41), `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` (65), `TYPE_SPECIFIC_CHECKS_DT_QTY_UCUM_ANNOTATIONS` (10) | Blanket suppressions by message id that will also hide new occurrences. Check the current hits once, then narrow them to message texts, or document why they are global. |
+| 7-8 | 12-19 | `Terminology_TX_NoValid_3_CC` (41), `TYPE_SPECIFIC_CHECKS_DT_CANONICAL_MULTIPLE_POSSIBLE_VERSIONS` (67), `TYPE_SPECIFIC_CHECKS_DT_QTY_UCUM_ANNOTATIONS` (10) | Blanket suppressions by message id that will also hide new occurrences. Check the current hits once, then narrow them to message texts, or document why they are global. |
 
 The wildcard on line 7 (5 uses, R5 document rule) is still justified.
 
@@ -145,13 +145,12 @@ The wildcard on line 7 (5 uses, R5 document rule) is still justified.
 
 ## 9. Suggested order of work
 
-1. Register the OID root (7-15, pull request open), then rebuild.
-2. Narrow the blanket suppressions (7-8).
-3. Groups (2-2).
-4. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
-5. Narrative pages: Variance (6.4-12), Known Issues (6.4-10), home page and Introduction (6.4-9), then `changes.md` (6.1-1).
-6. Cleanup: §3.3, §3.4, `Requirements-fromNarrative.json` (8-4).
-7. Release configuration (1-1), rebuild, re-run this review.
+1. Narrow the blanket suppressions (7-8).
+2. Groups (2-2).
+3. Duplicated example sets (5-2), then regenerate and submit the Jira spec file (1-2).
+4. Narrative pages: Variance (6.4-12), Known Issues (6.4-10), home page and Introduction (6.4-9), then `changes.md` (6.1-1).
+5. Cleanup: §3.3, §3.4, `Requirements-fromNarrative.json` (8-4).
+6. Release configuration (1-1), rebuild, re-run this review.
 
 ---
 
@@ -177,6 +176,10 @@ Items reviewed and accepted as they are. They keep their id and the structure of
 ---
 
 ## Fixed since the first review
+
+**Rebuild of 2026-11-11**
+
+- **[7-15]** The OID root `2.16.840.1.113883.2.51.22.3` is registered for `hl7.fhir.eu.eps` in the FHIR IG registry (https://github.com/FHIR/ig-registry/pull/706, merged 2026-11-04). The warning is gone in the 3.0.3 build. `oids.ini`, with the OIDs assigned to the 34 artifacts, is committed in `3314660`, so they stay stable.
 
 **Commit `eaf94b4`**
 

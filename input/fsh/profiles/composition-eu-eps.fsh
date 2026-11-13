@@ -67,7 +67,7 @@ Description: """This profile defines how the Composition resource is used to rep
     sectionAdvanceDirectives 0..1  and
     sectionAlerts 0..1  and
     sectionFunctionalStatus 0..1  and
-    // sectionPastProblems 0..1  and
+    sectionPastProblems 0..1  and
     sectionPregnancyHx 0..1  and
     sectionPatientStory 0..1  and
     sectionPlanOfCare 0..1  and
@@ -239,6 +239,24 @@ Description: """This profile defines how the Composition resource is used to rep
       Notable vital signs or physical findings. ,
       Notable vital signs or physical findings as: blood pressure\, body temperature\, heart rate\, and respiratory rate. It may also include other clinical findings\, such as height\, weight\, body mass index\, head circumference\, and pulse oximetry. In particular\, notable vital signs or physical findings such as the most recent\, maximum and/or minimum\, baseline\, or relevant trends may be included,
       $vitalsigns)
+
+
+
+// ==  EPS Past Problem Section ==
+
+* section[sectionPastProblems]
+  * insert SectionComRules ( 
+      EPS Past Problems Section, 
+      The EPS past problems section lists and describes the historic record of problems\, including illnesses; it provides a historical context from which to view the current state of the patient., 
+      http://loinc.org#11348-0)
+  
+  * entry only Reference(Condition or DocumentReference)
+  * insert SectionEntrySliceComRules(Clinical problems the patient suffered in the past and not currently monitored., A list of problems that the patient suffered in the past\, and which have been closed or resolved and are not considered to be active or ongoing and are therefore not currently monitored.)
+  // entry slices
+  * insert SectionEntrySliceDefRules (problem, 0..* ,
+      Clinical problems the patient suffered in the past and not currently monitored. ,
+      A list of problems that the patient suffered in the past\, and which have been closed or resolved and are not considered to be active or ongoing and are therefore not currently monitored. ,
+      ConditionEuCore)
 
 // ---------------- EPS Functional Status ---------------------
 
