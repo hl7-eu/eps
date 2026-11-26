@@ -72,12 +72,15 @@ Description: """This profile defines how the Bundle resource is used to represen
 * . ^definition = "Patient Summary bundle."
 
 * insert SetFmmAndStatusRule (1, draft)
-* insert ImposeProfile($Bundle-uv-ips, 0)
+* insert CompliesWithProfile ($Bundle-uv-ips, 0)
 
 * obeys eps-bundle-patient-ref
 * obeys eps-bundle-subject-ref
 * obeys eps-bundle-resource-code
+* obeys bdl-ips-1 // as in the IPS
 
+* identifier 1.. // as in the IPS
+* type = #document (exactly) // as in the IPS
 * timestamp 1..1
 
 //================================

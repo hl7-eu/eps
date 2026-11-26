@@ -5,9 +5,10 @@ Title: "DiagnosticReport (EPS)"
 Description: "This profile constrains the DiagnosticReport resource in the scope of the European Patient Summary."
 
 * insert SetFmmAndStatusRule (1, draft)
-* insert ImposeProfile ( $DiagnosticReport-uv-ips, 0 )
+* insert CompliesWithProfile ( $DiagnosticReport-uv-ips, 0 )
 
-* subject only Reference(PatientEuCore or Group)
+* status from $diagnostics-report-status-uv-ips (required) // as in the IPS
+* subject only Reference(PatientEuEps or Group) // as in the IPS (Patient-uv-ips or Group)
 * subject.reference 1..1
 * effective[x] 1..1
 

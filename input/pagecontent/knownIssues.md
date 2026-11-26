@@ -11,7 +11,7 @@
 
 ### Relationship with the IPS profiles
 
-1. In this version of the guide, conformance of the EPS profiles with the IPS profiles is declared using the [imposeProfile](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-imposeProfile.html) extension (see the [EU Variance Statement](variance.html)). In accordance with the EMG recommendations, this relationship will be declared using the [compliesWithProfile](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html) extension. This change depends on the resolution of the open IG Publisher issues related to `compliesWithProfile`.
+1. In accordance with the EMG recommendations, conformance of the EPS profiles with the IPS profiles is declared using the [compliesWithProfile](https://hl7.org/fhir/extensions/StructureDefinition-structuredefinition-compliesWithProfile.html) extension (see the [EU Variance Statement](variance.html)). Some EPS profiles still reference EU Core profiles where the IPS requires an IPS profile: `MedicationStatement.medication[x]`, `DiagnosticReport.performer` and `DiagnosticReport.specimen`. EPS profiles for these resources are expected in a later version.
 
 ### Alignment with the Xt-EHR models
 

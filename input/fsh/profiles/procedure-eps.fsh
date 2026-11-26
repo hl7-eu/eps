@@ -5,11 +5,12 @@ Title:    "Procedure (EPS)"
 Description: "This profile constrains the Procedure resource in the scope of the European Patient Summary."
 
 * insert SetFmmAndStatusRule (1, draft)
-* insert ImposeProfile ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)
+* insert CompliesWithProfile ( $Procedure-uv-ips, 0 )  // Check if this is appropriate (see  support)
 
 
 * status ^short = "The status of the procedure"
 * code only CodeableConceptIPS
+* subject only Reference(PatientEuEps) // as in the IPS (Patient-uv-ips)
 * subject.reference 1..
 * performer.actor only Reference(PractitionerRoleEuCore or PractitionerEuCore or $Device-observer-uv-ips or PatientEuEps or RelatedPerson or  OrganizationEuCore)
 * performer.onBehalfOf only Reference(OrganizationEuCore)
