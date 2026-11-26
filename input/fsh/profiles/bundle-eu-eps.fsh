@@ -77,7 +77,10 @@ Description: """This profile defines how the Bundle resource is used to represen
 * obeys eps-bundle-patient-ref
 * obeys eps-bundle-subject-ref
 * obeys eps-bundle-resource-code
+* obeys bdl-ips-1 // as in the IPS
 
+* identifier 1.. // as in the IPS
+* type = #document (exactly) // as in the IPS
 * timestamp 1..1
 
 //================================

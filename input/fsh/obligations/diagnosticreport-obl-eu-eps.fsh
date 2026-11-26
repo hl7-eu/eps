@@ -6,6 +6,9 @@ Description: "This profile sets the IPS obligations on the DiagnosticReport (EPS
 
 * insert SetFmmAndStatusRule (1, draft)
 
+// ================= REFERENCES TO OBLIGATION PROFILES =================
+* subject only Reference(PatientOblEuEps or Group)
+
 // ================= IPS OBLIGATIONS =================
 * code insert ObligationIpsPopulateIfKnownDisplay
 

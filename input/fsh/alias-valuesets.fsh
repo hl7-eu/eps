@@ -5,6 +5,7 @@ Alias: $absent-or-unknown-allergies-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet
 Alias: $absent-or-unknown-devices-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-devices-uv-ips
 Alias: $absent-or-unknown-procedures-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-procedures-uv-ips
 Alias: $condition-severity = http://hl7.org/fhir/ValueSet/condition-severity
+Alias: $diagnostics-report-status-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/diagnostics-report-status-uv-ips
 Alias: $iso3166-1-2 = http://hl7.org/fhir/ValueSet/iso3166-1-2
 Alias: $medication-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/medication-uv-ips
 Alias: $results-coded-values-laboratory-uv-ips = http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-uv-ips
